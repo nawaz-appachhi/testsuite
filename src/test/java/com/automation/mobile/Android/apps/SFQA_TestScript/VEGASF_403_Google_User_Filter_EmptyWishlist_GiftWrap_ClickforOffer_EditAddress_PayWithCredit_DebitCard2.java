@@ -88,10 +88,10 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 3)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}	
 	@Test(priority = 4)
@@ -119,9 +119,10 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 		objWishListPageObject.clickBagBtn();
 	}
 	
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void GiftWrap() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("GiftWrap");
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 //		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getGiftWrapbtn(), 100);
 //       objAddCartPageObject.ClickCouponCancelbtn();
 	}
@@ -146,7 +147,7 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 		Reporter.log("PaymenWithOnline");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

@@ -62,7 +62,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -114,7 +114,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress_Office");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 8)

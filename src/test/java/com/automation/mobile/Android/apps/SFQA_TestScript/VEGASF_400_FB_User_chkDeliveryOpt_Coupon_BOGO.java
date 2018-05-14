@@ -78,9 +78,9 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -112,7 +112,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void ApplyCoupon() throws InterruptedException {
 		Reporter.log("Apply Coupan Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();
@@ -132,9 +132,9 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress case Started Successfully");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
-	}*/
+	}
 	
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

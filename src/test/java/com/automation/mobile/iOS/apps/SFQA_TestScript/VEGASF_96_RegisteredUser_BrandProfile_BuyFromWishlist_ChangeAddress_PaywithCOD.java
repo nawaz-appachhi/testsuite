@@ -72,6 +72,13 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
@@ -81,7 +88,7 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objLoginPageObject.removeAddress();
 	}
@@ -94,26 +101,26 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		String search = iOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	// @Test(priority = 3)
+	//
+	// public void productListingPage() throws InterruptedException {
+	// objAssertionPageObject.verifyProductname();
+	// objAssertionPageObject.verifyPLPHeader();
+	// objAssertionPageObject.verifyPLPProductCount();
+	// objPLPageObjets.clickOnBrandNamePLP();
+	//
+	// }
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
-//		objiOSGenericMethods.swipeDown(100, 8);
-//		//objAssertionPageObject.verifyDelivery();
-//		objiOSGenericMethods.swipeDown(100, 6);
-//		objPDPageObject.clickOnViewSimilar();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		// objiOSGenericMethods.swipeDown(100, 8);
+		// //objAssertionPageObject.verifyDelivery();
+		// objiOSGenericMethods.swipeDown(100, 6);
+		// objPDPageObject.clickOnViewSimilar();
+		// objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -127,7 +134,7 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 
 		objAssertionPageObject.verifyMyBag();
 		objiOSGenericMethods.swipeDown(100, 7);
-//		objAssertionPageObject.verifyPriceDetails();
+		// objAssertionPageObject.verifyPriceDetails();
 		objCartPage.clickOnplaceOrder();
 
 	}
@@ -183,9 +190,9 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
 
-	 @AfterTest
-		public void quit() {
-			iDriver.quit();
-		}
+	@AfterTest
+	public void quit() {
+		iDriver.quit();
+	}
 
 }

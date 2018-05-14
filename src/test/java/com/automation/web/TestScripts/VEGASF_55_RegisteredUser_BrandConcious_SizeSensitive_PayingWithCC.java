@@ -222,6 +222,7 @@ public class VEGASF_55_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC e
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();

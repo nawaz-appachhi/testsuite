@@ -69,10 +69,10 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -101,7 +101,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objWishlistPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void ApplyPersonalizedCoupon() throws Exception {
 		Reporter.log("ApplyPersonalizedCoupon Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();
@@ -137,7 +137,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
 	}
-*/
+
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,

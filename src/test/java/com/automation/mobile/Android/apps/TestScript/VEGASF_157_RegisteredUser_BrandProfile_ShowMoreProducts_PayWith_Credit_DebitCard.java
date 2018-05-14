@@ -74,7 +74,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -125,7 +125,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 	public void MoveToCart() throws InterruptedException, InvalidFileFormatException, IOException {
      	Reporter.log("MoveToCartPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion: veryfing CheckoutPage Header "ADDRESS"
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 
 	}

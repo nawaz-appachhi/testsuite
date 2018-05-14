@@ -126,6 +126,7 @@ public class VEGASF_421_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		Reporter.log("CheckSizeChartLink test case started successfully");
 		System.out.println("Check SizeChart Link!");
 		//		objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
@@ -134,7 +135,7 @@ public class VEGASF_421_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		objPDPageObject.clickOnCloseSizeChartButton();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();
-		objPDPageObject.clickOnSaveButton();
+		
 
 	}
 

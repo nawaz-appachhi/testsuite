@@ -163,14 +163,9 @@ public class VEGASF_306_FB_User_Giftwrap_BOGO_ViewDetails_CoD extends GlobalVari
 		objAddressPageObjects.ClickToContinue();
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
-		objPaymentPageObjects.VerifyFinalPayableAmount();
-		
+		objPaymentPageObjects.VerifyFinalPayableAmount();		
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
 	
 	@Test(priority = 12)

@@ -66,7 +66,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
@@ -98,7 +98,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	@Test(priority = 5)
 	public void SelectSize_Qty() throws Exception {
 		Reporter.log("Change size and quantity");
-	//	objAddCartPageObject.changeSize();
+		objAddCartPageObject.changeSize();
 		objAddCartPageObject.verifyShoppingBagTitle();
 	}
 
@@ -118,7 +118,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("Checkout");
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.clickContinue();
 	}

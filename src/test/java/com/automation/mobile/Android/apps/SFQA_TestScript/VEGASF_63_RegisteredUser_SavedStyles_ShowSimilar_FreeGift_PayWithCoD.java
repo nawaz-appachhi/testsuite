@@ -60,10 +60,10 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -102,7 +102,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
-	/*@Test(priority = 8)
+	@Test(priority = 8)
 	public void ApplyGenericCoupon() throws Exception {
 		Reporter.log("ApplyGenericCoupon Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();
@@ -135,7 +135,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutn");
 		}
-	}*/
+	}
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

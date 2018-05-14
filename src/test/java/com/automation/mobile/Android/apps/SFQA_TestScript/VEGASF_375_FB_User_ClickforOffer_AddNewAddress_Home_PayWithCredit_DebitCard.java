@@ -83,11 +83,11 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objCheckOutPageObject.resetAddress();
 //		objAddCartPageObject.resetBag();
-		objWishlistPageObject.resetWishlist(); 
+//		objWishlistPageObject.resetWishlist(); 
 	}
 	
 	@Test(priority = 3)
@@ -125,11 +125,12 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	@Test(priority = 6)
 	public void SelectSize_Qty() throws InterruptedException {
 		Reporter.log("SelectSize_Qty");
+		//objProductListPageObject.clickOkButton();  //no meed to apply if reset bag is added
 		objAddCartPageObject.verifyShoppingBagTitle();
-	//	objAddCartPageObject.changeSize();
+		objAddCartPageObject.changeSize();
 	}
 	
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void addCartPage_ApplyCoupon() throws InterruptedException {
 		Reporter.log("addCartPage_ApplyCoupon");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
@@ -162,7 +163,7 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

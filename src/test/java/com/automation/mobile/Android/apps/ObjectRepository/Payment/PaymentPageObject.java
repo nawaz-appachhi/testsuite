@@ -219,9 +219,8 @@ public class PaymentPageObject {
 	 * @author Amba
 	 *
 	 * @param check Eligibility
-	 * @throws InterruptedException 
 	 */
-	public void clickCheckForEligibility() throws InterruptedException {
+	public void clickCheckForEligibility() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getCheckForEligibility(), "CheckForEligibility");
 	}
 	/**
@@ -292,7 +291,7 @@ public class PaymentPageObject {
 	public void enterCVVNumber(String cvvno) {
 		objAndroidGenericMethods.enterTexAndroidElement(getEntercvv(), cvvno, "cvvno");
 	}
-	public void clickPayNowBtn() throws InterruptedException {
+	public void clickPayNowBtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getPayNowbtn(), "getPayNow");
 	}
 	
@@ -354,9 +353,8 @@ public class PaymentPageObject {
 	}
 	/**
 	 * @author 300019224-Aishurya: To click on view order link in order confirmation page
-	 * @throws InterruptedException 
 	 */
-	public void clickOnViewOrder() throws InterruptedException {
+	public void clickOnViewOrder() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getViewOrder(), "ViewOrder Link");
 	}
 	

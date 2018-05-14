@@ -190,7 +190,7 @@ public class iOSGenericMethods extends GlobalVariables {
 				} else {
 					Reporter.log("'" + elementName + "'  Element object is NOT Found");
 				}
-			}
+			}			
 		} catch (NoSuchElementException e) {
 			Reporter.log("No such element: Unable to locate element. Please check the Element");
 		}

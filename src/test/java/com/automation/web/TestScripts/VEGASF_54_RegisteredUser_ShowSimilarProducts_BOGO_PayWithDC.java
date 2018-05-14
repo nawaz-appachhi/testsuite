@@ -2,6 +2,7 @@ package com.automation.web.TestScripts;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -227,7 +228,7 @@ public class VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC extends
 	}
 	
 	@Test(priority =12)
-	public void PaymentWithCreditDebit_Card()  {
+	public void PaymentWithCreditDebit_Card() throws InterruptedException  {
 		System.out.println("Complete Payment");
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
@@ -241,6 +242,8 @@ public class VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC extends
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+	
+		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();

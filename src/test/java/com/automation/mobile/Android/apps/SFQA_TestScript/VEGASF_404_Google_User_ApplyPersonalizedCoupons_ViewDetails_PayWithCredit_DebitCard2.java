@@ -85,7 +85,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -118,7 +118,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 		objWishlistPageObject.clickBagBtn();
 	}
 	
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void addCartPage_ApplyCoupon() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("ApplyPersonalizedCoupons Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
@@ -147,7 +147,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 		objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
 		objPaymentPageObject.clickPayNowBtn();
 
-	}*/
+	}
 	@Test(priority = 9)
 	public void Verifypayment() throws InvalidFileFormatException, IOException, InterruptedException {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);

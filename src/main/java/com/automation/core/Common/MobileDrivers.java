@@ -189,7 +189,8 @@ public class MobileDrivers {
 			File app = new File(params.get("appUrl_"));
 			cap.setCapability("app", app.getAbsolutePath());
 			// cap.setCapability("app", GlobalVariables.aAPK_PATH); // Commented By neeraj
-	//		cap.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE,GlobalVariables.aChromePath);
+			// cap.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE,
+			// GlobalVariables.aChromePath);
 			cap.setCapability("automationName", "uiautomator2");
 		//	cap.setCapability(MobileCapabilityType.NO_RESET, true);
 		//	cap.setCapability(MobileCapabilityType.FULL_RESET, true);

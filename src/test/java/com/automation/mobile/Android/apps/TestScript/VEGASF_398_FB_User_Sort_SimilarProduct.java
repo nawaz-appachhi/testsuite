@@ -63,7 +63,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -97,7 +97,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct {
 		objAddCartPageObject.verifyShoppingBagTitle();
      	objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

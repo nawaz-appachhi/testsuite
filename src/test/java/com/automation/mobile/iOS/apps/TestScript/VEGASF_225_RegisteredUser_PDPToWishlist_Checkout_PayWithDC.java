@@ -79,6 +79,13 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC {
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, IOException {
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();

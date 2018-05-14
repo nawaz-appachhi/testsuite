@@ -75,6 +75,13 @@ public class VEGASF_368_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 
 //	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();

@@ -38,7 +38,7 @@ public class AddCartPageObject {
 	 * Description: This xpath help us to click on "Shopping Bag" icon on Home
 	 * screen
 	 */
-	@FindBy(xpath = "//*[@index='5']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='5']")
 	public AndroidElement ShoppingBagBtn;
 
 	/**
@@ -67,8 +67,8 @@ public class AddCartPageObject {
 	 * Cart page
 	 * Modified by vinay 
 	 */
-	@FindBy(xpath="//span[@class='label apply-coupon loggedin coupon-label']")
-//	@FindBy(xpath = "//a[@class='apply-coupon']")
+	@FindBy(xpath = "//span[text()='Apply Coupon']")
+//	@FindBy(xpath = "//android.view.View[@text='Apply Coupon']")
 	public AndroidElement ApplyCouponBtn;
 	/**
 	 * Name=Vinayss
@@ -176,8 +176,8 @@ public class AddCartPageObject {
 	 * Shopping Bag page
 	 * 
 	 */
-	//@FindBy(xpath = "//android.widget.Button[@text='PLACE ORDER' or content-desc='PLACE ORDER']")
 	@FindBy(xpath = "//button[text()='PLACE ORDER']")
+//	@FindBy(xpath = "//android.widget.Button[@text='PLACE ORDER']")
 	public AndroidElement PlaceOrderBtn;
 	
 	@FindBy(xpath = "//div[@class='prod-set']/./././/span[text()='REMOVE']")
@@ -215,7 +215,7 @@ public class AddCartPageObject {
 	 * Name:Amba
 	 * Object identified for the move to Wishlist from Cart Page
 	 */
-	@FindBy(xpath = "//*[@text='REMOVEMOVE TO WISHLIST']")
+	@FindBy(xpath = "//android.view.View[@text='REMOVEMOVE TO WISHLIST']")
 	public AndroidElement MoveToWishlistBtn;
 	@FindBy(xpath="//button[text()='Edit Message']")
 	public AndroidElement GiftWrapEditMsg;
@@ -401,7 +401,7 @@ public class AddCartPageObject {
 	public void selectSizePopUp() {
 		List<AndroidElement> Sizes = getPopupSelectSize();
 		for (AndroidElement e : Sizes) {
-			List<MobileElement> sizecount = e.findElements(By.xpath("//*[@resource-id='com.myntra.android:id/view_saparator']"));
+			List<MobileElement> sizecount = e.findElements(By.xpath("//android.view.View[@resource-id='com.myntra.android:id/view_saparator']"));
 			System.out.println("the size of the singlesize is" + sizecount.size());
 			if (sizecount.size() == 0) {
 				System.out.println("clicked successfully");
@@ -511,7 +511,7 @@ public class AddCartPageObject {
 		getCouponCodebox().sendKeys(couponcode);
 	}
 
-	public void clickRemoveButton() throws InterruptedException {
+	public void clickRemoveButton() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getRemoveBtn(), "Remove Button");
 		
 	}
@@ -528,7 +528,7 @@ public class AddCartPageObject {
 		//objAndroidGenericMethods.switchInToNativeView();
 	} 
 
-	public void ClickCouponCancelbtn() throws InterruptedException {
+	public void ClickCouponCancelbtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getCouponCancelBtn(),"Cancel button on Applly coupon screen");
 	}
 
@@ -560,7 +560,7 @@ public class AddCartPageObject {
 		getSenderNametxt().sendKeys(senderName);
 	}
 
-	public void SaveGiftcard() throws InterruptedException {
+	public void SaveGiftcard() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getSaveGiftbtn(), "SaveGiftCard ");
 	}
 
@@ -646,7 +646,7 @@ public class AddCartPageObject {
 	 * 
 	 * @modified 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.widget.TextView[@text='WISHLIST']")
+	@FindBy(xpath = "//android.widget.Button[@resource-id='com.myntra.android:id/tb_wishlist']")
 	public AndroidElement wishListicon;
 	
 	/**
@@ -673,12 +673,11 @@ public class AddCartPageObject {
 
 	public void verifyShoppingBagTitle() {
 		
-	//	objAndroidGenericMethods.VerifyTwoString(getShoppingBagTitle(), "SHOPPING BAG");
+		objAndroidGenericMethods.VerifyTwoString(getShoppingBagTitle(), "SHOPPING BAG");
 	}
 
 	public void verifyWishlistIcon() {
-		
-	//	objAndroidGenericMethods.VerifyTwoString(getWishListicon(), "WISHLIST");
+		objAndroidGenericMethods.VerifyTwoString(getWishListicon(), "WISHLIST");
 	}
 	/**
 	 * this help to assert items total in addcart

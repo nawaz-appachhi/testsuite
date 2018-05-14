@@ -62,7 +62,7 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
@@ -120,7 +120,7 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	@Test(priority = 8)
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress_Home");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

@@ -210,6 +210,7 @@ import com.automation.web.ObjectRepository.Pages.PaymentPage.*;
 			objPaymentPageObjects.SelectCreditDebitCard();
 			objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 					objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+			objPaymentPageObjects.handelAlert();
 			objPaymentPageObjects.VerifyOrderNumber();
 			objPaymentPageObjects.GoToOrderDetailsPage();
 			objPaymentPageObjects.VerifyOrdernumber();

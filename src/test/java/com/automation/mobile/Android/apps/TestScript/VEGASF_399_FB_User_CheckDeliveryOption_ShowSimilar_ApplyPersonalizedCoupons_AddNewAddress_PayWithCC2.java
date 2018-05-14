@@ -65,7 +65,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 		}
 		
 		@Test(priority = 2)
-		public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void resetdata() throws InterruptedException {
 			Reporter.log("resetData");
 			objAddCartPageObject.resetBag();
 			objWishListPageObject.resetWishlist();
@@ -105,7 +105,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 		@Test(priority = 6)
 		public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
 			Reporter.log("AddNewAddressOffice");
-			objCheckOutPageObject.CheckAddress();
+			objCheckOutPageObject.AddNewAddress();
 			objCheckOutPageObject.clickContinue();
 			
 		}

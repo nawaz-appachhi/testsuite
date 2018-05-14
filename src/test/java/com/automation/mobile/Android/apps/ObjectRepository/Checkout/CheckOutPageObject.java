@@ -393,21 +393,21 @@ public class CheckOutPageObject {
 
 	}
 
-	public void clickChoosebtn() throws InterruptedException {
+	public void clickChoosebtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getchoosebtn(), "Choose Button");
 	}
 
-	public void clickEditOrchangeAddress() throws InterruptedException {
+	public void clickEditOrchangeAddress() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getEditOrchangeAddressbtn(), "EditAddressBtn");
 
 	}
 
-	public void clickEditAddress() throws InterruptedException {
+	public void clickEditAddress() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getEditAddressbtn(), "EditAddressBtn");
 
 	}
 
-	public void clickOnRemoveAddress() throws InterruptedException {
+	public void clickOnRemoveAddress() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getRemoveAddressbtn(), "RemoveAddressBtn");
 	}
 
@@ -427,7 +427,7 @@ public class CheckOutPageObject {
 	public void CheckAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		try { 
 			getContinueOrderbtn().getText();
-			System.out.println(getContinueOrderbtn().getText());
+			System.out.println(continueOrderbtn.getText());
 			
 		} catch (Exception e) {
 			fillAddressOffc();
@@ -506,8 +506,6 @@ public class CheckOutPageObject {
 			Thread.sleep(4000);
 			getNametxt().clear();
 			getNametxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Name"));
-			getAddresstxt().clear();
-			getAddresstxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Address"));
 			aDriver.hideKeyboard();
 			clickAddressSave();		
 		} catch (Exception e1) {
@@ -531,7 +529,7 @@ public class CheckOutPageObject {
 		getPinCodetxt().sendKeys("560098");
 	}
 
-	public void clickAddNewAddressbtn() throws InterruptedException {
+	public void clickAddNewAddressbtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getAddNewAddressbtn(), "Add Address");
 	}
 
@@ -545,10 +543,10 @@ public class CheckOutPageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(getAddressConfirmbtn(), "Confirm Address Button");
 		objAndroidGenericMethods.switchInToNativeView();
 	}
-	public void clickLocalitySavebtn() throws InterruptedException {
+	public void clickLocalitySavebtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getLocalitySaveButton(), "localitySaveButton");
 	}
-	public void clickHomeRadioBtn() throws InterruptedException{
+	public void clickHomeRadioBtn(){
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getHomeRadiobtn(), "homeRadiobtn");
 	}
 
@@ -589,25 +587,25 @@ public class CheckOutPageObject {
 	/**
 	 * object for remove button displayed for adjacent address in address page;
 	 */
-	@FindBy(xpath = "//*[@text='REMOVE']")
+	@FindBy(xpath = "//android.view.View[@text='REMOVE']")
 	public AndroidElement addressRemove;
 
 	/**
 	 * object for delete button displayed after tapped on remove address;
 	 */
-	@FindBy(xpath = "//*[@text='DELETE']")
+	@FindBy(xpath = "//android.view.View[@text='DELETE']")
 	public AndroidElement addressDelete;
 
 	/**
 	 * object to identify the message displayed for empty address condition;
 	 */
-	@FindBy(xpath = "//*[@text='SAVE YOUR ADDRESSES NOW']")
+	@FindBy(xpath = "//android.view.View[@text='SAVE YOUR ADDRESSES NOW']")
 	public AndroidElement saveurAddressMsg;
 
 	/**
 	 * object to identify the message displayed for empty address condition;
 	 */
-	@FindBy(xpath = "//*[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
+	@FindBy(xpath = "//android.view.ViewGroup[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
 	public AndroidElement closeAddressBtn;
 
 	/**
@@ -668,7 +666,7 @@ public class CheckOutPageObject {
 	 * @throws InterruptedException
 	 */
 	public void resetAddress() throws InterruptedException {
-		/*try {
+		try {
 			objHamburgerPageObject.clickHamburgerbtn();
 			objAndroidGenericMethods.scrolltoElementAndClick( objHamburgerPageObject.getmyAccountBtn(), 2000);
 			objAndroidGenericMethods.scrolltoElementAndClick( objHamburgerPageObject.getmyAccountAdddresses(), 2000);
@@ -688,7 +686,7 @@ public class CheckOutPageObject {
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace(); 
-		} */
+		} 
 	}
 
 }

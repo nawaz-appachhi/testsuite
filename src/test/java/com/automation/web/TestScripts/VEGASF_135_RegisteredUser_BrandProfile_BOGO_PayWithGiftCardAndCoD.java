@@ -190,11 +190,8 @@ public class VEGASF_135_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD e
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.VerifyFinalPayableAmount();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.handelAlert();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
 
 	@Test(priority = 13)

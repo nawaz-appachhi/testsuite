@@ -88,10 +88,10 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 3)
-		public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void reset() throws InterruptedException {
 			Reporter.log("reset");
 			objAddCartPageObject.resetBag();
-			objWishListPageObject.resetWishlist();
+//			objWishListPageObject.resetWishlist();
 //			objCheckOutPageObject.resetAddress();
 	}
 
@@ -122,7 +122,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		objWishlistPageObject.clickDoneWishListbtn();
 		objWishlistPageObject.clickBagBtn();
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void ApplyCoupan() throws InterruptedException {
 		Reporter.log("ApplyCoupan");
 	//	objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
@@ -144,7 +144,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 	public void PaymenWithMyntCOD() {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

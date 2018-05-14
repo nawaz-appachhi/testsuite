@@ -67,7 +67,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -106,7 +106,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 	public void Edit_Address() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log(" Edit_Address");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

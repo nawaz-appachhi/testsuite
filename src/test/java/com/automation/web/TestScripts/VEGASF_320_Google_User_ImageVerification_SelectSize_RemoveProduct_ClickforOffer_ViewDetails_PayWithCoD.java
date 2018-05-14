@@ -177,12 +177,9 @@ public class VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 11)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

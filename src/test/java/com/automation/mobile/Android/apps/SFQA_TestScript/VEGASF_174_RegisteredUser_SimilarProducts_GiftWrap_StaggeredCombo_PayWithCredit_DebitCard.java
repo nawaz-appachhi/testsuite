@@ -65,10 +65,10 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	
-	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	//@Test(priority = 2)
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
-	//	objCheckOutPageObject.resetAddress();
+		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist(); 
 	}
@@ -99,24 +99,26 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	@Test(priority = 6)
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("Checkout Test Started Successfully");
-		objAddCartPageObject.verifyShoppingBagTitle();
-		objAddCartPageObject.verifyWishlistIcon();
-		/*objAddCartPageObject.clickGiftWrap();
-		objAddCartPageObject.enterGiftMessagetxt();
-		objAddCartPageObject.ClickCouponCancelbtn();
+		objProductListPageObject.clickOkButton();
+		//objAddCartPageObject.verifyShoppingBagTitle();
+		//objAddCartPageObject.verifyWishlistIcon();
+		//GiftWrap Web View
+		//objAddCartPageObject.clickGiftWrap();
+		//objAddCartPageObject.enterGiftMessagetxt();
+		//objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.clickContinue(); */
+		objCheckOutPageObject.clickContinue(); 
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void Payment() throws InterruptedException {
 		Reporter.log("Payment Test Started Successfully");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
-*/
+
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

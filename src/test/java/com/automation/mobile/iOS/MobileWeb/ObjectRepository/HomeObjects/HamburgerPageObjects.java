@@ -290,7 +290,7 @@ public class HamburgerPageObjects {
 	 */
 
 	public void clickOnSignUpOption() {
-		objiOSGenericMethods.clickOnIOSElement(getSignUpOption(), "clicked on signUpOption");
+		objiOSGenericMethods.clickOnIOSElement(getSignUpOption(), "signUp Option");
 		System.out.println("Succesfully click on signIn button");
 	}
 
@@ -303,24 +303,24 @@ public class HamburgerPageObjects {
 	}
 
 	public void clickOnGender() {
-		objiOSGenericMethods.clickOnIOSElement(getSignupGenderButton(), "clicked on signupGenderButton");
+		objiOSGenericMethods.clickOnIOSElement(getSignupGenderButton(), "signup Gender Button");
 		System.out.println("Succesfully click gender button ");
 
 	}
 
 	public void clickOnCreateAccountButton() {
-		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "clicked on createAccount");
+		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "create Account");
 		System.out.println("Create an account click succesfully");
 	}
 
 	public void clickOnLoginButton() {
-		objiOSGenericMethods.clickOnIOSElement(getSignInButton(), "clicked on signInButton");
+		objiOSGenericMethods.clickOnIOSElement(getSignInButton(), "signIn Button");
 		System.out.println("SignIn button is clicked succesfully ");
 
 	}
 
 	public void clickOnMyAccount() {
-		objiOSGenericMethods.clickOnIOSElement(getMyAccount(), "clicked on MyAccount");
+		objiOSGenericMethods.clickOnIOSElement(getMyAccount(), "MyAccount");
 		System.out.println("My account clicked succesfully ");
 
 	}
@@ -335,7 +335,7 @@ public class HamburgerPageObjects {
 	}
 
 	public void clickOnContactUs(){
-		objiOSGenericMethods.clickOnIOSElement(getcontactUs(), "clicked on ContactUs");
+		objiOSGenericMethods.clickOnIOSElement(getcontactUs(), "Contact Us");
 	}
 
 
@@ -375,7 +375,7 @@ public class HamburgerPageObjects {
 	
 	
 	public void clickOnFacebook() {
-		objiOSGenericMethods.clickOnIOSElement(getFacebookLoginOption(), "Clicked on FacebookOption");
+		objiOSGenericMethods.clickOnIOSElement(getFacebookLoginOption(), "FacebookOption");
 		System.out.println("Succesfully clicked on Facebook button");
 	}
 	
@@ -397,7 +397,7 @@ public class HamburgerPageObjects {
 	 */
 	
 	public void clickOnGoogle() {
-		objiOSGenericMethods.clickOnIOSElement(getGoogleLoginOption(), "Clicked on GoogleOption");
+		objiOSGenericMethods.clickOnIOSElement(getGoogleLoginOption(), "Google Option");
 		System.out.println("Succesfully clicked on Google Button");
 	}
 	

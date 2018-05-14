@@ -75,12 +75,12 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 		objLoginPageObject.verifyUserId(); 
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
-	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+//	@Test(priority = 2)
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
-//		objCheckOutPageObject.resetAddress();
+		objCheckOutPageObject.resetAddress();
 	}
 	
 	@Test(priority = 3)
@@ -104,9 +104,10 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void ViewDetails() throws Exception {
 		Reporter.log("ViewDetails");
+		objProductListPageObject.clickOkButton();    // no need to apply if reset bag is added
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
@@ -128,7 +129,7 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

@@ -78,7 +78,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 	
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void placeOrder() throws InterruptedException {
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.clickWishlistRH();
@@ -133,7 +133,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

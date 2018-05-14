@@ -46,18 +46,10 @@ import io.appium.java_client.ios.IOSElement;
  */
 /*
  * Steps to automate Test case:
-
-* App(Android, IOS, PWA, Web App)	
-* Email registered User	
-* Home Page	
-* Search (using a keyword in the Golden Set)	
-* Save	
-* Click for best Price (Coupon)	
-* Select Size	
-* Apply Coupon	
-* Conditional Discount	
-* View Details	
-* Myntra Credit + Online
+ * 
+ * App(Android, IOS, PWA, Web App) Email registered User Home Page Search (using
+ * a keyword in the Golden Set) Save Click for best Price (Coupon) Select Size
+ * Apply Coupon Conditional Discount View Details Myntra Credit + Online
  */
 public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC {
 
@@ -82,6 +74,14 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -90,7 +90,7 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 				iOSGenericMethods.getValueByKey(TestName, "Password"));
 		objProfileLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objProfileLoginPageObject.removeAddress();
 	}
@@ -101,24 +101,25 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 		objHomePageObject2.clickOnHomeButton();
 		objHomePageObject2.clickOnSearchButton();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 	}
 
-//	@Test(priority = 3)
-//	public void PLPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//
-//	}
+	// @Test(priority = 3)
+	// public void PLPage() throws InterruptedException,
+	// InvalidFileFormatException, IOException {
+	//
+	// objAssertionPageObject.verifyPLPHeader();
+	// objAssertionPageObject.verifyPLPProductCount();
+	// objPLPageObjets.clickOnFirstproductofPLP();
+	//
+	// }
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException {
 
-//		objPDPageObject.clickOnSaveButton();
-//		objiOSGenericMethods.swipeDown(1000, 5);
-//		objPDPageObject.clickOnBestPrice();
+		// objPDPageObject.clickOnSaveButton();
+		// objiOSGenericMethods.swipeDown(1000, 5);
+		// objPDPageObject.clickOnBestPrice();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -131,13 +132,14 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 		objAssertionPageObject.verifyMyBag();
 		objAssertionPageObject.verifyProductTitleCartPage();
-		objiOSGenericMethods.swipeDown(100, 4);
+		objiOSGenericMethods.swipeDown(100, 3);
 		objCartPageObject.ClickOnApplyCoupon();
-		//objAssertionPageObject.verifyApplyCouponHeaders();
-		//String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
+		// objAssertionPageObject.verifyApplyCouponHeaders();
+		// String coupon = objiOSGenericMethods.getValueByKey(TestName,
+		// "Coupon");
 		// objCartPage.enterCoupon(coupon);
-		objCartPageObject.clickOnApplyButton();
-		objiOSGenericMethods.swipeDown(100, 7);
+		 objCartPageObject.clickOnApplyButton();
+		 objiOSGenericMethods.swipeDown(100, 2);
 		objAssertionPageObject.verifyPriceDetails();
 		objCartPageObject.clickOnplaceOrder();
 	}
@@ -146,7 +148,7 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	public void AddAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 
 		objAssertionPageObject.verifyAddressHeaders();
-		//objAddNewAdressPageObjects.clickOnAddNewAddress();
+		// objAddNewAdressPageObjects.clickOnAddNewAddress();
 		String pincode = iOSGenericMethods.getValueByKey(TestName, "Pincode");
 		String locality = iOSGenericMethods.getValueByKey(TestName, "Locality");
 		String name = iOSGenericMethods.getValueByKey(TestName, "Name");
@@ -166,19 +168,20 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 	}
 
-	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
+			String screenshotPath_) throws InterruptedException {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
 		Map<String, String> params = new HashMap<String, String>();
-        params.put("deviceName_", deviceName_);
-        params.put("UDID_", UDID_);
-        params.put("platformVersion_", platformVersion_);
-        params.put("URL_", URL_);
-        params.put("appUrl_", appUrl_);
-        params.put("screenshotPath_", screenshotPath_);
+		params.put("deviceName_", deviceName_);
+		params.put("UDID_", UDID_);
+		params.put("platformVersion_", platformVersion_);
+		params.put("URL_", URL_);
+		params.put("appUrl_", appUrl_);
+		params.put("screenshotPath_", screenshotPath_);
 		iDriver = objMobileDrivers.launchAppiOS(params);
 		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);

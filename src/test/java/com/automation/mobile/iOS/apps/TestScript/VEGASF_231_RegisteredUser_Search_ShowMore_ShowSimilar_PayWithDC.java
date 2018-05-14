@@ -64,6 +64,13 @@ public class VEGASF_231_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithDC {
 
 	@Test(priority = 1)
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();

@@ -70,6 +70,13 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 6);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -106,7 +113,7 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 //		objPLPageObjets.clickOnFirstproductofPLP();
 //	}
 
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	public void SizeChart() throws InterruptedException, InvalidFileFormatException, IOException {
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.clickOnSizeChart();
@@ -122,8 +129,8 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 		objAssertionPageObject.verifyMyBag();
 		objAssertionPageObject.veirfyCartPageWishlist();
 		objAssertionPageObject.verifyProductTitleCartPage();
-		objCartPageObject.clickOnChangeSize();
-		objCartPageObject.clickOnChangeSizeFromList();
+//		objCartPageObject.clickOnChangeSize();
+//		objCartPageObject.clickOnChangeSizeFromList();
 //		objCartPageObject.clickOnQuantity();
 //		objCartPageObject.clickOnChangequantityList();
 	}

@@ -70,9 +70,9 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	}
 	
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -97,15 +97,16 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	@Test(priority = 4)
 	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("placeOrder");
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
 		objAddCartPageObject.ClickCouponCancelbtn();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickPlaceOrder();
 	}
-/*
+
 	@Test(priority = 8)
 	public void checkout() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("checkout");
@@ -128,7 +129,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
 	}
-*/
+
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

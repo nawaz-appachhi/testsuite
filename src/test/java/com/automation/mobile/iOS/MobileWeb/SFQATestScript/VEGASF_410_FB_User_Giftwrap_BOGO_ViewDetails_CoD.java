@@ -145,11 +145,11 @@ public class VEGASF_410_FB_User_Giftwrap_BOGO_ViewDetails_CoD {
 	public void AddToBag() throws InterruptedException {
 		Reporter.log("AddToBag test case started successfully");
 		System.out.println("AddToBag!");
-		objPDPageObject.clickFirstProductSearchResult();
+		//objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();

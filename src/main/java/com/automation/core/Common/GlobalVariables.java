@@ -96,13 +96,13 @@ public class GlobalVariables {
 //	 public static final String UDID = "a90a8278087efbd34aa8830f0cb4c208dbc628e9";
 
 	public static final String iOSDEVICE_VERSION = "11.2";
-	public static final String ANDROID = "true";
+	public static final String ANDROID = "false";
 
 	public static final String iOSPLATFORM = "iOS";
 
 	public static final String iOSDEVICE_NAME = "iPhone 7";
 
-	public static final String iOS = "false";
+	public static final String iOS = "true";
 
 	public static final String ANDROID_PWA = "false";
 

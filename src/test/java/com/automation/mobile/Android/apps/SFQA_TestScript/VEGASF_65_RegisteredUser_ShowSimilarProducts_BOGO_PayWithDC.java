@@ -60,10 +60,10 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -97,10 +97,10 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
-	//	objAddCartPageObject.clickPlaceOrder();	
+		objAddCartPageObject.clickPlaceOrder();	
 	}
 	
-	/*@Test(priority = 8)
+	@Test(priority = 8)
 	public void AddNewOfficeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckOutPage Test case Started Successfully");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
@@ -126,7 +126,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {

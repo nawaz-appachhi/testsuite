@@ -75,7 +75,13 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
-
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();

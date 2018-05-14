@@ -56,7 +56,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -97,7 +97,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	@Test(priority = 7)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("RemoveAddress");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

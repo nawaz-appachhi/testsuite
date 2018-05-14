@@ -59,7 +59,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -98,7 +98,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckoutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

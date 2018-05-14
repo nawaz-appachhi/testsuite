@@ -64,7 +64,7 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -108,7 +108,7 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	public void AddAdress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

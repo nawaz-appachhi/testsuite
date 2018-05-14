@@ -66,7 +66,7 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		// objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

@@ -190,14 +190,10 @@ public class VEGASF_145_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 		objAddressPageObjects.ClickToContinue();
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
-
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 13)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

@@ -71,10 +71,10 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -101,7 +101,7 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
         objWishListPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void CheckDiscount() throws InterruptedException, InvalidFileFormatException, IOException {
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -114,7 +114,7 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
-	}*/
+	}
 	
 	    @Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 		@BeforeTest

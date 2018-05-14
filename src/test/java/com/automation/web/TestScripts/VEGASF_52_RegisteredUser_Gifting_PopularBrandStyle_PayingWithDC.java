@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
@@ -200,6 +201,7 @@ public class VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();

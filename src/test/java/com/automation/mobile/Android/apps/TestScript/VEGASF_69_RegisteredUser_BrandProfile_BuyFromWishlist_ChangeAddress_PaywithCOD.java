@@ -59,7 +59,7 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
  
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -85,11 +85,11 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objProductDescriptionPageObject.clickEnterPincodebtn();
 		objProductDescriptionPageObject.clickPincodeTxt("560068");
 		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-	//	objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
-	//	objProductDescriptionPageObject.clickGoToBag();
+		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
+		objProductDescriptionPageObject.clickGoToBag();
 		//objAddCartPageObject.clickShoppingBag();
 		//objProductDescriptionPageObject.clickbagHeaderbtn();
-	//	objAddCartPageObject.clickOnMovetoWishlist();
+		objAddCartPageObject.clickOnMovetoWishlist();
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		objProductDescriptionPageObject.clickWishListbtn();
 		objWishListPageObject.verifyWishlistIcon();
@@ -106,7 +106,7 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

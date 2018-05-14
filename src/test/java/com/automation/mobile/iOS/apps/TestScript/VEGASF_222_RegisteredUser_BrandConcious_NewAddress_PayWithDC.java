@@ -70,6 +70,13 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
@@ -79,7 +86,7 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objLoginPageObject.removeAddress();
 
@@ -112,9 +119,9 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 
 	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
 
-//		objiOSGenericMethods.swipeDown(100, 14);
-//		objPDPageObject.clickMoreSimilarProducts();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		// objiOSGenericMethods.swipeDown(100, 14);
+		// objPDPageObject.clickMoreSimilarProducts();
+		// objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -184,8 +191,9 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 		objAssertionPageObject = new AssertionPageObject(iDriver);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
-	 @AfterTest
-		public void quit() {
-			iDriver.quit();
-		}
+
+	@AfterTest
+	public void quit() {
+		iDriver.quit();
+	}
 }

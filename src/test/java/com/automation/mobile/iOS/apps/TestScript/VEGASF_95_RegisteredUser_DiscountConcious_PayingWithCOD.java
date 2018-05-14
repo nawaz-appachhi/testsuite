@@ -55,6 +55,13 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 6);
 		objProfileLoginPageObject.clickOnLogOut();

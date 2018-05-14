@@ -55,6 +55,14 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, IOException {
+
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 6);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -63,7 +71,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 				iOSGenericMethods.getValueByKey(TestName, "Password"));
 		objProfileLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objProfileLoginPageObject.removeAddress();
 	}
@@ -75,19 +83,19 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(objiOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objiOSGenericMethods.acceptAlert();
-//		objPLPageObjets.clickOnSort();
-//		objPLPageObjets.clickOnDiscountSort();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		// objiOSGenericMethods.acceptAlert();
+		// objPLPageObjets.clickOnSort();
+		// objPLPageObjets.clickOnDiscountSort();
+		// objAssertionPageObject.verifyProductname();
+		// objAssertionPageObject.verifyPLPHeader();
+		// objAssertionPageObject.verifyPLPProductCount();
+		// objPLPageObjets.clickOnBrandNamePLP();
 	}
 
 	@Test(priority = 3)
 	public void PDPage() throws InterruptedException {
-		
-		//objAssertionPageObject.verifyStrickPrice();
+
+		// objAssertionPageObject.verifyStrickPrice();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -108,6 +116,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objAddNewAdressPageObjects.clickOnPlaceOrder();
 
 	}
+
 	@Test(priority = 6)
 	public void AddAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyAddressHeaders();
@@ -125,7 +134,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 
 	@Test(priority = 7)
 	public void Payment() throws InterruptedException {
-		
+
 		objiOSGenericMethods.swipeDown(100, 4);
 		objAssertionPageObject.verifyDeliverTo();
 		objiOSGenericMethods.SwipeUp(100, 4);
@@ -133,19 +142,20 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objPaymentPageObject.clickOnCOD();
 	}
 
-	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
+			String screenshotPath_) throws InterruptedException {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
 		Map<String, String> params = new HashMap<String, String>();
-        params.put("deviceName_", deviceName_);
-        params.put("UDID_", UDID_);
-        params.put("platformVersion_", platformVersion_);
-        params.put("URL_", URL_);
-        params.put("appUrl_", appUrl_);
-        params.put("screenshotPath_", screenshotPath_);
+		params.put("deviceName_", deviceName_);
+		params.put("UDID_", UDID_);
+		params.put("platformVersion_", platformVersion_);
+		params.put("URL_", URL_);
+		params.put("appUrl_", appUrl_);
+		params.put("screenshotPath_", screenshotPath_);
 		iDriver = objMobileDrivers.launchAppiOS(params);
 		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
@@ -161,8 +171,9 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objHomePageObject2 = new HomePageObject2(iDriver);
 		objAddNewAdressPageObjects = new AddNewAdressPageObjects(iDriver);
 	}
-	 @AfterTest
-		public void quit() {
-			iDriver.quit();
-		}
+
+	@AfterTest
+	public void quit() {
+		iDriver.quit();
+	}
 }

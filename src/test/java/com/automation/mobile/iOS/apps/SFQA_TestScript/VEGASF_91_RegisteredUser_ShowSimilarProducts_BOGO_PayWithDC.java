@@ -61,6 +61,13 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  {
 	@Test(priority=1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 	{
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -97,24 +104,12 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  {
 		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
 //		objAssertionPageObject.verifySelectSize();
-//		objiOSGenericMethods.swipeDown(0, 14);
-//		objPDPageObject.clickOnViewSimilar();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//		
 	}
 	  
-//	@Test(priority=4)
-//	public void PDPage() throws InterruptedException {
-//		objPDPageObject.clickOnAddToBag();
-//		objPDPageObject.getSizeListinString(0);
-//		objPDPageObject.clickonDoneButton();
-//		objPDPageObject.clickOnGoToBag();
-//		
-//		
-//	}
+
 	@Test(priority=4)
 	public void ShoppingBag() throws InterruptedException, InvalidFileFormatException, IOException {
-		objiOSGenericMethods.SwipeUp(100, 3);
+		objiOSGenericMethods.swipeDown(100, 3);
 		objCartPageObject.ClickOnApplyCoupon();
 		objAssertionPageObject.verifyApplyCouponHeaders();
 		//String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");

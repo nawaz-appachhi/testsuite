@@ -752,11 +752,8 @@ public class ProductListPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOk() throws InterruptedException {
-		try {
-			objAndroidGenericMethods.clickOnAndroidElement(getOkButton(), "Click on okpop button");
-		} catch (Exception e) {
-			System.out.println("ok Button didn't appear");
-		}
+	//	Thread.sleep(5000);
+		objAndroidGenericMethods.clickOnAndroidElement(getOkButton(), "Click on okpop button");
 	}
 
 	public void clickSort() {

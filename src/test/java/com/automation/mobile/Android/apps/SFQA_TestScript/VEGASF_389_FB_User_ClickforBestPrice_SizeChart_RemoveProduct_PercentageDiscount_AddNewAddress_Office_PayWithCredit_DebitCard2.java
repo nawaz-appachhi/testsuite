@@ -81,7 +81,7 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -105,7 +105,7 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 	
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void placeOrder() throws InterruptedException {
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		//objAddCartPageObject.RemoveOneItem();
@@ -132,7 +132,7 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	

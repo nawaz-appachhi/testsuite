@@ -174,6 +174,7 @@ public class VEGASF_56_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();

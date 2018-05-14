@@ -40,7 +40,7 @@ public class HamburgerPageObject {
 
 	// @FindBy(xpath = "//android.widget.TextView[@text = 'î—’'and
 	// @index='0']")
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='2']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement humburgerbtn;
 
 	/**
@@ -465,9 +465,8 @@ public class HamburgerPageObject {
 	/**
 	 * @author 300019224-Aishurya: Added message and countdown verification
 	 * Modified by Aishurya: webView Click
-	 * @throws InterruptedException 
 	 */
-	public void clickOrdersPageVerifyBtn() throws InterruptedException {
+	public void clickOrdersPageVerifyBtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getOrdersVerifyBtn(), "Orders Page Verify Btn");
 		getResendOtpMsg();
 		getOtpCounter();

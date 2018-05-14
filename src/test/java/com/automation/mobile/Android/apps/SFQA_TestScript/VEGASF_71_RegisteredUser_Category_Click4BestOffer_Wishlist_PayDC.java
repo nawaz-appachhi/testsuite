@@ -60,7 +60,7 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK); 
 	} 
 	@Test(priority = 3)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -92,13 +92,13 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAddCartPageObject.clickPlaceOrder();
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
 
-	/*@Test(priority = 9)
+	@Test(priority = 9)
 	public void payment() throws InterruptedException, InvalidFileFormatException, IOException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
@@ -117,7 +117,7 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

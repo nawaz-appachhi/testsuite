@@ -84,10 +84,10 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -112,7 +112,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 		objWishListPageObject.clickBagBtn();
 	}
 	
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void AddCartPage() throws InterruptedException {
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.verifyShoppingBagTitle();
@@ -144,7 +144,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

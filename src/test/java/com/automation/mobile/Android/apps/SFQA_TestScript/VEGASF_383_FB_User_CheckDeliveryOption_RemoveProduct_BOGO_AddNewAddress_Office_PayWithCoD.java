@@ -65,10 +65,10 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -104,12 +104,14 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 	
 	@Test(priority = 7)
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {	
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
-		/*objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.AddNewAddress();*/
+		 // buy one get one 
+		objAddCartPageObject.clickPlaceOrder();
+		objCheckOutPageObject.AddNewAddress();
 		
 	}
-	/*@Test(priority = 8)
+	@Test(priority = 8)
 	public void Payment() throws InvalidFileFormatException, IOException, InterruptedException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Cardy");
@@ -128,7 +130,7 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
 	}
-	*/
+	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

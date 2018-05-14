@@ -75,7 +75,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 	
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -102,7 +102,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 		objWishListPageObject.clickDoneWishListbtn();
 		objWishListPageObject.clickBagBtn();
 	}
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void addCart_GiftWrap () throws InterruptedException {
 		Reporter.log("GiftWrap Test case Started Successfully");
 //		objProductListPageObject.clickOkButton();  //no meed to apply if reset bag is added
@@ -128,7 +128,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

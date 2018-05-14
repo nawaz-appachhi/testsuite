@@ -59,6 +59,13 @@ public class VEGASF_359_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	@Test(priority = 1)
 
 	public void LoginApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();

@@ -61,7 +61,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
@@ -115,7 +115,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 	@Test(priority = 8)
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("EditAddress");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

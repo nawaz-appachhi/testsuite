@@ -65,7 +65,7 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -110,7 +110,7 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

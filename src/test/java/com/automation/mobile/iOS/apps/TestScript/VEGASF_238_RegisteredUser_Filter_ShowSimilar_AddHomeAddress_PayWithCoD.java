@@ -71,6 +71,13 @@ public class VEGASF_238_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 8);
 		objProfileLoginPageObject.clickOnLogOut();

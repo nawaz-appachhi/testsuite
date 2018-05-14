@@ -58,10 +58,10 @@ public class VEGASF_377_FB_User_Offers_Concious {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException, InvalidFileFormatException, IOException { 
+	public void reset() throws InterruptedException { 
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -91,16 +91,13 @@ public class VEGASF_377_FB_User_Offers_Concious {
 		objWishListPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 8)
+	@Test(priority = 8)
 	public void ApplyGenericCoupons() throws InterruptedException, InvalidFileFormatException, IOException {
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
-		objAddCartPageObject.ClickCouponCancelbtn();
-		
-//		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
-//		objAddCartPageObject.clickApplyCoupon();	
-		
+		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
+		objAddCartPageObject.clickApplyCoupon();	
 		objAddCartPageObject.clickPlaceOrder();
 		
 	}
@@ -108,11 +105,10 @@ public class VEGASF_377_FB_User_Offers_Concious {
 	@Test(priority = 9)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
-		objCheckOutPageObject.clickContinue();
+		objCheckOutPageObject.removeAddress();
 			
 		}
-*/
+
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {

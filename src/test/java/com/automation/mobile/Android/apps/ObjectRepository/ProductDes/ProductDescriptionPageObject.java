@@ -48,7 +48,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified to scroll product image 
 	 */
-	@FindBy(xpath = "//*[@index='0' or @content-desc='image_swipe']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='0' or @content-desc='image_swipe']")
 	public AndroidElement productImageScroll;
 	
 	/**
@@ -65,7 +65,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for show similar icon displayed on product tile.
 	 */
-	@FindBy(xpath = "//*[@content-desc ='similar_icon']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='similar_icon']")
 	public AndroidElement similarIconbtn;
 
 	/**
@@ -73,7 +73,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for selecting first similar product.
 	 */
-	@FindBy(xpath = "//*[starts-with(@content-desc,'similar_item_0')]")
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'similar_item_0')]")
 	public AndroidElement firstSimilarProduct;
 
 	/**
@@ -81,7 +81,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for selecting product size.
 	 */
-	@FindAll({ @FindBy(xpath = "//*[starts-with(@content-desc,'size_select')]") })
+	@FindAll({ @FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]") })
 	public List<AndroidElement> productSizesbtn;
 
 	/**
@@ -89,7 +89,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for product size subnodes.
 	 */
-	@FindBy(xpath = "//*[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']")
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']")
 	public List<AndroidElement> productSizesSubNodes;
 
 	/**
@@ -97,7 +97,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for selecting first product size.
 	 */
-	@FindBy(xpath = "//*[starts-with(@content-desc,'size_select_0')]")
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select_0')]")
 	public AndroidElement firstProductSizebtn;
 
 	/**
@@ -105,7 +105,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking add to bag button
 	 */
-	@FindBy(xpath = "//*[@content-desc ='buy_button']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='buy_button']")
 	public AndroidElement addToBagbtn;
 
 	/**
@@ -113,7 +113,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking Save to wishlist button
 	 */
-	@FindBy(xpath = "//*[@content-desc ='save_button']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='save_button']")
 	public AndroidElement saveToWishlistbtn;
 
 	/**
@@ -121,15 +121,8 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking on Wishlist button
 	 */
-	//@FindBy(xpath="//*[@content-desc='rightElement1']")
-	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement1']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.ImageView")
 	public AndroidElement wishListbtn;
-	
-	@FindBy(xpath="//*[@content-desc='leftElement']")
-	public AndroidElement backbtn;
-	
-	@FindBy(xpath="//*[@content-desc='back_button_click_search_default_page']")
-	public AndroidElement searchBackbtn;
 
 	/**
 	 * Author: Sneha
@@ -138,7 +131,7 @@ public class ProductDescriptionPageObject {
 	 * modified as xpath was not working
 	 */
 	//@FindBy(xpath = "//android.widget.TextView[@text ='GO TO BAG']")
-	@FindBy(xpath="//*[@content-desc='buy_button' or @text='buy_button']")
+	@FindBy(xpath="//android.view.ViewGroup[@content-desc='buy_button' or @text='buy_button']")
 	public AndroidElement goToBagbtn;
 
 	/**
@@ -181,7 +174,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for product price.
 	 */
-	@FindAll({ @FindBy(xpath = "//*[@content-desc='pdp_price']") })
+	@FindAll({ @FindBy(xpath = "//android.view.ViewGroup[@content-desc='pdp_price']") })
 	public List<AndroidElement> pdp_Price;
 
 	/**
@@ -223,7 +216,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking Bag header button.
 	 */
-	@FindBy(xpath = "//*[@index='3']/*/android.widget.TextView")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.view.ViewGroup/android.widget.TextView")
 	//@FindBy(xpath = "//android.view.ViewGroup[@index='3']")
 	public AndroidElement bagHeaderbtn;
 
@@ -251,22 +244,10 @@ public class ProductDescriptionPageObject {
 	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']")
 	public AndroidElement unavailableSize;
 	
-	@FindBy(xpath = "(//*[starts-with(@content-desc,'delivery_')]/android.widget.TextView")
+	@FindBy(xpath = "(//android.view.ViewGroup[starts-with(@content-desc,'delivery_')]/android.widget.TextView")
 	public AndroidElement pincodeHeader;
 	
 	/************ Getters *********/
-	
-	public AndroidElement getBackbtn() {
-		objAndroidGenericMethods.CheckAndroidElementFound(backbtn, "backbtn");
-		return backbtn;
-	}
-	
-	public AndroidElement getSearchBackbtn() {
-		objAndroidGenericMethods.CheckAndroidElementFound(searchBackbtn, "searchBackbtn");
-		return searchBackbtn;
-	}
-	
-	
 	/**
 	 * All the Getter methods written below are for the above elements
 	 * 
@@ -403,7 +384,7 @@ public class ProductDescriptionPageObject {
 		{
 
 			for (AndroidElement e : lst) {
-				List<MobileElement> sizecount = e.findElements(By.xpath("//*"));
+				List<MobileElement> sizecount = e.findElements(By.xpath("//android.view.ViewGroup"));
 
 				System.out.println("the size of the singlesize is" + sizecount.size());
 				if (sizecount.size() == 1) {
@@ -530,14 +511,6 @@ public class ProductDescriptionPageObject {
 	public void clickWishListbtn() {
 		objAndroidGenericMethods.clickOnAndroidElement(getWishListbtn(), "click on WishList button");
 	} 
-	
-	public void clickBackbtn() {
-		objAndroidGenericMethods.clickOnAndroidElement(getBackbtn(), "Backbtn");
-	}
-	
-	public void clickSearchBackbtn() {
-		objAndroidGenericMethods.clickOnAndroidElement(getSearchBackbtn(), "Backbtn");
-	}
 
 
 	public void clickEnterPincodebtn() {
@@ -618,13 +591,13 @@ public class ProductDescriptionPageObject {
 	public AndroidElement size_selector;
 
 	// PDP title
-	@FindBy(xpath = "//*[@content-desc ='product_head']/*/android.widget.TextView")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='product_head']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement pdpTitle;
 
 	/**
 	 * author : Sneha
 	 */
-	@FindBy(xpath = "//*[@content-desc ='tap_for_best_price' or @text ='Tap for best price']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='tap_for_best_price' or @text ='Tap for best price']")
 	public AndroidElement best_Price;
 
 	// ProductCode
@@ -672,7 +645,7 @@ public class ProductDescriptionPageObject {
 		objAndroidGenericMethods.VerifyStringShouldNotEmpty(best_Price, "Best Price");
 	}
 
-	@FindAll({ @FindBy(xpath = "//*[@content-desc='pdp_price']/*") })
+	@FindAll({ @FindBy(xpath = "//android.view.ViewGroup[@content-desc='pdp_price']/*") })
 	public List<AndroidElement> productdetailelements;
 
 	public List<AndroidElement> getProductdetailelements() {

@@ -57,7 +57,7 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
@@ -105,7 +105,7 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		Reporter.log("CheckOut");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 9)

@@ -60,10 +60,10 @@ public class VEGASF_156_RegisteredUser_PDPToWishlist_Checkout_PayWithCredit_Debi
 	} 
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -91,9 +91,12 @@ public class VEGASF_156_RegisteredUser_PDPToWishlist_Checkout_PayWithCredit_Debi
 	@Test(priority = 5)
 	public void Checkout() throws Exception {
 		Reporter.log("Checkout");	
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAddCartPageObject.clickPlaceOrder();
+		//objAddCartPageObject.clickViewDetails();
+		//objAndroidGenericMethods.scrollToText(aDriver, "PRICE DETAILS");
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -104,15 +107,15 @@ public class VEGASF_156_RegisteredUser_PDPToWishlist_Checkout_PayWithCredit_Debi
 		objPaymentPageObject.clickExpiryMonts();
 		objPaymentPageObject.clickExpiryYears();
 		objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
-		objPaymentPageObject.clickPayNowBtn();*/
+		objPaymentPageObject.clickPayNowBtn();
 	}
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void Verifypayment() throws InvalidFileFormatException, IOException, InterruptedException {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

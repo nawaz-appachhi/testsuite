@@ -66,7 +66,7 @@ public class HeaderPageObject {
 	@FindBy(className = "desktop-submit")
 	public WebElement SearchLens;
 
-	@FindBy(xpath = "//div[@class='desktop-getInLinks']/a[2]")
+	@FindBy(xpath = "//*[@class='desktop-infoSection' and text()='Wishlist']")
 	public WebElement Wishlist;
 
 	@FindBy(xpath = "//*[@id='mountRoot']/div/main/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/a/div/img")

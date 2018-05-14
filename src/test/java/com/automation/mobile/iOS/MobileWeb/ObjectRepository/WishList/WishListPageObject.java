@@ -134,19 +134,19 @@ public class WishListPageObject {
 	}
 
 	public void ClickOnMoveToBag() {
-		objiOSGenericMethods.clickOnIOSElement(getMoveToBaglnk(), "clicked on MoveToBaglnk");
+		objiOSGenericMethods.clickOnIOSElement(getMoveToBaglnk(), "MoveToBaglnk");
 	}
 
 	public void ClickOnContinueShopping()	{
-		objiOSGenericMethods.clickOnIOSElement(getContinueShopping(), "clicked on Continue to shop button");
+		objiOSGenericMethods.clickOnIOSElement(getContinueShopping(), "Continue to shop button");
 	}
 
 	public void ClickOnDoneButton() throws InterruptedException	{
-		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "clicked on Done button");
+		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "Done button");
 	}
 
 	public void ClickOnRemoveIcon() {
-		objiOSGenericMethods.clickOnIOSElement(getRemoveIcon(), "clicked on RemoveIcon");
+		objiOSGenericMethods.clickOnIOSElement(getRemoveIcon(), "RemoveIcon");
 	}
 
 	public WebElement ClickSizeButtons() {
@@ -245,7 +245,7 @@ public class WishListPageObject {
 	 */
 	
 	public void clickOnCartFromWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getCartIcon(), "Clicked CartIcon");
+		objiOSGenericMethods.clickOnIOSElement(getCartIcon(), "CartIcon");
 	}
 	
 	public void VerifyWishlistPageTitle()	{

@@ -222,12 +222,10 @@ public class VEGASF_141_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
     	objPaymentPageObjects.VerifyDeliveryAddress();
     	objPaymentPageObjects.VerifyFinalPayableAmount();
     	objPaymentPageObjects.SelectCashOnDelivery();
-    	objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-    	objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-    	objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+    	objPaymentPageObjects.handelAlert();
+    	objPaymentPageObjects.verifyCODavailabilityThenPay();
     }
+    
     @Test(priority = 13)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

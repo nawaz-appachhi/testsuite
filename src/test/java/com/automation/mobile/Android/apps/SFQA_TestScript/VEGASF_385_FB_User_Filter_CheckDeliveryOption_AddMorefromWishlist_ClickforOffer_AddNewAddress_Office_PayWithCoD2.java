@@ -76,7 +76,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -111,7 +111,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 		objWishListPageObject.clickDoneWishListbtn();
 		objWishListPageObject.clickBagBtn();
 	}
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void CheckForOffers() throws InterruptedException {
 		Reporter.log("CheckForOffers");
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
@@ -133,7 +133,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

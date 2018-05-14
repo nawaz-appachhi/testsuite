@@ -79,10 +79,10 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -105,7 +105,7 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
         objProductDescriptionPageObject.clickGoToBag();
 		
 	}
-/*
+
 	@Test(priority = 6)
 	public void placeOrder() throws InterruptedException {
 		Reporter.log("addProductFromBag Test case Started Successfully");
@@ -141,7 +141,7 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {

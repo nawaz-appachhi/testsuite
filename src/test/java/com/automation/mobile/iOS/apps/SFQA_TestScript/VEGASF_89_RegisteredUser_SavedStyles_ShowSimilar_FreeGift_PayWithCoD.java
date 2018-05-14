@@ -75,7 +75,13 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
-
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
@@ -85,7 +91,7 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 6);
 		objLoginPageObject.removeAddress();
 	}
@@ -98,28 +104,28 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		objHomePageObjects.clickOnSearchButton();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-//		objAssertionPageObject.VerifyAutoSuggestionList();
-//		objiOSGenericMethods.acceptAlert();
+		// objAssertionPageObject.VerifyAutoSuggestionList();
+		// objiOSGenericMethods.acceptAlert();
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	// @Test(priority = 3)
+	//
+	// public void productListingPage() throws InterruptedException {
+	// objAssertionPageObject.verifyProductname();
+	// objAssertionPageObject.verifyPLPHeader();
+	// objAssertionPageObject.verifyPLPProductCount();
+	// objPLPageObjets.clickOnBrandNamePLP();
+	//
+	// }
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException {
-		objPDPageObject.clickOnAddToBag();
-		objPDPageObject.clickOnSizeChart();
-		objPDPageObject.clickOnSizeChartBackButton();
-//		objiOSGenericMethods.swipeDown(100, 16);
-//		objPDPageObject.clickOnViewMoreSimilar();
-//		objPLPageObjets.clickOnBrandNamePLP();
+//		objPDPageObject.clickOnAddToBag();
+//		objPDPageObject.clickOnSizeChart();
+//		objPDPageObject.clickOnSizeChartBackButton();
+		// objiOSGenericMethods.swipeDown(100, 16);
+		// objPDPageObject.clickOnViewMoreSimilar();
+		// objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -130,7 +136,7 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 	@Test(priority = 5)
 
 	public void couponPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objiOSGenericMethods.SwipeUp(100, 3);
+		// objiOSGenericMethods.SwipeUp(100, 3);
 		objiOSGenericMethods.swipeDown(100, 3);
 		objCartPage.ClickOnApplyCoupon();
 		objAssertionPageObject.verifyApplyCouponHeaders();
@@ -194,7 +200,7 @@ public class VEGASF_89_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		objEditAdressPageObject = new EditAdressPageObject(iDriver);
 	}
 
-	 @AfterTest
+	@AfterTest
 	public void quit() {
 		iDriver.quit();
 	}

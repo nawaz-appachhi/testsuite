@@ -69,7 +69,7 @@ public class VEGASF_154_RegisteredUser_FilterStyles_StaggeredCombo_PayWith_CoD {
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_154_RegisteredUser_FilterStyles_StaggeredCombo_PayWith_CoD {
 		// objAddCartPageObject.verifyitemsTotalAddCart();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

@@ -37,10 +37,10 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				 <configuration>
-<!-- 					<systemPropertyVariables> -->
-<!-- 						<browserType>${browser}</browserType> -->
-<!-- 						<url>${urllink}</url> -->
-<!-- 					</systemPropertyVariables> -->
+<!--                    <systemPropertyVariables>-->
+<!--                        <browserType>${browser}</browserType>-->
+<!--                        <url>${urllink}</url>-->
+<!--                    </systemPropertyVariables>-->
 					<suiteXmlFiles>
 						<file>${suiteXmlFile}</file>
 					</suiteXmlFiles>

@@ -74,10 +74,10 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -101,10 +101,11 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 		Reporter.log("MoveToBag Test case Started Successfully");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
+		//Verify Product Code
 		objProductDescriptionPageObject.clickGoToBag();
 	} 
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void PercentageDiscount() throws InterruptedException {
 		Reporter.log("ConditionalDiscount Test case Started Successfully");
 		objProductListPageObject.clickOkButton();
@@ -123,7 +124,7 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 	public void RemoveExistingAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.removeAddress();
-	}*/
+	}
 
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})

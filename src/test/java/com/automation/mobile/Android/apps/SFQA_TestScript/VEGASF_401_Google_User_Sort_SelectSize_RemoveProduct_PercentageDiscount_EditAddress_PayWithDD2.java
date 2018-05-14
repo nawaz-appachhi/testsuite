@@ -88,9 +88,9 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		objAddCartPageObject.resetBag();
-		objWishlistPageObject.resetWishlist();
+//		objWishlistPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
  
@@ -128,7 +128,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 		objWishlistPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void RemoveItem() throws InterruptedException {
 		Reporter.log("RemoveItem Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
@@ -164,7 +164,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

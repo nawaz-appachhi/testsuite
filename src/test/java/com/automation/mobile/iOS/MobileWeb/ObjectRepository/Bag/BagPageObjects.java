@@ -378,29 +378,29 @@ public class BagPageObjects {
 	}
 
 	public void enterRecipientName(String RecipientName) throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getRecipientName(), "clicked on RecipientName");
+		objiOSGenericMethods.clickOnIOSElement(getRecipientName(), "Recipient Name");
 		getRecipientName().clear();
 		getRecipientName().sendKeys(RecipientName);
 	}
 
 	public void enterGiftMsg(String GiftMsg) throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getGiftMsg(), "clicked on GiftMsg");
+		objiOSGenericMethods.clickOnIOSElement(getGiftMsg(), "Gift Msg");
 		getGiftMsg().clear();
 		getGiftMsg().sendKeys(GiftMsg);
 	}
 
 	public void enterSenderName(String SenderName) throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getSenderName(), "clicked on SenderName");
+		objiOSGenericMethods.clickOnIOSElement(getSenderName(), "Sender Name");
 		getSenderName().clear();
 		getSenderName().sendKeys(SenderName);
 	}
 
 	public void clickOnviewMyBag() {
-		objiOSGenericMethods.clickOnIOSElement(getViewMyBag(), "clicked on ViewMyBag");
+		objiOSGenericMethods.clickOnIOSElement(getViewMyBag(), "View MyBag");
 	}
 
 	public void clickOnCancelButton() {
-		objiOSGenericMethods.clickOnIOSElement(getCancelButton(), "clicked on Cancel Button.");
+		objiOSGenericMethods.clickOnIOSElement(getCancelButton(), "Cancel Button.");
 	}
 
 	/**
@@ -422,30 +422,30 @@ public class BagPageObjects {
 	}
 
 	public void clickOnViewDetails() {
-		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "clicked on View Details link.");
+		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "View Details link.");
 	}
 
 	public void clickOnBagIcon() {
-		objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "clicked on BagIcon");
+		objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "BagIcon");
 	}
 
 	public void clickOnSaveGiftWrap() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveGiftWrap(), "clicked on SaveGiftWrap");
+		objiOSGenericMethods.clickOnIOSElement(getSaveGiftWrap(), "Save GiftWrap");
 	}
 
 	public void clickOnGiftWrap() throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "clicked on GiftWrap");
+		objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "GiftWrap");
 	}
 
 	public void clickOnDoneButton() {
-		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "clicked on DoneButton");
+		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "DoneButton");
 	}
 
 	public void clickOnMoveToWishlist() {
 		objiOSGenericMethods.waitDriver(getMoveToWishlist(), "move to wishlist");
 		try {
 			if(getMoveToWishlist().isDisplayed())
-			objiOSGenericMethods.clickOnIOSElement(getMoveToWishlist(), "clicked on MoveToWishlist");
+			objiOSGenericMethods.clickOnIOSElement(getMoveToWishlist(), "MoveTo Wishlist");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -453,12 +453,12 @@ public class BagPageObjects {
 	}
 
 	public void clickOnPlaceOrder() {
-		objiOSGenericMethods.waitDriver(getPlaceOrder(), "Place order");
-		objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "clicked on PlaceOrder");
+		//objiOSGenericMethods.waitDriver(getPlaceOrder(), "Place order");
+		objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "PlaceOrder");
 	}
 
 	public void SelectCoupon() {
-		objiOSGenericMethods.clickOnIOSElement(getCoupon(), "clicked on Coupon");
+		objiOSGenericMethods.clickOnIOSElement(getCoupon(), "Coupon");
 	}
 
 	/**
@@ -484,11 +484,11 @@ public class BagPageObjects {
 	 *         executor click is used.
 	 */
 	public void clickOnContinueButton()  {
-		objiOSGenericMethods.waitDriver(getContinueButton(), "Continue Button");
+		//objiOSGenericMethods.waitDriver(getContinueButton(), "Continue Button");
 		try {
 			if (getContinueButton().isDisplayed()) {
 //				objiOSGenericMethods.click(getContinueButton());
-				objiOSGenericMethods.clickOnIOSElement(getContinueButton(),"clicked on ContinueButton");
+				objiOSGenericMethods.clickOnIOSElement(getContinueButton(),"ContinueButton");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -497,24 +497,24 @@ public class BagPageObjects {
 	}
 
 	public void ClickOnGotoWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getGotoWishListlnk(), "clicked on GotoWishListlnk");
+		objiOSGenericMethods.clickOnIOSElement(getGotoWishListlnk(), "Goto WishListlnk");
 	}
 
 	public void assertBagPageTitle(String pageName) throws InterruptedException {
-		objiOSGenericMethods.waitDriver(getBagPageTitle(), "Bag Page Title");
+		//objiOSGenericMethods.waitDriver(getBagPageTitle(), "Bag Page Title");
 		IOSElement element = (IOSElement) getBagPageTitle();
 		objiOSGenericMethods.VerifyTwoString(element, pageName);
 	}
 
 	public void assertDeliveryPageTitle(String pageName) throws InterruptedException {
 //		Thread.sleep(5000);
-		objiOSGenericMethods.waitDriver(getDeliveryPageTitle(), "Delivery Page Title");
+		//objiOSGenericMethods.waitDriver(getDeliveryPageTitle(), "Delivery Page Title");
 		IOSElement element = (IOSElement) getDeliveryPageTitle();
 		objiOSGenericMethods.VerifyTwoString(element, pageName);
 	}
 
 	public void assertPaymentPageTitle(String pageName) throws InterruptedException {
-		objiOSGenericMethods.waitDriver(getPaymentPageTitle(), "Payment");
+		//objiOSGenericMethods.waitDriver(getPaymentPageTitle(), "Payment");
 		IOSElement element = (IOSElement) getPaymentPageTitle();
 		objiOSGenericMethods.VerifyTwoString(element, pageName);
 	}
@@ -539,15 +539,15 @@ public class BagPageObjects {
 	}
 
 	public void clickToAddMoreFromWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getAddMoreFromWishlist(), "clicked on Add More from Wishlist");
+		objiOSGenericMethods.clickOnIOSElement(getAddMoreFromWishlist(), "Add More from Wishlist");
 	}
 
 	public void RemoveProduct() {
-		objiOSGenericMethods.clickOnIOSElement(getRemoveProduct(), "clicked on Remove Product icon.");
+		objiOSGenericMethods.clickOnIOSElement(getRemoveProduct(), "Remove Product icon.");
 	}
 
 	public void Remove() {
-		objiOSGenericMethods.clickOnIOSElement(getRemove(), "clicked on Remove icon.");
+		objiOSGenericMethods.clickOnIOSElement(getRemove(), "Remove icon.");
 	}
 
 	public IOSElement getEmptyBag() {
@@ -634,7 +634,6 @@ public class BagPageObjects {
 		for (int i = 0; i <= links.size(); i++) {
 			objiOSGenericMethods.click(getRemovelink());
 			// getRemovelink().click();
-//			Thread.sleep(1000);
 			objiOSGenericMethods.click(getRemove());
 			// getRemove().click();
 //			Thread.sleep(2000);
@@ -714,7 +713,7 @@ public class BagPageObjects {
 	
 	public void clickSizeDropdown(){
 		try {
-			objiOSGenericMethods.waitForElementVisibility(getSizeDrpdwnicon());
+			//objiOSGenericMethods.waitForElementVisibility(getSizeDrpdwnicon());
 			if (getSizeDrpdwnicon().isDisplayed()) {
 				objiOSGenericMethods.click(getSizeDrpdwnicon());
 			}
@@ -759,7 +758,7 @@ public class BagPageObjects {
 		for (int i = 0; i <= links.size(); i++) {
 			objiOSGenericMethods.click(getRemovelink());
 			objiOSGenericMethods.click(getMoveToWishlistPopup());
-			objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
+			//objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
 		}
 		objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
 		clickOnMyntraLogo();

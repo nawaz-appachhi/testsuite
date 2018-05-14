@@ -59,7 +59,7 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
@@ -101,7 +101,7 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 
 	}

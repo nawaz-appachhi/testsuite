@@ -77,10 +77,10 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -104,12 +104,17 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	}
 	@Test(priority=5)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
+		//objAddCartPageObject.clickRemoveButton();
+		/*
+		 * Unable to find Free Gifts waiting for test data
+		 */
 		objAddCartPageObject.clickPlaceOrder();
-		/*objCheckOutPageObject.verifyUserAddress(); //Assertion
+		objCheckOutPageObject.verifyUserAddress(); //Assertion
 		objCheckOutPageObject.CheckAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
-	/*@Test(priority=6)
+	@Test(priority=6)
 	public void paymentPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		//objPaymentPageObject.verifyPaymentHeader(); //Assertion:
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");	
@@ -126,7 +131,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

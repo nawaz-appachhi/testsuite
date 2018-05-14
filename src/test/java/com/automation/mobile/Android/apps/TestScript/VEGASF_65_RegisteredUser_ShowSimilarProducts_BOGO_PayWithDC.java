@@ -58,7 +58,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 	public void AddNewOfficeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

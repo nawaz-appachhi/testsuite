@@ -65,11 +65,11 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
-		//objCheckOutPageObject.resetAddress();
+		//objWishListPageObject.resetWishlist();
+		objCheckOutPageObject.resetAddress();
 	}
 
 	@Test(priority = 3)
@@ -122,7 +122,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objAddCartPageObject.getWishListbtn();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

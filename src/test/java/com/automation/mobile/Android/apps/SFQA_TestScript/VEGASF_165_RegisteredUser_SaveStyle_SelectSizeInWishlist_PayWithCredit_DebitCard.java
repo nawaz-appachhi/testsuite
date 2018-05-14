@@ -73,10 +73,10 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	} 
 	@Test(priority = 3)
@@ -101,7 +101,7 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
 		objAddCartPageObject.ClickCouponCancelbtn();
@@ -116,16 +116,16 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 		objPaymentPageObject.clickExpiryMonts();
 		objPaymentPageObject.clickExpiryYears();
 		objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
-		objPaymentPageObject.clickPayNowBtn();*/
+		objPaymentPageObject.clickPayNowBtn();
 
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void Verifypayment() throws InvalidFileFormatException, IOException, InterruptedException {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

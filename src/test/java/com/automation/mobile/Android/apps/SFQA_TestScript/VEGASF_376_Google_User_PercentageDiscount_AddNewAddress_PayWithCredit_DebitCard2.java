@@ -75,10 +75,10 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishlistPageObject.resetWishlist();
+//		objWishlistPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -115,14 +115,15 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	@Test(priority = 6)
 	public void addCartPage_ApplyCoupon() throws Exception {
 		Reporter.log("addCartPage_ApplyCoupon");
+		//objProductListPageObject.clickOkButton();  //no need to apply if reset bag is added
 		objAddCartPageObject.verifyShoppingBagTitle();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickPlaceOrder();
 		
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -144,7 +145,7 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

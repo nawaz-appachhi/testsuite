@@ -66,9 +66,9 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
-	//	objCheckOutPageObject.resetAddress();
+		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist(); 
 	}
@@ -93,15 +93,15 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
-		objAddCartPageObject.ClickCouponCancelbtn();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickApplyCoupon();
+		objAddCartPageObject.clickPlaceOrder();
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void checkout() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 8)
@@ -121,7 +121,7 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

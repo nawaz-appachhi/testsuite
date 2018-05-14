@@ -77,7 +77,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();

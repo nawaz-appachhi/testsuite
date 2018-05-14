@@ -45,7 +45,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	AndroidDriver<AndroidElement> aDriver;
 	WishListPageObject objWishListPageObject;
 
-	String testName = "VEGASF_388";
+	String testName = "VEGASF_162";
 
 	@Test(priority = 1)
 	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -62,7 +62,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("Reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();

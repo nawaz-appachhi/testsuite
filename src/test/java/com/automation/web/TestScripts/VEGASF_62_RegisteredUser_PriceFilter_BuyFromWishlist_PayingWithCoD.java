@@ -185,11 +185,8 @@ public class VEGASF_62_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.VerifyFinalPayableAmount();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.handelAlert();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
 	
 	@Test(priority = 11)

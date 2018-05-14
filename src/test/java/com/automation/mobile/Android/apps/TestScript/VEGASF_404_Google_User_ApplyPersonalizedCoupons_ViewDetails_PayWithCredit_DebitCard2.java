@@ -64,7 +64,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -111,7 +111,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

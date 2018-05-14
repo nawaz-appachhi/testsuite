@@ -176,11 +176,7 @@ public class VEGASF_314_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
 	
 	@Test(priority = 13)

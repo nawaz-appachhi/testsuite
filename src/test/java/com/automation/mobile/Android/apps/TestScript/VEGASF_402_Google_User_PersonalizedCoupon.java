@@ -64,7 +64,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	}
 	
 	@Test(priority = 2)
-		public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void resetdata() throws InterruptedException {
 		Reporter.log("resetBag");
 			objAddCartPageObject.resetBag();
 			objWishlistPageObject.resetWishlist();
@@ -113,7 +113,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	@Test(priority = 8)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

@@ -323,12 +323,12 @@ public class AndroidGenericMethods extends GlobalVariables {
 		}
 		try { 
 			if (waitDriver(element, elementName)) {
-				/*if (element.isDisplayed()) {
+				if (element.isDisplayed()) {
 					Reporter.log("'" + elementName + "' Element object is Displayed");
 				} else {
 					Reporter.log(
 							"'" + elementName + "'  Element NOT Displayed on page. Please check the Object Property.");
-				}*/
+				}
 			}
 		} catch (Exception e) {
 			Reporter.log("FAILED TO PERFORM ACTION ON " + elementName + " even after waiting for 20 seconds");
@@ -342,12 +342,12 @@ public class AndroidGenericMethods extends GlobalVariables {
 		}
 		try {
 			if (waitDriver(element, elementName)) {
-				/*if (element.isDisplayed()) {
+				if (element.isDisplayed()) {
 					Reporter.log("'" + elementName + "' Element object is Displayed");
 				} else {
 					Reporter.log(
 							"'" + elementName + "'  Element NOT Displayed on page. Please check the Object Property.");
-				}*/
+				}
 			}
 		} catch (Exception e) {
 			Reporter.log("FAILED TO PERFORM ACTION ON " + elementName + " even after waiting for 20 seconds");
@@ -735,7 +735,6 @@ public class AndroidGenericMethods extends GlobalVariables {
 		//waitDriverWhenReady(element, reportContent);
 		takeSnapShot(); 
 		element.click();
-		takeSnapShot(); 
 		ReportClickEvent(reportContent);
  
 	}
@@ -747,16 +746,14 @@ public class AndroidGenericMethods extends GlobalVariables {
 	 * 
 	 * @param element
 	 * @param reportContent
-	 * @throws InterruptedException 
 	 * 
 	 */
 
-	public void clickOnAndroidElementforwebVIew(AndroidElement element, String reportContent) throws InterruptedException {
+	public void clickOnAndroidElementforwebVIew(AndroidElement element, String reportContent) {
 	//	waitDriverWhenReady(element, reportContent);
 		switchInToNativeView();
 		takeSnapShot();
 		swithchInToWebview();
-//		Thread.sleep(3000);
 		element.click();
 		ReportClickEvent(reportContent);
 
@@ -1076,22 +1073,22 @@ public class AndroidGenericMethods extends GlobalVariables {
 		Set<String> contextNames = aDriver.getContextHandles();
 		System.out.println(contextNames);
 		
-		System.out.println("------------------");
+//		System.out.println("------------------");
 		aDriver.context("WEBVIEW_com.myntra.android");
-		System.out.println("------------------");
-		System.out.println(aDriver.getContext());
-		System.out.println("------------------");
+//		System.out.println("------------------");
+//		System.out.println(aDriver.getContext());
+//		System.out.println("------------------");
 	}
 	
 	public void switchInToNativeView() {
 		Set<String> contextNames = aDriver.getContextHandles();
-		System.out.println(contextNames);
+	//	System.out.println(contextNames);
 		
-		System.out.println("------------------");
+	//	System.out.println("------------------");
 		aDriver.context("NATIVE_APP");
-		System.out.println("------------------");
-		System.out.println(aDriver.getContext());
-		System.out.println("------------------");
+	//	System.out.println("------------------");
+	//	System.out.println(aDriver.getContext());
+	//	System.out.println("------------------");
 		
 	}
 	

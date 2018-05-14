@@ -66,7 +66,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();	
 		
 	}

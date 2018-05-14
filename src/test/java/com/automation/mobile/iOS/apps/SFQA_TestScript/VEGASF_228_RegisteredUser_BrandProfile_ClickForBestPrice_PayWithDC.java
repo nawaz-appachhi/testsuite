@@ -96,7 +96,13 @@ public class VEGASF_228_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
-
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -143,11 +149,12 @@ public class VEGASF_228_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 		objPDPageObject.clickonDoneButton();
 		objiOSGenericMethods.swipeDown(100, 3);
 		objPDPageObject.clickOnBestPrice();
+		objiOSGenericMethods.swipeDown(100, 2);
 		objPDPageObject.clickOnGoToBag();
 
 	}
 
-	@Test(priority = 5)
+//	@Test(priority = 5)
 
 	public void RemoveProductFromCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyMyBag();

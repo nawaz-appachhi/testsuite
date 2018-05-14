@@ -78,10 +78,10 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
  
 	}
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -107,15 +107,16 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 
 	@Test(priority = 5)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickPlaceOrder();
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.removeAndAddAddress();
@@ -126,7 +127,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 	public void PaymentPage() throws InterruptedException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");	
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

@@ -83,9 +83,9 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	}
 	
 	@Test(priority = 2)
-		public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void resetdata() throws InterruptedException {
 			objAddCartPageObject.resetBag();
-			objWishlistPageObject.resetWishlist();
+			//objWishlistPageObject.resetWishlist();
 			//objCheckOutPageObject.resetAddress();
 
 		}
@@ -113,7 +113,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 	
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void 	ApplyPersonalizedCoupon() throws InterruptedException {
 		Reporter.log("ApplyPersonalizedCoupon Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();
@@ -131,10 +131,10 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	@Test(priority = 8)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress Test case Started Successfully");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
-*/
+
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,

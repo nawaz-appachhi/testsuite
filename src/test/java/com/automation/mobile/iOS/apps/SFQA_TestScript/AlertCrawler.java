@@ -75,6 +75,13 @@ public class AlertCrawler {
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objiOSGenericMethods.acceptAlert();
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 8);
@@ -92,7 +99,7 @@ public class AlertCrawler {
 
 	@Test(priority = 2)
 	public void SearchItem() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
-//		objHomePageObjects.emptyBag();
+		// objHomePageObjects.emptyBag();
 		objHomePageObjects.clickOnHomeButton();
 		objHomePageObjects.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
@@ -125,7 +132,6 @@ public class AlertCrawler {
 		objAssertionPageObject.verifyMyBag();
 		objCartPage.clickOnplaceOrder();
 	}
-
 
 	@Test(priority = 6)
 	public void addressPage() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -176,7 +182,7 @@ public class AlertCrawler {
 		objAssertionPageObject = new AssertionPageObject(iDriver);
 	}
 
-	 @AfterTest
+	@AfterTest
 	public void quit() {
 		iDriver.quit();
 	}

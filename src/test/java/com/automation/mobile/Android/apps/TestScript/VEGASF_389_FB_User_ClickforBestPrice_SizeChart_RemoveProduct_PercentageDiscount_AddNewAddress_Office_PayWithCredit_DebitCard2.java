@@ -64,7 +64,7 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -101,7 +101,7 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 	@Test(priority = 7)
 	public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddressOffice");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");

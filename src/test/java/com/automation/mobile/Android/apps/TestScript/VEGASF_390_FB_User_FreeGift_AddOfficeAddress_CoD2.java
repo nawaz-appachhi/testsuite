@@ -63,7 +63,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -99,7 +99,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 	@Test(priority = 6)
 	public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddressOffice");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

@@ -156,14 +156,10 @@ public class VEGASF_151_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.VerifyFinalPayableAmount();
-	
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 11)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

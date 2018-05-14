@@ -59,7 +59,7 @@ public class VEGASF_153_RegisteredUser_BrandConcious_NewAddress_PayWithCredit_De
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -100,7 +100,7 @@ public class VEGASF_153_RegisteredUser_BrandConcious_NewAddress_PayWithCredit_De
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

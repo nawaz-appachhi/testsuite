@@ -60,7 +60,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -86,15 +86,14 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 		objProductDescriptionPageObject.clickEnterPincodebtn();
 		objProductDescriptionPageObject.clickPincodeTxt("560068");
 		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		//objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
+		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
 	}
 
 	@Test(priority = 5)
 	public void MoveToBag() throws InterruptedException {
 		Reporter.log("MoveToBag");
 		// objAndroidGenericMethods.scrollToText(aDriver, "GO TO BAG");
-		//objProductDescriptionPageObject.clickGoToBag();
-		objProductDescriptionPageObject.clickbagHeaderbtn();
+		objProductDescriptionPageObject.clickGoToBag();
 
 	}
 
@@ -118,7 +117,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

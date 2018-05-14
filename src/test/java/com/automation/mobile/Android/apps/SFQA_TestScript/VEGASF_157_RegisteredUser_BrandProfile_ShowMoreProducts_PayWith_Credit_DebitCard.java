@@ -75,10 +75,10 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -108,13 +108,19 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 		objWishListPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
 		objAddCartPageObject.verifyWishlistIcon(); // Assertion: veryfing "WISHLIST" Header
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();		// aDriver.hideKeyboard();
+
+		/*
+		 * Required test data for apply the coupon
+		 */
+
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
 	}
@@ -144,7 +150,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,

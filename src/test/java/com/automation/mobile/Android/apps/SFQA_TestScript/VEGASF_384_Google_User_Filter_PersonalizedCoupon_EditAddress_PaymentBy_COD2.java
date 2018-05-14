@@ -85,10 +85,10 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishlistPageObject.resetWishlist();
+//		objWishlistPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -110,7 +110,7 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void addCartPage_ApplyCoupon() throws InterruptedException {
 		Reporter.log("addCartPage_ApplyCoupon");
 		objAddCartPageObject.verifyShoppingBagTitle();
@@ -131,7 +131,7 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	public void Payment() {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

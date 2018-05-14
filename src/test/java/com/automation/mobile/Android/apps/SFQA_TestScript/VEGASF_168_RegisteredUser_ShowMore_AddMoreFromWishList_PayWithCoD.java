@@ -87,10 +87,10 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 		
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 	
@@ -112,13 +112,13 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	}
 	@Test(priority=6)
 	public void AddCartPage() throws InterruptedException {
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
-		
-	}
-	/*@Test(priority=7)
-	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAddCartPageObject.clickPlaceOrder();
+	}
+	@Test(priority=7)
+	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 		
@@ -135,7 +135,7 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutnt");
 		}
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

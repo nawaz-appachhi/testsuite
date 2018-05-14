@@ -73,10 +73,10 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -106,11 +106,11 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		/*objCheckOutPageObject.verifyUserAddress();
+		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException {
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
@@ -122,7 +122,7 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutnt");
 		}
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

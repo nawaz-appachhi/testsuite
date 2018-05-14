@@ -80,6 +80,13 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC {
 
 	@Test(priority = 1)
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 8);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -133,7 +140,7 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC {
 		objAssertionPageObject.verifySelectSize();
 		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
-		objiOSGenericMethods.swipeDown(100, 6);
+//		objiOSGenericMethods.swipeDown(100, 6);
 		objAssertionPageObject.verifyMyBag();
 		objAssertionPageObject.veirfyCartPageWishlist();
 		objAssertionPageObject.verifyProductTitleCartPage();
@@ -148,7 +155,7 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC {
 		// String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
 		// objCartPage.enterCoupon(coupon);
 		objCartPageObject.clickOnApplyButton();
-		objiOSGenericMethods.swipeDown(100, 6);
+		objiOSGenericMethods.swipeDown(100, 3);
 		objAssertionPageObject.verifyPriceDetails();
 		objCartPageObject.clickOnplaceOrder();
 	

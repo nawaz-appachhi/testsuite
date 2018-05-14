@@ -212,14 +212,10 @@ public class VEGASF_146_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objAddressPageObjects.ClickToContinue();
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
-		
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 10)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

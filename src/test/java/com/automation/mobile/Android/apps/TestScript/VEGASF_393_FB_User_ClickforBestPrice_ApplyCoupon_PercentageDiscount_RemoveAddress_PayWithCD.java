@@ -63,7 +63,7 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -103,7 +103,7 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log(" Checkout");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();
 	}

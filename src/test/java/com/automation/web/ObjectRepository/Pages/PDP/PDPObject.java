@@ -101,6 +101,11 @@ public class PDPObject extends GenericMethods {
 	@FindBy(xpath = "//*[@class='sizeChartWeb-header']/button")
 	public WebElement CloseSizeChartBtn;
 
+	@FindBy(xpath = "//span[@class='pdp-discount']")
+	public WebElement RupeesDiscount;
+	
+	
+
 	@FindBy(id = "cm")
 	public WebElement CentiMeterBtn;
 
@@ -161,7 +166,15 @@ public class PDPObject extends GenericMethods {
 	public List<WebElement> getSizeCount() {
 		return SizeCount;
 	}
-
+/**
+ * Author-shivaprasad
+ * 
+ */
+	public WebElement getRupeesDiscount() {
+		objGenericMethods.CheckWebElementFound(RupeesDiscount, "RupeesDiscount");
+		return RupeesDiscount;
+	}
+	
 	public WebElement getFirstAvailableSize() {
 		objGenericMethods.CheckWebElementFound(firstAvailableSize, "firstAvailableSize");
 		return firstAvailableSize;
@@ -557,4 +570,19 @@ public void readPlpData(){
 			Reporter.log("Passed :: '" + "Item is deliverable to the entered pin code" );
 		}
 	}
+	
+	public void VerifyRupeeDiscount() {
+		try {
+			if(getRupeesDiscount().getText().equalsIgnoreCase("(Rs. 100 OFF)")) {
+			Reporter.log("passed :: Rupees discount of 100 is avaliable for this product");
+			}
+			else 
+			{
+				Reporter.log("failed ::expected (Rs. 100 OFF) But found"+ getRupeesDiscount().getText() );
+			}
+		} catch (Exception e) {
+			Reporter.log("failed ::Rupees discount is avaliable for this product" );
+		}
+	}
+	
 }

@@ -73,10 +73,10 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -106,7 +106,7 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		objWishListPageObject.clickBagBtn();
 		
 	}
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {	
 		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
@@ -138,7 +138,7 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

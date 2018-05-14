@@ -207,7 +207,7 @@ public class AddressPageObjects {
 		try {
 			if(getPincodeAddress().isDisplayed())
 			objiOSGenericMethods.waitDriver(getPincodeAddress(), "Pincode");
-			objiOSGenericMethods.clickOnIOSElement(getPincodeAddress(), "clicked on pincode");
+			objiOSGenericMethods.clickOnIOSElement(getPincodeAddress(), "pincode");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -235,7 +235,8 @@ public class AddressPageObjects {
 	}
 
 	public void clickOnChoose() {
-		getChooseTown().click();
+		//getChooseTown().click();
+		 objiOSGenericMethods.clickOnIOSElement(getChooseTown(), "choose town");
 	}
 
 	public void selectTownLocality(String town) {
@@ -251,23 +252,23 @@ public class AddressPageObjects {
 	}
 
 	public void entername(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getName(), "clicked on Name");
+		objiOSGenericMethods.clickOnIOSElement(getName(), "Name");
 		getName().sendKeys(name);
 	}
 
 	public void enterEditName(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getEditname(), "clicked on edit Name");
+		objiOSGenericMethods.clickOnIOSElement(getEditname(), "edit Name");
 		getEditname().clear();
 		getEditname().sendKeys(name);
 	}
 
 	public void enteraddress(String address) {
-		objiOSGenericMethods.clickOnIOSElement(getAddress(), "clicked on address");
+		objiOSGenericMethods.clickOnIOSElement(getAddress(), "address");
 		getAddress().sendKeys(address);
 	}
 
 	public void enterMobileNumber(String mobile) {
-		objiOSGenericMethods.clickOnIOSElement(getMobileNumber(), "clicked on mobile number");
+		objiOSGenericMethods.clickOnIOSElement(getMobileNumber(), "mobile number");
 		getMobileNumber().sendKeys(mobile);
 	}
 
@@ -277,7 +278,7 @@ public class AddressPageObjects {
 	public void clickOnOfficeCommercial() {
 		try {
 			if (getOfficeCommercial().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getOfficeCommercial(), "clicked on office/commercial");
+				objiOSGenericMethods.clickOnIOSElement(getOfficeCommercial(), "office/commercial");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -289,15 +290,15 @@ public class AddressPageObjects {
 	 * called generic method to get click message
 	 */
 	public void clickOnHome() {
-		objiOSGenericMethods.clickOnIOSElement(getHome(), "clicked on Home radio button ");
+		objiOSGenericMethods.clickOnIOSElement(getHome(), "Home radio button ");
 	}
 
 	public void clickOnOpenOnSaturdays() {
-		objiOSGenericMethods.clickOnIOSElement(getopenOnSaturdays(), "clicked on Opens on saturday");
+		objiOSGenericMethods.clickOnIOSElement(getopenOnSaturdays(), "Opens on saturday");
 	}
 
 	public void clickOnAddNewAddress() {
-		objiOSGenericMethods.clickOnIOSElement(getAddNewAddress(), "clicked on Opnes on sunday");
+		objiOSGenericMethods.clickOnIOSElement(getAddNewAddress(), "Opnes on sunday");
 	}
 
 	public void clickOnProfileAddresslink() {
@@ -371,7 +372,6 @@ public class AddressPageObjects {
 	public void resetAddress() throws InterruptedException {
 		try {
 			// Empty Address Page
-
 			objHomePageObjects.clickOnHamburgerButton();
 			objHamburgerPageObjects.clickOnMyAccount();
 //			Thread.sleep(2000);

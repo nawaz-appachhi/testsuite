@@ -182,14 +182,10 @@ public class VEGASF_303_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.VerifyFinalPayableAmount();
-		
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 12)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

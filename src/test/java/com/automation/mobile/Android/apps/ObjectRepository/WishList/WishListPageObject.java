@@ -1,9 +1,6 @@
 package com.automation.mobile.Android.apps.ObjectRepository.WishList;
 
-import java.io.IOException;
 import java.util.List;
-
-import org.ini4j.InvalidFileFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -11,26 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.apps.ObjectRepository.Home.HomePageObject;
-import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class WishListPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObject objHomepageObjects;
-	ProductDescriptionPageObject objProductDescriptionPageObject;
-	public AndroidDriver<AndroidElement> aDriver;
 
 	public WishListPageObject(AndroidDriver<AndroidElement> aDriver) {
-		this.aDriver = aDriver;
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
 	}
 	
 	
@@ -62,7 +52,7 @@ public class WishListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
+	@FindBy(xpath = "//android.view.ViewGroup[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
 	public AndroidElement backBtn;
 
 	/**
@@ -71,8 +61,7 @@ public class WishListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath="//android.widget.TextView[@text='Browse Items']")
-//	@FindBy(xpath = "//android.widget.TextView[@resource-id='com.myntra.android:id/tv_list_no_items2']")
+	@FindBy(xpath = "//android.widget.TextView[@resource-id='com.myntra.android:id/tv_list_no_items2']")
 	public AndroidElement emptyProductsMsg;
 
 	/**
@@ -309,30 +298,20 @@ public class WishListPageObject {
 	 * 
 	 * @throws InterruptedException
 	 * @author 300021278 -Rakesh
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
 	 */ 
-	public void resetWishlist() throws InterruptedException, InvalidFileFormatException, IOException {
-		/*objHomepageObjects.clickOnSearch();
-		objHomepageObjects.enterSearchText(AndroidGenericMethods.getValueByKey("OBJECTREPO", "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
-		objProductDescriptionPageObject.clickWishListbtn();
-		System.out.println("clicked on wishlist icon");
+	public void resetWishlist() throws InterruptedException {
+		objHomepageObjects.clickRHWishlistbtn();
 		if (!emptyWishlistmsg()) { 
 			Reporter.log("Products are found in Wishlist");
 			System.out.println("Products are found in Wishlist");
 			removeAllItemsFromWishlist();
 			clickBackBtn();
-			objProductDescriptionPageObject.clickBackbtn();
-			objProductDescriptionPageObject.clickSearchBackbtn();
 		} else {
 			clickBackBtn();
-			objProductDescriptionPageObject.clickBackbtn();
-			objProductDescriptionPageObject.clickSearchBackbtn();
 			Reporter.log("Wishlist found empty");
 			System.out.println("Wishlist found empty");
 		}
-*/
+
 	}
 
 }

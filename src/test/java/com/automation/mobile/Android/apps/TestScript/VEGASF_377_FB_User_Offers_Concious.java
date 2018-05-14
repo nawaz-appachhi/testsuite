@@ -55,7 +55,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException { 
+	public void reset() throws InterruptedException { 
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -105,7 +105,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("RemoveAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAddress();
 			
 		}
 

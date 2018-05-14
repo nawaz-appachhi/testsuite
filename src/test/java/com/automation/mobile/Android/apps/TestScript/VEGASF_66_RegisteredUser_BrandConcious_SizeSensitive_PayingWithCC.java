@@ -107,7 +107,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 	public void AddNewOfficeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

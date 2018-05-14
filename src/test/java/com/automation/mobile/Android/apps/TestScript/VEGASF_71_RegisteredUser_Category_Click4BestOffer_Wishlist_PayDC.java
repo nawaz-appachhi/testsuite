@@ -61,7 +61,7 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK); 
 	} 
 	@Test(priority = 3)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -99,7 +99,7 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

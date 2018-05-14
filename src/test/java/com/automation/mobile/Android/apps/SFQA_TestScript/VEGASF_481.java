@@ -113,7 +113,7 @@ public class VEGASF_481 {
 		objHamburgerPageObject.verifyTextMsgOrdersPage();
 	}
 	@Test(priority = 5)
-	public void VerifyPhoneNumber() throws InvalidFileFormatException, IOException, InterruptedException {
+	public void VerifyPhoneNumber() throws InvalidFileFormatException, IOException {
 		objHamburgerPageObject.enterOrdersPageMobileNumber(AndroidGenericMethods.getValueByKey(udidNumber, "MobileNumber"));
 		objHamburgerPageObject.enterOrdersPageMobileNumber(AndroidGenericMethods.getValueByKey(udidNumber, "MobileNumber"));
 		objHamburgerPageObject.enterOrdersPageMobileNumber(AndroidGenericMethods.getValueByKey(udidNumber, "MobileNumber"));

@@ -56,7 +56,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 	
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -99,7 +99,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

@@ -126,7 +126,7 @@ public class VEGASF_414_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	public void AddToBag() throws InterruptedException {
 		Reporter.log("AddToBag test case started successfully");
 		System.out.println("AddToBag!");
-		objPDPageObject.clickFirstProductSearchResult();
+		//objPDPageObject.clickFirstProductSearchResult();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();

@@ -57,10 +57,10 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 	
 	}
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	} 
 	@Test(priority = 3)
@@ -89,14 +89,15 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		objWishListPageObject.clickSizeWishList();
 		objWishListPageObject.clickDoneWishListbtn();
 		objWishListPageObject.clickBagBtn();
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
+		objAddCartPageObject.clickPlaceOrder();
 
 	}
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckOutPage");
-		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -109,7 +110,7 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
 	}
-	*/
+	
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

@@ -34,7 +34,8 @@ public class LoginPageObject {
 	 * homescreen modified by Rakesh Reason: To avoid using the symbol in xpath
 	 * past xpath://android.widget.TextView[@text='']
 	 */
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	// @FindBy(xpath = "//android.widget.TextView[@text='']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='2']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement hamburgerbtn;
 	@FindBy(xpath = "//*[@index='3'][@class='android.widget.TextView']")
 	public AndroidElement loginAndSignUpButtonbtn;
@@ -54,7 +55,7 @@ public class LoginPageObject {
 	@FindBy(xpath = "//android.widget.TextView[@text='CONTACT US']")
 	public AndroidElement contactUs;
 
-	@FindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
+	@FindBy(xpath = "android.widget.ImageButton[@content-desc='Navigate up']")
 	public AndroidElement contactUsCancelButton;
 
 	/**
@@ -69,7 +70,7 @@ public class LoginPageObject {
 	 * @author 300021280 Sneha
 	 * Object identified for clicking permissionSwitch button
 	 */
-	@FindBy(xpath = "//android.widget.Switch[@resource-id='android:id/switch_widget' or @text='OFF' or @index='0']")
+	@FindBy(xpath = "//android.widget.Switch[@resource-id='android:id/switch_widget']")
 	public AndroidElement permissionSwitch;
 	
 	/**
@@ -410,7 +411,7 @@ public class LoginPageObject {
 		objAndroidGenericMethods.CheckAndroidElementFound(getContactUsCancelButton(), "Cancel button clicked");
 	}
 
-	@FindBy(xpath = "//*[@index='9' and @bounds ='[962,74][1080,200]']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='9' and @bounds ='[962,74][1080,200]']")
 	public AndroidElement sideimage;
 
 	public void clickSideImage() {

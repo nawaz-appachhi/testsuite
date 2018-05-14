@@ -75,7 +75,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -102,7 +102,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {	
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
@@ -120,7 +120,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
 		
-	}*/
+	}
 			
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest   

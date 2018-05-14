@@ -68,10 +68,10 @@ public class VEGASF_154_RegisteredUser_FilterStyles_StaggeredCombo_PayWith_CoD {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK); 
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)   
@@ -96,13 +96,15 @@ public class VEGASF_154_RegisteredUser_FilterStyles_StaggeredCombo_PayWith_CoD {
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 		objProductDescriptionPageObject.clickGoToBag();
+		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();
-		/*objAddCartPageObject.clickPlaceOrder();
+	//	objAddCartPageObject.verifyitemsTotalAddCart(); 
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.editAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	} 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException, InvalidFileFormatException, IOException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
@@ -120,7 +122,7 @@ public class VEGASF_154_RegisteredUser_FilterStyles_StaggeredCombo_PayWith_CoD {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

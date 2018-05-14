@@ -74,10 +74,10 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 	
@@ -101,18 +101,19 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 	}
 	@Test(priority = 6)
 	public void Checkout() throws Exception {
+	//	objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 	    objAddCartPageObject.verifyWishlistIcon();    //Assertion
-		/*objAndroidGenericMethods.scrolltoElementAndClick(objAddCartPageObject.getGiftWrapbtn(), 400);
+		objAndroidGenericMethods.scrolltoElementAndClick(objAddCartPageObject.getGiftWrapbtn(), 100);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
 	    objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
-		objCheckOutPageObject.clickContinue(); */
+		objCheckOutPageObject.clickContinue(); 
 	}
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void paymentPage() throws Exception {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
@@ -130,7 +131,7 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

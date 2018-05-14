@@ -64,9 +64,8 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
@@ -104,7 +103,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 		objAddCartPageObject.clickPlaceOrder();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void AddNewOfficeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
@@ -128,7 +127,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

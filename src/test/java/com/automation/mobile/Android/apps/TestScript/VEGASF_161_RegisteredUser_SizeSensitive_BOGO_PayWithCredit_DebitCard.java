@@ -65,7 +65,7 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -99,7 +99,7 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

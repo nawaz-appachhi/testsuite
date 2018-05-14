@@ -60,10 +60,10 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
  
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -88,13 +88,13 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 //		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();
-	/*	objAddCartPageObject.clickPlaceOrder();
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.editAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void paymentPage() throws Exception {
 	objPaymentPageObject.verifyPaymentHeader();
 	objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
@@ -105,7 +105,7 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
 	objPaymentPageObject.clickPayNowBtn();
 
-}*/
+}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

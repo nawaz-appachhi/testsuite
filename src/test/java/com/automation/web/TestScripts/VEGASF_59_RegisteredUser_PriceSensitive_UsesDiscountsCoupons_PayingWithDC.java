@@ -191,6 +191,7 @@ public class VEGASF_59_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
+		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();

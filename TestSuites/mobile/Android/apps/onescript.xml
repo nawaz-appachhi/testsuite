@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	<test name="VEGASF_386_Google_User_AddQTY_PersonalizedCoupon">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_386_Google_User_AddQTY_PersonalizedCoupon" />
+		</classes>
+	</test>
+</suite>

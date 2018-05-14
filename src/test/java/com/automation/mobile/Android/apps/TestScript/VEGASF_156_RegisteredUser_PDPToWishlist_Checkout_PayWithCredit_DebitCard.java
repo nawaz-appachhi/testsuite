@@ -1,12 +1,9 @@
 package com.automation.mobile.Android.apps.TestScript;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -60,7 +57,7 @@ public class VEGASF_156_RegisteredUser_PDPToWishlist_Checkout_PayWithCredit_Debi
 	} 
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -98,7 +95,7 @@ public class VEGASF_156_RegisteredUser_PDPToWishlist_Checkout_PayWithCredit_Debi
 		//objAndroidGenericMethods.scrollToText(aDriver, "PRICE DETAILS");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");

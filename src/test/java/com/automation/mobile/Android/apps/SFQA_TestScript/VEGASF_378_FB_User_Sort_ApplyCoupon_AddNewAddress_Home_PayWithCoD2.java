@@ -75,7 +75,7 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -113,13 +113,13 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 		Reporter.log("addCartPage_ApplyCoupon");
 		//objProductListPageObject.clickOkButton();  //no meed to apply if reset bag is added
 		objAddCartPageObject.verifyShoppingBagTitle();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickPlaceOrder();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress_Office");
 		objCheckOutPageObject.verifyUserAddress();
@@ -145,7 +145,7 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

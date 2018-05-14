@@ -96,7 +96,6 @@ public class VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	public void ResetAll()  {
 		System.out.println("Reset All");
 		objAddressPageObjects.resetAddress();
-		driver.navigate().back();
 		objCartPageObject.resetCart();
 	}
 
@@ -227,12 +226,8 @@ public class VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		System.out.println("Payment Myntra Credit And Cod");
 //		objPaymentPageObjects.SelectGiftCards();
 			objPaymentPageObjects.SelectCashOnDelivery();
-			objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-			objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-			objPaymentPageObjects.VerifyOrderNumber();
-			objPaymentPageObjects.GoToOrderDetailsPage();
-			objPaymentPageObjects.VerifyOrdernumber();
-
+			objPaymentPageObjects.handelAlert();
+			objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
 	
 	@Test(priority = 12)

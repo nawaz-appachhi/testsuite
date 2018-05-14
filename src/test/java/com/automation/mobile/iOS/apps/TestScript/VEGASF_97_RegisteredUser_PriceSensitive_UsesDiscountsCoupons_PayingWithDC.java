@@ -82,6 +82,13 @@ public class VEGASF_97_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();

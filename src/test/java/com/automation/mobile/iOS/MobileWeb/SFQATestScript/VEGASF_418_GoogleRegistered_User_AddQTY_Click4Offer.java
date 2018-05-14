@@ -126,6 +126,7 @@ public class VEGASF_418_GoogleRegistered_User_AddQTY_Click4Offer {
 		Reporter.log("NavigateFromPLPtoPDP test case started successfully");
 		System.out.println("Navigate from PLP to PDP page!");
 //		objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
@@ -135,7 +136,6 @@ public class VEGASF_418_GoogleRegistered_User_AddQTY_Click4Offer {
 	public void SaveProduct() throws InterruptedException {
 		Reporter.log("SaveProduct test case started successfully");
 		System.out.println("Save product to Wishlist!");
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();

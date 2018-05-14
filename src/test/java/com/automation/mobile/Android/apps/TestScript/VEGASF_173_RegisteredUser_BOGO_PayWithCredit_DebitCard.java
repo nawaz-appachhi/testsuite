@@ -67,7 +67,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 	}
 	
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
 		objCheckOutPageObject.resetAddress();
 		objAddCartPageObject.resetBag();
@@ -98,7 +98,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); 
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 8)

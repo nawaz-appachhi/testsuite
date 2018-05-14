@@ -53,11 +53,11 @@ public class Edit_ChangeButtonPageObjects {
 	}
 
 	public void clickOnEditChangeButton() {
-		objiOSGenericMethods.clickOnIOSElement(getEditChangeButton(), "clicked on getEditChangeButton");
+		objiOSGenericMethods.clickOnIOSElement(getEditChangeButton(), "Edit Change Button");
 	}
 
 	public void clickOnEDITButton() {
-		objiOSGenericMethods.clickOnIOSElement(getEDITButtton(), "clicked on getEDITButtton");
+		objiOSGenericMethods.clickOnIOSElement(getEDITButtton(), "EDIT Buttton");
 	}
 	
 	public void clickOnRemoveButton() {

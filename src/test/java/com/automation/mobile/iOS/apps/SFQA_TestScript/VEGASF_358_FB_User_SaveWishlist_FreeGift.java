@@ -61,6 +61,13 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift {
 	@Test(priority = 1)
 
 	public void LoginApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
@@ -150,16 +157,16 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift {
 	@Test(priority = 4)
 
 	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		objPDPageObject.clickOnAddToBag();
-		objPDPageObject.clickOnSizeChart();
-		objPDPageObject.clickOnSizeChartBackButton();
-		objPDPageObject.clickOnBack();
-		objPLPageObjets.clickOnSearchOnPLP();
-		String search = objiOSGenericMethods.getValueByKey(TestName, "FreeGift");
-		objHomePageObjects.enterSearchitem(search);
-		objAssertionPageObject.verifyProductname();
-		objAssertionPageObject.verifyPLPProductCount();
-		objPLPageObjets.clickOnBrandNamePLP();
+//		objPDPageObject.clickOnAddToBag();
+//		objPDPageObject.clickOnSizeChart();
+//		objPDPageObject.clickOnSizeChartBackButton();
+//		objPDPageObject.clickOnBack();
+//		objPLPageObjets.clickOnSearchOnPLP();
+//		String search = objiOSGenericMethods.getValueByKey(TestName, "FreeGift");
+//		objHomePageObjects.enterSearchitem(search);
+//		objAssertionPageObject.verifyProductname();
+//		objAssertionPageObject.verifyPLPProductCount();
+//		objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();

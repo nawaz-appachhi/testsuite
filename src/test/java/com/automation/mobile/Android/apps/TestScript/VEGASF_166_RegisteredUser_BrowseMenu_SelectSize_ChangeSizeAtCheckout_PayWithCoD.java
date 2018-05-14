@@ -56,7 +56,7 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -98,7 +98,7 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException  {
 		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 		
 	}

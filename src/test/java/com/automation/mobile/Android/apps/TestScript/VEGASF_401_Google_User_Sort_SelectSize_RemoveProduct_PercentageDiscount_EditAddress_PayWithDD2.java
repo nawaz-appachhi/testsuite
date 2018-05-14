@@ -67,7 +67,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 	}
 
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
@@ -120,7 +120,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("EditAddress");
 	//	objCheckOutPageObject.CheckAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

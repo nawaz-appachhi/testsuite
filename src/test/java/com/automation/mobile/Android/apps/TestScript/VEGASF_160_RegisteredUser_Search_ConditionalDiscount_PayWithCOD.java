@@ -62,7 +62,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK); 
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag(); 
 		objWishListPageObject.resetWishlist();
@@ -96,7 +96,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();  
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue(); 
 	}
 		

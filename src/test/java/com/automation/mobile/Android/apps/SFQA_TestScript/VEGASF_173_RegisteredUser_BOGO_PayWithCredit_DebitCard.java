@@ -67,11 +67,11 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 	}
 	
 	@Test(priority = 2)
-	public void resetdata() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void resetdata() throws InterruptedException {
 		Reporter.log("resetdata");
-//		objCheckOutPageObject.resetAddress();
-		objAddCartPageObject.resetBag();
-		objWishlistPageObject.resetWishlist(); 
+		objCheckOutPageObject.resetAddress();
+//		objAddCartPageObject.resetBag();
+//		objWishlistPageObject.resetWishlist(); 
 	}
 	
 	@Test(priority = 3)
@@ -90,7 +90,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.clickPlaceOrder();
@@ -116,7 +116,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

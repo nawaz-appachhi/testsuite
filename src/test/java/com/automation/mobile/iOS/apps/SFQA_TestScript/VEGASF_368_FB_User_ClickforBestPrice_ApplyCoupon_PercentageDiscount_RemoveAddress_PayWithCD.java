@@ -78,57 +78,57 @@ public class VEGASF_368_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();
-//		objProfileLoginPageObject.clickOnFaceBook();
-//		Thread.sleep(5000);
-//		Set<String> contextNames = iDriver.getContextHandles();
-//		for (String contextName : contextNames) {
-//			if (contextName.contains("WEBVIEW"))
-//				iDriver.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + iDriver.getContext());
-//		}
-////		objiOSGenericMethods.acceptAlert();
-//		try {
-//
-//			WebElement emailid = iDriver.findElement(By.cssSelector("#m_login_email"));
-//			WebElement pass = iDriver.findElement(By.cssSelector("#m_login_password"));
-//			WebElement loginButton = iDriver.findElement(By.cssSelector("#u_0_5"));
-//			WebElement continueLogin = iDriver.findElement(By.cssSelector("#u_0_9"));
-//			 WebElement continueLogin2 = iDriver.findElement(By.cssSelector("#u_0_3"));
-//			Thread.sleep(2000);
-//			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
-//			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
-//			if (emailid.isDisplayed()) {
-//				emailid.sendKeys(email);
-//				pass.sendKeys(password);
-//				loginButton.click(); 
-//			}
-//
-//			if (continueLogin.isDisplayed()) {
-//				objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin.click();
-//			}else if(continueLogin2.isDisplayed()) {
-//				//objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin2.click();
-//			}
-//		} catch (Exception e) {
-//			System.out.println("user can continue with face book login!");
-//		}
-//		try {
-//			WebElement cont = iDriver.findElement(By.cssSelector("#u_0_3"));
-//			objiOSGenericMethods.fluentWait(cont);
-//			cont.click();
-//		} catch (Exception e) {
-//			System.out.println("User is already login, No continue button to click!");
-//		}
-//		Set<String> contextNames2 = iDriver.getContextHandles();
-//		for (String contextName : contextNames2) {
-//			if (contextName.contains("NATIVE_APP"))
-//				iDriver.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + iDriver.getContext());
-//		}
-		
+		// objProfileLoginPageObject.clickOnFaceBook();
+		// Thread.sleep(5000);
+		// Set<String> contextNames = iDriver.getContextHandles();
+		// for (String contextName : contextNames) {
+		// if (contextName.contains("WEBVIEW"))
+		// iDriver.context(contextName);
+		// System.out.println(contextName);
+		// System.out.println("Context --> " + iDriver.getContext());
+		// }
+		//// objiOSGenericMethods.acceptAlert();
+		// try {
+		//
+		// WebElement emailid = iDriver.findElement(By.cssSelector("#m_login_email"));
+		// WebElement pass = iDriver.findElement(By.cssSelector("#m_login_password"));
+		// WebElement loginButton = iDriver.findElement(By.cssSelector("#u_0_5"));
+		// WebElement continueLogin = iDriver.findElement(By.cssSelector("#u_0_9"));
+		// WebElement continueLogin2 = iDriver.findElement(By.cssSelector("#u_0_3"));
+		// Thread.sleep(2000);
+		// String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
+		// String password = iOSGenericMethods.getValueByKey(TestName, "Password");
+		// if (emailid.isDisplayed()) {
+		// emailid.sendKeys(email);
+		// pass.sendKeys(password);
+		// loginButton.click();
+		// }
+		//
+		// if (continueLogin.isDisplayed()) {
+		// objiOSGenericMethods.fluentWait(continueLogin);
+		// continueLogin.click();
+		// }else if(continueLogin2.isDisplayed()) {
+		// //objiOSGenericMethods.fluentWait(continueLogin);
+		// continueLogin2.click();
+		// }
+		// } catch (Exception e) {
+		// System.out.println("user can continue with face book login!");
+		// }
+		// try {
+		// WebElement cont = iDriver.findElement(By.cssSelector("#u_0_3"));
+		// objiOSGenericMethods.fluentWait(cont);
+		// cont.click();
+		// } catch (Exception e) {
+		// System.out.println("User is already login, No continue button to click!");
+		// }
+		// Set<String> contextNames2 = iDriver.getContextHandles();
+		// for (String contextName : contextNames2) {
+		// if (contextName.contains("NATIVE_APP"))
+		// iDriver.context(contextName);
+		// System.out.println(contextName);
+		// System.out.println("Context --> " + iDriver.getContext());
+		// }
+
 		objProfileLoginPageObject.clickOnLogin();
 		String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
 		String password = iOSGenericMethods.getValueByKey(TestName, "Password");
@@ -136,11 +136,18 @@ public class VEGASF_368_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objProfileLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
 		objiOSGenericMethods.acceptAlert();
-		
+
 	}
 
 	@Test(priority = 2)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objiOSGenericMethods.swipeDown(0, 4);
 		objProfileLoginPageObject.removeAddress();
 	}
@@ -155,50 +162,50 @@ public class VEGASF_368_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objHomePageObject2.enterSearchitem(search);
 	}
 
-//	@Test(priority = 4)
-//	public void ListPageToPDP() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+	// @Test(priority = 4)
+	// public void ListPageToPDP() throws InterruptedException,
+	// InvalidFileFormatException, IOException {
+	// objAssertionPageObject.verifyProductname();
+	// objAssertionPageObject.verifyPLPHeader();
+	// objAssertionPageObject.verifyPLPProductCount();
+	// objPLPageObjets.clickOnFirstproductofPLP();
+	// }
 
 	@Test(priority = 5)
 	public void AddToBag() throws InterruptedException {
-//		objiOSGenericMethods.swipeDown(0, 3);
-//		objPDPageObject.clickOnBestPrice();
+		// objiOSGenericMethods.swipeDown(0, 3);
+		// objPDPageObject.clickOnBestPrice();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
 	}
 
-//	
-//	@Test(priority = 7)
-//	public void CheckSimilarProducts() throws InterruptedException {
-//		objiOSGenericMethods.swipeDown(0, 16);
-//		objPDPageObject.clickOnSimilarProduct();
-//		objPDPageObject.clickOnViewSimilar();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//		objPDPageObject.clickOnViewMyBag();
-//		objAssertionPageObject.verifyProductTitleCartPage();
-//	}
+	//
+	// @Test(priority = 7)
+	// public void CheckSimilarProducts() throws InterruptedException {
+	// objiOSGenericMethods.swipeDown(0, 16);
+	// objPDPageObject.clickOnSimilarProduct();
+	// objPDPageObject.clickOnViewSimilar();
+	// objPLPageObjets.clickOnBrandNamePLP();
+	// objPDPageObject.clickOnViewMyBag();
+	// objAssertionPageObject.verifyProductTitleCartPage();
+	// }
 
 	@Test(priority = 8)
 	public void ConditionalDiscount() throws InterruptedException, InvalidFileFormatException, IOException {
 		/**
-		 * @author 300019221 Aravindanath
-		 * This is commented because of Test data issue.
+		 * @author 300019221 Aravindanath This is commented because of Test data issue.
 		 */
 		objAssertionPageObject.verifyMyBag();
 		objiOSGenericMethods.swipeDown(100, 3);
 		objCartPageObject.ClickOnApplyCoupon();
 		objAssertionPageObject.verifyApplyCouponHeaders();
 		String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
-	//	objCartPageObject.enterCoupon(coupon);
+		// objCartPageObject.enterCoupon(coupon);
 		objCartPageObject.clickOnApplyButton();
-		
-	}	
+
+	}
 
 	@Test(priority = 9)
 
@@ -256,8 +263,9 @@ public class VEGASF_368_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objAddAddressPageObjects = new AddNewAdressPageObjects(iDriver);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
-	 @AfterTest
-		public void quit() {
-			iDriver.quit();
-		}
+
+	@AfterTest
+	public void quit() {
+		iDriver.quit();
+	}
 }

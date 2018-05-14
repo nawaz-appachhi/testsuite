@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity 1">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+  <!--  <test name="VEGASF_BOGO" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_BOGO" />
+		</classes>
+	</test>
+ 
+	  <test name="VEGASF_COMBO_BOGO" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_COMBO_BOGO" />
+		</classes>
+	</test>  
+
+	  <test name="VEGASF_FixedPrice" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_FixedPrice" />
+		</classes>
+	</test>   -->
+
+	  <test name="VEGASF_FreeGift" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_FreeGift" />
+		</classes>
+	</test>   
+
+ <!--  <test name="VEGASF_PersonalizedCoupon" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_PersonalizedCoupon" />
+		</classes>
+	</test>  
+	
+  <test name="VEGASF_RupeesDiscount" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_RupeesDiscount" />
+		</classes>
+	</test> 
+	
+  <test name="VEGASF_StaggeredCombo" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_StaggeredCombo" />
+		</classes>
+	</test>  -->
+	
+</suite>

@@ -62,7 +62,7 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
@@ -114,7 +114,7 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	@Test(priority = 7)
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress_Home");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

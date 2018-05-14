@@ -69,11 +69,11 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
-		//objCheckOutPageObject.resetAddress();
+//		objWishListPageObject.resetWishlist();
+//		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -97,24 +97,21 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
 		objWishListPageObject.clickDoneWishListbtn();
-	//	objWishListPageObject.removeAllItemsFromWishlist();
+		objWishListPageObject.removeAllItemsFromWishlist();
 		objWishListPageObject.verifyWishlistIcon(); // Assertion: verifying "Wishlist" Header
 		objWishListPageObject.clickBagBtn();
 	}
 	
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {	
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
 		objAddCartPageObject.changeSize();
-		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
-		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
-		objAddCartPageObject.clickApplyCoupon();
-		
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
-	}*/
+	}
 			
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

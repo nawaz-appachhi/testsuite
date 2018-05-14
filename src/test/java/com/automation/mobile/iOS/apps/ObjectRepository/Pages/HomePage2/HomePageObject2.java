@@ -318,9 +318,9 @@ public class HomePageObject2 {
 	}
 
 	public void setSearchBox(String Pname) throws InterruptedException {
-		if (searchBox.isDisplayed()) {
-			searchBox.sendKeys(Pname);
-			searchBox.sendKeys(Keys.ENTER);
+//		if (getSearchBox().isDisplayed()) {
+			getSearchBox().sendKeys(Pname);
+			getSearchBox().sendKeys(Keys.ENTER);
 			try {
 				if (tapAndHold.isDisplayed()) {
 					System.err.println("Tap and Hold button is displayed!");
@@ -330,9 +330,9 @@ public class HomePageObject2 {
 			} catch (Exception e) {
 			}
 			Reporter.log("Product name entered succesfully");
-		} else {
-			Assert.fail("Unable to enter Product name ");
-		}
+//		} else {
+//			Assert.fail("Unable to enter Product name ");
+//		}
 	}
 
 	public void handlePermission() {
@@ -376,10 +376,10 @@ public class HomePageObject2 {
 	 */
 	public void emptyBag() throws InterruptedException {
 		objiOSGenericMethods.waitForElementVisibility(getBagIcon());
-		if (getBagIcon().isDisplayed()) {
+//		if (getBagIcon().isDisplayed()) {
 //			getBagIcon().click();
 			objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "Bag Icon");
-		}
+//		}
 		try {
 			if (tapAndHold.isDisplayed()) {
 				tapAndHold();
@@ -399,11 +399,11 @@ public class HomePageObject2 {
 
 		objiOSGenericMethods.swipeDown(100, 1);
 		try {
-			if (getRemoveBtn().isDisplayed()) {
+//			if (getRemoveBtn().isDisplayed()) {
 				clickOnRemoveBtn();
 				objiOSGenericMethods.waitForElementVisibility(getRemoveBtn2());
 				clickOnRemoveBtn2();
-			}
+//			}
 		} catch (Exception e) {
 			System.out.println("Bag is already Empty :) !");
 		}

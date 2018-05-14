@@ -78,6 +78,13 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 8);
 		objLoginPageObject.clickOnLogOut();
@@ -115,12 +122,12 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
 		objPDPageObject.clickOnAddToBag();
-		objPDPageObject.clickOnSizeChart();
-		objPDPageObject.clickOnSizeChartBackButton();
+//		objPDPageObject.clickOnSizeChart();
+//		objPDPageObject.clickOnSizeChartBackButton();
 //		objiOSGenericMethods.swipeDown(100, 14);
 //		objPDPageObject.clickOnViewSimilar();
 //		objPLPageObjets.clickOnBrandNamePLP();
-		objPDPageObject.clickOnAddToBag();
+//		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
@@ -136,12 +143,10 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		String msg = objiOSGenericMethods.getValueByKey(TestName, "GiftMessage");
 		String senderName = objiOSGenericMethods.getValueByKey(TestName, "SenderName");
 		objCartPageObject.giftWrap(recipentName, msg, senderName);
-		objiOSGenericMethods.SwipeUp(100, 3);
-		objCartPageObject.clickOnSaveGift();
-		objiOSGenericMethods.swipeDown(100, 5);
+		objiOSGenericMethods.swipeDown(100, 6);
 		objAssertionPageObject.verifyPriceDetails();
 		objCartPageObject.clickOnplaceOrder();
-
+		
 	}
 
 	@Test(priority = 6)

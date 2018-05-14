@@ -71,7 +71,7 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -107,7 +107,7 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 		//objProductListPageObject.clickOkButton();    // no meed to apply if reset bag is added
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void ViewDetails() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("ViewDetails");
 		objAddCartPageObject.verifyShoppingBagTitle();
@@ -135,7 +135,7 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}	*/
+	}	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

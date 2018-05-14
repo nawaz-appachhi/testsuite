@@ -118,6 +118,7 @@ public class VEGASF_299_FB_User_Sort_SimilarProduct extends GlobalVariables {
 		System.out.println("Add to Bag");
 		objPDPObject.ClickSizeButtons();
 		objPDPObject.ClickAddToBagBtn();
+		objPDPObject.HoverAllSmallThumbnails();
 		objPDPObject.verifyPDPTitleFromPDP();
 		objPDPObject.VerifySellingPriceFromPDP();
 		objPDPObject.VerifyLargeThumbnailFromPDP();
@@ -154,6 +155,7 @@ public class VEGASF_299_FB_User_Sort_SimilarProduct extends GlobalVariables {
 		objAddressPageObjects.EditNameTextField("VegaSF299 " + objGenericMethods.datetime("ddMMyyyyHHmmss"));
 		objAddressPageObjects.clickToSaveAddress();
 		objAddressPageObjects.VerifyAddressAdded();
+		objAddressPageObjects.ClickToContinue();
 	}
 	
 	@Test(priority = 10)

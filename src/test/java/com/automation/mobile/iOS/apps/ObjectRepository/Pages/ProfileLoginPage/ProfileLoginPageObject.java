@@ -60,6 +60,16 @@ public class ProfileLoginPageObject {
 	@iOSFindBy(accessibility = "Orders")
 	public IOSElement orderTab;
 
+	/**
+	 * @author 300021275 To skip on boarding screen
+	 * @param iDriver
+	 * @param duration
+	 * @param noOfSwipes
+	 */
+
+	@FindBy(xpath = "//XCUIElementTypeOther[@name='WELCOME! ']/XCUIElementTypeOther/XCUIElementTypeOther")
+	public IOSElement onBoardingCrossButton;
+
 	public void swipeDown(IOSDriver<IOSElement> iDriver, int duration, int noOfSwipes) {
 
 		org.openqa.selenium.Dimension size = iDriver.manage().window().getSize();
@@ -198,6 +208,11 @@ public class ProfileLoginPageObject {
 		return continueButton;
 	}
 
+	public IOSElement getOnBoardingCrossButton() {
+		objiOSGenericMethods.CheckIOSElementFound(onBoardingCrossButton, "onBoardingCrossButton");
+		return onBoardingCrossButton;
+	}
+
 	/**
 	 * @author 300019221 / Aravindanath created new getter
 	 * @return
@@ -212,7 +227,6 @@ public class ProfileLoginPageObject {
 		return allowButton;
 	}
 
-	
 	/*****************
 	 * methods
 	 * 
@@ -357,15 +371,15 @@ public class ProfileLoginPageObject {
 
 	public void removeAddress() throws InterruptedException {
 		if (getSingleAddressTab().isDisplayed()) {
-//			getSingleAddressTab().click();
+			// getSingleAddressTab().click();
 			objiOSGenericMethods.clickOnIOSElement(getSingleAddressTab(), "Single Address Tab");
 		} else if (getAddressTab().isDisplayed()) {
-//			getAddressTab().click();
+			// getAddressTab().click();
 			objiOSGenericMethods.clickOnIOSElement(getAddressTab(), "Address Tab");
 		}
 		try {
 			objiOSGenericMethods.swipeDown(100, 1);
-			// objiOSGenericMethods.waitForElementVisibility(getRemoveAddressTab());
+			objiOSGenericMethods.waitForElementVisibility(getRemoveAddressTab());
 			// if (getRemoveAddressTab().isDisplayed()) {
 			objiOSGenericMethods.clickOnIOSElement(getRemoveAddressTab(), "Remove Address Button");
 			// getRemoveAddressTab().click();
@@ -375,10 +389,10 @@ public class ProfileLoginPageObject {
 			// getBackButtonOnAddress().click();
 			// }
 		} catch (Exception e) {
-			// if (getBackButtonOnAddress().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getBackButtonOnAddress(), "Back Button");
-			// getBackButtonOnAddress().click();
-			// }
+			if (getBackButtonOnAddress().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getBackButtonOnAddress(), "Back Button");
+				// getBackButtonOnAddress().click();
+			}
 			System.out.println("No address to remove!");
 		}
 
@@ -409,6 +423,10 @@ public class ProfileLoginPageObject {
 			System.out.println("user can continue with face book login!");
 		}
 
+	}
+
+	public void clickOnOnBoardingCrossButton() {
+		objiOSGenericMethods.clickOnIOSElement(getOnBoardingCrossButton(), "OnBoarding Screen Cross button");
 	}
 
 }

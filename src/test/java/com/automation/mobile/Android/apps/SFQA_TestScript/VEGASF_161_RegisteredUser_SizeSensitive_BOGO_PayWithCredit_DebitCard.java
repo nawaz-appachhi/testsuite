@@ -73,10 +73,10 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -105,14 +105,17 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 	@Test(priority = 6)
 	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("placeOrder Test case Started Successfully");
+	//	objProductListPageObject.clickOkButton();     // no need to apply if reset applied
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAddCartPageObject.clickPlaceOrder();
+		//objAddCartPageObject.clickViewDetails();
+		//objAndroidGenericMethods.scrollToText(aDriver, "PRICE DETAILS");
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();
-		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");*/
+		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

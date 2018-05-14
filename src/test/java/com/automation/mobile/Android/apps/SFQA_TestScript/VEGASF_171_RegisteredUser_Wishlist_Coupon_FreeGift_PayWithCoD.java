@@ -64,11 +64,11 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 	} 
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
-	//	objCheckOutPageObject.resetAddress();
+		objCheckOutPageObject.resetAddress();
 	}
 	
 	@Test(priority = 3)
@@ -98,16 +98,16 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 
 	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAddCartPageObject.verifyShoppingBagTitle();
-		/*objAddCartPageObject.clickViewDetails();
+		objAddCartPageObject.clickViewDetails();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
-		objAddCartPageObject.ClickCouponCancelbtn();
+		objAddCartPageObject.clickApplyCoupon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.AddNewAddress();
+		objCheckOutPageObject.clickContinue();
 	}
-	/*@Test(priority = 9)
+	@Test(priority = 9)
 	public void PaymentWithMynt_COD() throws InterruptedException, InvalidFileFormatException, IOException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Cardy");
@@ -124,7 +124,7 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

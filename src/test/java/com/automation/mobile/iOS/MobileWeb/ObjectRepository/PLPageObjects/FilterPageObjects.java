@@ -218,13 +218,13 @@ public class FilterPageObjects {
 	public void clickOnSortButton() {
 		objiOSGenericMethods.waitDriver(getSortButton(),"Sort Button");
 		if (getSortButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSortButton(), "clicked on SortButton");
+			objiOSGenericMethods.clickOnIOSElement(getSortButton(), "Sort Button");
 			System.out.println("User has clicked on sort");
 		}
 	}
 
 	public void clickOnDiscountButton() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountButton(), "clicked on DiscountButton");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountButton(), "Discount Button");
 	}
 
 	public void clickOnPriceHightoLow() {
@@ -240,7 +240,7 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnPopularity() {
-		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "clicked on Popularity");
+		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "Popularity");
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class FilterPageObjects {
 			objiOSGenericMethods.waitDriver(getFilterButton(),"Filter Button");
 			if (getFilterButton().isDisplayed()) {
 			//	objiOSGenericMethods.click(getFilterButton());
-				objiOSGenericMethods.clickOnIOSElement(getFilterButton(), "clicked on FilterButton");
+				objiOSGenericMethods.clickOnIOSElement(getFilterButton(), "FilterButton");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -263,7 +263,7 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnDiscountButtonInFilter() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountButtonInFilter(), "clicked on DiscountButtonInFilter");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountButtonInFilter(), "Discount Button In Filter");
 	}
 
 	public void clickOnFilterOption() {
@@ -271,13 +271,13 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnApplyButton() {
-		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "clicked on ApplyButton");
+		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "ApplyButton");
 	}
 
 	public void clickOnDiscount() {
 
 		if (Discount.isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getDiscount(), "clicked on Discount");
+			objiOSGenericMethods.clickOnIOSElement(getDiscount(), "Discount");
 		}
 	}
 	
@@ -285,7 +285,7 @@ public class FilterPageObjects {
 	public void clickOnPrice() {
 
 		if (Price.isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getPrice(), "clicked on Price");
+			objiOSGenericMethods.clickOnIOSElement(getPrice(), "Price");
 		}
 	}
 	/*

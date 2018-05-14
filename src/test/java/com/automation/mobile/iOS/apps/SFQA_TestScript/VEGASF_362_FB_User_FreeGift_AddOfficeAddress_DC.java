@@ -71,6 +71,13 @@ public class VEGASF_362_FB_User_FreeGift_AddOfficeAddress_DC {
 
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
+		try {
+			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objProfileLoginPageObject.clickOnLogOut();

@@ -69,10 +69,10 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -97,10 +97,10 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();    
-	}
-	/*@Test(priority=7)
-	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException  {
 		objAddCartPageObject.clickPlaceOrder();
+	}
+	@Test(priority=7)
+	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException  {
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -124,7 +124,7 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}	*/
+	}	
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

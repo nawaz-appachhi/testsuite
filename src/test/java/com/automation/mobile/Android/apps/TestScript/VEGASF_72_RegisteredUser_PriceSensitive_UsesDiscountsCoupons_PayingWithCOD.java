@@ -1,14 +1,10 @@
 package com.automation.mobile.Android.apps.TestScript;
 
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -62,7 +58,7 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -96,7 +92,7 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); 
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 7)

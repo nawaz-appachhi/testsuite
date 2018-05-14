@@ -300,12 +300,10 @@ public class VEGASF_57_RegisteredUser_DiscountConcious_PayingWithCOD extends Glo
 		System.out.println("COD");
 		objAddressPageObject.ClickToContinue();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
-		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
-		objPaymentPageObjects.VerifyOrderNumber();
-		objPaymentPageObjects.GoToOrderDetailsPage();
-		objPaymentPageObjects.VerifyOrdernumber();
+		objPaymentPageObjects.handelAlert();
+		objPaymentPageObjects.verifyCODavailabilityThenPay();
 	}
+	
 	@Test(priority = 11)
 	public void LogOut()  {
 		objLoginPageObject.LogOut();

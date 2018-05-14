@@ -76,7 +76,13 @@ public class VEGASF_233_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
-
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
@@ -126,7 +132,7 @@ public class VEGASF_233_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 //		objPLPageObjets.clickOnBrandNamePLP();
 //	}
 
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	public void sizechart() throws InterruptedException {
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.clickOnSizeChart();

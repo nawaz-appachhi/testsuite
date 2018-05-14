@@ -28,6 +28,10 @@ public class CartPageObject {
 	GenericMethods objGenericMethods;
 	HeaderPageObject objHeaderPageObject;
 	PLPPageObject objPLPPageObject;
+	public int STRICKEDPRICE;
+	int PRODUCTPRICE;
+	int BAGTOTAL;
+	public static String DELIVERYPRICE;
 
 	public CartPageObject(WebDriver driver) {
 		super();
@@ -154,8 +158,12 @@ public class CartPageObject {
 
 	@FindBy(xpath = "(//div[@class='c-dblue total-rupees'])[1]")
 	public WebElement DiscountedPrice;
-
-	@FindBy(xpath = "(//div[@class='discount m-hide']/span)[2]")
+/**
+ * modified-shivaprasad 
+ * oldxpath-(//div[@class='discount m-hide']/span)[2]
+ * new xpath-//div[@class='discount m-hide']/span[@class='strike gray original-amount']
+ */
+	@FindBy(xpath = "//div[@class='discount m-hide']/span[@class='strike gray original-amount']")
 	public WebElement StrikedPrice;
 
 	@FindBy(xpath = "//div[@class='col1']/a/img")
@@ -186,6 +194,68 @@ public class CartPageObject {
 	@FindBy(xpath="//div[@class='prod-name']")
 	public List<WebElement> productNamelist;
 	
+	@FindBy(xpath = "//span[@class='green discount-percentage']")
+	public WebElement FreeGiftText;
+	
+	@FindBy(xpath = "//div[@class='c-dblue total-rupees']")
+	public WebElement FreeGiftPrice;
+	
+	@FindBy(xpath = "//div[@class='col2']/div[@class='col4']/div/div")
+	public WebElement ProductPrice;
+	
+	@FindBy(xpath = "//span[@class='value red']")
+	public WebElement BagTotal;
+	
+	@FindBy(xpath = "//span[@class='shipping-charge']")
+	public WebElement DeliveryPrice;
+	
+	
+	/**
+	 * Author Shivaprasad
+	 * 
+	 */
+	public WebElement getDeliveryPrice() {
+		objGenericMethods.CheckWebElementFound(ProductPrice, "ProductPrice");
+		return DeliveryPrice;
+	}
+
+	/**
+	 * Author Shivaprasad
+	 * 
+	 */
+	public WebElement getBagTotal() {
+		objGenericMethods.CheckWebElementFound(BagTotal, "BagTotal");
+		return BagTotal;
+	}
+
+	/**
+	 * Author Shivaprasad
+	 * 
+	 */
+	public WebElement getProductPrice() {
+		objGenericMethods.CheckWebElementFound(ProductPrice, "ProductPrice");
+		return ProductPrice;
+	}
+
+	/**
+	 * Author Shivaprasad
+	 * 
+	 */
+	public WebElement getFreeGiftPrice() {
+		objGenericMethods.CheckWebElementFound(FreeGiftPrice, "FreeGiftPrice");
+		return FreeGiftPrice;
+	}
+
+	/**
+	 * Author Shivaprasad
+	 * 
+	 */
+	public WebElement getFreeGiftText() {
+		objGenericMethods.CheckWebElementFound(FreeGiftText, "FreeGiftText");
+		return FreeGiftText;
+	}
+	
+
 	public List<WebElement> getProductName() {
 		objGenericMethods.CheckWebElementsListFound(productNamelist, "prodname");
 		return productNamelist;
@@ -720,6 +790,48 @@ public class CartPageObject {
 			Reporter.log("Passed : Quantity of products is changed to: " + selectedSize + " in cart page!");
 		}else{
 			Reporter.log("Failed : Unable to change the Quantity of products in cart page!");
+		}
+	}
+	
+	public void VerifyGiftText()	{
+		if(getFreeGiftText().getText().equalsIgnoreCase("GIFT")) {
+			
+			Reporter.log("Passed : Gift is avaliable for this product " );
+		}else{
+			Reporter.log("Failed :  Gift is not  avaliable for this product ");
+		}	
+		
+	}
+
+	public void VerifyGiftPrice()	{
+		if(getFreeGiftPrice().getText().equalsIgnoreCase("Rs. 0")) {
+			
+			Reporter.log("Passed : Price of the gift is "+getFreeGiftPrice().getText() );
+		}else{
+			Reporter.log("Failed :  Gift is not  avaliable for this product ");
+		}	
+		
+	}
+
+	public void VerifyProductPrice() {
+		System.out.println("Started VerifyProductPrice");
+		STRICKEDPRICE=Integer.parseInt(getStrikedPrice().getText().split(" ")[1].trim());
+		PRODUCTPRICE=Integer.parseInt(getProductPrice().getText().replaceAll("," , "").split(" ")[1].trim()); 
+		BAGTOTAL=Integer.parseInt(getBagTotal().getText().replaceAll("," , "").split(" ")[1]);
+		 DELIVERYPRICE=getDeliveryPrice().getText();
+	}
+
+	public void VerifyBagtotal() {
+		try {
+			if(STRICKEDPRICE+PRODUCTPRICE==BAGTOTAL) {
+				Reporter.log("Passed : Bagtotal dispalyed"+ BAGTOTAL+ "is correct  " );
+			}
+			else
+			{
+				Reporter.log("Failed : Bagtotal dispalyed is incorrect  " );
+			}
+		} catch (Exception e) {
+			Reporter.log("Failed : Bagtotal is not matching  " );
 		}
 	}
 }

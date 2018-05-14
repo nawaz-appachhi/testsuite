@@ -59,7 +59,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	} 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -117,7 +117,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 	public void EditAddress() throws Exception {
 		Reporter.log("EditAddress");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

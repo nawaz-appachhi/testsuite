@@ -39,10 +39,10 @@ public class HomePageObject {
      * modified by 300021280 Sneha
      * old xpath ://android.view.ViewGroup[@index='3']
      */
-	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement0']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.widget.ImageView")
 	public AndroidElement searchicon;
 
-	@FindBy(xpath = "//*[@index='3']/*[@index='3']/android.widget.ImageView")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.view.ViewGroup[@index='3']/android.widget.ImageView")
 	public AndroidElement searchicon1;
 
 	@FindBy(xpath = "//android.widget.EditText[@content-desc ='search_default_search_text_input']")
@@ -53,7 +53,7 @@ public class HomePageObject {
 	/**
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement3']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='9']/android.widget.ImageView")
 	public AndroidElement RHWishlistbtn;
 
 	/*
@@ -86,7 +86,7 @@ public class HomePageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement1']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.ImageView")
 	public AndroidElement bagbtn;
 	
 	@FindBy(xpath="//android.widget.Switch[@text='OFF']")

@@ -72,6 +72,13 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();

@@ -71,10 +71,10 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -102,18 +102,19 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	@Test(priority = 6)
 	public void PlaceOrder() throws InterruptedException {
 		Reporter.log("PlaceOrder Test case Started Successfully");
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
-		objAddCartPageObject.clickPlaceOrder();*/
+		objAddCartPageObject.clickPlaceOrder();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("RemoveAddress Test case Started Successfully");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

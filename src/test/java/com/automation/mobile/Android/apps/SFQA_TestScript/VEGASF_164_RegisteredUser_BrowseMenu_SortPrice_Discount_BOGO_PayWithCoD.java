@@ -61,10 +61,10 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 	}
 	
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -101,12 +101,12 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAddCartPageObject.clickPlaceOrder();
+		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.AddNewAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException {
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
@@ -119,7 +119,7 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutnt");
 		}
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

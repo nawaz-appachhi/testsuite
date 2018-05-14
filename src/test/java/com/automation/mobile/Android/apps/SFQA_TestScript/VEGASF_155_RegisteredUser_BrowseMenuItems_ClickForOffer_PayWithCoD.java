@@ -72,10 +72,10 @@ public class VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);  
 	}
 	@Test(priority = 2)  
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	} 
 	 
@@ -102,18 +102,20 @@ public class VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 	@Test(priority = 5)
 	public void checkOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("selectProductSize Test case Started Successfully");
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
-		/*objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
+		//objAndroidGenericMethods.scrolltoElementAndClick(ApplyCouponBtn);
 		objAddCartPageObject.enterCouponCode(AndroidGenericMethods.getValueByKey(testName, "couponcode"));
 		objAddCartPageObject.clickApplyCoupon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.CheckAddress();
-		objCheckOutPageObject.clickContinue();*/
+		objCheckOutPageObject.clickContinue();
 	}
 	
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException, InvalidFileFormatException, IOException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
@@ -130,7 +132,7 @@ public class VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {

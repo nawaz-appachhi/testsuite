@@ -64,11 +64,11 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 		objLoginPageObject.verifyUserId();
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
-	//@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	@Test(priority = 2)
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		//objWishListPageObject.resetWishlist();
+		objWishListPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -108,7 +108,7 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 			

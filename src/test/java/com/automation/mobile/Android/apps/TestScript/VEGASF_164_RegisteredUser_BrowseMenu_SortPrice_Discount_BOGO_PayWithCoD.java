@@ -60,7 +60,7 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -101,7 +101,7 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

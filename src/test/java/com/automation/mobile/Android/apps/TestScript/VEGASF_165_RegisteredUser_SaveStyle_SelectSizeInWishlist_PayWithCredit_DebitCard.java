@@ -1,12 +1,10 @@
 package com.automation.mobile.Android.apps.TestScript;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -62,7 +60,7 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -99,7 +97,7 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 		objAddCartPageObject.ClickCouponCancelbtn();
 		//objAddCartPageObject.enterCouponCodebox("myntra");
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objAddCartPageObject.clickViewDetails();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();

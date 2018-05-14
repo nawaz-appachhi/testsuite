@@ -76,10 +76,10 @@ public class VEGASF_153_RegisteredUser_BrandConcious_NewAddress_PayWithCredit_De
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 
@@ -98,14 +98,15 @@ public class VEGASF_153_RegisteredUser_BrandConcious_NewAddress_PayWithCredit_De
 //		objProductDescriptionPageObject.verifySize_selector("size");
 		objProductDescriptionPageObject.selectASize();
 		objProductDescriptionPageObject.clickGoToBag(); 
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();     
+		objAddCartPageObject.clickPlaceOrder();;
 	}
 	
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress");
-		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
@@ -128,7 +129,7 @@ public class VEGASF_153_RegisteredUser_BrandConcious_NewAddress_PayWithCredit_De
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest()

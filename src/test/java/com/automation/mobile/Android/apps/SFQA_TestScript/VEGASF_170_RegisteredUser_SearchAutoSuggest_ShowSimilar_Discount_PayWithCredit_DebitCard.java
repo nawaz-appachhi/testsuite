@@ -69,10 +69,10 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	
@@ -102,11 +102,11 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	@Test(priority = 8)
 	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAddCartPageObject.clickPlaceOrder();
-		/*objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.AddNewAddress();*/
+		objCheckOutPageObject.verifyUserAddress();
+		objCheckOutPageObject.AddNewAddress();
 	}
 
-	/*@Test(priority = 9)
+	@Test(priority = 9)
 	public void addAdress() throws InterruptedException {
 		objCheckOutPageObject.clickContinue();
 	}
@@ -128,7 +128,7 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 		objPaymentPageObject.readOrderNumberConfirmationPage();
 		objPaymentPageObject.clickOnViewOrder();
 		objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
-	}*/
+	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

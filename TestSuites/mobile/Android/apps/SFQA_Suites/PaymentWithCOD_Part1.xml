@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	<test name="VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD" />
+		</classes>
+	</test>
+	<test name="VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="c1eb8af8" />
+		<parameter name="platformVersion_" value="8.0.0" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/SFQA_Myntra-Android-fox" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD" />
+		</classes>
+	</test> 
+	<test name="VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Credit_DebitCard">	   
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Credit_DebitCard" />
+		</classes>
+	</test> 
+</suite>

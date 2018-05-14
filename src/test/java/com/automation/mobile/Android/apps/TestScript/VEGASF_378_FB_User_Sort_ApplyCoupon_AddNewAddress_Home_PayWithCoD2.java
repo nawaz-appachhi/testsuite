@@ -61,7 +61,7 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -108,7 +108,7 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("AddNewAddress_Office");
 		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

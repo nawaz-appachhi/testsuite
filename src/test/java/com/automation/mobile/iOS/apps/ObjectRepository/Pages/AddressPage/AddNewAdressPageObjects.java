@@ -250,9 +250,9 @@ public class AddNewAdressPageObjects {
 	public void EnterContinueOrderAddingAddress(String pincode, String locality, String name, String address,
 			String mobile) throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-			if (getPincodeAddressTxt().isDisplayed()) {
+//			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
 				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
@@ -273,7 +273,7 @@ public class AddNewAdressPageObjects {
 					objiOSGenericMethods.clickOnIOSElement(getHomeBtn(), "Home");
 				}
 				clickOnSaveAddressBtn();
-			}
+//			}
 		} catch (Exception e) {
 		}
 	}
@@ -292,9 +292,9 @@ public class AddNewAdressPageObjects {
 
 			String mobile) throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-			if (getPincodeAddressTxt().isDisplayed()) {
+//			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
 				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
@@ -321,7 +321,7 @@ public class AddNewAdressPageObjects {
 					objiOSGenericMethods.clickOnIOSElement(getSaveAddressBtn(), "Save Address");
 				}
 
-			}
+//			}
 
 		} catch (
 

@@ -87,7 +87,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 	}
 	
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 //		objWishListPageObject.resetWishlist();
@@ -114,7 +114,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 		objWishListPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 5)
+	@Test(priority = 5)
 	public void AddCartPage() throws InterruptedException {
 		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton();     // no need to apply if reset applied
@@ -140,7 +140,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 		objPaymentPageObject.clickExpiryYears();
 		objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
 		objPaymentPageObject.clickPayNowBtn();
-	}*/
+	}
 	
 	@Test(priority = 11)
 	public void Verifypayment() throws InvalidFileFormatException, IOException, InterruptedException {

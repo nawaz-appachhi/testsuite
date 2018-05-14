@@ -64,7 +64,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	}
 
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -107,7 +107,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	@Test(priority = 7)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckOutPage");
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	

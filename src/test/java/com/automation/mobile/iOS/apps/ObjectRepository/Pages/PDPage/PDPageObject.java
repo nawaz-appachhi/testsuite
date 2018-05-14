@@ -391,7 +391,7 @@ public class PDPageObject {
 
 			if (getSizeChartBackButton().isDisplayed()) {
 				System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());
-				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(), "SSize Chart Back Button");
+				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(), "Size Chart Back Button");
 			}
 		} catch (Exception e) {
 			System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());

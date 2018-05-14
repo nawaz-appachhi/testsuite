@@ -60,7 +60,7 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		aDriver.pressKeyCode(AndroidKeyCode.BACK); 
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -81,18 +81,17 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
-		objProductDescriptionPageObject.selectASize();
 		
 		//objAndroidGenericMethods.scrolltoElementAndClick("down",pincodeHeader, 5000);
 		objAndroidGenericMethods.scrollToText(aDriver, "CHECK DELIVERY");
 		objProductDescriptionPageObject.clickEnterPincodebtn();
 		objProductDescriptionPageObject.clickPincodeTxt("560068");
 		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-//		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
-//		objProductDescriptionPageObject.clickAddToBagbtn();
-//		objProductDescriptionPageObject.verifySize_selector("Size");
-		objProductDescriptionPageObject.clickbagHeaderbtn();
-		
+		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
+		objProductDescriptionPageObject.clickAddToBagbtn();
+		objProductDescriptionPageObject.verifySize_selector("Size");
+		objProductDescriptionPageObject.selectASize();
+		objProductDescriptionPageObject.clickGoToBag();
 	}
 
 	@Test(priority = 5)
@@ -102,7 +101,7 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); 
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 6)

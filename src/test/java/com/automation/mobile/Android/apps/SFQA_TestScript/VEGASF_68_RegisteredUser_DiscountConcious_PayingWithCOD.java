@@ -59,10 +59,10 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 2)
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+//		objWishListPageObject.resetWishlist();
 //		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
@@ -95,7 +95,7 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objWishListPageObject.clickBagBtn();
 	}
 
-	/*@Test(priority = 7)
+	@Test(priority = 7)
 	public void placeOrder() throws InterruptedException {
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
@@ -118,7 +118,7 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutn");
 		}
-	}*/
+	}
 	
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest

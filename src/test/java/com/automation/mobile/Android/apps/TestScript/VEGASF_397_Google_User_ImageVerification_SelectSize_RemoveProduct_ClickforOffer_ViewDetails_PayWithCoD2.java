@@ -68,7 +68,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	@Test(priority = 3)
-		public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void reset() throws InterruptedException {
 			Reporter.log("reset");
 			objAddCartPageObject.resetBag();
 			objWishListPageObject.resetWishlist();
@@ -116,7 +116,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		Reporter.log("ViewDetails");
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 

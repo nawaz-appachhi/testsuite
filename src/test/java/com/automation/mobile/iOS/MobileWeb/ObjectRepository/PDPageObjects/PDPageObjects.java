@@ -310,35 +310,35 @@ public class PDPageObjects {
 	}
 	
 	public void clickOnMoreProducts() {
-		objiOSGenericMethods.clickOnIOSElement(getMoreProducts(), "clicked on More Products.");
+		objiOSGenericMethods.clickOnIOSElement(getMoreProducts(), "More Products.");
 	}
 
 	public void clickOnSaveButton() {
-		objiOSGenericMethods.waitDriver(getSaveButton(), "SaveButton");
-		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "clicked on SaveButton");
+		//objiOSGenericMethods.waitDriver(getSaveButton(), "SaveButton");
+		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "SaveButton");
 	}
 	
 	public void clickOnContactUs() {
-		objiOSGenericMethods.clickOnIOSElement(getContactUs(), "clicked on SaveButton");
+		objiOSGenericMethods.clickOnIOSElement(getContactUs(), "SaveButton");
 	}
 
 	public void clickOnSizeChart() {
-		objiOSGenericMethods.waitDriver(getSizeChart(), "Size Chart");
-		objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "clicked to select size");
+		//objiOSGenericMethods.waitDriver(getSizeChart(), "Size Chart");
+		objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "select size");
 	}
 	
 	public void clickOnCloseSizeChartButton() {
-		objiOSGenericMethods.clickOnIOSElement(getCloseSizeChart(), "clicked on close Size chart button");
+		objiOSGenericMethods.clickOnIOSElement(getCloseSizeChart(), "close Size chart button");
 	}
 	
 	public void clickOngoToBag() {
-		objiOSGenericMethods.clickOnIOSElement(getgoToBag(), "clicked on goToBag");
+		objiOSGenericMethods.clickOnIOSElement(getgoToBag(), "goToBag");
 	}
 
 	public void clickOnTapForBestPrice() {
 		try {
 			if(getTapForBestPrice().isDisplayed())
-			objiOSGenericMethods.clickOnIOSElement(getTapForBestPrice(), "clicked on Tap For BestPrice ");
+			objiOSGenericMethods.clickOnIOSElement(getTapForBestPrice(), "Tap For BestPrice ");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -351,27 +351,27 @@ public class PDPageObjects {
 	 */
 	
 	public void clickOnChangePinCode() {
-		objiOSGenericMethods.clickOnIOSElement(changePinCode, "Cliked on change pincode");
+		objiOSGenericMethods.clickOnIOSElement(changePinCode, "change pincode");
 	}
 
 	public void checkPinCode(String name) {
 			try {
 				if(getChangePinCode().isDisplayed())
-				objiOSGenericMethods.clickOnIOSElement(getChangePinCode(), "Clikced on change pincode");
+				objiOSGenericMethods.clickOnIOSElement(getChangePinCode(), "change pincode");
 				System.out.println("Change pin code clicked succesfully");
 				getCheckPinCode().sendKeys(name);
 			} catch (Exception e) {
-				objiOSGenericMethods.clickOnIOSElement(getCheckPinCode(), "clicked on CheckPinCode");
+				objiOSGenericMethods.clickOnIOSElement(getCheckPinCode(), "CheckPinCode");
 				getCheckPinCode().sendKeys(name);
 			}
 		}
 
 	public void clickOnCheckPin() {
-		objiOSGenericMethods.clickOnIOSElement(getCheckPin(), "clicked on CheckPin");
+		objiOSGenericMethods.clickOnIOSElement(getCheckPin(), "CheckPin");
 	}
 	
 	public void clickOnMoreAboutOnlineShopping() {
-		objiOSGenericMethods.clickOnIOSElement(getMoreAboutOnlineShopping(), "clicked on More About Online Shopping.");
+		objiOSGenericMethods.clickOnIOSElement(getMoreAboutOnlineShopping(), "More About Online Shopping.");
 	}
 
 	/**
@@ -383,7 +383,7 @@ public class PDPageObjects {
 	}
 
 	public void clickOnConfirmButton() {
-		objiOSGenericMethods.clickOnIOSElement(getConfirmButton(), "clicked on ConfirmButton");
+		objiOSGenericMethods.clickOnIOSElement(getConfirmButton(), "ConfirmButton");
 	}
 
 	public void setSelectSizesInPdp(List<IOSElement> selectSizesInPdp) {
@@ -392,7 +392,7 @@ public class PDPageObjects {
 	
 	public void clickOnBestPrice() {
 		objiOSGenericMethods.waitDriver(getBestPrice(), "BestPrice");
-		objiOSGenericMethods.clickOnIOSElement(getBestPrice(), "clicked on Tab for Best Price link.");
+		objiOSGenericMethods.clickOnIOSElement(getBestPrice(), "Tab for Best Price link.");
 	}
 
 	public List<IOSElement> getSelectSizesInPdp(int i, String size) throws InterruptedException {
@@ -441,7 +441,7 @@ public class PDPageObjects {
 	}
 
 	public void clickOnSize() {
-		objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "clicked on SizeChart");
+		objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "SizeChart");
 	}
 
 	public void clickFirstProductSearchResult() throws InterruptedException {
@@ -504,16 +504,16 @@ public class PDPageObjects {
 	}
 	
 	public void clickSaveToWishlist(){
-		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "clicked on Save Button.");
+		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "Save Button.");
 	}
 	
 	public void clickMyntraLogo(){
-		objiOSGenericMethods.clickOnIOSElement(getmyntraLogo(), "clicked on Myntra Logo");
+		objiOSGenericMethods.clickOnIOSElement(getmyntraLogo(), "Myntra Logo");
 	}
 	
 	public void clickCartIcon(){
 		objiOSGenericMethods.waitDriver(getcartIcon(), "Cart");
-		objiOSGenericMethods.clickOnIOSElement(getcartIcon(), "clicked on Cart Icon");
+		objiOSGenericMethods.clickOnIOSElement(getcartIcon(), "Cart Icon");
 	}
 	
 	public void VerifyProductTitle()	{

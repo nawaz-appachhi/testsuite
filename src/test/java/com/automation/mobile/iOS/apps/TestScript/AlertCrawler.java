@@ -75,6 +75,13 @@ public class AlertCrawler {
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException
 
 	{
+		try {
+			objLoginPageObject.clickOnOnBoardingCrossButton();
+			System.out.println("On Boarding screen appeared and closed it");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("On Boarding screen did not appear");
+		}
 		objiOSGenericMethods.acceptAlert();
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 8);

@@ -77,7 +77,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
  
 	}
 	@Test(priority = 2) 
-	public void reset() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
@@ -125,7 +125,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
-		objCheckOutPageObject.CheckAddress();
+		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 		
 	}

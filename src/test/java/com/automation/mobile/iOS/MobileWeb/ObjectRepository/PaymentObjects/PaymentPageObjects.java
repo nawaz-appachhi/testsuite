@@ -282,83 +282,83 @@ public class PaymentPageObjects {
 	 * methods
 	 */
 	public void ClickOnWallets() {
-		objiOSGenericMethods.clickOnIOSElement(getWallets(), "clicked on Wallets");
+		objiOSGenericMethods.clickOnIOSElement(getWallets(), "Wallets");
 	}
 
 	public void ClickOnphonepe() {
-		objiOSGenericMethods.clickOnIOSElement(getPhonepe(), "clicked on Phonepe");
+		objiOSGenericMethods.clickOnIOSElement(getPhonepe(), "Phonepe");
 	}
 
 	public void ClickOnCOD() {
-		objiOSGenericMethods.clickOnIOSElement(getCOD(), "clicked on COD");
+		objiOSGenericMethods.clickOnIOSElement(getCOD(), "COD");
 	}
 
 	public void clickOnChangePaymentMode() {
-		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(), "clicked on ChangePaymentMode");
+		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(), "ChangePaymentMode");
 	}
 
 	public void clickOnApplyCouponCode() {
-		objiOSGenericMethods.clickOnIOSElement(getApplyCouponCode(), "clicked on ApplyCouponCode");
+		objiOSGenericMethods.clickOnIOSElement(getApplyCouponCode(), "ApplyCouponCode");
 	}
 
 	public void clickOnGiftCardApplyButton() {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardApplyButton(), "clicked on GiftCardApplyButton");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardApplyButton(), "GiftCardApplyButton");
 	}
 
 	public void clickOnGiftcard() {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCard(), "clicked on giftCards");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCard(), "giftCards");
 	}
 
 	public void enterGiftCardNumber(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumber(), "clicked on GiftCardNumber");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumber(), "GiftCardNumber");
 		getGiftCardNumber().sendKeys(name);
 	}
 
 	public void enterEnterCouponCode(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getEnterCouponCode(), "clicked on EnterCouponCode");
+		objiOSGenericMethods.clickOnIOSElement(getEnterCouponCode(), "EnterCouponCode");
 		getEnterCouponCode().sendKeys(name);
 	}
 
 	public void enterGiftCardpin(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardpin(), "clicked on GiftCardpin");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardpin(), "GiftCardpin");
 		getGiftCardpin().sendKeys(name);
 	}
 
 	public void clickOnNetBanking() {
-		objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "clicked on NetBanking");
+		objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "NetBanking");
 	}
 
 	public void clickOnCCandDC() {
 		objiOSGenericMethods.waitDriver(getCCandDC(), "Credit card");
-		objiOSGenericMethods.clickOnIOSElement(getCCandDC(), "clicked on creditCard/debitCard");
+		objiOSGenericMethods.clickOnIOSElement(getCCandDC(), "creditCard/debitCard");
 	}
 	
 	public void clickFirstNetbankingOption(){
-		objiOSGenericMethods.clickOnIOSElement(getfirstNetBankingOption(), "clicked on first Netbanking Option");
+		objiOSGenericMethods.clickOnIOSElement(getfirstNetBankingOption(), "first Netbanking Option");
 	}
 	
 	public void clickNetbankingPayNowButton(){
-		objiOSGenericMethods.clickOnIOSElement(getnetbankingPayNowButton(), "clicked on first Netbanking Pay Now Button");
+		objiOSGenericMethods.clickOnIOSElement(getnetbankingPayNowButton(), "first Netbanking Pay Now Button");
 	}
 	
 	public void clickOnEMIcreditCard() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIcreditCard(), "clicked on EMI Credit card Option.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIcreditCard(), "EMI Credit card Option.");
 	}
 	
 	public void clickEMIselectBanKDrpDwn() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIselectBanKDrpDwn(), "clicked on EMI credit bank drop down.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIselectBanKDrpDwn(), "EMI credit bank drop down.");
 	}
 	
 	public void clickEMIbankSelect() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIbankSelect(), "clicked on EMI Credit bank Option.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIbankSelect(), "EMI Credit bank Option.");
 	}
 	
 	public void clickSelectEMIdurationDrpDwn() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectEMIdurationDrpDwn(), "clicked on select EMI duration dropdown.");
+		objiOSGenericMethods.clickOnIOSElement(getSelectEMIdurationDrpDwn(), "select EMI duration dropdown.");
 	}
 	
 	public void clickSelectEMIduration() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectEMIduration(), "clicked on select EMI duration.");
+		objiOSGenericMethods.clickOnIOSElement(getSelectEMIduration(), "select EMI duration.");
 	}
 
 	public void VerifyPaymentPageTitle()	{
