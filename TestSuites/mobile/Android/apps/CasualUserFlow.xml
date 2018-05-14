@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	<test name="VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="c1eb8af8" />
+		<parameter name="platformVersion_" value="8.0.0" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-qa.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer" />
+		</classes>
+	</test>    
+   <test name="VEGASF_377_FB_User_Offers_Concious">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="c1eb8af8" />
+		<parameter name="platformVersion_" value="8.0.0" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-qa.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit_DebitCard" />
+		</classes>
+	</test>
+	  <test name="VEGASF_398_FB_User_Sort_SimilarProduct">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-qa.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_398_FB_User_Sort_SimilarProduct" />
+		</classes>
+	</test>   
+</suite>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	<test name="VEGASF_109_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_109_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC" />
+		</classes>
+	</test>    
+   <test name="VEGASF_118_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_118_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC" />
+		</classes>
+	</test>
+	 <test name="VEGASF_218_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_218_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC" />
+		</classes>
+	</test> 
+	<test name="VEGASF_217_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_217_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC" />
+		</classes>
+	</test>   
+</suite>

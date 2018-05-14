@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+ 	<test name="VEGASF_123">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_123_RegisteredUser_DiscountConcious_PayingWithCOD" />
+		</classes>
+	</test> 
+  <test name="VEGASF_124">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_124_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCoD" />
+		</classes>
+	</test>  
+	<test name="VEGASF_125">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_125_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC" />
+		</classes>
+	</test>  
+ <test name="VEGASF_126">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_126_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC" />
+		</classes>
+	</test> 
+	  <test name="VEGASF_127">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_127_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC" />
+		</classes>
+	</test> 
+  <test name="VEGASF_128">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone 6" />
+		<parameter name="UDID_" value="b402b360af61167570e98b0d363c681fe28171a0" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_128_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD" />
+		</classes>
+	</test>  
+</suite>

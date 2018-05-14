@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity 2">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+  <test name="VEGASF_57_RegisteredUser_DiscountConcious_PayingWithCOD" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_57_RegisteredUser_DiscountConcious_PayingWithCOD" />
+		</classes>
+	</test>
+ 
+  <test name="VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCoD" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCoD" />
+		</classes>
+	</test> 
+  
+	 <test name="VEGASF_59_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_59_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC" />
+		</classes>
+	</test>
+ 
+ <test name="VEGASF_60_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_60_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC" />
+		</classes>
+	</test>   
+
+	  <test name="VEGASF_61_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_61_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC" />
+		</classes>
+	</test>  
+
+</suite>

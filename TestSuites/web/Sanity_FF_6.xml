@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity_FF_6">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+	
+ <test name="VEGASF_144_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_144_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC" />
+		</classes>
+	</test> 
+	
+  <test name="VEGASF_145_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_PayWithCoD - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_145_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_PayWithCoD" />
+		</classes>
+	</test>  
+	
+  <test name="VEGASF_146_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_146_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD" />
+		</classes>
+	</test> 
+	
+ <test name="VEGASF_147_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_147_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC" />
+		</classes>
+	</test> 
+
+    <test name="VEGASF_148_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_148_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC" />
+		</classes>
+	</test> 
+ 
+</suite>

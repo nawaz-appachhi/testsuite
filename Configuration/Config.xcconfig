@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  WebDriverAgent
+//
+//  Created by Nitesh Kumar Chaubey on 11/02/18.
+//  Copyright © 2018 Facebook. All rights reserved.
+//
+
+DEVELOPMENT_TEAM = G3GS7GFCU2
+CODE_SIGN_IDENTITY = iPhone Developer 

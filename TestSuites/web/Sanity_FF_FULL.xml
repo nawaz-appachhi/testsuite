@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity 1">
+
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+
+	<test name="VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_53_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_53_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_55_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_55_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_56_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_56_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_57_RegisteredUser_DiscountConcious_PayingWithCOD">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_57_RegisteredUser_DiscountConcious_PayingWithCOD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCoD">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_58_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_59_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_59_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_60_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_60_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_61_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_61_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_PayingWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_62_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_62_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_130_RegisteredUser_BrandConcious_NewAddress_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_130_RegisteredUser_BrandConcious_NewAddress_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_132_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_132_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_133_RegisteredUser_PDPToWishlist_Checkout_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_133_RegisteredUser_PDPToWishlist_Checkout_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_134_RegisteredUser_BrandProfile_ShowMoreProducts_PayWithGiftCardAndCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_134_RegisteredUser_BrandProfile_ShowMoreProducts_PayWithGiftCardAndCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_135_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_135_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_137_RegisteredUser_Search_ConditionalDiscount_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_137_RegisteredUser_Search_ConditionalDiscount_PayWithCC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_138_RegisteredUser_SizeSensitive_BOGO_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_138_RegisteredUser_SizeSensitive_BOGO_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_139_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_139_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_140_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_140_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_141_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_141_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_142_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_142_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_143_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_143_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_144_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_144_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_145_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_145_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_146_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_146_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_147_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_147_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_148_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_148_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_149_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_149_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_150_RegisteredUser_BOGO_PayWithGCAndCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_150_RegisteredUser_BOGO_PayWithGCAndCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_151_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_151_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_294_GoogleRegistered_User_AddQTY_Click4Offer - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_294_GoogleRegistered_User_AddQTY_Click4Offer" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_295_FB_User_Offers_Concious - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_295_FB_User_Offers_Concious" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_296_Google_User_SaveWishlist_Discount_Concious - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_296_Google_User_SaveWishlist_Discount_Concious" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_297_FB_User_SaveWishlist_FreeGift - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_297_FB_User_SaveWishlist_FreeGift" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_298_FB_User_chkDeliveryOpt_Coupon_BOGO - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_298_FB_User_chkDeliveryOpt_Coupon_BOGO" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_299_FB_User_Sort_SimilarProduct - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_299_FB_User_Sort_SimilarProduct" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_300_FB_User_Chk4BestPrice_PercentageDiscount - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_300_FB_User_Chk4BestPrice_PercentageDiscount" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_301_Google_User_PersonalizedCoupon - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_301_Google_User_PersonalizedCoupon" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_302_Google_User_AddQTY_PersonalizedCoupon - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_302_Google_User_AddQTY_PersonalizedCoupon" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_303_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_CoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_303_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_CoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_304_Google_User_Filter_ImageVerification_AddFromWishlist_FreeGift_OfficeAddress_DC - Test"
+		verbose="1">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_304_Google_User_Filter_ImageVerification_AddFromWishlist_FreeGift_OfficeAddress_DC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_305_FB_FreeGift_AddOfficeAddress_DC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_305_FB_FreeGift_AddOfficeAddress_DC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_306_FB_User_Giftwrap_BOGO_ViewDetails_CoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_306_FB_User_Giftwrap_BOGO_ViewDetails_CoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_307_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_307_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_308_Google_User_ClickforOffer_AddNewAddress_Home_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_308_Google_User_ClickforOffer_AddNewAddress_Home_PayWithDC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_309_Google_User_Filter_BOGO_ViewDetails_CoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_309_Google_User_Filter_BOGO_ViewDetails_CoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_310_Google_User_PercentageDiscount_AddNewAddress_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_310_Google_User_PercentageDiscount_AddNewAddress_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_311_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_311_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_312_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_312_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_313_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAddress_Office_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_313_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAddress_Office_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_314_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_ClickforOffer_AddNewAddress_Office_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_314_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_ClickforOffer_AddNewAddress_Office_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_315_Google_User_Sort_ClickforBestPrice_EmptyWishlist_PercentageDiscount_EditAddress_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_315_Google_User_Sort_ClickforBestPrice_EmptyWishlist_PercentageDiscount_EditAddress_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_316_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_PercentageDiscount_AddNewAddress_Office_PayWithDD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_316_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_PercentageDiscount_AddNewAddress_Office_PayWithDD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_317_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_ViewDetails_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_317_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_ViewDetails_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_318_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_318_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_319_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_319_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_321_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalizedCoupons_AddNewAddress_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_321_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalizedCoupons_AddNewAddress_PayWithCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_322_Google_User_Sort_SelectSize_RemoveProduct_PercentageDiscount_EditAddress_PayWithDD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_322_Google_User_Sort_SelectSize_RemoveProduct_PercentageDiscount_EditAddress_PayWithDD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_323_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_EditAddress_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_323_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_EditAddress_PayWithCoD" />
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SanityTest1" parallel="none">
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+
+	<test name="VEGASF_116">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_116" />
+		</classes>
+	</test>
+	<test name="VEGASF_121">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_121" />
+		</classes>
+	</test>
+	<test name="VEGASF_122">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_122" />
+		</classes>
+	</test>
+	<test name="VEGASF_126">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_126" />
+		</classes>
+	</test>
+	<test name="VEGASF_127">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_127" />
+		</classes>
+	</test>
+	<test name="VEGASF_125">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_125" />
+		</classes>
+	</test>
+	<test name="VEGASF_128">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_128" />
+		</classes>
+	</test>
+	<test name="VEGASF_117">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_117" />
+		</classes>
+	</test>
+	<test name="VEGASF_119">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_119" />
+		</classes>
+	</test>
+	<test name="VEGASF_123">
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_123" />
+		</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

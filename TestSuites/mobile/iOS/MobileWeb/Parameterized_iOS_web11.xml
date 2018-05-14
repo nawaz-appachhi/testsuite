@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	<test name="VEGASF_423">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_423_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD" />
+		</classes>
+	</test>
+	<test name="VEGASF_424">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_424_Google_User_SaveWishlist_Discount_Concious" />
+		</classes>
+	</test>
+	<test name="VEGASF_425">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_425_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD" />
+		</classes>
+	</test>
+	<test name="VEGASF_426">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_426_FB_User_Chk4BestPrice_PercentageDiscount" />
+		</classes>
+	</test>
+	<test name="VEGASF_427">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_427_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD" />
+		</classes>
+	</test>
+	<test name="VEGASF_428">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="platformVersion_" value="10.2" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_428_FB_User_chkDeliveryOpt_Coupon_BOGO" />
+		</classes>
+	</test>
+</suite>
