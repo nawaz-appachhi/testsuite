@@ -15,7 +15,7 @@
 		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
 		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
-			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_418_GoogleRegistered_User_AddQTY_Click4Offer" />
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_418_GoogleRegistered_User_AddQTY_Click4Offer" />
 		</classes>
 	</test>
 	 <test name="VEGASF_409_FB_User_Offers_Concious">
@@ -29,7 +29,7 @@
 		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
 		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
-			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_409_FB_User_Offers_Concious" />
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_409_FB_User_Offers_Concious" />
 		</classes>
 	</test>
 	<test name="VEGASF_434_FB_User_Sort_SimilarProduct">
@@ -43,7 +43,7 @@
 		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
 		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
-			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_434_FB_User_Sort_SimilarProduct" />
+			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_434_FB_User_Sort_SimilarProduct" />
 		</classes>
 	</test>  
 </suite>

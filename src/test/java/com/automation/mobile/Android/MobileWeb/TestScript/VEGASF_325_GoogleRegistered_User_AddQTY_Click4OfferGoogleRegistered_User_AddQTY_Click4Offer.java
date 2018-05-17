@@ -128,88 +128,88 @@ public class VEGASF_325_GoogleRegistered_User_AddQTY_Click4OfferGoogleRegistered
 		objAndroidGenericMethods.scrollDown(objHambergerPageObjects.getSignInButton(), 10);
 	}
 
-	@Test(priority = 2)
-	public void resetData() throws InterruptedException {
-		System.out.println("Reset Bag, Wishlist & Address!");
-		objBagPageObjects.resetBag();
-		objWishlistPageObject.resetWishlist();
-		objAddressPageObjects.resetAddress();
-	}
-
-	@Test(priority = 3)
-	public void SearchItem() throws InvalidFileFormatException, IOException {
-		objHomePageObjects.clickOnSearchIcon();
-		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "SearchItem"));
-		objPLPageObjects.VerifyProductDetails();
-	}
-
-	@Test(priority = 4)
-	public void Save() throws InvalidFileFormatException, IOException {
-		objPDPageObject.clickFirstProductSearchResult();
-		System.out.println("First Product Clicked");
-		objPDPageObject.clickSaveToWishlist();
-		System.out.println("Save Clicked");
-		objPDPageObject.VerifyProductTitle();
-		objPDPageObject.imageVerification();
-		objPDPageObject.assertProductPrice();
-	}
-
-	@Test(priority = 5)
-	public void AddToBag() throws InterruptedException {
-		objPDPageObject.clickOnAddtoBag();
-		objPDPageObject.setFirstAvailableSize();
-		objPDPageObject.clickOnConfirmButton();
-	}
-
-	@Test(priority = 6)
-	public void EmptyWishList() throws InterruptedException {
-		objWishlistPageObject.resetWishlist();
-	}
-
-	@Test(priority = 7)
-	public void MoveToBag() throws InterruptedException {
-		objHomePageObjects.clickOnBagIcon();
-	}
-
-	@Test(priority = 8)
-	public void SelectSize_Qty() throws InterruptedException {
-		objBagPageObjects.changeSize();
-		objBagPageObjects.assertBagPageTitle("Bag");
-		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.getProductImage();
-		objBagPageObjects.VerfiyProductIsAddedToCart();
-		objBagPageObjects.VerifySellingPrice();
-	}
-
-	@Test(priority = 9)
-	public void CheckForOffer() throws InterruptedException {
-		objBagPageObjects.clickOnPlaceOrder();
-	}
-
-	@Test(priority = 10)
-	public void RemoveExistingAddress() throws InvalidFileFormatException, IOException {
-		objAddressPageObjects.ClickOnPincodeAddress();
-		objAddressPageObjects.enterPincone(objAndroidGenericMethods.getValueByKeyWeb(testName, "Pincode"));
-		objAddressPageObjects.clickOnChoose();
-		objAddressPageObjects.selectTownLocality(objAndroidGenericMethods.getValueByKeyWeb(testName, "Locality"));
-		objAddressPageObjects.entername(objAndroidGenericMethods.getValueByKeyWeb(testName, "Name"));
-		objAndroidGenericMethods.scrollDown(objAddressPageObjects.Address, 20);
-		objAddressPageObjects.enteraddress(objAndroidGenericMethods.getValueByKeyWeb(testName, "Address"));
-		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getMobileNumber(), 20);
-		objAddressPageObjects.enterMobileNumber(objAndroidGenericMethods.getValueByKeyWeb(testName, "MobileNumber"));
-		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getOfficeCommercial(), 20);
-		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getopenOnSaturdays(), 20);
-		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getSaveAddress(), 20);
-		objAndroidGenericMethods.scrollDown(objEdit_ChangeButtonPageObjects.getEditChangeButton(), -20);
-		objEdit_ChangeButtonPageObjects.clickOnremoveButton();
-	}
-
-	@Test(priority = 12)
-	public void LogOut() throws InterruptedException {
-		Reporter.log("Logout");
-		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
-		objHambergerPageObjects.logoutAndVerifySessionId();
-	}
+//	@Test(priority = 2)
+//	public void resetData() throws InterruptedException {
+//		System.out.println("Reset Bag, Wishlist & Address!");
+//		objBagPageObjects.resetBag();
+//		objWishlistPageObject.resetWishlist();
+//		objAddressPageObjects.resetAddress();
+//	}
+//
+//	@Test(priority = 3)
+//	public void SearchItem() throws InvalidFileFormatException, IOException {
+//		objHomePageObjects.clickOnSearchIcon();
+//		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "SearchItem"));
+//		objPLPageObjects.VerifyProductDetails();
+//	}
+//
+//	@Test(priority = 4)
+//	public void Save() throws InvalidFileFormatException, IOException {
+//		objPDPageObject.clickFirstProductSearchResult();
+//		System.out.println("First Product Clicked");
+//		objPDPageObject.clickSaveToWishlist();
+//		System.out.println("Save Clicked");
+//		objPDPageObject.VerifyProductTitle();
+//		objPDPageObject.imageVerification();
+//		objPDPageObject.assertProductPrice();
+//	}
+//
+//	@Test(priority = 5)
+//	public void AddToBag() throws InterruptedException {
+//		objPDPageObject.clickOnAddtoBag();
+//		objPDPageObject.setFirstAvailableSize();
+//		objPDPageObject.clickOnConfirmButton();
+//	}
+//
+//	@Test(priority = 6)
+//	public void EmptyWishList() throws InterruptedException {
+//		objWishlistPageObject.resetWishlist();
+//	}
+//
+//	@Test(priority = 7)
+//	public void MoveToBag() throws InterruptedException {
+//		objHomePageObjects.clickOnBagIcon();
+//	}
+//
+//	@Test(priority = 8)
+//	public void SelectSize_Qty() throws InterruptedException {
+//		objBagPageObjects.changeSize();
+//		objBagPageObjects.assertBagPageTitle("Bag");
+//		objBagPageObjects.VerifyProductTitle();
+//		objBagPageObjects.getProductImage();
+//		objBagPageObjects.VerfiyProductIsAddedToCart();
+//		objBagPageObjects.VerifySellingPrice();
+//	}
+//
+//	@Test(priority = 9)
+//	public void CheckForOffer() throws InterruptedException {
+//		objBagPageObjects.clickOnPlaceOrder();
+//	}
+//
+//	@Test(priority = 10)
+//	public void RemoveExistingAddress() throws InvalidFileFormatException, IOException {
+//		objAddressPageObjects.ClickOnPincodeAddress();
+//		objAddressPageObjects.enterPincone(objAndroidGenericMethods.getValueByKeyWeb(testName, "Pincode"));
+//		objAddressPageObjects.clickOnChoose();
+//		objAddressPageObjects.selectTownLocality(objAndroidGenericMethods.getValueByKeyWeb(testName, "Locality"));
+//		objAddressPageObjects.entername(objAndroidGenericMethods.getValueByKeyWeb(testName, "Name"));
+//		objAndroidGenericMethods.scrollDown(objAddressPageObjects.Address, 20);
+//		objAddressPageObjects.enteraddress(objAndroidGenericMethods.getValueByKeyWeb(testName, "Address"));
+//		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getMobileNumber(), 20);
+//		objAddressPageObjects.enterMobileNumber(objAndroidGenericMethods.getValueByKeyWeb(testName, "MobileNumber"));
+//		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getOfficeCommercial(), 20);
+//		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getopenOnSaturdays(), 20);
+//		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getSaveAddress(), 20);
+//		objAndroidGenericMethods.scrollDown(objEdit_ChangeButtonPageObjects.getEditChangeButton(), -20);
+//		objEdit_ChangeButtonPageObjects.clickOnremoveButton();
+//	}
+//
+//	@Test(priority = 12)
+//	public void LogOut() throws InterruptedException {
+//		Reporter.log("Logout");
+//		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
+//		objHambergerPageObjects.logoutAndVerifySessionId();
+//	}
 
 	@AfterTest
 	public void afterTest() {
