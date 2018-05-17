@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	  <test name="VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD" />
+		</classes>
+	</test>  
+   <test name="VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD" />
+		</classes>
+	</test>   
+</suite>

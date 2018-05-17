@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -15,7 +18,7 @@ public class AssertionPageObject {
 
 	AndroidGenericMethods objAndroidGenericMethods;
 
-	public AssertionPageObject(AndroidDriver<AndroidElement> aDriver) {
+	public AssertionPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}

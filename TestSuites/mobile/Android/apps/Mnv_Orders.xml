@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	<test name="VEGASF_473">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_473" />
+		</classes>
+	</test>
+	<test name="VEGASF_474">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_474" />
+		</classes>
+	</test>
+	<test name="VEGASF_475">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_475" />
+		</classes>
+	</test>
+	<test name="VEGASF_476">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_476" />
+		</classes>
+	</test>
+	<test name="VEGASF_477">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_477" />
+		</classes>
+	</test>
+	<test name="VEGASF_478">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="ZY222ZV2L6" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_478" />
+		</classes>
+	</test>
+	
+</suite>

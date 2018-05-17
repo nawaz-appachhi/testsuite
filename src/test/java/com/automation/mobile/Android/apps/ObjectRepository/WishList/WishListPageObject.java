@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.apps.ObjectRepository.Home.HomePageObject;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -17,7 +19,7 @@ public class WishListPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObject objHomepageObjects;
 
-	public WishListPageObject(AndroidDriver<AndroidElement> aDriver) {
+	public WishListPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObject(aDriver);
@@ -52,7 +54,7 @@ public class WishListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.view.ViewGroup[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
+	@FindBy(xpath = "//*[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
 	public AndroidElement backBtn;
 
 	/**

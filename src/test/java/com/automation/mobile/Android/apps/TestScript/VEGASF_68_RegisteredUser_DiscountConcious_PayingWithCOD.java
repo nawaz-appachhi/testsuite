@@ -1,7 +1,6 @@
 package com.automation.mobile.Android.apps.TestScript;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -10,9 +9,11 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -26,16 +27,14 @@ import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidKeyCode;
 
-public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
+public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD extends BaseAndroidTest {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
 	HomePageObject objHomePageObject;
-	AndroidDriver<AndroidElement> aDriver;
 	MobileDrivers objMobileDrivers;
 	ProductListPageObject objProductListPageObject;
 	AndroidGenericMethods objAndroidGenericMethods;
@@ -43,21 +42,22 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 	CheckOutPageObject objCheckOutPageObject;
 	AddCartPageObject objAddCartPageObject;
 	PaymentPageObject objPaymentPageObject;
-	WishListPageObject objWishListPageObject; 
+	WishListPageObject objWishListPageObject;
+	String testName = "VEGASF_68";
 
-
-	String testName = "VEGASF_68"; 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("LoginInApp");
 		objLoginPageObject.clickFirstLogin();
-		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
+		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
+				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		wd.navigate().back();
 	}
+
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
@@ -65,12 +65,13 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objWishListPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
 	}
+
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
+		
 	}
 
 	@Test(priority = 4)
@@ -80,7 +81,7 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.assertProductDiscount();
 	}
-  
+
 	@Test(priority = 5)
 	public void AddProductToBag() throws InterruptedException {
 		Reporter.log("Add Product to Cart");
@@ -104,7 +105,7 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		Reporter.log("PLACEORDER");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
-		objAddCartPageObject.verifyWishlistIcon(); 
+		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
 	}
 
@@ -114,13 +115,11 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
-		
 	}
-		
 
-		@Test(priority = 10)
-		public void PaymnetWithCOD() throws InterruptedException, InvalidFileFormatException, IOException {
-			Reporter.log("Add Adderess");	
+	@Test(priority = 10)
+	public void PaymnetWithCOD() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("Add Adderess");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
@@ -128,36 +127,58 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 			Reporter.log("COD Option is not enabled for the that amoutn");
 		}
 	}
-	
-	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
+
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
-		objAppiumServer = new AppiumServer();  
+		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
 		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
-        params.put("deviceName_", deviceName_);
-        params.put("UDID_", UDID_);
-        params.put("platformVersion_", platformVersion_);
-        params.put("URL_", URL_);
-        params.put("appUrl_", appUrl_);
-        params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		params.put("deviceName_", deviceName_);
+		params.put("UDID_", UDID_);
+		params.put("platformVersion_", platformVersion_);
+		params.put("URL_", URL_);
+		params.put("appUrl_", appUrl_);
+		params.put("screenshotPath_", screenshotPath_);
+		params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD"))) {
+			wd = objMobileDrivers.launchAppAndroid(params);
+		} else {
+			try {
+				setUpTest();
+				System.out.println("TestDroid Execution Started");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error :: Please change suite parameter to run locally.");
+			}
+		}
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Page object object creation used for the tests
-		objLoginPageObject = new LoginPageObject(aDriver);
-		objHomePageObject = new HomePageObject(aDriver);
-		objProductListPageObject = new ProductListPageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
-		objCheckOutPageObject = new CheckOutPageObject(aDriver);
-		objAddCartPageObject = new AddCartPageObject(aDriver);
-		objPaymentPageObject = new PaymentPageObject(aDriver);
-		objWishListPageObject = new WishListPageObject(aDriver); 
-	}
-	@AfterTest
-	public void quit() {
-		aDriver.quit();
+		objLoginPageObject = new LoginPageObject(wd);
+		objHomePageObject = new HomePageObject(wd);
+		objProductListPageObject = new ProductListPageObject(wd);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
+		objCheckOutPageObject = new CheckOutPageObject(wd);
+		objAddCartPageObject = new AddCartPageObject(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objWishListPageObject = new WishListPageObject(wd);
 	}
 
+	@AfterTest
+	public void quit() {
+		try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
+	}
 }

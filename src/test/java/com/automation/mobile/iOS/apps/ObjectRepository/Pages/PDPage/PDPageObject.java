@@ -17,6 +17,7 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
@@ -28,11 +29,11 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class PDPageObject {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	public WebDriverWait wait;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public PDPageObject(IOSDriver<IOSElement> iDriver) {
+	public PDPageObject(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -391,7 +392,7 @@ public class PDPageObject {
 
 			if (getSizeChartBackButton().isDisplayed()) {
 				System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());
-				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(), "SSize Chart Back Button");
+				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(), "Size Chart Back Button");
 			}
 		} catch (Exception e) {
 			System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());

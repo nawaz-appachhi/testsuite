@@ -13,6 +13,7 @@ import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects.HomePageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects.MenuPageObjects;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -27,14 +28,15 @@ public class WishListPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObjects objHomepageObjects;
 	MenuPageObjects objMenupageObjects;
-	AndroidDriver<AndroidElement> aDriver;
+	AppiumDriver<MobileElement> aDriver;
 
-	public WishListPageObject(AndroidDriver<AndroidElement> aDriver) {
+	public WishListPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
-		this.aDriver = aDriver;
+
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObjects(aDriver);
-		objMenupageObjects = new MenuPageObjects(aDriver);
+		objMenupageObjects = new MenuPageObjects(aDriver);		
+		this.aDriver = aDriver;
 	}
 
 	@FindBy(linkText = "MOVE TO BAG")

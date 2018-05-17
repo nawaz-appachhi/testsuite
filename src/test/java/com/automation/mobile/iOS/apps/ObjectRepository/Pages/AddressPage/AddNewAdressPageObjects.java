@@ -4,6 +4,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -11,10 +14,10 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class AddNewAdressPageObjects {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public AddNewAdressPageObjects(IOSDriver<IOSElement> iDriver) {
+	public AddNewAdressPageObjects(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -250,9 +253,9 @@ public class AddNewAdressPageObjects {
 	public void EnterContinueOrderAddingAddress(String pincode, String locality, String name, String address,
 			String mobile) throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-			if (getPincodeAddressTxt().isDisplayed()) {
+//			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
 				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
@@ -273,7 +276,7 @@ public class AddNewAdressPageObjects {
 					objiOSGenericMethods.clickOnIOSElement(getHomeBtn(), "Home");
 				}
 				clickOnSaveAddressBtn();
-			}
+//			}
 		} catch (Exception e) {
 		}
 	}
@@ -292,9 +295,9 @@ public class AddNewAdressPageObjects {
 
 			String mobile) throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-			if (getPincodeAddressTxt().isDisplayed()) {
+//			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
 				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
@@ -321,7 +324,7 @@ public class AddNewAdressPageObjects {
 					objiOSGenericMethods.clickOnIOSElement(getSaveAddressBtn(), "Save Address");
 				}
 
-			}
+//			}
 
 		} catch (
 

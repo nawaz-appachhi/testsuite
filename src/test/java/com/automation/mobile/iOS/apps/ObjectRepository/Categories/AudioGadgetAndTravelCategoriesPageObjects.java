@@ -4,6 +4,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -13,7 +15,7 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class AudioGadgetAndTravelCategoriesPageObjects {
 	iOSGenericMethods objiOSGenericMethods;
 	
-	public AudioGadgetAndTravelCategoriesPageObjects(IOSDriver<IOSElement> iDriver) {
+	public AudioGadgetAndTravelCategoriesPageObjects(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		
 	}
@@ -29,7 +31,7 @@ public class AudioGadgetAndTravelCategoriesPageObjects {
 	public IOSElement audioHeadphones;
 	@iOSFindBy(accessibility = "Speakers")
 	public IOSElement audioSpeakers;
-	@iOSFindBy(accessibility = "Explore Travel Store ")
+	@iOSFindBy(accessibility = "Explore Travel Store ï�¸")
 	public IOSElement audioExploreTravelStore;
 	@iOSFindBy(accessibility = "Women")
 	public IOSElement audioExploreTravelStoreWomen;

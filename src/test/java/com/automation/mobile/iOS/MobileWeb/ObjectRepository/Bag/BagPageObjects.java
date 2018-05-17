@@ -12,6 +12,7 @@ import org.testng.Reporter;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.*;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.ios.IOSDriver;
@@ -20,11 +21,11 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class BagPageObjects {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	HomePageObjects objHomePageObjects;
 
-	public BagPageObjects(IOSDriver<IOSElement> iDriver) {
+	public BagPageObjects(AppiumDriver<MobileElement>  iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 		objHomePageObjects = new HomePageObjects(iDriver);
@@ -529,8 +530,8 @@ public class BagPageObjects {
 
 			if (getmyntraLogo().isDisplayed()) {
 				objiOSGenericMethods.click(getmyntraLogo());
-				objiOSGenericMethods.clickOnIOSElement(getmyntraLogo(),
-				 "clicked on Myntra Logo.");
+				// objiOSGenericMethods.clickOnIOSElement(getmyntraLogo(),
+				// "clicked on Myntra Logo.");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -734,8 +735,8 @@ public class BagPageObjects {
 		int s = quantityList.size();
 		System.out.println("size is:" + s);
 		IOSElement selectQuantity =
-				iDriver.findElement(By.xpath("(//div[@class='quantity']/button)[" +
-						(s - 1) + "]"));
+				(IOSElement) iDriver.findElement(By.xpath("(//div[@class='quantity']/button)[" +
+				(s - 1) + "]"));
 		selectQuantity.click();
 		String selectedSize = selectQuantity.getText();
 
@@ -758,7 +759,7 @@ public class BagPageObjects {
 		for (int i = 0; i <= links.size(); i++) {
 			objiOSGenericMethods.click(getRemovelink());
 			objiOSGenericMethods.click(getMoveToWishlistPopup());
-			objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
+			//objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
 		}
 		objiOSGenericMethods.waitDriver(getmyntraLogo(), "Myntra Logo");
 		clickOnMyntraLogo();

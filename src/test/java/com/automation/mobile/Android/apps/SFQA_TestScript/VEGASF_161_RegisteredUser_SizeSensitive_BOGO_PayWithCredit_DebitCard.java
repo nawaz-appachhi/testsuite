@@ -10,9 +10,11 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -27,6 +29,7 @@ import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -41,13 +44,13 @@ import io.appium.java_client.android.AndroidKeyCode;
 //Buy One get One	
 //View Details
 //Credit/Debit Card 
-public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCard {
+public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCard extends BaseAndroidTest{
 	AndroidElement SizeChartbtn = null;
 	GlobalVariables objGlobalVariables; 
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
 	HamburgerPageObject objHamburgerPageObject;
-	AndroidDriver<AndroidElement> aDriver;
+	
 	MobileDrivers objMobileDrivers;
 	HomePageObject objHomePageObject;
 	ProductListPageObject objProductListPageObject;
@@ -69,7 +72,7 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		wd.navigate().back();
 	}
 	
 	@Test(priority = 2)
@@ -84,8 +87,8 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("Search Test case Started Successfully");
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
+		
 	}
 
 	@Test(priority = 4)
@@ -109,7 +112,7 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
 		//objAddCartPageObject.clickViewDetails();
-		//objAndroidGenericMethods.scrollToText(aDriver, "PRICE DETAILS");
+		//objAndroidGenericMethods.scrollToText(wd, "PRICE DETAILS");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
@@ -117,9 +120,13 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
-	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
@@ -131,24 +138,46 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+        {
+        		wd = objMobileDrivers.launchAppAndroid(params);
+        }
+        else
+        {
+        		try {
+					setUpTest();
+					System.out.println("TestDroid Execution Started");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					System.out.println("Error :: Please change suite parameter to run locally.");
+				}
+        		
+        }
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Make sure that Page object object creation should be after this line
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		objLoginPageObject = new LoginPageObject(aDriver);
-		objHamburgerPageObject = new HamburgerPageObject(aDriver);
-		objHomePageObject = new HomePageObject(aDriver);
-		objProductListPageObject = new ProductListPageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
-		objWishListPageObject = new WishListPageObject(aDriver);
-		objAddCartPageObject = new AddCartPageObject(aDriver);
-		objCheckOutPageObject = new CheckOutPageObject(aDriver);
-		objPaymentPageObject = new PaymentPageObject(aDriver);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		objLoginPageObject = new LoginPageObject(wd);
+		objHamburgerPageObject = new HamburgerPageObject(wd);
+		objHomePageObject = new HomePageObject(wd);
+		objProductListPageObject = new ProductListPageObject(wd);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
+		objWishListPageObject = new WishListPageObject(wd);
+		objAddCartPageObject = new AddCartPageObject(wd);
+		objCheckOutPageObject = new CheckOutPageObject(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
 	}
 	@AfterTest
 	public void quit() {
-		aDriver.quit();
+		try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
 		System.out.println("=====================VEGASF_161_END=====================");
 
 	}

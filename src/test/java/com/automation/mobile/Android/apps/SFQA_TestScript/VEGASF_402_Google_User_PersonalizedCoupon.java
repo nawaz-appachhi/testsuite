@@ -8,8 +8,11 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -22,6 +25,8 @@ import com.automation.mobile.Android.apps.ObjectRepository.PLP.ProductListPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
+
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -43,13 +48,13 @@ Apply Personalized Coupons
 Add New address - Office
 */
 
-public class VEGASF_402_Google_User_PersonalizedCoupon { 
+public class VEGASF_402_Google_User_PersonalizedCoupon extends BaseAndroidTest{ 
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
 	HomePageObject objHomePageObject;
-	AndroidDriver<AndroidElement> aDriver;
+	
 	MobileDrivers objMobileDrivers;
 	ProductListPageObject objProductListPage;
 	WishListPageObject objWishlistPageObject;
@@ -79,7 +84,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 		objLoginPageObject.clickpopUp(); 
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId(); 
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		wd.navigate().back();
 	}
 	
 	@Test(priority = 2)
@@ -94,8 +99,8 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("SearchItem Test case Started Successfully");
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
+		
 	}
 	
 	@Test(priority = 4)
@@ -135,10 +140,13 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 		objCheckOutPageObject.clickContinue();
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
-			String screenshotPath_) throws InterruptedException, MalformedURLException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
@@ -151,24 +159,46 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
+		 params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+        {
+        		wd = objMobileDrivers.launchAppAndroid(params);
+        }
+        else
+        {
+        		try {
+					setUpTest();
+					System.out.println("TestDroid Execution Started");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					System.out.println("Error :: Please change suite parameter to run locally.");
+				}
+        		
+        }
 		Reporter.log("AppLaunch Successfully");
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// objects are created
-		objLoginPageObject = new LoginPageObject(aDriver);
-		objHomePageObject = new HomePageObject(aDriver);
-		objProductListPageObject = new ProductListPageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
-		objCheckOutPageObject = new CheckOutPageObject(aDriver);
-		objAddCartPageObject = new AddCartPageObject(aDriver);
-		objWishlistPageObject = new WishListPageObject(aDriver);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		objPaymentPageObject= new PaymentPageObject(aDriver);
+		objLoginPageObject = new LoginPageObject(wd);
+		objHomePageObject = new HomePageObject(wd);
+		objProductListPageObject = new ProductListPageObject(wd);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
+		objCheckOutPageObject = new CheckOutPageObject(wd);
+		objAddCartPageObject = new AddCartPageObject(wd);
+		objWishlistPageObject = new WishListPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		objPaymentPageObject= new PaymentPageObject(wd);
 
 	}
 	@AfterTest
 	public void quit() {
-	aDriver.quit();
+	try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
 	System.out.println("=====================VEGASF_402_END=====================");
 
 	}

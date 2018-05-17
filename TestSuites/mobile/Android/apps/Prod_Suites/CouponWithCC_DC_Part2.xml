@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+   <test name="VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWithCredit_DebitCard2">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWithCredit_DebitCard2" />
+		</classes>
+	</test>   
+	 	<test name="VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2" />
+		</classes>
+	</test>   
+	<test name="VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD" />
+		</classes>
+	</test>
+	<test name="VEGASF_399_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalizedCoupons_AddNewAddress_PayWithCC2">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_399_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalizedCoupons_AddNewAddress_PayWithCC2" />
+		</classes>
+	</test>    
+</suite>

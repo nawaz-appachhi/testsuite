@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+  <test name="VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD" />
+		</classes>
+	</test> 
+	 <test name="VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_ClickforOffer_AddNewAddress_Office_PayWithCoD2">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_ClickforOffer_AddNewAddress_Office_PayWithCoD2" />
+		</classes>
+	</test> 
+	 <test name="VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_EditAddress_PayWithCredit_DebitCard2">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_EditAddress_PayWithCredit_DebitCard2" />
+		</classes>
+	</test>   
+</suite>

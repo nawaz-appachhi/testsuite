@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -23,12 +24,12 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class ProductListPageObject {
 	AndroidElement productElement = null;
 	AndroidGenericMethods objAndroidGenericMethods;
-	AndroidDriver<AndroidElement> aDriver;
+	AppiumDriver<MobileElement> aDriver;
 
-	public ProductListPageObject(AndroidDriver<AndroidElement> aDriver) {
-		this.aDriver = aDriver;
+	public ProductListPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		this.aDriver = aDriver;
 	}
 
 	/**
@@ -69,7 +70,6 @@ public class ProductListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	//@FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.myntra.android:id/ll_product_list_bottombar']/android.widget.LinearLayout/android.widget.LinearLayout")
 	@FindBy(xpath="//android.widget.ImageView[@resource-id='com.myntra.android:id/iv_product_list_sort_icon']")
 	public AndroidElement sortButton;
 
@@ -193,7 +193,7 @@ public class ProductListPageObject {
 	@FindBy(id = "com.myntra.android:id/iv_search_list")
 	public AndroidElement selectSimilarProduct;
 
-	@FindBy(xpath = "//android.view.ViewGroup[@index='9']/android.widget.ImageView")
+	@FindBy(id = "com.myntra.android:id/wishlist_hero")
 	public AndroidElement RHwishlistbtn;
 	/**
 	 * Objects identified for the sort radio button displayed in sort page;

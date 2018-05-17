@@ -1,16 +1,20 @@
 package com.automation.mobile.Android.apps.TestScript;
 
-import org.testng.annotations.Test;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
 import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -23,20 +27,19 @@ import com.automation.mobile.Android.apps.ObjectRepository.PLP.ProductListPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidKeyCode;
 
 /**
  * @author 300019225-Amba Jha
  *
  */
-public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
+public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC extends BaseAndroidTest {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
 	HomePageObject objHomePageObject;
-	AndroidDriver<AndroidElement> aDriver;
 	MobileDrivers objMobileDrivers;
 	ProductListPageObject objProductListPage;
 	WishListPageObject objWishlistPageObject;
@@ -47,12 +50,10 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	AndroidGenericMethods objAndroidGenericMethods;
 	PaymentPageObject objPaymentPageObject;
 	WishListPageObject objWishListPageObject;
-
 	String testName = "VEGASF_64";
-  
+
 	@Test(priority = 1)
 	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
-	
 		System.out.println("=====================VEGASF_64_START=====================");
 		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
@@ -62,14 +63,14 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		wd.navigate().back();
 	}
 
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		//objWishListPageObject.resetWishlist();
+		// objWishListPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
 	}
 
@@ -78,10 +79,10 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		Reporter.log("SearchItem");
 		objHomePageObject.verifyBigBannerView();
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
+		
 	}
-	
+
 	@Test(priority = 4)
 	public void SaveProduct() throws Exception {
 		Reporter.log("SaveProduct");
@@ -104,19 +105,22 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	@Test(priority = 6)
 	public void ApplyPersonalizedCoupon() throws Exception {
 		Reporter.log("ApplyPersonalizedCoupon");
-		//objProductListPageObject.clickOkButton();
+		// objProductListPageObject.clickOkButton();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
 		objAddCartPageObject.ClickCouponCancelbtn(); // applycoupon need to apply
 	}
+
 	@Test(priority = 7)
 	public void GiftWrap() throws Exception {
 		Reporter.log("Gift wrap");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getGiftWrapbtn(), 50);
-		objAddCartPageObject.GiftCardtxt(AndroidGenericMethods.getValueByKey("OBJECTREPO", "RecipientName"),AndroidGenericMethods.getValueByKey("OBJECTREPO", "GiftMessage"),AndroidGenericMethods.getValueByKey("OBJECTREPO", "SenderName"));
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		objAddCartPageObject.GiftCardtxt(AndroidGenericMethods.getValueByKey("OBJECTREPO", "RecipientName"),
+				AndroidGenericMethods.getValueByKey("OBJECTREPO", "GiftMessage"),
+				AndroidGenericMethods.getValueByKey("OBJECTREPO", "SenderName"));
+		wd.navigate().back();
 		objAddCartPageObject.SaveGiftcard();
 	}
-	
+
 	@Test(priority = 8)
 	public void ViewDetail() throws Exception {
 		Reporter.log("ViewDetail");
@@ -134,10 +138,13 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
-			String screenshotPath_) throws InterruptedException, MalformedURLException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -148,28 +155,43 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
+		params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD"))) {
+			wd = objMobileDrivers.launchAppAndroid(params);
+		} else {
+			try {
+				setUpTest();
+				System.out.println("TestDroid Execution Started");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error :: Please change suite parameter to run locally.");
+			}
+		}
 		Reporter.log("AppLaunch Successfully");
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// objects are created
-		objLoginPageObject = new LoginPageObject(aDriver);
-		objHomePageObject = new HomePageObject(aDriver);
-		objProductListPageObject = new ProductListPageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
-		objCheckOutPageObject = new CheckOutPageObject(aDriver);
-		objAddCartPageObject = new AddCartPageObject(aDriver);
-		objWishlistPageObject = new WishListPageObject(aDriver);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		objPaymentPageObject = new PaymentPageObject(aDriver);
-		objWishlistPageObject= new WishListPageObject(aDriver);
-
+		objLoginPageObject = new LoginPageObject(wd);
+		objHomePageObject = new HomePageObject(wd);
+		objProductListPageObject = new ProductListPageObject(wd);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
+		objCheckOutPageObject = new CheckOutPageObject(wd);
+		objAddCartPageObject = new AddCartPageObject(wd);
+		objWishlistPageObject = new WishListPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objWishlistPageObject = new WishListPageObject(wd);
 	}
 
 	@AfterTest
 	public void quit() {
-		aDriver.quit();
+		try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
 		System.out.println("=====================VEGASF_64_END=====================");
-
 	}
-
 }

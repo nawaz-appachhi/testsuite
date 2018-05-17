@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+   <test name="VEGASF_402_Google_User_PersonalizedCoupon">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_402_Google_User_PersonalizedCoupon" />
+		</classes>
+	</test>
+	  <test name="VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO" />
+		</classes>
+	</test>  
+<!-- 	<test name="VEGASF_386_Google_User_AddQTY_PersonalizedCoupon"> -->
+<!-- 		<parameter name="deviceName_" value="One Plus one" /> -->
+<!-- 		<parameter name="UDID_" value="0a9f7bf7029b39cf" /> -->
+<!-- 		<parameter name="platformVersion_" value="6.0.1" /> -->
+<!-- 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" /> -->
+<!-- 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" /> -->
+<!-- 		<parameter name="screenshotPath_" value="" /> -->
+<!-- 		<parameter name="engine_" value="TD" />  engine_ values ::::::  TD/local -->
+<!-- 		<parameter name="platform_" value="ANDROID" /> platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_386_Google_User_AddQTY_PersonalizedCoupon" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+<!-- 	<test name="VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount"> -->
+<!-- 		<parameter name="deviceName_" value="One Plus one" /> -->
+<!-- 		<parameter name="UDID_" value="0a9f7bf7029b39cf" /> -->
+<!-- 		<parameter name="platformVersion_" value="6.0.1" /> -->
+<!-- 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" /> -->
+<!-- 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" /> -->
+<!-- 		<parameter name="screenshotPath_" value="" /> -->
+<!-- 		<parameter name="engine_" value="TD" />  engine_ values ::::::  TD/local -->
+<!-- 		<parameter name="platform_" value="ANDROID" /> platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount" /> -->
+<!-- 		</classes> -->
+<!-- 	</test>    -->
+</suite>

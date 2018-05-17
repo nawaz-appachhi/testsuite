@@ -3,13 +3,15 @@ package com.automation.mobile.Android.apps.ObjectRepository.Payment;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 
 	public class NetBankingPageObject {
-		public NetBankingPageObject(AndroidDriver<AndroidElement> aDriver) {
+		public NetBankingPageObject(AppiumDriver<MobileElement> aDriver) {
 			PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		}
 		/**
@@ -18,21 +20,21 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 		 * old xpath ://android.view.View[@resource-id='tab_net_banking' ]
 		 */
 
-		@FindBy(xpath = "//android.view.View[@text ='SELECTNet Banking' or @resource-id='tab_net_banking' or @index='1']")
+		@FindBy(xpath = "//*[@text ='SELECTNet Banking' or @resource-id='tab_net_banking' or @index='1']")
 		public AndroidElement NetBanking;
-		@FindBy(xpath = "//android.view.View[@index='1' and @content-desc='Axis']")
+		@FindBy(xpath = "//*[@index='1' and @content-desc='Axis']")
 		public AndroidElement AxisBank;
-		@FindBy(xpath = "//android.view.View[@index='3' and @content-desc='Citi']")
+		@FindBy(xpath = "//*[@index='3' and @content-desc='Citi']")
 		public AndroidElement CitiBank;
-		@FindBy(xpath = "//android.view.View[@index='5' and @content-desc='HDFC']")
+		@FindBy(xpath = "//*[@index='5' and @content-desc='HDFC']")
 		public AndroidElement HDFC;
-		@FindBy(xpath = "//android.view.View[@index='7' and @content-desc='ICICI']")
+		@FindBy(xpath = "//*[@index='7' and @content-desc='ICICI']")
 		public AndroidElement ICICI;
-		@FindBy(xpath = "//android.view.View[@index='9' and @content-desc='Kotak']")
+		@FindBy(xpath = "//*[@index='9' and @content-desc='Kotak']")
 		public AndroidElement Kotak;
-		@FindBy(xpath = "//android.view.View[@index='11' and @content-desc='SBI']")
+		@FindBy(xpath = "//*[@index='11' and @content-desc='SBI']")
 		public AndroidElement SBI;
-		@FindBy(xpath = "android.widget.Button[@index='1'and @content-desc='PAY NOW']")
+		@FindBy(xpath = "//android.widget.Button[@index='1'and @content-desc='PAY NOW']")
 		public AndroidElement PayNow;
 
 		public AndroidElement getNetBanking() {

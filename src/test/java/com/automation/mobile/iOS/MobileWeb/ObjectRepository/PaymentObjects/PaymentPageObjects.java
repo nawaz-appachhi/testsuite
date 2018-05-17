@@ -5,16 +5,18 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class PaymentPageObjects {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement>  iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public PaymentPageObjects(IOSDriver<IOSElement> iDriver) {
+	public PaymentPageObjects(AppiumDriver<MobileElement>  iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -290,11 +292,7 @@ public class PaymentPageObjects {
 	}
 
 	public void ClickOnCOD() {
-        try {
 		objiOSGenericMethods.clickOnIOSElement(getCOD(), "COD");
-        } catch (Exception e) {
-            System.out.println("This product is not eligible for COD!");
-        }
 	}
 
 	public void clickOnChangePaymentMode() {
@@ -333,12 +331,8 @@ public class PaymentPageObjects {
 	}
 
 	public void clickOnCCandDC() {
-          try {
 		objiOSGenericMethods.waitDriver(getCCandDC(), "Credit card");
 		objiOSGenericMethods.clickOnIOSElement(getCCandDC(), "creditCard/debitCard");
-        } catch (Exception e) {
-              System.out.println("This product is not eligible for CC DC!");
-          }
 	}
 	
 	public void clickFirstNetbankingOption(){

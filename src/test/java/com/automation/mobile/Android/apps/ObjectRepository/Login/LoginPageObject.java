@@ -8,14 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
-import io.appium.java_client.android.AndroidDriver;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LoginPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
 
-	public LoginPageObject(AndroidDriver<AndroidElement> aDriver) {
+	public LoginPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}
@@ -28,14 +30,14 @@ public class LoginPageObject {
 
 	/**
 	 * Name: Vinay Description: this xapth help to click on "Hamburger" on
-	 * homescreen modified by Rakesh Reason: To avoid using the symbol in xpath
-	 * past xpath://android.widget.TextView[@text='']
+	 * homescreen 
 	 */
-	// @FindBy(xpath = "//android.widget.TextView[@text='']")
-	@FindBy(xpath = "//android.view.ViewGroup[@index='2']/android.view.ViewGroup/android.widget.TextView")
+	@FindBy(xpath = "//*[@content-desc='leftElement']")
 	public AndroidElement hamburgerbtn;
-	@FindBy(xpath = "//*[@index='3'][@class='android.widget.TextView']")
-	public AndroidElement loginAndSignUpButtonbtn;
+	
+	
+	
+	
 	/**
 	 * Name: Vinay Description: This xpath help to click "Login" buttin on
 	 * Launching screen.
@@ -213,11 +215,6 @@ public class LoginPageObject {
 		return hamburgerbtn;
 	}
 
-	public AndroidElement getLoginAndSignUpButtonbtn() {
-		objAndroidGenericMethods.CheckAndroidElementFound(loginAndSignUpButtonbtn, "loginAndSignUpButtonbtn");
-
-		return loginAndSignUpButtonbtn;
-	}
 
 	public AndroidElement getFirstloginbtn() {
 		objAndroidGenericMethods.CheckAndroidElementFound(firstloginbtn, "firstloginbtn");
@@ -377,11 +374,7 @@ public class LoginPageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(getHamburgerbtn(), "clicked on hamburgerbtn");
 	}
 
-	public void clickloginAndSignUpButton() {
-		objAndroidGenericMethods.clickOnAndroidElement(getLoginAndSignUpButtonbtn(),
-				"clicked on loginAndSignUpButtonbtn");
-
-	}
+	
 
 	public void clickOnContactUs() {
 		objAndroidGenericMethods.clickOnAndroidElement(getContactUs(), "ContactUs clicked");
@@ -389,13 +382,6 @@ public class LoginPageObject {
 
 	public void clickOnContactCancelButton() {
 		objAndroidGenericMethods.CheckAndroidElementFound(getContactUsCancelButton(), "Cancel button clicked");
-	}
-
-	@FindBy(xpath = "//android.view.ViewGroup[@index='9' and @bounds ='[962,74][1080,200]']")
-	public AndroidElement sideimage;
-
-	public void clickSideImage() {
-		sideimage.click();
 	}
 
 	/****************************** Assertions ******************************************/
@@ -461,11 +447,11 @@ public class LoginPageObject {
 
 	public AndroidElement PasswordNextButton1;
 
-	@FindBy(xpath = "//android.view.View[@text='NEXT' or resource-id='passwordNext']")
+	@FindBy(xpath = "//*[@text='NEXT' or resource-id='passwordNext']")
 
 	public AndroidElement PasswordNextButton2;
 
-	@FindBy(xpath = "//android.view.View[@text='NEXT' or resource-id='identifierNext']")
+	@FindBy(xpath = "//*[@text='NEXT' or resource-id='identifierNext']")
 
 	public AndroidElement EmailNextButton2;
 
@@ -478,7 +464,7 @@ public class LoginPageObject {
 	 * @param Accept button
 	 */
 
-	@FindBy(xpath = "//android.view.View[@text='ACCEPT' or resource-id='next']")
+	@FindBy(xpath = "//*[@text='ACCEPT' or resource-id='next']")
 	public AndroidElement AcceptButton;
 
 	/**

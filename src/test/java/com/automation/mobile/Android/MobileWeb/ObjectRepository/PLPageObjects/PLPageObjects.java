@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSElement;
@@ -19,7 +22,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class PLPageObjects {
 
 	AndroidGenericMethods objAndroidGenericMethods;
-	public PLPageObjects(AndroidDriver<AndroidElement> aDriver) {
+	public PLPageObjects(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}

@@ -7,6 +7,8 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -15,9 +17,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class PaymentPageObject {
 	iOSGenericMethods objiOSGenericMethods;
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 
-	public PaymentPageObject(IOSDriver<IOSElement> iDriver) {
+	public PaymentPageObject(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}

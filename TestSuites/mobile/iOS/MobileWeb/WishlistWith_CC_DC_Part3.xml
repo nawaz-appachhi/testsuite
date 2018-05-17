@@ -12,6 +12,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_417_Google_User_Sort_ClickforBestPrice_EmptyWishlist_PercentageDiscount_EditAddress_PayWithCC" />
 		</classes>
@@ -24,6 +26,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_425_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD" />
 		</classes>
