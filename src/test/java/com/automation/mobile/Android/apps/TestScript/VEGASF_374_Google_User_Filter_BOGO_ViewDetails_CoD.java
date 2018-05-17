@@ -27,15 +27,6 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 /**
  * @author 300019225-Amba Jha
- * Google registered user - Login Home 
- * Page Search (by clicking banner or nested banner on Home Page) 
- * Filter Products
- * Add to bag 
- * View Size Chart
- * Contact Us Buy One get One
- * View Details 
- * Payment : Online + LP
- * Pending LP
  */
 public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 	GlobalVariables objGlobalVariables;
@@ -116,8 +107,8 @@ public class VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD {
 	}
 
 	@Test(priority = 7)
-	public void PaymentWithcOD() throws InterruptedException {
-		Reporter.log("PaymentWithcOD");
+	public void PaymentWithCOD() throws InterruptedException {
+		Reporter.log("PaymentWithCOD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

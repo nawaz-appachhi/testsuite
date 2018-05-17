@@ -30,7 +30,7 @@ public class EditAdressPageObject {
 
 	@iOSFindBy(accessibility = "Edit/Change (2)")
 	public IOSElement editAddressTxt2;
-	
+
 	@iOSFindBy(accessibility = "Edit/Change (3)")
 	public IOSElement editAddressTxt3;
 
@@ -92,27 +92,36 @@ public class EditAdressPageObject {
 		return confirmBtn;
 	}
 
+	/**
+	 * @author 300021275 - Lata
+	 * @return
+	 */
+	public IOSElement getEditAddressTxt2() {
+		objiOSGenericMethods.CheckIOSElementFound(editAddressTxt2, "editAddressTxt2");
+		return editAddressTxt2;
+	}
+
 	/************* methods **********/
 
 	public void clickOnEditAddress() {
 		try {
-			if (editAddressTxt.isDisplayed()) {
-				editAddressTxt.click();
+			if (getEditAddressTxt().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getEditAddressTxt(), "Edit button");
 				System.out.println("User is has clicked on edit address!");
 			}
 		} catch (Exception e) {
-			if (editAddressTxt2.isDisplayed()) {
-				editAddressTxt2.click();
+			if (getEditAddressTxt2().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getEditAddressTxt2(), "Edit button");
 				System.out.println("User is has clicked on edit address!");
-			} 
+			}
 		}
 
 	}
 
 	public void clickOnEditButton() {
-		if (getEditButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getEditButton(), "edit button click succesfully");
-		}
+		// if (getEditButton().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getEditButton(), "edit button click succesfully");
+		// }
 	}
 
 	public void clickOnSaveAdressBtn() {
@@ -130,48 +139,46 @@ public class EditAdressPageObject {
 		objiOSGenericMethods.clickOnIOSElement(getEditAddressEditTxt(), "editAddressEditTxt button click succesfully");
 	}
 
-
 	public IOSElement getRemoveAddressButton() {
 		objiOSGenericMethods.CheckIOSElementFound(removeAddressButton, "editButton");
 		return removeAddressButton;
 	}
-	
+
 	/**
-	 * @author 300019221 
-	 * Replaced thread.sleep with webdriver wait
+	 * @author 300019221 Replaced thread.sleep with webdriver wait
 	 * @throws InterruptedException
 	 */
 
 	public void clickOnRemoveAddressBtn() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(removeAddressButton);
-		try {
-			if (removeAddressButton.isDisplayed()) {
-				System.out.println("Remove button is displayed!");
-				Reporter.log("Remove button is displayed!");
-				objiOSGenericMethods.clickOnIOSElement(getRemoveAddressButton(), "Remove button click succesfully");
-			}
-		} catch (Exception e) {
-			System.out.println("Remove button is not displayed!");
-			Reporter.log("Remove button is not displayed!");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(removeAddressButton);
+		// try {
+		// if (removeAddressButton.isDisplayed()) {
+		// System.out.println("Remove button is displayed!");
+		// Reporter.log("Remove button is displayed!");
+		objiOSGenericMethods.clickOnIOSElement(getRemoveAddressButton(), "Remove Button");
+		// }
+		// } catch (Exception e) {
+		// System.out.println("Remove button is not displayed!");
+		// Reporter.log("Remove button is not displayed!");
+		// }
 
 	}
-/**
- * @author 300019221 
- * Replaced thread.sleep with webdriver wait
- * @throws InterruptedException
- */
-	public void clickOnConfirmBtn() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(confirmBtn);
-		try {
-			if (confirmBtn.isDisplayed()) {
-				System.out.println("confirm button is displayed!");
-				objiOSGenericMethods.clickOnIOSElement(getConfirmBtn(), "confirm button click succesfully");
-			}
-		} catch (Exception e) {
-			System.out.println("confirm button is not displayed!");
-			Reporter.log("confirm button is not displayed!");
-		}
 
+	/**
+	 * @author 300019221 Replaced thread.sleep with webdriver wait
+	 * @throws InterruptedException
+	 */
+	public void clickOnConfirmBtn() throws InterruptedException {
+		// objiOSGenericMethods.waitForElementVisibility(confirmBtn);
+		// try {
+		// if (confirmBtn.isDisplayed()) {
+		// System.out.println("confirm button is displayed!");
+		objiOSGenericMethods.clickOnIOSElement(getConfirmBtn(), "Confirm Button");
+		// }
+		// } catch (Exception e) {
+		// System.out.println("confirm button is not displayed!");
+		// Reporter.log("confirm button is not displayed!");
+		// }
+		//
 	}
 }

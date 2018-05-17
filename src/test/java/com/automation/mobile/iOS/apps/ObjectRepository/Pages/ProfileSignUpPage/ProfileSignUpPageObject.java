@@ -1,7 +1,6 @@
 
 package com.automation.mobile.iOS.apps.ObjectRepository.Pages.ProfileSignUpPage;
 
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
@@ -115,10 +114,10 @@ public class ProfileSignUpPageObject {
 	 * @author 300021276 object created by - Madhu
 	 * 
 	 */
-	
+
 	@iOSFindBy(accessibility = "SKIP")
 	public IOSElement skipReferralCode;
-	
+
 	/************* getters ************/
 
 	public IOSDriver<IOSElement> getiDriver() {
@@ -199,25 +198,24 @@ public class ProfileSignUpPageObject {
 	 * 
 	 *
 	 */
-	
-	
+
 	public IOSElement getSkipReferralCode() {
 		objiOSGenericMethods.CheckIOSElementFound(skipReferralCode, "skipReferralCode");
 		return skipReferralCode;
 	}
-	
+
 	/************ methods ***********/
 
 	public void clickOnProfileButton() {
-		objiOSGenericMethods.clickOnIOSElement(getProfile(), "Successfully click on profile button");
+		objiOSGenericMethods.clickOnIOSElement(getProfile(), "Profile Button");
 	}
 
 	public void clickOnSignUp() {
-		objiOSGenericMethods.clickOnIOSElement(getSignup(), "Successfully click on signup button");
+		objiOSGenericMethods.clickOnIOSElement(getSignup(), "Signup Button");
 	}
 
 	public void clickOnGenderButton() {
-		objiOSGenericMethods.clickOnIOSElement(getGender(), "Successfully click on gender button");
+		objiOSGenericMethods.clickOnIOSElement(getGender(), "Gender Button");
 	}
 
 	/**
@@ -234,25 +232,25 @@ public class ProfileSignUpPageObject {
 	public void signUpInApp(String mailID, String password, String name, String number) {
 		try {
 
-			if (getEmailField().isDisplayed()) {
-				String newemaild = mailID + objiOSGenericMethods.datetime("ddMMyyyyHHmmss") + "@gmail.com";
-				getEmailField().sendKeys(newemaild);
-				Reporter.log("Email succesfully entered");
-			}
-			if (getPasswordField().isDisplayed()) {
-				getPasswordField().sendKeys(password);
-				Reporter.log("password succesfully entered");
-			}
+			// if (getEmailField().isDisplayed()) {
+			String newemaild = mailID + objiOSGenericMethods.datetime("ddMMyyyyHHmmss") + "@gmail.com";
+			getEmailField().sendKeys(newemaild);
+			Reporter.log("Email succesfully entered");
+			// }
+			// if (getPasswordField().isDisplayed()) {
+			getPasswordField().sendKeys(password);
+			Reporter.log("password succesfully entered");
+			// }
 
-			if (getNameField().isDisplayed()) {
-				getNameField().sendKeys(name);
-				Reporter.log("Name succesfully entered");
-			}
+			// if (getNameField().isDisplayed()) {
+			getNameField().sendKeys(name);
+			Reporter.log("Name succesfully entered");
+			// }
 
-			if (getMobileNumber().isDisplayed()) {
-				getMobileNumber().sendKeys(number);
-				Reporter.log("mobileNumber succesfully entered");
-			}
+			// if (getMobileNumber().isDisplayed()) {
+			getMobileNumber().sendKeys(number);
+			Reporter.log("mobileNumber succesfully entered");
+			// }
 
 			System.out.println("Registration details succesfully entered");
 		} catch (Exception e) {
@@ -261,13 +259,12 @@ public class ProfileSignUpPageObject {
 	}
 
 	public void clickOnCreateAccountButton() {
-		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "Successfully click on createAccount button");
+		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "Create Account Button");
 	}
 
 	public void clicOnNextButton() {
-		objiOSGenericMethods.clickOnIOSElement(getNextButton(), "Successfully click on nextButton button");
+		objiOSGenericMethods.clickOnIOSElement(getNextButton(), "Next Button");
 	}
-
 
 	/**
 	 * @author 300021275 Created by Lata
@@ -276,10 +273,9 @@ public class ProfileSignUpPageObject {
 	 */
 	public void clickOnFemale() {
 		try {
-			if (getGenderFemale().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getGenderFemale(),
-						"Successfully click on ProfileDetails button");
-			}
+			// if (getGenderFemale().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getGenderFemale(), "Female Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("Unable to click on Profile Details!");
 		}
@@ -292,9 +288,9 @@ public class ProfileSignUpPageObject {
 	 */
 	public void clickOnMales() {
 		try {
-			if (getGenderMale().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getGenderMale(), "Successfully click on ProfileDetails button");
-			}
+			// if (getGenderMale().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getGenderMale(), "Male Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("Unable to click on Profile Details!");
 		}
@@ -307,10 +303,9 @@ public class ProfileSignUpPageObject {
 	 */
 	public void clickOnContinueShoppingButton() {
 		try {
-			if (getContinueShoppingButton().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getContinueShoppingButton(),
-						"Successfully click on ProfileDetails button");
-			}
+			// if (getContinueShoppingButton().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getContinueShoppingButton(), "Profile Details Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("Unable to click on Profile Details!");
 		}
@@ -318,12 +313,12 @@ public class ProfileSignUpPageObject {
 
 	public void clickOnSkipReferralCode() {
 		try {
-			if (getSkipReferralCode().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getSkipReferralCode(), "Successfully click on Skip");
-			}
+			// if (getSkipReferralCode().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getSkipReferralCode(), "Skip");
+			// }
 		} catch (Exception e) {
 			System.out.println("Unable to click on Location!");
 		}
 	}
-	
+
 }

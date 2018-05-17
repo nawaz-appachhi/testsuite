@@ -209,6 +209,7 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

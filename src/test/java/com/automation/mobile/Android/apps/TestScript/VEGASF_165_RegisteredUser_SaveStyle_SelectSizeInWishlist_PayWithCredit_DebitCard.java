@@ -21,7 +21,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.Hamburger.HamburgerPa
 import com.automation.mobile.Android.apps.ObjectRepository.Home.HomePageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.Login.LoginPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.PLP.ProductListPageObject;
-import com.automation.mobile.Android.apps.ObjectRepository.Payment.NetBankingPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
@@ -29,17 +28,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPage
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-//App(Android, IOS, PWA, Web App)
-//Email registered User
-//Home Page
-//List page to PDP navigation
-//Save
-//Price
-//Select Size
-//Contact Us
-//Apply Generic Coupons
-//Add New address - Home
-//Net Banking 
 public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCredit_DebitCard {
 	AndroidElement SizeChartbtn;
 	GlobalVariables objGlobalVariables;
@@ -60,8 +48,9 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 
 	String testName = "VEGASF_165"; 
 	@Test(priority = 1)
-	public void LoginInApp() throws Exception {
+	public void LoginInWithEmail() throws Exception {
 		System.out.println("=====================VEGASF_165_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -79,13 +68,15 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 	} 
 	@Test(priority = 3)
 	public void HomePage() throws Exception {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	
 	@Test(priority = 5)
-	public void PDP() throws Exception {
+	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice(); 
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -96,6 +87,7 @@ public class VEGASF_165_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithCre
 	
 	@Test(priority = 6)
 	public void Checkout() throws Exception {
+		Reporter.log("CheckOutPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();

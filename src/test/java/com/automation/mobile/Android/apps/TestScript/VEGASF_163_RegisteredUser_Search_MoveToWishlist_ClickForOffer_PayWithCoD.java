@@ -44,9 +44,9 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 	
 	String testName = "VEGASF_163";
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_163_START=====================");
-		Reporter.log("LoginInApp"); 
+		Reporter.log("LoginInWithEmail"); 
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -103,8 +103,8 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 	}
 	
 	@Test(priority = 7)
-	public void payment() throws InterruptedException {
-		Reporter.log("payment");
+	public void PaymentWithCOD() throws InterruptedException {
+		Reporter.log("PaymentWithCOD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

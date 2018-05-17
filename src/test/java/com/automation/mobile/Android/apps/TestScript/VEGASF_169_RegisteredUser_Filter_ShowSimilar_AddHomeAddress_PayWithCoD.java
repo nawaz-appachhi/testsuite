@@ -30,17 +30,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPage
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-
-//App(Android, IOS, PWA, Web App)
-//Email registered User
-//Home Page
-//List page to PDP navigation	Filter
-//Click for best Price (Coupon)
-//Show Similar
-//Move to wishlist
-//Free Gift
-//Add New address - Home
-//Mynt+ COD
 public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD {
 	AndroidElement SizeChartbtn;
 	GlobalVariables objGlobalVariables;
@@ -61,8 +50,9 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	
 	String testName = "VEGASF_169"; 
 	@Test(priority = 1)
-	public void userLogin() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_169_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -81,7 +71,8 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	}
 
 	@Test(priority = 3)
-	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchProduct");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -89,10 +80,12 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 
 	@Test(priority = 4)
 	public void selectBestPrice() throws InterruptedException {
+		Reporter.log("selectBestPrice");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
+		//As off now least priority feature
 	//	objProductDescriptionPageObject.scrollToBestPriceNClick();
 	//	objAndroidGenericMethods.scrollToText(aDriver, "GO TO BAG");
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -101,6 +94,7 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 
 	@Test(priority = 6)
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
         objAddCartPageObject.clickOnMovetoWishlist();
@@ -119,6 +113,7 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	}
 	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash On Delivery");

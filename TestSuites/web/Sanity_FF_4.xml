@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity_FF_4">
+
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+
+	<test
+		name="VEGASF_134_RegisteredUser_BrandProfile_ShowMoreProducts_PayWithGiftCardAndCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_134_RegisteredUser_BrandProfile_ShowMoreProducts_PayWithGiftCardAndCC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_135_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_135_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD" />
+		</classes>
+	</test>
+
+	<test
+		name="VEGASF_137_RegisteredUser_Search_ConditionalDiscount_PayWithCC - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_137_RegisteredUser_Search_ConditionalDiscount_PayWithCC" />
+		</classes>
+	</test>
+
+	<test name="VEGASF_138_RegisteredUser_SizeSensitive_BOGO_PayWithCoD - Test">
+		<classes>
+			<class
+				name="com.automation.web.TestScripts.VEGASF_138_RegisteredUser_SizeSensitive_BOGO_PayWithCoD" />
+		</classes>
+	</test>
+
+</suite>

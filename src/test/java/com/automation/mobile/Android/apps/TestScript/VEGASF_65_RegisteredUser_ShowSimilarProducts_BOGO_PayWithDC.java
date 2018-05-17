@@ -47,8 +47,9 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 	@Test(priority = 1)
 		
 	public void LoginWithEmaill() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmaill Test case Started Successfully");
+		
 		System.out.println("=====================VEGASF_65_START=====================");
+		Reporter.log("LoginWithEmaill");
 		objLoginPageObject.clickFirstLogin(); 
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -67,7 +68,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException,InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.verifySearchText();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
@@ -76,7 +77,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 
 	@Test(priority = 4)
 	public void SaveProduct() throws Exception {
-		Reporter.log("SaveProduct Test case Started Successfully");
+		Reporter.log("SaveProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -84,7 +85,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 	
 	@Test(priority = 6)
 	public void MoveToBag() throws Exception {
-		Reporter.log("MoveToBag Test case Started Successfully");
+		Reporter.log("MoveToBag");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 	//	objProductDescriptionPageObject.verifySize_selector("size"); 
 		objProductDescriptionPageObject.selectASize();
@@ -92,6 +93,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 	}
 	@Test(priority = 7)
 	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
@@ -100,7 +102,7 @@ public class VEGASF_65_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC {
 	
 	@Test(priority = 8)
 	public void AddNewOfficeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("CheckOutPage Test case Started Successfully");
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();

@@ -33,12 +33,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user - Login Home Page Search (using a keyword in the
- * Golden Set) Sort Click for best Price (Coupon) Empty Wishlist Place Order
- * Percentage Discount Edit address Payment : Online + LP
- */
-
 public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_PercentageDiscount_EditAddress_PayWithCredit_DebitCard2 {
 
 	GlobalVariables objGlobalVariables;
@@ -62,20 +56,6 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_387_START=====================");
 		Reporter.log("LoginWithGoogle");
-		// objLoginPageObject.clickFirstLogin();
-		// objLoginPageObject.clickOnGoogleSignUpOption();
-		// objLoginPageObject.clickOnUseAnotherAccount();
-		// objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName,
-		// "UserName"));
-		// objLoginPageObject.AppEmailNextButton();
-		// objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName,
-		// "Password"));
-		// objLoginPageObject.AppPasswordNextButton();
-		// objLoginPageObject.GoogleAcceptButton();
-		// objLoginPageObject.clickpopUp();
-		// objLoginPageObject.clickhamburger();
-		// objLoginPageObject.verifyUserId("MyntraUser");
-		// aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -104,6 +84,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 
 	@Test(priority = 4)
 	public void Empty_WishList() throws Exception {
+		Reporter.log("Empty_WishList");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -123,14 +104,15 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 
 	@Test(priority = 6)
 	public void Edit_Address() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log(" Edit_Address");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 
 	@Test(priority = 7)
-	public void PaymentWithOnline_LP() {
-		Reporter.log("PaymentWithOnline_LP");
+	public void PaymentWithCreditDebitCard() {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
@@ -139,12 +121,10 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
 			String screenshotPath_) throws InterruptedException, MalformedURLException {
-		// create Excel Reference
+	
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("deviceName_", deviceName_);
 		params.put("UDID_", UDID_);

@@ -197,6 +197,7 @@ public class VEGASF_128_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 //		objPaymentPageObjects.clickOnNetBanking();
 //		objPaymentPageObjects.clickFirstNetbankingOption();
 //		objPaymentPageObjects.clickNetbankingPayNowButton();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 		
 	}

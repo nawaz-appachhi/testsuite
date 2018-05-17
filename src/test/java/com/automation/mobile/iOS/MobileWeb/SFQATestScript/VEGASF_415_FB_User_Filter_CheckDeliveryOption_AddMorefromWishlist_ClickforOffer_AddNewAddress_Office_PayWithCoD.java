@@ -203,6 +203,7 @@ public class VEGASF_415_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

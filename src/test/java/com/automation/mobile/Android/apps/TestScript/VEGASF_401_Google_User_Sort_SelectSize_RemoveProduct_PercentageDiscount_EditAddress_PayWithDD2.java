@@ -32,17 +32,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
- /* Google registered user - Login
-Home Page
-Search (using menu item e.g. Men -> Topwear - T-Shirts
-Sort
-Verify Product Code
-View Size Chart
-Remove Product
-Percentage Discount
-Edit address	Manual
-Payment : GC +Online
-*/
  
 public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDiscount_EditAddress_PayWithDD2 {
 
@@ -66,20 +55,11 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_401_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
-		// objLoginPageObject.clickOnGoogleSignUpOption();
-		// objLoginPageObject.clickOnUseAnotherAccount();
-		// objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName,
-		// "UserName"));
-		// objLoginPageObject.AppEmailNextButton();
-		// objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName,
-		// "Password"));
-		// objLoginPageObject.AppPasswordNextButton();
-		// objLoginPageObject.clickOnAgree();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -88,6 +68,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 
 	@Test(priority = 2)
 	public void resetdata() throws InterruptedException {
+		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishlistPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
@@ -95,14 +76,14 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
  
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("HomePage Test case Started Successfully");
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -110,7 +91,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 
 	@Test(priority = 5)
 	public void CheckSizeChartLink() throws InterruptedException {
-		Reporter.log("CheckSizeChartLink Test case Started Successfully");
+		Reporter.log("CheckSizeChartLink");
 		objProductDescriptionPageObject.clickSizeChartbtn();
 		objProductDescriptionPageObject.clickCloseSizeChartbtn();
 		objProductDescriptionPageObject.selectASize();
@@ -129,7 +110,7 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 
 	@Test(priority = 7)
 	public void RemoveItem() throws InterruptedException {
-		Reporter.log("RemoveItem Test case Started Successfully");
+		Reporter.log("RemoveItem");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.clickPlaceOrder();
@@ -137,15 +118,15 @@ public class VEGASF_401_Google_User_Sort_SelectSize_RemoveProduct_PercentageDisc
 
 	@Test(priority = 8)
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("EditAddress Test case Started Successfully");
+		Reporter.log("EditAddress");
 	//	objCheckOutPageObject.CheckAddress();
 		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 
 	@Test(priority = 9)
-	public void PaymenWithManualGC_Online() throws InterruptedException {
-		Reporter.log("PaymenWithManualGC_Online Test case Started Successfully");
+	public void PaymenWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymenWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

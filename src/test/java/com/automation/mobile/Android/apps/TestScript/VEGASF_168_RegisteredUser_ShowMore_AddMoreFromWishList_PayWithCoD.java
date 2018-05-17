@@ -44,18 +44,6 @@ import io.appium.java_client.ios.IOSElement;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-/*
-App(Android, IOS, PWA, Web App)	
-Email registered User	
-Home Page	
-Search (using menu item e.g. Men -> Topwear - T-Shirts	
-Show More Products	
-Product Code
-Show Similar	
-Add more from wishlist	
-Click for offer	Remove address	
-Myntra Credit + COD
- */
 public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -74,9 +62,9 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 
 	String testName = "VEGASF_168"; 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_168_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -96,6 +84,7 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -103,6 +92,7 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("Pdp Title");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -112,6 +102,7 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	}
 	@Test(priority=6)
 	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
@@ -119,12 +110,14 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD {
 	}
 	@Test(priority=7)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 		
 	}
 	@Test(priority = 8)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash On Delivery");

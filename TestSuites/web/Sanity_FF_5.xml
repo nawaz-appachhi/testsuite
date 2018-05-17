@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity_FF_5">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+	
+    <test name="VEGASF_139_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithDC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_139_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithDC" />
+		</classes>
+	</test>  
+	
+     <test name="VEGASF_140_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_140_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD" />
+		</classes>
+	</test> 
+	 
+	  <test name="VEGASF_141_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_141_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWithCoD" />
+		</classes>
+	</test> 
+	
+	  <test name="VEGASF_142_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_142_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC" />
+		</classes>
+	</test>  
+ 
+	<test name="VEGASF_143_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_143_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC" />
+		</classes>
+	</test> 
+
+</suite>

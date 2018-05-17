@@ -201,6 +201,7 @@ public class VEGASF_122_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithC
 		//		objPaymentPageObjects.clickOnNetBanking();
 		//		objPaymentPageObjects.clickFirstNetbankingOption();
 		//		objPaymentPageObjects.clickNetbankingPayNowButton();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.clickOnCCandDC();
 	}
 

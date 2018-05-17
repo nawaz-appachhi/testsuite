@@ -54,8 +54,9 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	String testName = "VEGASF_70";   
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_70_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -73,6 +74,7 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	}
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -80,6 +82,7 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -90,6 +93,7 @@ public class VEGASF_70_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 	@Test(priority = 6)
 	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();

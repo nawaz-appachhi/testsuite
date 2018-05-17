@@ -31,18 +31,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-/**
-Facebook registered user
-Home Page
-Search - Autosuggest - Brand Profile (Search for a brand like Nike, Roadster)
-Top buttons
-Click for best Price (Coupon)
-View Size Chart
-Remove Product
-Percentage Discount
-Add New address - Home
-Payment : EMI
- */
 public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_PercentageDiscount_AddNewAddress_Office_PayWithCredit_DebitCard2 {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -63,14 +51,9 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 	String testName = "VEGASF_389"; 
 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_389_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
-//		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickLoginFBbtn();
-//		objLoginPageObject.clickOnFacebookContinuebtn();
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -88,8 +71,8 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
-	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("searchBrand Test case Started Successfully");
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -97,7 +80,8 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 	
 	
 	@Test(priority = 5)
-	public void addToBag() throws InterruptedException {
+	public void AddToBag() throws InterruptedException {
+		Reporter.log("AddToBag");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.clickSizeChartbtn();
 		objProductDescriptionPageObject.clickCloseSizeChartbtn();
@@ -106,7 +90,8 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 	}
 	
 	@Test(priority = 6)
-	public void placeOrder() throws InterruptedException {
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PlaceOrder");
 		//objProductListPageObject.clickOkButton();
 		//objAddCartPageObject.RemoveOneItem();
 		objAddCartPageObject.clickWishlistRH();
@@ -114,7 +99,8 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 		objAddCartPageObject.clickPlaceOrder();
 	}
 	@Test(priority = 7)
-	public void addNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddNewAddressOffice");
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 		objPaymentPageObject.verifyPaymentHeader();
@@ -124,12 +110,9 @@ public class VEGASF_389_FB_User_ClickforBestPrice_SizeChart_RemoveProduct_Percen
 	@BeforeTest
 	
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

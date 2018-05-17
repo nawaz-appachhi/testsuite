@@ -204,6 +204,7 @@ public class VEGASF_279_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

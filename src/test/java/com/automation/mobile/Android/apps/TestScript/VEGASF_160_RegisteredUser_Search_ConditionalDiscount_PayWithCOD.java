@@ -50,9 +50,9 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
  
 	String testName = "VEGASF_160";
 	@Test(priority = 1) 
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_160_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -69,7 +69,8 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
-	public void HomeOPage() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -77,6 +78,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 	
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -89,6 +91,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 	
 	@Test(priority = 5)
 	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("PlaceOrder");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();  
@@ -99,6 +102,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 		
 	@Test(priority = 6)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
@@ -107,12 +111,9 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);
@@ -122,8 +123,8 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD {
         params.put("screenshotPath_", screenshotPath_);
 		aDriver = objMobileDrivers.launchAppAndroid(params);
 		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// Make sure that Page object object creation should be after this line
-		// "aDriver= objMobileDrivers.launchAppAndroid();"
+		// Page object object creation should be after this line
+		
 		objLoginPageObject = new LoginPageObject(aDriver);
 		objHomePageObject = new HomePageObject(aDriver);
 		objProductListPageObject = new ProductListPageObject(aDriver);

@@ -199,6 +199,7 @@ public class VEGASF_289_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

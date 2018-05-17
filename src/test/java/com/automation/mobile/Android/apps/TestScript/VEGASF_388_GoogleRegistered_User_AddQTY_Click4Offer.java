@@ -34,8 +34,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-// conditional Discount and payment method 
-
 public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 
 	GlobalVariables objGlobalVariables;
@@ -54,15 +52,13 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 	String testName = "VEGASF_388"; 
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_388_START=====================");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"),AndroidGenericMethods.getValueByKey(testName, "Password"));	
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -77,7 +73,7 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -86,6 +82,7 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 
 	@Test(priority = 5)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice(); // Assertion
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -94,6 +91,7 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 
 	@Test(priority = 6)
 	public void WishListPage() throws InterruptedException {
+		Reporter.log(" WishListPage");
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
 		objWishListPageObject.clickDoneWishListbtn();
@@ -103,8 +101,9 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer {
 	}
 	
 	@Test(priority = 7)
-	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {	
-		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
+	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddCartPage");
+		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAG" Header
 		objAddCartPageObject.changeSize();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();

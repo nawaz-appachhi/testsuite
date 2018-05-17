@@ -143,9 +143,9 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious {
 
 	@Test(priority = 2)
 	public void resetData() throws InterruptedException {
-//		objBagPageObjects.resetBag();
-//		objWishlistPageObject.resetWishlist();
-//		objAddressPageObjects.resetAddress();
+		objBagPageObjects.resetBag();
+		objWishlistPageObject.resetWishlist();
+		objAddressPageObjects.resetAddress();
 	}
 
 	@Test(priority = 3)

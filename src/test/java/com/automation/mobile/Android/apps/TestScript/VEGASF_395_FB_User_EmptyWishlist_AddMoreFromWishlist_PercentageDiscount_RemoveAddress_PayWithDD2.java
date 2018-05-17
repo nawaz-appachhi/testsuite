@@ -35,7 +35,7 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-// conditional Discount and payment method 
+
 
 public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD2 {
 
@@ -58,14 +58,11 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_395_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -115,7 +112,7 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 	
 	@Test(priority = 7)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {	
-		Reporter.log("RemoveAddress Test case Started Successfully");
+		Reporter.log("RemoveAddress");
 		objCheckOutPageObject.CheckAddress();
 		objCheckOutPageObject.clickContinue();
 	}

@@ -31,7 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/* Pending for Staggered Combo */
 public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_PayWithCredit_DebitCard {
 
 	GlobalVariables objGlobalVariables;
@@ -52,9 +51,9 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	String testName = "VEGASF_174"; 
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_174_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -75,8 +74,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("Home Page Test Case Started Successfully");
-		//objHomePageObject.verifyBigBannerView();
+		Reporter.log("Home Page");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -84,7 +82,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws Exception {
-		Reporter.log("Product Description Page Test Started Successfully");
+		Reporter.log("Product Description Page");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); 
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -113,7 +111,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		
 	@Test(priority = 7)
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("Checkout Test Started Successfully");
+		Reporter.log("Checkout");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.verifyUserAddress();
@@ -121,8 +119,8 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	}
 
 	@Test(priority = 7)
-	public void Payment() throws InterruptedException {
-		Reporter.log("Payment Test Started Successfully");
+	public void PaymentWithCOD() throws InterruptedException {
+		Reporter.log("Payment");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
@@ -134,13 +132,10 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
-
-		// create Excel Reference
+		
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

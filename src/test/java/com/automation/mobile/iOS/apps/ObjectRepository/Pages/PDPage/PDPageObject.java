@@ -55,7 +55,6 @@ public class PDPageObject {
 	@FindAll({ @FindBy(xpath = "//XCUIElementTypeOther[@name='size_selector'])[2]") })
 	public List<IOSElement> productSize;
 
-
 	@iOSFindBy(accessibility = "save_button")
 	public IOSElement saveButton;
 
@@ -197,16 +196,16 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getMoveToWIshlistSize() {
-
+		objiOSGenericMethods.CheckIOSElementsListFound(moveToWIshlistSize, "moveToWIshlistSize");
 		return moveToWIshlistSize;
 	}
 
 	public List<IOSElement> getSizeButtons() {
+		objiOSGenericMethods.CheckIOSElementsListFound(SizeButtons, "SizeButtons");
 		return SizeButtons;
 	}
 
 	public IOSElement getGoToBag() throws InterruptedException {
-
 		objiOSGenericMethods.CheckIOSElementFound(goToBag, "goToBag");
 		return goToBag;
 	}
@@ -217,6 +216,7 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getProductSize() {
+		objiOSGenericMethods.CheckIOSElementsListFound(productSize, "productSize");
 		return productSize;
 	}
 
@@ -291,6 +291,7 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getDeliveryOptionsList() {
+		objiOSGenericMethods.CheckIOSElementsListFound(deliveryOptionsList, "deliveryOptionsList");
 		return deliveryOptionsList;
 	}
 
@@ -300,7 +301,7 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getSimilarProcuctList() {
-
+		objiOSGenericMethods.CheckIOSElementsListFound(similarProcuctList, "similarProcuctList");
 		return similarProcuctList;
 	}
 
@@ -315,6 +316,7 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getSizeList() {
+		objiOSGenericMethods.CheckIOSElementsListFound(sizeList, "sizeList");
 		return sizeList;
 	}
 
@@ -324,17 +326,19 @@ public class PDPageObject {
 	}
 
 	public List<IOSElement> getSelectSize() {
+		objiOSGenericMethods.CheckIOSElementsListFound(selectSize, "selectSize");
 		return selectSize;
 	}
 
 	public IOSElement getBackButtonOnSizeChart() {
+		objiOSGenericMethods.CheckIOSElementFound(BackButtonOnSizeChart, "Back Button On Size Chart");
 		return BackButtonOnSizeChart;
 	}
 
 	/*************** methods ***************/
 
 	public void clickOnSelectBestPrice() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectBestPrice(), "Successfully click on selectBestPrice button");
+		objiOSGenericMethods.clickOnIOSElement(getSelectBestPrice(), "Tap For Best Price button");
 	}
 
 	// selecting the size
@@ -342,7 +346,8 @@ public class PDPageObject {
 		int size = getProductSize().size();
 		for (int i = 0; i < size; i++) {
 			if ((getProductSize().get(i).isEnabled())) {
-				(getProductSize()).get(i).click();
+//				(getProductSize()).get(i).click();
+				objiOSGenericMethods.clickOnIOSElement(getProductSize().get(i), "Tap For Best Price button");
 				break;
 
 			}
@@ -350,13 +355,14 @@ public class PDPageObject {
 	}
 
 	public void clickOnSize() {
-		System.out.println(SizeButtons.size());
-		System.out.println(SizeButtons.get(1).getText());
-		SizeButtons.get(0).click();
+		System.out.println(getSizeButtons().size());
+		System.out.println(getSizeButtons().get(1).getText());
+//		SizeButtons.get(0).click();
+		objiOSGenericMethods.clickOnIOSElement(getSizeButtons().get(0), "Tap For Best Price button");
 	}
 
 	public void clickOnSaveButton() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "Successfully click on save button");
+		objiOSGenericMethods.clickOnIOSElement(getSaveButton(), "Save Button");
 	}
 
 	/**
@@ -366,10 +372,10 @@ public class PDPageObject {
 	 */
 	public void clickOnSizeChart() throws InterruptedException {
 		try {
-			objiOSGenericMethods.waitForElementVisibility(getSizeChart());
-			if (getSizeChart().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "Successfully click on Size Chart");
-			}
+			// objiOSGenericMethods.waitForElementVisibility(getSizeChart());
+			// if (getSizeChart().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getSizeChart(), "Size Chart Button");
+			// }
 		} catch (Exception e) {
 		}
 	}
@@ -380,13 +386,12 @@ public class PDPageObject {
 	 */
 
 	public void clickOnSizeChartBackButton() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getSizeChartBackButton());
+		// objiOSGenericMethods.waitForElementVisibility(getSizeChartBackButton());
 		try {
 
 			if (getSizeChartBackButton().isDisplayed()) {
 				System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());
-				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(),
-						"Successfully click on Size Chart Back Button");
+				objiOSGenericMethods.clickOnIOSElement(getSizeChartBackButton(), "SSize Chart Back Button");
 			}
 		} catch (Exception e) {
 			System.out.println("Back Button is " + getSizeChartBackButton().isDisplayed());
@@ -399,10 +404,10 @@ public class PDPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOnViewSimilar() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getViewSimilar());
-		if (getViewSimilar().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getViewSimilar(), "Successfully click on viewSimilar button");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getViewSimilar());
+		// if (getViewSimilar().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getViewSimilar(), "View Similar Button");
+		// }
 
 	}
 
@@ -413,39 +418,39 @@ public class PDPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOnViewMoreSimilar() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getViewMoreSimilar());
-		if (getViewMoreSimilar().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getViewMoreSimilar(), "Successfully click on viewSimilar button");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getViewMoreSimilar());
+		// if (getViewMoreSimilar().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getViewMoreSimilar(), "View Similar Button");
+		// }
 
 	}
 
 	public void clickOnEnterPinCode() {
-		objiOSGenericMethods.clickOnIOSElement(getEnterPinCode(), "Successfully click on enterPinCode button");
+		objiOSGenericMethods.clickOnIOSElement(getEnterPinCode(), "Enter PinCode Button");
 	}
 
 	public void clickOnCheckPinCode() {
-		objiOSGenericMethods.clickOnIOSElement(getCheckPinCode(), "Successfully click on checkPinCode button");
+		objiOSGenericMethods.clickOnIOSElement(getCheckPinCode(), "Check PinCode Button");
 	}
 
 	public void clickOnBack() {
-		objiOSGenericMethods.clickOnIOSElement(getBack(), "Successfully click on back button");
+		objiOSGenericMethods.clickOnIOSElement(getBack(), "Back Button");
 	}
 
 	public void clickOnViewMyBag() {
-		objiOSGenericMethods.clickOnIOSElement(getViewMyBag(), "Successfully click on viewMyBag button");
+		objiOSGenericMethods.clickOnIOSElement(getViewMyBag(), "View My Bag Button");
 	}
 
 	public void clickOnViewWishList() {
-		objiOSGenericMethods.clickOnIOSElement(getViewWishList(), "Successfully click on viewWishList button");
+		objiOSGenericMethods.clickOnIOSElement(getViewWishList(), "View WishList Button");
 	}
 
 	public void clickOnMoveToWishList() {
-		objiOSGenericMethods.clickOnIOSElement(getMoveToWishList(), "Successfully click on moveToWishList button");
+		objiOSGenericMethods.clickOnIOSElement(getMoveToWishList(), "Move To WishList Button");
 	}
 
 	public void clickbackButton() {
-		objiOSGenericMethods.clickOnIOSElement(getBackButtonOnSizeChart(), "Successfully click on back button");
+		objiOSGenericMethods.clickOnIOSElement(getBackButtonOnSizeChart(), "Back Button");
 	}
 
 	/**
@@ -455,11 +460,11 @@ public class PDPageObject {
 	 */
 	public void clickOnGoToBag() throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getGoToBag());
+		// objiOSGenericMethods.waitForElementVisibility(getGoToBag());
 		try {
-			if (getGoToBag().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getGoToBag(), "Successfully click on Go to Bag button");
-			}
+			// if (getGoToBag().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getGoToBag(), "Go to Bag Button");
+			// }
 		} catch (Exception e) {
 		}
 
@@ -473,11 +478,11 @@ public class PDPageObject {
 	public void clickOnBestPrice() {
 		try {
 
-			if (getBestPrice().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getBestPrice(), "Successfully click on BestPrice button");
-			} else {
-				System.out.println("No Best Price for this product!");
-			}
+			// if (getBestPrice().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getBestPrice(), "Best Price Button");
+			// } else {
+			// System.out.println("No Best Price for this product!");
+			// }
 		} catch (Exception e) {
 			System.out.println("No Best Price for this product!");
 		}
@@ -485,9 +490,9 @@ public class PDPageObject {
 	}
 
 	public void verifyViewSimilar() {
-		if (viewSimilar.isDisplayed()) {
-			System.err.println("Similar header is present--> " + viewSimilar.getText());
-		}
+		// if (viewSimilar.isDisplayed()) {
+		System.err.println("Similar header is present --> " + viewSimilar.getText());
+		// }
 
 	}
 
@@ -513,7 +518,7 @@ public class PDPageObject {
 	}
 
 	public void clickOnWishlistTag() {
-		objiOSGenericMethods.clickOnIOSElement(getWishlistTag(), "Successfully click on savetag button");
+		objiOSGenericMethods.clickOnIOSElement(getWishlistTag(), "Save Tag Button");
 	}
 
 	public List<IOSElement> getSimilarProducts() throws InterruptedException {
@@ -531,7 +536,8 @@ public class PDPageObject {
 
 		try {
 			if (selectSizes.isDisplayed()) {
-				sizeList.get(i).click();
+//				sizeList.get(i).click();
+				objiOSGenericMethods.clickOnIOSElement(getSizeList().get(i), "Save Tag Button");
 				System.out.println("Size list is diplayed!");
 			}
 		} catch (Exception e) {
@@ -580,9 +586,10 @@ public class PDPageObject {
 	// */
 	public void clickonDoneButton() {
 		try {
-			if (getdoneButton().isDisplayed()) {
-				getdoneButton().click();
-			}
+			// if (getdoneButton().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getdoneButton(), "Done Button");
+			// getdoneButton().click();
+			// }
 		} catch (Exception e) {
 			System.out.println("Size is not displayed, so no done button");
 		}
@@ -600,12 +607,13 @@ public class PDPageObject {
 	 */
 	public void clickOnAddToBag() throws InterruptedException {
 
-		objiOSGenericMethods.waitForElementVisibility(getAddToBag());
+		// objiOSGenericMethods.waitForElementVisibility(getAddToBag());
 		try {
-			if (getAddToBag().isDisplayed()) {
-				getAddToBag().click();
+			// if (getAddToBag().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getAddToBag(), "Add To Bag Button");
+			// getAddToBag().click();
 
-			}
+			// }
 		} catch (Exception e) {
 			System.out.println("Add to Bag button is not displayed!");
 		}
@@ -618,7 +626,7 @@ public class PDPageObject {
 	}
 
 	public void clickOnSearchButtonPDP() {
-		objiOSGenericMethods.clickOnIOSElement(getSearchPDP(), "Successfully click on searchPDP button");
+		objiOSGenericMethods.clickOnIOSElement(getSearchPDP(), "Search PDP Button");
 	}
 
 	public void clickOnSimilarProduct() {
@@ -644,16 +652,14 @@ public class PDPageObject {
 		try {
 
 			if (getMoreSimilarProducts().isDisplayed()) {
-				objiOSGenericMethods.waitForElementVisibility(getMoreSimilarProducts());
+				// objiOSGenericMethods.waitForElementVisibility(getMoreSimilarProducts());
 				System.out.println("User found more similar products");
-				objiOSGenericMethods.clickOnIOSElement(getMoreSimilarProducts(),
-						"Successfully click on More similar products button");
+				objiOSGenericMethods.clickOnIOSElement(getMoreSimilarProducts(), "More Similar Products Button");
 				System.out.println("User found more similar products and clicked!");
 			} else if (getSimilarProduct().isDisplayed()) {
-				objiOSGenericMethods.waitForElementVisibility(getSimilarProduct());
+				// objiOSGenericMethods.waitForElementVisibility(getSimilarProduct());
 				System.out.println("User found more similar products");
-				objiOSGenericMethods.clickOnIOSElement(getSimilarProduct(),
-						"Successfully click on similar products button");
+				objiOSGenericMethods.clickOnIOSElement(getSimilarProduct(), "Similar Products Button");
 				System.out.println("User found more similar products and clicked!");
 			}
 		} catch (Exception e) {
@@ -671,8 +677,6 @@ public class PDPageObject {
 		}
 
 	}
-
-
 
 	/**
 	 * @author 300021277

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity_FF_8">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+ <test name="VEGASF_294_GoogleRegistered_User_AddQTY_Click4Offer - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_294_GoogleRegistered_User_AddQTY_Click4Offer" />
+		</classes>
+	</test> 
+	
+  <test name="VEGASF_295_FB_User_Offers_Concious - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_295_FB_User_Offers_Concious" />
+		</classes>
+	</test> 
+
+ <test name="VEGASF_296_Google_User_SaveWishlist_Discount_Concious - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_296_Google_User_SaveWishlist_Discount_Concious" />
+		</classes>
+	</test>  
+	
+  <test name="VEGASF_297_FB_User_SaveWishlist_FreeGift - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_297_FB_User_SaveWishlist_FreeGift" />
+		</classes>
+	</test>  
+	
+ <test name="VEGASF_298_FB_User_chkDeliveryOpt_Coupon_BOGO - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_298_FB_User_chkDeliveryOpt_Coupon_BOGO" />
+		</classes>
+	</test> 
+	
+</suite>

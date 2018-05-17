@@ -31,12 +31,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 /**
  * @author 300021278 -Rakesh
  */
-/*
- * Shopper: Facebook registered user - Login Home Page List page to
- * PDPnavigation Top buttons Check Delivery Option Show Similar Place Order
- * Apply Personalized Coupons Add New address - Office Payment :Credit/Debit
- * Card
- */
+
 	public class VEGASF_399_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalizedCoupons_AddNewAddress_PayWithCC2 { 
 
 		GlobalVariables objGlobalVariables;
@@ -58,15 +53,13 @@ import io.appium.java_client.android.AndroidKeyCode;
 		String testName = "VEGASF_399"; 
 
 		@Test(priority = 1)
-		public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 			System.out.println("=====================VEGASF_399_START=====================");
-			Reporter.log("LoginInApp Test case Started Successfully");
+			Reporter.log("LoginInWithEmail");
 			objLoginPageObject.clickFirstLogin();
 			objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 			objLoginPageObject.clickLogin();
-			//objLoginPageObject.clickFacebookbtn();
-			//objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-			//objLoginPageObject.clickOnFacebookContinuebtn();
+			
 			objLoginPageObject.clickpopUp();
 			objLoginPageObject.clickhamburger();
 			objLoginPageObject.verifyUserId();
@@ -75,35 +68,36 @@ import io.appium.java_client.android.AndroidKeyCode;
 		
 		@Test(priority = 2)
 		public void resetdata() throws InterruptedException {
+			Reporter.log("resetData");
 			objAddCartPageObject.resetBag();
 			objWishListPageObject.resetWishlist();
 			objCheckOutPageObject.resetAddress();
 		}
 
 		@Test(priority = 3)
-		public void homePage() throws InterruptedException, InvalidFileFormatException, IOException {
-			Reporter.log("searchBrand Test case Started Successfully");
+		public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+			Reporter.log("SearchItem");
 			objHomePageObject.clickOnSearch();
 			objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 			aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 		}
 		
 		@Test(priority = 4)
-		public void moveToBag() throws InterruptedException {
+		public void MoveToBag() throws InterruptedException {
+			Reporter.log("MoveToBag");
 			objProductDescriptionPageObject.clickAddToBagbtn();
 			objProductDescriptionPageObject.selectASize();
 			objAndroidGenericMethods.scrollToText(aDriver, "CHECK DELIVERY");
 			objProductDescriptionPageObject.clickEnterPincodebtn();
 			objProductDescriptionPageObject.clickPincodeTxt("560068");
 			objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-			// objAndroidGenericMethods.scrollToText(aDriver, "CHECK DELIVERY");
-			// objProductDescriptionPageObject.CheckDeliverOption("560068");
 			objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
 			objProductDescriptionPageObject.clickGoToBag();
 		}
 		
 		@Test(priority = 5)
-		public void placeOrder() throws InterruptedException {
+		public void PlaceOrder() throws InterruptedException {
+			Reporter.log("PlaceOrder");
 	//		objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 			objAddCartPageObject.clickWishlistRH();
 			objAddCartPageObject.addProductToBag();
@@ -111,14 +105,16 @@ import io.appium.java_client.android.AndroidKeyCode;
 		}
 
 		@Test(priority = 6)
-		public void addNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+		public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+			Reporter.log("AddNewAddressOffice");
 			objCheckOutPageObject.AddNewAddress();
 			objCheckOutPageObject.clickContinue();
 			
 		}
 		
 		@Test(priority = 7)
-		public void paymentWithCreditDebit() throws InterruptedException {
+		public void PaymentWithCreditDebit() throws InterruptedException {
+			Reporter.log("PaymentWithCreditDebit");
 			objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 		}
 

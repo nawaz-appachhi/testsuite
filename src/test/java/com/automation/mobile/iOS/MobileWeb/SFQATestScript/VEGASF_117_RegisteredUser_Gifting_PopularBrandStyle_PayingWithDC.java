@@ -213,6 +213,7 @@ public class VEGASF_117_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		//objPaymentPageObjects.ClickOnWallets();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.clickOnCCandDC();
 		
 	}

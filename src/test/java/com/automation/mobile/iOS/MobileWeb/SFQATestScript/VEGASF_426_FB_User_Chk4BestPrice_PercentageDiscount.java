@@ -123,9 +123,9 @@ public class VEGASF_426_FB_User_Chk4BestPrice_PercentageDiscount {
 		Reporter.log("SaveProduct test case started successfully");
 		System.out.println("Save Product to Wishlist!");
 //		objPDPageObject.clickFirstProductSearchResult();
-		objPDPageObject.VerifyProductTitle();
-		objPDPageObject.assertProductDiscount();
-		objPDPageObject.assertProductPrice();
+//        objPDPageObject.VerifyProductTitle();
+//        objPDPageObject.assertProductDiscount();
+//        objPDPageObject.assertProductPrice();
 		objPDPageObject.clickOnSaveButton();
 	}
 
@@ -153,7 +153,7 @@ public class VEGASF_426_FB_User_Chk4BestPrice_PercentageDiscount {
 		objWishlistPageObject.clickOnCartFromWishlist();
 	}
 
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void GoToCart() throws InterruptedException {
 		Reporter.log("GoToCart test case started successfully");
 		System.out.println("Go to Cart!");

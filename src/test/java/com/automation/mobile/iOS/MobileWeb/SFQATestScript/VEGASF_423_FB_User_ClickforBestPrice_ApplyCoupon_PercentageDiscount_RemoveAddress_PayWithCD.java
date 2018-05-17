@@ -141,7 +141,7 @@ public class VEGASF_423_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	public void CheckForBestPriceLink() throws InterruptedException {
 		Reporter.log("CheckForBestPriceLink test case started successfully");
 		System.out.println("Check For Best Price Link!");
-		objiOSGenericMethods.swipeDown(100, 4);
+		objiOSGenericMethods.swipeDown(100, 3);
 		objPDPageObject.clickOnBestPrice();
 	}
 	

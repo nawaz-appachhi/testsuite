@@ -32,19 +32,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user _ Login
-Home Page
-Search (using a keyword in the Golden Set)
-Filter Products
-Verify Product Code
-Select Size from wishlist
-Place Order
-Apply Personalized Coupons
-Edit address
-Payment : Online + LP
-*/
-
 public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_COD2 {
 
 	GlobalVariables objGlobalVariables; 
@@ -67,6 +54,7 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_384_START=====================");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -93,13 +81,11 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	}
 
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-	     //objAddCartPageObject.clickOnMovetoWishlist();
-        // aDriver.pressKeyCode(AndroidKeyCode.BACK);
          objProductDescriptionPageObject.clickWishListbtn();
          objWishlistPageObject.verifyWishlistIcon();
          objWishlistPageObject.clickMoveToBag();
@@ -112,11 +98,9 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	}
 
 	@Test(priority = 5)
-	public void addCartPage_ApplyCoupon() throws InterruptedException {
-		Reporter.log("addCartPage_ApplyCoupon");
+	public void AddCartPage_ApplyCoupon() throws InterruptedException {
+		Reporter.log("AddCartPage_ApplyCoupon");
 		objAddCartPageObject.verifyShoppingBagTitle();
-		//objAndroidGenericMethods.scrollToText(aDriver, "OPTIONS");
-//		objAddCartPageObject.A
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
@@ -126,30 +110,28 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 
 	@Test(priority = 6)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	
 	@Test(priority = 7)
-	public void Payment() {
+	public void PaymentWithCOD() {
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
 		} catch (Exception e) {
-			Reporter.log("COD Option is not enabled for the that amoutn");
+			Reporter.log("COD Option is not enabled for the that amount");
 		}
 	}
 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

@@ -31,19 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user
-Home Page
-Search - Autosuggest - Brand Profile (Search for a brand like Nike, Roadster)
-Filter
-Save to wishlist
-Empty Wishlist
-Gift wrap
-Click for offer
-Edit address
-Payment : Online + LP
-*/
-
 public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_EditAddress_PayWithCredit_DebitCard2 { 
 
 	GlobalVariables objGlobalVariables;
@@ -66,23 +53,16 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_403_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
 		objLoginPageObject.clickpopUp();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();ssss
-//		objLoginPageObject.GoogleAcceptButton();
 	}
 	
 	@Test(priority = 2)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("HomePage Test case Started Successfully");
+		Reporter.log("HomePage");
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
@@ -96,15 +76,15 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 	}	
 	@Test(priority = 4)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	
 	@Test(priority = 5)
-	public void productDescriptionPage() throws InterruptedException {
-		Reporter.log("Save Test case Started Successfully");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -121,7 +101,7 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 	
 	@Test(priority = 7)
 	public void addCartPage_ApplyCoupon() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("ApplyCoupon Test case Started Successfully");
+		Reporter.log("ApplyCoupon");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
 	}
@@ -145,7 +125,8 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 	}
 	
 	@Test(priority = 10)
-	public void PaymentWithWallet() throws InterruptedException {
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

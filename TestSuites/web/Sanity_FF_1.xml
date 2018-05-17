@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity 1">
+
+    	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+   <test name="VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC" />
+		</classes>
+	</test>
+ 
+	  <test name="VEGASF_53_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_53_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCoD" />
+		</classes>
+	</test>  
+
+	  <test name="VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_54_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC" />
+		</classes>
+	</test>  
+
+	  <test name="VEGASF_55_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_55_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC" />
+		</classes>
+	</test>   
+
+  <test name="VEGASF_56_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_56_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC" />
+		</classes>
+	</test>   
+	
+</suite>

@@ -125,7 +125,7 @@ public class VEGASF_327_FB_User_Offers_Concious {
 	public void HomePage() throws InvalidFileFormatException, IOException {
 		objHomePageObjects.clickOnSearchIcon();
 		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "SearchItem"));
-//		objHomePageObjects.getSearchAutoSuggestList();
+		objHomePageObjects.getSearchAutoSuggestList();
 		objPLPageObjects.VerifyProductDetails();
 		objPLPageObjects.clickToSaveToWishlist();
 	}

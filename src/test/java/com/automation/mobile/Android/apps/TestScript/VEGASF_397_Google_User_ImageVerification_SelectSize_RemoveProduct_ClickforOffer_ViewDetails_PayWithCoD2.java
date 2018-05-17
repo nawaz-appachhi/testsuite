@@ -31,19 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user - Login
-Home Page
-Search - Using Autosuggest (use any query from Golden Set)
-Top buttons
-Image Verification
-Select Size from wishlist page
-Remove Product
-Click for offer
-View Details
-Payment : Mynt+ COD
-*/
-
 public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD2 {
 
 	GlobalVariables objGlobalVariables;
@@ -67,21 +54,14 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_397_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.GoogleAcceptButton();
 	}
 	@Test(priority = 2)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("HomePage Test case Started Successfully");
+		Reporter.log("HomePage");
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -98,7 +78,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 
 	@Test(priority = 4)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -116,7 +96,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 
 	@Test(priority = 6)
 	public void AddToBag() throws Exception {
-		Reporter.log("SelectSize Test case Started Successfully");
+		Reporter.log("AddToBag");
 		objWishlistPageObject.verifyWishlistIcon();
 		objWishlistPageObject.clickMoveToBag();
 		objWishlistPageObject.clickSizeWishList();
@@ -134,7 +114,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 	
 	@Test(priority = 8)
 	public void ViewDetails() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("ViewDetails Test case Started Successfully");
+		Reporter.log("ViewDetails");
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.AddNewAddress();
@@ -143,6 +123,7 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 
 	@Test(priority = 9)
 	public void PaymenWithMyntCOD() {
+		Reporter.log("PaymenWithMyntCOD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
@@ -154,12 +135,12 @@ public class VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
+		
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
+		
+
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

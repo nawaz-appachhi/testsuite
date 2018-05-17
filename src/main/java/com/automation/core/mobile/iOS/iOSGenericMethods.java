@@ -184,11 +184,13 @@ public class iOSGenericMethods extends GlobalVariables {
 
 	public void CheckIOSElementFound(IOSElement element, String elementName) {
 		try {
-			if (element.isDisplayed()) {
-				Reporter.log("'" + elementName + "' Element object is Found");
-			} else {
-				Reporter.log("'" + elementName + "'  Element object is NOT Found");
-			}
+			if (waitDriver(element, elementName)) {
+				if (element.isDisplayed()) {
+					Reporter.log("'" + elementName + "' Element object is Found");
+				} else {
+					Reporter.log("'" + elementName + "'  Element object is NOT Found");
+				}
+			}			
 		} catch (NoSuchElementException e) {
 			Reporter.log("No such element: Unable to locate element. Please check the Element");
 		}
@@ -352,7 +354,7 @@ public class iOSGenericMethods extends GlobalVariables {
 			new TouchAction(iDriver).press(width, starty).waitAction(Duration.ofMillis(duration)).moveTo(width, endy)
 					.release().perform();
 		}
-		System.out.println("Scroll down is done!");
+//		System.out.println("Scroll down is done!");
 	}
 
 	public static void setValueByKeyAndTitel(String title, String Key, String parameterName) throws IOException {
@@ -640,11 +642,11 @@ public class iOSGenericMethods extends GlobalVariables {
 	}
 	public boolean waitDriver(IOSElement element, String strElement) {
 		try {
-			WebDriverWait wait = new WebDriverWait(iDriver, 20);
+			WebDriverWait wait = new WebDriverWait(iDriver, 10);
 			wait.until(ExpectedConditions.visibilityOf(element));
 			return true;
 		} catch (Exception e) {
-			Reporter.log("ELEMENT NOT FOUND :: Waited for 20 seconds to get the element '" + strElement + "'.");
+			Reporter.log("ELEMENT NOT FOUND :: Waited for 10 seconds to get the element '" + strElement + "'.");
 			return false;
 		}
 	}

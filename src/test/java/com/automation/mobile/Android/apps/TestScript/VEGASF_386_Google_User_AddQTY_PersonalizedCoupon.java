@@ -28,15 +28,6 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
 /**
- * Google registered user - Login
- * Home Page
- * Search (using menu item e.g. Men -> Topwear - T-Shirts
- * Save Product
- * Verify Product Code
- * Move to bag
- * Place Order
- * Percentage Discount
- * Remove address
  * @author 300021280 Sneha
  *
  */ 
@@ -63,13 +54,6 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 		System.out.println("=====================VEGASF_386_START=====================");
 		Reporter.log("LoginInApp Test case Started Successfully");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
 		objLoginPageObject.clickpopUp();
@@ -86,7 +70,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("Home Page Test Case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -95,7 +79,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
-		Reporter.log("AddToBag Started Successfully");
+		Reporter.log("AddToBag");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -104,13 +88,13 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 	}
 	@Test(priority = 5)
 	public void CheckForSimilarProduct() throws InterruptedException {
-		Reporter.log("CheckForSimilarProduct Started Successfully");
+		Reporter.log("CheckForSimilarProduct");
 		objProductDescriptionPageObject.clickWishListbtn();
 	}
 
 	@Test(priority = 6)
 	public void SelectSizeLink() throws Exception {
-		Reporter.log("SelectSizeLink Test Started Successfully");
+		Reporter.log("SelectSizeLink");
 		objWishlistPageObject.verifyWishlistIcon();
 		objWishlistPageObject.clickMoveToBag();
 		objWishlistPageObject.clickSizeWishList();
@@ -120,7 +104,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 	
 	@Test(priority = 7)
 	public void ApplyGenericCoupons() throws InterruptedException {
-		Reporter.log("ApplyGenericCoupons Test Started Successfully");
+		Reporter.log("ApplyGenericCoupons");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.changeSize();
@@ -131,7 +115,7 @@ public class VEGASF_386_Google_User_AddQTY_PersonalizedCoupon {
 	
 	@Test(priority = 8)
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("EditAddress Test Started Successfully");
+		Reporter.log("EditAddress");
 		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}

@@ -26,19 +26,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-/*
-App(Android, IOS, PWA, Web App)
-Email registered User
-Home Page
-Search (using menu item e.g. Men -> Topwear - T-Shirts
-Filter
-Select Size
-Move to bag
-Size & Quantity
-Free Gift
-View Details
-Credit/Debit Card
- */
 public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCoD {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -57,9 +44,9 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 
 	String testName = "VEGASF_166"; 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_166_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -78,6 +65,7 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -85,6 +73,7 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 
 	@Test(priority=5)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -93,7 +82,8 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objProductDescriptionPageObject.clickGoToBag();		
 	}
 	@Test(priority=6)
-	public void addCartPage() throws InterruptedException {
+	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyWishlistIcon();    
 	}
@@ -105,7 +95,8 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objAddCartPageObject.clickPlaceOrder();
 	}
 	@Test(priority=8)
-	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException  {
+	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException  {
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -113,13 +104,11 @@ public class VEGASF_166_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	}
 	@Test(priority = 9)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
 	
-
-	
-
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {

@@ -183,6 +183,7 @@ public class VEGASF_276_RegisteredUser_SizeSensitive_BOGO_PayWithCoD {
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
 //		objPaymentPageObjects.clickOnCCandDC();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

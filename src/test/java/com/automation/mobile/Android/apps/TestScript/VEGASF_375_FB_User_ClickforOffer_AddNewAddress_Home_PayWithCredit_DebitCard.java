@@ -30,20 +30,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  * @author 300018281 Subhasis
  *
  */
-
-/*
- * Google registered user - Login
-Home Page
-Search (using a keyword in the Golden Set)
-Top buttons
-View Similar Products
-Select Size in wishlist page
-Change Size & add Quantity in cart page
-Click for offer
-Add New address - Home
-Payment : Credit/Debit Card
-*/
-
 public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_DebitCard { 
 
 	GlobalVariables objGlobalVariables;
@@ -61,7 +47,6 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	AndroidGenericMethods objAndroidGenericMethods;
 	PaymentPageObject objPaymentPageObject;
 	
-//	String testName = "SFQAVEGASF_375";
 	String testName = "VEGASF_375";
 
 	@Test(priority = 1)
@@ -71,13 +56,6 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -100,8 +78,8 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	}
 
 	@Test(priority = 4)
-	public void productDescription() throws InterruptedException {
-		Reporter.log("productDescription");
+	public void ProductDescription() throws InterruptedException {
+		Reporter.log("ProductDescription");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice();
 	}
@@ -132,8 +110,8 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	}
 	
 	@Test(priority = 7)
-	public void addCartPage_ApplyCoupon() throws InterruptedException {
-		Reporter.log("addCartPage_ApplyCoupon");
+	public void AddCartPage_ApplyCoupon() throws InterruptedException {
+		Reporter.log("AddCartPage_ApplyCoupon");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
@@ -148,7 +126,7 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 	
 	@Test(priority = 9)
 	public void PaymentWithCreditDebitCard() {
-		Reporter.log("PaymentWithCreditDebitCard Test case Started Successfully");
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

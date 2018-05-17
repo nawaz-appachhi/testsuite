@@ -195,6 +195,7 @@ public class VEGASF_121_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  {
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.clickOnCCandDC();
 		//		objPaymentPageObjects.ClickOnphonepe();
 

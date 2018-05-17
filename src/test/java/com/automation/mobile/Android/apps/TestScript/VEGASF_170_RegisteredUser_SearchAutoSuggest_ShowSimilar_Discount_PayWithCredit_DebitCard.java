@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.ini4j.InvalidFileFormatException;
-import org.junit.experimental.theories.Theories;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -32,12 +31,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-//Show More Products
-//Similar Products
-//Select Size	Place Order	Conditional Discount
-//Add New address - Home
-//Net Banking
-
 public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCredit_DebitCard {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -57,8 +50,9 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	
 	String testName = "VEGASF_170"; 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_170_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -77,14 +71,16 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 	
 	@Test(priority = 3)
-	public void searchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
-	public void addProductToBag() throws InterruptedException {
+	public void AddProductToBag() throws InterruptedException {
+		Reporter.log("AddProductToBag");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -92,7 +88,8 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 
 	@Test(priority = 7)
-	public void addProductFromWishlist() throws InterruptedException {
+	public void AddProductFromWishlist() throws InterruptedException {
+		Reporter.log("AddProductFromWishlist");
 		objProductDescriptionPageObject.clickGoToBag();
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
@@ -100,18 +97,22 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 
 	@Test(priority = 8)
-	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickPlaceOrder();
-		objCheckOutPageObject.verifyUserAddress();
-		objCheckOutPageObject.AddNewAddress();
+		
 	}
 
 	@Test(priority = 9)
-	public void addAdress() throws InterruptedException {
+	public void AddAdress() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddAddress");
+		objCheckOutPageObject.verifyUserAddress();
+		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 10)
-	public void PaymentPage() throws InterruptedException {
+	public void PaymentWithCreditCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditCard");
 		objPaymentPageObject.verifyPaymentHeader();//Assertion
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 		

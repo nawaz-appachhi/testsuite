@@ -110,19 +110,19 @@ public class PLPageObjects {
 	}
 
 	public void clickOnViewDetails() {
-		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "clicked on ViewDetails");
+		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "ViewDetails");
 	}
 
 	public void clickOnsimilarProductofroadstar() {
-		objiOSGenericMethods.clickOnIOSElement(getSimilarProductofroadstar(), "clicked on SimilarProductofroadstar");
+		objiOSGenericMethods.clickOnIOSElement(getSimilarProductofroadstar(), "Similar Product of roadstar");
 	}
 
 	public void clickOndiscountPercentage() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountPercentage(), "clicked on DiscountPercentage");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountPercentage(), "Discount Percentage");
 	}
 	
 	public void clickToSaveToWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveSecondProductToWishlist(), "clicked on Wishlist Icon");
+		objiOSGenericMethods.clickOnIOSElement(getSaveSecondProductToWishlist(), " Wishlist Icon");
 	}
 	
 	public void VerifyProductDetails()

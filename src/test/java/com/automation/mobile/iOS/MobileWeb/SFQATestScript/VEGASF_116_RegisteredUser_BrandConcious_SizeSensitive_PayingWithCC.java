@@ -181,6 +181,7 @@ public class VEGASF_116_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC 
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+    objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.clickOnCCandDC();
 	}
 

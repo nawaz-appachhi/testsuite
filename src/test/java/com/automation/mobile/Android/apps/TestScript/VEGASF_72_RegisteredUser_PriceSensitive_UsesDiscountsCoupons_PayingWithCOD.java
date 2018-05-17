@@ -46,8 +46,9 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 
 	String testName = "VEGASF_72";
 	@Test(priority = 1)
-	public void LoginInApp() throws Exception {
+	public void LoginInWithEmail() throws Exception {
 		System.out.println("=====================VEGASF_72_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -65,13 +66,15 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	}
 	@Test(priority = 3)
 	public void HomePage() throws Exception {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
-	public void PDP() throws Exception {
+	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -83,6 +86,7 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	}
 	@Test(priority = 6)
 	public void Checkout() throws Exception {
+		Reporter.log("CheckoutPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
@@ -93,6 +97,7 @@ public class VEGASF_72_RegisteredUser_PriceSensitive_UsesDiscountsCoupons_Paying
 	}
 	@Test(priority = 7)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

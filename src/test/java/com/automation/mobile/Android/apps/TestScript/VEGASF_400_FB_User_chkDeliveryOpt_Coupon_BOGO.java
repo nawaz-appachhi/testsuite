@@ -57,9 +57,9 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 	String testName = "VEGASF_400"; 
 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_400_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
         objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -72,14 +72,15 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 
 	@Test(priority = 2)
 	public void resetdata() throws InterruptedException {
+		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
 	}
 	
 	@Test(priority = 3)
-	public void searchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("searchBrand Test case Started Successfully");
+	public void SearchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchBrand");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -87,7 +88,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 
 	@Test(priority = 4)
 	public void CheckForDelivery() throws InterruptedException {
-		Reporter.log("Check for Delivery Test case Started Successfully");
+		Reporter.log("Check for Delivery");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -96,14 +97,12 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 		objProductDescriptionPageObject.clickEnterPincodebtn();
 		objProductDescriptionPageObject.clickPincodeTxt("560068");
 		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		// objAndroidGenericMethods.scrollToText(aDriver, "CHECK DELIVERY");
-		// objProductDescriptionPageObject.CheckDeliverOption("560068");
 		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
 	}
 
 	@Test(priority = 5)
 	public void MoveToBag() throws InterruptedException {
-		Reporter.log("add ProductToBag Test case Started Successfully");
+		Reporter.log("MoveToBag");
 		// objAndroidGenericMethods.scrollToText(aDriver, "GO TO BAG");
 		objProductDescriptionPageObject.clickGoToBag();
 
@@ -111,7 +110,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 
 	@Test(priority = 6)
 	public void ApplyCoupon() throws InterruptedException {
-		Reporter.log("Apply Coupan Test case Started Successfully");
+		Reporter.log("Apply Coupon");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
@@ -120,14 +119,14 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO {
 
 	@Test(priority = 8)
 	public void BuyOneGetOne() throws InterruptedException {
-		Reporter.log("BuyOneGet One Test case Started Successfully");
+		Reporter.log("BuyOneGet");
 		objAddCartPageObject.clickPlaceOrder();
 
 	}
 
 	@Test(priority = 9)
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("AddNewAddress case Started Successfully");
+		Reporter.log("AddNewAddress");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();

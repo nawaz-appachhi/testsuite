@@ -45,10 +45,10 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 	
 	String testName = "VEGASF_73";
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_73_START=====================");
 
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -68,7 +68,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		//objHomePageObject.clickBigBanner(5);
+	Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.verifySearchText();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
@@ -77,6 +77,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 	//	objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -86,6 +87,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 
 	@Test(priority = 5)
 	public void ShoppingBag() throws InterruptedException {
+		Reporter.log("ShoppingBag");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
@@ -94,18 +96,20 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 
 	@Test(priority = 6)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckoutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	
 	@Test(priority=7)
-	public void Payment() {
+	public void PaymentWithCOD() {
+		Reporter.log("PaymnetWithCOD");
 		objPaymentPageObject.verifyPaymentHeader(); //Assertion
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
 		} catch (Exception e) {
-			Reporter.log("COD Option is not enabled for the that amoutn");
+			Reporter.log("COD Option is not enabled for the that amount");
 		}
 	}
 

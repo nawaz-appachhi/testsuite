@@ -1,15 +1,4 @@
 package com.automation.mobile.Android.apps.TestScript;
-//App(Android, IOS, PWA, Web App)
-//Email registered User
-//Home Page
-//Search - Autosuggest - Brand Profile (Search for a brand like Nike, Roadster)
-//Filter
-//Add to bag
-//Show Similar
-//Gift wrap
-//Apply Personalized Coupons	'
-//Edit address
-//Saved Cards
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -56,8 +45,9 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	
 	String testName = "VEGASF_172"; 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_172_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -74,14 +64,16 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		objWishListPageObject.resetWishlist(); 
 	}
 	@Test(priority = 3)
-	public void searchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 5)
-	public void addProductToBag() throws InterruptedException {
+	public void AddProductToBag() throws InterruptedException {
+		Reporter.log("AddProductToBag");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice(); 
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -90,7 +82,8 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	}
   
 	@Test(priority = 6)
-	public void placeOrder() throws InterruptedException {
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PlaceOrder");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
@@ -109,6 +102,7 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	
 	@Test(priority = 8)
 	public void checkout() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOut");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.editAddress();
@@ -116,6 +110,7 @@ public class VEGASF_172_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	}
 	@Test(priority = 9)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymentWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

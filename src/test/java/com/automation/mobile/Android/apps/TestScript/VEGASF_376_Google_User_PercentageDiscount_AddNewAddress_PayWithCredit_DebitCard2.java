@@ -28,10 +28,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
 /**
- * @author 300021280 Sneha Google registered user - Login Home Page Search
- *         (using a keyword in the Golden Set) Add to Bag Verify Product Code
- *         Move to bag from wishlist Place Order Percentage Discount Add New
- *         address - Home Payment : Credit/Debit Card
+ * @author 300021280 Sneha 
  * 
  */
 public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCredit_DebitCard2 {
@@ -55,15 +52,6 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_376_START=====================");
 		objLoginPageObject.clickFirstLogin();
-		// objLoginPageObject.clickOnGoogleSignUpOption();
-		// objLoginPageObject.clickOnUseAnotherAccount();
-		// objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName,
-		// "UserName"));
-		// objLoginPageObject.AppEmailNextButton();
-		// objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName,
-		// "Password"));
-		// objLoginPageObject.AppPasswordNextButton(); 
-		// objLoginPageObject.clickOnAgree();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -90,8 +78,8 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 		
 	}
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -101,7 +89,7 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 
 	@Test(priority = 5)
 	public void wishlistPage() throws InterruptedException {
-		Reporter.log("wishlistPage");
+		Reporter.log("WishlistPage");
 		objWishlistPageObject.verifyWishlistIcon();
 		objWishlistPageObject.clickMoveToBag();
 		objWishlistPageObject.clickSizeWishList();
@@ -112,8 +100,8 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	}
 
 	@Test(priority = 6)
-	public void addCartPage_ApplyCoupon() throws Exception {
-		Reporter.log("addCartPage_ApplyCoupon");
+	public void AddCartPage_ApplyCoupon() throws Exception {
+		Reporter.log("AddCartPage_ApplyCoupon");
 //		objProductListPageObject.clickOkButton();  //no need to apply if reset bag is added
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -123,6 +111,7 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	}
 	@Test(priority = 7)
 	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddNewAddress_Home");
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
@@ -136,13 +125,10 @@ public class VEGASF_376_Google_User_PercentageDiscount_AddNewAddress_PayWithCred
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
 			String screenshotPath_) throws InterruptedException, MalformedURLException {
-		// create Excel Reference
 
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("deviceName_", deviceName_);
 		params.put("UDID_", UDID_);

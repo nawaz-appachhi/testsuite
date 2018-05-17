@@ -1,15 +1,4 @@
 package com.automation.mobile.Android.apps.TestScript;
-
-//Facebook registered user
-//Home Page
-//Search - Autosuggest - Brand Profile (Search for a brand like Nike, Roadster)
-//Sort Product
-//View Similar Products
-//Empty Wishlist
-//Apply Coupon
-//Click for offer
-//Add New address - Office
-//Payment : Net Banking
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,11 +49,8 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_378_START=====================");
-		Reporter.log("LoginWithFacebook Test case Started Successfully");
+		Reporter.log("LoginWithFacebook");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -91,8 +77,8 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	}
 
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -101,16 +87,16 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	}
 
 	@Test(priority = 5)
-	public void wishlistPage() throws InterruptedException {
-		Reporter.log("wishlistPage");
+	public void WishlistPage() throws InterruptedException {
+		Reporter.log("WishlistPage");
 		objProductDescriptionPageObject.clickWishListbtn();
 		objWishListPageObject.removeAllItemsFromWishlist();
 		objWishListPageObject.clickBagBtn();
 	}
 
 	@Test(priority = 6)
-	public void addCartPage_ApplyCoupon() throws InterruptedException {
-		Reporter.log("addCartPage_ApplyCoupon");
+	public void AddCartPage_ApplyCoupon() throws InterruptedException {
+		Reporter.log("AddCartPage_ApplyCoupon");
 	//	objProductListPageObject.clickOkButton();  //no meed to apply if reset bag is added
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
@@ -127,8 +113,8 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	}
 
 	@Test(priority = 8)
-	public void PaymentWithNetBanking() throws InterruptedException {
-		Reporter.log("PaymentWithNetBanking");
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}
@@ -136,12 +122,9 @@ public class VEGASF_378_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithCoD2 
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

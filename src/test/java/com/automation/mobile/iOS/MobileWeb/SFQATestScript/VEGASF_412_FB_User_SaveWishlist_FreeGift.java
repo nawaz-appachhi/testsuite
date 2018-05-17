@@ -136,10 +136,10 @@ public class VEGASF_412_FB_User_SaveWishlist_FreeGift {
 		Reporter.log("SelectSizeLink test case started successfully");
 		System.out.println("Select SizeLink!");
 //		objPDPageObject.clickFirstProductSearchResult();
+        objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.clickOnSizeChart();
 		objPDPageObject.clickOnCloseSizeChartButton();
@@ -152,15 +152,15 @@ public class VEGASF_412_FB_User_SaveWishlist_FreeGift {
 	public void GoToCart() throws InterruptedException {
 		Reporter.log("GoToCart test case started successfully");
 		System.out.println("GoToCart!");
-		objBagPageObjects.clickOnViewDetails();
-		objBagPageObjects.clickToAddMoreFromWishlist();
-		objWishlistPageObject.VerifyWishlistPageTitle();
-		objWishlistPageObject.VerifyProductTitle();
-		objWishlistPageObject.VerifyDiscountedPrice();
-		objWishlistPageObject.ClickOnMoveToBag();
-		objWishlistPageObject.ClickSizeButtons();
-		objWishlistPageObject.ClickOnDoneButton();
-		objWishlistPageObject.clickOnCartFromWishlist();
+		//objBagPageObjects.clickOnViewDetails();
+		//objBagPageObjects.clickToAddMoreFromWishlist();
+		//objWishlistPageObject.VerifyWishlistPageTitle();
+//        objWishlistPageObject.VerifyProductTitle();
+//        objWishlistPageObject.VerifyDiscountedPrice();
+//        objWishlistPageObject.ClickOnMoveToBag();
+//        objWishlistPageObject.ClickSizeButtons();
+//        objWishlistPageObject.ClickOnDoneButton();
+		//objWishlistPageObject.clickOnCartFromWishlist();
 
 	}
 

@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.ini4j.InvalidFileFormatException;
-import org.openqa.selenium.Dimension;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -50,8 +49,9 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 
 	String testName = "VEGASF_67";
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_67_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -69,6 +69,7 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 	}
 	@Test(priority = 3)
 	public void HomePage() throws Exception {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -76,7 +77,8 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 
 
 	@Test(priority = 4)
-	public void PDP() throws Exception {
+	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("Product Description Page");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -95,6 +97,7 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 
 	@Test(priority = 5)
 	public void Checkout() throws Exception {
+		Reporter.log("CheckOutPage");
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
@@ -103,7 +106,8 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 6)
-		public void paymentPage() throws Exception {
+		public void PaymentWithCreditCard() throws Exception {
+		Reporter.log("PaymentWithCreditCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

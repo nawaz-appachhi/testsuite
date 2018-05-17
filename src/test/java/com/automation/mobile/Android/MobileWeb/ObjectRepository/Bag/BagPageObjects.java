@@ -343,8 +343,7 @@ public class BagPageObjects {
 	 * @throws InterruptedException
 	 */
 	public void changeSize() {
-		objAndroidGenericMethods.scrollDown(aDriver.findElementByClassName("icon"), 10);
-//		aDriver.findElementByClassName("icon").click();
+		aDriver.findElementByClassName("icon").click();
 		List<AndroidElement> selectSize = aDriver.findElementsByXPath(".//div[@class='sizes']/button");
 		for (AndroidElement i : selectSize) {
 			String att = i.getAttribute("class");
@@ -496,7 +495,6 @@ public class BagPageObjects {
 	 * Modified By:Aishurya:Changed string parameter,which is being used in reporing
 	 */
 	public void ClickOnGotoWishlist() {
-		objAndroidGenericMethods.waitDriverWhenReady(getGotoWishListlnk(), "getGotoWishListlnk");
 		objAndroidGenericMethods.clickOnAndroidElement(getGotoWishListlnk(), "GotoWishListlnk");
 	}
 
@@ -615,7 +613,6 @@ public class BagPageObjects {
 			} else {
 				ClickRemoveLink();
 				objAndroidGenericMethods.backKeyButton();
-				clickOnMyntraLogo();
 			}
 		} catch (Exception e) {
 		}

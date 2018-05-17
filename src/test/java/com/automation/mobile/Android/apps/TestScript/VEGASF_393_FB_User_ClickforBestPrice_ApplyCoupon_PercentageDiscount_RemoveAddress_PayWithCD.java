@@ -29,18 +29,6 @@ import io.appium.java_client.android.AndroidKeyCode;
 
 /**
  * @author 300021280
- * 
- * Facebook registered user
- * 
- *Home Page
- *List page to PDP navigation
- *Add to Bag
- *Click for best Price (Coupon)
- *Show Similar Products
- *Apply Coupon
- *Percentage Discount
- *Remove address
- *Payment : Phone Pe 
  *
  */
 public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount_RemoveAddress_PayWithCD {
@@ -61,13 +49,10 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	
 	String testName = "VEGASF_393";  
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_393_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn(); 
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -86,16 +71,16 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	}
 
 	@Test(priority = 3)
-	public void searchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("searchBrand Test case Started Successfully");
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	
 	@Test(priority = 5)
-	public void addProductToBag() throws InterruptedException {
-		Reporter.log("addProductToBag Test case Started Successfully");
+	public void AddProductToBag() throws InterruptedException {
+		Reporter.log("AddProductToBag ");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
         objProductDescriptionPageObject.clickAddToBagbtn();
@@ -107,7 +92,7 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 
 	@Test(priority = 6)
 	public void placeOrder() throws InterruptedException {
-		Reporter.log("addProductFromBag Test case Started Successfully");
+		Reporter.log("PlaceOrder");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -115,7 +100,8 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 		objAddCartPageObject.clickPlaceOrder();
 	}
 	@Test(priority = 7)
-	public void checkout() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log(" Checkout");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
@@ -123,7 +109,8 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	}
 	@Test(priority = 8)
 	public void PaymenWithMyntCOD() {
-		Reporter.log("PaymenWithMynt+COD Test case Started Successfully");
+		
+		Reporter.log("PaymenWithMynt+COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 
@@ -131,12 +118,9 @@ public class VEGASF_393_FB_User_ClickforBestPrice_ApplyCoupon_PercentageDiscount
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

@@ -118,11 +118,11 @@ public class VEGASF_283_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 		Reporter.log("NavigateFromPLPtoPDP test case started successfully");
 		System.out.println("NavigateFromPLPtoPDP!");
 //		objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
 		objPDPageObject.assertProductStrikedPrice();
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();
@@ -185,6 +185,7 @@ public class VEGASF_283_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

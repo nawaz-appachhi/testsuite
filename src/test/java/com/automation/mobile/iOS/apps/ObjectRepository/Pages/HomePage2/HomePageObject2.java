@@ -159,18 +159,22 @@ public class HomePageObject2 {
 	}
 
 	public List<IOSElement> getBigBanner() {
+		objiOSGenericMethods.CheckIOSElementsListFound(bigBanner, "bigBanner");
 		return bigBanner;
 	}
 
 	public List<IOSElement> getNestedBanner() {
+		objiOSGenericMethods.CheckIOSElementsListFound(nestedBanner, "nestedBanner");
 		return nestedBanner;
 	}
 
 	public List<IOSElement> getTopButtons() {
+		objiOSGenericMethods.CheckIOSElementsListFound(topButtons, "topButtons");
 		return topButtons;
 	}
 
 	public IOSElement getSearchBox() {
+		objiOSGenericMethods.CheckIOSElementFound(searchBox, "searchBox");
 		return searchBox;
 	}
 
@@ -179,6 +183,7 @@ public class HomePageObject2 {
 	}
 
 	public IOSElement getCategories() {
+		objiOSGenericMethods.CheckIOSElementFound(Categories, "Categories");
 		return Categories;
 	}
 
@@ -200,29 +205,29 @@ public class HomePageObject2 {
 	/******************* methods ****************/
 
 	public void clickOnHomeButton() {
-		objiOSGenericMethods.waitForElementVisibility(getHomeButton());
-		if (getHomeButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getHomeButton(), "Successfully click on home button");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getHomeButton());
+		// if (getHomeButton().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getHomeButton(), "Home Button");
+		// }
 		// objiOSGenericMethods.acceptAlert();
 	}
 
 	public void clickOnBagIcon() {
-		if (getBagIcon().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "Successfully click on BagIcon");
-		}
+		// if (getBagIcon().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "Bag Icon");
+		// }
 	}
 
 	public void clickOnRemoveBtn() {
-		if (getRemoveBtn().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getRemoveBtn(), "Successfully click on Remove");
-		}
+		// if (getRemoveBtn().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getRemoveBtn(), "Remove");
+		// }
 	}
 
 	public void clickOnRemoveBtn2() {
-		if (getRemoveBtn2().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getRemoveBtn2(), "Successfully click on Remove");
-		}
+		// if (getRemoveBtn2().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getRemoveBtn2(), "Remove");
+		// }
 	}
 
 	/**
@@ -230,9 +235,9 @@ public class HomePageObject2 {
 	 */
 
 	public void clickOnSearchButton() {
-		if (getSearch().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSearch(), "Successfully click on search button");
-		}
+		// if (getSearch().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getSearch(), "Search Button");
+		// }
 		try {
 			if (tapAndHold.isDisplayed()) {
 				tapAndHold();
@@ -267,7 +272,7 @@ public class HomePageObject2 {
 	}
 
 	public void pressNikeRunningShoes() {
-		objiOSGenericMethods.clickOnIOSElement(getImage1(), "Successfully click on image1 button");
+		objiOSGenericMethods.clickOnIOSElement(getImage1(), "Image 1");
 	}
 
 	public void tapAndHold() {
@@ -309,7 +314,7 @@ public class HomePageObject2 {
 	}
 
 	public void pressEnter() {
-		objiOSGenericMethods.clickOnIOSElement(getNike(), "Successfully click on nike button");
+		objiOSGenericMethods.clickOnIOSElement(getNike(), "Nike Button");
 	}
 
 	public void setSearchBox(String Pname) throws InterruptedException {
@@ -353,11 +358,11 @@ public class HomePageObject2 {
 	}
 
 	public void clickOnCategories() {
-		objiOSGenericMethods.clickOnIOSElement(getCategories(), "Successfully click on Categories");
+		objiOSGenericMethods.clickOnIOSElement(getCategories(), "Categories");
 	}
 
 	public void clickOnRemoveOutOfStock() {
-		objiOSGenericMethods.clickOnIOSElement(getRemoveOutOfStock(), "Successfully click on Categories");
+		objiOSGenericMethods.clickOnIOSElement(getRemoveOutOfStock(), "Remove Out of Stock Products");
 	}
 
 	/**
@@ -372,7 +377,8 @@ public class HomePageObject2 {
 	public void emptyBag() throws InterruptedException {
 		objiOSGenericMethods.waitForElementVisibility(getBagIcon());
 		if (getBagIcon().isDisplayed()) {
-			getBagIcon().click();
+//			getBagIcon().click();
+			objiOSGenericMethods.clickOnIOSElement(getBagIcon(), "Bag Icon");
 		}
 		try {
 			if (tapAndHold.isDisplayed()) {
@@ -391,7 +397,7 @@ public class HomePageObject2 {
 			System.out.println("No Out of stock item to remove!");
 		}
 
-		 objiOSGenericMethods.swipeDown(100, 1);
+		objiOSGenericMethods.swipeDown(100, 1);
 		try {
 			if (getRemoveBtn().isDisplayed()) {
 				clickOnRemoveBtn();

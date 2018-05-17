@@ -9,7 +9,6 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -25,16 +24,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPage
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-/*Facebook registered user - Login
-Home Page
-Search (using a keyword in the Golden Set)
-Filter Products
-View Similar Products
-Move to bag
-Gift wrap
-Buy One get One
-View Details
-Payment : Mynt+ COD*/
 public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 	
 	GlobalVariables objGlobalVariables;
@@ -58,10 +47,6 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 		System.out.println("=====================VEGASF_380_START=====================");
 		Reporter.log("LoginWithFacebook Test case Started Successfully");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"),
-//				AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -110,7 +95,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 	}
 	@Test(priority = 6)
 	public void ViewDetails() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("BuyOneGet One Test case Started Successfully");
+		Reporter.log(" ViewDetails");
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
@@ -120,7 +105,8 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 {
 	}
 
 	@Test(priority = 7)
-	public void PaymentWithWallet() throws InterruptedException {
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymnetWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

@@ -185,6 +185,7 @@ public class VEGASF_284_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

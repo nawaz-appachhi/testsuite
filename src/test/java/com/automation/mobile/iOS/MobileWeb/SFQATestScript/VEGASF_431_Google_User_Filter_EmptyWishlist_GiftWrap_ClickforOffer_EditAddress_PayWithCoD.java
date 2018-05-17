@@ -205,6 +205,7 @@ public class VEGASF_431_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentageObjects.ClickOnCOD();
 
 	}

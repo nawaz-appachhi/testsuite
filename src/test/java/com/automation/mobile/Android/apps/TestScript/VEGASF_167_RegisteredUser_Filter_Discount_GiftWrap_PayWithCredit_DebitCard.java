@@ -59,9 +59,9 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 
 	String testName = "VEGASF_167";
 	@Test(priority = 1)
-	public void LoginInApp() throws Exception {
+	public void LoginWithEmail() throws Exception {
 		System.out.println("=====================VEGASF_167_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -81,13 +81,15 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 	
 	@Test(priority = 3)
 	public void HomePage() throws Exception {
+		Reporter.log("HamoePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	
 	@Test(priority = 5)
-	public void PDP() throws Exception {
+	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 //		objProductDescriptionPageObject.assertProductStrikedPrice();
@@ -99,6 +101,7 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 	}
 	@Test(priority = 6)
 	public void Checkout() throws Exception {
+		Reporter.log("CheckoutPage");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 	    objAddCartPageObject.verifyWishlistIcon();    //Assertion
@@ -111,7 +114,8 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 		objCheckOutPageObject.clickContinue(); 
 	}
 	@Test(priority = 7)
-	public void paymentPage() throws Exception {
+	public void PaymentWithCreitCard() throws Exception {
+		Reporter.log("PaymentWithCreitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 		

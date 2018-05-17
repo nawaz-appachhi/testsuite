@@ -31,8 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-// conditional Discount and payment method 
-
 public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 
 	GlobalVariables objGlobalVariables;
@@ -52,18 +50,13 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 	String testName = "VEGASF_381"; 
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_381_START=====================");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnPasswordNextButton1();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -99,7 +92,7 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 
 	@Test(priority = 5)
 	public void WishListPage() throws InterruptedException {
-		Reporter.log("PDP_CheckSimilarProduct");
+		Reporter.log("WishListPage");
 		objWishListPageObject.removeAllItemsFromWishlist();
 		objWishListPageObject.verifyWishlistIcon(); // Assertion: verifying "Wishlist" Header
 		objWishListPageObject.clickBagBtn();
@@ -120,7 +113,8 @@ public class VEGASF_381_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCoD2 {
 	}
 
 	@Test(priority = 7)
-	public void Payment() {
+	public void PaymentWithCreditDebitCard() {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

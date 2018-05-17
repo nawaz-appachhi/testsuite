@@ -193,6 +193,7 @@ public class VEGASF_270_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 //		objPaymentPageObjects.clickOnNetBanking();
 //		objPaymentPageObjects.clickFirstNetbankingOption();
 //		objPaymentPageObjects.clickNetbankingPayNowButton();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

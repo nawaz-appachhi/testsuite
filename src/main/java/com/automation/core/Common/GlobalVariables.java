@@ -106,11 +106,11 @@ public class GlobalVariables {
 
 	public static final String ANDROID_PWA = "false";
 
-	public static final String ANDROID_MWEB = "true";
+	public static final String ANDROID_MWEB = "false";
 
 	public static final String iOS_PWA = "false";
 
-	public static final String iOS_MWEB = "false";
+	public static final String iOS_MWEB = "true";
 
 	public static final String HUB_URL = "http://127.0.0.1:4723/wd/hub";
 

@@ -11,7 +11,6 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.AppiumServerUtils;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -48,8 +47,9 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
  
 	@Test(priority = 1)
 	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmail Test case Started Successfully");
+		
 		System.out.println("=====================VEGASF_63_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -68,7 +68,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmail Test case Started Successfully");
+		Reporter.log("searchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -76,7 +76,7 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 	
 	@Test(priority = 4)
 	public void SaveProduct() throws Exception {
-		Reporter.log("SaveProduct Test case Started Successfully");
+		Reporter.log("SaveProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -84,27 +84,28 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 
 	@Test(priority = 5)
 	public void CheckSimilarProduct() throws Exception {
-		Reporter.log("CheckSimilarProduct Test case Started Successfully");
+		Reporter.log("CheckSimilarProduct");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.verifySize_selector("size");
 	}
 
 	@Test(priority = 6)
 	public void OpenSizeChart() throws Exception {
-		Reporter.log("OpenSizeChart Test case Started Successfully");
+		Reporter.log("OpenSizeChart");
 		objProductDescriptionPageObject.clickSizeChartbtn();
 		objProductDescriptionPageObject.clickCloseSizeChartbtn();
 		objProductDescriptionPageObject.selectASize();
 	}
 
 	@Test(priority = 7)
-	public void addProductBag() throws Exception {
+	public void AddProductBag() throws Exception {
+		Reporter.log("AddProductToBag");
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
 	@Test(priority = 8)
 	public void ApplyGenericCoupon() throws Exception {
-		Reporter.log("ApplyGenericCoupon Test case Started Successfully");
+		Reporter.log("ApplyGenericCoupon");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
@@ -115,15 +116,15 @@ public class VEGASF_63_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithCo
 
 	@Test(priority = 9)
 	public void EditAddress() throws Exception {
-		Reporter.log("EditAddress Test case Started Successfully");
+		Reporter.log("EditAddress");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 
 	@Test(priority = 10)
-	public void paymentPage() throws InterruptedException {
-		Reporter.log("paymentPage Test case Started Successfully");
+	public void PaymentWithCOD() throws InterruptedException {
+		Reporter.log("PaymentPage");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

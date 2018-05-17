@@ -66,28 +66,32 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 		objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
-	public void searchBrand() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
-	public void enterProduct() throws InterruptedException {
+	public void EnterProduct() throws InterruptedException {
+		Reporter.log("EnterProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.assertProductDiscount();
 	}
   
 	@Test(priority = 5)
-	public void addProductToBag() throws InterruptedException {
+	public void AddProductToBag() throws InterruptedException {
+		Reporter.log("Add Product to Cart");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 	}
 
 	@Test(priority = 6)
-	public void addProductFromWishlist() throws InterruptedException {
+	public void AddProductFromWishlist() throws InterruptedException {
+		Reporter.log("AddProductFromWishlist");
 		objProductDescriptionPageObject.clickWishListbtn();
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
@@ -96,7 +100,8 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 	}
 
 	@Test(priority = 7)
-	public void placeOrder() throws InterruptedException {
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PLACEORDER");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon(); 
@@ -105,9 +110,17 @@ public class VEGASF_68_RegisteredUser_DiscountConcious_PayingWithCOD {
 
 	@Test(priority = 9)
 	public void addAdress() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("Add Adderess");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
+		
+	}
+		
+
+		@Test(priority = 10)
+		public void PaymnetWithCOD() throws InterruptedException, InvalidFileFormatException, IOException {
+			Reporter.log("Add Adderess");	
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

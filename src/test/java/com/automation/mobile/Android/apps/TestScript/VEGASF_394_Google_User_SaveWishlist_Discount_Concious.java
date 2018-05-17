@@ -26,15 +26,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-//Google registered user - Login
-//Home Page
-//Search (using menu item e.g. Men -> Topwear - T-Shirts
-//Save Product
-//Verify Product Code
-//Move to bag
-//Place Order
-//Percentage Discount
-//Remove address
 public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 
 	GlobalVariables objGlobalVariables;
@@ -57,15 +48,8 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_394_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
 		objLoginPageObject.clickpopUp();
@@ -83,14 +67,14 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	public void SaveProduct() throws InterruptedException {
-		Reporter.log("SaveProduct Test case Started Successfully");
+		Reporter.log("SaveProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -98,7 +82,7 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 
 	@Test(priority = 5)
 	public void MoveToBag() throws InterruptedException {
-		Reporter.log("MoveToBag Test case Started Successfully");
+		Reporter.log("MoveToBag");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 		//Verify Product Code
@@ -107,14 +91,14 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 
 	@Test(priority = 6)
 	public void PercentageDiscount() throws InterruptedException {
-		Reporter.log("ConditionalDiscount Test case Started Successfully");
+		Reporter.log("ConditionalDiscount");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 	}
 
 	@Test(priority = 7)
 	public void PlaceOrder() throws InterruptedException {
-		Reporter.log("PlaceOrder Test case Started Successfully");
+		Reporter.log("PlaceOrder");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
@@ -122,6 +106,7 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 	
 	@Test(priority = 8)
 	public void RemoveExistingAddress() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("RemoveExistingAddress");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.removeAddress();
 	}
@@ -130,12 +115,9 @@ public class VEGASF_394_Google_User_SaveWishlist_Discount_Concious {
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

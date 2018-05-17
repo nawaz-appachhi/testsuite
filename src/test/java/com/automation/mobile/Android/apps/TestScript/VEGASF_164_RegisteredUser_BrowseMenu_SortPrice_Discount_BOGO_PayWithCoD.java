@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
@@ -47,10 +46,9 @@ public class VEGASF_164_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 	String testName = "VEGASF_164";
 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_164_START=====================");
-		Reporter.log("LoginInApp");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));

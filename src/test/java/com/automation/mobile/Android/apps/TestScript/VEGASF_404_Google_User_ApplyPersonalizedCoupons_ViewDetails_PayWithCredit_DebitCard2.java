@@ -67,17 +67,10 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_404_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin(); 
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.GoogleAcceptButton();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -101,7 +94,8 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	}
 	
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException {
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.assertProductDiscount();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -120,7 +114,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	
 	@Test(priority = 6)
 	public void addCartPage_ApplyCoupon() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("ApplyPersonalizedCoupons Test case Started Successfully");
+		Reporter.log("ApplyPersonalizedCoupons");
 //		objProductListPageObject.clickOkButton();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
 		objAddCartPageObject.ClickCouponCancelbtn();
@@ -128,7 +122,7 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	
 	@Test(priority = 7)
 	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("PlaceOrder Test case Started Successfully");
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.removeAndAddAddress();
@@ -136,8 +130,8 @@ public class VEGASF_404_Google_User_ApplyPersonalizedCoupons_ViewDetails_PayWith
 	}
 	
 	@Test(priority = 8)
-	public void PaymentWithManualGC_Online() {
-		Reporter.log("PaymentWithManualGC_Online");
+	public void PaymentWithCreditDebitCard() {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

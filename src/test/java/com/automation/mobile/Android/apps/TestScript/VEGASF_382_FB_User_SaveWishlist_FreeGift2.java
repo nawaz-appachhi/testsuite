@@ -28,15 +28,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 /**
  * @author 300021280 -Sneha
- *Facebook registered user - Login
- *Home Page
- *Search - Using Autosuggest (use any query from Golden Set)
- *Save Product
- *Filter Discount
- *View Size Chart
- *Add more from wishlist
- *Free Gift
- *Remove address
  */
 
 public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
@@ -59,9 +50,6 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_382_START=====================");
 		objLoginPageObject.clickFirstLogin();
-		//objLoginPageObject.clickFacebookbtn();
-		//objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-		//objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -87,6 +75,7 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 
 	@Test(priority = 4)
 	public void PDP_SelectSizeChart() throws InterruptedException {
+		Reporter.log(" PDP_SelectSizeChart");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -103,6 +92,7 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 
 	@Test(priority = 5)
 	public void CheckDiscount() throws InterruptedException {
+		Reporter.log("CheckOutPage");
 		//objProductListPageObject.clickOkButton();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
 		objAddCartPageObject.ClickCouponCancelbtn();
@@ -110,6 +100,7 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 	}
 	@Test(priority = 6)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("RemoveAddress");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -118,9 +109,9 @@ public class VEGASF_382_FB_User_SaveWishlist_FreeGift2 {
 	    @Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 		@BeforeTest
 		public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-			// create Excel Reference
+		
 			objGlobalVariables = new GlobalVariables();
-			// objExcelUtilities = new ExcelUtils();
+			
 			objAppiumServer = new AppiumServer();
 			objMobileDrivers = new MobileDrivers();
 			// objAppiumServer.startServer();

@@ -228,6 +228,7 @@ public class PLPageObjects {
 	}
 
 	public List<IOSElement> getFilterDiscountPercent() {
+		objiOSGenericMethods.CheckIOSElementsListFound(filterDiscountPercent, "filterDiscountPercent");
 		return filterDiscountPercent;
 	}
 
@@ -236,7 +237,8 @@ public class PLPageObjects {
 	 * @return
 	 */
 
-	public List<IOSElement> getPiceList() {
+	public List<IOSElement> getPriceList() {
+		objiOSGenericMethods.CheckIOSElementsListFound(listOfPrice, "listOfPrice");
 		return listOfPrice;
 	}
 
@@ -304,60 +306,64 @@ public class PLPageObjects {
 		return applyFilter;
 	}
 
+	public IOSElement getPriceButton() {
+		objiOSGenericMethods.CheckIOSElementFound(priceButton, "priceButton");
+		return priceButton;
+	}
+
 	/************* methods ********************/
 
 	public void clickOnSort() {
-		objiOSGenericMethods.clickOnIOSElement(getSort(), "Successfully click on sort button");
+		objiOSGenericMethods.clickOnIOSElement(getSort(), "Sort Button");
 	}
 
 	public void clickOnFirstproductofPLP() {
-		objiOSGenericMethods.clickOnIOSElement(getFirstproductofPLP(), "Successfully click on First product of PLP");
+		objiOSGenericMethods.clickOnIOSElement(getFirstproductofPLP(), "First Product of PLP");
 	}
 
 	public void clickOnSearchOnPLP() {
-		if (getSearchOnPLP().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSearchOnPLP(), "Successfully click on First product of PLP");
-		}
+		// if (getSearchOnPLP().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getSearchOnPLP(), "Search Button");
+		// }
 	}
 
 	public void clickOnDiscountSort() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountSort(), "Successfully click on discountSort button");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountSort(), "Discount Sort Button");
 	}
 
 	public void clickOnPopularitySort() {
-		objiOSGenericMethods.clickOnIOSElement(getPopularitySort(), "Successfully click on popularitySort button");
+		objiOSGenericMethods.clickOnIOSElement(getPopularitySort(), "Popularity Sort Button");
 	}
 
 	public void clickOnNewSort() {
-		objiOSGenericMethods.clickOnIOSElement(getNewSort(), "Successfully click on newSort button");
+		objiOSGenericMethods.clickOnIOSElement(getNewSort(), "New Sort Button");
 	}
 
 	public void clickOnPriceHighLowSort() {
-		objiOSGenericMethods.clickOnIOSElement(getPriceHighLowSort(), "Successfully click on priceHighLowSort button");
+		objiOSGenericMethods.clickOnIOSElement(getPriceHighLowSort(), "Price High Low Sort Button");
 	}
 
 	public void clickOnPriceLowHighSort() {
-		objiOSGenericMethods.clickOnIOSElement(getPriceLowHighSort(), "Successfully click on priceLowHighSort button");
+		objiOSGenericMethods.clickOnIOSElement(getPriceLowHighSort(), "Price Low High Sort Button");
 	}
 
 	public void clickOnDeliveryTimeSort() {
-		objiOSGenericMethods.clickOnIOSElement(getDeliveryTimeSort(), "Successfully click on deliveryTimeSort button");
+		objiOSGenericMethods.clickOnIOSElement(getDeliveryTimeSort(), "Delivery Time Sort Button");
 	}
 
 	public void clickOnCancelDeliveryTimeSort() {
-		objiOSGenericMethods.clickOnIOSElement(getCancelDeliveryTimeSort(),
-				"Successfully click on cancelDeliveryTimeSort button");
+		objiOSGenericMethods.clickOnIOSElement(getCancelDeliveryTimeSort(), "Cancel Delivery Time Sort Button");
 	}
 
 	public void clickOnTypePincodeTextField(String pincode) {
-		typePincodeTextField.click();
-		typePincodeTextField.sendKeys(pincode);
+		objiOSGenericMethods.clickOnIOSElement(getTypePincodeTextField(), "Type Pincode Text Field");
+		// getTypePincodeTextField().click();
+		getTypePincodeTextField().sendKeys(pincode);
 		System.out.println("Successfully click on deliveryTime and entered pincode " + pincode);
 	}
 
 	public void clickOnCheckDeliveryTimeSort() {
-		objiOSGenericMethods.clickOnIOSElement(getCheckDeliveryTimeSort(),
-				"Successfully click on checkDeliveryTimeSort button");
+		objiOSGenericMethods.clickOnIOSElement(getCheckDeliveryTimeSort(), "Check Delivery Time Sort Button");
 	}
 
 	/**
@@ -368,11 +374,11 @@ public class PLPageObjects {
 
 		try {
 			objiOSGenericMethods.waitForElementVisibility(getFilter());
-			if (getFilter().isDisplayed()) {
+			// if (getFilter().isDisplayed()) {
 
-				objiOSGenericMethods.clickOnIOSElement(getFilter(), "Successfully click on filter button");
-				// objiOSGenericMethods.click(getFilter());
-			}
+			objiOSGenericMethods.clickOnIOSElement(getFilter(), "Filter Button");
+			// objiOSGenericMethods.click(getFilter());
+			// }
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Filter button is not displayed!");
@@ -380,7 +386,7 @@ public class PLPageObjects {
 	}
 
 	public void clickOnSaveWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveWishlist(), "Successfully click on saveWishlist button");
+		objiOSGenericMethods.clickOnIOSElement(getSaveWishlist(), "Save Wishlist Button");
 	}
 
 	/**
@@ -390,18 +396,19 @@ public class PLPageObjects {
 	public void clickOnBrandNamePLP() throws InterruptedException {
 		// Thread.sleep(1000);
 
-		objiOSGenericMethods.waitForElementVisibility(getBrandNamePLP());
+//		objiOSGenericMethods.waitForElementVisibility(getBrandNamePLP());
 		try {
-			if (getBrandNamePLP().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getBrandNamePLP(), "Successfully click on brandNamePLP button");
-			}
+			// if (getBrandNamePLP().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getBrandNamePLP(), "Brand Name PLP Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("User did not find product!");
 		}
 
 		try {
 			if (getAllowButton().isDisplayed()) {
-				objiOSGenericMethods.click(getAllowButton());
+//				objiOSGenericMethods.click(getAllowButton());
+				objiOSGenericMethods.clickOnIOSElement(getAllowButton(), "Allow Button");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -409,19 +416,19 @@ public class PLPageObjects {
 	}
 
 	public void clickOnPricePLP() {
-		objiOSGenericMethods.clickOnIOSElement(getPricePLP(), "Successfully click on pricePLP button");
+		objiOSGenericMethods.clickOnIOSElement(getPricePLP(), "Price PLP Button");
 	}
 
 	public void clickOnselectProduct() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectProduct(), "Successfully click on pricePLP button");
+		objiOSGenericMethods.clickOnIOSElement(getSelectProduct(), "Price PLP button");
 	}
 
 	public void clickOnDiscountPercent() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountPercent(), "Successfully click on discountPercent button");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountPercent(), "Discount Percent Button");
 	}
 
 	public void clickOnApplyDiscount() {
-		objiOSGenericMethods.clickOnIOSElement(getApplyDiscount(), "Successfully click on applyDiscount button");
+		objiOSGenericMethods.clickOnIOSElement(getApplyDiscount(), "Apply Discount Button");
 	}
 
 	/**
@@ -430,14 +437,12 @@ public class PLPageObjects {
 
 	public void clickOnFilterDiscount() {
 		try {
-			if (getFilterDiscount().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getFilterDiscount(),
-						"Successfully click on filterDiscount button");
-			}
+			// if (getFilterDiscount().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getFilterDiscount(), "Filter Discount Button");
+			// }
 		} catch (Exception e) {
 		}
 	}
-
 
 	public List<IOSElement> ClickOnFilterDiscountPercent(int i) throws InterruptedException {
 		System.err.println("Filter by Discount " + filterDiscountPercent.size());
@@ -449,7 +454,7 @@ public class PLPageObjects {
 	}
 
 	public void clickOnPopularity() {
-		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "Successfully click on popularity button");
+		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "Popularity Button");
 	}
 
 	/**
@@ -475,8 +480,6 @@ public class PLPageObjects {
 			System.out.println("OK button not displayed");
 		}
 	}
-	
-
 
 	public void clickOnProduct(int i) throws InterruptedException {
 
@@ -494,10 +497,11 @@ public class PLPageObjects {
 	}
 
 	public void clickOnPriceButton() {
-		if (priceButton.isDisplayed()) {
-			priceButton.click();
-			System.out.println("User clicked on price button!");
-		}
+		// if (priceButton.isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getPriceButton(), "Price Button");
+		// priceButton.click();
+		System.out.println("User clicked on price button!");
+		// }
 	}
 
 	/**
@@ -505,8 +509,9 @@ public class PLPageObjects {
 	 */
 
 	public void clickOnPrice(int i) {
-		getPiceList().get(i).click();
-		System.out.println("Filter by Price --> " + getPiceList().get(i).getText());
+//		getPriceList().get(i).click();
+		objiOSGenericMethods.clickOnIOSElement(getPriceList().get(i), "Price List");
+		System.out.println("Filter by Price --> " + getPriceList().get(i).getText());
 
 	}
 
@@ -521,15 +526,18 @@ public class PLPageObjects {
 	}
 
 	public void clickOnSelectFirstFilterDiscount() {
-		getselectFirstFilterDiscount().click();
+		objiOSGenericMethods.clickOnIOSElement(getselectFirstFilterDiscount(), "First Filter Discount Button");
+		// getselectFirstFilterDiscount().click();
 	}
 
 	public void clickOnFilterGender() {
-		getFilterGender().click();
+		objiOSGenericMethods.clickOnIOSElement(getFilterGender(), "Filter Gender Button");
+		// getFilterGender().click();
 	}
 
 	public void clickOnFirstFilterGender() {
-		getFirstFilterGender().click();
+		objiOSGenericMethods.clickOnIOSElement(getFirstFilterGender(), "First Filter Gender Button");
+		// getFirstFilterGender().click();
 	}
 
 	/**
@@ -546,7 +554,7 @@ public class PLPageObjects {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 
-				objiOSGenericMethods.click(getApplyFilter());
-			}
+			objiOSGenericMethods.click(getApplyFilter());
+		}
 	}
 }

@@ -121,11 +121,11 @@ public class VEGASF_411_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC {
 		System.out.println("AddtoBag!");
 //		objPLPageObjects.clickToSaveToWishlist();
 //		objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();

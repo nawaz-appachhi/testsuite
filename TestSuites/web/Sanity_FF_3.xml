@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity 3">
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	
+  <test name="VEGASF_62_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_62_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD" />
+		</classes>
+	</test>    
+
+	 <test name="VEGASF_130_RegisteredUser_BrandConcious_NewAddress_PayWithDC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_130_RegisteredUser_BrandConcious_NewAddress_PayWithDC" />
+		</classes>
+	</test> 
+  
+	  <test name="VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC - Test" > 
+		<classes> 
+			<class name="com.automation.web.TestScripts.VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC" /> 
+		</classes> 
+	</test>  
+
+  <test name="VEGASF_132_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD - Test" >
+		<classes> 
+ 			<class name="com.automation.web.TestScripts.VEGASF_132_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD" /> 
+ 		</classes> 
+ 	</test>  
+
+	<test name="VEGASF_133_RegisteredUser_PDPToWishlist_Checkout_PayWithDC - Test" >
+		<classes>
+			<class name="com.automation.web.TestScripts.VEGASF_133_RegisteredUser_PDPToWishlist_Checkout_PayWithDC" />
+		</classes>
+	</test> 
+
+</suite>

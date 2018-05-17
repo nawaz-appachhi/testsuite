@@ -54,6 +54,7 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_383_START=====================");
+		Reporter.log("LoginWithfacebook");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -73,7 +74,8 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 	}
 
 	@Test(priority = 3)
-	public void ListPageToPDP() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -81,6 +83,7 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 
 	@Test(priority = 4)
 	public void CheckForDeliveryOption() throws InterruptedException {
+		Reporter.log("CheckForDeliveryOption");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice(); // Assertion
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -94,6 +97,7 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 
 	@Test(priority = 5)
 	public void MoveToBag() throws InterruptedException {
+		Reporter.log("MoveToBag");
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
 		objWishListPageObject.clickDoneWishListbtn();
@@ -101,18 +105,17 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 
 	@Test(priority = 6)
 	public void RemoveProduct() throws InterruptedException {
+		Reporter.log("RemoveFromWishlist");
 		objWishListPageObject.removeAllItemsFromWishlist();
-		objWishListPageObject.verifyWishlistIcon(); // Assertion: verifying
-													// "Wishlist" Header
+		objWishListPageObject.verifyWishlistIcon(); // Assertion: verifying,"Wishlist" Header											
 		objWishListPageObject.clickBagBtn();
 	}
 
 	@Test(priority = 7)
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddNewAddress_Office");
 		// objProductListPageObject.clickOkButton();
-		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing
-														// "SHOPPINGBAF" Header
-		// buy one get one
+		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue(); 
@@ -120,7 +123,8 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 	}
 
 	@Test(priority = 8)
-	public void Payment() {
+	public void PaymentWithCreditDebitCard() {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

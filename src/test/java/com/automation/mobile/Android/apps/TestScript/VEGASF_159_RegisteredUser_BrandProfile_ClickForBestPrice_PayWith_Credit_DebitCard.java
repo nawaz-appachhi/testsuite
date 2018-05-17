@@ -65,7 +65,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	@Test(priority = 1)
 	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_159_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -87,6 +87,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -95,6 +96,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 
 	@Test(priority=4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");  // Assertion
 		objProductDescriptionPageObject.assertProductPrice();// Assertion
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -105,9 +107,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	}
 	@Test(priority=5)
 	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		/*
-		 * Unable to find Free Gifts waiting for test data
-		 */
+		Reporter.log("AddCartPage");
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); //Assertion
 		objCheckOutPageObject.CheckAddress();
@@ -115,7 +115,7 @@ public class VEGASF_159_RegisteredUser_BrandProfile_ClickForBestPrice_PayWith_Cr
 	}
 	@Test(priority=6)
 	public void PaymentPage() throws InterruptedException {
-		
+		Reporter.log("PaymentPage");
 		//objPaymentPageObject.clickCheckForEligibility();
 		objPaymentPageObject.verifyPaymentHeader(); //Assertion:
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");	

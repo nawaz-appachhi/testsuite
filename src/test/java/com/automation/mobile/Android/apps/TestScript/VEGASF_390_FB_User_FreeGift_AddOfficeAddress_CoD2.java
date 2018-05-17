@@ -29,17 +29,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 /**
  * @author 300021278 -Rakesh
  */
-/*Shopper:
-Facebook registered user
-Home Page
-Search (using menu item e.g. Men -> Topwear - T-Shirts
-Filter Product
-View Similar Products
-Move to bag
-Place Order
-Free Gift
-Add New address - Office
-Payment : EMI*/
+
 public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 { 
 
 	GlobalVariables objGlobalVariables;
@@ -66,10 +56,6 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		Thread.sleep(5000);
-		//objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-		//objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -85,16 +71,16 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 	}
 
 	@Test(priority = 3)
-	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("searchBrand Test case Started Successfully");
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 	
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -103,20 +89,23 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 {
 	}
 	
 	@Test(priority = 5)
-	public void placeOrder() throws InterruptedException {
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PlaceOrder");
 //		objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.clickWishlistRH();
 		objAddCartPageObject.addProductToBag();
 		objAddCartPageObject.clickPlaceOrder();
 	}
 	@Test(priority = 6)
-	public void addNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void AddNewAddressOffice() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddNewAddressOffice");
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	
 	@Test(priority = 7)
-	public void PaymentWithEMI() throws InterruptedException {
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

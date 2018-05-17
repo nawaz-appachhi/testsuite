@@ -53,8 +53,9 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 	String testName = "VEGASF_173";
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_173_END=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -75,6 +76,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -82,6 +84,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
  
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -91,6 +94,7 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 
 	@Test(priority = 5)
 	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); 
@@ -98,8 +102,8 @@ public class VEGASF_173_RegisteredUser_BOGO_PayWithCredit_DebitCard{
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 8)
-	public void Payment() throws InterruptedException {
-		Reporter.log("Payment Test Started Successfully");
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 		// objCODPageObjects.EnterOnCaptchaEnter();

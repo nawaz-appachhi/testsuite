@@ -130,7 +130,7 @@ public class VEGASF_433_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalize
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();
 		objiOSGenericMethods.swipeDown(100, 5);
-		objPDPageObject.checkPinCode(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "CheckPin"));
+		objPDPageObject.checkPinCode(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "Pincode"));
 		objPDPageObject.clickOnCheckPin();
 	}
 

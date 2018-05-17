@@ -83,6 +83,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -90,6 +91,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice(); // Assertion
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -100,6 +102,7 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 
 	@Test(priority = 5)
 	public void WishListPage() throws InterruptedException {
+		Reporter.log("WishlistPage");
 		objWishListPageObject.verifyWishlistIcon(); // Assertion: verifying "Wishlist" Header
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
@@ -109,30 +112,27 @@ public class VEGASF_157_RegisteredUser_BrandProfile_ShowMoreProducts_PayWith_Cre
 
 	@Test(priority = 6)
 	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 	//	objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
 		objAddCartPageObject.verifyWishlistIcon(); // Assertion: veryfing "WISHLIST" Header
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
-		// aDriver.hideKeyboard();
-
-		/*
-		 * Required test data for apply the coupon
-		 */
-
 		objAddCartPageObject.ClickCouponCancelbtn();
 		objAddCartPageObject.clickPlaceOrder();
 	}
 
 	@Test(priority = 7)
-	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
-     	objCheckOutPageObject.verifyUserAddress(); // Assertion: veryfing CheckoutPage Header "ADDRESS"
+	public void MoveToCart() throws InterruptedException, InvalidFileFormatException, IOException {
+     	Reporter.log("MoveToCartPage");
+		objCheckOutPageObject.verifyUserAddress(); // Assertion: veryfing CheckoutPage Header "ADDRESS"
 		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 
 	}
 
 	@Test(priority = 9)
-	public void PaymentPage() throws InterruptedException {
+	public void PaymentWithCreditCard() throws InterruptedException {
+		Reporter.log("PaymnetWithCreditCard");
 		objPaymentPageObject.verifyPaymentHeader(); // Assertion: Verifying payment page header "PAYMENT"
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

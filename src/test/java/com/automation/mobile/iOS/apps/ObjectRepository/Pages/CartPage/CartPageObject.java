@@ -167,22 +167,27 @@ public class CartPageObject {
 	 */
 
 	public IOSElement getChangeSize() {
+		objiOSGenericMethods.CheckIOSElementFound(changeSize, "changeSize");
 		return changeSize;
 	}
 
 	public List<IOSElement> getChangeSizeList() {
+		objiOSGenericMethods.CheckIOSElementsListFound(changeSizeList, "changeSizeList");
 		return changeSizeList;
 	}
 
 	public IOSElement getChangequantity() {
+		objiOSGenericMethods.CheckIOSElementFound(changequantity, "changequantity");
 		return changequantity;
 	}
 
 	public List<IOSElement> getChangequantityList() {
+		objiOSGenericMethods.CheckIOSElementsListFound(changequantityList, "changequantityList");
 		return changequantityList;
 	}
 
 	public IOSElement getGoToHomePage() {
+		objiOSGenericMethods.CheckIOSElementFound(BackButtonFromCart, "BackButtonFromCart");
 		return BackButtonFromCart;
 	}
 
@@ -282,10 +287,12 @@ public class CartPageObject {
 	}
 
 	public IOSElement getRemoveItemPopup() {
+		objiOSGenericMethods.CheckIOSElementFound(RemoveItemPopup, "RemoveItemPopup");
 		return RemoveItemPopup;
 	}
 
 	public IOSElement getHandlePopup() {
+		objiOSGenericMethods.CheckIOSElementFound(handlePopup, "handlePopup");
 		return handlePopup;
 	}
 
@@ -300,10 +307,12 @@ public class CartPageObject {
 	}
 
 	public IOSElement getDoneButton() {
+		objiOSGenericMethods.CheckIOSElementFound(doneButton, "doneButton");
 		return doneButton;
 	}
 
 	public IOSElement getCouponNotVaild() {
+		objiOSGenericMethods.CheckIOSElementFound(couponNotVaild, "couponNotVaild");
 		return couponNotVaild;
 	}
 
@@ -318,22 +327,22 @@ public class CartPageObject {
 	public void clickOnGiftWrap() throws InterruptedException {
 		try {
 			if (getRemoveGiftwrap().isDisplayed()) {
-				objiOSGenericMethods.waitForElementVisibility(getRemoveGiftwrap());
-				objiOSGenericMethods.clickOnIOSElement(getRemoveGiftwrap(), "Successfully click on Remove GiftWrap");
+				// objiOSGenericMethods.waitForElementVisibility(getRemoveGiftwrap());
+				objiOSGenericMethods.clickOnIOSElement(getRemoveGiftwrap(), "Remove GiftWrap");
 			}
-			objiOSGenericMethods.waitForElementVisibility(getGiftWrap());
-			objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "Successfully click on GiftWrap");
+			// objiOSGenericMethods.waitForElementVisibility(getGiftWrap());
+			objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "GiftWrap");
 
 		} catch (Exception e) {
-			objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "Successfully click on GiftWrap");
+			objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "GiftWrap");
 		}
 	}
 
 	public void clickOnGiftWrapButton() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getGiftWrap());
-		if (getGiftWrap().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "Successfully click on GiftWrap");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getGiftWrap());
+		// if (getGiftWrap().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getGiftWrap(), "GiftWrap");
+		// }
 	}
 
 	/**
@@ -342,12 +351,12 @@ public class CartPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOnRecipentName(String recipentName) throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getRecipentName());
-		if (getRecipentName().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getRecipentName(), "Successfully click on RecipentName");
-			getRecipentName().clear();
-			getRecipentName().sendKeys(recipentName);
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getRecipentName());
+		// if (getRecipentName().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getRecipentName(), "RecipentName");
+		getRecipentName().clear();
+		getRecipentName().sendKeys(recipentName);
+		// }
 	}
 
 	/**
@@ -356,12 +365,12 @@ public class CartPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOnGiftMessage(String giftMessage) throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getGiftMessage());
-		if (getGiftMessage().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getGiftMessage(), "Successfully click on GiftMessage");
-			getGiftMessage().clear();
-			getGiftMessage().sendKeys(giftMessage);
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getGiftMessage());
+		// if (getGiftMessage().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getGiftMessage(), "GiftMessage");
+		getGiftMessage().clear();
+		getGiftMessage().sendKeys(giftMessage);
+		// }
 	}
 
 	/**
@@ -371,18 +380,18 @@ public class CartPageObject {
 	 */
 
 	public void clickOnSenderName(String senderName) throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getSenderName());
-		if (getSenderName().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSenderName(), "Successfully click on SenderName");
-			getSenderName().clear();
-			getSenderName().sendKeys(senderName);
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getSenderName());
+		// if (getSenderName().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getSenderName(), "SenderName");
+		getSenderName().clear();
+		getSenderName().sendKeys(senderName);
+		// }
 	}
 
 	public void clickOnSaveGift() {
-		if (getSaveGift().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSaveGift(), "Successfully click on SaveGift");
-		}
+		// if (getSaveGift().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getSaveGift(), "SaveGift");
+		// }
 	}
 
 	/**
@@ -395,23 +404,22 @@ public class CartPageObject {
 	 */
 
 	public void clickGoBackPage() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getGoToHomePage());
-		if (getGoToHomePage().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getGoToHomePage(), "Successfully click on Go TO HomePage");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getGoToHomePage());
+		// if (getGoToHomePage().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getGoToHomePage(), "Go TO HomePage");
+		// }
 	}
 
 	/**
-	 * @author 300019221 
-	 * Added wait for cancel button
+	 * @author 300019221 Added wait for cancel button
 	 */
 	public void clickOnCancelApplyCoupon() {
-		objiOSGenericMethods.waitForElementVisibility(getCancelApplyCoupon());
-		objiOSGenericMethods.clickOnIOSElement(getCancelApplyCoupon(), "Successfully click on Cancel Apply Coupon");
+		// objiOSGenericMethods.waitForElementVisibility(getCancelApplyCoupon());
+		objiOSGenericMethods.clickOnIOSElement(getCancelApplyCoupon(), "Cancel Apply Coupon");
 	}
 
 	public void clickOnCancelGift() {
-		objiOSGenericMethods.clickOnIOSElement(getCancelGift(), "Successfully click on CancelGift");
+		objiOSGenericMethods.clickOnIOSElement(getCancelGift(), "Cancel Gift");
 	}
 
 	/**
@@ -421,10 +429,10 @@ public class CartPageObject {
 	 * @author 300019221 replaced thread.sleep with webdriver wait
 	 */
 	public void clickOnplaceOrder() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getPlaceOrder());
-		if (getPlaceOrder().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "Successfully click on Place order button");
-		}
+		// objiOSGenericMethods.waitForElementVisibility(getPlaceOrder());
+		// if (getPlaceOrder().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "Place Order Button");
+		// }
 	}
 
 	/**
@@ -432,12 +440,12 @@ public class CartPageObject {
 	 * @throws InterruptedException
 	 */
 	public void clickOnContinueOrder() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getContinueOrder());
-		objiOSGenericMethods.clickOnIOSElement(getContinueOrder(), "Successfully click on continue order button");
+		// objiOSGenericMethods.waitForElementVisibility(getContinueOrder());
+		objiOSGenericMethods.clickOnIOSElement(getContinueOrder(), "Continue Order Button");
 	}
 
 	public void clickOnViewDetails() {
-		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "Successfully click on view details button");
+		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "View Details Button");
 	}
 
 	public IOSElement getRemoveBtn2() {
@@ -451,20 +459,20 @@ public class CartPageObject {
 	}
 
 	public void clickOnRemoveBtn() {
-		if (getRemoveBtn().isDisplayed()) {
-			objiOSGenericMethods.waitForElementVisibility(getRemoveBtn());
-			objiOSGenericMethods.clickOnIOSElement(getRemoveBtn(), "Successfully click on Remove");
-		}
+		// if (getRemoveBtn().isDisplayed()) {
+		// objiOSGenericMethods.waitForElementVisibility(getRemoveBtn());
+		objiOSGenericMethods.clickOnIOSElement(getRemoveBtn(), "Remove Button");
+		// }
 	}
 
 	/**
 	 * @author 300019221 Added web driver wait
 	 */
 	public void clickOnRemoveBtn2() {
-		if (getRemoveBtn2().isDisplayed()) {
-			objiOSGenericMethods.waitForElementVisibility(getRemoveBtn2());
-			objiOSGenericMethods.clickOnIOSElement(getRemoveBtn2(), "Successfully click on Remove");
-		}
+		// if (getRemoveBtn2().isDisplayed()) {
+		// objiOSGenericMethods.waitForElementVisibility(getRemoveBtn2());
+		objiOSGenericMethods.clickOnIOSElement(getRemoveBtn2(), "Remove Button");
+		// }
 	}
 
 	/**
@@ -474,7 +482,8 @@ public class CartPageObject {
 	 */
 	public void getSaveToWIshList(int i) throws InterruptedException {
 		try {
-			saveToWIshList.get(i).click();
+			objiOSGenericMethods.clickOnIOSElement(saveToWIshList.get(i), "Save To WishList Button");
+//			saveToWIshList.get(i).click();
 			System.err.println(saveToWIshList.get(i).getText());
 			System.out.println("Total No of products " + saveToWIshList.size());
 			System.out.println("USer has click save to wish list!");
@@ -528,7 +537,7 @@ public class CartPageObject {
 	}
 
 	public void clickOnApplyGiftCard() throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "Successfully click on apply button");
+		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "Apply Button");
 	}
 
 	/**
@@ -538,13 +547,13 @@ public class CartPageObject {
 	 */
 
 	public void clickOnremoveButton() throws InterruptedException {
-		try {
-			if (getRemoveButton().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getRemoveButton(), "Successfully click on remove button");
-			}
-		} catch (Exception e) {
-			System.out.println("Remove Button is not displayed!");
-		}
+		// try {
+		// if (getRemoveButton().isDisplayed()) {
+		objiOSGenericMethods.clickOnIOSElement(getRemoveButton(), "Remove Button");
+		// }
+		// } catch (Exception e) {
+		// System.out.println("Remove Button is not displayed!");
+		// }
 	}
 
 	/**
@@ -566,7 +575,7 @@ public class CartPageObject {
 	}
 
 	public void clickOnGiftCard() throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getGiftButton(), "Successfully click on gift button");
+		objiOSGenericMethods.clickOnIOSElement(getGiftButton(), "Gift Button");
 	}
 
 	/**
@@ -577,12 +586,12 @@ public class CartPageObject {
 	 *         Click
 	 */
 	public void ClickOnApplyCoupon() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getApplyCoupon());
+		// objiOSGenericMethods.waitForElementVisibility(getApplyCoupon());
 		try {
-			if (getApplyCoupon().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getApplyCoupon(), "Successfully click on apply coupon button");
-				System.out.println("Apply coupon is clicked!");
-			}
+			// if (getApplyCoupon().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getApplyCoupon(), "Apply Coupon Button");
+			System.out.println("Apply coupon is clicked!");
+			// }
 		} catch (Exception e) {
 			objiOSGenericMethods.click(getApplyCoupon());
 			System.out.println("Apply coupon re tried to click!");
@@ -592,35 +601,38 @@ public class CartPageObject {
 
 	public void clickOnEditApplyCoupon() {
 		try {
-			if (getEditApplyCoupon().isDisplayed()) {
-				getEditApplyCoupon().click();
-				System.out.println("Edit Apply coupon is clicked");
-			}
+			// if (getEditApplyCoupon().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getEditApplyCoupon(), "Edit Coupon Button");
+			// getEditApplyCoupon().click();
+			System.out.println("Edit Apply coupon is clicked");
+			// }
 		} catch (Exception e) {
-			getApplyCoupon().click();
+//			getApplyCoupon().click();
+			objiOSGenericMethods.clickOnIOSElement(getApplyCoupon(), "Apply Coupon Button");
 		}
 	}
 
 	public void ClickonRemoveItemPopup() {
-		getRemoveItemPopup().click();
+		objiOSGenericMethods.clickOnIOSElement(getRemoveItemPopup(), "Remove Item popup");
+		// getRemoveItemPopup().click();
 	}
 
 	public void ClickOnPopup() {
-		getHandlePopup().click();
+		objiOSGenericMethods.clickOnIOSElement(getHandlePopup(), "Handle popup");
+		// getHandlePopup().click();
 	}
 
 	public void ClickOnApplyButton() {
-		objiOSGenericMethods.waitForElementVisibility(getApplyButton());
-		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "Successfully click on apply  button");
+		// objiOSGenericMethods.waitForElementVisibility(getApplyButton());
+		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "Apply Button");
 	}
 
 	public void enterCoupon(String coupon) {
-		if (getApplyCouponTxtBox().isDisplayed()) {
-			getApplyCouponTxtBox().sendKeys(coupon);
-			System.err.println("User has entered " + coupon);
-		}
+		// if (getApplyCouponTxtBox().isDisplayed()) {
+		getApplyCouponTxtBox().sendKeys(coupon);
+		System.err.println("User has entered " + coupon);
+		// }
 	}
-
 
 	/**
 	 * @author 300019221 /Aravindanath Permission method is removed.
@@ -634,19 +646,20 @@ public class CartPageObject {
 	public void clickOnApplyButton() throws InterruptedException {
 		clickOnCancelApplyCoupon();
 		System.out.println("Clicked on Apply / cancel button");
-//		try {
-//			objiOSGenericMethods.swipeDown(100, 1);
-//			objiOSGenericMethods.waitForElementVisibility(getCouponNotVaild());
-//			if (getCouponNotVaild().isDisplayed()) {
-//				clickOnCancelApplyCoupon();
-//				System.out.println("Coupons not valid for this order, hence No coupon applied !");
-//			} else if (getApplyButton().isDisplayed()) {
-//				ClickOnApplyButton();
-//				System.out.println("user has clicked on apply button");
-//			}
-//		} catch (Exception e) {
-//			System.out.println("Apply button is not found!");
-//		}
+		// try {
+		// objiOSGenericMethods.swipeDown(100, 1);
+		// objiOSGenericMethods.waitForElementVisibility(getCouponNotVaild());
+		// if (getCouponNotVaild().isDisplayed()) {
+		// clickOnCancelApplyCoupon();
+		// System.out.println("Coupons not valid for this order, hence No coupon applied
+		// !");
+		// } else if (getApplyButton().isDisplayed()) {
+		// ClickOnApplyButton();
+		// System.out.println("user has clicked on apply button");
+		// }
+		// } catch (Exception e) {
+		// System.out.println("Apply button is not found!");
+		// }
 
 	}
 
@@ -663,13 +676,15 @@ public class CartPageObject {
 		getRecipentName().clear();
 		getRecipentName().sendKeys(recipentName);
 		clickOnGiftMessage(msg);
-		objiOSGenericMethods.waitForElementVisibility(getSenderName());
+		// objiOSGenericMethods.waitForElementVisibility(getSenderName());
 		getSenderName().clear();
 		getSenderName().sendKeys(senderName);
-		objiOSGenericMethods.waitForElementVisibility(getDoneButton());
-		getDoneButton().click();
-		objiOSGenericMethods.waitForElementVisibility(getSaveGift());
-		getSaveGift().click();
+		// objiOSGenericMethods.waitForElementVisibility(getDoneButton());
+//		getDoneButton().click();
+		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "Done Button");
+		// objiOSGenericMethods.waitForElementVisibility(getSaveGift());
+//		getSaveGift().click();
+		objiOSGenericMethods.clickOnIOSElement(getSaveGift(), "Save Gift Button");
 
 	}
 
@@ -681,50 +696,56 @@ public class CartPageObject {
 	 * @author 300019221 replaced thread.sleep with webdriver wait
 	 */
 	public void clickOnDoneButton() throws InterruptedException {
-		objiOSGenericMethods.waitForElementVisibility(getDoneButton());
+//		objiOSGenericMethods.waitForElementVisibility(getDoneButton());
 		try {
-			if (getDoneButton().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "Successfully click on done button");
-			}
+//			if (getDoneButton().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "Done Button");
+//			}
 		} catch (Exception e) {
 			System.out.println("Done button is not displayed!");
 		}
 	}
 
 	/**
-	 * @author 300019221 Aravindanth
-	 * This feature is a blocker on iOS hence its commented.
+	 * @author 300019221 Aravindanth This feature is a blocker on iOS hence its
+	 *         commented.
 	 */
 	public void clickOnChangeSize() {
-	//	getChangeSize().click();
+		// getChangeSize().click();
 
 	}
+
 	/**
-	 * @author 300019221 Aravindanth
-	 * This feature is a blocker on iOS hence its commented.
+	 * @author 300019221 Aravindanth This feature is a blocker on iOS hence its
+	 *         commented.
 	 */
 
 	public void clickOnChangeSizeFromList() {
-//		getChangeSizeList().get(3).getText();
-//		System.out.println("Select size from list  " + getChangeSizeList().get(3).getText());
-//		objiOSGenericMethods.clickOnIOSElement(getChangeSizeList().get(3), "Size chart");
+		// getChangeSizeList().get(3).getText();
+		// System.out.println("Select size from list " +
+		// getChangeSizeList().get(3).getText());
+		// objiOSGenericMethods.clickOnIOSElement(getChangeSizeList().get(3), "Size
+		// chart");
 	}
 
 	/**
-	 * @author 300019221 Aravindanth
-	 * This feature is a blocker on iOS hence its commented.
+	 * @author 300019221 Aravindanth This feature is a blocker on iOS hence its
+	 *         commented.
 	 */
 	public void clickOnQuantity() {
-	//	getChangequantity().click();
+		// getChangequantity().click();
 	}
+
 	/**
-	 * @author 300019221 Aravindanth
-	 * This feature is a blocker on iOS hence its commented.
+	 * @author 300019221 Aravindanth This feature is a blocker on iOS hence its
+	 *         commented.
 	 */
 	public void clickOnChangequantityList() {
-//		getChangequantityList().get(4).getText();
-//		System.out.println("Select number of quantity from list  " + getChangequantityList().get(4).getText());
-//		objiOSGenericMethods.clickOnIOSElement(getChangequantityList().get(4), "Quantity List");
+		// getChangequantityList().get(4).getText();
+		// System.out.println("Select number of quantity from list " +
+		// getChangequantityList().get(4).getText());
+		// objiOSGenericMethods.clickOnIOSElement(getChangequantityList().get(4),
+		// "Quantity List");
 
 	}
 

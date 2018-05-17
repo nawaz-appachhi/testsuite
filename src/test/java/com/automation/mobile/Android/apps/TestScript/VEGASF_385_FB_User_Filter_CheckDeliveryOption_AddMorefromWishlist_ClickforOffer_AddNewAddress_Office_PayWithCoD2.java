@@ -28,16 +28,6 @@ import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-//Facebook registered user
-//Home Page
-//Search (using a keyword in the Golden Set)
-//Filter Products
-//Check Delivery Option
-//Move to bag
-//Add more from wishlist
-//Click for offer
-//Add New address - Office
-//Payment : Myntra Credit + COD
 public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_ClickforOffer_AddNewAddress_Office_PayWithCoD2 {
 	
 	GlobalVariables objGlobalVariables;
@@ -60,7 +50,7 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_385_START=====================");
-		Reporter.log("LoginWithFacebook Test case Started Successfully");
+		Reporter.log("LoginWithFacebook");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -89,8 +79,8 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 
 
 	@Test(priority = 4)
-	public void productDescriptionPage() throws InterruptedException {
-		Reporter.log("productDescriptionPage");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -122,14 +112,14 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	}
 	@Test(priority = 7)
 	public void AddNewAddress_Office() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("AddNewAddress_Office Test case Started Successfully");
+		Reporter.log("AddNewAddress_Office");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	@Test(priority = 8)
 	public void PaymentWithMyntraCredit_COD() throws InterruptedException {
-		Reporter.log("PaymentWithMyntraCredit_COD Test case Started Successfully");
+		Reporter.log("PaymentWithMyntraCredit_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
@@ -141,12 +131,9 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);

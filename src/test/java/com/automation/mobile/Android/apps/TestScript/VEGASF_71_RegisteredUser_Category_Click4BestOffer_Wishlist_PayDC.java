@@ -49,8 +49,9 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
  
 	String testName = "VEGASF_71"; 
 	@Test(priority = 1)
-	public void userLogin() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_71_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
@@ -68,7 +69,8 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	}
 
 	@Test(priority = 4)
-	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void SearchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchProduct");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -76,6 +78,7 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 
 	@Test(priority = 6)
 	public void selectProductSize() throws InterruptedException {
+		Reporter.log("selectProductSize");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -83,13 +86,15 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	}
 
 	@Test(priority = 7)
-	public void addProductToWishlist() throws InterruptedException {
+	public void AddProductToWishlist() throws InterruptedException {
+		Reporter.log("AddProductToWishlist");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
 	@Test(priority = 8)
-	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
@@ -99,7 +104,8 @@ public class VEGASF_71_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	}
 
 	@Test(priority = 9)
-	public void payment() throws InterruptedException {
+	public void PaymenttWithCreditCard() throws InterruptedException {
+		Reporter.log("PaymnetWithCreditCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

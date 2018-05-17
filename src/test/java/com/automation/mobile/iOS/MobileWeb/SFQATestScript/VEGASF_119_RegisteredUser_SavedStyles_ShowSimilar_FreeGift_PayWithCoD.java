@@ -82,10 +82,10 @@ public class VEGASF_119_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithC
 		objHamburgerPageObjects.enterEmailAddress(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"),
 				objiOSGenericMethods.getValueByKeyiOSWeb(testName, "Password"));
 		objHamburgerPageObjects.clickOnSignInButton();
-		objHomePageObjects.clickOnHamburgerButton();
-		objHamburgerPageObjects.clickOnMyAccount();
-		objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
-		iDriver.navigate().back();
+//        objHomePageObjects.clickOnHamburgerButton();
+//        objHamburgerPageObjects.clickOnMyAccount();
+//        objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
+//        iDriver.navigate().back();
 	}
 
 	@Test(priority = 2)
@@ -196,6 +196,7 @@ public class VEGASF_119_RegisteredUser_SavedStyles_ShowSimilar_FreeGift_PayWithC
 		//		objPaymentPageObjects.clickOnNetBanking();
 		//		objPaymentPageObjects.clickFirstNetbankingOption();
 		//		objPaymentPageObjects.clickNetbankingPayNowButton();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

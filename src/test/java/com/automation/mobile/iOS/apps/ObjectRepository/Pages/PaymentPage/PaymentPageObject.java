@@ -115,7 +115,7 @@ public class PaymentPageObject {
 	// "//XCUIElementTypeOther[@name=\"PAYMENT\"]/XCUIElementTypeOther[8]")
 	@iOSFindBy(accessibility = "Change Payment Mode")
 	public IOSElement ChangePaymentMode;
-	
+
 	/**
 	 * 
 	 * @author 300021276 object created for clicking on confirm order
@@ -123,16 +123,16 @@ public class PaymentPageObject {
 
 	@iOSFindBy(accessibility = "CONFIRM ORDER")
 	public IOSElement confirmOrder;
-	
+
 	/**
-	 * @author 300021276 object created for clicking on done button for ordered confirmation
+	 * @author 300021276 object created for clicking on done button for ordered
+	 *         confirmation
 	 * 
 	 */
-	
+
 	@iOSFindBy(accessibility = "CONFIRM ORDER")
 	public IOSElement doneOrderedConfirmed;
-	
-	
+
 	/********* getters ************/
 
 	public IOSElement getGiftCardOnPayment() {
@@ -216,46 +216,46 @@ public class PaymentPageObject {
 	}
 
 	public IOSElement getEligibilityforBankDiscount() {
+		objiOSGenericMethods.CheckIOSElementFound(eligibilityforBankDiscount, "eligibilityforBankDiscount");
 		return eligibilityforBankDiscount;
 	}
 
 	/**
 	 * 
-	 *@author 300021276 getters to confirm order 
+	 * @author 300021276 getters to confirm order
 	 *
 	 */
 	public IOSElement getConfirmOrder() {
 		objiOSGenericMethods.CheckIOSElementFound(confirmOrder, "confirmOrder");
 		return confirmOrder;
 	}
+
 	/**
 	 * 
-	 *@author 300021276 getters to done button for ordered confirmation
+	 * @author 300021276 getters to done button for ordered confirmation
 	 *
 	 */
-	
+
 	public IOSElement getDoneOrderedConfirmed() {
 		objiOSGenericMethods.CheckIOSElementFound(doneOrderedConfirmed, "doneOrderedConfirmed");
 		return doneOrderedConfirmed;
 	}
+
 	/*********** methods ***********/
 	public void clickOnGiftCardOnPayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getGiftCardOnPayment(),
-					"Successfully click on GiftCard button On Payment screen");
+			objiOSGenericMethods.clickOnIOSElement(getGiftCardOnPayment(), "GiftCard Button");
 		} catch (Exception e) {
 		}
 	}
 
 	public void enterGiftCardNumberOnPayment(String GiftCardNumber) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumberOnPayment(),
-				"Successfully click on Gift CardNumber On Payment");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumberOnPayment(), "Gift Card Number");
 		getGiftCardNumberOnPayment().sendKeys(GiftCardNumber);
 	}
 
 	public void enterGiftCardPinOnPayment(String GiftCardPin) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardPinOnPayment(),
-				"Successfully click on Gift Card Pin On Payment");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardPinOnPayment(), "Gift Card Pin");
 		getGiftCardPinOnPayment().sendKeys(GiftCardPin);
 	}
 
@@ -264,15 +264,13 @@ public class PaymentPageObject {
 	 */
 	public void clickOnApplyOnGiftCardPayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getApplyOnGiftCardPayment(),
-					"Successfully click on Apply button On Gift Card Payment ");
+			objiOSGenericMethods.clickOnIOSElement(getApplyOnGiftCardPayment(), "Apply button");
 		} catch (Exception e) {
 		}
 	}
 
 	public void clickOnChangePaymentMode() {
-		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(),
-				"Successfully click on ChangePaymentMode button");
+		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(), "SChange Payment Mode Button");
 	}
 
 	/**
@@ -280,8 +278,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnCVVNoforSavedCard(String cvv) {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getCVVNoforSavedCard(),
-					"Successfully click on CVV text Field for saved card");
+			objiOSGenericMethods.clickOnIOSElement(getCVVNoforSavedCard(), "CVV Text Field");
 			getCVVNoforSavedCard().sendKeys(cvv);
 		} catch (Exception e) {
 		}
@@ -292,7 +289,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnPayNow() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getPayNow(), "Successfully click on PayNow button");
+			objiOSGenericMethods.clickOnIOSElement(getPayNow(), "Pay Now Button");
 		} catch (Exception e) {
 		}
 	}
@@ -302,7 +299,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnPhonepePayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getPhonepePayment(), "Successfully click on phonepayment button");
+			objiOSGenericMethods.clickOnIOSElement(getPhonepePayment(), "PhonePe Payment Button");
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for phone payment!");
 		}
@@ -313,8 +310,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnPhonepeBhimPayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getPhonepeBhimPayment(),
-					"Successfully click on phonePeBhimpayment button");
+			objiOSGenericMethods.clickOnIOSElement(getPhonepeBhimPayment(), "PhonePeBhim Payment Button");
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for Bhim payment!");
 		}
@@ -325,7 +321,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOncodPayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getCodPayment(), "Successfully click on CodPayment button");
+			objiOSGenericMethods.clickOnIOSElement(getCodPayment(), "COD Payment Button");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("This product is not eligible for COD!");
@@ -337,7 +333,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnCreditCardPayment() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getCreditCard(), "Successfully click on credit card button");
+			objiOSGenericMethods.clickOnIOSElement(getCreditCard(), "Credit Card Button");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("This product is not eligible for Credit card!");
@@ -349,7 +345,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnEMI() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getEMI(), "Successfully click on EMI button");
+			objiOSGenericMethods.clickOnIOSElement(getEMI(), "EMI Button");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("This product is not eligible for EMI!");
@@ -361,7 +357,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnNetBanking() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "Successfully click on net banking button");
+			objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "Net Banking Button");
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for Netbanking!");
 			Reporter.log("This product is not eligible for Netbanking!");
@@ -373,7 +369,7 @@ public class PaymentPageObject {
 	 */
 	public void clickOnWallet() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getPayByWallets(), "Successfully click on payByWallets button");
+			objiOSGenericMethods.clickOnIOSElement(getPayByWallets(), "Pay By Wallets Button");
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for Wallet!");
 			Reporter.log("This product is not eligible for Wallet!");
@@ -389,61 +385,60 @@ public class PaymentPageObject {
 
 	public void clickOnCOD() {
 		try {
-			objiOSGenericMethods.waitForElementVisibility(getSelectCOD());
-			if (getSelectCOD().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getSelectCOD(), "Successfully click on selectCOD button");
-			}
+			// objiOSGenericMethods.waitForElementVisibility(getSelectCOD());
+			// if (getSelectCOD().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getSelectCOD(), "Select COD button");
+			// }
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for COD!");
 		}
 
 	}
-	
+
 	/**
 	 * 
-	 *@author 300021276 method to click on confirm order 
+	 * @author 300021276 method to click on confirm order
 	 *
 	 */
 	public void clickOnConfirmOrder() {
 		try {
 			// Thread.sleep(500);
-			objiOSGenericMethods.waitForElementVisibility(getConfirmOrder());
-			if (getConfirmOrder().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getConfirmOrder(), "Successfully click on confirm order button");
-			}
+			// objiOSGenericMethods.waitForElementVisibility(getConfirmOrder());
+			// if (getConfirmOrder().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getConfirmOrder(), "Confirm Order Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for COD!");
 		}
 
 	}
+
 	/**
 	 * 
-	 *@author 300021276 method to click on done button after getting order confirmation
+	 * @author 300021276 method to click on done button after getting order
+	 *         confirmation
 	 *
 	 */
 	public void clickOnDoneOrderedConfirmed() {
 		try {
 			// Thread.sleep(500);
-			objiOSGenericMethods.waitForElementVisibility(getDoneOrderedConfirmed());
-			if (getConfirmOrder().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getDoneOrderedConfirmed(), "Successfully click on done button");
-			}
+			// objiOSGenericMethods.waitForElementVisibility(getDoneOrderedConfirmed());
+			// if (getConfirmOrder().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getDoneOrderedConfirmed(), "Done Button");
+			// }
 		} catch (Exception e) {
 			System.out.println("This product is not eligible for COD!");
 		}
 
 	}
-	
-	
-	
+
 	/**
 	 * @author 300019221 Added try block
 	 */
 
 	public void clickOnEligibilityForBankDiscount() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getEligibilityforBankDiscount(),
-					"Successfully click on selectCOD button");
+			objiOSGenericMethods.clickOnIOSElement(getEligibilityforBankDiscount(), "Eligibility For Bank discount");
 		} catch (Exception e) {
 		}
 	}

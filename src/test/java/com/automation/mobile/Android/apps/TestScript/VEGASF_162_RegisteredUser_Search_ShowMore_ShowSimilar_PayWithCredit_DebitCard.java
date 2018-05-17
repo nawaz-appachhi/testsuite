@@ -56,9 +56,9 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
  
 	String testName = "VEGASF_162";
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_162_START=====================");
-		Reporter.log("LoginInApp");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -71,6 +71,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	
 	@Test(priority = 2) 
 	public void reset() throws InterruptedException {
+		Reporter.log("Reset");
 		objAddCartPageObject.resetBag();
 		objWishListPageObject.resetWishlist();
 		objCheckOutPageObject.resetAddress();
@@ -96,7 +97,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 
 	@Test(priority = 4)
 	public void ApplyPersonalizedCoupon() throws InterruptedException {
-		Reporter.log("placeOrder");
+		Reporter.log("ApplyPersonalizedCoupon");
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
 		objAddCartPageObject.verifyWishlistIcon();    //Assertion
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -105,7 +106,7 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 	}
 	@Test(priority = 5)
 	public void GiftWrap() throws Exception {
-		Reporter.log("Gift wrap");
+		Reporter.log("Gift Wrap");
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getGiftWrapbtn(), 50);
 		objAddCartPageObject.GiftCardtxt(AndroidGenericMethods.getValueByKey("OBJECTREPO", "RecipientName"),AndroidGenericMethods.getValueByKey("OBJECTREPO", "GiftMessage"),AndroidGenericMethods.getValueByKey("OBJECTREPO", "SenderName"));
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
@@ -113,8 +114,8 @@ public class VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit
 		objAddCartPageObject.getWishListbtn();
 	}
 	@Test(priority = 6)
-	public void plaaceOrder() throws Exception {
-
+	public void PlaceOrder() throws Exception {
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
 	}

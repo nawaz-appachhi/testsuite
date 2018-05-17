@@ -51,8 +51,9 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 	String testName = "VEGASF_171"; 
 
 	@Test(priority = 1)
-	public void LoginInMyntra() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginInWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_171_START=====================");
+		Reporter.log("LoginInWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -73,8 +74,7 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 	
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objHomePageObject.verifyBigBannerView();
-//		objHomePageObject.clickBigBanner(2);
+        Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -82,12 +82,14 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws Exception {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
 	}
 
 	@Test(priority = 5)
 	public void CartPage() throws InterruptedException {
+		Reporter.log("CartPage");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 		objProductDescriptionPageObject.clickGoToBag();
@@ -96,6 +98,7 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 	@Test(priority = 6)
 
 	public void CheckoutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objAddCartPageObject.verifyShoppingBagTitle();
 	    objAddCartPageObject.verifyWishlistIcon();    //Assertion
         objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
@@ -108,6 +111,7 @@ public class VEGASF_171_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithCoD {
 	}
 	@Test(priority = 9)
 	public void PaymentWithMynt_COD() throws InterruptedException {
+		Reporter.log("PaymnetWithMynt_COD");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

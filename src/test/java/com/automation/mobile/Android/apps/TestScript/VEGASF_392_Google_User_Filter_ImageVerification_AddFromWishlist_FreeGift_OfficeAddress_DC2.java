@@ -31,19 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user - Login
-Home Page
-Search (using a keyword in the Golden Set)
-Filter Products
-Image Verification
-Move to bag
-Add more from wishlist
-Free Gift
-Add New address - Office
-Payment : Phone Pe
-*/
-
 public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_FreeGift_OfficeAddress_DC2 {
 
 	GlobalVariables objGlobalVariables;
@@ -66,16 +53,10 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_392_START=====================");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger(); 
 		objLoginPageObject.verifyUserId();
@@ -91,6 +72,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -98,12 +80,14 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 
 	@Test(priority = 4)
 	public void Filter_WhatsNew() throws InterruptedException {
+		Reporter.log("WhatsNew");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickWishListbtn();
 	}
 
 	@Test(priority = 5)
 	public void WishListPage() throws Exception {
+		Reporter.log("WishListPage");
 		objWishListPageObject.verifyWishlistIcon();
 		objWishListPageObject.clickMoveToBag();
 		objWishListPageObject.clickSizeWishList();
@@ -113,6 +97,7 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	
 	@Test(priority = 6)
 	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.clickPlaceOrder();
@@ -121,12 +106,14 @@ public class VEGASF_392_Google_User_Filter_ImageVerification_AddFromWishlist_Fre
 	
 	@Test(priority = 7)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	
 	@Test(priority = 8) 
-	public void Payment() {
+	public void PaymentWithCreditDebitCard() {
+		Reporter.log("PaymentWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 

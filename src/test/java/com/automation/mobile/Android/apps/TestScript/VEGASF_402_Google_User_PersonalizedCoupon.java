@@ -31,18 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-/*
- * Google registered user - Login
-Home Page
-Search (using a keyword in the Golden Set)
-Add to Bag
-Verify Product Code
-Show Similar Products
-Place Order
-Apply Personalized Coupons
-Add New address - Office
-*/
-
 public class VEGASF_402_Google_User_PersonalizedCoupon { 
 
 	GlobalVariables objGlobalVariables;
@@ -65,17 +53,10 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_402_START=====================");
-		Reporter.log("LoginWithGoogle Test case Started Successfully");
+		Reporter.log("LoginWithGoogle");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.clickpopUp(); 
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId(); 
@@ -84,6 +65,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	
 	@Test(priority = 2)
 		public void resetdata() throws InterruptedException {
+		Reporter.log("resetBag");
 			objAddCartPageObject.resetBag();
 			objWishlistPageObject.resetWishlist();
 			//objCheckOutPageObject.resetAddress();
@@ -92,7 +74,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -100,22 +82,22 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
-		Reporter.log("AddToBag Test case Started Successfully");
+		Reporter.log("AddToBag");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice();
 	}
 	
 	@Test(priority = 5)
 	public void CheckForSimilarProductLink() throws InterruptedException {
-		Reporter.log("CheckForSimilarProductLink Test case Started Successfully");
+		Reporter.log("CheckForSimilarProductLink");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 	
 	@Test(priority = 6)
-	public void 	ApplyPersonalizedCoupon() throws InterruptedException {
-		Reporter.log("ApplyPersonalizedCoupon Test case Started Successfully");
+	public void ApplyPersonalizedCoupon() throws InterruptedException {
+		Reporter.log("ApplyPersonalizedCoupon");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
         objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
@@ -123,14 +105,14 @@ public class VEGASF_402_Google_User_PersonalizedCoupon {
 	}
 
 	@Test(priority = 7)
-	public void 	PlaceOrder() throws InterruptedException {
-		Reporter.log("PlaceOrder Test case Started Successfully");
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.clickPlaceOrder();
 	}
 	
 	@Test(priority = 8)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("AddNewAddress Test case Started Successfully");
+		Reporter.log("AddNewAddress");
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
 	}

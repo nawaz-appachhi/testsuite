@@ -35,8 +35,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  *
  */
 
-// conditional Discount and payment method 
-
 public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_ViewDetails_PayWithCoD2 {
 
 	GlobalVariables objGlobalVariables;
@@ -62,12 +60,6 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.clickOnEmailNextButton1();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnPasswordNextButton1();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
@@ -83,7 +75,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -91,6 +83,7 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle"); // Assertion
 		objProductDescriptionPageObject.assertProductPrice(); // Assertion product price
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -102,7 +95,8 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 	}
 
 	@Test(priority = 5)
-	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {	
+	public void AddCartPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("AddCartPage");
 		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion:veryfing "SHOPPINGBAF" Header
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
@@ -114,7 +108,8 @@ public class VEGASF_391_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_V
 		
 	}
 	@Test(priority = 6)
-	public void PaymentPage() throws InterruptedException {	
+	public void PaymentWithCOD() throws InterruptedException {	
+		Reporter.log("PaymentWithCOD");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

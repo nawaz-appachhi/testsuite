@@ -175,6 +175,7 @@ public class VEGASF_406_Google_User_Filter_BOGO_ViewDetails_CoD {
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 		//		objPaymentPageObjects.clickOnNetBanking();
 

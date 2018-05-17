@@ -72,7 +72,6 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		Thread.sleep(1000);
 		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 
@@ -86,30 +85,24 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 
 	@Test(priority = 3)
 	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("Search Test case Started Successfully");
+		Reporter.log("Search Test");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
-
 	@Test(priority = 4)
-	public void PLP() throws InterruptedException {
-		Reporter.log("PLP Test case Started Successfully");
+	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
-	}
-
-	@Test(priority = 5)
-	public void PDP() throws InterruptedException {
-		Reporter.log("PDP Test case Started Successfully");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void placeOrder() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("placeOrder Test case Started Successfully");
+		Reporter.log("PlaceOrder");
 		// objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
@@ -120,7 +113,7 @@ public class VEGASF_161_RegisteredUser_SizeSensitive_BOGO_PayWithCredit_DebitCar
 		objCheckOutPageObject.clickContinue();
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void Payment() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("placeOrder Test case Started Successfully");
 		objPaymentPageObject.verifyPaymentHeader();

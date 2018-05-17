@@ -203,6 +203,7 @@ public class VEGASF_124_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddres
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

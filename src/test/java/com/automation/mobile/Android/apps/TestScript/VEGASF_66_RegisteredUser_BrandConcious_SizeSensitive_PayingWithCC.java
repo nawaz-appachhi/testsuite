@@ -52,7 +52,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
  
 	@Test(priority = 1)
 	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmail Test case Started Successfully");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -65,13 +65,14 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 
 	@Test(priority = 2)
 	public void resetdata() throws InterruptedException {
+		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
 		objCheckOutPageObject.resetAddress();
 	}
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -79,7 +80,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 
 	@Test(priority = 4)
 	public void SaveProduct() throws InterruptedException {
-		Reporter.log("SaveProduct Test case Started Successfully");
+		Reporter.log("SaveProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -89,15 +90,15 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 
 	@Test(priority = 5)
 	public void MoveToBag() throws InterruptedException {
-		Reporter.log("MoveToBag Test case Started Successfully");
+		Reporter.log("MoveToBag");
 		objProductDescriptionPageObject.clickGoToBag();
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.changeSize();
 	}
 
 	@Test(priority = 6)
-	public void placeOrder() throws InterruptedException {
-		Reporter.log("placeOrder Test case Started Successfully");
+	public void PlaceOrder() throws InterruptedException {
+		Reporter.log("PlaceOrder");
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
@@ -111,7 +112,7 @@ public class VEGASF_66_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC {
 	}
 
 	@Test(priority = 8)
-	public void PaymentWithPhonePe() throws InterruptedException {
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

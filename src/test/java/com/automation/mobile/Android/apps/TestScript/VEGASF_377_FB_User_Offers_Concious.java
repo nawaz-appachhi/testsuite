@@ -46,9 +46,6 @@ public class VEGASF_377_FB_User_Offers_Concious {
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_377_START=====================");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -67,7 +64,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
-		
+		Reporter.log("HomePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -75,6 +72,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 
 	@Test(priority = 6)
 	public void MoveToBag() throws InterruptedException {
+		Reporter.log("MoveToBag");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
@@ -83,6 +81,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 
 	@Test(priority = 7)
 	public void AddMoreFromWishlist() throws InterruptedException {
+		Reporter.log("AddMoreFromWishlist");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickWishListbtn();
 		objWishListPageObject.clickMoveToBag();
@@ -93,6 +92,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 
 	@Test(priority = 8)
 	public void ApplyGenericCoupons() throws InterruptedException {
+		Reporter.log("ApplyGenericCoupons");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -103,6 +103,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 
 	@Test(priority = 9)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("RemoveAddress");
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.removeAddress();
 			
@@ -111,9 +112,7 @@ public class VEGASF_377_FB_User_Offers_Concious {
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
 		// objAppiumServer.startServer();

@@ -63,9 +63,9 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 	String testName = "VEGASF_158";
 
 	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_158_START=====================");
-		Reporter.log("LoginInApp Test case Started Successfully");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -86,6 +86,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 
 	@Test(priority = 3)
 	public void HomePage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("HamePage");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.verifySearchText();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
@@ -94,6 +95,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 
 	@Test(priority = 4)
 	public void ProductDescriptionPage() throws InterruptedException {
+		Reporter.log("ProductDescriptionPage");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 	//	objProductDescriptionPageObject.assertProductDiscount();
@@ -113,6 +115,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 
 	@Test(priority = 5)
 	public void AddCartPage() throws InterruptedException {
+		Reporter.log("AddCartPage");
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAddCartPageObject.verifyWishlistIcon();    
 		objAddCartPageObject.clickPlaceOrder();
@@ -120,6 +123,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 
 	@Test(priority = 6)
 	public void CheckOutPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		Reporter.log("CheckOutPage");
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
@@ -127,6 +131,7 @@ public class VEGASF_158_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAnd_Cred
 	}
 	@Test(priority = 7)
 	public void PaymentPage() throws InterruptedException {
+		Reporter.log("PaymentPage");
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");

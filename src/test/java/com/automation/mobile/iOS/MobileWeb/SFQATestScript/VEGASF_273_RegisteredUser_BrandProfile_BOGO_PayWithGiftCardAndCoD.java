@@ -189,6 +189,7 @@ public class VEGASF_273_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD {
 //		objPaymentPageObjects.clickOnNetBanking();
 //		objPaymentPageObjects.clickFirstNetbankingOption();
 //		objPaymentPageObjects.clickNetbankingPayNowButton();
+        objiOSGenericMethods.swipeDown(100,1);
 		objPaymentPageObjects.ClickOnCOD();
 	}
 

@@ -31,10 +31,6 @@ import io.appium.java_client.android.AndroidKeyCode;
  * @author 300019225-Amba Jha
  *
  */
-/*
- * Pending from Payment ,Gift wrap Apply Personalized Coupons Wallet
- */
-
 public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -56,8 +52,9 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
   
 	@Test(priority = 1)
 	public void LoginWithEmail() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmail Test case Started Successfully");
+	
 		System.out.println("=====================VEGASF_64_START=====================");
+		Reporter.log("LoginWithEmail");
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
@@ -78,7 +75,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("LoginWithEmail Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.verifyBigBannerView();
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
@@ -87,7 +84,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	
 	@Test(priority = 4)
 	public void SaveProduct() throws Exception {
-		Reporter.log("SaveProduct Test case Started Successfully");
+		Reporter.log("SaveProduct");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.assertProductDiscount();
@@ -98,6 +95,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 
 	@Test(priority = 5)
 	public void EmptyWishlist() throws InterruptedException {
+		Reporter.log("EmptyWishlist");
 		objProductDescriptionPageObject.clickWishListbtn();
 		objWishlistPageObject.removeAllItemsFromWishlist();
 		objWishlistPageObject.clickBagBtn();
@@ -105,7 +103,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 
 	@Test(priority = 6)
 	public void ApplyPersonalizedCoupon() throws Exception {
-		Reporter.log("ApplyPersonalizedCoupon Test case Started Successfully");
+		Reporter.log("ApplyPersonalizedCoupon");
 		//objProductListPageObject.clickOkButton();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 400);
 		objAddCartPageObject.ClickCouponCancelbtn(); // applycoupon need to apply
@@ -121,7 +119,7 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	
 	@Test(priority = 8)
 	public void ViewDetail() throws Exception {
-		Reporter.log("ViewDetail Test case Started Successfully");
+		Reporter.log("ViewDetail");
 		objAddCartPageObject.getWishListbtn();
 		objAddCartPageObject.clickViewDetails();
 		objAddCartPageObject.clickPlaceOrder();
@@ -130,7 +128,8 @@ public class VEGASF_64_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC {
 	}
 
 	@Test(priority = 9)
-	public void PaymentWithWallet() throws InterruptedException {
+	public void PaymentWithCreditDebitCard() throws InterruptedException {
+		Reporter.log("PaymentWithCreditCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
 	}

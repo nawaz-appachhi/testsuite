@@ -1,13 +1,4 @@
 package com.automation.mobile.Android.apps.TestScript;
-//Facebook registered user - Login
-//Home Page
-//Search - Using Autosuggest (use any query from Golden Set)
-//Top buttons
-//Click for best Price (Coupon)
-//Select Size from wishlist
-//Place Order
-//Percentage Discount
-//Remove address
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -57,11 +48,8 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_396_START=====================");
-		Reporter.log("LoginWithFacebook Test case Started Successfully");
+		Reporter.log("LoginWithFacebook");
 		objLoginPageObject.clickFirstLogin();
-//		objLoginPageObject.clickFacebookbtn();
-//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
@@ -79,7 +67,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem Test case Started Successfully");
+		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
 		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
 		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
@@ -87,7 +75,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 
 	@Test(priority = 5)
 	public void SelectSize() throws InterruptedException {
-		Reporter.log("SelectSize Test case Started Successfully");
+		Reporter.log("SelectSize");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -101,7 +89,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 
 	@Test(priority = 6)
 	public void PlaceOrder() throws InterruptedException {
-		Reporter.log("PlaceOrder Test case Started Successfully");
+		Reporter.log("PlaceOrder");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -111,7 +99,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 
 	@Test(priority = 7)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("RemoveAddress Test case Started Successfully");
+		Reporter.log("RemoveAddress");
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 	}
@@ -119,12 +107,12 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
 	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		// create Excel Reference
+		
 		objGlobalVariables = new GlobalVariables();
-		// objExcelUtilities = new ExcelUtils();
+		
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		// objAppiumServer.startServer();
+		
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);
