@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
@@ -56,11 +55,9 @@ public class VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 	
 	@Test(priority = 2)
@@ -201,15 +198,9 @@ public class VEGASF_52_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
-		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
-	}
-	@Test(priority = 12)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
 	}
 
 	@BeforeTest

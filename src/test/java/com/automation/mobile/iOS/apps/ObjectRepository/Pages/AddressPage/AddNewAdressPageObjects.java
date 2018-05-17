@@ -4,6 +4,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -11,10 +14,10 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class AddNewAdressPageObjects {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public AddNewAdressPageObjects(IOSDriver<IOSElement> iDriver) {
+	public AddNewAdressPageObjects(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}

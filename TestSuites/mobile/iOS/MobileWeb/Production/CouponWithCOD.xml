@@ -12,6 +12,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_414_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_COD" />
 		</classes>
@@ -24,6 +26,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="iOS_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.iOS.MobileWeb.TestScript.VEGASF_421_Google_User_FIlter_SizeChart_ApplyCoupon_ClickforOffer_ViewDetails_PayWithCoD" />
 		</classes>

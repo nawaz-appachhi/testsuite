@@ -60,10 +60,8 @@ public class VEGASF_297_FB_User_SaveWishlist_FreeGift extends GlobalVariables {
 //		System.out.println("=====================VEGASF_297_START=====================");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithFaceBook(objGenericMethods.getValueByKey(testName, "FbEmailId"), objGenericMethods.getValueByKey(testName, "FbPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //	}
 	@Test(priority = 1)
 	public void Login()  {//Need to replace with Login with FaceBook
@@ -71,12 +69,10 @@ public class VEGASF_297_FB_User_SaveWishlist_FreeGift extends GlobalVariables {
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 
 	@Test(priority = 2)
@@ -162,12 +158,6 @@ public class VEGASF_297_FB_User_SaveWishlist_FreeGift extends GlobalVariables {
 		objAddressPageObjects.clickToSaveAddress();
 		objAddressPageObjects.VerifyAddressAdded();
 		objAddressPageObjects.VerifyPriceDetails();
-	}
-	
-	@Test(priority = 12)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
 	}
 
 	@BeforeTest

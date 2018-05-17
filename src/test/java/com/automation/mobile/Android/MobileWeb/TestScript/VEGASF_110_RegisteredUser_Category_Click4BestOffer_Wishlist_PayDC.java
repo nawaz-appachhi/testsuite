@@ -1,7 +1,6 @@
 package com.automation.mobile.Android.MobileWeb.TestScript;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -10,9 +9,11 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -33,22 +34,7 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.PLPageObjects.PL
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-/*Email registered User
- *Home Page
- *Search (using menu item e.g. Men -> Topwear - T-Shirts
- *Top buttons
- *Click for best Price (Coupon)
- *Select Size
- *Move to wishlist
- *Apply Generic Coupons
- *Edit address
- *Wallet
-*
-**/
-
-public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
+public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC extends BaseAndroidTest {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	AddressPageObjects objAddressPageObjects;
@@ -67,9 +53,7 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	HomePageObjects objHomePageObjects;
 	PLPageObjects objPLPageObjects;
 	WishListPageObject objWishlistPageObject;
-	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
-
 	String testName = "VEGASF_110";
 
 	@Test(priority = 1)
@@ -89,24 +73,26 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		objBagPageObjects.resetBag();
 		objWishlistPageObject.resetWishlist();
 		objAddressPageObjects.resetAddress();
-
 	}
 
 	@Test(priority = 3)
-	public void SearchItem() throws InterruptedException {
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		// MenTShirtAddToWishlist
 		Reporter.log("SearchItem test started");
-		objHomePageObjects.clickOnHamburgerButton();
-		objMenCategoriesPageObjects.clickOnmen();
-		objMenCategoriesPageObjects.clickOntopWare();
-		objMenCategoriesPageObjects.clickOnactiveTShirt();
-		objPLPageObjects.VerifyProductDetails();
+		objHomePageObjects.clickOnSearchIcon();
+		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "productcode"));
+		// objHomePageObjects.clickOnHamburgerButton();
+		// objMenCategoriesPageObjects.clickOnmen();
+		// objMenCategoriesPageObjects.clickOntopWare();
+		// objMenCategoriesPageObjects.clickOnactiveTShirt();
+		// objPLPageObjects.VerifyProductDetails();
 	}
 
 	@Test(priority = 4)
 	public void CheckBestPriceLink() throws InterruptedException {
 		Reporter.log("CheckBestPriceLink test started");
-		objPDPageObject.clickFirstProductSearchResult();
+		// objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickSaveToWishlist();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.imageVerification();
 		objPDPageObject.assertProductPrice();
@@ -131,9 +117,8 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		Reporter.log("MoveToBagfromWishlist test started");
 		objHomePageObjects.clickOnWishlistButton();
 		objWishlistPageObject.VerifyWishlistPageTitle();
-		objWishlistPageObject.VerifywishlistProductTitle();
-		objWishlistPageObject.VerifyDiscountedPrice();
 		objWishlistPageObject.VerifySellingPrice();
+		objWishlistPageObject.VerfiyProductIsAddedToWishlist();
 		objWishlistPageObject.ClickOnMoveToBag();
 		objWishlistPageObject.ClickSizeButtons();
 		objWishlistPageObject.ClickOnDoneButton();
@@ -144,8 +129,10 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 	public void ApplyGenericCoupon() throws InterruptedException {
 		Reporter.log("ApplyGenericCoupon test started");
 		objHomePageObjects.clickOnBagIcon();
+		objBagPageObjects.assertBagPageTitle("Bag");
 		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.verifyProduct();
+		objBagPageObjects.getProductImage();
+		objBagPageObjects.VerfiyProductIsAddedToCart();
 		objBagPageObjects.VerifySellingPrice();
 		objBagPageObjects.clickOnPlaceOrder();
 	}
@@ -180,16 +167,28 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		objAndroidGenericMethods.scrollDown(objPaymentPageObjects.getWallets(), 50);
 	}
 
+	@Test(priority = 11)
+	public void LogOut() throws InterruptedException {
+		Reporter.log("Logout");
+		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
+		objHamburgerPageObjects.logoutAndVerifySessionId();
+	}
+
 	@AfterTest
 	public void afterTest() {
 		System.out.println("=====================VEGASF_110_END=====================");
-		aDriver.quit();
+		try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
 	}
 
-	@Parameters({ "browserName_", "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
 	@BeforeTest
-	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_,
-			String appUrl_, String screenshotPath_) throws MalformedURLException {
+	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -201,24 +200,36 @@ public class VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(aDriver);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(aDriver);
-		objBagPageObjects = new BagPageObjects(aDriver);
-		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(aDriver);
-		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(aDriver);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(aDriver);
-		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(aDriver);
-		objMenuPageObjects = new MenuPageObjects(aDriver);
-		objPaymentPageObjects = new PaymentPageObjects(aDriver);
-		objFilterPageObjects = new FilterPageObjects(aDriver);
-		objPDPageObject = new PDPageObjects(aDriver);
-		objHamburgerPageObjects = new HamburgerPageObjects(aDriver);
-		objHomePageObjects = new HomePageObjects(aDriver);
-		objPLPageObjects = new PLPageObjects(aDriver);
-		objWishlistPageObject = new WishListPageObject(aDriver);
+		 params.put("engine_", engine_);
+        params.put("platform_", platform_);
+		 if(!(params.get("engine_").equalsIgnoreCase("TD"))) {
+			wd = objMobileDrivers.launchAppAndroid(params);
+		} else {
+			try {
+				setUpTest(params.get("platform_"));
+				System.out.println("TestDroid Execution Started");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error :: Please change suite parameter to run locally.");
+			}
+		}
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(wd);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
+		objBagPageObjects = new BagPageObjects(wd);
+		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(wd);
+		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(wd);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
+		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(wd);
+		objMenuPageObjects = new MenuPageObjects(wd);
+		objPaymentPageObjects = new PaymentPageObjects(wd);
+		objFilterPageObjects = new FilterPageObjects(wd);
+		objPDPageObject = new PDPageObjects(wd);
+		objHamburgerPageObjects = new HamburgerPageObjects(wd);
+		objHomePageObjects = new HomePageObjects(wd);
+		objPLPageObjects = new PLPageObjects(wd);
+		objWishlistPageObject = new WishListPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
 	}
-
 }

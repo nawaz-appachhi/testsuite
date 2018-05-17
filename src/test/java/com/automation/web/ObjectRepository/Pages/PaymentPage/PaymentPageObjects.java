@@ -2,7 +2,6 @@ package com.automation.web.ObjectRepository.Pages.PaymentPage;
 
 import java.util.List;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -665,7 +664,7 @@ public class PaymentPageObjects {
 	}
 
 	/**
-	 * Added By Aishurya: Click on View details link on payment confirmation page
+	 * Addded By Aishurya: Click on View details link on payment confirmation page
 	 */
 	public void GoToOrderDetailsPage() {
 		objGenericMethods.waitDriverWhenReady(getConfirmPageViewOrderLink(), "View order link");
@@ -686,52 +685,5 @@ public class PaymentPageObjects {
 		objGenericMethods.ReportClickEvent("NetBanking Tab");
 
 	}
-	
-	/**
-	 * Created By : Nitesh
-	 * Description: Method to verify assertion for COD
-	 */
-	public void verifyCODavailabilityThenPay(){
-		String amount = getFinalPayableAmount().getText();
-		String payableAmount = amount.replace("Rs. ", "").replace(",", "");
-		System.out.println("Payeble amount" + payableAmount);
-		int finalPayableAmount = Integer.parseInt(payableAmount);
-		System.out.println("finalPayableAmount:" + finalPayableAmount);
-		if (finalPayableAmount >= 299)
-		{
-			ClickCODPayOnDeliveryBtn();
-			VerifyCODOrderConfirmedTxt();
-			VerifyOrderNumber();
-			GoToOrderDetailsPage();
-			VerifyOrdernumber();
-		}else{
-			String payOnDelivery = getPayOnDelivery().getText();
-			if (payOnDelivery.equalsIgnoreCase("Pay On Delivery"))
-			{
-				Reporter.log("Failed: Though product is not available for COD, Pay On Delivery button is present to pay!");
-				System.out.println("Failed: Though product is not available for COD, Pay On Delivery button is present to pay!");
-			}else{
-				Reporter.log("Passed: Product is not available for COD as payable amount is lesser than the minimum COD amount of Rs.299!");
-				System.out.println("Passed: Product is not available for COD as payable amount is lesser than the minimum COD amount of Rs.299!");
-			}
-		}
-	}
-	
-	/**
-	 * Created By : shivaprasad B M
-	 * Description: Method to HAndle the Security alert message 
-	 */
-	public void handelAlert(){	
-	try {
-		if(System.getProperty("browserType").contains("firefox")) {
-			System.out.println(System.getProperty("browserType"));
-			Alert alert=driver.switchTo().alert();
-			alert.accept();
-			
-		}
-	} catch (Exception e) {
-		
-	}
-	
-	}
+
 }

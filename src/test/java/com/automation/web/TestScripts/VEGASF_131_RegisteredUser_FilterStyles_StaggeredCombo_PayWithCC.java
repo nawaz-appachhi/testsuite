@@ -75,12 +75,10 @@ public class VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC ext
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 		objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 
 	@Test(priority = 2)
@@ -184,17 +182,11 @@ public class VEGASF_131_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC ext
 		objPaymentPageObjects.SelectCreditDebitCard();
 		objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 				objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
-		objPaymentPageObjects.handelAlert();
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
 	}
-	
-	@Test(priority = 11)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
-	}
+
 
 	@BeforeTest
 	public void beforeTest() {

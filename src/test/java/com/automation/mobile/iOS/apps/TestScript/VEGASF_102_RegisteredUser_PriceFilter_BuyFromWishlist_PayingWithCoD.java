@@ -24,8 +24,10 @@ import java.util.concurrent.TimeUnit;
 import org.ini4j.InvalidFileFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -43,7 +45,7 @@ import com.automation.mobile.iOS.apps.ObjectRepository.Pages.WishListPage.Wishli
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD {
+public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -53,7 +55,7 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	IOSDriver<IOSElement> iDriver;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -98,18 +100,18 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 
 	}
 
-	@Test(priority = 3)
-	public void PLPage() throws InterruptedException {
-		objPLPageObjets.clickOnFilter();
-		objAssertionPageObject.verifyDiscount();
-		objPLPageObjets.clickOnFilterDiscount();
-		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-		objPLPageObjets.clickOnApplyDiscount();
-		objAssertionPageObject.verifyProductname();
-		objAssertionPageObject.verifyPLPHeader();
-		objAssertionPageObject.verifyPLPProductCount();
-		objPLPageObjets.clickOnBrandNamePLP();
-	}
+//	@Test(priority = 3)
+//	public void PLPage() throws InterruptedException {
+//		objPLPageObjets.clickOnFilter();
+//		objAssertionPageObject.verifyDiscount();
+//		objPLPageObjets.clickOnFilterDiscount();
+//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+//		objPLPageObjets.clickOnApplyDiscount();
+//		objAssertionPageObject.verifyProductname();
+//		objAssertionPageObject.verifyPLPHeader();
+//		objAssertionPageObject.verifyPLPProductCount();
+//		objPLPageObjets.clickOnBrandNamePLP();
+//	}
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException {
@@ -156,10 +158,13 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 		objPaymentPageObject.clickOnCOD();
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
-			String screenshotPath_) throws InterruptedException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
@@ -171,24 +176,40 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		iDriver = objMobileDrivers.launchAppiOS(params);
-		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		   params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest(params.get("platform_"));
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+		   wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
-		objProfileLoginPageObject = new ProfileLoginPageObject(iDriver);
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objPDPageObject = new PDPageObject(iDriver);
-		objHomePageObject2 = new HomePageObject2(iDriver);
-		objWishlistPageObject = new WishlistPageObject(iDriver);
-		objPaymentPageObject = new PaymentPageObject(iDriver);
-		objCartPageObject = new CartPageObject(iDriver);
-		objiOSGenericMethods = new iOSGenericMethods(iDriver);
-		objAssertionPageObject = new AssertionPageObject(iDriver);
-		objAddNewAdressPageObjects = new AddNewAdressPageObjects(iDriver);
+		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
+		objPLPageObjets = new PLPageObjects(wd);
+		objPDPageObject = new PDPageObject(wd);
+		objHomePageObject2 = new HomePageObject2(wd);
+		objWishlistPageObject = new WishlistPageObject(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objCartPageObject = new CartPageObject(wd);
+		objiOSGenericMethods = new iOSGenericMethods(wd);
+		objAssertionPageObject = new AssertionPageObject(wd);
+		objAddNewAdressPageObjects = new AddNewAdressPageObjects(wd);
 	}
 
 	@AfterTest
 	public void quit() {
-		iDriver.quit();
+		wd.quit();
 	}
 
 }

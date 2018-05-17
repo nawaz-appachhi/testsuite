@@ -12,8 +12,11 @@ import java.util.concurrent.TimeUnit;
 import org.ini4j.InvalidFileFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -53,7 +56,7 @@ Saved Cards
  * @author monica
  *
  */
-public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC {
+public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddress_PayWithDC extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -64,7 +67,7 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	HomePageObject2 objHomePageObject2;
 	EditAdressPageObject objEditAdressPageObject;
 	MobileDrivers objMobileDrivers;
-	IOSDriver<IOSElement> iDriver;
+	//IOSDriver<IOSElement> wd;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -104,20 +107,20 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-		objAssertionPageObject.verifyProductname();
-		objAssertionPageObject.verifyPLPHeader();
-		objAssertionPageObject.verifyPLPProductCount();
+//		objAssertionPageObject.verifyProductname();
+//		objAssertionPageObject.verifyPLPHeader();
+//		objAssertionPageObject.verifyPLPProductCount();
 	}
 
-	@Test(priority = 3)
-	public void Filter() throws InterruptedException {
-		objPLPageObjets.clickOnFilter();
-		objAssertionPageObject.verifyDiscount();
-		objPLPageObjets.clickOnFilterDiscount();
-		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-		objPLPageObjets.clickOnApplyDiscount();
-		objPLPageObjets.clickOnFirstproductofPLP();
-	}
+//	@Test(priority = 3)
+//	public void Filter() throws InterruptedException {
+//		objPLPageObjets.clickOnFilter();
+//		objAssertionPageObject.verifyDiscount();
+//		objPLPageObjets.clickOnFilterDiscount();
+//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+//		objPLPageObjets.clickOnApplyDiscount();
+//		objPLPageObjets.clickOnFirstproductofPLP();
+//	}
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
@@ -175,9 +178,13 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		objPaymentPageObject.clickOnCreditCardPayment();
 	}
 
-	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -189,24 +196,46 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		iDriver = objMobileDrivers.launchAppiOS(params);
-		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest(params.get("platform_"));
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objPDPageObject = new PDPageObject(iDriver);
-		objWishlistPageObject = new WishlistPageObject(iDriver);
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objProfileLoginPageObject = new ProfileLoginPageObject(iDriver);
-		objCartPageObject = new CartPageObject(iDriver);
-		objAssertionPageObject = new AssertionPageObject(iDriver);
-		objEditAdressPageObject = new EditAdressPageObject(iDriver);
-		objAddNewAdressPageObjects = new AddNewAdressPageObjects(iDriver);
-		objPaymentPageObject = new PaymentPageObject(iDriver);
-		objHomePageObject2 = new HomePageObject2(iDriver);
-		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		objPLPageObjets = new PLPageObjects(wd);
+		objPDPageObject = new PDPageObject(wd);
+		objWishlistPageObject = new WishlistPageObject(wd);
+		objPLPageObjets = new PLPageObjects(wd);
+		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
+		objCartPageObject = new CartPageObject(wd);
+		objAssertionPageObject = new AssertionPageObject(wd);
+		objEditAdressPageObject = new EditAdressPageObject(wd);
+		objAddNewAdressPageObjects = new AddNewAdressPageObjects(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objHomePageObject2 = new HomePageObject2(wd);
+		objiOSGenericMethods = new iOSGenericMethods(wd);
 	}
 	 @AfterTest
 		public void quit() {
-			iDriver.quit();
+			 try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 wd.quit();
 		}
 }

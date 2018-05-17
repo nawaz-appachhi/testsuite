@@ -80,10 +80,8 @@ public class VEGASF_308_Google_User_ClickforOffer_AddNewAddress_Home_PayWithDC e
 //		System.out.println("Login In Myntra");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithGmail(objGenericMethods.getValueByKey(testName, "GmailUserName"), objGenericMethods.getValueByKey(testName, "GmailPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //			}
 	
 	@Test(priority = 1)
@@ -92,12 +90,10 @@ public class VEGASF_308_Google_User_ClickforOffer_AddNewAddress_Home_PayWithDC e
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 	
 	@Test(priority = 2)
@@ -165,13 +161,6 @@ public class VEGASF_308_Google_User_ClickforOffer_AddNewAddress_Home_PayWithDC e
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
 	}
-	
-	@Test(priority = 10)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
-	}
-	
 	@AfterTest
 	public void afterTest() {
 		// quit browser object

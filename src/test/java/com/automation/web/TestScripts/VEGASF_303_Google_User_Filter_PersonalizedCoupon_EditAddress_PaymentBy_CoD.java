@@ -63,12 +63,10 @@ public class VEGASF_303_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 
 	@Test(priority = 2)
@@ -182,14 +180,13 @@ public class VEGASF_303_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.VerifyFinalPayableAmount();
+		
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.verifyCODavailabilityThenPay();
-	}
-	
-	@Test(priority = 12)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
+		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
+		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
+		objPaymentPageObjects.VerifyOrderNumber();
+		objPaymentPageObjects.GoToOrderDetailsPage();
+		objPaymentPageObjects.VerifyOrdernumber();
 	}
 
 	@BeforeTest

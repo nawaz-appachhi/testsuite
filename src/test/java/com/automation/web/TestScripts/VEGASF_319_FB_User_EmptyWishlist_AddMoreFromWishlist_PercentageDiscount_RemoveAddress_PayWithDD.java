@@ -79,10 +79,8 @@ public class VEGASF_319_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 //		System.out.println("Login In Myntra");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithFaceBook(objGenericMethods.getValueByKey(testName, "FbUserName"), objGenericMethods.getValueByKey(testName, "FbPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //			}
 	@Test(priority = 1)
 	public void LoginInMyntra() {//Need to replace with faceBook login
@@ -90,12 +88,10 @@ public class VEGASF_319_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 	
 	@Test(priority = 2)
@@ -179,11 +175,6 @@ public class VEGASF_319_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
-	}
-	@Test(priority = 10)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
 	}
 	
 	@AfterTest

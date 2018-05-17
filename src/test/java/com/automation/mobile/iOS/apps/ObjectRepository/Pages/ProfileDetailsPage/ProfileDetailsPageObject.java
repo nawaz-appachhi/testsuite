@@ -18,6 +18,9 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
@@ -34,9 +37,9 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class ProfileDetailsPageObject {
 	iOSGenericMethods objiOSGenericMethods;
-	IOSDriver<IOSElement> iDriver;
+	AppiumDriver<MobileElement> iDriver;
 
-	public ProfileDetailsPageObject(IOSDriver<IOSElement> iDriver) {
+	public ProfileDetailsPageObject(AppiumDriver<MobileElement> iDriver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);

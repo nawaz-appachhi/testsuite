@@ -4,8 +4,10 @@
 package com.automation.core.mobile.Android;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -72,15 +74,20 @@ import freemarker.template.ObjectWrapperAndUnwrapper;
  *
  */
 public class AndroidGenericMethods extends GlobalVariables {
-	public AndroidDriver<AndroidElement> aDriver;
+	public AppiumDriver<MobileElement> aDriver;
 
 	public JavaUtils objJavaUtils = new JavaUtils();
 	public ExtentTest test;
 	int level = 0;
 	static Logger log = Logger.getLogger("devpinoyLogger");
-	public AndroidGenericMethods(AndroidDriver<AndroidElement> aDriver) {
+	public AndroidGenericMethods(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		this.aDriver = aDriver;
+	}
+
+	public AndroidGenericMethods() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public boolean isElementPresent(String locator) {
@@ -208,19 +215,19 @@ public class AndroidGenericMethods extends GlobalVariables {
 
 	public boolean verifyElement(String nextElement) {
 		System.out.println("Verifying - " + nextElement);
-		List<AndroidElement> e = null;
+		List<MobileElement> e = null;
 		if (level == 0) {
-			e = aDriver.findElementsByAndroidUIAutomator(
+			e = ((FindsByAndroidUIAutomator<MobileElement>) aDriver).findElementsByAndroidUIAutomator(
 					"UiSelector().resourceId(\"com.myntra.android:id/flyout_parent_title\")");
 		} else {
-			e = aDriver.findElementsByAndroidUIAutomator("UiSelector().resourceId(\"com.myntra.android:id/title\")");
+			e = ((FindsByAndroidUIAutomator<MobileElement>) aDriver).findElementsByAndroidUIAutomator("UiSelector().resourceId(\"com.myntra.android:id/title\")");
 		}
 		boolean scroll = true;
 		String lastBeforeScroll = "x";
 		String lastAfterScroll = "y";
 		while (scroll) {
 			// finding element
-			for (AndroidElement a : e) {
+			for (MobileElement a : e) {
 				if (a.getText().equals(nextElement)) {
 					return true;
 				}
@@ -239,16 +246,16 @@ public class AndroidGenericMethods extends GlobalVariables {
 				e1.printStackTrace();
 			}
 			if (level == 0) {
-				e = aDriver.findElementsByAndroidUIAutomator(
+				e = ((FindsByAndroidUIAutomator<MobileElement>) aDriver).findElementsByAndroidUIAutomator(
 						"UiSelector().resourceId(\"com.flipkart.android:id/flyout_parent_title\")");
 			} else {
-				e = aDriver
+				e = ((FindsByAndroidUIAutomator<MobileElement>) aDriver)
 						.findElementsByAndroidUIAutomator("UiSelector().resourceId(\"com.flipkart.android:id/title\")");
 			}
 			lastAfterScroll = e.get(e.size() - 1).getText();
 		}
 		// System.out.println("------**----------------------------");
-		for (AndroidElement a : e) {
+		for (MobileElement a : e) {
 			// System.out.println(a.getText());
 			if (a.getText().equals(nextElement)) {
 				return true;
@@ -286,14 +293,27 @@ public class AndroidGenericMethods extends GlobalVariables {
 	 */
 	public void takeSnapShot() {
 		try {
+			JavaUtils objJavaUtils = new JavaUtils();
+			String isTestDroid = objJavaUtils.getPropValue("TestDroidRun");
+			
+			
 			// Convert web driver object to TakeScreenshot
 			TakesScreenshot scrShot = ((TakesScreenshot) aDriver);
 			// Call getScreenshotAs method to create image file
 			File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+			File DestFile = null;
 			// Move image file to new destination
-			File DestFile = new File(
-//					GlobalVariables.PROJECT_ROOT_FOLDER + "/src/test/resources/" + datetime("yyyyMMddHHmmss") + ".jpg");
-					GlobalVariables.SCREENSHOT_PATH + datetime("yyyyMMddHHmmss") + ".jpg");
+			if(isTestDroid.equalsIgnoreCase("true"))
+			{
+				DestFile = new File(
+						System.getProperty("user.dir") + "/screenshots/" + datetime("yyyyMMddHHmmss") + ".jpg");
+			}
+			else
+			{
+				DestFile = new File(
+						GlobalVariables.SCREENSHOT_PATH + datetime("yyyyMMddHHmmss") + ".jpg");
+			}
+
 			// Copy file at destination
 			FileUtils.copyFile(SrcFile, DestFile);
 		} catch (WebDriverException e) {
@@ -801,8 +821,8 @@ public class AndroidGenericMethods extends GlobalVariables {
 	 * @param text
 	 * @author Sneha
 	 */
-	public void scrollToText(AndroidDriver<AndroidElement> aDriver, String text) {
-		((AndroidDriver<AndroidElement>) aDriver).findElementByAndroidUIAutomator(
+	public void scrollToText(AppiumDriver<MobileElement> aDriver, String text) {
+		((FindsByAndroidUIAutomator<MobileElement>) aDriver).findElementByAndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""
 						+ text + "\").instance(0))");
 	}
@@ -839,7 +859,7 @@ public class AndroidGenericMethods extends GlobalVariables {
 	 * @author 300019227 Anu;
 	 */
 	public void backKeyButton() {
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK);
 	}
 
 	/**

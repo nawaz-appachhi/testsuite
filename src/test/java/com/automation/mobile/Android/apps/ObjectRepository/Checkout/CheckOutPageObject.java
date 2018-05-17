@@ -17,8 +17,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.apps.ObjectRepository.Hamburger.HamburgerPageObject;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -30,28 +32,27 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
  *
  */
 public class CheckOutPageObject {
-	public AndroidDriver<AndroidElement> aDriver;
+	public AppiumDriver<MobileElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 	HamburgerPageObject objHamburgerPageObject;
 
-	public CheckOutPageObject(AndroidDriver<AndroidElement> aDriver) {
-		this.aDriver = aDriver;
+	public CheckOutPageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHamburgerPageObject = new HamburgerPageObject(aDriver);
-		// String pageName= "CheckOutPageObjec";
-
+		this.aDriver = aDriver;
 	}
 
+	// *****************Objects***************************//
 	/**
 	 * Name: Vinay
 	 * 
 	 * Description: This xpath help us to click on "Continue" button on CheckOut
 	 * Page
 	 */
-	@FindBy(xpath="//button[text()='continue']")
-//	@FindBy(xpath = "//android.widget.Button[@content-desc='CONTINUE' or @text='CONTINUE']")
+	@FindBy(xpath = "//button[text()='continue']")
 	public AndroidElement clickContinue;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -59,6 +60,7 @@ public class CheckOutPageObject {
 	 */
 	@FindBy(xpath = "//input[@id='pincode']")
 	public AndroidElement pinCodetxt;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -68,6 +70,7 @@ public class CheckOutPageObject {
 
 	@FindBy(xpath = "//button[@class='choose-locality link-tappable']")
 	public AndroidElement choosebtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -76,6 +79,7 @@ public class CheckOutPageObject {
 	 */
 	@FindBy(xpath = "//input[@id='locality']")
 	public AndroidElement enterLocality;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -93,7 +97,7 @@ public class CheckOutPageObject {
 	 */
 	@FindBy(xpath = "//input[@id='name']")
 	public AndroidElement nametxt;
-	
+
 	@FindBy(xpath = "//label[@class='name-label']")
 	public AndroidElement nametxtHeader;
 	/**
@@ -101,17 +105,17 @@ public class CheckOutPageObject {
 	 * 
 	 * Description: This xpath help us to enter the Address on fill address page
 	 * 
-	 * Modified by : Sneha
-	 * old Xpath ://android.widget.EditText[@text='Address*' or @content-desc='Address*' or @index='6']"
+	 * Modified by : Sneha old Xpath ://android.widget.EditText[@text='Address*'
+	 * or @content-desc='Address*' or @index='6']"
 	 */
 	@FindBy(id = "address")
 	public AndroidElement addresstxt;
+
 	/**
 	 * Name: Vinay
 	 * 
 	 * Description: This xpath help us to enter the "Mobile Number on fill address
-	 * page
-	 * Modified by vinay content-desc added
+	 * page Modified by vinay content-desc added
 	 */
 	@FindBy(xpath = "//input[@id='mobile']")
 	public AndroidElement mobileNumbertxt;
@@ -124,6 +128,7 @@ public class CheckOutPageObject {
 	 */
 	@FindBy(xpath = "//div[@id='home']")
 	public AndroidElement homeRadiobtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -148,23 +153,23 @@ public class CheckOutPageObject {
 	 * Description: This xapth help us to click on the "EditOrChange Address button"
 	 * on fill address page which will display after add the address
 	 * 
-	 * modified by sneha
-	 * old xpath -"//android.view.View[(starts-with(@content-desc,'Edit/Change'))]
+	 * modified by sneha old xpath
+	 * -"//android.view.View[(starts-with(@content-desc,'Edit/Change'))]
 	 */
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Edit/Change')]")
-//	@FindBy(xpath = "//android.view.View[(starts-with(@content-desc,'Edit/Change')) or (starts-with(@text,'Edit/Change'))]")
 	public AndroidElement editOrchangeAddressbtn;
+
 	/**
 	 * Name: Vinay
 	 * 
 	 * Description: This xapth help us to click on the "Remove" button to remove the
 	 * address
 	 */
-	
+
 	@FindBy(xpath = "//button[contains(@class,'delete')]")
-//	@FindBy(xpath = "//android.widget.Button[@content-desc='REMOVE' or @index='0']")
 	public AndroidElement removeAddressbtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -172,8 +177,8 @@ public class CheckOutPageObject {
 	 * address
 	 */
 	@FindBy(xpath = "//button[contains(@class,'edit')]")
-//	@FindBy(xpath = "//android.widget.Button[@content-desc='EDIT' or @index='1']")
 	public AndroidElement editAddressbtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -181,8 +186,8 @@ public class CheckOutPageObject {
 	 * address page
 	 */
 	@FindBy(className = "add-new-address")
-//	@FindBy(xpath = "//android.view.View[@text='Add New Address' or @content-desc='Add New Address']")
 	public AndroidElement addNewAddressbtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -191,6 +196,7 @@ public class CheckOutPageObject {
 	 */
 	@FindBy(xpath = "//button[text()='continue']")
 	public AndroidElement continueOrderbtn;
+
 	/**
 	 * Name: Vinay
 	 * 
@@ -198,7 +204,6 @@ public class CheckOutPageObject {
 	 * page
 	 */
 	@FindBy(xpath = "//*[@class='button-sticky-buttom']/button[2]")
-//	@FindBy(xpath = "//android.widget.Button[@content-desc='PAY NOW']")
 	public AndroidElement paynowbtn;
 
 	@FindBy(className = "android.widget.LinearLayout")
@@ -206,10 +211,10 @@ public class CheckOutPageObject {
 	/**
 	 * this object help to click on confirm button while editing the address
 	 */
-	@FindBy(xpath="//button[contains(text(),'Confirm')]")
+	@FindBy(xpath = "//button[contains(text(),'Confirm')]")
 	public AndroidElement addressConfirmbtn;
 
-	/************* GetterMtehods ******************/
+	/************* GetterMethods ******************/
 
 	public AndroidElement getAddressConfirmbtn() {
 		return addressConfirmbtn;
@@ -218,11 +223,6 @@ public class CheckOutPageObject {
 	public AndroidElement getSaveurAddressMsg() {
 		return saveurAddressMsg;
 	}
-
-	/**
-	 * All the Getter methods written below for all the above element
-	 * 
-	 */
 
 	public AndroidElement getPinCodetxt() {
 		objAndroidGenericMethods.CheckAndroidElementFoundForWebView(pinCodetxt, "pinCodetxt");
@@ -275,10 +275,10 @@ public class CheckOutPageObject {
 	}
 
 	public AndroidElement getEditOrchangeAddressbtn() {
-		objAndroidGenericMethods.CheckAndroidElementFoundForWebView(editOrchangeAddressbtn,"editOrchangeAddressbtn");
+		objAndroidGenericMethods.CheckAndroidElementFoundForWebView(editOrchangeAddressbtn, "editOrchangeAddressbtn");
 		return editOrchangeAddressbtn;
 	}
-
+ 
 	public AndroidElement getRemoveAddressbtn() {
 		objAndroidGenericMethods.CheckAndroidElementFoundForWebView(removeAddressbtn, "RemoveAddressBtn");
 		return removeAddressbtn;
@@ -305,14 +305,13 @@ public class CheckOutPageObject {
 	}
 
 	/**
-	 * This is genric method please dont change anything if you need anything please
-	 * create another method this metnod looking for "AddNewAddress" button and then
+	 *   Method checks for "AddNewAddress" button and then
 	 * it will add the new address If "AddNewAddress" is not available then it will
 	 * start filling the address
 	 * 
-	 * @author VInay ALERT: contact before making any modifications
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * @author VInay ALERT
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 * 
 	 */
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -330,18 +329,16 @@ public class CheckOutPageObject {
 
 	/**
 	 * This is genric method please dont change anything if you need anything please
-	 * create another method
-	 * it is switching into webview then performing all task
+	 * create another method it is switching into webview then performing all task
 	 * 
-	 * @author VInay ALERT: contact before making any modifications contact no:
-	 *         8792604667
-	 * @throws InterruptedException 
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * @author VInay 
+	 * @throws InterruptedException
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 * 
 	 * 
 	 */
-	public void fillAddressOffc() throws InterruptedException, InvalidFileFormatException, IOException{
+	public void fillAddressOffc() throws InterruptedException, InvalidFileFormatException, IOException {
 		getPinCodetxt().clear();
 		getPinCodetxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Pincode"));
 		clickChoosebtn();
@@ -353,8 +350,6 @@ public class CheckOutPageObject {
 		getAddresstxt().clear();
 		getAddresstxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Address"));
 		aDriver.hideKeyboard();
-		// objAndroidGenericMethods.scrollToText(aDriver, "Type of Address *");
-		// objAndroidGenericMethods.bottomTopSwipe(2000);
 		getMobileNumbertxt().clear();
 		getMobileNumbertxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "MobileNumber"));
 		getOfficeRadiobtn().click();
@@ -365,8 +360,9 @@ public class CheckOutPageObject {
 	 * modified by sneha : added sleep
 	 * 
 	 * Moodified by vinay : method wsitch into webview
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * 
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 */
 	public void fillAddressHome() throws InterruptedException, InvalidFileFormatException, IOException {
 		getPinCodetxt().clear();
@@ -411,42 +407,39 @@ public class CheckOutPageObject {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getRemoveAddressbtn(), "RemoveAddressBtn");
 	}
 
-	
 	/**
-	 * This is genric method please dont change anything if you need anything please
-	 * create another method This Mthod help us to check whether address is
+	 * This Method help us to check whether address is
 	 * available or not. If address is already added then it will directly click on
 	 * "continue" button and go forward and if address is not added then it will
-	 * start filliing the addres and click on "continue" button
+	 * start filling the address and click on "continue" button
 	 * 
-	 * @author VInay ALERT: contact before making any modifications
-	 * Modified by vinay : changed the method in an optimized way
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * @author VInay 
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 */
 	public void CheckAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		try { 
+		try {
 			getContinueOrderbtn().getText();
 			System.out.println(continueOrderbtn.getText());
-			
+
 		} catch (Exception e) {
 			fillAddressOffc();
 		}
 	}
 
 	/**
-	 * This is genric method please dont change anything if you need anything please
-	 * create another method This methods use for remove the address so this method
+	 *  This methods use for remove the address so this method
 	 * always looking for "EditOR Change" button then click on "REMOVE" Then again
 	 * it will start fill the address
 	 * 
 	 * Modified by vinay : changed the method in an optimized way
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * 
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 * 
 	 */
 	public void removeAndAddAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		
+
 		Boolean editAddr = false;
 		try {
 			editAddr = getEditOrchangeAddressbtn().isDisplayed();
@@ -461,13 +454,15 @@ public class CheckOutPageObject {
 		}
 
 	}
+
 	/**
 	 * This method use for remove the address
-	 *@author 300021282 VINAY
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * 
+	 * @author 300021282 VINAY
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 */
-	
+
 	public void removeAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Boolean editAddr = false;
 		try {
@@ -475,13 +470,13 @@ public class CheckOutPageObject {
 		} catch (Exception e1) {
 		}
 		if (editAddr) {
-			clickEditOrchangeAddress(); 
+			clickEditOrchangeAddress();
 			clickOnRemoveAddress();
 		} else {
 			fillAddressOffc();
 			clickEditOrchangeAddress();
-			clickOnRemoveAddress();  
-			
+			clickOnRemoveAddress();
+
 		}
 
 	}
@@ -489,15 +484,17 @@ public class CheckOutPageObject {
 	public void enterpincode(String pinCodeValue) {
 		getPinCodetxt().sendKeys(pinCodeValue);
 	}
+
 	/**
 	 * This genric method help to edit address on checkout page
+	 * 
 	 * @author Vinay:: changed the method in an optimized way
-	 * @throws IOException 
-	 * @throws InvalidFileFormatException 
+	 * @throws IOException
+	 * @throws InvalidFileFormatException
 	 */
 	public void editAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		
-		try {  
+
+		try {
 			System.out.println("came in try block");
 			clickEditOrchangeAddress();
 			System.out.println("clicked editaddrschange");
@@ -507,26 +504,20 @@ public class CheckOutPageObject {
 			getNametxt().clear();
 			getNametxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Name"));
 			aDriver.hideKeyboard();
-			clickAddressSave();		
+			clickAddressSave();
 		} catch (Exception e1) {
-			fillAddressOffc();  
-		} 
-		
+			fillAddressOffc();
+		}
+
 	}
-	
-	public void addAddressForHome() throws InvalidFileFormatException, InterruptedException, IOException{
+
+	public void addAddressForHome() throws InvalidFileFormatException, InterruptedException, IOException {
 		try {
 			fillAddressHome();
 		} catch (Exception e) {
 			CheckAddress();
 		}
 
-	}
-	
-
-	public void enterpincode() {
-		// getPinCodetxt().sendKeys(pinCodeValue);
-		getPinCodetxt().sendKeys("560098");
 	}
 
 	public void clickAddNewAddressbtn() {
@@ -537,16 +528,18 @@ public class CheckOutPageObject {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getSaveAddressbtn(), "SaveButton");
 
 	}
-	
+
 	public void clickConfirmAddress() {
 		objAndroidGenericMethods.swithchInToWebview();
 		objAndroidGenericMethods.clickOnAndroidElement(getAddressConfirmbtn(), "Confirm Address Button");
 		objAndroidGenericMethods.switchInToNativeView();
 	}
+
 	public void clickLocalitySavebtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getLocalitySaveButton(), "localitySaveButton");
 	}
-	public void clickHomeRadioBtn(){
+
+	public void clickHomeRadioBtn() {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getHomeRadiobtn(), "homeRadiobtn");
 	}
 
@@ -566,19 +559,19 @@ public class CheckOutPageObject {
 
 	public void clickContinue() throws InterruptedException {
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(getContinueOrderbtn(), "Continue Button");
-	//	Thread.sleep(2000);
+		// Thread.sleep(2000);
 	}
 
 	public List<AndroidElement> getListOfElements() throws InterruptedException {
 
-		//Thread.sleep(2000);
+		// Thread.sleep(2000);
 		System.err.println("List of Elements found " + listOfCartPage.size());
 		for (Iterator<AndroidElement> iterator = listOfCartPage.iterator(); iterator.hasNext();) {
 			WebElement WebElement = (WebElement) iterator.next();
 			System.err.println("List of Elements   --> " + WebElement.getText());
 			System.err.println("List of Elements   --> " + WebElement.getTagName());
 		}
-	//	Thread.sleep(1000);
+		// Thread.sleep(1000);
 		return listOfCartPage;
 
 	}
@@ -587,25 +580,25 @@ public class CheckOutPageObject {
 	/**
 	 * object for remove button displayed for adjacent address in address page;
 	 */
-	@FindBy(xpath = "//android.view.View[@text='REMOVE']")
+	@FindBy(xpath = "//*[@text='REMOVE' or @content-desc='REMOVE']")
 	public AndroidElement addressRemove;
 
 	/**
 	 * object for delete button displayed after tapped on remove address;
 	 */
-	@FindBy(xpath = "//android.view.View[@text='DELETE']")
+	@FindBy(xpath = "//*[@text='DELETE' or @content-desc='DELETE']")
 	public AndroidElement addressDelete;
 
 	/**
 	 * object to identify the message displayed for empty address condition;
 	 */
-	@FindBy(xpath = "//android.view.View[@text='SAVE YOUR ADDRESSES NOW']")
+	@FindBy(xpath = "//*[@text='SAVE YOUR ADDRESSES NOW' or @content-desc='SAVE YOUR ADDRESSES NOW']")
 	public AndroidElement saveurAddressMsg;
 
 	/**
 	 * object to identify the message displayed for empty address condition;
 	 */
-	@FindBy(xpath = "//android.view.ViewGroup[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
+	@FindBy(xpath = "//android.widget.ImageView[@index='0']")
 	public AndroidElement closeAddressBtn;
 
 	/**
@@ -616,11 +609,10 @@ public class CheckOutPageObject {
 	 */
 	public boolean saveurAddressMsgDisplayed() {
 		try {
-			saveurAddressMsg.isDisplayed();
+			 saveurAddressMsg.isDisplayed();
 			return true;
 		} catch (Exception e) {
 			System.out.println("saveurAddressMsg is not displayed");
-			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -638,7 +630,6 @@ public class CheckOutPageObject {
 			return true;
 		} catch (Exception e) {
 			System.out.println("remove is not displayed");
-			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -649,12 +640,12 @@ public class CheckOutPageObject {
 	 * @author 300021278 -Rakesh
 	 * @throws InterruptedException
 	 * 
-	 * modified by : Sneha, while condion changed
+	 *             modified by : Sneha, while condion changed
 	 */
 	public void RemoveAllSavedAddressesFromAddressPage() throws InterruptedException {
 		while (!saveurAddressMsgDisplayed()) {
 			addressRemove.click();
-		//	Thread.sleep(2000);
+			// Thread.sleep(2000);
 			addressDelete.click();
 		}
 	}
@@ -668,25 +659,50 @@ public class CheckOutPageObject {
 	public void resetAddress() throws InterruptedException {
 		try {
 			objHamburgerPageObject.clickHamburgerbtn();
-			objAndroidGenericMethods.scrolltoElementAndClick( objHamburgerPageObject.getmyAccountBtn(), 2000);
-			objAndroidGenericMethods.scrolltoElementAndClick( objHamburgerPageObject.getmyAccountAdddresses(), 2000);
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountBtn());
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.myAccountAdddresses);
 			System.out.println("clicked on address");
-			if (saveurAddressMsgDisplayed()) { 
+			if (saveurAddressMsgDisplayed()) {
 				closeAddressBtn.click();
 				objHamburgerPageObject.myAccountClosebtn.click();
 				Thread.sleep(3000);
-				aDriver.pressKeyCode(AndroidKeyCode.BACK);
+				aDriver.navigate().back();
 			} else {
 				RemoveAllSavedAddressesFromAddressPage();
-			//	Thread.sleep(1000);
+				// Thread.sleep(1000);
+				closeAddressBtn.click(); 
+				objHamburgerPageObject.myAccountClosebtn.click();
+				Thread.sleep(3000);
+				aDriver.navigate().back();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void resetAddress2() throws InterruptedException {
+		try {
+			objHamburgerPageObject.clickHamburgerbtn();
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountBtn(), 2000);
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountAdddresses(), 2000);
+			System.out.println("clicked on address");
+			try {
+				RemoveAllSavedAddressesFromAddressPage();
+				// Thread.sleep(1000);
 				closeAddressBtn.click();
 				objHamburgerPageObject.myAccountClosebtn.click();
 				Thread.sleep(3000);
-				aDriver.pressKeyCode(AndroidKeyCode.BACK);
+				aDriver.navigate().back();
+			} catch (Exception e) {
+				closeAddressBtn.click();
+				objHamburgerPageObject.myAccountClosebtn.click();
+				Thread.sleep(3000);
+				aDriver.navigate().back();
 			}
+			
 		} catch (InterruptedException e) {
-			e.printStackTrace(); 
-		} 
+			e.printStackTrace();
+		}
 	}
 
 }

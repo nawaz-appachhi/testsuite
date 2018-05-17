@@ -1,25 +1,12 @@
 package com.automation.web.ObjectRepository.Pages.Login;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.event.KeyEvent;
-import java.io.IOException;
 import java.util.List;
 
-import org.apache.commons.httpclient.Cookie;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 
 import com.automation.core.web.GenericMethods;
 import com.automation.web.ObjectRepository.Pages.Header.HeaderPageObject;
@@ -35,9 +22,6 @@ public class LoginPageObject {
 	GenericMethods objGenericMethods;
 	HeaderPageObject objHeaderPageObject;
 	WebDriver driver;
-	String SESSION_BEFORE_LOGIN;
-	String SESSION_AFTER_LOGIN;
-	String SESSION_AFTER_LOGOUT;
 
 	/**
 	 * @param driver
@@ -64,6 +48,8 @@ public class LoginPageObject {
 	
 	@FindBy(xpath="//div[@class='desktop-accActions']/div/div[@class='desktop-accInfoSection']")
 	public WebElement LogOutButton;
+	
+
 
 	/**
 	 * Added by-Aishu- for LoginWithFaceBook() method
@@ -205,48 +191,4 @@ public class LoginPageObject {
 		System.out.println("After close"+mainWindow);
 		driver.switchTo().window(mainWindow);
 	}
-	/**
-	 *@author 300019224-Aishurya: to capture session id
-	 */
-	public Void readSession(String condition)  {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		 String val = (String) js.executeScript("return localStorage.getItem('lscache-beacon:user-data')");
-	   String result =val.split("USER_TOKEN\":\"")[1].split("\",\"")[0].trim();
-		 System.out.println(condition+" Session id is: "+val.split("USER_TOKEN\":\"")[1].split("\",\"")[0].trim());
-		 if(condition.equalsIgnoreCase("BoforeLogin")) {
-			 SESSION_BEFORE_LOGIN =  result;
-		 }else if(condition.equalsIgnoreCase("AfterLogin")) {
-			 SESSION_AFTER_LOGIN =  result;
-			 compareSession(SESSION_BEFORE_LOGIN,SESSION_AFTER_LOGIN,"Before Login");
-		 }else {
-			 SESSION_AFTER_LOGOUT = result;
-			 compareSession(SESSION_AFTER_LOGOUT,SESSION_AFTER_LOGIN, "After Logout");
-		 }
-		return null;
 	}
-	/**
-	 *@author 300019224-Aishurya: to compare session id
-	 */
-	public void compareSession(String dataOne,String dataTwo,String condition)  {
-		
-		if(dataOne.equalsIgnoreCase(dataTwo)) {
-			Reporter.log("Failed : After login Session Id is matching with, " + condition+" Session Id: "+dataOne);
-		} 
-		else{
-			Reporter.log("Passed : After login Session Id :"+dataTwo+" is not matching with, " + condition+" Session Id: "+dataOne);
-		}
-	}
-	/**
-	 * @author 300019224-Aishurya:Added logOut method
-	 */
-	public void LogOut() {
-		try {
-			objHeaderPageObject.ClickOnMyntraHeaderLogoFromCartPage();
-		} catch (Exception e) {
-			objHeaderPageObject.ClickOnHome();
-		}
-		objGenericMethods.waitDriverWhenReady(objHeaderPageObject.getUserIcon(), "User Icon");
-		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
-		ClickLogOutButton();
-	}
-}

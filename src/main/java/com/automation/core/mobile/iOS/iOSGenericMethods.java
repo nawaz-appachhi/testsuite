@@ -73,15 +73,22 @@ import com.sun.org.apache.xerces.internal.dom.DeferredTextImpl;
  */
 public class iOSGenericMethods extends GlobalVariables {
 	public ExtentTest test;
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	public JavaUtils objJavaUtils = new JavaUtils();
 	int level = 0;
 	Logger log = Logger.getLogger("devpinoyLogger");
 
-	public iOSGenericMethods(IOSDriver<IOSElement> iDriver) {
+	public iOSGenericMethods(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		this.iDriver = iDriver;
 	}
+
+	
+	public iOSGenericMethods() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 
 	public boolean isElementPresent(String locator) {
 		test.log(LogStatus.INFO, "Finding presence of element " + locator);
@@ -699,7 +706,7 @@ public class iOSGenericMethods extends GlobalVariables {
 			System.out.println("Alert accepted! :)");
 		} catch (Exception e) {
 			 try {
-				IOSElement ele = iDriver.findElement(By.xpath("//XCUIElementTypeAlert//XCUIElementTypeButton[@name='Allow']"));
+				IOSElement ele = (IOSElement) iDriver.findElement(By.xpath("//XCUIElementTypeAlert//XCUIElementTypeButton[@name='Allow']"));
 				 click(ele);
 			} catch (Exception e1) {
 				
@@ -715,7 +722,7 @@ public class iOSGenericMethods extends GlobalVariables {
 	 */
 	public void clickOkButton() {
 		try {
-			IOSElement tapAndHold = iDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='OK']"));
+			IOSElement tapAndHold = (IOSElement) iDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='OK']"));
 			if (tapAndHold.isDisplayed()) {
 				System.err.println("Tap and Hold button is displayed!");
 				tapAndHold.click();

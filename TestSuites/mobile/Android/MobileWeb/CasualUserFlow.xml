@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="VEGASF_325_GoogleRegistered_User_AddQTY_Click4OfferGoogleRegistered_User_AddQTY_Click4Offer">
+    <parameter name="deviceName_" value="One Plus one"/>
+    <parameter name="UDID_" value="531a4e2c"/>
+    <parameter name="platformVersion_" value="6.0.1"/>
+    <parameter name="URL_" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="appUrl_" value="https://www.myntra.com"/>
+    <parameter name="screenshotPath_" value=""/>
+    <parameter name="engine_" value="TD"/>
+    <parameter name="platform_" value="ANDROID_mWeb"/>
+    <parameter name="browserName_" value="chrome"/>
+    <classes>
+      <class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_325_GoogleRegistered_User_AddQTY_Click4OfferGoogleRegistered_User_AddQTY_Click4Offer"/>
+    </classes>
+  </test>
+</suite>

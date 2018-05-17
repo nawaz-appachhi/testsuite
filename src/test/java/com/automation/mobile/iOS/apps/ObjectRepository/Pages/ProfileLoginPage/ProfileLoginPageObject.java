@@ -17,6 +17,9 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
@@ -31,27 +34,30 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class ProfileLoginPageObject {
 	iOSGenericMethods objiOSGenericMethods;
-	IOSDriver<IOSElement> iDriver;
+	AppiumDriver<MobileElement> iDriver;
 
-	public ProfileLoginPageObject(IOSDriver<IOSElement> iDriver) {
+	public ProfileLoginPageObject(AppiumDriver<MobileElement> iDriver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 
 	}
 
-	@iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeButton[`name == \"Profile\"`]")
+	//XCUIElementTypeButton[@name=\"Profile\"]")
+	
+	@iOSFindBy(xpath = "//XCUIElementTypeButton[@name='Profile']")
 	public IOSElement profileBtn;
-	@FindBy(xpath = "//XCUIElementTypeOther[@name=\"LOG IN\"]")
+	
+	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"LOG IN\"]")
 	public IOSElement login;
 
-	@FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Email address\"]")
+	@iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Email address\"]")
 	public IOSElement emailFieldTxt;
 
-	@FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Password\"]")
+	@iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Password\"]")
 	public IOSElement passwordFieldTxt;
 
-	@FindBy(xpath = "//XCUIElementTypeButton[@name=\"LOG IN\"]")
+	@iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"LOG IN\"]")
 	public IOSElement loginBtn;
 
 	@iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"LOG OUT\"])[1]")
@@ -67,7 +73,7 @@ public class ProfileLoginPageObject {
 	 * @param noOfSwipes
 	 */
 
-	@FindBy(xpath = "//XCUIElementTypeOther[@name='WELCOME! ']/XCUIElementTypeOther/XCUIElementTypeOther")
+	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name='WELCOME! ']/XCUIElementTypeOther/XCUIElementTypeOther")
 	public IOSElement onBoardingCrossButton;
 
 	public void swipeDown(IOSDriver<IOSElement> iDriver, int duration, int noOfSwipes) {

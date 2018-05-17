@@ -83,10 +83,8 @@ public class VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 //		System.out.println("Login In Myntra");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithGmail(objGenericMethods.getValueByKey(testName, "GmailUserName"), objGenericMethods.getValueByKey(testName, "GmailPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //			}
 	
 	@Test(priority = 1)
@@ -95,12 +93,10 @@ public class VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 	
 	@Test(priority = 2)
@@ -177,13 +173,11 @@ public class VEGASF_320_Google_User_ImageVerification_SelectSize_RemoveProduct_C
 		objPaymentPageObjects.VerifyOrderSumamry();
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objPaymentPageObjects.SelectCashOnDelivery();
-		objPaymentPageObjects.verifyCODavailabilityThenPay();
-	}
-	
-	@Test(priority = 11)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
+		objPaymentPageObjects.ClickCODPayOnDeliveryBtn();
+		objPaymentPageObjects.VerifyCODOrderConfirmedTxt();
+		objPaymentPageObjects.VerifyOrderNumber();
+		objPaymentPageObjects.GoToOrderDetailsPage();
+		objPaymentPageObjects.VerifyOrdernumber();
 	}
 	@AfterTest
 	public void afterTest() {

@@ -637,13 +637,13 @@ public class GenericMethods extends GlobalVariables {
 	 * @param dataTwo
 	 * Modified By: Neeraj Reason : removed e.printStackTrace();
 	 * Modified By: Nitesh Reason : modified message to be printed
-	 * Modified by: Aishurya: Replaced assert with if
 	 */
 	public void verifyTwoStringData(String dataOne, String dataTwo) {
-		if(dataOne.equalsIgnoreCase(dataTwo)) {
+		try {
+//			Assert.assertEquals(dataOne, dataTwo);
 			Reporter.log("Passed : Displayed text is same as expected text," + dataOne);
-		} 
-		else{
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			Reporter.log("Failed : Displayed text " + dataOne + " is not same as expected text, " + dataTwo);
 		}
 	}

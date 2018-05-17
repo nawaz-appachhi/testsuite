@@ -47,10 +47,8 @@ public class VEGASF_313_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 //		System.out.println("=====================VEGASF_313_START=====================");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithFaceBook(objGenericMethods.getValueByKey(testName, "FbEmailId"), objGenericMethods.getValueByKey(testName, "FbPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //	}
 	@Test(priority = 1)
 	public void Login()  {//Need to be replaced with faceBook
@@ -58,12 +56,10 @@ public class VEGASF_313_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 
 	@Test(priority = 2)
@@ -153,12 +149,6 @@ public class VEGASF_313_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 		objPaymentPageObjects.VerifyOrderNumber();
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
-	}
-	
-	@Test(priority = 12)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
 	}
 
 	@BeforeTest

@@ -11,6 +11,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD" />
 		</classes>
@@ -22,6 +24,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD" />
 		</classes>
@@ -33,6 +37,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_374_Google_User_Filter_BOGO_ViewDetails_CoD" />
 		</classes>
@@ -44,6 +50,8 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
 		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_397_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD2" />
 		</classes>

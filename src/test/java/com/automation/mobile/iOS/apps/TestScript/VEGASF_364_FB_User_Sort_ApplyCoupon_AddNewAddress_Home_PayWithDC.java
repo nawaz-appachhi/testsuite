@@ -20,8 +20,11 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -42,7 +45,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
+public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -52,7 +55,7 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 	AddNewAdressPageObjects objAddAddressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	IOSDriver<IOSElement> iDriver;
+	//IOSDriver<IOSElement> wd;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -72,7 +75,7 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 	 * 
 	 */
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		try {
 			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
@@ -84,69 +87,56 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 9);
 		objProfileLoginPageObject.clickOnLogOut();
-		objProfileLoginPageObject.clickOnFaceBook();
-		Thread.sleep(5000);
-		Set<String> contextNames = iDriver.getContextHandles();
-		for (String contextName : contextNames) {
-			if (contextName.contains("WEBVIEW"))
-				iDriver.context(contextName);
-			System.out.println(contextName);
-			System.out.println("Context --> " + iDriver.getContext());
-		}
-//		objiOSGenericMethods.acceptAlert();
-
-		try {
-			WebElement emailid = iDriver.findElement(By.cssSelector("#m_login_email"));
-			WebElement pass = iDriver.findElement(By.cssSelector("#m_login_password"));
-			WebElement loginButton = iDriver.findElement(By.cssSelector("#u_0_5"));
-			WebElement continueLogin = iDriver.findElement(By.cssSelector("#u_0_9"));
-			 WebElement continueLogin2 = iDriver.findElement(By.cssSelector("#u_0_3"));
-			Thread.sleep(2000);
-			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
-			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
-			if (emailid.isDisplayed()) {
-				emailid.sendKeys(email);
-				pass.sendKeys(password);
-				loginButton.click(); 
-			}
-
-			if (continueLogin.isDisplayed()) {
-				objiOSGenericMethods.fluentWait(continueLogin);
-				continueLogin.click();
-			}else if(continueLogin2.isDisplayed()) {
-				//objiOSGenericMethods.fluentWait(continueLogin);
-				continueLogin2.click();
-			}
-		} catch (Exception e) {
-			System.out.println("user can continue with face book login!");
-		}
-		try {
-			WebElement cont = iDriver.findElement(By.cssSelector("#u_0_3"));
-			objiOSGenericMethods.fluentWait(cont);
-			cont.click();
-		} catch (Exception e) {
-			System.out.println("User is already login, No continue button to click!");
-		}
-		Set<String> contextNames2 = iDriver.getContextHandles();
-		for (String contextName : contextNames2) {
-			if (contextName.contains("NATIVE_APP"))
-				iDriver.context(contextName);
-			System.out.println(contextName);
-			System.out.println("Context --> " + iDriver.getContext());
-		}
-		objAssertionPageObject.verifyUserName();
-		objiOSGenericMethods.swipeDown(100, 6);
-		objProfileLoginPageObject.removeAddress();
-
-	}
-
-	
-	
-	@Test(priority = 1)
-	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
-		objProfileLoginPageObject.clickOnProfileButton();
-		objiOSGenericMethods.swipeDown(100, 8);
-		objProfileLoginPageObject.clickOnLogOut();
+//		objProfileLoginPageObject.clickOnFaceBook();
+//		Thread.sleep(5000);
+//		Set<String> contextNames = wd.getContextHandles();
+//		for (String contextName : contextNames) {
+//			if (contextName.contains("WEBVIEW"))
+//				wd.context(contextName);
+//			System.out.println(contextName);
+//			System.out.println("Context --> " + wd.getContext());
+//		}
+////		objiOSGenericMethods.acceptAlert();
+//
+//		try {
+//			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
+//			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
+//			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
+//			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
+//			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
+//			Thread.sleep(2000);
+//			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
+//			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
+//			if (emailid.isDisplayed()) {
+//				emailid.sendKeys(email);
+//				pass.sendKeys(password);
+//				loginButton.click(); 
+//			}
+//
+//			if (continueLogin.isDisplayed()) {
+//				objiOSGenericMethods.fluentWait(continueLogin);
+//				continueLogin.click();
+//			}else if(continueLogin2.isDisplayed()) {
+//				//objiOSGenericMethods.fluentWait(continueLogin);
+//				continueLogin2.click();
+//			}
+//		} catch (Exception e) {
+//			System.out.println("user can continue with face book login!");
+//		}
+//		try {
+//			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
+//			objiOSGenericMethods.fluentWait(cont);
+//			cont.click();
+//		} catch (Exception e) {
+//			System.out.println("User is already login, No continue button to click!");
+//		}
+//		Set<String> contextNames2 = wd.getContextHandles();
+//		for (String contextName : contextNames2) {
+//			if (contextName.contains("NATIVE_APP"))
+//				wd.context(contextName);
+//			System.out.println(contextName);
+//			System.out.println("Context --> " + wd.getContext());
+//		}
 		objProfileLoginPageObject.clickOnLogin();
 		String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
 		String password = iOSGenericMethods.getValueByKey(TestName, "Password");
@@ -156,8 +146,9 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 		objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 6);
 		objProfileLoginPageObject.removeAddress();
+
 	}
-	
+
 	@Test(priority = 2)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		objHomePageObject2.emptyBag();
@@ -168,15 +159,15 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 		objHomePageObject2.enterSearchitem(search);
 	}
 
-	@Test(priority = 3)
-	public void Sort_HtoL() throws InterruptedException, InvalidFileFormatException, IOException {
-		objPLPageObjets.clickOnSort();
-		objPLPageObjets.clickOnPriceHighLowSort();
-		objAssertionPageObject.verifyProductname();
-		objAssertionPageObject.verifyPLPHeader();
-		objAssertionPageObject.verifyPLPProductCount();
-		objPLPageObjets.clickOnFirstproductofPLP();
-	}
+//	@Test(priority = 3)
+//	public void Sort_HtoL() throws InterruptedException, InvalidFileFormatException, IOException {
+//		objPLPageObjets.clickOnSort();
+//		objPLPageObjets.clickOnPriceHighLowSort();
+//		objAssertionPageObject.verifyProductname();
+//		objAssertionPageObject.verifyPLPHeader();
+//		objAssertionPageObject.verifyPLPProductCount();
+//		objPLPageObjets.clickOnFirstproductofPLP();
+//	}
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
@@ -234,10 +225,13 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 		objPaymentPageObject.clickOnCreditCardPayment();
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
-			String screenshotPath_) throws InterruptedException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -248,24 +242,45 @@ public class VEGASF_364_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC {
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		iDriver = objMobileDrivers.launchAppiOS(params);
-		iDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest(params.get("platform_"));
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+		wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objPDPageObject = new PDPageObject(iDriver);
-		objWishlistPageObject = new WishlistPageObject(iDriver);
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objProfileLoginPageObject = new ProfileLoginPageObject(iDriver);
-		objCartPageObject = new CartPageObject(iDriver);
-		objAssertionPageObject = new AssertionPageObject(iDriver);
-		objPaymentPageObject = new PaymentPageObject(iDriver);
-		objHomePageObject2 = new HomePageObject2(iDriver);
-		objAddAddressPageObjects = new AddNewAdressPageObjects(iDriver);
-		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		objPLPageObjets = new PLPageObjects(wd);
+		objPDPageObject = new PDPageObject(wd);
+		objWishlistPageObject = new WishlistPageObject(wd);
+		objPLPageObjets = new PLPageObjects(wd);
+		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
+		objCartPageObject = new CartPageObject(wd);
+		objAssertionPageObject = new AssertionPageObject(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
+		objHomePageObject2 = new HomePageObject2(wd);
+		objAddAddressPageObjects = new AddNewAdressPageObjects(wd);
+		objiOSGenericMethods = new iOSGenericMethods(wd);
 	}
 	 @AfterTest
 		public void quit() {
-			iDriver.quit();
+			 try {
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 wd.quit();
 		}
 
 }

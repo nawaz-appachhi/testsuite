@@ -14,6 +14,7 @@ import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.Hamburge
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.HomePageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -25,13 +26,13 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AddressPageObjects {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	HomePageObjects objHomePageObjects;
 	HamburgerPageObjects objHamburgerPageObjects;
 	WishListPageObject objWishListPageObject;
 
-	public AddressPageObjects(IOSDriver<IOSElement> iDriver) {
+	public AddressPageObjects(AppiumDriver<MobileElement>  iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 		objHomePageObjects = new HomePageObjects(iDriver);

@@ -66,7 +66,7 @@ public class HeaderPageObject {
 	@FindBy(className = "desktop-submit")
 	public WebElement SearchLens;
 
-	@FindBy(xpath = "//*[@class='desktop-infoSection' and text()='Wishlist']")
+	@FindBy(xpath = "//div[@class='desktop-getInLinks']/a[2]")
 	public WebElement Wishlist;
 
 	@FindBy(xpath = "//*[@id='mountRoot']/div/main/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/a/div/img")
@@ -82,9 +82,8 @@ public class HeaderPageObject {
 	 * modified by -shivaprasad
 	 * old xpath for production environment-//a[@class='myntraweb-sprite desktop-logo sprites-logo']
 	 * new xpath for sfqa env-//div[@class='header-sprite mlogo']
-	 * Modified By Aishurya: Changed xpath as class name had spaces
 	 */
-	@FindBy(xpath = "//*[@class='desktop-logoContainer']/a")
+	@FindBy(xpath = "//a[@class='myntraweb-sprite desktop-logo sprites-logo']")
 	public WebElement MyntraHeaderLogo;
 
 	@FindBy(xpath = "//div[text()='Wishlist']")
@@ -316,6 +315,7 @@ public class HeaderPageObject {
 		objGenericMethods.takeSnapShot();
 		getMyntraHome().click();
 		objGenericMethods.ReportClickEvent("Myntra Home");
+
 	}
 	public void ClickOnWishlistUnderAccountMenu() {
 		objGenericMethods.takeSnapShot();

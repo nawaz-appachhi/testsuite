@@ -62,12 +62,10 @@ public class VEGASF_301_Google_User_PersonalizedCoupon extends GlobalVariables {
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 
 	@Test(priority = 2)
@@ -143,12 +141,6 @@ public class VEGASF_301_Google_User_PersonalizedCoupon extends GlobalVariables {
 		objAddressPageObjects.clickToSaveAddress();
 		objAddressPageObjects.VerifyAddressAdded();
 		objAddressPageObjects.VerifyPriceDetails();
-	}
-	
-	@Test(priority = 10)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
 	}
 
 	@BeforeTest

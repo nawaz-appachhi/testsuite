@@ -3,7 +3,6 @@ package com.automation.web.ObjectRepository.Pages.AddressPage;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.validator.GenericTypeValidator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.web.GenericMethods;
-import com.automation.web.ObjectRepository.Pages.Cart.CartPageObject;
 import com.automation.web.ObjectRepository.Pages.Header.HeaderPageObject;
 
 public class AddressPageObjects{
@@ -29,7 +27,6 @@ public class AddressPageObjects{
 	GenericMethods objGenericMethods;
 	HeaderPageObject objHeaderPageObject;
 	ProfileAddressPage objProfileAddressPage;
-	CartPageObject objCartPageObject;
 	WebDriver driver;
 
 	public AddressPageObjects(WebDriver driver) {
@@ -37,7 +34,6 @@ public class AddressPageObjects{
 		PageFactory.initElements(driver, this);
 		objGenericMethods = new GenericMethods(driver);
 		objHeaderPageObject=new HeaderPageObject(driver);
-		objCartPageObject = new CartPageObject(driver);
 		objProfileAddressPage=new ProfileAddressPage(driver);
 		this.driver = driver;
 	}
@@ -113,19 +109,6 @@ public class AddressPageObjects{
 	@FindBy(xpath="//*[@id='city' and contains(@class, 'enabled')]")
 	public WebElement cityDropDownEnabled;
 	
-	@FindBy(xpath="//div[@class='delivery']/span[@class='value']")
-	public WebElement ShippingCharge;
-	
-	
-	/**
-	 * Author-Shivaprasad
-	 * 
-	 */
-	public WebElement getShippingCharge() {
-		objGenericMethods.CheckWebElementFound(ShippingCharge, "ShippingCharge");
-		return ShippingCharge;
-	}
-
 	public WebElement getCityDropDownEnabled() {
 		objGenericMethods.CheckWebElementFound(cityDropDownEnabled, "cityDropDownEnabled");
 		return cityDropDownEnabled;
@@ -487,22 +470,4 @@ public class AddressPageObjects{
 		}
 	}
 
-	public void VerifyShippingCharge()	{
-		String s1=objCartPageObject.DELIVERYPRICE;
-		try {
-			if(getShippingCharge().getText().equals(s1)) {
-				System.out.println("Passed : Shipping charges is same as in cart page"+s1);
-				Reporter.log("Passed : Shipping charges is same as in cart page and shipping charge is"+s1);
-			}
-			else {
-				System.out.println("Failed : Shipping charges does not match expected "+ s1 +"present" + getShippingCharge().getText());
-				Reporter.log("Failed : Shipping charges does not match expected "+s1+"present"+getShippingCharge().getText());
-			}
-		} catch (Exception e) {
-			
-			Reporter.log("Failed : Shipping charges is not applicable or shipping charge is free");
-		}
-	
-		
-	}
 }

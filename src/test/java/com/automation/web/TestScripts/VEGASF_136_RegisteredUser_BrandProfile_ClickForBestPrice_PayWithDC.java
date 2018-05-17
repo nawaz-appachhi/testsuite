@@ -95,11 +95,9 @@ public class VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 			System.out.println("Login In Myntra");
 			objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 			objHeaderPageObject.LoginUnderUserIcon();
-			objLoginPageObject.readSession("BoforeLogin");
 			objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),	objGenericMethods.getValueByKey(testName, "Password"));
 			objLoginPageObject.LogInButtonClick();
 			objLoginPageObject.VerifyUserEmailId();
-			objLoginPageObject.readSession("AfterLogin");
 		}
 		
 		@Test(priority = 2)
@@ -238,16 +236,9 @@ public class VEGASF_136_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 			objPaymentPageObjects.SelectCreditDebitCard();
 			objPaymentPageObjects.CreditDebitPaymentComplete(objGenericMethods.getValueByKey(testName, "CardNumber"),
 					objGenericMethods.getValueByKey(testName, "CardHolderName"), objGenericMethods.getValueByKey(testName, "CVVnumber"));
-			objPaymentPageObjects.handelAlert();
 			objPaymentPageObjects.VerifyOrderNumber();
 			objPaymentPageObjects.GoToOrderDetailsPage();
 			objPaymentPageObjects.VerifyOrdernumber();
-		}
-		
-		@Test(priority = 12)
-		public void LogOut()  {
-			objLoginPageObject.LogOut();
-			objLoginPageObject.readSession("AfterLogout");
 		}
 		
 		@AfterTest

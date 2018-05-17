@@ -14,6 +14,8 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -21,10 +23,10 @@ import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class HomePageObject {
-	public AndroidDriver<AndroidElement> aDriver;
+	public AppiumDriver<MobileElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 
-	public HomePageObject(AndroidDriver<AndroidElement> aDriver) {
+	public HomePageObject(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}
@@ -39,21 +41,22 @@ public class HomePageObject {
      * modified by 300021280 Sneha
      * old xpath ://android.view.ViewGroup[@index='3']
      */
-	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.widget.ImageView")
+	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement0']")
 	public AndroidElement searchicon;
 
-	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.view.ViewGroup[@index='3']/android.widget.ImageView")
-	public AndroidElement searchicon1;
+	
 
 	@FindBy(xpath = "//android.widget.EditText[@content-desc ='search_default_search_text_input']")
 	public AndroidElement SearchText;
 
+	
 	@FindBy(xpath = "//android.widget.TextView[@text=' MEN ']")
 	public AndroidElement searchOptionMen;
+	
 	/**
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.view.ViewGroup[@index='9']/android.widget.ImageView")
+	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement3']")
 	public AndroidElement RHWishlistbtn;
 
 	/*
@@ -86,7 +89,7 @@ public class HomePageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.ImageView")
+	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement1']")
 	public AndroidElement bagbtn;
 	
 	@FindBy(xpath="//android.widget.Switch[@text='OFF']")
@@ -126,10 +129,7 @@ public class HomePageObject {
 		return searchicon;
 	}
 
-	public AndroidElement getSearchicon1() {
-		objAndroidGenericMethods.CheckAndroidElementFound(searchicon, "searchicon");
-		return searchicon1;
-	}
+	
 
 	public AndroidElement getSearchText() {
 		objAndroidGenericMethods.CheckAndroidElementFound(SearchText, "SearchText");
@@ -179,9 +179,7 @@ public class HomePageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(getSearchicon(), "clicked on search");
 	}
 
-	public void clickOnSearch1() {
-		objAndroidGenericMethods.clickOnAndroidElement(getSearchicon1(), "clicked on search");
-	}
+	
 
 	public void enterSearchText(String text) {
 		objAndroidGenericMethods.enterTexAndroidElement(getSearchText(), text, "enter the search text");
@@ -192,7 +190,6 @@ public class HomePageObject {
 			getBigBannerView().get(i).click();
 			System.out.println("clicked on banner1");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return BigBannerView;
@@ -271,10 +268,10 @@ public class HomePageObject {
 	}
 
 	public void AutoSearch() {
-		List<AndroidElement> allElements = aDriver
+		List<MobileElement> allElements = aDriver
 				.findElements(By.xpath("//android.widget.EditText[@content-desc ='search_default_search_text_input']"));
 
-		for (AndroidElement element : allElements) {
+		for (MobileElement element : allElements) {
 			System.out.println(element.getText());
 			if (((List<AndroidElement>) element).contains("Nike")) {
 				break;

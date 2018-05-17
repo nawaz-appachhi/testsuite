@@ -1,5 +1,16 @@
 package com.automation.mobile.iOS.MobileWeb.TestScript;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import org.ini4j.InvalidFileFormatException;
+import org.testng.Reporter;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 /**
  * @author  Madhushree MP
  * 
@@ -18,15 +29,8 @@ package com.automation.mobile.iOS.MobileWeb.TestScript;
 * Manual GC +Online
  */
 import org.testng.annotations.Test;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-import org.ini4j.InvalidFileFormatException;
-import org.testng.Reporter;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+
+import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServerUtils;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -43,10 +47,8 @@ import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PLPageObjects.Filter
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PLPageObjects.PLPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.WishList.WishListPageObject;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
+public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	AppiumServerUtils objAppiumServerUtils;
@@ -62,7 +64,7 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 	WishListPageObject objWishListPageObjects;
 	HamburgerPageObjects objHamburgerPageObjects;
 	HomePageObjects objHomePageObjects;
-	IOSDriver<IOSElement> iDriver;
+	//IOSDriver<IOSElement> wd;
 	iOSGenericMethods objiOSGenericMethods;
 	WishListPageObject objWishListPageObject;
 	MenCategoriesPageObjects objMenCategoriesPageObjects;
@@ -85,10 +87,10 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 		objHamburgerPageObjects.enterEmailAddress(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"),
 				objiOSGenericMethods.getValueByKeyiOSWeb(testName, "Password"));
 		objHamburgerPageObjects.clickOnSignInButton();
-		objHomePageObjects.clickOnHamburgerButton();
-		objHamburgerPageObjects.clickOnMyAccount();
-		objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
-		iDriver.navigate().back();
+//		objHomePageObjects.clickOnHamburgerButton();
+//		objHamburgerPageObjects.clickOnMyAccount();
+//		objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
+//		wd.navigate().back();
 	}
 
 	@Test(priority = 2)
@@ -101,34 +103,36 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 	}
 
 	@Test(priority = 3)
-	public void SearchItem() throws InterruptedException	{
+	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException	{
 		Reporter.log("SearchItem test case started successfully");
 		System.out.println("SearchItem!");
-		objHomePageObjects.clickOnHamburgerButton();
-		objMenCategoriesPageObjects.clickOnmen();
-		objMenCategoriesPageObjects.clickOntopWare();
-		objMenCategoriesPageObjects.clickOnactiveTShirt();
-		objPLPageObjects.VerifyProductDetails();
+//		objHomePageObjects.clickOnHamburgerButton();
+//		objMenCategoriesPageObjects.clickOnmen();
+//		objMenCategoriesPageObjects.clickOntopWare();
+//		objMenCategoriesPageObjects.clickOnactiveTShirt();
+//		objPLPageObjects.VerifyProductDetails();
+		objHomePageObjects.clickOnSearchIcon();
+		objHomePageObjects.enterSearchItem(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "SearchItem"));
 	}
 
-	@Test(priority = 4)
-	public void Filter() throws InterruptedException	{
-		Reporter.log("Filter test case started successfully");
-		System.out.println("Filter!");
-		objFilterPageObjects.clickOnFilterButton();
-		objFilterPageObjects.clickOnPrice();
-		objFilterPageObjects.clickOnSecondPrice();
-		objFilterPageObjects.clickOnApplyButton();
-	}
+//	@Test(priority = 4)
+//	public void Filter() throws InterruptedException	{
+//		Reporter.log("Filter test case started successfully");
+//		System.out.println("Filter!");
+//		objFilterPageObjects.clickOnFilterButton();
+//		objFilterPageObjects.clickOnPrice();
+//		objFilterPageObjects.clickOnSecondPrice();
+//		objFilterPageObjects.clickOnApplyButton();
+//	}
 	
 	@Test(priority = 5)
 	public void NavigateFromPLPtoPDP() throws InterruptedException	{
 		Reporter.log("NavigateFromPLPtoPDP test case started successfully");
 		System.out.println("NavigateFromPLPtoPDP!");
-		objPDPageObject.clickFirstProductSearchResult();
-		objPDPageObject.VerifyProductTitle();
-		objPDPageObject.assertProductDiscount();
-		objPDPageObject.assertProductPrice();
+//		objPDPageObject.clickFirstProductSearchResult();
+//		objPDPageObject.VerifyProductTitle();
+//		objPDPageObject.assertProductDiscount();
+//		objPDPageObject.assertProductPrice();
 		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
@@ -179,13 +183,15 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 		objEdit_ChangeButtonPageObjects.clickOnEDITButton();
 		objAddressPageObjects.enterEditName(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "EditName"));
 		objAddressPageObjects.clickOnSaveAddress();
-		objAddressPageObjects.VerifyAddressAdded();
+		objBagPageObjects.clickOnDemoId();
+		//objAddressPageObjects.VerifyAddressAdded();
 	}
 
 	@Test(priority = 9)
 	public void PaymentWithManualGC_Online() throws InterruptedException, InvalidFileFormatException, IOException	{
 		Reporter.log("PaymentWithManualGC_Online test case started successfully");
 		System.out.println("PaymentWithManualGC_Online!");
+		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.clickOnContinueButton();
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
@@ -201,9 +207,9 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 		objPaymentPageObjects.clickOnCCandDC();
 	}
 
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
 	@BeforeTest
-	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
+	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServerUtils = new AppiumServerUtils();
 		objMobileDrivers = new MobileDrivers();
@@ -215,29 +221,50 @@ public class VEGASF_269_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		iDriver = objMobileDrivers.launchAppiOS(params);
-		objiOSGenericMethods = new iOSGenericMethods(iDriver);
-		iDriver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(iDriver);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(iDriver);
-		objBagPageObjects = new BagPageObjects(iDriver);
-		objMenuPageObjects = new MenuPageObjects(iDriver);
-		objPaymentPageObjects = new PaymentPageObjects(iDriver);
-		objWishListPageObjects = new WishListPageObject(iDriver);
-		objFilterPageObjects = new FilterPageObjects(iDriver);
-		objPDPageObject = new PDPageObjects(iDriver);
-		objPLPageObjects = new PLPageObjects(iDriver);
-		objHamburgerPageObjects = new HamburgerPageObjects(iDriver);
-		objHomePageObjects = new HomePageObjects(iDriver);
-		objWishListPageObject = new WishListPageObject(iDriver);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(iDriver);
+		 params.put("engine_", engine_);
+        params.put("platform_", platform_);
+		 if(!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest(params.get("platform_"));
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+
+		objiOSGenericMethods = new iOSGenericMethods(wd);
+		wd.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(wd);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
+		objBagPageObjects = new BagPageObjects(wd);
+		objMenuPageObjects = new MenuPageObjects(wd);
+		objPaymentPageObjects = new PaymentPageObjects(wd);
+		objWishListPageObjects = new WishListPageObject(wd);
+		objFilterPageObjects = new FilterPageObjects(wd);
+		objPDPageObject = new PDPageObjects(wd);
+		objPLPageObjects = new PLPageObjects(wd);
+		objHamburgerPageObjects = new HamburgerPageObjects(wd);
+		objHomePageObjects = new HomePageObjects(wd);
+		objWishListPageObject = new WishListPageObject(wd);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
 	}
 	
-	@AfterTest
-	public void afterTest() {
-		// quite browser object
-		// check condition before closing or quite
-		iDriver.quit();
+@AfterTest
+	public void quit() {
+		 try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 wd.quit();
 		System.out.println("=====================VEGASF_269_END=====================");
 	}
 

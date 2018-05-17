@@ -14,6 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import org.testng.Reporter;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 
 import io.appium.java_client.ios.IOSElement;
@@ -26,11 +28,11 @@ import com.automation.core.mobile.iOS.iOSGenericMethods;
 
 public class AssertionPageObject {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 
 	iOSGenericMethods objiOSGenericMethods;
 
-	public AssertionPageObject(IOSDriver<IOSElement> iDriver) {
+	public AssertionPageObject(AppiumDriver<MobileElement> iDriver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 

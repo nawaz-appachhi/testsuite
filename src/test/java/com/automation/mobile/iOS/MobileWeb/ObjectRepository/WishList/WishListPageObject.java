@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.*;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -18,13 +19,13 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class WishListPageObject {
 
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement>  iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	public List<IOSElement> elements;
 	public WebElement element = null;
 	HomePageObjects objHomePageObjects;
 
-	public WishListPageObject(IOSDriver<IOSElement> iDriver) {
+	public WishListPageObject(AppiumDriver<MobileElement>  iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 		objHomePageObjects = new HomePageObjects(iDriver);

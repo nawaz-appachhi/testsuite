@@ -10,6 +10,8 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -18,9 +20,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class EditAdressPageObject {
 
 	iOSGenericMethods objiOSGenericMethods;
-	public IOSDriver<IOSElement> iDriver;
+	public AppiumDriver<MobileElement> iDriver;
 
-	public EditAdressPageObject(IOSDriver<IOSElement> iDriver) {
+	public EditAdressPageObject(AppiumDriver<MobileElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -130,7 +132,7 @@ public class EditAdressPageObject {
 	}
 
 	public void ClickOneditMoreAddress(int i) {
-		List<IOSElement> remove = iDriver.findElementsByAccessibilityId("Edit/Change ('" + i + "')");
+		List<MobileElement> remove = iDriver.findElementsByAccessibilityId("Edit/Change ('" + i + "')");
 		System.out.println("Xpath --> " + remove);
 		remove.get(i).click();
 	}

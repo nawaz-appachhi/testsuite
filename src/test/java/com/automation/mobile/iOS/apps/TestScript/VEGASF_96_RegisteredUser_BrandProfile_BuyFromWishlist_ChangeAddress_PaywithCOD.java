@@ -11,8 +11,10 @@ import java.util.concurrent.TimeUnit;
 import org.ini4j.InvalidFileFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.BaseIOSTest;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
@@ -50,7 +52,7 @@ Myntra Credit + COD
  * @author Aravindanath
  *
  */
-public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCOD {
+public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCOD extends BaseIOSTest{
 	GlobalVariables objGlobalVariables;
 	iOSGenericMethods objiOSGenericMethods;
 	PLPageObjects objPLPageObjets;
@@ -60,7 +62,7 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	AssertionPageObject objAssertionPageObject;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	IOSDriver<IOSElement> iDriver;
+	//IOSDriver<IOSElement> wd;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -88,7 +90,7 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objLoginPageObject.removeAddress();
 	}
@@ -101,26 +103,26 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		String search = iOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 	}
 
-	@Test(priority = 3)
-
-	public void productListingPage() throws InterruptedException {
-		objAssertionPageObject.verifyProductname();
-		objAssertionPageObject.verifyPLPHeader();
-		objAssertionPageObject.verifyPLPProductCount();
-		objPLPageObjets.clickOnBrandNamePLP();
-
-	}
+	// @Test(priority = 3)
+	//
+	// public void productListingPage() throws InterruptedException {
+	// objAssertionPageObject.verifyProductname();
+	// objAssertionPageObject.verifyPLPHeader();
+	// objAssertionPageObject.verifyPLPProductCount();
+	// objPLPageObjets.clickOnBrandNamePLP();
+	//
+	// }
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
-//		objiOSGenericMethods.swipeDown(100, 8);
-//		//objAssertionPageObject.verifyDelivery();
-//		objiOSGenericMethods.swipeDown(100, 6);
-//		objPDPageObject.clickOnViewSimilar();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		// objiOSGenericMethods.swipeDown(100, 8);
+		// //objAssertionPageObject.verifyDelivery();
+		// objiOSGenericMethods.swipeDown(100, 6);
+		// objPDPageObject.clickOnViewSimilar();
+		// objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -134,7 +136,7 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 
 		objAssertionPageObject.verifyMyBag();
 		objiOSGenericMethods.swipeDown(100, 7);
-//		objAssertionPageObject.verifyPriceDetails();
+		// objAssertionPageObject.verifyPriceDetails();
 		objCartPage.clickOnplaceOrder();
 
 	}
@@ -159,11 +161,14 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objPaymentPageObjects.clickOnCOD();
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
 
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_,
-			String screenshotPath_) throws InterruptedException {
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
 		objGlobalVariables = new GlobalVariables();
 		objMobileDrivers = new MobileDrivers();
 		Map<String, String> params = new HashMap<String, String>();
@@ -173,26 +178,48 @@ public class VEGASF_96_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		iDriver = objMobileDrivers.launchAppiOS(params);
-		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest(params.get("platform_"));
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		// Make sure that Page object object creation should be after this line
-		objPLPageObjets = new PLPageObjects(iDriver);
-		objPDPageObject = new PDPageObject(iDriver);
-		objHomePageObjects = new HomePageObject2(iDriver);
-		objAddNewAdressPageObjects = new AddNewAdressPageObjects(iDriver);
-		objLoginPageObject = new ProfileLoginPageObject(iDriver);
-		objPaymentPageObjects = new PaymentPageObject(iDriver);
-		objWishlistPageObject = new WishlistPageObject(iDriver);
-		objCartPage = new CartPageObject(iDriver);
-		objAssertionPageObject = new AssertionPageObject(iDriver);
-		objEditAdressPageObject = new EditAdressPageObject(iDriver);
-		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		objPLPageObjets = new PLPageObjects(wd);
+		objPDPageObject = new PDPageObject(wd);
+		objHomePageObjects = new HomePageObject2(wd);
+		objAddNewAdressPageObjects = new AddNewAdressPageObjects(wd);
+		objLoginPageObject = new ProfileLoginPageObject(wd);
+		objPaymentPageObjects = new PaymentPageObject(wd);
+		objWishlistPageObject = new WishlistPageObject(wd);
+		objCartPage = new CartPageObject(wd);
+		objAssertionPageObject = new AssertionPageObject(wd);
+		objEditAdressPageObject = new EditAdressPageObject(wd);
+		objiOSGenericMethods = new iOSGenericMethods(wd);
 	}
 
-	 @AfterTest
-		public void quit() {
-			iDriver.quit();
+	@AfterTest
+	public void quit() {
+		 try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		 wd.quit();
+	}
 
 }

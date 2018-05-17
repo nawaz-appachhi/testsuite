@@ -79,10 +79,8 @@ public class VEGASF_311_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC ex
 //		System.out.println("Login In Myntra");
 //		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 //		objHeaderPageObject.LoginUnderUserIcon();
-//		objLoginPageObject.readSession("BoforeLogin");
 //		objLoginPageObject.LoginWithFaceBook(objGenericMethods.getValueByKey(testName, "FbUserName"), objGenericMethods.getValueByKey(testName, "FbPassword"));
 //		objLoginPageObject.VerifyUserEmailId();
-//		objLoginPageObject.readSession("AfterLogin");
 //			}
 	@Test(priority = 1)
 	public void Login()  {//Need to be replaced with facebook
@@ -90,12 +88,10 @@ public class VEGASF_311_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC ex
 		System.out.println("Login In Myntra");
 		objGenericMethods.HoverOnWebElement(objHeaderPageObject.getUserIcon());
 		objHeaderPageObject.LoginUnderUserIcon();
-		objLoginPageObject.readSession("BoforeLogin");
 		objLoginPageObject.Login(objGenericMethods.getValueByKey(testName, "UserName"),
 				objGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.LogInButtonClick();
 		objLoginPageObject.VerifyUserEmailId();
-		objLoginPageObject.readSession("AfterLogin");
 	}
 	
 	@Test(priority = 2)
@@ -177,12 +173,6 @@ public class VEGASF_311_FB_User_Sort_ApplyCoupon_AddNewAddress_Home_PayWithDC ex
 		objPaymentPageObjects.GoToOrderDetailsPage();
 		objPaymentPageObjects.VerifyOrdernumber();
 	}
-	@Test(priority = 12)
-	public void LogOut()  {
-		objLoginPageObject.LogOut();
-		objLoginPageObject.readSession("AfterLogout");
-	}
-	
 	@AfterTest
 	public void afterTest() {
 		// quit browser object

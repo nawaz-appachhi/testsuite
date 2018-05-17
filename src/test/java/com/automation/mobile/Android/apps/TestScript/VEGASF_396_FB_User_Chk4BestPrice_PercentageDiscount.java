@@ -1,4 +1,13 @@
 package com.automation.mobile.Android.apps.TestScript;
+//Facebook registered user - Login
+//Home Page
+//Search - Using Autosuggest (use any query from Golden Set)
+//Top buttons
+//Click for best Price (Coupon)
+//Select Size from wishlist
+//Place Order
+//Percentage Discount
+//Remove address
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -7,8 +16,11 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -21,11 +33,13 @@ import com.automation.mobile.Android.apps.ObjectRepository.PLP.ProductListPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
+
+import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
+public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount extends BaseAndroidTest{
 	
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -35,44 +49,50 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 	ProductDescriptionPageObject objProductDescriptionPageObject;
 	AddCartPageObject objAddCartPageObject;
 	CheckOutPageObject objCheckOutPageObject;
-	AndroidDriver<AndroidElement> aDriver;
+	
 	MobileDrivers objMobileDrivers;
 	WishListPageObject objWishListPageObject;
 	AndroidGenericMethods objAndroidGenericMethods;
 	PaymentPageObject objPaymentPageObject; 
+
+	String ExcelPath;
+
 	String testName = "VEGASF_396";  
 
 	@Test(priority = 1)
 	public void LoginWithFacebook() throws InterruptedException, InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_396_START=====================");
-		Reporter.log("LoginWithFacebook");
+		Reporter.log("LoginInApp Test case Started Successfully");
 		objLoginPageObject.clickFirstLogin();
+//		objLoginPageObject.clickFacebookbtn();
+//		objLoginPageObject.FacebookLogin(AndroidGenericMethods.getValueByKey(testName, "UserName"), AndroidGenericMethods.getValueByKey(testName, "Password"));
+//		objLoginPageObject.clickOnFacebookContinuebtn();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName"),
 				AndroidGenericMethods.getValueByKey(testName, "Password"));
 		objLoginPageObject.clickLogin();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		wd.navigate().back();
 	}
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		objWishListPageObject.resetWishlist();
+		//objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("SearchItem");
+		Reporter.log("SearchItem Test case Started Successfully");
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
-		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
+		
 	}
 
 	@Test(priority = 5)
 	public void SelectSize() throws InterruptedException {
-		Reporter.log("SelectSize");
+		Reporter.log("SelectSize Test case Started Successfully");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
@@ -86,7 +106,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 
 	@Test(priority = 6)
 	public void PlaceOrder() throws InterruptedException {
-		Reporter.log("PlaceOrder");
+		Reporter.log("PlaceOrder Test case Started Successfully");
 		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
 		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
@@ -96,20 +116,24 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
 
 	@Test(priority = 7)
 	public void RemoveAddress() throws InterruptedException, InvalidFileFormatException, IOException {
-		Reporter.log("RemoveAddress");
+		Reporter.log("RemoveAddress Test case Started Successfully");
 		objCheckOutPageObject.removeAndAddAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 	
-	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
+	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
+			"platform_" })
 	@BeforeTest
-	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws Exception {
-		
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
+			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
+			throws Exception {
+		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
-		
+		// objExcelUtilities = new ExcelUtils();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
-		
+		// objAppiumServer.startServer();
 		Map<String, String> params = new HashMap<String, String>();
         params.put("deviceName_", deviceName_);
         params.put("UDID_", UDID_);
@@ -117,23 +141,45 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount {
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		aDriver = objMobileDrivers.launchAppAndroid(params);
-		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 params.put("engine_", engine_);
+		params.put("platform_", platform_);
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+        {
+        		wd = objMobileDrivers.launchAppAndroid(params);
+        }
+        else
+        {
+        		try {
+					setUpTest(params.get("platform_"));
+					System.out.println("TestDroid Execution Started");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					System.out.println("Error :: Please change suite parameter to run locally.");
+				}
+        		
+        }
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Make sure that Page object object creation should be after this line
-		// "aDriver= objMobileDrivers.launchAppAndroid();"
-		objLoginPageObject = new LoginPageObject(aDriver);
-		objHomePageObject = new HomePageObject(aDriver);
-		objProductListPageObject = new ProductListPageObject(aDriver);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
-		objAddCartPageObject = new AddCartPageObject(aDriver);
-		objCheckOutPageObject = new CheckOutPageObject(aDriver);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		objWishListPageObject = new WishListPageObject(aDriver);
-		objPaymentPageObject = new PaymentPageObject(aDriver);
+		// "wd= objMobileDrivers.launchAppAndroid();"
+		objLoginPageObject = new LoginPageObject(wd);
+		objHomePageObject = new HomePageObject(wd);
+		objProductListPageObject = new ProductListPageObject(wd);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
+		objAddCartPageObject = new AddCartPageObject(wd);
+		objCheckOutPageObject = new CheckOutPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		objWishListPageObject = new WishListPageObject(wd);
+		objPaymentPageObject = new PaymentPageObject(wd);
 	}
 	@AfterTest
 	public void quit() {
-		aDriver.quit();
+		try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wd.quit();
 		System.out.println("=====================VEGASF_396_START=====================");
 	}
 

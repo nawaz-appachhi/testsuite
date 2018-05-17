@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -23,7 +25,7 @@ public class PDPageObjects {
 
 	AndroidGenericMethods objAndroidGenericMethods;
 
-	public PDPageObjects(AndroidDriver<AndroidElement> aDriver) {
+	public PDPageObjects(AppiumDriver<MobileElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}
