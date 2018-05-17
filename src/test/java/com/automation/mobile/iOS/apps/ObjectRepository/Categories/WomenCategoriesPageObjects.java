@@ -3,16 +3,14 @@ package com.automation.mobile.iOS.apps.ObjectRepository.Categories;
 
 import org.openqa.selenium.support.PageFactory;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class WomenCategoriesPageObjects {
-	public AppiumDriver<MobileElement>iDriver;
-	public WomenCategoriesPageObjects(AppiumDriver<MobileElement> iDriver) {
+	public IOSDriver<IOSElement> iDriver;
+	public WomenCategoriesPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 	}
 

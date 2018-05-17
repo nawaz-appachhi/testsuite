@@ -3,20 +3,18 @@ package com.automation.mobile.iOS.apps.ObjectRepository.Categories;
 
 import org.openqa.selenium.support.PageFactory;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class KidsCategoriesPageObjects {
-	public AppiumDriver<MobileElement> iDriver;
-	public KidsCategoriesPageObjects(AppiumDriver<MobileElement> iDriver) {
+	public IOSDriver<IOSElement> iDriver;
+	public KidsCategoriesPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 	}
 	
-	@iOSFindBy(accessibility="Kids Brands, Clothing, Footwear, Accessories Brands ï�¸ Boys Clothing ï�¸ Girls Clothing ï�¸ Boys Footwear ï�¸ Girls Footwear ï�¸ Kids Accessories ï�¸ Toys")
+	@iOSFindBy(accessibility="Kids Brands, Clothing, Footwear, Accessories Brands  Boys Clothing  Girls Clothing  Boys Footwear  Girls Footwear  Kids Accessories  Toys")
 	public IOSElement kids;
 	//Kids Brands, Clothing, Footwear, Accessories
 
@@ -32,7 +30,7 @@ public class KidsCategoriesPageObjects {
 	 * Kids Categories
 	 * 
 	 */
-	@iOSFindBy(accessibility = "Brands ï�¸")
+	@iOSFindBy(accessibility = "Brands ")
 	public IOSElement kidsBrands;
 	
 	@iOSFindBy(accessibility = "Mothercare")
@@ -68,7 +66,7 @@ public class KidsCategoriesPageObjects {
 	@iOSFindBy(accessibility = "612 League")
 	public IOSElement kidsBrand612League;
 	
-	@iOSFindBy(accessibility = "Boys Clothing ï�¸")
+	@iOSFindBy(accessibility = "Boys Clothing ")
 	public IOSElement kidsBoysClothing;
 	
 	@iOSFindBy(accessibility = "T-Shirts")
@@ -98,7 +96,7 @@ public class KidsCategoriesPageObjects {
 	@iOSFindBy(accessibility = "Inner & Sleep Wear")
 	public IOSElement kidsBoysClothingInnerSleepWear;
 	
-	@iOSFindBy(accessibility = "Girls Clothing ï�¸")
+	@iOSFindBy(accessibility = "Girls Clothing ")
 	public IOSElement kidsGirlsClothing;
 	
 	@iOSFindBy(accessibility = "Dresses")
@@ -131,7 +129,7 @@ public class KidsCategoriesPageObjects {
 	@iOSFindBy(accessibility = "Inner & Sleep Wear")
 	public IOSElement kidsGirlsClothingInnerSleepWear;
 	
-	@iOSFindBy(accessibility = "Boys Footwear ï�¸")
+	@iOSFindBy(accessibility = "Boys Footwear ")
 	public IOSElement kidsBoysFootwear;
 	
 	@iOSFindBy(accessibility = "Casual Shoes")
@@ -143,7 +141,7 @@ public class KidsCategoriesPageObjects {
 	@iOSFindBy(accessibility = "Sandals & Flip flops")
 	public IOSElement kidsBoysFootwearSandalsFlipflops;
 	
-	@iOSFindBy(accessibility = "Girls Footwear ï�¸")
+	@iOSFindBy(accessibility = "Girls Footwear ")
 	public IOSElement kidsGirlsFootwear;
 	
 	@iOSFindBy(accessibility = "Flats & Casual Shoes")
@@ -158,7 +156,7 @@ public class KidsCategoriesPageObjects {
 	@iOSFindBy(accessibility = "Sandals & Flip flops")
 	public IOSElement kidsGirlsFootwearSandalsFlipflops;
 	
-	@iOSFindBy(accessibility = "Kids Accessories ï�¸")
+	@iOSFindBy(accessibility = "Kids Accessories ")
 	public IOSElement KidsAccessories;
 	
 	@iOSFindBy(accessibility = "Bags & Backpacks")

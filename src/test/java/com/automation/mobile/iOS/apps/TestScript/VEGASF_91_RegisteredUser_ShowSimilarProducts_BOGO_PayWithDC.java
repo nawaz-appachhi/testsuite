@@ -10,10 +10,8 @@ import java.util.concurrent.TimeUnit;
 import org.ini4j.InvalidFileFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServer;
 //import com.automation.core.Common.ExcelUtils;
 import com.automation.core.Common.GlobalVariables;
@@ -37,7 +35,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extends BaseIOSTest{
+public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  {
 
 
 	GlobalVariables objGlobalVariables;
@@ -48,7 +46,7 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -63,13 +61,6 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 	@Test(priority=1)
 	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException
 	{
-		try {
-			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
-			System.out.println("On Boarding screen appeared and closed it");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("On Boarding screen did not appear");
-		}
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(0, 7);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -90,16 +81,16 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));	
-//		objiOSGenericMethods.acceptAlert();
+		objiOSGenericMethods.acceptAlert();
 		
 	}
 	@Test(priority=3)
 	public void PLPPage() throws InterruptedException, InvalidFileFormatException, IOException
 	{
 	
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
 		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
@@ -162,13 +153,9 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 	
 	
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
-			"platform_" })
+	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
-			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
-			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
-			throws Exception {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
 		objGlobalVariables = new GlobalVariables();
 		objMobileDrivers = new MobileDrivers();
 		Map<String, String> params = new HashMap<String, String>();
@@ -178,46 +165,24 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		params.put("engine_", engine_);
-		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-	        {
-	                wd =   objMobileDrivers.launchAppiOS(params);
-	        }
-	        else
-	        {
-	                try {
-	                     setUpTest(params.get("platform_"));
-	                     System.out.println("TestDroid Execution Started");
-	                 } catch (Exception e) {
-	                     // TODO Auto-generated catch block
-	                     System.out.println("Error :: Please change suite parameter to run locally.");
-	                 }
-	                
-	        }
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		iDriver = objMobileDrivers.launchAppiOS(params);
+		iDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
-		objHomePageObject2 = new HomePageObject2(wd);
-		objAddNewAdressPageObjects = new AddNewAdressPageObjects(wd);
-		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
-		objPaymentPageObject = new PaymentPageObject(wd);
-		objCartPageObject = new CartPageObject(wd);
-		objWishlistPageObject = new WishlistPageObject(wd);
-		objAssertionPageObject = new AssertionPageObject(wd);
-		objiOSGenericMethods = new iOSGenericMethods(wd);
-		objEditAdressPageObject = new EditAdressPageObject(wd);
-		objPLPageObjets = new PLPageObjects(wd);
-		objPDPageObject = new PDPageObject(wd);
+		objHomePageObject2 = new HomePageObject2(iDriver);
+		objAddNewAdressPageObjects = new AddNewAdressPageObjects(iDriver);
+		objProfileLoginPageObject = new ProfileLoginPageObject(iDriver);
+		objPaymentPageObject = new PaymentPageObject(iDriver);
+		objCartPageObject = new CartPageObject(iDriver);
+		objWishlistPageObject = new WishlistPageObject(iDriver);
+		objAssertionPageObject = new AssertionPageObject(iDriver);
+		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		objEditAdressPageObject = new EditAdressPageObject(iDriver);
+		objPLPageObjets = new PLPageObjects(iDriver);
+		objPDPageObject = new PDPageObject(iDriver);
 
 	}
 	 @AfterTest
 		public void quit() {
-			 try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 wd.quit();
+			iDriver.quit();
 		}
 }

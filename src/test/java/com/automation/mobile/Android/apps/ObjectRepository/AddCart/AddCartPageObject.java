@@ -10,10 +10,8 @@ import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.apps.ObjectRepository.Home.HomePageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.PLP.ProductListPageObject;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -21,17 +19,17 @@ import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AddCartPageObject {
-	public AppiumDriver<MobileElement> aDriver;
+	public AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObject objHomePageObject;
 	ProductListPageObject objProductListPageObject;
 
-	public AddCartPageObject(AppiumDriver<MobileElement> aDriver) {
+	public AddCartPageObject(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
+		this.aDriver = aDriver;
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomePageObject = new HomePageObject(aDriver);
 		objProductListPageObject = new ProductListPageObject(aDriver);
-		this.aDriver = aDriver;
 	}
 
 	/**
@@ -40,7 +38,7 @@ public class AddCartPageObject {
 	 * Description: This xpath help us to click on "Shopping Bag" icon on Home
 	 * screen
 	 */
-	@FindBy(xpath = "//android.view.ViewGroup[@index='5'] | //android.view.View[@index='5']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='5']")
 	public AndroidElement ShoppingBagBtn;
 
 	/**
@@ -87,8 +85,7 @@ public class AddCartPageObject {
 	 * Description= This xpath will help user to click "cross icon" on Apply coupon
 	 * screen.
 	 */
-//	@FindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
-	@FindBy(xpath = "//android.widget.ImageView[@index='0']")
+	@FindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
 	public AndroidElement CrossBtn;
 	/**
 	 * Name= Vinay
@@ -581,8 +578,8 @@ public class AddCartPageObject {
 	public void changeSize() throws InterruptedException {
 		objAndroidGenericMethods.swithchInToWebview();
 		aDriver.findElementByClassName("icon").click();
-		List<MobileElement> selectSize = aDriver.findElementsByXPath(".//div[@class='sizes']/button");
-		for (MobileElement i : selectSize) {
+		List<AndroidElement> selectSize = aDriver.findElementsByXPath(".//div[@class='sizes']/button");
+		for (AndroidElement i : selectSize) {
 			String att = i.getAttribute("class");
 			if (att.equals("btn size-btn-group size-btn  ")) {
 				i.click();
@@ -623,7 +620,7 @@ public class AddCartPageObject {
 				selectSizePopUp();
 			}
 		} catch (Exception e) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK);
+			aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		}
 	}
 	
@@ -649,7 +646,7 @@ public class AddCartPageObject {
 	 * 
 	 * @modified 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//android.widget.TextView[@text='WISHLIST']")
+	@FindBy(xpath = "//android.widget.Button[@resource-id='com.myntra.android:id/tb_wishlist']")
 	public AndroidElement wishListicon;
 	
 	/**
@@ -757,23 +754,17 @@ public class AddCartPageObject {
 	 * Modified By Aishurya: Repaced emptybag() by ClickRemoveLink()
 	 */
 	public void resetBag() throws InterruptedException {
-		objHomePageObject.clickBagbtn();
-		try {
-			objProductListPageObject.clickOk();
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			System.out.println("Ok button not displayed");
-		}
+		objHomePageObject.clickBagbtn(); 
+		objProductListPageObject.clickOk();
 		try {
 			System.out.println("entered reset try block");
 			objAndroidGenericMethods.swithchInToWebview();
 			clickRemoveLink();
-			//aDriver.navigate().back();
-			clickOncrossbtn();
+			aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		} catch (Exception e) {
 			System.out.println("entered reset catch block");
-			clickOncrossbtn();
-			//aDriver.navigate().back();
+			// clickOncrossbtn();
+			aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	}
 		

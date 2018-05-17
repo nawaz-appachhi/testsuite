@@ -3,9 +3,6 @@ package com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSElement;
@@ -17,7 +14,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class PaymentPageObjects {
 
 	AndroidGenericMethods objAndroidGenericMethods;
-	public PaymentPageObjects(AppiumDriver<MobileElement> aDriver) {
+	public PaymentPageObjects(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}

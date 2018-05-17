@@ -5,18 +5,16 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class PaymentPageObjects {
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public PaymentPageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public PaymentPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -284,83 +282,83 @@ public class PaymentPageObjects {
 	 * methods
 	 */
 	public void ClickOnWallets() {
-		objiOSGenericMethods.clickOnIOSElement(getWallets(), "Wallets");
+		objiOSGenericMethods.clickOnIOSElement(getWallets(), "clicked on Wallets");
 	}
 
 	public void ClickOnphonepe() {
-		objiOSGenericMethods.clickOnIOSElement(getPhonepe(), "Phonepe");
+		objiOSGenericMethods.clickOnIOSElement(getPhonepe(), "clicked on Phonepe");
 	}
 
 	public void ClickOnCOD() {
-		objiOSGenericMethods.clickOnIOSElement(getCOD(), "COD");
+		objiOSGenericMethods.clickOnIOSElement(getCOD(), "clicked on COD");
 	}
 
 	public void clickOnChangePaymentMode() {
-		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(), "ChangePaymentMode");
+		objiOSGenericMethods.clickOnIOSElement(getChangePaymentMode(), "clicked on ChangePaymentMode");
 	}
 
 	public void clickOnApplyCouponCode() {
-		objiOSGenericMethods.clickOnIOSElement(getApplyCouponCode(), "ApplyCouponCode");
+		objiOSGenericMethods.clickOnIOSElement(getApplyCouponCode(), "clicked on ApplyCouponCode");
 	}
 
 	public void clickOnGiftCardApplyButton() {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardApplyButton(), "GiftCardApplyButton");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardApplyButton(), "clicked on GiftCardApplyButton");
 	}
 
 	public void clickOnGiftcard() {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCard(), "giftCards");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCard(), "clicked on giftCards");
 	}
 
 	public void enterGiftCardNumber(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumber(), "GiftCardNumber");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardNumber(), "clicked on GiftCardNumber");
 		getGiftCardNumber().sendKeys(name);
 	}
 
 	public void enterEnterCouponCode(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getEnterCouponCode(), "EnterCouponCode");
+		objiOSGenericMethods.clickOnIOSElement(getEnterCouponCode(), "clicked on EnterCouponCode");
 		getEnterCouponCode().sendKeys(name);
 	}
 
 	public void enterGiftCardpin(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getGiftCardpin(), "GiftCardpin");
+		objiOSGenericMethods.clickOnIOSElement(getGiftCardpin(), "clicked on GiftCardpin");
 		getGiftCardpin().sendKeys(name);
 	}
 
 	public void clickOnNetBanking() {
-		objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "NetBanking");
+		objiOSGenericMethods.clickOnIOSElement(getNetBanking(), "clicked on NetBanking");
 	}
 
 	public void clickOnCCandDC() {
 		objiOSGenericMethods.waitDriver(getCCandDC(), "Credit card");
-		objiOSGenericMethods.clickOnIOSElement(getCCandDC(), "creditCard/debitCard");
+		objiOSGenericMethods.clickOnIOSElement(getCCandDC(), "clicked on creditCard/debitCard");
 	}
 	
 	public void clickFirstNetbankingOption(){
-		objiOSGenericMethods.clickOnIOSElement(getfirstNetBankingOption(), "first Netbanking Option");
+		objiOSGenericMethods.clickOnIOSElement(getfirstNetBankingOption(), "clicked on first Netbanking Option");
 	}
 	
 	public void clickNetbankingPayNowButton(){
-		objiOSGenericMethods.clickOnIOSElement(getnetbankingPayNowButton(), "first Netbanking Pay Now Button");
+		objiOSGenericMethods.clickOnIOSElement(getnetbankingPayNowButton(), "clicked on first Netbanking Pay Now Button");
 	}
 	
 	public void clickOnEMIcreditCard() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIcreditCard(), "EMI Credit card Option.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIcreditCard(), "clicked on EMI Credit card Option.");
 	}
 	
 	public void clickEMIselectBanKDrpDwn() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIselectBanKDrpDwn(), "EMI credit bank drop down.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIselectBanKDrpDwn(), "clicked on EMI credit bank drop down.");
 	}
 	
 	public void clickEMIbankSelect() {
-		objiOSGenericMethods.clickOnIOSElement(getEMIbankSelect(), "EMI Credit bank Option.");
+		objiOSGenericMethods.clickOnIOSElement(getEMIbankSelect(), "clicked on EMI Credit bank Option.");
 	}
 	
 	public void clickSelectEMIdurationDrpDwn() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectEMIdurationDrpDwn(), "select EMI duration dropdown.");
+		objiOSGenericMethods.clickOnIOSElement(getSelectEMIdurationDrpDwn(), "clicked on select EMI duration dropdown.");
 	}
 	
 	public void clickSelectEMIduration() {
-		objiOSGenericMethods.clickOnIOSElement(getSelectEMIduration(), "select EMI duration.");
+		objiOSGenericMethods.clickOnIOSElement(getSelectEMIduration(), "clicked on select EMI duration.");
 	}
 
 	public void VerifyPaymentPageTitle()	{

@@ -1,16 +1,5 @@
 package com.automation.mobile.iOS.MobileWeb.TestScript;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
-import org.ini4j.InvalidFileFormatException;
-import org.testng.Reporter;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 /**
  * @author 300019239 - Nitesh
  *
@@ -29,12 +18,20 @@ import org.testng.annotations.Parameters;
 * Mynt+ COD
  */
 import org.testng.annotations.Test;
-
-import com.BaseIOSTest;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import org.ini4j.InvalidFileFormatException;
+import org.testng.Reporter;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
+import com.automation.mobile.iOS.MobileWeb.ObjectRepository.WishList.*;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.AddressPageObjects.AddressPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.AddressPageObjects.Edit_ChangeButtonPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.Bag.BagPageObjects;
@@ -45,10 +42,11 @@ import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PDPageObjects.PDPage
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PLPageObjects.FilterPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PLPageObjects.PLPageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
-import com.automation.mobile.iOS.MobileWeb.ObjectRepository.WishList.WishListPageObject;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 
 
-public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD extends BaseIOSTest{
+public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWithCoD {
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -64,7 +62,7 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 	PLPageObjects objPLPageObjects;
 	HamburgerPageObjects objHamburgerPageObjects;
 	HomePageObjects objHomePageObjects;
-	//IOSDriver<IOSElement> wd;
+	IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	WishListPageObject objWishlistPageObject;
 
@@ -86,10 +84,10 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		objHamburgerPageObjects.enterEmailAddress(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"),
 				objiOSGenericMethods.getValueByKeyiOSWeb(testName, "Password"));
 		objHamburgerPageObjects.clickOnSignInButton();
-//		objHomePageObjects.clickOnHamburgerButton();
-//		objHamburgerPageObjects.clickOnMyAccount();
-//		objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
-//		wd.navigate().back();
+		objHomePageObjects.clickOnHamburgerButton();
+		objHamburgerPageObjects.clickOnMyAccount();
+		objHamburgerPageObjects.assertUserEmailID(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "UserName"));
+		iDriver.navigate().back();
 	}
 
 	@Test(priority = 2)
@@ -106,37 +104,35 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		System.out.println("SearchItem!");
 		objHomePageObjects.clickOnSearchIcon();
 		objHomePageObjects.enterSearchItem(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "SearchItem"));
-//		objPLPageObjects.verifySearchResult("Result Search Title");
-//		objHomePageObjects.getSearchAutoSuggestList();
-//		objPLPageObjects.VerifyProductDetails();
+		objPLPageObjects.verifySearchResult("Result Search Title");
+		objHomePageObjects.getSearchAutoSuggestList();
+		objPLPageObjects.VerifyProductDetails();
 	}
 
-//	@Test(priority = 4)
-//	public void Save() throws InterruptedException	{
-//		Reporter.log("Save test case started successfully");
-//		System.out.println("Save!");
-//		objPLPageObjects.clickToSaveToWishlist();
-//	}
+	@Test(priority = 4)
+	public void Save() throws InterruptedException	{
+		Reporter.log("Save test case started successfully");
+		System.out.println("Save!");
+		objPLPageObjects.clickToSaveToWishlist();
+	}
 	
-//	@Test(priority = 5)
-//	public void FilterByPrice() throws InterruptedException	{
-//		Reporter.log("FilterByPrice test case started successfully");
-//		System.out.println("FilterByPrice!");
-//		objFilterPageObjects.clickOnFilterButton();
-//		objFilterPageObjects.clickOnPrice();
-//		objFilterPageObjects.clickOnSecondPrice();
-//		objFilterPageObjects.clickOnApplyButton();
-//	}
-	
+	@Test(priority = 5)
+	public void FilterByPrice() throws InterruptedException	{
+		Reporter.log("FilterByPrice test case started successfully");
+		System.out.println("FilterByPrice!");
+		objFilterPageObjects.clickOnFilterButton();
+		objFilterPageObjects.clickOnPrice();
+		objFilterPageObjects.clickOnSecondPrice();
+		objFilterPageObjects.clickOnApplyButton();
+	}
 	@Test(priority = 6)
 	public void CheckSimilarProducts() throws InterruptedException {
 		Reporter.log("CheckSimilarProducts test case started successfully");
 		System.out.println("CheckSimilarProducts!");
-//		objPDPageObject.clickFirstProductSearchResult();
+		objPDPageObject.clickFirstProductSearchResult();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.assertProductDiscount();
 		objPDPageObject.assertProductPrice();
-		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.selectSizeOfProduct();
 		objPDPageObject.clickOnConfirmButton();
@@ -188,7 +184,6 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		System.out.println("RemoveAddress!");
 		objEdit_ChangeButtonPageObjects.clickOnEditChangeButton();
 		objEdit_ChangeButtonPageObjects.clickOnRemoveButton();
-		objBagPageObjects.clickOnDemoId();
 		objAddressPageObjects.ClickOnPincodeAddress();
 		objAddressPageObjects.enterPincone(objiOSGenericMethods.getValueByKeyiOSWeb(testName, "Pincode"));
 		objAddressPageObjects.clickOnChoose();
@@ -206,7 +201,6 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 	public void PaymentWithMynt_COD() throws InterruptedException	{
 		Reporter.log("PaymentWithMynt_COD test case started successfully");
 		System.out.println("PaymentWithMynt_COD!");
-		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.clickOnContinueButton();
 		objBagPageObjects.clickOnDemoId();
 		objBagPageObjects.assertPaymentPageTitle("Payment");
@@ -214,9 +208,9 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 		objPaymentPageObjects.ClickOnCOD();
 	}
 
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
+	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
+	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -228,49 +222,28 @@ public class VEGASF_278_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-        params.put("platform_", platform_);
-		 if(!(params.get("engine_").equalsIgnoreCase("TD")))
-	        {
-	                wd =   objMobileDrivers.launchAppiOS(params);
-	        }
-	        else
-	        {
-	                try {
-	                     setUpTest(params.get("platform_"));
-	                     System.out.println("TestDroid Execution Started");
-	                 } catch (Exception e) {
-	                     // TODO Auto-generated catch block
-	                     System.out.println("Error :: Please change suite parameter to run locally.");
-	                 }
-	                
-	        }
+		iDriver = objMobileDrivers.launchAppiOS(params);
+		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		iDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		objiOSGenericMethods = new iOSGenericMethods(wd);
-		wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-		objAddressPageObjects = new AddressPageObjects(wd);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
-		objBagPageObjects = new BagPageObjects(wd);
-		objMenuPageObjects = new MenuPageObjects(wd);
-		objPaymentPageObjects = new PaymentPageObjects(wd);
-		objFilterPageObjects = new FilterPageObjects(wd);
-		objPDPageObject = new PDPageObjects(wd);
-		objPLPageObjects = new PLPageObjects(wd);
-		objHamburgerPageObjects = new HamburgerPageObjects(wd);
-		objHomePageObjects = new HomePageObjects(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
+		objAddressPageObjects = new AddressPageObjects(iDriver);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(iDriver);
+		objBagPageObjects = new BagPageObjects(iDriver);
+		objMenuPageObjects = new MenuPageObjects(iDriver);
+		objPaymentPageObjects = new PaymentPageObjects(iDriver);
+		objFilterPageObjects = new FilterPageObjects(iDriver);
+		objPDPageObject = new PDPageObjects(iDriver);
+		objPLPageObjects = new PLPageObjects(iDriver);
+		objHamburgerPageObjects = new HamburgerPageObjects(iDriver);
+		objHomePageObjects = new HomePageObjects(iDriver);
+		objWishlistPageObject = new WishListPageObject(iDriver);
 	}
 
-@AfterTest
-	public void quit() {
-		 try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 wd.quit();
+	@AfterTest
+	public void afterTest() {
+		// quite browser object
+		// check condition before closing or quite
+		iDriver.quit();
 		System.out.println("=====================VEGASF_278_END=====================");
 	}
 

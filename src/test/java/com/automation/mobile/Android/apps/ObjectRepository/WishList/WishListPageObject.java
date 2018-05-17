@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.apps.ObjectRepository.Home.HomePageObject;
-
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -19,7 +17,7 @@ public class WishListPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObject objHomepageObjects;
 
-	public WishListPageObject(AppiumDriver<MobileElement> aDriver) {
+	public WishListPageObject(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObject(aDriver);
@@ -46,7 +44,7 @@ public class WishListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//*[@index='1']/android.widget.TextView")
+	@FindBy(xpath = "//android.widget.RelativeLayout[@resource-id='com.myntra.android:id/ll_remove_from_list_container']")
 	public AndroidElement crossBtn;
 
 	/**
@@ -54,7 +52,7 @@ public class WishListPageObject {
 	 * 
 	 * @author 300021278 -Rakesh
 	 */
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	@FindBy(xpath = "//android.view.ViewGroup[@resource-id='com.myntra.android:id/toolbar']/android.widget.ImageButton")
 	public AndroidElement backBtn;
 
 	/**
@@ -175,7 +173,7 @@ public class WishListPageObject {
 	 * Method to click on the back button displayed in the header;
 	 * 
 	 * @author 300021278 -Rakesh
-	 */ 
+	 */
 	public void clickBackBtn() {
 		objAndroidGenericMethods.clickOnAndroidElement(getBackBtn(), "click on Back Buttton");
 	}
@@ -300,19 +298,19 @@ public class WishListPageObject {
 	 * 
 	 * @throws InterruptedException
 	 * @author 300021278 -Rakesh
-	 */  
+	 */ 
 	public void resetWishlist() throws InterruptedException {
-//		objHomepageObjects.clickRHWishlistbtn();
-//		if (!emptyWishlistmsg()) { 
-//			Reporter.log("Products are found in Wishlist");
-//			System.out.println("Products are found in Wishlist");
-//			removeAllItemsFromWishlist();
-//			clickBackBtn();
-//		} else {
-//			clickBackBtn();
-//			Reporter.log("Wishlist found empty");
-//			System.out.println("Wishlist found empty");
-//		}
+		objHomepageObjects.clickRHWishlistbtn();
+		if (!emptyWishlistmsg()) { 
+			Reporter.log("Products are found in Wishlist");
+			System.out.println("Products are found in Wishlist");
+			removeAllItemsFromWishlist();
+			clickBackBtn();
+		} else {
+			clickBackBtn();
+			Reporter.log("Wishlist found empty");
+			System.out.println("Wishlist found empty");
+		}
 
 	}
 

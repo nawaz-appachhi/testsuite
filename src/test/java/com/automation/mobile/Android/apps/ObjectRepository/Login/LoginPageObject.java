@@ -8,20 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LoginPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
-	AppiumDriver<MobileElement>aDriver;
 
-	public LoginPageObject(AppiumDriver<MobileElement> aDriver) {
+	public LoginPageObject(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		this.aDriver = aDriver;
 	}
 
 	/**
@@ -32,14 +28,14 @@ public class LoginPageObject {
 
 	/**
 	 * Name: Vinay Description: this xapth help to click on "Hamburger" on
-	 * homescreen 
+	 * homescreen modified by Rakesh Reason: To avoid using the symbol in xpath
+	 * past xpath://android.widget.TextView[@text='']
 	 */
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	// @FindBy(xpath = "//android.widget.TextView[@text='']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='2']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement hamburgerbtn;
-	
-	
-	
-	
+	@FindBy(xpath = "//*[@index='3'][@class='android.widget.TextView']")
+	public AndroidElement loginAndSignUpButtonbtn;
 	/**
 	 * Name: Vinay Description: This xpath help to click "Login" buttin on
 	 * Launching screen.
@@ -159,20 +155,6 @@ public class LoginPageObject {
 	 */
 	@FindBy(xpath = "//android.widget.Button[@resource-id='com.myntra.android:id/btn_loginregister_register']")
 	public AndroidElement createAccountBtn;
-	
-	/**
-	* @author 300021278 -Rakesh
-	* Object identified for clicking permissionSwitch button
-	*/
-	@FindBy(xpath = "//android.widget.Switch[@resource-id='android:id/switch_widget' or @text='OFF' or @index='0']")
-	public AndroidElement permissionSwitch;
-	
-	/**
-	* @author 300021278 -Rakesh
-	* Object identified for clicking google smartlock never button
-	*/
-	@FindBy(xpath = "//android.widget.Button[@resource-id='com.google.android.gms:id/credential_save_reject' or @text='NEVER']")
-	public AndroidElement smartLockGoogleNeverBtn;
 
 	/************* GetterMtehods ******************/
 
@@ -231,6 +213,11 @@ public class LoginPageObject {
 		return hamburgerbtn;
 	}
 
+	public AndroidElement getLoginAndSignUpButtonbtn() {
+		objAndroidGenericMethods.CheckAndroidElementFound(loginAndSignUpButtonbtn, "loginAndSignUpButtonbtn");
+
+		return loginAndSignUpButtonbtn;
+	}
 
 	public AndroidElement getFirstloginbtn() {
 		objAndroidGenericMethods.CheckAndroidElementFound(firstloginbtn, "firstloginbtn");
@@ -351,11 +338,9 @@ public class LoginPageObject {
 	public void clickpopUp() {
 		try {
 			objAndroidGenericMethods.clickOnAndroidElement(getPopUpbtn(), "click on Later");
-			System.out.println("permissions popup is available");
 			Reporter.log("permissions popup is available");
 		} catch (Exception e) {
 		Reporter.log("permissions popup is not available");
-		System.out.println("permissions popup is not available");
 		}
 	}
 	public void clickFirstLogin() {
@@ -372,8 +357,7 @@ public class LoginPageObject {
 
 	public void clickLogin() {
 		objAndroidGenericMethods.clickOnAndroidElement(getLoginbtn(), "clicked on loginbtn");
-		checkPermissionSwitch();
-		checkSmartLockButton();
+
 	}
 	
 	/**
@@ -393,7 +377,11 @@ public class LoginPageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(getHamburgerbtn(), "clicked on hamburgerbtn");
 	}
 
-	
+	public void clickloginAndSignUpButton() {
+		objAndroidGenericMethods.clickOnAndroidElement(getLoginAndSignUpButtonbtn(),
+				"clicked on loginAndSignUpButtonbtn");
+
+	}
 
 	public void clickOnContactUs() {
 		objAndroidGenericMethods.clickOnAndroidElement(getContactUs(), "ContactUs clicked");
@@ -401,6 +389,13 @@ public class LoginPageObject {
 
 	public void clickOnContactCancelButton() {
 		objAndroidGenericMethods.CheckAndroidElementFound(getContactUsCancelButton(), "Cancel button clicked");
+	}
+
+	@FindBy(xpath = "//android.view.ViewGroup[@index='9' and @bounds ='[962,74][1080,200]']")
+	public AndroidElement sideimage;
+
+	public void clickSideImage() {
+		sideimage.click();
 	}
 
 	/****************************** Assertions ******************************************/
@@ -466,11 +461,11 @@ public class LoginPageObject {
 
 	public AndroidElement PasswordNextButton1;
 
-	@FindBy(xpath = "//*[@text='NEXT' or resource-id='passwordNext']")
+	@FindBy(xpath = "//android.view.View[@text='NEXT' or resource-id='passwordNext']")
 
 	public AndroidElement PasswordNextButton2;
 
-	@FindBy(xpath = "//*[@text='NEXT' or resource-id='identifierNext']")
+	@FindBy(xpath = "//android.view.View[@text='NEXT' or resource-id='identifierNext']")
 
 	public AndroidElement EmailNextButton2;
 
@@ -483,7 +478,7 @@ public class LoginPageObject {
 	 * @param Accept button
 	 */
 
-	@FindBy(xpath = "//*[@text='ACCEPT' or resource-id='next']")
+	@FindBy(xpath = "//android.view.View[@text='ACCEPT' or resource-id='next']")
 	public AndroidElement AcceptButton;
 
 	/**
@@ -814,24 +809,5 @@ public class LoginPageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(signUpMaleBtn, "signUpMaleBtn");
 		objAndroidGenericMethods.clickOnAndroidElement(createAccountBtn, "createAccountBtn");
 	}
-	
-	public void checkPermissionSwitch() {
-		try {
-			permissionSwitch.click();
-			System.out.println("Overdraw Permission is Displayed");
-			aDriver.navigate().back();
-		} catch (Exception e) {
-			System.out.println("Overdraw Permission didnot apper");
-		}
-	}
 
-	public void checkSmartLockButton() {
-		try {
-			smartLockGoogleNeverBtn.click();
-			System.out.println("smartLockGoogle NeverBtn is Displayed");
-			aDriver.navigate().back();
-		} catch (Exception e) {
-			System.out.println("smartLockGoogle NeverBtn didnot apper");
-		}
-	}
 }

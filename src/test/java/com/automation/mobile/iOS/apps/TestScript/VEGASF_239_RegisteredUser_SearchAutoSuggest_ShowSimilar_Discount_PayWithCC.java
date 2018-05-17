@@ -10,10 +10,8 @@ import java.util.concurrent.TimeUnit;
 import org.ini4j.InvalidFileFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.BaseIOSTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -32,7 +30,7 @@ import com.automation.mobile.iOS.apps.ObjectRepository.Pages.WishListPage.Wishli
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC extends BaseIOSTest{
+public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCC {
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -42,7 +40,7 @@ public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	AddNewAdressPageObjects objAddAddressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -68,13 +66,7 @@ public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 
 	@Test(priority = 1)
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException {
-		try {
-			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
-			System.out.println("On Boarding screen appeared and closed it");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("On Boarding screen did not appear");
-		}
+
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 8);
 		objProfileLoginPageObject.clickOnLogOut();
@@ -97,10 +89,10 @@ public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
 	}
 
 //	@Test(priority = 3)
@@ -161,13 +153,9 @@ public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 	}
 	
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
-			"platform_" })
+	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
-			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
-			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
-			throws Exception {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -178,47 +166,25 @@ public class VEGASF_239_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		params.put("engine_", engine_);
-		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-	        {
-	                wd =   objMobileDrivers.launchAppiOS(params);
-	        }
-	        else
-	        {
-	                try {
-	                     setUpTest(params.get("platform_"));
-	                     System.out.println("TestDroid Execution Started");
-	                 } catch (Exception e) {
-	                     // TODO Auto-generated catch block
-	                     System.out.println("Error :: Please change suite parameter to run locally.");
-	                 }
-	                
-	        }
-		wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		iDriver = objMobileDrivers.launchAppiOS(params);
+		iDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
-		objPLPageObjets = new PLPageObjects(wd);
-		objPDPageObject = new PDPageObject(wd);
-		objWishlistPageObject = new WishlistPageObject(wd);
-		objPLPageObjets = new PLPageObjects(wd);
-		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
-		objCartPageObject = new CartPageObject(wd);
-		objAssertionPageObject = new AssertionPageObject(wd);
-		objPaymentPageObject = new PaymentPageObject(wd);
-		objHomePageObject2 = new HomePageObject2(wd);
-		objiOSGenericMethods = new iOSGenericMethods(wd);
-		objAddAddressPageObjects = new AddNewAdressPageObjects(wd);
+		objPLPageObjets = new PLPageObjects(iDriver);
+		objPDPageObject = new PDPageObject(iDriver);
+		objWishlistPageObject = new WishlistPageObject(iDriver);
+		objPLPageObjets = new PLPageObjects(iDriver);
+		objProfileLoginPageObject = new ProfileLoginPageObject(iDriver);
+		objCartPageObject = new CartPageObject(iDriver);
+		objAssertionPageObject = new AssertionPageObject(iDriver);
+		objPaymentPageObject = new PaymentPageObject(iDriver);
+		objHomePageObject2 = new HomePageObject2(iDriver);
+		objiOSGenericMethods = new iOSGenericMethods(iDriver);
+		objAddAddressPageObjects = new AddNewAdressPageObjects(iDriver);
 	}
 	
 	@AfterTest
 	public void quit() {
-		 try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 wd.quit();
+		iDriver.quit();
 	}
 	
 }

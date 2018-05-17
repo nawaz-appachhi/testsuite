@@ -1,14 +1,15 @@
 package com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects;
 
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -17,10 +18,10 @@ public class HamburgerPageObjects {
 
 	AndroidGenericMethods objAndroidGenericMethods;
 
-	AppiumDriver<MobileElement> aDriver;
+	AndroidDriver<AndroidElement> aDriver;
 	HomePageObjects objHomepageObjects;
 
-	public HamburgerPageObjects(AppiumDriver<MobileElement> aDriver) {
+	public HamburgerPageObjects(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObjects(aDriver);
@@ -547,17 +548,20 @@ public class HamburgerPageObjects {
 	 * 
 	 */
 
+	/**
+	 * Modified by :anu
+	 * Instead of cookies, session id is verifying
+	 */
 	public void logoutAndVerifySessionId() {
-
-		Cookie LoginCookie = aDriver.manage().getCookieNamed("user_uuid");
-		String loginSessionId = LoginCookie.getValue();
-		Reporter.log("Session Id before logout is : " + loginSessionId);
+		SessionId loginsession = ((RemoteWebDriver)aDriver).getSessionId();
+		String loginsessionid = loginsession.toString();
+		System.out.println("Session id: " + loginsession.toString());
 		clickLogout();
 		verifyUserIsLoggedOut();
-		Cookie LogoutCookie = aDriver.manage().getCookieNamed("user_uuid");
-		String logoutSessionId = LogoutCookie.getValue();
-		Reporter.log("Session Id after logout is : " + logoutSessionId);
-		if (loginSessionId.equalsIgnoreCase(logoutSessionId))
+		SessionId logoutsession = ((RemoteWebDriver)aDriver).getSessionId();
+		System.out.println("Session id: " + logoutsession.toString());
+		String logoutsessionid = loginsession.toString();
+		if (loginsessionid.equalsIgnoreCase(logoutsessionid))
 		{
 			Reporter.log("Failed: Session Id's before and after logout are same!");
 		} else {

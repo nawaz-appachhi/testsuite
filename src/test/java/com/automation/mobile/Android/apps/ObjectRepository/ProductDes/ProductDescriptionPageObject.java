@@ -15,7 +15,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -24,17 +23,17 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class ProductDescriptionPageObject {
-	AppiumDriver<MobileElement> aDriver;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 	public AndroidElement element = null;
 	public AndroidElement productElement = null;
 	String pdpProductPrice;
 	String pdpProductDiscount;
 
-	public ProductDescriptionPageObject(AppiumDriver<MobileElement> aDriver) {
+	public ProductDescriptionPageObject(AndroidDriver<AndroidElement> aDriver) {
+		this.aDriver = aDriver;
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
-		this.aDriver = aDriver;
 	}
 	/**
 	 * Author: Sneha
@@ -49,7 +48,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified to scroll product image 
 	 */
-	@FindBy(xpath = "//*[@index='0' or @content-desc='image_swipe']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='0' or @content-desc='image_swipe']")
 	public AndroidElement productImageScroll;
 	
 	/**
@@ -66,7 +65,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for show similar icon displayed on product tile.
 	 */
-	@FindBy(xpath = "//*[@content-desc ='similar_icon']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='similar_icon']")
 	public AndroidElement similarIconbtn;
 
 	/**
@@ -74,7 +73,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for selecting first similar product.
 	 */
-	@FindBy(xpath = "//*[starts-with(@content-desc,'similar_item_0')]")
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'similar_item_0')]")
 	public AndroidElement firstSimilarProduct;
 
 	/**
@@ -82,19 +81,31 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for selecting product size.
 	 */
-	@FindAll({ @FindBy(xpath = "//*[starts-with(@content-desc,'size_select')]") })
+	@FindAll({ @FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]") })
 	public List<AndroidElement> productSizesbtn;
 
-	
+	/**
+	 * Author: Sneha
+	 * 
+	 * Description : object identified for product size subnodes.
+	 */
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']")
+	public List<AndroidElement> productSizesSubNodes;
 
-	
+	/**
+	 * Author: Sneha
+	 * 
+	 * Description : object identified for selecting first product size.
+	 */
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select_0')]")
+	public AndroidElement firstProductSizebtn;
 
 	/**
 	 * Author: Sneha
 	 * 
 	 * Description : object identified for clicking add to bag button
 	 */
-	@FindBy(xpath = "//*[@content-desc ='buy_button']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='buy_button']")
 	public AndroidElement addToBagbtn;
 
 	/**
@@ -102,7 +113,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking Save to wishlist button
 	 */
-	@FindBy(xpath = "//*[@content-desc ='save_button']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='save_button']")
 	public AndroidElement saveToWishlistbtn;
 
 	/**
@@ -110,7 +121,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking on Wishlist button
 	 */
-	@FindBy(xpath = "//*[@index='5']/android.widget.ImageView")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.ImageView")
 	public AndroidElement wishListbtn;
 
 	/**
@@ -120,7 +131,7 @@ public class ProductDescriptionPageObject {
 	 * modified as xpath was not working
 	 */
 	//@FindBy(xpath = "//android.widget.TextView[@text ='GO TO BAG']")
-	@FindBy(xpath="//*[@content-desc='buy_button' or @text='buy_button']")
+	@FindBy(xpath="//android.view.ViewGroup[@content-desc='buy_button' or @text='buy_button']")
 	public AndroidElement goToBagbtn;
 
 	/**
@@ -196,7 +207,7 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking close Size chart button.
 	 */
-	@FindBy(xpath = "//android.widget.ImageView[@index='0']")
+	@FindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
 	public AndroidElement CloseSizeChartbtn;
 
 	
@@ -205,12 +216,35 @@ public class ProductDescriptionPageObject {
 	 * 
 	 * Description : object identified for clicking Bag header button.
 	 */
-	//@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.view.ViewGroup/android.widget.TextView | //android.view.View[@index='3']/android.view.View/android.widget.TextView")
-	@FindBy(xpath = "//android.widget.ImageView[@content-desc='rightElement0']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='3']/android.view.ViewGroup/android.widget.TextView")
+	//@FindBy(xpath = "//android.view.ViewGroup[@index='3']")
 	public AndroidElement bagHeaderbtn;
 
+	/**
+	 * object identified for back button displayed in left header of the product description page
+	 * @author 300021278 -Rakesh
+	 * 
+	 */
+	@FindBy(xpath = "//android.widget.ImageButton[@resource-id='com.myntra.android:id/iv_title_image']")
+	public AndroidElement logo;
+
+	/**
+	 * Author: Sneha
+	 * 
+	 * Description : object identified for clicking remove item from whishlist button.
+	 */
+	@FindBy(xpath = "//android.widget.ImageButton[@resource-id='com.myntra.android:id/iv_remove']")
+	public AndroidElement RemovefromWishlist;
+
+	/**
+	 * Author: Sneha
+	 * 
+	 * Description : object identified for clicking Unavailable size button.
+	 */
+	@FindBy(xpath = "//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']")
+	public AndroidElement unavailableSize;
 	
-	@FindBy(xpath = "(//*[starts-with(@content-desc,'delivery_')]/android.widget.TextView")
+	@FindBy(xpath = "(//android.view.ViewGroup[starts-with(@content-desc,'delivery_')]/android.widget.TextView")
 	public AndroidElement pincodeHeader;
 	
 	/************ Getters *********/
@@ -246,9 +280,14 @@ public class ProductDescriptionPageObject {
 		return productSizesbtn;
 	}
 
-	
+	public List<AndroidElement> getProductSizesSubNodes() {
+		return productSizesSubNodes;
+	}
 
-	
+	public AndroidElement getFirstProductSizebtn() {
+		objAndroidGenericMethods.CheckAndroidElementFound(firstProductSizebtn, "shoppingBagbtn");
+		return firstProductSizebtn;
+	}
   
 	public AndroidElement getAddToBagbtn() {
 		objAndroidGenericMethods.CheckAndroidElementFound(addToBagbtn, "addToBagbtn");
@@ -346,6 +385,7 @@ public class ProductDescriptionPageObject {
 
 			for (AndroidElement e : lst) {
 				List<MobileElement> sizecount = e.findElements(By.xpath("//android.view.ViewGroup"));
+
 				System.out.println("the size of the singlesize is" + sizecount.size());
 				if (sizecount.size() == 1) {
 					System.out.println("clicked successfully");
@@ -383,6 +423,27 @@ public class ProductDescriptionPageObject {
 
 	}
 	
+	/*
+	
+	*/
+
+
+//	public void selectProductSize() {
+//		MobileElement ll = aDriver.findElement(By.xpath("//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']"));
+//		
+//		List<AndroidElement> sizes = getProductSizesbtn();
+//		for (AndroidElement size : sizes) {
+//			try {
+//				if (ll.isDisplayed()) {
+//						MobileElement llw = size.findElement(By.xpath("//android.view.ViewGroup[starts-with(@content-desc,'size_select')]/android.view.ViewGroup[@index='1']"));
+//					System.out.println("Current size not available for checkout, selecting next size.");
+//				}}
+//				catch (NoSuchElementException e) {
+//				objAndroidGenericMethods.clickOnAndroidElement(size, "click on size button");
+//			}
+//		}
+//
+//	}
 
 	public void productPriceElements(String Price) {
 		if (Price.equalsIgnoreCase("SellingPrice")) {
@@ -439,7 +500,9 @@ public class ProductDescriptionPageObject {
 		objAndroidGenericMethods.clickOnAndroidElement(getFirstSimilarProduct(), "click on firstSimilarProduct button");
 	}
 
-	
+	public void clickFirstProductSizebtn() {
+		objAndroidGenericMethods.clickOnAndroidElement(getFirstProductSizebtn(), "click on firstProductSize button");
+	}
 
 	public void clickAddToBagbtn() {
 		objAndroidGenericMethods.clickOnAndroidElement(getAddToBagbtn(), "click on addToBag button");
@@ -528,13 +591,13 @@ public class ProductDescriptionPageObject {
 	public AndroidElement size_selector;
 
 	// PDP title
-	@FindBy(xpath = "//*[@content-desc ='product_head']/*/android.widget.TextView" )
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='product_head']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement pdpTitle;
 
 	/**
 	 * author : Sneha
 	 */
-	@FindBy(xpath = "//*[@content-desc ='tap_for_best_price' or @text ='Tap for best price']")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc ='tap_for_best_price' or @text ='Tap for best price']")
 	public AndroidElement best_Price;
 
 	// ProductCode
@@ -542,7 +605,18 @@ public class ProductDescriptionPageObject {
 	@FindBy(xpath = "//android.widget.TextView[@text='Product Code: 2194304']")
 	public AndroidElement productCode;
 
-	
+	public AndroidDriver<AndroidElement> getaDriver() {
+		return aDriver;
+	}
+
+	public AndroidGenericMethods getObjAndroidGenericMethods() {
+		return objAndroidGenericMethods;
+	}
+
+	public AndroidElement getElement() {
+		return element;
+	}
+
 	public AndroidElement getProductCode() {
 		return productCode;
 	}
@@ -571,7 +645,7 @@ public class ProductDescriptionPageObject {
 		objAndroidGenericMethods.VerifyStringShouldNotEmpty(best_Price, "Best Price");
 	}
 
-	@FindAll({ @FindBy(xpath = "//*[@content-desc='pdp_price']/*") })
+	@FindAll({ @FindBy(xpath = "//android.view.ViewGroup[@content-desc='pdp_price']/*") })
 	public List<AndroidElement> productdetailelements;
 
 	public List<AndroidElement> getProductdetailelements() {

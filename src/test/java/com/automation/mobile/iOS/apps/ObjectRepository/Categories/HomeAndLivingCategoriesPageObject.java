@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -16,9 +14,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class HomeAndLivingCategoriesPageObject {
 	iOSGenericMethods objiOSGenericMethods;
-	public AppiumDriver<MobileElement> iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	
-	public HomeAndLivingCategoriesPageObject(AppiumDriver<MobileElement> iDriver) {
+	public HomeAndLivingCategoriesPageObject(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -36,7 +34,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Gifting ideas")
 	public IOSElement homeGiftingIdeas;
 
-	@iOSFindBy(accessibility = "Brands ï�¸")
+	@iOSFindBy(accessibility = "Brands ")
 	public IOSElement homeBrands;
 
 	/*
@@ -73,7 +71,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Trident")
 	public IOSElement homeBrandTrident;
 
-	@iOSFindBy(accessibility = "Bed Linen & Furnishing ï�¸")
+	@iOSFindBy(accessibility = "Bed Linen & Furnishing ")
 	public IOSElement homeBedLinenAndFurnishing;
 
 	/*
@@ -101,7 +99,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Cushions & Cushion Covers")
 	public IOSElement homeCushionsAndCushionCovers;
 
-	@iOSFindBy(accessibility = "Home DÃ©cor ï�¸")
+	@iOSFindBy(accessibility = "Home Décor ")
 	public IOSElement homeHomeDecor;
 
 	/*
@@ -135,7 +133,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Wall Art")
 	public IOSElement homeHomeDecorWallArt;
 
-	@iOSFindBy(accessibility = "Lamps & Lighting ï�¸")
+	@iOSFindBy(accessibility = "Lamps & Lighting ")
 	public IOSElement homelampsAndLightning;
 
 	/*
@@ -151,7 +149,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Floor Lamps")
 	public IOSElement homeLampsAndLightingFloorLamps;
 
-	@iOSFindBy(accessibility = "Floor Mats & Dhurries ï�¸")
+	@iOSFindBy(accessibility = "Floor Mats & Dhurries ")
 	public IOSElement homeFloorMatsAndDhurries;
 
 	/*
@@ -164,7 +162,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Door Mats")
 	public IOSElement homeFloorDoorMats;
 
-	@iOSFindBy(accessibility = "Bath ï�¸")
+	@iOSFindBy(accessibility = "Bath ")
 	public IOSElement homeBath;
 
 	/*
@@ -192,7 +190,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Bathroom Accessories")
 	public IOSElement homeBathBathroomAccessories;
 
-	@iOSFindBy(accessibility = "Kitchen & Table ï�¸")
+	@iOSFindBy(accessibility = "Kitchen & Table ")
 	public IOSElement homeKitchenAndTable;
 
 	/*
@@ -217,7 +215,7 @@ public class HomeAndLivingCategoriesPageObject {
 	@iOSFindBy(accessibility = "Kitchen Tools")
 	public IOSElement homeKitchenKitchenTools;
 
-	@iOSFindBy(accessibility = "Storage ï�¸")
+	@iOSFindBy(accessibility = "Storage ")
 	public IOSElement homeStorage;
 
 	/*

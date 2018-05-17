@@ -89,10 +89,11 @@ public class JavaUtils {
 	}
 
 	public static String getPropValue(String key) throws IOException {
-		FileReader reader = new FileReader("./Configuration/common.properties");
+		FileReader reader = new FileReader("./config.properties");
 		Properties prop = new Properties();
 		prop.load(reader);
 		String propValue = prop.getProperty(key);
+		System.out.println("Property Value for " + key + " is " + propValue);
 		return propValue;
 	}
 

@@ -1,6 +1,7 @@
 package com.automation.mobile.Android.MobileWeb.TestScript;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -9,11 +10,9 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -34,6 +33,9 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.PLPageObjects.PL
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
 /**
  * @author 300021279 - Sangam TEST STEPS Casual Browsing User Facebook
  *         registered user - Login Home Page Search (by clicking banner or
@@ -41,8 +43,7 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishLis
  *         Add more from wishlist Percentage Discount Remove address Payment :
  *         Net Banking
  */
-public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD
-		extends BaseAndroidTest {
+public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDiscount_RemoveAddress_PayWithDD {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	AddressPageObjects objAddressPageObjects;
@@ -61,7 +62,9 @@ public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 	HomePageObjects objHomePageObjects;
 	PLPageObjects objPLPageObjects;
 	WishListPageObject objWishlistPageObject;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
+
 	String testName = "VEGASF_351";
 
 	@Test(priority = 1)
@@ -87,32 +90,33 @@ public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 	public void SearchItem() throws InvalidFileFormatException, IOException {
 		Reporter.log("SearchItem test started");
 		objHomePageObjects.clickOnSearchIcon();
-		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "productcode"));
+		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "SearchItem"));
 	}
 
-	/*
-	 * @Test(priority = 4) public void SaveToWishlist() {
-	 * Reporter.log("SaveToWishlist test started");
-	 * objPLPageObjects.clickToSaveToWishlist(); }
-	 * 
-	 * @Test(priority = 4) public void Filter_Price() {
-	 * Reporter.log("Filter_Price test started");
-	 * objFilterPageObjects.clickOnFilterButton();
-	 * objFilterPageObjects.clickOnDiscount();
-	 * objFilterPageObjects.selectOptionsInsideFilter();
-	 * objFilterPageObjects.clickOnApplyButton();
-	 * objPDPageObject.clickFirstProductSearchResult(); }
-	 */
+	@Test(priority = 4)
+	public void SaveToWishlist() {
+		Reporter.log("SaveToWishlist test started");
+		objPLPageObjects.clickToSaveToWishlist();
+	}
+
+	@Test(priority = 4)
+	public void Filter_Price() {
+		Reporter.log("Filter_Price test started");
+		objFilterPageObjects.clickOnFilterButton();
+		objFilterPageObjects.clickOnDiscount();
+		objFilterPageObjects.selectOptionsInsideFilter();
+		objFilterPageObjects.clickOnApplyButton();
+	}
+
 	@Test(priority = 5)
 	public void MoveToBag() {
 		Reporter.log("MoveToBag test started");
-		objPDPageObject.clickSaveToWishlist();
-		objPDPageObject.VerifyProductTitle();
-		objPDPageObject.imageVerification();
+		objPDPageObject.clickFirstProductSearchResult();
 		objPDPageObject.assertProductPrice();
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.setFirstAvailableSize();
 		objPDPageObject.clickOnConfirmButton();
+
 	}
 
 	@Test(priority = 6)
@@ -120,23 +124,19 @@ public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		Reporter.log("AddMoreFromWishlist test started");
 		objHomePageObjects.clickOnWishlistButton();
 		objWishlistPageObject.VerifyWishlistPageTitle();
-		objWishlistPageObject.VerifySellingPrice();
-		objWishlistPageObject.VerfiyProductIsAddedToWishlist();
 		objWishlistPageObject.ClickOnMoveToBag();
 		objWishlistPageObject.ClickSizeButtons();
 		objWishlistPageObject.ClickOnDoneButton();
 		objWishlistPageObject.clickOnMyntraLogo();
 		objHomePageObjects.clickOnBagIcon();
-		objBagPageObjects.assertBagPageTitle("Bag");
 		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.getProductImage();
-		objBagPageObjects.VerfiyProductIsAddedToCart();
 		objBagPageObjects.VerifySellingPrice();
 	}
 
 	@Test(priority = 7)
 	public void PercentageDiscount() {
 		Reporter.log("PercentageDiscount test started");
+
 		objBagPageObjects.clickOnPlaceOrder();
 	}
 
@@ -169,17 +169,12 @@ public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		objPaymentPageObjects.clickOnNetBanking();
 	}
 
-	@Test(priority = 12)
-	public void LogOut() throws InterruptedException {
-		Reporter.log("Logout");
-		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
-		objHamburgerPageObjects.logoutAndVerifySessionId();
-	}
-
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
+	@Parameters({ "browserName_", "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	// @Parameters({ "browserType" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
+	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_,
+			String appUrl_, String screenshotPath_) throws MalformedURLException {
+
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -191,48 +186,31 @@ public class VEGASF_351_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-        params.put("platform_", platform_);
-		 if(!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppAndroid(params);
-		} else {
-			try {
-				setUpTest(params.get("platform_"));
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-		}
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(wd);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
-		objBagPageObjects = new BagPageObjects(wd);
-		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(wd);
-		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(wd);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
-		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(wd);
-		objMenuPageObjects = new MenuPageObjects(wd);
-		objPaymentPageObjects = new PaymentPageObjects(wd);
-		objFilterPageObjects = new FilterPageObjects(wd);
-		objPDPageObject = new PDPageObjects(wd);
-		objHamburgerPageObjects = new HamburgerPageObjects(wd);
-		objHomePageObjects = new HomePageObjects(wd);
-		objPLPageObjects = new PLPageObjects(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(aDriver);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(aDriver);
+		objBagPageObjects = new BagPageObjects(aDriver);
+		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(aDriver);
+		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(aDriver);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(aDriver);
+		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(aDriver);
+		objMenuPageObjects = new MenuPageObjects(aDriver);
+		objPaymentPageObjects = new PaymentPageObjects(aDriver);
+		objFilterPageObjects = new FilterPageObjects(aDriver);
+		objPDPageObject = new PDPageObjects(aDriver);
+		objHamburgerPageObjects = new HamburgerPageObjects(aDriver);
+		objHomePageObjects = new HomePageObjects(aDriver);
+		objPLPageObjects = new PLPageObjects(aDriver);
+		objWishlistPageObject = new WishListPageObject(aDriver);
 	}
 
 	@AfterTest
 	public void afterTest() {
 		System.out.println("=====================VEGASF_351_END=====================");
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
+
 	}
+
 }

@@ -12,8 +12,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_207_RegisteredUser_SizeSensitive_BOGO_PayWithCoD" />
 		</classes>
@@ -26,8 +24,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_215_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD" />
 		</classes>
@@ -40,8 +36,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_341_Google_User_Filter_BOGO_ViewDetails_CoD" />
 		</classes>
@@ -54,8 +48,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com/" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_352_Google_User_ImageVerification_SelectSize_RemoveProduct_ClickforOffer_ViewDetails_PayWithCoD" />
 		</classes>

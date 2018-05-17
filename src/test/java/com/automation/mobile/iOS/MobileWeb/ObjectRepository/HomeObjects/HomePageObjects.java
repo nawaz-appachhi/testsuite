@@ -14,7 +14,6 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -23,10 +22,10 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class HomePageObjects {
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public HomePageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public HomePageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}

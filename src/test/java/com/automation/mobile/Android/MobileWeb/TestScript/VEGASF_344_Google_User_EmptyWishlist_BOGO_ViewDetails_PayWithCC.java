@@ -1,6 +1,7 @@
 package com.automation.mobile.Android.MobileWeb.TestScript;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -9,11 +10,9 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -34,6 +33,9 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.PLPageObjects.PL
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
 /**
  * @author 300019227 - Anu TEST STEPS 1. Login(Email registered user) 2. Reset
  *         Cart, Wishlist and Address Pages 3. Search (using a keyword in the
@@ -42,7 +44,7 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishLis
  *         link' and Place the order from Bag 7. Add a new address and verify
  *         'view details' link 8. Payment through COD
  */
-public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC extends BaseAndroidTest {
+public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	AddressPageObjects objAddressPageObjects;
@@ -61,13 +63,17 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 	HomePageObjects objHomePageObjects;
 	PLPageObjects objPLPageObjects;
 	WishListPageObject objWishlistPageObject;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
+
 	String testName = "VEGASF_344";
 
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
+	@Parameters({ "browserName_", "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	// @Parameters({ "browserType" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
+	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_,
+			String appUrl_, String screenshotPath_) throws MalformedURLException {
+
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -79,43 +85,31 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-        params.put("platform_", platform_);
-		 if(!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppAndroid(params);
-		} else {
-			try {
-				setUpTest(params.get("platform_"));
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-		}
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(wd);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
-		objBagPageObjects = new BagPageObjects(wd);
-		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(wd);
-		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(wd);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
-		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(wd);
-		objMenuPageObjects = new MenuPageObjects(wd);
-		objPaymentPageObjects = new PaymentPageObjects(wd);
-		objFilterPageObjects = new FilterPageObjects(wd);
-		objPDPageObject = new PDPageObjects(wd);
-		objHamburgerPageObjects = new HamburgerPageObjects(wd);
-		objHomePageObjects = new HomePageObjects(wd);
-		objPLPageObjects = new PLPageObjects(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(aDriver);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(aDriver);
+		objBagPageObjects = new BagPageObjects(aDriver);
+		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(aDriver);
+		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(aDriver);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(aDriver);
+		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(aDriver);
+		objMenuPageObjects = new MenuPageObjects(aDriver);
+		objPaymentPageObjects = new PaymentPageObjects(aDriver);
+		objFilterPageObjects = new FilterPageObjects(aDriver);
+		objPDPageObject = new PDPageObjects(aDriver);
+		objHamburgerPageObjects = new HamburgerPageObjects(aDriver);
+		objHomePageObjects = new HomePageObjects(aDriver);
+		objPLPageObjects = new PLPageObjects(aDriver);
+		objWishlistPageObject = new WishListPageObject(aDriver);
 	}
 
 	@Test(priority = 1)
 	public void LoginWithGoogle() throws InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_344_START=====================");
 		objHomePageObjects.clickOnHamburgerButton();
+
 		// objHamburgerPageObjects.clickOnSignInOption();
 		// objHamburgerPageObjects.clickOnFacebook();
 		// objAndroidGenericMethods.switchToNewWindow();
@@ -126,6 +120,7 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		// objAndroidGenericMethods.switchToMainWindow();
 		//
 		// }
+
 		objHamburgerPageObjects.clickOnSignInOption();
 		objHamburgerPageObjects.enterEmailAddress(objAndroidGenericMethods.getValueByKeyWeb(testName, "UserName"),
 				objAndroidGenericMethods.getValueByKeyWeb(testName, "Password"));
@@ -138,18 +133,17 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		objWishlistPageObject.resetWishlist();
 		objAddressPageObjects.resetAddress();
 		objHomePageObjects.clickOnSearchIcon();
-		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "productcode"));
-		// objAndroidGenericMethods.waitDriver(objPLPageObjects.searchResultHeader,
-		// "searchResultHeader");
-		// objHomePageObjects.getSearchAutoSuggestList();
-		// objPLPageObjects.VerifyProductDetails();
-		// objFilterPageObjects.clickOnSortButton();
-		// objFilterPageObjects.clickOnPriceHightoLow();
-		// objPDPageObject.clickFirstProductSearchResult();
+		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "SearchItem1"));
+		objAndroidGenericMethods.waitDriver(objPLPageObjects.searchResultHeader, "searchResultHeader");
+		objHomePageObjects.getSearchAutoSuggestList();
+		objPLPageObjects.VerifyProductDetails();
+		objFilterPageObjects.clickOnSortButton();
+		objFilterPageObjects.clickOnPriceHightoLow();
 	}
 
 	@Test(priority = 3)
 	public void AddtoBag() throws InvalidFileFormatException, IOException {
+		objPDPageObject.clickFirstProductSearchResult();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.imageVerification();
 		objPDPageObject.assertProductPrice();
@@ -157,12 +151,8 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		objPDPageObject.setFirstAvailableSize();
 		objPDPageObject.clickOnConfirmButton();
 		objPDPageObject.clickOngoToBag();
-		objBagPageObjects.assertBagPageTitle("Bag");
-		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.getProductImage();
-		objBagPageObjects.VerfiyProductIsAddedToCart();
-		objBagPageObjects.VerifySellingPrice();
 		objBagPageObjects.clickOnPlaceOrder();
+
 	}
 
 	@Test(priority = 4)
@@ -181,12 +171,14 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getopenOnSaturdays(), 20);
 		objAndroidGenericMethods.scrollDown(objAddressPageObjects.getSaveAddress(), 20);
 		objAddressPageObjects.VerifyAddressAdded();
+
 	}
 
 	@Test(priority = 5)
 	public void ViewDetails() {
 		objBagPageObjects.clickOnViewDetails();
 		objBagPageObjects.clickOnContinueButton();
+
 	}
 
 	@Test(priority = 6)
@@ -194,25 +186,13 @@ public class VEGASF_344_Google_User_EmptyWishlist_BOGO_ViewDetails_PayWithCC ext
 		objBagPageObjects.assertPaymentPageTitle("payment");
 		objPaymentPageObjects.VerifyDeliveryAddress();
 		objAndroidGenericMethods.scrollDown(objPaymentPageObjects.emiCreditCard, 50);
-		objAndroidGenericMethods.backKeyButton();
-	}
 
-	@Test(priority = 12)
-	public void LogOut() throws InterruptedException {
-		Reporter.log("Logout");
-		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
-		objHamburgerPageObjects.logoutAndVerifySessionId();
 	}
 
 	@AfterTest
 	public void afterTest() {
 		System.out.println("=====================VEGASF_344_END=====================");
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 	}
+
 }

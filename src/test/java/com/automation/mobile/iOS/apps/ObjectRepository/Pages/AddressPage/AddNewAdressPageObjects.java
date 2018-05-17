@@ -4,9 +4,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -14,10 +11,10 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class AddNewAdressPageObjects {
 
-	public AppiumDriver<MobileElement> iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public AddNewAdressPageObjects(AppiumDriver<MobileElement> iDriver) {
+	public AddNewAdressPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -147,19 +144,13 @@ public class AddNewAdressPageObjects {
 		return openOnSaturdays;
 	}
 
-	/**
-	 * @author 300021275
-	 * @return
-	 */
-	public IOSElement getSaveBtnofTownLocality() {
-		objiOSGenericMethods.CheckIOSElementFound(saveBtnofTownLocality, "saveBtnofTownLocality");
-		return saveBtnofTownLocality;
-	}
-
 	/******************** methods *************************/
 
 	public void clickOnPlaceOrder() {
-		objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "Place Order button");
+		objiOSGenericMethods.waitForElementVisibility(getPlaceOrder());
+		if (getPlaceOrder().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getPlaceOrder(), "Place Order button click succesfully");
+		}
 	}
 
 	/**
@@ -168,27 +159,34 @@ public class AddNewAdressPageObjects {
 
 	public void clickOnAddNewAddress() {
 		try {
-			objiOSGenericMethods.clickOnIOSElement(getAddNewAddressBtn(), "Add New Address button ");
+			if (getAddNewAddressBtn().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getAddNewAddressBtn(), "addNewAddress button click succesfully");
+			}
 		} catch (Exception e) {
 			System.out.println("Add new button is not displayed!");
 		}
 	}
 
 	public void enterPinCode(String pincode) throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getPincodeAddressTxt(), "Enter Pincode");
+		objiOSGenericMethods.clickOnIOSElement(getPincodeAddressTxt(), "Enter pin code succesfully");
 		getPincodeAddressTxt().sendKeys(pincode);
 	}
 
 	public void clickOnSaveAddressBtn() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveAddressBtn(), "Save Address button");
+		objiOSGenericMethods.waitForElementVisibility(getSaveAddressBtn());
+		if (getSaveAddressBtn().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getSaveAddressBtn(), "saveAddress button click succesfully");
+		}
 	}
 
 	public void clickOnContinuePlaceOrder() {
-		objiOSGenericMethods.clickOnIOSElement(getContinuePlaceOrderBtn(), "Continue PlaceOrder button");
+		objiOSGenericMethods.waitForElementVisibility(getContinuePlaceOrderBtn());
+		objiOSGenericMethods.clickOnIOSElement(getContinuePlaceOrderBtn(),
+				"ContinuePlaceOrder button click succesfully");
 	}
 
 	public void clickOnEnterTownLocalityBtn() {
-		objiOSGenericMethods.clickOnIOSElement(getTownLocalityTxt(), "Edit address button");
+		objiOSGenericMethods.clickOnIOSElement(getTownLocalityTxt(), "clicked on edit adress button");
 	}
 
 	public void enterTownLocality(String townLocality) {
@@ -198,11 +196,13 @@ public class AddNewAdressPageObjects {
 	}
 
 	public void clickOnLocalitySave() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveBtnofTownLocality(), "Save button");
+		objiOSGenericMethods.waitForElementVisibility(saveBtnofTownLocality);
+		saveBtnofTownLocality.click();
 	}
 
 	public void clickOnChoose() {
-		objiOSGenericMethods.clickOnIOSElement(getChooseTownBtn(), "Choose button");
+		objiOSGenericMethods.waitForElementVisibility(getChooseTownBtn());
+		objiOSGenericMethods.clickOnIOSElement(getChooseTownBtn(), "clicked on choose button");
 	}
 
 	/**
@@ -211,9 +211,8 @@ public class AddNewAdressPageObjects {
 	 * @throws InterruptedException
 	 */
 	public void enterNameAddAddress(String name) throws InterruptedException {
-		// objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
-		// getNameAddAddressTxt().click();
-		objiOSGenericMethods.clickOnIOSElement(getNameAddAddressTxt(), "Name");
+		objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
+		getNameAddAddressTxt().click();
 		getNameAddAddressTxt().sendKeys(name);
 		System.out.println("Name entered");
 	}
@@ -224,19 +223,19 @@ public class AddNewAdressPageObjects {
 	}
 
 	public void clickOnOfficeCommercial() throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getOfficeCommercialBtn(), "Office/Commercial Button");
+		objiOSGenericMethods.clickOnIOSElement(getOfficeCommercialBtn(), "OfficeCommercial Btn click succesfully");
 	}
 
 	public void clickOnHome() throws InterruptedException {
-		objiOSGenericMethods.clickOnIOSElement(getHomeBtn(), "Home Button");
+		objiOSGenericMethods.clickOnIOSElement(getHomeBtn(), "Home Btn click succesfully");
 	}
 
 	public void clickOnPermissionBtn() {
-		objiOSGenericMethods.clickOnIOSElement(getPermssionBtn(), "Permission button");
+		objiOSGenericMethods.clickOnIOSElement(getPermssionBtn(), "clicked on permission  button");
 	}
 
 	public void clickOnOpenOnSaturdays() {
-		objiOSGenericMethods.clickOnIOSElement(getOpenOnSaturdays(), "Open on saturday Button");
+		objiOSGenericMethods.clickOnIOSElement(getOpenOnSaturdays(), "clicked on open on saturday  button");
 	}
 
 	/**
@@ -253,30 +252,28 @@ public class AddNewAdressPageObjects {
 	public void EnterContinueOrderAddingAddress(String pincode, String locality, String name, String address,
 			String mobile) throws InterruptedException {
 
-//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-//			if (getPincodeAddressTxt().isDisplayed()) {
+			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
-				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
+				objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
 				getTownLocalityTxt().sendKeys(locality);
 				clickOnLocalitySave();
-				// objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
-				objiOSGenericMethods.clickOnIOSElement(getNameAddAddressTxt(), "Name");
-				// getNameAddAddressTxt().click();
-				// objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
+				objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
+				getNameAddAddressTxt().click();
+				objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
 				getNameAddAddressTxt().sendKeys(name);
-				// objiOSGenericMethods.waitForElementVisibility(getAddressAddAddressTxt());
+				objiOSGenericMethods.waitForElementVisibility(getAddressAddAddressTxt());
 				getAddressAddAddressTxt().sendKeys(address);
-				// objiOSGenericMethods.waitForElementVisibility(getMobileNumberTxt());
+				objiOSGenericMethods.waitForElementVisibility(getMobileNumberTxt());
 				getMobileNumberTxt().sendKeys(mobile);
-				// objiOSGenericMethods.waitForElementVisibility(getHomeBtn());
+				objiOSGenericMethods.waitForElementVisibility(getHomeBtn());
 				if (getHomeBtn().isDisplayed()) {
-//					getHomeBtn().click();
-					objiOSGenericMethods.clickOnIOSElement(getHomeBtn(), "Home");
+					getHomeBtn().click();
 				}
 				clickOnSaveAddressBtn();
-//			}
+			}
 		} catch (Exception e) {
 		}
 	}
@@ -295,36 +292,33 @@ public class AddNewAdressPageObjects {
 
 			String mobile) throws InterruptedException {
 
-//		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
+		objiOSGenericMethods.waitForElementVisibility(getPincodeAddressTxt());
 		try {
-//			if (getPincodeAddressTxt().isDisplayed()) {
+			if (getPincodeAddressTxt().isDisplayed()) {
 				getPincodeAddressTxt().sendKeys(pincode);
 				clickOnChoose();
-				// objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
+				objiOSGenericMethods.waitForElementVisibility(getTownLocalityTxt());
 				getTownLocalityTxt().sendKeys(locality);
 				clickOnLocalitySave();
-				// objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
-				objiOSGenericMethods.clickOnIOSElement(getNameAddAddressTxt(), "Name");
-				// getNameAddAddressTxt().click();
-				// objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
+				objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
+				getNameAddAddressTxt().click();
+				objiOSGenericMethods.waitForElementVisibility(getNameAddAddressTxt());
 				getNameAddAddressTxt().sendKeys(name);
-				// objiOSGenericMethods.waitForElementVisibility(getAddressAddAddressTxt());
+				objiOSGenericMethods.waitForElementVisibility(getAddressAddAddressTxt());
 				getAddressAddAddressTxt().sendKeys(address);
-				// objiOSGenericMethods.waitForElementVisibility(getMobileNumberTxt());
+				objiOSGenericMethods.waitForElementVisibility(getMobileNumberTxt());
 				getMobileNumberTxt().sendKeys(mobile);
-				// objiOSGenericMethods.waitForElementVisibility(getOfficeCommercialBtn());
+				objiOSGenericMethods.waitForElementVisibility(getOfficeCommercialBtn());
 				if (getOfficeCommercialBtn().isDisplayed()) {
-//					getOfficeCommercialBtn().click();
-					objiOSGenericMethods.clickOnIOSElement(getOfficeCommercialBtn(), "Office/Commercial");
+					getOfficeCommercialBtn().click();
 				}
 				objiOSGenericMethods.swipeDown(100, 1);
-				// objiOSGenericMethods.waitForElementVisibility(getSaveAddressBtn());
+				objiOSGenericMethods.waitForElementVisibility(getSaveAddressBtn());
 				if (getSaveAddressBtn().isDisplayed()) {
-//					getSaveAddressBtn().click();
-					objiOSGenericMethods.clickOnIOSElement(getSaveAddressBtn(), "Save Address");
+					getSaveAddressBtn().click();
 				}
 
-//			}
+			}
 
 		} catch (
 

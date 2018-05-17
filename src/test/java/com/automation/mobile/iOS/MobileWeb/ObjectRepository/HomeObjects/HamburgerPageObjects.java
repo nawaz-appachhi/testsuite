@@ -10,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -19,10 +18,10 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class HamburgerPageObjects {
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public HamburgerPageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public HamburgerPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 
@@ -291,7 +290,7 @@ public class HamburgerPageObjects {
 	 */
 
 	public void clickOnSignUpOption() {
-		objiOSGenericMethods.clickOnIOSElement(getSignUpOption(), "signUp Option");
+		objiOSGenericMethods.clickOnIOSElement(getSignUpOption(), "clicked on signUpOption");
 		System.out.println("Succesfully click on signIn button");
 	}
 
@@ -304,24 +303,24 @@ public class HamburgerPageObjects {
 	}
 
 	public void clickOnGender() {
-		objiOSGenericMethods.clickOnIOSElement(getSignupGenderButton(), "signup Gender Button");
+		objiOSGenericMethods.clickOnIOSElement(getSignupGenderButton(), "clicked on signupGenderButton");
 		System.out.println("Succesfully click gender button ");
 
 	}
 
 	public void clickOnCreateAccountButton() {
-		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "create Account");
+		objiOSGenericMethods.clickOnIOSElement(getCreateAccount(), "clicked on createAccount");
 		System.out.println("Create an account click succesfully");
 	}
 
 	public void clickOnLoginButton() {
-		objiOSGenericMethods.clickOnIOSElement(getSignInButton(), "signIn Button");
+		objiOSGenericMethods.clickOnIOSElement(getSignInButton(), "clicked on signInButton");
 		System.out.println("SignIn button is clicked succesfully ");
 
 	}
 
 	public void clickOnMyAccount() {
-		objiOSGenericMethods.clickOnIOSElement(getMyAccount(), "MyAccount");
+		objiOSGenericMethods.clickOnIOSElement(getMyAccount(), "clicked on MyAccount");
 		System.out.println("My account clicked succesfully ");
 
 	}
@@ -336,7 +335,7 @@ public class HamburgerPageObjects {
 	}
 
 	public void clickOnContactUs(){
-		objiOSGenericMethods.clickOnIOSElement(getcontactUs(), "Contact Us");
+		objiOSGenericMethods.clickOnIOSElement(getcontactUs(), "clicked on ContactUs");
 	}
 
 
@@ -376,7 +375,7 @@ public class HamburgerPageObjects {
 	
 	
 	public void clickOnFacebook() {
-		objiOSGenericMethods.clickOnIOSElement(getFacebookLoginOption(), "FacebookOption");
+		objiOSGenericMethods.clickOnIOSElement(getFacebookLoginOption(), "Clicked on FacebookOption");
 		System.out.println("Succesfully clicked on Facebook button");
 	}
 	
@@ -398,7 +397,7 @@ public class HamburgerPageObjects {
 	 */
 	
 	public void clickOnGoogle() {
-		objiOSGenericMethods.clickOnIOSElement(getGoogleLoginOption(), "Google Option");
+		objiOSGenericMethods.clickOnIOSElement(getGoogleLoginOption(), "Clicked on GoogleOption");
 		System.out.println("Succesfully clicked on Google Button");
 	}
 	

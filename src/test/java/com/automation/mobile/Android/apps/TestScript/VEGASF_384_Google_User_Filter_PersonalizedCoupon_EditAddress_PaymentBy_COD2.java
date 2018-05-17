@@ -8,11 +8,8 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -26,8 +23,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.Payment.NetBankingPag
 import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
-
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -50,13 +45,13 @@ Edit address
 Payment : Online + LP
 */
 
-public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_COD2 extends BaseAndroidTest{
+public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_PaymentBy_COD2 {
 
 	GlobalVariables objGlobalVariables; 
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
 	HomePageObject objHomePageObject;
-	
+	AndroidDriver<AndroidElement> aDriver;
 	MobileDrivers objMobileDrivers;
 	ProductListPageObject objProductListPage;
 	PaymentPageObject objPaymentPageObject;
@@ -67,7 +62,6 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	AddCartPageObject objAddCartPageObject;
 	AndroidGenericMethods objAndroidGenericMethods;
 	NetBankingPageObject objNetBankingPageObject;
-	
 	String testName = "VEGASF_384";
 
 	@Test(priority = 1)
@@ -76,42 +70,44 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 		objLoginPageObject.clickFirstLogin();
 		objLoginPageObject.loginInApp(AndroidGenericMethods.getValueByKey(testName, "UserName") , AndroidGenericMethods.getValueByKey(testName,"Password"));
 		objLoginPageObject.clickLogin();
-//		objLoginPageObject.clickOnGoogleSignUpOption();
-//		objLoginPageObject.clickOnUseAnotherAccount();
-//		objLoginPageObject.EnterGmailEmail(AndroidGenericMethods.getValueByKey(testName, "UserName"));
-//		objLoginPageObject.AppEmailNextButton();
-//		objLoginPageObject.EnterGmailPassword(AndroidGenericMethods.getValueByKey(testName, "Password"));
-//		objLoginPageObject.AppPasswordNextButton();
-//		objLoginPageObject.clickOnAgree();
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		wd.navigate().back();
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-//		objWishlistPageObject.resetWishlist();
-//		objCheckOutPageObject.resetAddress();
+		objWishlistPageObject.resetWishlist();
+		objCheckOutPageObject.resetAddress();
 	}
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("SearchItem");
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
-		
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
+		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
 	public void productDescriptionPage() throws InterruptedException {
 		Reporter.log("productDescriptionPage");
+		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-		objProductDescriptionPageObject.clickGoToBag();
-		//objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
+	     //objAddCartPageObject.clickOnMovetoWishlist();
+        // aDriver.pressKeyCode(AndroidKeyCode.BACK);
+         objProductDescriptionPageObject.clickWishListbtn();
+         objWishlistPageObject.verifyWishlistIcon();
+         objWishlistPageObject.clickMoveToBag();
+         objWishlistPageObject.clickSizeWishList();
+         objWishlistPageObject.clickDoneWishListbtn();
+         objWishlistPageObject.clickBagBtn();
+		//objProductDescriptionPageObject.clickGoToBag();
+	//	objProductListPageObject.clickOkButton(); // no need to apply if reset is applied
 
 	}
 
@@ -119,9 +115,12 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	public void addCartPage_ApplyCoupon() throws InterruptedException {
 		Reporter.log("addCartPage_ApplyCoupon");
 		objAddCartPageObject.verifyShoppingBagTitle();
-		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 1000);
+		//objAndroidGenericMethods.scrollToText(aDriver, "OPTIONS");
+//		objAddCartPageObject.A
+		objAndroidGenericMethods.scrollDown(objAddCartPageObject.getApplyCouponbtn(), 100);
 		objAddCartPageObject.ClickCouponCancelbtn();
-		objAddCartPageObject.getPlaceOrderbtn().click();
+		objAddCartPageObject.clickPlaceOrder();
+		
 
 	}
 
@@ -135,16 +134,16 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
 	@Test(priority = 7)
 	public void Payment() {
 		objPaymentPageObject.verifyPaymentHeader();
-		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
+		try {
+			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
+		} catch (Exception e) {
+			Reporter.log("COD Option is not enabled for the that amoutn");
+		}
 	}
 
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
-			"platform_" })
+	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
-			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
-			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
-			throws Exception {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
 		// create Excel Reference
 		objGlobalVariables = new GlobalVariables();
 		// objExcelUtilities = new ExcelUtils();
@@ -158,47 +157,25 @@ public class VEGASF_384_Google_User_Filter_PersonalizedCoupon_EditAddress_Paymen
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-        {
-        		wd = objMobileDrivers.launchAppAndroid(params);
-        }
-        else
-        {
-        		try {
-					setUpTest(params.get("platform_"));
-					System.out.println("TestDroid Execution Started");
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					System.out.println("Error :: Please change suite parameter to run locally.");
-				}
-        		
-        }
+		aDriver = objMobileDrivers.launchAppAndroid(params);
 		Reporter.log("AppLaunch Successfully");
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// objects are created
-		objLoginPageObject = new LoginPageObject(wd);
-		objHomePageObject = new HomePageObject(wd);
-		objProductListPageObject = new ProductListPageObject(wd);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
-		objCheckOutPageObject = new CheckOutPageObject(wd);
-		objAddCartPageObject = new AddCartPageObject(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		objNetBankingPageObject = new NetBankingPageObject(wd);
-		objPaymentPageObject = new PaymentPageObject(wd);
+		objLoginPageObject = new LoginPageObject(aDriver);
+		objHomePageObject = new HomePageObject(aDriver);
+		objProductListPageObject = new ProductListPageObject(aDriver);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
+		objCheckOutPageObject = new CheckOutPageObject(aDriver);
+		objAddCartPageObject = new AddCartPageObject(aDriver);
+		objWishlistPageObject = new WishListPageObject(aDriver);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		objNetBankingPageObject = new NetBankingPageObject(aDriver);
+		objPaymentPageObject = new PaymentPageObject(aDriver);
 
 	}
 	@AfterTest
 	public void quit() {
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 		System.out.println("=====================VEGASF_384_END=====================");
 	}
 

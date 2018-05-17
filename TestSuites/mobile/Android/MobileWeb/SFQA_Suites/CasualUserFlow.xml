@@ -12,13 +12,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.SFQA_TestScripts.VEGASF_325_GoogleRegistered_User_AddQTY_Click4OfferGoogleRegistered_User_AddQTY_Click4Offer" />
 		</classes>
@@ -31,13 +24,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.SFQA_TestScripts.VEGASF_327_FB_User_Offers_Concious" />
 		</classes>
@@ -50,13 +36,6 @@
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
 		<parameter name="appUrl_" value="https://www.myntra.com" />
 		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="screenshotPath_" value="" />
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
-		<parameter name="platform_" value="ANDROID_mWeb" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
 		<classes>
 			<class name="com.automation.mobile.Android.MobileWeb.SFQA_TestScripts.VEGASF_331_FB_User_Sort_SimilarProduct" />
 		</classes>

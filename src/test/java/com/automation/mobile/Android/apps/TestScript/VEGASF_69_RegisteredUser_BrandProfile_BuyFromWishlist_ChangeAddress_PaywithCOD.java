@@ -9,11 +9,8 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -27,12 +24,11 @@ import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
 
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 
-public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCOD extends BaseAndroidTest {
+public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress_PaywithCOD {
 	// ExcelUtils objExcelUtilities;
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -44,6 +40,7 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 	CheckOutPageObject objCheckOutPageObject;
 	PaymentPageObject objPaymentPageObject;
 	AndroidGenericMethods objAndroidGenericMethods;
+	AndroidDriver<AndroidElement> aDriver;
 	MobileDrivers objMobileDrivers;
 	WishListPageObject objWishListPageObject;
 
@@ -59,22 +56,22 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objLoginPageObject.clickpopUp();
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		wd.navigate().back();
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
  
 	}
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-//		objWishListPageObject.resetWishlist();
-//		objCheckOutPageObject.resetAddress();
+		objWishListPageObject.resetWishlist();
+		objCheckOutPageObject.resetAddress();
 	}
 
 	@Test(priority = 3)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
-		
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
+		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
@@ -83,40 +80,47 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
+		objAndroidGenericMethods.scrollToText(aDriver, "CHECK DELIVERY");
+		objProductDescriptionPageObject.clickEnterPincodebtn();
+		objProductDescriptionPageObject.clickPincodeTxt("560068");
+		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+		objAndroidGenericMethods.scrollToText(aDriver, "+INFO");
 		objProductDescriptionPageObject.clickGoToBag();
+		//objAddCartPageObject.clickShoppingBag();
+		//objProductDescriptionPageObject.clickbagHeaderbtn();
+		objAddCartPageObject.clickOnMovetoWishlist();
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		objProductDescriptionPageObject.clickWishListbtn();
+		objWishListPageObject.verifyWishlistIcon();
+		objWishListPageObject.clickMoveToBag();
+		objWishListPageObject.clickSizeWishList();
+		objWishListPageObject.clickDoneWishListbtn();
+		objWishListPageObject.clickBagBtn();
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void ShoppingBag() throws InterruptedException, InvalidFileFormatException, IOException {
 //		objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();// Assertion
-		objAddCartPageObject.verifyWishlistIcon();
 		objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress(); // Assertion
 		objCheckOutPageObject.editAddress();
 		objCheckOutPageObject.clickContinue();
 	}
 
-	@Test(priority = 6)
-	public void paymentPage() throws Exception {
-	objPaymentPageObject.verifyPaymentHeader();
-	objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
-	objPaymentPageObject.enterCardNumber(AndroidGenericMethods.getValueByKey(testName, "CardNumber"));
-	objPaymentPageObject.enterNameOnCard(AndroidGenericMethods.getValueByKey(testName, "NameOnCard"));
-	objPaymentPageObject.clickExpiryMonts();
-	objPaymentPageObject.clickExpiryYears();
-	objPaymentPageObject.enterCVVNumber(AndroidGenericMethods.getValueByKey(testName, "CVVNumber"));
-	objPaymentPageObject.clickPayNowBtn();
+	@Test(priority = 7)
+	public void Payment() throws InterruptedException {
+		objPaymentPageObject.verifyPaymentHeader(); // Assertion
+		try {
+			objPaymentPageObject.selectPaymentOption("Cash/Card On Delivery");
+		} catch (Exception e) {
+			Reporter.log("COD Option is not enabled for the that amoutn");
+		}
+	}
 
-}
-
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
-			"platform_" })
+	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
-			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
-			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
-			throws Exception {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -127,43 +131,21 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-        {
-        		wd = objMobileDrivers.launchAppAndroid(params);
-        }
-        else
-        {
-        		try {
-					setUpTest(params.get("platform_"));
-					System.out.println("TestDroid Execution Started");
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					System.out.println("Error :: Please change suite parameter to run locally.");
-				}
-        		
-        }
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objLoginPageObject = new LoginPageObject(wd);
-		objHomePageObject = new HomePageObject(wd);
-		objProductListPageObject = new ProductListPageObject(wd);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
-		objAddCartPageObject = new AddCartPageObject(wd);
-		objCheckOutPageObject = new CheckOutPageObject(wd);
-		objPaymentPageObject = new PaymentPageObject(wd);
-		objAndroidGenericMethods =  new AndroidGenericMethods(wd);
-		objWishListPageObject= new WishListPageObject(wd);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objLoginPageObject = new LoginPageObject(aDriver);
+		objHomePageObject = new HomePageObject(aDriver);
+		objProductListPageObject = new ProductListPageObject(aDriver);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
+		objAddCartPageObject = new AddCartPageObject(aDriver);
+		objCheckOutPageObject = new CheckOutPageObject(aDriver);
+		objPaymentPageObject = new PaymentPageObject(aDriver);
+		objAndroidGenericMethods =  new AndroidGenericMethods(aDriver);
+		objWishListPageObject= new WishListPageObject(aDriver);
 	}
 	@AfterTest
 	public void quit() {
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 		System.out.println("=====================VEGASF_69_END=====================");
 
 	}

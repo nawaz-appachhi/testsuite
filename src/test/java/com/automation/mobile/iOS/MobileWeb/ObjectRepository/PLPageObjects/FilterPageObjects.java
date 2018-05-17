@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -18,10 +16,10 @@ import io.appium.java_client.pagefactory.iOSFindAll;
 
 public class FilterPageObjects {
 	
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public FilterPageObjects(AppiumDriver<MobileElement> iDriver) {
+	public FilterPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 
@@ -220,13 +218,13 @@ public class FilterPageObjects {
 	public void clickOnSortButton() {
 		objiOSGenericMethods.waitDriver(getSortButton(),"Sort Button");
 		if (getSortButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSortButton(), "Sort Button");
+			objiOSGenericMethods.clickOnIOSElement(getSortButton(), "clicked on SortButton");
 			System.out.println("User has clicked on sort");
 		}
 	}
 
 	public void clickOnDiscountButton() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountButton(), "Discount Button");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountButton(), "clicked on DiscountButton");
 	}
 
 	public void clickOnPriceHightoLow() {
@@ -242,7 +240,7 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnPopularity() {
-		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "Popularity");
+		objiOSGenericMethods.clickOnIOSElement(getPopularity(), "clicked on Popularity");
 	}
 
 	/**
@@ -256,7 +254,7 @@ public class FilterPageObjects {
 			objiOSGenericMethods.waitDriver(getFilterButton(),"Filter Button");
 			if (getFilterButton().isDisplayed()) {
 			//	objiOSGenericMethods.click(getFilterButton());
-				objiOSGenericMethods.clickOnIOSElement(getFilterButton(), "FilterButton");
+				objiOSGenericMethods.clickOnIOSElement(getFilterButton(), "clicked on FilterButton");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -265,7 +263,7 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnDiscountButtonInFilter() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountButtonInFilter(), "Discount Button In Filter");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountButtonInFilter(), "clicked on DiscountButtonInFilter");
 	}
 
 	public void clickOnFilterOption() {
@@ -273,13 +271,13 @@ public class FilterPageObjects {
 	}
 
 	public void clickOnApplyButton() {
-		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "ApplyButton");
+		objiOSGenericMethods.clickOnIOSElement(getApplyButton(), "clicked on ApplyButton");
 	}
 
 	public void clickOnDiscount() {
 
 		if (Discount.isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getDiscount(), "Discount");
+			objiOSGenericMethods.clickOnIOSElement(getDiscount(), "clicked on Discount");
 		}
 	}
 	
@@ -287,7 +285,7 @@ public class FilterPageObjects {
 	public void clickOnPrice() {
 
 		if (Price.isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getPrice(), "Price");
+			objiOSGenericMethods.clickOnIOSElement(getPrice(), "clicked on Price");
 		}
 	}
 	/*

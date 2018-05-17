@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -19,20 +16,20 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class PaymentPageObject {
 	AndroidGenericMethods objAndroidGenericMethods;
-	private AppiumDriver<MobileElement> aDriver;
+	private AndroidDriver<AndroidElement> aDriver;
 
-	public PaymentPageObject(AppiumDriver<MobileElement> aDriver) {
+	public PaymentPageObject(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
-		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		this.aDriver = aDriver;
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 	}
 	String ORDER_NUMBER;
 
-	@FindBy(xpath = "//*[@index='0' and @content-desc='Change Address']")
+	@FindBy(xpath = "//android.view.View[@index='0' and @content-desc='Change Address']")
 	public AndroidElement ChangeAddress;
-	@FindBy(xpath = "//android.widget.Button[@index='14' and @content-desc='PAY NOW']")
+	@FindBy(xpath = "// android.widget.Button[@index='14' and @content-desc='PAY NOW']")
 	public AndroidElement PayNow;
-	@FindBy(xpath = "//*[@index='9' and @content-desc='DeliveryFREE']")
+	@FindBy(xpath = "// android.view.View[@index='9' and @content-desc='DeliveryFREE']")
 	public AndroidElement FreeDelivery;
 	/**
 	 * Object identified for the payment options displayed in the payment page;
@@ -240,16 +237,12 @@ public class PaymentPageObject {
 		System.out.println("payment options size is" + options.size() );
 		for (AndroidElement option: options) {
 			String optionValue= option.getText();
-			String COD = "Not available for this order. Why?";
 			System.out.println("payment options available are" + optionValue );
 			if (optionValue.endsWith(paymentOption)) {
 			//	objAndroidGenericMethods.clickOnAndroidElementforwebVIew(option, paymentOption);
 				objAndroidGenericMethods.scrollDown(option, 100);
 				break; 
-			}else if (optionValue.endsWith(COD)){
-				System.out.println("wrong input or cash on delivery is not available");
-			}
-			else {
+			}else {
 				System.out.println("wrong input");
 			}
 		}
@@ -285,14 +278,14 @@ public class PaymentPageObject {
 		Select oSelect = new Select(expireMonth);
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(expireMonth, "expireMonth");
 		oSelect.selectByValue("08");
-		((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK);  		
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);  		
 	}
 
 	public void clickExpiryYears() throws InterruptedException {
 		Select oselect = new Select(expiryYear);
 		objAndroidGenericMethods.clickOnAndroidElementforwebVIew(expiryYear, "expiryYear");
 		oselect.selectByValue("26");
-		((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK); 	
+		aDriver.pressKeyCode(AndroidKeyCode.BACK); 	
 	}
 	
 	public void enterCVVNumber(String cvvno) {
@@ -307,7 +300,7 @@ public class PaymentPageObject {
 	 * Modified reason:copied from the phonepe object 
 	 */
 	
-	@FindBy(xpath="//*[@text='Pay by PhonePe' or @resource-id='tab_phonepe' or @content-desc='Pay by PhonePe']")
+	@FindBy(xpath="android.view.View[@text='Pay by PhonePe' or @resource-id='tab_phonepe' or @content-desc='Pay by PhonePe']")
 	public AndroidElement phonepeHeader;
 	
 	public AndroidElement getPhonepeHeader() {
@@ -317,9 +310,9 @@ public class PaymentPageObject {
 		objAndroidGenericMethods.VerifyTwoString(getPhonepeHeader(),"Pay by PhonePe");
 	}
 	
-	@FindBy(xpath = "//*[@content-desc='SELECT Gift Card']")
+	@FindBy(xpath = "//android.view.View[@content-desc='SELECT Gift Card']")
 	public AndroidElement GIFTCARD;
-	@FindBy(xpath = "//*[@content-desc='Gift Card Number']")
+	@FindBy(xpath = "//android.view.View[@content-desc='Gift Card Number']")
 	public AndroidElement GiftCardNumber;
 
 	
@@ -339,7 +332,7 @@ public class PaymentPageObject {
 	}
 	
 	/******** Assertion ***************/
-	@FindBy(xpath="//*[@text='Credit/Debit Card' or @content-desc='Credit/Debit Card']")
+	@FindBy(xpath="//android.view.View[@text='Credit/Debit Card' or @content-desc='Credit/Debit Card']")
 	public AndroidElement CreditdebitHeader;
 	
 	public AndroidElement getCreditdebitHeader() {

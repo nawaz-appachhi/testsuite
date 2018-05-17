@@ -10,7 +10,6 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -18,12 +17,12 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class PLPageObjects {
 
-	public PLPageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public PLPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
 	@FindAll({ @FindBy(xpath = "//ul[@class='list']/li/div/div/a/div/div/picture[@class='img-responsive']/img") })
@@ -111,19 +110,19 @@ public class PLPageObjects {
 	}
 
 	public void clickOnViewDetails() {
-		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "ViewDetails");
+		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "clicked on ViewDetails");
 	}
 
 	public void clickOnsimilarProductofroadstar() {
-		objiOSGenericMethods.clickOnIOSElement(getSimilarProductofroadstar(), "Similar Product of roadstar");
+		objiOSGenericMethods.clickOnIOSElement(getSimilarProductofroadstar(), "clicked on SimilarProductofroadstar");
 	}
 
 	public void clickOndiscountPercentage() {
-		objiOSGenericMethods.clickOnIOSElement(getDiscountPercentage(), "Discount Percentage");
+		objiOSGenericMethods.clickOnIOSElement(getDiscountPercentage(), "clicked on DiscountPercentage");
 	}
 	
 	public void clickToSaveToWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getSaveSecondProductToWishlist(), " Wishlist Icon");
+		objiOSGenericMethods.clickOnIOSElement(getSaveSecondProductToWishlist(), "clicked on Wishlist Icon");
 	}
 	
 	public void VerifyProductDetails()

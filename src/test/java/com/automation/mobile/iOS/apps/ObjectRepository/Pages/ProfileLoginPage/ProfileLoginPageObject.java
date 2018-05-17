@@ -17,9 +17,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
@@ -34,30 +31,28 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class ProfileLoginPageObject {
 	iOSGenericMethods objiOSGenericMethods;
-	AppiumDriver<MobileElement> iDriver;
+	IOSDriver<IOSElement> iDriver;
 
-	public ProfileLoginPageObject(AppiumDriver<MobileElement> iDriver) {
+	public ProfileLoginPageObject(IOSDriver<IOSElement> iDriver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 
+
 	}
 
-	//XCUIElementTypeButton[@name=\"Profile\"]")
-	
-	@iOSFindBy(xpath = "//XCUIElementTypeButton[@name='Profile']")
+	@iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeButton[`name == \"Profile\"`]")
 	public IOSElement profileBtn;
-	
-	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"LOG IN\"]")
+	@FindBy(xpath = "//XCUIElementTypeOther[@name=\"LOG IN\"]")
 	public IOSElement login;
 
-	@iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Email address\"]")
+	@FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Email address\"]")
 	public IOSElement emailFieldTxt;
 
-	@iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Password\"]")
+	@FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Password\"]")
 	public IOSElement passwordFieldTxt;
 
-	@iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"LOG IN\"]")
+	@FindBy(xpath = "//XCUIElementTypeButton[@name=\"LOG IN\"]")
 	public IOSElement loginBtn;
 
 	@iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"LOG OUT\"])[1]")
@@ -65,16 +60,6 @@ public class ProfileLoginPageObject {
 
 	@iOSFindBy(accessibility = "Orders")
 	public IOSElement orderTab;
-
-	/**
-	 * @author 300021275 To skip on boarding screen
-	 * @param iDriver
-	 * @param duration
-	 * @param noOfSwipes
-	 */
-
-	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name='WELCOME! ']/XCUIElementTypeOther/XCUIElementTypeOther")
-	public IOSElement onBoardingCrossButton;
 
 	public void swipeDown(IOSDriver<IOSElement> iDriver, int duration, int noOfSwipes) {
 
@@ -88,6 +73,8 @@ public class ProfileLoginPageObject {
 		}
 	}
 
+	
+
 	public void fluentWait(WebElement ele) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(iDriver).withTimeout(30, TimeUnit.SECONDS)
 				.pollingEvery(10, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
@@ -99,6 +86,7 @@ public class ProfileLoginPageObject {
 			}
 		});
 	}
+
 
 	/**
 	 * @author 300019221 / Aravindanath Address objects
@@ -214,11 +202,6 @@ public class ProfileLoginPageObject {
 		return continueButton;
 	}
 
-	public IOSElement getOnBoardingCrossButton() {
-		objiOSGenericMethods.CheckIOSElementFound(onBoardingCrossButton, "onBoardingCrossButton");
-		return onBoardingCrossButton;
-	}
-
 	/**
 	 * @author 300019221 / Aravindanath created new getter
 	 * @return
@@ -244,12 +227,12 @@ public class ProfileLoginPageObject {
 	 */
 
 	public void clickOnProfileButton() throws InterruptedException {
-		// objiOSGenericMethods.waitForElementVisibility(getProfile());
-		// if (getProfile().isDisplayed()) {
-		// objiOSGenericMethods.acceptAlert();
-		objiOSGenericMethods.clickOnIOSElement(getProfile(), "Profile Button");
-		// objiOSGenericMethods.acceptAlert();
-		// }
+		objiOSGenericMethods.waitForElementVisibility(getProfile());
+		if (getProfile().isDisplayed()) {
+			// objiOSGenericMethods.acceptAlert();
+			objiOSGenericMethods.clickOnIOSElement(getProfile(), "Successfully click on profile button");
+			// objiOSGenericMethods.acceptAlert();
+		}
 	}
 
 	/**
@@ -257,9 +240,9 @@ public class ProfileLoginPageObject {
 	 */
 	public void clickOnLogin() throws InterruptedException {
 		try {
-			// if (getLogin().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getLogin(), "Login Button");
-			// }
+			if (getLogin().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getLogin(), "Successfully click on login button");
+			}
 		} catch (Exception e) {
 
 			System.out.println("User is already log in! hence no need to login");
@@ -276,10 +259,10 @@ public class ProfileLoginPageObject {
 
 	public void clickOnLogOut() {
 		try {
-			// if (getLogout().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getLogout(), "Logout button");
-			System.err.println("User has logged out!");
-			// }
+			if (getLogout().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getLogout(), "Successfully click on Logout button");
+				System.err.println("User has logged out!");
+			}
 		} catch (Exception e) {
 			System.out.println("User is not logged in!");
 		}
@@ -288,14 +271,14 @@ public class ProfileLoginPageObject {
 
 	public void loginInApp(String em, String pw) {
 		try {
-			// if (emailFieldTxt.isDisplayed()) {
-			getEmailField().sendKeys(em);
-			Reporter.log("Email succesfully entered");
-			// }
-			// if (passwordFieldTxt.isDisplayed()) {
-			getPasswordField().sendKeys(pw);
-			Reporter.log("Password succesfully entered");
-			// }
+			if (emailFieldTxt.isDisplayed()) {
+				emailFieldTxt.sendKeys(em);
+				Reporter.log("Email succesfully entered");
+			}
+			if (passwordFieldTxt.isDisplayed()) {
+				passwordFieldTxt.sendKeys(pw);
+				Reporter.log("Password succesfully entered");
+			}
 		} catch (Exception e) {
 		}
 
@@ -310,9 +293,9 @@ public class ProfileLoginPageObject {
 
 	public void clickOnLoginButton() {
 		try {
-			// if (getLoginButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getLoginButton(), "Login Button");
-			// }
+			if (getLoginButton().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getLoginButton(), "Successfully click on login button button");
+			}
 		} catch (Exception e) {
 			System.out.println("User is already log in!");
 		}
@@ -326,11 +309,11 @@ public class ProfileLoginPageObject {
 
 	public void clickOnFaceBook() {
 		try {
-			// if (getFaceBookButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getFaceBookButton(), "Facebook Button");
-			// objiOSGenericMethods.waitForElementVisibility(getContinueButton());
-			objiOSGenericMethods.clickOnIOSElement(getContinueButton(), "Continue Button");
-			// }
+			if (getFaceBookButton().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getFaceBookButton(), "Successfully clicked on Facebook button");
+				objiOSGenericMethods.waitForElementVisibility(getContinueButton());
+				objiOSGenericMethods.clickOnIOSElement(getContinueButton(), "Successfully clicked on continue button");
+			}
 
 		} catch (Exception e) {
 			System.out.println("Facebook button is not displayed!");
@@ -344,12 +327,11 @@ public class ProfileLoginPageObject {
 	 */
 	public void clickOnContinueFB() {
 		try {
-			// objiOSGenericMethods.waitForElementVisibility(getContinueButtonOnFb());
-			// if (getContinueButtonOnFb().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getContinueButtonOnFb(), "Continue Button");
-			// objiOSGenericMethods.click(getContinueButtonOnFb());
-			System.out.println("Continue button is displayed!");
-			// }
+			objiOSGenericMethods.waitForElementVisibility(getContinueButtonOnFb());
+			if (getContinueButtonOnFb().isDisplayed()) {
+				objiOSGenericMethods.click(getContinueButtonOnFb());
+				System.out.println("Continue button is displayed!");
+			}
 
 		} catch (Exception e) {
 			System.out.println("Continue button is not displayed!");
@@ -377,32 +359,28 @@ public class ProfileLoginPageObject {
 
 	public void removeAddress() throws InterruptedException {
 		if (getSingleAddressTab().isDisplayed()) {
-			// getSingleAddressTab().click();
-			objiOSGenericMethods.clickOnIOSElement(getSingleAddressTab(), "Single Address Tab");
+			getSingleAddressTab().click();
 		} else if (getAddressTab().isDisplayed()) {
-			// getAddressTab().click();
-			objiOSGenericMethods.clickOnIOSElement(getAddressTab(), "Address Tab");
+			getAddressTab().click();
 		}
 		try {
 			objiOSGenericMethods.swipeDown(100, 1);
-			objiOSGenericMethods.waitForElementVisibility(getRemoveAddressTab());
-			// if (getRemoveAddressTab().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getRemoveAddressTab(), "Remove Address Button");
-			// getRemoveAddressTab().click();
-			objiOSGenericMethods.clickOnIOSElement(getDeleteButton(), "Delete Button");
-			// getDeleteButton().click();
-			objiOSGenericMethods.clickOnIOSElement(getBackButtonOnAddress(), "Back Button");
-			// getBackButtonOnAddress().click();
-			// }
+			// objiOSGenericMethods.waitForElementVisibility(getRemoveAddressTab());
+			if (getRemoveAddressTab().isDisplayed()) {
+				getRemoveAddressTab().click();
+				getDeleteButton().click();
+				getBackButtonOnAddress().click();
+			}
 		} catch (Exception e) {
 			if (getBackButtonOnAddress().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getBackButtonOnAddress(), "Back Button");
-				// getBackButtonOnAddress().click();
+				getBackButtonOnAddress().click();
 			}
 			System.out.println("No address to remove!");
 		}
 
 	}
+
+	
 
 	/**
 	 * @author 300019221 / Aravindanath This method will login to facebook
@@ -431,8 +409,5 @@ public class ProfileLoginPageObject {
 
 	}
 
-	public void clickOnOnBoardingCrossButton() {
-		objiOSGenericMethods.clickOnIOSElement(getOnBoardingCrossButton(), "OnBoarding Screen Cross button");
-	}
-
+	
 }

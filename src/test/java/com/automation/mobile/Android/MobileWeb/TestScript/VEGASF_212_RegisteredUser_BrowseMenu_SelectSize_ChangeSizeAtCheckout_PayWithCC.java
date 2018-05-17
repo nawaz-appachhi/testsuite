@@ -1,6 +1,7 @@
 package com.automation.mobile.Android.MobileWeb.TestScript;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -9,11 +10,9 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -34,6 +33,9 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.PLPageObjects.PL
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
 /**
  * @author 300019227 - anu TEST STEPS 1. Login(Email registered user) 2. Reset
  *         Cart, Wishlist and Address Pages 3. Search (using menu item e.g. Men
@@ -41,7 +43,8 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishLis
  *         5. Select a size and Add the item to Bag 6. Add New Address and
  *         Verify 'View Details' link 7. Payment through Credit/Debit card
  */
-public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC extends BaseAndroidTest {
+public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckout_PayWithCC {
+
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	AddressPageObjects objAddressPageObjects;
@@ -60,12 +63,16 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	HomePageObjects objHomePageObjects;
 	PLPageObjects objPLPageObjects;
 	WishListPageObject objWishlistPageObject;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
+
 	String testName = "VEGASF_212";
 
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
+	@Parameters({ "browserName_", "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
+	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_,
+			String appUrl_, String screenshotPath_) throws MalformedURLException {
+
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -77,37 +84,24 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-        params.put("platform_", platform_);
-		 if(!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppAndroid(params);
-		} else {
-			try {
-				setUpTest(params.get("platform_"));
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-		}
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(wd);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
-		objBagPageObjects = new BagPageObjects(wd);
-		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(wd);
-		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(wd);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
-		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(wd);
-		objMenuPageObjects = new MenuPageObjects(wd);
-		objPaymentPageObjects = new PaymentPageObjects(wd);
-		objFilterPageObjects = new FilterPageObjects(wd);
-		objPDPageObject = new PDPageObjects(wd);
-		objHambergerPageObjects = new HamburgerPageObjects(wd);
-		objHomePageObjects = new HomePageObjects(wd);
-		objPLPageObjects = new PLPageObjects(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(aDriver);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(aDriver);
+		objBagPageObjects = new BagPageObjects(aDriver);
+		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(aDriver);
+		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(aDriver);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(aDriver);
+		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(aDriver);
+		objMenuPageObjects = new MenuPageObjects(aDriver);
+		objPaymentPageObjects = new PaymentPageObjects(aDriver);
+		objFilterPageObjects = new FilterPageObjects(aDriver);
+		objPDPageObject = new PDPageObjects(aDriver);
+		objHambergerPageObjects = new HamburgerPageObjects(aDriver);
+		objHomePageObjects = new HomePageObjects(aDriver);
+		objPLPageObjects = new PLPageObjects(aDriver);
+		objWishlistPageObject = new WishListPageObject(aDriver);
 	}
 
 	@Test(priority = 1)
@@ -118,6 +112,7 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objHambergerPageObjects.enterEmailAddress(objAndroidGenericMethods.getValueByKeyWeb(testName, "UserName"),
 				objAndroidGenericMethods.getValueByKeyWeb(testName, "Password"));
 		objAndroidGenericMethods.scrollDown(objHambergerPageObjects.getSignInButton(), 10);
+
 	}
 
 	@Test(priority = 2)
@@ -128,40 +123,36 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	}
 
 	@Test(priority = 3)
-	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
-		objHomePageObjects.clickOnSearchIcon();
-		objHomePageObjects.enterSearchItem(objAndroidGenericMethods.getValueByKeyWeb(testName, "productcode"));
-		// objHomePageObjects.clickOnHamburgerButton();
-		// objMenCategoriesPageObjects.clickOnmen();
-		// objMenCategoriesPageObjects.clickOntopWare();
-		// objMenCategoriesPageObjects.clickOntShirts();
+	public void SearchItem() throws InterruptedException {
+		objHomePageObjects.clickOnHamburgerButton();
+		objMenCategoriesPageObjects.clickOnmen();
+		objMenCategoriesPageObjects.clickOntopWare();
+		objMenCategoriesPageObjects.clickOntShirts();
 	}
 
-	/*
-	 * @Test(priority = 4) public void FilterProducts() throws InterruptedException
-	 * { objFilterPageObjects.clickOnFilterButton();
-	 * objFilterPageObjects.clickOnDiscount();
-	 * objFilterPageObjects.clickOnFirstDiscountOption();
-	 * objFilterPageObjects.clickOnApplyButton(); }
-	 * 
-	 * @Test(priority = 5) public void ListPageToPDP() throws InterruptedException {
-	 * objPDPageObject.clickFirstProductSearchResult(); }
-	 */
-	@Test(priority = 6)
-	public void AddToBag() throws InterruptedException {
+	@Test(priority = 4)
+	public void FilterProducts() throws InterruptedException {
+		objFilterPageObjects.clickOnFilterButton();
+		objFilterPageObjects.clickOnDiscount();
+		objFilterPageObjects.clickOnFirstDiscountOption();
+		objFilterPageObjects.clickOnApplyButton();
+	}
+
+	@Test(priority = 5)
+	public void ListPageToPDP() throws InterruptedException {
+		objPDPageObject.clickFirstProductSearchResult();
 		objPDPageObject.VerifyProductTitle();
 		objPDPageObject.imageVerification();
 		objPDPageObject.assertProductPrice();
+	}
+
+	@Test(priority = 6)
+	public void AddToBag() throws InterruptedException {
 		objPDPageObject.clickOnAddtoBag();
 		objPDPageObject.setFirstAvailableSize();
 		objPDPageObject.clickOnConfirmButton();
 		objPDPageObject.clickOngoToBag();
 		objBagPageObjects.changeSize();
-		objBagPageObjects.assertBagPageTitle("Bag");
-		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.getProductImage();
-		objBagPageObjects.VerfiyProductIsAddedToCart();
-		objBagPageObjects.VerifySellingPrice();
 	}
 
 	@Test(priority = 7)
@@ -170,7 +161,9 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	}
 
 	@Test(priority = 8)
-	public void AddNewAddress_Office() throws InvalidFileFormatException, IOException {
+	public void AddNewAddress_Office() throws InvalidFileFormatException, IOException
+
+	{
 		Reporter.log("AddNew Address Test Started");
 		objAddressPageObjects.ClickOnPincodeAddress();
 		objAddressPageObjects.enterPincone(objAndroidGenericMethods.getValueByKeyWeb(testName, "Pincode"));
@@ -195,22 +188,10 @@ public class VEGASF_212_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objPaymentPageObjects.clickOnCreditCard();
 	}
 
-	@Test(priority = 12)
-	public void LogOut() throws InterruptedException {
-		Reporter.log("Logout");
-		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
-		objHambergerPageObjects.logoutAndVerifySessionId();
-	}
-
 	@AfterTest
 	public void afterTest() {
 		System.out.println("=====================VEGASF_212_END=====================");
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 	}
+
 }

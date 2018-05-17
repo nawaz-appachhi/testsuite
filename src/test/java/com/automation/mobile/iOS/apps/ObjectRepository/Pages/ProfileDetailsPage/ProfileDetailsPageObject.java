@@ -18,9 +18,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
@@ -37,9 +34,9 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class ProfileDetailsPageObject {
 	iOSGenericMethods objiOSGenericMethods;
-	AppiumDriver<MobileElement> iDriver;
+	IOSDriver<IOSElement> iDriver;
 
-	public ProfileDetailsPageObject(AppiumDriver<MobileElement> iDriver) {
+	public ProfileDetailsPageObject(IOSDriver<IOSElement> iDriver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
@@ -78,20 +75,23 @@ public class ProfileDetailsPageObject {
 	 */
 	@iOSFindBy(accessibility = "SAVE DETAILS")
 	public IOSElement saveDetails;
-
+	
 	/**
 	 * @author 300021275 Objects Created By - Lata
 	 * 
 	 */
 	@iOSFindBy(accessibility = "PROFILE DETAILS")
 	public IOSElement profileDetailsPageTitle;
-
+	
+	
 	/**
 	 * @author 300019221 object created by Aravindanath
 	 */
 	@iOSFindBy(className = "XCUIElementTypeOther")
 	public List<IOSElement> otpText;
-
+	
+	
+	
 	/**
 	 * @author 300021275 Objects Created By - Lata
 	 * 
@@ -140,7 +140,6 @@ public class ProfileDetailsPageObject {
 		objiOSGenericMethods.CheckIOSElementFound(saveDetails, "saveDetails");
 		return saveDetails;
 	}
-
 	/**
 	 * @author 300021275 Getters created by - Lata
 	 */
@@ -148,7 +147,6 @@ public class ProfileDetailsPageObject {
 		objiOSGenericMethods.CheckIOSElementFound(profileDetailsPageTitle, "profileDetailsPageTitle");
 		return profileDetailsPageTitle;
 	}
-
 	/**
 	 * @author 300021275 Getters created by - Lata
 	 */
@@ -156,15 +154,15 @@ public class ProfileDetailsPageObject {
 		objiOSGenericMethods.CheckIOSElementFound(location, "location");
 		return location;
 	}
-
 	/**
 	 * @author 300021275 This method is used to click on Profile Details button
 	 */
 	public void clickOnProfileDetails() {
 		try {
-			// if (getProfileDetails().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getProfileDetails(), "Profile Details Button");
-			// }
+			if (getProfileDetails().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getProfileDetails(),
+						"Successfully click on ProfileDetails button");
+			}
 		} catch (Exception e) {
 			System.out.println("Unable to click on Profile Details!");
 		}
@@ -182,8 +180,7 @@ public class ProfileDetailsPageObject {
 	public void enterMobileNumber(String mobileNumber) {
 		try {
 			if (getMobileNumberField().isDisplayed()) {
-				// getMobileNumberField().click();
-				objiOSGenericMethods.clickOnIOSElement(getMobileNumberField(), "Mobile Number Button");
+				getMobileNumberField().click();
 				String number = mobileNumberField.getText();
 				int maxChar = number.length();
 				for (int i = 0; i < maxChar; i++) {
@@ -191,8 +188,7 @@ public class ProfileDetailsPageObject {
 				}
 				getMobileNumberField().sendKeys(mobileNumber);
 				Reporter.log("Mobile number succesfully entered");
-				// getMobileNumberField().click();
-				objiOSGenericMethods.clickOnIOSElement(getMobileNumberField(), "Mobile Number Button");
+				getMobileNumberField().click();
 			}
 
 		} catch (Exception e) {
@@ -205,9 +201,9 @@ public class ProfileDetailsPageObject {
 	 */
 	public void clickOnVerifyButton() {
 		try {
-			// if (getVerifyButton().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getVerifyButton(), "Verify Button");
-			// }
+			if (getVerifyButton().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getVerifyButton(), "Successfully click on verify button");
+			}
 		} catch (Exception e) {
 			System.out.println("User is already verified!");
 		}
@@ -218,41 +214,38 @@ public class ProfileDetailsPageObject {
 	 */
 	public void clickOnSaveDetails() {
 		try {
-			// if (getSaveDetails().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getSaveDetails(), "Save Details Button");
-			// }
+			if (getSaveDetails().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getSaveDetails(), "Successfully click on Save Details button");
+			}
 		} catch (Exception e) {
 			System.out.println("Unable to click on Save Button!");
 		}
 	}
-
 	/**
-	 * @author 300021275 - Lata This method is used to click on Profile details page
-	 *         name
+	 * @author 300021275 - Lata This method is used to click on Profile details page name
 	 */
 	public void clickOnProfileDetailsPageTitle() {
 		try {
-			// if (getProfileDetailsPageTitle().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getProfileDetailsPageTitle(), "Profile Details Page Title");
-			// }
+			if (getProfileDetailsPageTitle().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getProfileDetailsPageTitle(), "Successfully click on Profile Details Page Title");
+			}
 		} catch (Exception e) {
 			System.out.println("Unable to click on Profile Details Page Title!");
 		}
 	}
-
 	/**
 	 * @author 300021275 - Lata This method is used to click on Location button
 	 */
 	public void clickOnLocation() {
 		try {
-			// if (getLocation().isDisplayed()) {
-			objiOSGenericMethods.clickOnIOSElement(getLocation(), "Location");
-			// }
+			if (getLocation().isDisplayed()) {
+				objiOSGenericMethods.clickOnIOSElement(getLocation(), "Successfully click on Location");
+			}
 		} catch (Exception e) {
 			System.out.println("Unable to click on Location!");
 		}
 	}
-
+	
 	/**
 	 * @author 300019221
 	 */

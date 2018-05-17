@@ -11,24 +11,20 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.android.StartsActivity;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class HamburgerPageObject {
-	public AppiumDriver<MobileElement> aDriver;
+	public AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 
 	/**
 	 * Modified By Aishurya: aDriver is throwing null pointer
 	 */
-	public HamburgerPageObject(AppiumDriver<MobileElement> aDriver) {
+	public HamburgerPageObject(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		this.aDriver = aDriver;
@@ -42,7 +38,9 @@ public class HamburgerPageObject {
 	@FindBy(xpath = "//android.widget.TextView[@text='CONTACT US']")
 	public AndroidElement contactUsbtn;
 
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	// @FindBy(xpath = "//android.widget.TextView[@text = 'î—’'and
+	// @index='0']")
+	@FindBy(xpath = "//android.view.ViewGroup[@index='2']/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement humburgerbtn;
 
 	/**
@@ -61,7 +59,7 @@ public class HamburgerPageObject {
 	 * @ModifiedBy:-Rakesh Modified reason: changed the xpath as it contianed ? in
 	 *                     text.
 	 */
-	@FindBy(xpath = "//*[@content-desc='leftElement' or @text='leftElement']")
+	@FindBy(xpath = "//android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
 	public AndroidElement myAccountClosebtn;
 
 	/**
@@ -479,16 +477,16 @@ public class HamburgerPageObject {
 	 * Modified By Aishurya: Made xpath compatible for all device msg application
 	 */
 	public String readOtpFromInbox(String msgAppPackage,String msgAppActivity) throws InterruptedException {
-		((StartsActivity) aDriver).startActivity(new Activity(msgAppPackage, msgAppActivity));
+		aDriver.startActivity(new Activity(msgAppPackage, msgAppActivity));
 //		aDriver.pressKeyCode(AndroidKeyCode.BACK);
-		List<MobileElement> msgThread=aDriver.findElements(By.xpath("//android.widget.TextView[contains(@text,'-MYNTRA') or contains(@text,'-myntra')]"));
+		List<AndroidElement> msgThread=aDriver.findElements(By.xpath("//android.widget.TextView[contains(@text,'-MYNTRA') or contains(@text,'-myntra')]"));
 		msgThread.get(0).click();
-		List<MobileElement> msgList = aDriver.findElements(By.xpath("//android.widget.ListView//android.widget.TextView[contains(@text,'[#]')]"));
+		List<AndroidElement> msgList = aDriver.findElements(By.xpath("//android.widget.ListView//android.widget.TextView[contains(@text,'[#]')]"));
 		String msg = msgList.get(msgList.size() - 1).getText();
 		String otp = msg.split("Use")[1].split(" ")[1].trim();
 		System.out.println("After trim " + otp);
-		((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK);
-		((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACK);
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 		return otp;
 	}
 
@@ -537,10 +535,10 @@ public class HamburgerPageObject {
 		if (!verified) {
 			objAndroidGenericMethods.clickOnAndroidElement(getOtpFieldOne(), "To Enter Otp, OTP field ");
 			try {
-				((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACKSPACE);
-				((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACKSPACE);
-				((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACKSPACE);
-				((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.BACKSPACE);
+				aDriver.pressKeyCode(AndroidKeyCode.BACKSPACE);
+				aDriver.pressKeyCode(AndroidKeyCode.BACKSPACE);
+				aDriver.pressKeyCode(AndroidKeyCode.BACKSPACE);
+				aDriver.pressKeyCode(AndroidKeyCode.BACKSPACE);
 			} catch (Exception e) {
 
 			}
@@ -560,25 +558,25 @@ public class HamburgerPageObject {
 	 */
 	public void processOtp(int otp) {
 		if (otp == 0) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_0);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_0);
 		} else if (otp == 1) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_1);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_1);
 		} else if (otp == 2) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_2);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_2);
 		} else if (otp == 3) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_3);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_3);
 		} else if (otp == 4) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_4);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_4);
 		} else if (otp == 5) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_5);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_5);
 		} else if (otp == 6) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_6);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_6);
 		} else if (otp == 7) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_7);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
 		} else if (otp == 8) {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_8);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_8);
 		} else {
-			((PressesKeyCode) aDriver).pressKeyCode(AndroidKeyCode.KEYCODE_9);
+			aDriver.pressKeyCode(AndroidKeyCode.KEYCODE_9);
 		}
 	}
 

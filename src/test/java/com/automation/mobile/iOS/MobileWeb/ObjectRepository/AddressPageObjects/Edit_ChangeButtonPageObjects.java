@@ -5,18 +5,16 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Edit_ChangeButtonPageObjects {
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 
-	public Edit_ChangeButtonPageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public Edit_ChangeButtonPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 
@@ -55,11 +53,11 @@ public class Edit_ChangeButtonPageObjects {
 	}
 
 	public void clickOnEditChangeButton() {
-		objiOSGenericMethods.clickOnIOSElement(getEditChangeButton(), "Edit Change Button");
+		objiOSGenericMethods.clickOnIOSElement(getEditChangeButton(), "clicked on getEditChangeButton");
 	}
 
 	public void clickOnEDITButton() {
-		objiOSGenericMethods.clickOnIOSElement(getEDITButtton(), "EDIT Buttton");
+		objiOSGenericMethods.clickOnIOSElement(getEDITButtton(), "clicked on getEDITButtton");
 	}
 	
 	public void clickOnRemoveButton() {

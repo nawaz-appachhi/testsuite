@@ -14,7 +14,6 @@ import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.Hamburge
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.HomePageObjects;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -26,13 +25,13 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AddressPageObjects {
 
-	public AppiumDriver<MobileElement> iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	HomePageObjects objHomePageObjects;
 	HamburgerPageObjects objHamburgerPageObjects;
 	WishListPageObject objWishListPageObject;
 
-	public AddressPageObjects(AppiumDriver<MobileElement>  iDriver) {
+	public AddressPageObjects(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 		objHomePageObjects = new HomePageObjects(iDriver);
@@ -208,7 +207,7 @@ public class AddressPageObjects {
 		try {
 			if(getPincodeAddress().isDisplayed())
 			objiOSGenericMethods.waitDriver(getPincodeAddress(), "Pincode");
-			objiOSGenericMethods.clickOnIOSElement(getPincodeAddress(), "pincode");
+			objiOSGenericMethods.clickOnIOSElement(getPincodeAddress(), "clicked on pincode");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -236,8 +235,7 @@ public class AddressPageObjects {
 	}
 
 	public void clickOnChoose() {
-		//getChooseTown().click();
-		 objiOSGenericMethods.clickOnIOSElement(getChooseTown(), "choose town");
+		getChooseTown().click();
 	}
 
 	public void selectTownLocality(String town) {
@@ -253,23 +251,23 @@ public class AddressPageObjects {
 	}
 
 	public void entername(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getName(), "Name");
+		objiOSGenericMethods.clickOnIOSElement(getName(), "clicked on Name");
 		getName().sendKeys(name);
 	}
 
 	public void enterEditName(String name) {
-		objiOSGenericMethods.clickOnIOSElement(getEditname(), "edit Name");
+		objiOSGenericMethods.clickOnIOSElement(getEditname(), "clicked on edit Name");
 		getEditname().clear();
 		getEditname().sendKeys(name);
 	}
 
 	public void enteraddress(String address) {
-		objiOSGenericMethods.clickOnIOSElement(getAddress(), "address");
+		objiOSGenericMethods.clickOnIOSElement(getAddress(), "clicked on address");
 		getAddress().sendKeys(address);
 	}
 
 	public void enterMobileNumber(String mobile) {
-		objiOSGenericMethods.clickOnIOSElement(getMobileNumber(), "mobile number");
+		objiOSGenericMethods.clickOnIOSElement(getMobileNumber(), "clicked on mobile number");
 		getMobileNumber().sendKeys(mobile);
 	}
 
@@ -279,7 +277,7 @@ public class AddressPageObjects {
 	public void clickOnOfficeCommercial() {
 		try {
 			if (getOfficeCommercial().isDisplayed()) {
-				objiOSGenericMethods.clickOnIOSElement(getOfficeCommercial(), "office/commercial");
+				objiOSGenericMethods.clickOnIOSElement(getOfficeCommercial(), "clicked on office/commercial");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -291,15 +289,15 @@ public class AddressPageObjects {
 	 * called generic method to get click message
 	 */
 	public void clickOnHome() {
-		objiOSGenericMethods.clickOnIOSElement(getHome(), "Home radio button ");
+		objiOSGenericMethods.clickOnIOSElement(getHome(), "clicked on Home radio button ");
 	}
 
 	public void clickOnOpenOnSaturdays() {
-		objiOSGenericMethods.clickOnIOSElement(getopenOnSaturdays(), "Opens on saturday");
+		objiOSGenericMethods.clickOnIOSElement(getopenOnSaturdays(), "clicked on Opens on saturday");
 	}
 
 	public void clickOnAddNewAddress() {
-		objiOSGenericMethods.clickOnIOSElement(getAddNewAddress(), "Opnes on sunday");
+		objiOSGenericMethods.clickOnIOSElement(getAddNewAddress(), "clicked on Opnes on sunday");
 	}
 
 	public void clickOnProfileAddresslink() {
@@ -373,6 +371,7 @@ public class AddressPageObjects {
 	public void resetAddress() throws InterruptedException {
 		try {
 			// Empty Address Page
+
 			objHomePageObjects.clickOnHamburgerButton();
 			objHamburgerPageObjects.clickOnMyAccount();
 //			Thread.sleep(2000);

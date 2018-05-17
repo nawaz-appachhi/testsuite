@@ -1,19 +1,17 @@
 package com.automation.mobile.Android.MobileWeb.TestScript;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.ini4j.InvalidFileFormatException;
-import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -34,13 +32,16 @@ import com.automation.mobile.Android.MobileWeb.ObjectRepository.PLPageObjects.PL
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.PaymentObjects.PaymentPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
 /**
  * @author 300021279 - Sangam TEST STEPS # Google registered user - Login # Home
  *         Page # Search (using menu item e.g. Men -> Topwear - T-Shirts # Save
  *         Product # Verify Product Code # Move to bag # Place Order #
  *         Percentage Discount # Remove address
  */
-public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseAndroidTest {
+public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious {
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	AddressPageObjects objAddressPageObjects;
@@ -59,13 +60,17 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 	HomePageObjects objHomePageObjects;
 	PLPageObjects objPLPageObjects;
 	WishListPageObject objWishlistPageObject;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
+
 	String testName = "VEGASF_328";
 
-	@Parameters({ "browserName_","deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_","engine_", "platform_" })
+	@Parameters({ "browserName_", "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	// @Parameters({ "browserType" })
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String browserName_, @Optional("TD") String deviceName_, @Optional("TD") String UDID_, @Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_, @Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_) throws Exception {
+	public void beforeTest(String browserName_, String deviceName_, String UDID_, String platformVersion_, String URL_,
+			String appUrl_, String screenshotPath_) throws MalformedURLException {
+
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
@@ -77,37 +82,24 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-        params.put("platform_", platform_);
-		 if(!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppAndroid(params);
-		} else {
-			try {
-				setUpTest(params.get("platform_"));
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-		}
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		objAddressPageObjects = new AddressPageObjects(wd);
-		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(wd);
-		objBagPageObjects = new BagPageObjects(wd);
-		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(wd);
-		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(wd);
-		objMenCategoriesPageObjects = new MenCategoriesPageObjects(wd);
-		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(wd);
-		objMenuPageObjects = new MenuPageObjects(wd);
-		objPaymentPageObjects = new PaymentPageObjects(wd);
-		objFilterPageObjects = new FilterPageObjects(wd);
-		objPDPageObject = new PDPageObjects(wd);
-		objHambergerPageObjects = new HamburgerPageObjects(wd);
-		objHomePageObjects = new HomePageObjects(wd);
-		objPLPageObjects = new PLPageObjects(wd);
-		objWishlistPageObject = new WishListPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		objAddressPageObjects = new AddressPageObjects(aDriver);
+		objEdit_ChangeButtonPageObjects = new Edit_ChangeButtonPageObjects(aDriver);
+		objBagPageObjects = new BagPageObjects(aDriver);
+		objHomeAndLivingCategoriesPageObjects = new HomeAndLivingCategoriesPageObjects(aDriver);
+		objKidsCategoriesPageObjects = new KidsCategoriesPageObjects(aDriver);
+		objMenCategoriesPageObjects = new MenCategoriesPageObjects(aDriver);
+		objWomenCategoriesPageObjects = new WomenCategoriesPageObjects(aDriver);
+		objMenuPageObjects = new MenuPageObjects(aDriver);
+		objPaymentPageObjects = new PaymentPageObjects(aDriver);
+		objFilterPageObjects = new FilterPageObjects(aDriver);
+		objPDPageObject = new PDPageObjects(aDriver);
+		objHambergerPageObjects = new HamburgerPageObjects(aDriver);
+		objHomePageObjects = new HomePageObjects(aDriver);
+		objPLPageObjects = new PLPageObjects(aDriver);
+		objWishlistPageObject = new WishListPageObject(aDriver);
 	}
 
 	// @Test(priority = 1)
@@ -135,10 +127,12 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 	// objAndroidGenericMethods.backKeyButton();
 	//// objHambergerPageObjects.clickOnSignInButton();
 	// }
+
 	@Test(priority = 1)
 	public void Login() throws InvalidFileFormatException, IOException {
 		System.out.println("=====================VEGASF_328_START=====================");
 		objHomePageObjects.clickOnHamburgerButton();
+
 		objHambergerPageObjects.clickOnSignInOption();
 		objHambergerPageObjects.enterEmailAddress(objAndroidGenericMethods.getValueByKeyWeb(testName, "UserName"),
 				objAndroidGenericMethods.getValueByKeyWeb(testName, "Password"));
@@ -153,7 +147,9 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 	}
 
 	@Test(priority = 3)
-	public void SearchItem() throws InvalidFileFormatException, IOException, InterruptedException {
+	public void SearchItem() throws InvalidFileFormatException, IOException, InterruptedException
+
+	{
 		objHomePageObjects.clickOnHamburgerButton();
 		objMenCategoriesPageObjects.clickOnmen();
 		objMenCategoriesPageObjects.clickOntopWare();
@@ -171,7 +167,7 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 
 	@Test(priority = 6)
 	public void SaveProduct() throws InterruptedException {
-		objPDPageObject.clickSaveToWishlist();
+		objPDPageObject.clickOnSaveButton();
 	}
 
 	@Test(priority = 8)
@@ -181,18 +177,12 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 		objPDPageObject.clickOnConfirmButton();
 		objHomePageObjects.clickOnWishlistButton();
 		objWishlistPageObject.VerifyWishlistPageTitle();
-		objWishlistPageObject.VerifySellingPrice();
-		objWishlistPageObject.VerfiyProductIsAddedToWishlist();
 		objWishlistPageObject.ClickOnMoveToBag();
 		objWishlistPageObject.ClickSizeButtons();
 		objWishlistPageObject.ClickOnDoneButton();
 		objWishlistPageObject.clickOnMyntraLogo();
 		objHomePageObjects.clickOnBagIcon();
-		objBagPageObjects.assertBagPageTitle("Bag");
 		objBagPageObjects.VerifyProductTitle();
-		objBagPageObjects.getProductImage();
-		objBagPageObjects.VerfiyProductIsAddedToCart();
-		objBagPageObjects.VerifySellingPrice();
 	}
 
 	@Test(priority = 9)
@@ -218,22 +208,10 @@ public class VEGASF_328_Google_User_SaveWishlist_Discount_Concious extends BaseA
 		objEdit_ChangeButtonPageObjects.clickOnremoveButton();
 	}
 
-	@Test(priority = 12)
-	public void LogOut() throws InterruptedException {
-		Reporter.log("Logout");
-		objAndroidGenericMethods.scrollDown(objMenuPageObjects.myntraLogoFromPaymentpage, -100);
-		objHambergerPageObjects.logoutAndVerifySessionId();
-	}
-
 	@AfterTest
 	public void afterTest() {
 		System.out.println("=====================VEGASF_328_END=====================");
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 	}
+
 }

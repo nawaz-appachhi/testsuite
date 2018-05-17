@@ -10,8 +10,6 @@ import org.testng.Reporter;
 
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -21,7 +19,7 @@ public class WishlistPageObject {
 
 	iOSGenericMethods objiOSGenericMethods;
 
-	public WishlistPageObject(AppiumDriver<MobileElement> iDriver) {
+	public WishlistPageObject(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 	}
@@ -29,12 +27,13 @@ public class WishlistPageObject {
 	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"BROWSE ITEMS\"]")
 	public IOSElement browseItems;
 
+	
 	@iOSFindBy(accessibility = "Allow")
 	public IOSElement permssion;
-
+	
 	@iOSFindBy(accessibility = "OK")
 	public IOSElement oKAndTouch;
-
+	
 	@iOSFindBy(accessibility = "MOVE TO BAG")
 	public IOSElement moveToBag;
 
@@ -47,24 +46,23 @@ public class WishlistPageObject {
 	@iOSFindBy(xpath = "//XCUIElementTypeNavigationBar[@name=\"Featured\"]/XCUIElementTypeButton[2]")
 	public IOSElement viewMyBag;
 
-	@iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Back\"]")
+	@iOSFindBy(xpath="//XCUIElementTypeButton[@name=\"Back\"]")
 	public IOSElement backBtn;
-
+	
 	@iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"View\"]")
 	public IOSElement viewDetails;
 
 	@iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"MOVE TO WISHLIST\"])[1]")
 	public IOSElement moveToWishlist;
-
+	
 	@iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"MOVE TO WISHLIST\"])[1]")
 	public List<IOSElement> productInWishlist;
 
-	/********* getters ************/
-	
 	public List<IOSElement> getProductInWishlist() {
-		objiOSGenericMethods.CheckIOSElementsListFound(productInWishlist, "productInWishlist");
 		return productInWishlist;
 	}
+
+	/********* getters ************/
 
 	public IOSElement getBrowseItems() {
 		objiOSGenericMethods.CheckIOSElementFound(browseItems, "browseItems");
@@ -80,14 +78,13 @@ public class WishlistPageObject {
 		objiOSGenericMethods.CheckIOSElementFound(crossMark, "crossMark");
 		return crossMark;
 	}
-
+	
 	public IOSElement getBackBtn() {
 		objiOSGenericMethods.CheckIOSElementFound(backBtn, "backBtn");
 		return backBtn;
 	}
 
 	public List<IOSElement> getSelectSize() {
-		objiOSGenericMethods.CheckIOSElementsListFound(selectSize, "selectSize");
 		return selectSize;
 	}
 
@@ -95,6 +92,7 @@ public class WishlistPageObject {
 		objiOSGenericMethods.CheckIOSElementFound(viewMyBag, "viewMyBag");
 		return viewMyBag;
 	}
+
 
 	public IOSElement getViewDetails() {
 		objiOSGenericMethods.CheckIOSElementFound(viewDetails, "viewDetails");
@@ -109,82 +107,81 @@ public class WishlistPageObject {
 	/********* methods ***********/
 
 	public void clickOnBrowseItems() {
-		objiOSGenericMethods.clickOnIOSElement(getBrowseItems(), "Browse Items Button");
+		objiOSGenericMethods.clickOnIOSElement(getBrowseItems(), "Successfully click on browseItems button");
 	}
 
 	public void clickOnMoveToBag() {
-		objiOSGenericMethods.clickOnIOSElement(getMoveToBag(), "Move To Bag Button");
+		objiOSGenericMethods.clickOnIOSElement(getMoveToBag(), "Successfully click on moveToBag button");
 	}
 
 	public void clickOnCrossMark() {
-		objiOSGenericMethods.clickOnIOSElement(getCrossMark(), "Cross Mark Button");
+		objiOSGenericMethods.clickOnIOSElement(getCrossMark(), "Successfully click on crossMark button");
 	}
 
 	public void ProductSizeElements(String Size) {
 		int size = getSelectSize().size();
 		for (int i = 0; i < size; i++) {
 			if ((getSelectSize().get(i).isEnabled())) {
-//				(getSelectSize()).get(i).click();
-				objiOSGenericMethods.clickOnIOSElement(getSelectSize().get(i), "Select Size");
+				(getSelectSize()).get(i).click();
 				break;
 			}
 		}
 		return;
 	}
-
+	
 	/**
-	 * @author 300019221 aravindanath Replaced thread.sleep with webdriver wait
+	 * @author 300019221 aravindanath
+	 * Replaced thread.sleep with webdriver wait
 	 * @throws InterruptedException
 	 */
 
 	public void clickOnViewDetails() throws InterruptedException {
-		// objiOSGenericMethods.scrolltoElementAndClick(getViewDetails(), 100);
-		// if(getViewDetails().isDisplayed()) {
-		objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "View Details Button");
-		// }
-
+		objiOSGenericMethods.scrolltoElementAndClick(getViewDetails(), 100);
+		if(getViewDetails().isDisplayed()) {
+			objiOSGenericMethods.clickOnIOSElement(getViewDetails(), "Successfully click on viewDetails button");
+		}
+		
 	}
 
 	public void clickOnMoveToWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getMoveToWishlist(), "Move To Wishlist Button");
+		objiOSGenericMethods.clickOnIOSElement(getMoveToWishlist(), "Successfully click on moveToWishlist button");
 
 	}
-
+	
 	public void clickOnProductInWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getProductInWishlist().get(1), "Product In WishList Button");
+		getProductInWishlist().get(1).click();
 	}
-
+	
 	/**
 	 * @author 300019221 added wait method
 	 */
 	public void clickOnBackBtn() {
-		// objiOSGenericMethods.waitForElementVisibility(getBackBtn());
-		objiOSGenericMethods.clickOnIOSElement(getBackBtn(), "Move To Wishlist Button");
+		objiOSGenericMethods.waitForElementVisibility(getBackBtn());
+		objiOSGenericMethods.clickOnIOSElement(getBackBtn(), "Successfully click on moveToWishlist button");
 
 	}
-
-	@FindBy(xpath = "//AppiumAUT/XCUIElementTypeApplication/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther")
+	
+	@FindBy(xpath= "//AppiumAUT/XCUIElementTypeApplication/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther")
 	public IOSElement movetobagtrial;
 
-	@iOSFindBy(xpath = "XCUIElementTypeOther ")
+	
+	@iOSFindBy(xpath="XCUIElementTypeOther ")
 	public List<IOSElement> clickOnProduct;
-
+	
 	public List<IOSElement> getClickOnProduct() {
-		objiOSGenericMethods.CheckIOSElementsListFound(clickOnProduct, "clickOnProduct");
 		return clickOnProduct;
 	}
 
-	public void clickOnProduct(int i) {
-		objiOSGenericMethods.clickOnIOSElement(getClickOnProduct().get(i), "Product Button");
-//		getClickOnProduct().get(i).click();
-
+	public void clickOnProduct(int i){	
+		getClickOnProduct().get(i).click();
+		
 	}
-
 	/**
-	 * @author 300019221 Replaced thread.sleep with webdriver wait
+	 * @author 300019221
+	 * Replaced   thread.sleep with webdriver wait
 	 * @throws InterruptedException
 	 */
-
+	
 	public void handlePermission() throws InterruptedException {
 		try {
 			if (permssion.isDisplayed()) {
@@ -197,10 +194,10 @@ public class WishlistPageObject {
 			}
 		} catch (Exception e) {
 			System.out.println("Permission not displayed");
-		}
+		}  
 
 	}
-
+	
 	public void clickOnOkAndTouch() {
 		try {
 			if (oKAndTouch.isDisplayed()) {
@@ -212,5 +209,6 @@ public class WishlistPageObject {
 		}
 
 	}
-
+	
+	
 }

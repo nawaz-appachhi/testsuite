@@ -10,11 +10,9 @@ import org.ini4j.InvalidFileFormatException;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.BaseAndroidTest;
 import com.automation.core.Common.AppiumServer;
 import com.automation.core.Common.GlobalVariables;
 import com.automation.core.Common.MobileDrivers;
@@ -29,7 +27,6 @@ import com.automation.mobile.Android.apps.ObjectRepository.Payment.PaymentPageOb
 import com.automation.mobile.Android.apps.ObjectRepository.ProductDes.ProductDescriptionPageObject;
 import com.automation.mobile.Android.apps.ObjectRepository.WishList.WishListPageObject;
 
-import io.appium.java_client.PressesKeyCode;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -44,12 +41,12 @@ import io.appium.java_client.android.AndroidKeyCode;
 //Free Gift
 //Add New address - Home
 //Mynt+ COD
-public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD extends BaseAndroidTest{
+public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWithCoD {
 	AndroidElement SizeChartbtn;
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
 	LoginPageObject objLoginPageObject;
-	
+	AndroidDriver<AndroidElement> aDriver;
 	MobileDrivers objMobileDrivers;
 	HomePageObject objHomePageObject;
 	ProductListPageObject objProductListPageObject;
@@ -72,22 +69,22 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objLoginPageObject.clickpopUp(); 
 		objLoginPageObject.clickhamburger();
 		objLoginPageObject.verifyUserId();
-		wd.navigate().back();
+		aDriver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	
 	@Test(priority = 2)
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
-		//objWishListPageObject.resetWishlist();
+		objWishListPageObject.resetWishlist();
 		//objCheckOutPageObject.resetAddress();
 	}
 
 	@Test(priority = 3)
 	public void searchProduct() throws InterruptedException, InvalidFileFormatException, IOException {
 		objHomePageObject.clickOnSearch();
-		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem")+ "\\n");
-		
+		objHomePageObject.enterSearchText(AndroidGenericMethods.getValueByKey(testName, "SearchItem"));
+		aDriver.pressKeyCode(AndroidKeyCode.ENTER);
 	}
 
 	@Test(priority = 4)
@@ -97,18 +94,25 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
 	//	objProductDescriptionPageObject.scrollToBestPriceNClick();
-	//	objAndroidGenericMethods.scrollToText(wd, "GO TO BAG");
+	//	objAndroidGenericMethods.scrollToText(aDriver, "GO TO BAG");
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 
 	@Test(priority = 6)
 	public void Checkout() throws InterruptedException, InvalidFileFormatException, IOException {
-		objProductListPageObject.clickOkButton();
+		//objProductListPageObject.clickOkButton();
 		objAddCartPageObject.verifyShoppingBagTitle();
-		objAddCartPageObject.verifyWishlistIcon();
-		objAddCartPageObject.clickViewDetails();
-		objAddCartPageObject.clickPlaceOrder();
+        objAddCartPageObject.clickOnMovetoWishlist();
+        aDriver.pressKeyCode(AndroidKeyCode.BACK);
+        objProductDescriptionPageObject.clickWishListbtn();
+        objWishListPageObject.verifyWishlistIcon();
+        objWishListPageObject.clickMoveToBag();
+        objWishListPageObject.clickSizeWishList();
+        objWishListPageObject.clickDoneWishListbtn();
+        objWishListPageObject.clickBagBtn();
+        objAddCartPageObject.clickViewDetails();
+        objAddCartPageObject.clickPlaceOrder();
 		objCheckOutPageObject.verifyUserAddress();
 		objCheckOutPageObject.AddNewAddress();
 		objCheckOutPageObject.clickContinue();
@@ -118,21 +122,13 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 		objPaymentPageObject.verifyPaymentHeader();
 		try {
 			objPaymentPageObject.selectPaymentOption("Cash On Delivery");
-			wd.navigate().back();
-			objPaymentPageObject.readOrderNumberConfirmationPage();
-			objPaymentPageObject.clickOnViewOrder();
-			objPaymentPageObject.VerifyOrderNumberOrderDetailsPage();
 		} catch (Exception e) {
 			Reporter.log("COD Option is not enabled for the that amoutnt");
 		}
 	}
-	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
-			"platform_" })
+	@Parameters({"deviceName_","UDID_","platformVersion_", "URL_", "appUrl_", "screenshotPath_"})
 	@BeforeTest
-	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
-			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
-			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
-			throws Exception {
+	public void beforeTest(String deviceName_, String UDID_, String platformVersion_, String URL_, String appUrl_, String screenshotPath_) throws InterruptedException, MalformedURLException {
 
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
@@ -144,46 +140,24 @@ public class VEGASF_169_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-		 params.put("engine_", engine_);
-		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-        {
-        		wd = objMobileDrivers.launchAppAndroid(params);
-        }
-        else
-        {
-        		try {
-					setUpTest(params.get("platform_"));
-					System.out.println("TestDroid Execution Started");
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					System.out.println("Error :: Please change suite parameter to run locally.");
-				}
-        		
-        }
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		aDriver = objMobileDrivers.launchAppAndroid(params);
+		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Make sure that Page object object creation should be after this line
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		objLoginPageObject = new LoginPageObject(wd);
-		objHomePageObject = new HomePageObject(wd);
-		objProductListPageObject = new ProductListPageObject(wd);
-		objProductDescriptionPageObject = new ProductDescriptionPageObject(wd);
-		objWishListPageObject = new WishListPageObject(wd);
-		objAddCartPageObject = new AddCartPageObject(wd);
-		objCheckOutPageObject = new CheckOutPageObject(wd);
-		objAndroidGenericMethods = new AndroidGenericMethods(wd);
-		objHamburgerPageObject = new HamburgerPageObject(wd);
-		objPaymentPageObject = new PaymentPageObject(wd);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		objLoginPageObject = new LoginPageObject(aDriver);
+		objHomePageObject = new HomePageObject(aDriver);
+		objProductListPageObject = new ProductListPageObject(aDriver);
+		objProductDescriptionPageObject = new ProductDescriptionPageObject(aDriver);
+		objWishListPageObject = new WishListPageObject(aDriver);
+		objAddCartPageObject = new AddCartPageObject(aDriver);
+		objCheckOutPageObject = new CheckOutPageObject(aDriver);
+		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
+		objHamburgerPageObject = new HamburgerPageObject(aDriver);
+		objPaymentPageObject = new PaymentPageObject(aDriver);
 	}
 	@AfterTest
 	public void quit() {
-		try {
-			quitAppiumSession();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		wd.quit();
+		aDriver.quit();
 		System.out.println("=====================VEGASF_169_END=====================");
 
 

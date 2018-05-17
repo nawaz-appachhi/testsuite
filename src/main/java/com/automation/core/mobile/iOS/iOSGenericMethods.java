@@ -73,22 +73,15 @@ import com.sun.org.apache.xerces.internal.dom.DeferredTextImpl;
  */
 public class iOSGenericMethods extends GlobalVariables {
 	public ExtentTest test;
-	public AppiumDriver<MobileElement> iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	public JavaUtils objJavaUtils = new JavaUtils();
 	int level = 0;
 	Logger log = Logger.getLogger("devpinoyLogger");
 
-	public iOSGenericMethods(AppiumDriver<MobileElement> iDriver) {
+	public iOSGenericMethods(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		this.iDriver = iDriver;
 	}
-
-	
-	public iOSGenericMethods() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public boolean isElementPresent(String locator) {
 		test.log(LogStatus.INFO, "Finding presence of element " + locator);
@@ -191,13 +184,11 @@ public class iOSGenericMethods extends GlobalVariables {
 
 	public void CheckIOSElementFound(IOSElement element, String elementName) {
 		try {
-			if (waitDriver(element, elementName)) {
-				if (element.isDisplayed()) {
-					Reporter.log("'" + elementName + "' Element object is Found");
-				} else {
-					Reporter.log("'" + elementName + "'  Element object is NOT Found");
-				}
-			}			
+			if (element.isDisplayed()) {
+				Reporter.log("'" + elementName + "' Element object is Found");
+			} else {
+				Reporter.log("'" + elementName + "'  Element object is NOT Found");
+			}
 		} catch (NoSuchElementException e) {
 			Reporter.log("No such element: Unable to locate element. Please check the Element");
 		}
@@ -361,7 +352,7 @@ public class iOSGenericMethods extends GlobalVariables {
 			new TouchAction(iDriver).press(width, starty).waitAction(Duration.ofMillis(duration)).moveTo(width, endy)
 					.release().perform();
 		}
-//		System.out.println("Scroll down is done!");
+		System.out.println("Scroll down is done!");
 	}
 
 	public static void setValueByKeyAndTitel(String title, String Key, String parameterName) throws IOException {
@@ -649,11 +640,11 @@ public class iOSGenericMethods extends GlobalVariables {
 	}
 	public boolean waitDriver(IOSElement element, String strElement) {
 		try {
-			WebDriverWait wait = new WebDriverWait(iDriver, 10);
+			WebDriverWait wait = new WebDriverWait(iDriver, 20);
 			wait.until(ExpectedConditions.visibilityOf(element));
 			return true;
 		} catch (Exception e) {
-			Reporter.log("ELEMENT NOT FOUND :: Waited for 10 seconds to get the element '" + strElement + "'.");
+			Reporter.log("ELEMENT NOT FOUND :: Waited for 20 seconds to get the element '" + strElement + "'.");
 			return false;
 		}
 	}
@@ -706,7 +697,7 @@ public class iOSGenericMethods extends GlobalVariables {
 			System.out.println("Alert accepted! :)");
 		} catch (Exception e) {
 			 try {
-				IOSElement ele = (IOSElement) iDriver.findElement(By.xpath("//XCUIElementTypeAlert//XCUIElementTypeButton[@name='Allow']"));
+				IOSElement ele = iDriver.findElement(By.xpath("//XCUIElementTypeAlert//XCUIElementTypeButton[@name='Allow']"));
 				 click(ele);
 			} catch (Exception e1) {
 				
@@ -722,7 +713,7 @@ public class iOSGenericMethods extends GlobalVariables {
 	 */
 	public void clickOkButton() {
 		try {
-			IOSElement tapAndHold = (IOSElement) iDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='OK']"));
+			IOSElement tapAndHold = iDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='OK']"));
 			if (tapAndHold.isDisplayed()) {
 				System.err.println("Tap and Hold button is displayed!");
 				tapAndHold.click();

@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.automation.core.mobile.iOS.iOSGenericMethods;
 import com.automation.mobile.iOS.MobileWeb.ObjectRepository.HomeObjects.*;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -19,13 +18,13 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class WishListPageObject {
 
-	public AppiumDriver<MobileElement>  iDriver;
+	public IOSDriver<IOSElement> iDriver;
 	iOSGenericMethods objiOSGenericMethods;
 	public List<IOSElement> elements;
 	public WebElement element = null;
 	HomePageObjects objHomePageObjects;
 
-	public WishListPageObject(AppiumDriver<MobileElement>  iDriver) {
+	public WishListPageObject(IOSDriver<IOSElement> iDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(iDriver), this);
 		objiOSGenericMethods = new iOSGenericMethods(iDriver);
 		objHomePageObjects = new HomePageObjects(iDriver);
@@ -135,19 +134,19 @@ public class WishListPageObject {
 	}
 
 	public void ClickOnMoveToBag() {
-		objiOSGenericMethods.clickOnIOSElement(getMoveToBaglnk(), "MoveToBaglnk");
+		objiOSGenericMethods.clickOnIOSElement(getMoveToBaglnk(), "clicked on MoveToBaglnk");
 	}
 
 	public void ClickOnContinueShopping()	{
-		objiOSGenericMethods.clickOnIOSElement(getContinueShopping(), "Continue to shop button");
+		objiOSGenericMethods.clickOnIOSElement(getContinueShopping(), "clicked on Continue to shop button");
 	}
 
 	public void ClickOnDoneButton() throws InterruptedException	{
-		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "Done button");
+		objiOSGenericMethods.clickOnIOSElement(getDoneButton(), "clicked on Done button");
 	}
 
 	public void ClickOnRemoveIcon() {
-		objiOSGenericMethods.clickOnIOSElement(getRemoveIcon(), "RemoveIcon");
+		objiOSGenericMethods.clickOnIOSElement(getRemoveIcon(), "clicked on RemoveIcon");
 	}
 
 	public WebElement ClickSizeButtons() {
@@ -246,7 +245,7 @@ public class WishListPageObject {
 	 */
 	
 	public void clickOnCartFromWishlist() {
-		objiOSGenericMethods.clickOnIOSElement(getCartIcon(), "CartIcon");
+		objiOSGenericMethods.clickOnIOSElement(getCartIcon(), "Clicked CartIcon");
 	}
 	
 	public void VerifyWishlistPageTitle()	{

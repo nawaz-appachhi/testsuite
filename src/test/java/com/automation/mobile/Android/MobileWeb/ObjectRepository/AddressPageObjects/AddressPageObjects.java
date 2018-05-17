@@ -8,15 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.automation.core.mobile.Android.AndroidGenericMethods;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects.HamburgerPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects.HomePageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.HomeObjects.MenuPageObjects;
 import com.automation.mobile.Android.MobileWeb.ObjectRepository.WishList.WishListPageObject;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -27,7 +23,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AddressPageObjects {
 
-	AppiumDriver<MobileElement> aDriver;
+	AndroidDriver<AndroidElement> aDriver;
 	AndroidGenericMethods objAndroidGenericMethods;
 	HomePageObjects objHomepageObjects;
 	MenuPageObjects objMenupageObjects;
@@ -35,7 +31,7 @@ public class AddressPageObjects {
 	HamburgerPageObjects objHamburgerpageObjects;
 	Edit_ChangeButtonPageObjects objEdit_ChangeButtonPageObjects;
 
-	public AddressPageObjects(AppiumDriver<MobileElement> aDriver) {
+	public AddressPageObjects(AndroidDriver<AndroidElement> aDriver) {
 		PageFactory.initElements(new AppiumFieldDecorator(aDriver), this);
 		objAndroidGenericMethods = new AndroidGenericMethods(aDriver);
 		objHomepageObjects = new HomePageObjects(aDriver);
