@@ -157,7 +157,7 @@ public class VEGASF_396_FB_User_Chk4BestPrice_PercentageDiscount extends BaseAnd
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_396_START=====================");

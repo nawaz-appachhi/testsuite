@@ -48,7 +48,7 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -90,16 +90,16 @@ public class VEGASF_91_RegisteredUser_ShowSimilarProducts_BOGO_PayWithDC  extend
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));	
-//		objiOSGenericMethods.acceptAlert();
+		objiOSGenericMethods.acceptAlert();
 		
 	}
 	@Test(priority=3)
 	public void PLPPage() throws InterruptedException, InvalidFileFormatException, IOException
 	{
 	
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
 		objPDPageObject.clickOnSaveButton();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);

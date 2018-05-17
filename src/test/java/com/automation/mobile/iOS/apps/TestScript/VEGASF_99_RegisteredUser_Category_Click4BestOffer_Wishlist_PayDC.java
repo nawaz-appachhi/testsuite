@@ -61,7 +61,7 @@ public class VEGASF_99_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC ex
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -111,22 +111,21 @@ public class VEGASF_99_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC ex
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObject.enterSearchitem(search);
-//		objiOSGenericMethods.acceptAlert();
 
 	}
 
 	@Test(priority = 3)
 	public void PLPage() throws InterruptedException {
 
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-		objiOSGenericMethods.swipeDown(1000, 1);
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
+		objiOSGenericMethods.swipeDown(100, 1);
 		objPDPageObject.clickOnBestPrice();
-//		objiOSGenericMethods.swipeDown(1000, 2);
+//		objiOSGenericMethods.swipeDown(100, 1);
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
-//		objPDPageObject.clickonDoneButton();
+		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
 
 	}

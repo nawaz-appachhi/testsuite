@@ -68,7 +68,7 @@ public class VEGASF_237_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -82,6 +82,7 @@ public class VEGASF_237_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 
 	@Test(priority = 1)
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException {
+
 		try {
 			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
 			System.out.println("On Boarding screen appeared and closed it");
@@ -118,15 +119,15 @@ public class VEGASF_237_RegisteredUser_BrowseMenu_ShowMore_AddMoreFromWishList_P
 
 	}
 
-//	@Test(priority = 3)
-//	public void CheckForShowSimilarProduct() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
+	@Test(priority = 3)
+	public void CheckForShowSimilarProduct() throws InterruptedException, InvalidFileFormatException, IOException {
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
 //		objiOSGenericMethods.swipeDown(100, 13);
 //		objPDPageObject.clickOnViewSimilar();
 //		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+	}
 
 	@Test(priority = 4)
 	public void Bag() throws InterruptedException, InvalidFileFormatException, IOException {

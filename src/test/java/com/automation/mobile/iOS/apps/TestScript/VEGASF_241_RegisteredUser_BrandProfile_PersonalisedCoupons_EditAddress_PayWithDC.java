@@ -67,7 +67,7 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 	HomePageObject2 objHomePageObject2;
 	EditAdressPageObject objEditAdressPageObject;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -107,20 +107,20 @@ public class VEGASF_241_RegisteredUser_BrandProfile_PersonalisedCoupons_EditAddr
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
 	}
 
-//	@Test(priority = 3)
-//	public void Filter() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objAssertionPageObject.verifyDiscount();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+	@Test(priority = 3)
+	public void Filter() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objAssertionPageObject.verifyDiscount();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objPLPageObjets.clickOnFirstproductofPLP();
+	}
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {

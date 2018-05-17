@@ -63,7 +63,7 @@ public class VEGASF_230_RegisteredUser_SizeSensitive_BOGO_PayWithCoD extends Bas
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -106,17 +106,17 @@ public class VEGASF_230_RegisteredUser_SizeSensitive_BOGO_PayWithCoD extends Bas
 		objHomePageObjects.clickOnSearchButton();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-//		objAssertionPageObject.VerifyAutoSuggestionList();
+		objAssertionPageObject.VerifyAutoSuggestionList();
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 

@@ -191,7 +191,7 @@ public class VEGASF_403_Google_User_Filter_EmptyWishlist_GiftWrap_ClickforOffer_
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_403_END=====================");

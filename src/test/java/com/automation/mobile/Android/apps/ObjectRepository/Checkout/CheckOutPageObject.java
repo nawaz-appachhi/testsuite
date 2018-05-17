@@ -503,7 +503,7 @@ public class CheckOutPageObject {
 			Thread.sleep(4000);
 			getNametxt().clear();
 			getNametxt().sendKeys(AndroidGenericMethods.getValueByKey("OBJECTREPO", "Name"));
-		//	aDriver.hideKeyboard();
+			aDriver.hideKeyboard();
 			clickAddressSave();
 		} catch (Exception e1) {
 			fillAddressOffc();
@@ -580,19 +580,19 @@ public class CheckOutPageObject {
 	/**
 	 * object for remove button displayed for adjacent address in address page;
 	 */
-	@FindBy(xpath = "//*[@text='REMOVE']")
+	@FindBy(xpath = "//*[@text='REMOVE' or @content-desc='REMOVE']")
 	public AndroidElement addressRemove;
 
 	/**
 	 * object for delete button displayed after tapped on remove address;
 	 */
-	@FindBy(xpath = "//*[@text='DELETE']")
+	@FindBy(xpath = "//*[@text='DELETE' or @content-desc='DELETE']")
 	public AndroidElement addressDelete;
 
 	/**
 	 * object to identify the message displayed for empty address condition;
 	 */
-	@FindBy(xpath = "//*[@text='SAVE YOUR ADDRESSES NOW']")
+	@FindBy(xpath = "//*[@text='SAVE YOUR ADDRESSES NOW' or @content-desc='SAVE YOUR ADDRESSES NOW']")
 	public AndroidElement saveurAddressMsg;
 
 	/**
@@ -659,8 +659,8 @@ public class CheckOutPageObject {
 	public void resetAddress() throws InterruptedException {
 		try {
 			objHamburgerPageObject.clickHamburgerbtn();
-			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountBtn(), 2000);
-			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountAdddresses(), 2000);
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.getmyAccountBtn());
+			objAndroidGenericMethods.scrolltoElementAndClick(objHamburgerPageObject.myAccountAdddresses);
 			System.out.println("clicked on address");
 			if (saveurAddressMsgDisplayed()) {
 				closeAddressBtn.click();

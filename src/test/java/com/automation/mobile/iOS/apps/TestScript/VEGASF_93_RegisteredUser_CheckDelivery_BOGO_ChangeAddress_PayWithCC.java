@@ -46,7 +46,7 @@ public class VEGASF_93_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -91,13 +91,13 @@ public class VEGASF_93_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 //		objiOSGenericMethods.acceptAlert();
 	}
 	
-//	@Test(priority = 3)
-//	public void ListPageToPDP() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+	public void ListPageToPDP() throws InterruptedException, InvalidFileFormatException, IOException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {

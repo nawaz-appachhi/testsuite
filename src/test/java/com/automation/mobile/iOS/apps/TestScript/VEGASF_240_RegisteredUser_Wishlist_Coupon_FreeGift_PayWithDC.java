@@ -69,7 +69,7 @@ public class VEGASF_240_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC extend
 	AddNewAdressPageObjects objAddAddressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -111,14 +111,14 @@ public class VEGASF_240_RegisteredUser_Wishlist_Coupon_FreeGift_PayWithDC extend
 		objHomePageObject2.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//	public void ListPageToPDP() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objHomePageObject2.handlePermission();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+	@Test(priority = 3)
+	public void ListPageToPDP() throws InterruptedException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objHomePageObject2.handlePermission();
+		objPLPageObjets.clickOnFirstproductofPLP();
+	}
 
 	@Test(priority = 4)
 	public void Save() throws InterruptedException {

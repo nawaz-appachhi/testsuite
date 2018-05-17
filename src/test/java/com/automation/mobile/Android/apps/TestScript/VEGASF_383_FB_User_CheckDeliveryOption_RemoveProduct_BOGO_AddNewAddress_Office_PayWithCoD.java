@@ -89,10 +89,10 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		// objAndroidGenericMethods.scrollDown(objProductDescriptionPageObject.getenterpincodebtn(),
 		// 1000);
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
 		objProductDescriptionPageObject.clickWishListbtn();
 	}
 
@@ -177,7 +177,7 @@ public class VEGASF_383_FB_User_CheckDeliveryOption_RemoveProduct_BOGO_AddNewAdd
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_383_END=====================");

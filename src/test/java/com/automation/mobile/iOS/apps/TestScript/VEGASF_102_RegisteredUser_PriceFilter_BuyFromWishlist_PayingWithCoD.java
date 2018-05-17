@@ -100,18 +100,18 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 
 	}
 
-//	@Test(priority = 3)
-//	public void PLPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objAssertionPageObject.verifyDiscount();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+	public void PLPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objAssertionPageObject.verifyDiscount();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException {
@@ -176,7 +176,7 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 		params.put("URL_", URL_);
 		params.put("appUrl_", appUrl_);
 		params.put("screenshotPath_", screenshotPath_);
-		   params.put("engine_", engine_);
+		params.put("engine_", engine_);
 		params.put("platform_", platform_);
 		if (!(params.get("engine_").equalsIgnoreCase("TD")))
 	        {
@@ -193,7 +193,7 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 	                 }
 	                
 	        }
-		   wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		objProfileLoginPageObject = new ProfileLoginPageObject(wd);
 		objPLPageObjets = new PLPageObjects(wd);
@@ -209,7 +209,13 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 
 	@AfterTest
 	public void quit() {
-		wd.quit();
+		 try {
+			quitAppiumSession();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 wd.quit();
 	}
 
 }

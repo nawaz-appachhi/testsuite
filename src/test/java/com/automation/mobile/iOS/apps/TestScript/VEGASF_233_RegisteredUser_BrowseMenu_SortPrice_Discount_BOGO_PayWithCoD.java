@@ -62,7 +62,7 @@ public class VEGASF_233_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -111,29 +111,30 @@ public class VEGASF_233_RegisteredUser_BrowseMenu_SortPrice_Discount_BOGO_PayWit
 //		objMenCategoriesPageObjects.clickOnTshirtFirstBanner();
 		objHomePageObject2.clickOnHomeButton();
 		objHomePageObject2.clickOnSearchButton();
-		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objiOSGenericMethods.clickOkButton();
+		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
+		objHomePageObject2.enterSearchitem(search);
+		objiOSGenericMethods.clickOkButton();
 	
 		
 	}
 
-//	@Test(priority = 3)
-//	public void sort() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnSort();
-//		objPLPageObjets.clickOnPriceLowHighSort();
-//	}
-//
-//	@Test(priority = 4)
-//	public void PLPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+	public void sort() throws InterruptedException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnSort();
+		objPLPageObjets.clickOnPriceLowHighSort();
+	}
+
+	@Test(priority = 4)
+	public void PLPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 5)
 	public void sizechart() throws InterruptedException {

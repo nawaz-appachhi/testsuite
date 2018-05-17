@@ -60,7 +60,7 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC extend
 	AssertionPageObject objAssertionPageObject;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -88,7 +88,7 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC extend
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-//		objiOSGenericMethods.acceptAlert();
+		// objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objLoginPageObject.removeAddress();
 
@@ -104,25 +104,26 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC extend
 		objHomePageObjects.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//	public void productListingPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnFilterDiscountPercentage(11);
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnFilterDiscountPercentage(11);
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+
+	}
 
 	@Test(priority = 4)
 
 	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
 
-//		objiOSGenericMethods.swipeDown(100, 14);
-//		objPDPageObject.clickMoreSimilarProducts();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		// objiOSGenericMethods.swipeDown(100, 14);
+		// objPDPageObject.clickMoreSimilarProducts();
+		// objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -211,14 +212,15 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC extend
 		objAssertionPageObject = new AssertionPageObject(wd);
 		objiOSGenericMethods = new iOSGenericMethods(wd);
 	}
-	 @AfterTest
-		public void quit() {
-			 try {
+
+	@AfterTest
+	public void quit() {
+		 try {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 wd.quit();
-		}
+	}
 }

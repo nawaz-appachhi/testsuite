@@ -294,6 +294,7 @@ public class AndroidGenericMethods extends GlobalVariables {
 	public void takeSnapShot() {
 		try {
 			JavaUtils objJavaUtils = new JavaUtils();
+			String isTestDroid = objJavaUtils.getPropValue("TestDroidRun");
 			
 			
 			// Convert web driver object to TakeScreenshot
@@ -302,16 +303,16 @@ public class AndroidGenericMethods extends GlobalVariables {
 			File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 			File DestFile = null;
 			// Move image file to new destination
-//			if(isTestDroid.equalsIgnoreCase("true"))
-//			{
-//				DestFile = new File(
-//						System.getProperty("user.dir") + "/screenshots/" + datetime("yyyyMMddHHmmss") + ".jpg");
-//			}
-//			else
-//			{
+			if(isTestDroid.equalsIgnoreCase("true"))
+			{
+				DestFile = new File(
+						System.getProperty("user.dir") + "/screenshots/" + datetime("yyyyMMddHHmmss") + ".jpg");
+			}
+			else
+			{
 				DestFile = new File(
 						GlobalVariables.SCREENSHOT_PATH + datetime("yyyyMMddHHmmss") + ".jpg");
-//			}
+			}
 
 			// Copy file at destination
 			FileUtils.copyFile(SrcFile, DestFile);
@@ -529,7 +530,7 @@ public class AndroidGenericMethods extends GlobalVariables {
 	 */
 	public static void setValueByKeyAndTitel(String title, String Key, String parameterName) throws IOException {
 		Ini ini = new Ini(
-				new File(System.getProperty("user.dir") + "//TestData//mobile//Android//apps//test-data.ini"));
+				new File(System.getProperty("user.dir") + "//TestData//Mobile//Android//apps//test-data.ini"));
 		ini.put(title, Key, parameterName);
 		ini.store();
 	}

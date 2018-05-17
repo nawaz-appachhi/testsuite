@@ -17,30 +17,30 @@
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer" />
 		</classes>
 	</test>    
-<!--    <test name="VEGASF_377_FB_User_Offers_Concious"> -->
-<!-- 		<parameter name="deviceName_" value="One Plus one" /> -->
-<!-- 		<parameter name="UDID_" value="0a9f7bf7029b39cf" /> -->
-<!-- 		<parameter name="platformVersion_" value="6.0.1" /> -->
-<!-- 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" /> -->
-<!-- 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" /> -->
-<!-- 		<parameter name="screenshotPath_" value="" /> -->
-<!-- 		<parameter name="engine_" value="TD" />  engine_ values ::::::  TD/local -->
-<!-- 		<parameter name="platform_" value="ANDROID" /> platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-<!-- 		<classes> -->
-<!-- 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_377_FB_User_Offers_Concious" /> -->
-<!-- 		</classes> -->
-<!-- 	</test> -->
-<!-- 	 <test name="VEGASF_398_FB_User_Sort_SimilarProduct"> -->
-<!-- 		<parameter name="deviceName_" value="One Plus one" /> -->
-<!-- 		<parameter name="UDID_" value="0a9f7bf7029b39cf" /> -->
-<!-- 		<parameter name="platformVersion_" value="6.0.1" /> -->
-<!-- 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" /> -->
-<!-- 		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" /> -->
-<!-- 		<parameter name="screenshotPath_" value="" /> -->
-<!-- 		<parameter name="engine_" value="TD" />  engine_ values ::::::  TD/local -->
-<!-- 		<parameter name="platform_" value="ANDROID" /> platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
-<!-- 		<classes> -->
-<!-- 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_398_FB_User_Sort_SimilarProduct" /> -->
-<!-- 		</classes> -->
-<!-- 	</test>   -->
+   <test name="VEGASF_377_FB_User_Offers_Concious">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_377_FB_User_Offers_Concious" />
+		</classes>
+	</test>
+	 <test name="VEGASF_398_FB_User_Sort_SimilarProduct">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="0a9f7bf7029b39cf" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<parameter name="engine_" value="TD" />  <!-- engine_ values ::::::  TD/local -->
+		<parameter name="platform_" value="ANDROID" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_398_FB_User_Sort_SimilarProduct" />
+		</classes>
+	</test>  
 </suite>

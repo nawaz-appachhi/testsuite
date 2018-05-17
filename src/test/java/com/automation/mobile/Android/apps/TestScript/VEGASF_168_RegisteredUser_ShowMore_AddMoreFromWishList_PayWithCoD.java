@@ -160,7 +160,7 @@ public class VEGASF_168_RegisteredUser_ShowMore_AddMoreFromWishList_PayWithCoD e
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_168_END=====================");

@@ -188,7 +188,7 @@ public class VEGASF_375_FB_User_ClickforOffer_AddNewAddress_Home_PayWithCredit_D
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_375_END=====================");

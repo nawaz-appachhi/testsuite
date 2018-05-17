@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.ini4j.InvalidFileFormatException;
+import org.openqa.selenium.mobile.NetworkConnection;
+import org.openqa.selenium.mobile.NetworkConnection.ConnectionType;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -170,7 +172,7 @@ public class VEGASF_163_RegisteredUser_Search_MoveToWishlist_ClickForOffer_PayWi
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_163_END=====================");

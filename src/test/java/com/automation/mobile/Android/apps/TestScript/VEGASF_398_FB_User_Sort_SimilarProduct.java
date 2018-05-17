@@ -68,7 +68,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct extends BaseAndroidTest {
 		wd.navigate().back();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2 , dependsOnMethods = {"LoginInWithEmail"})
 	public void reset() throws InterruptedException {
 		Reporter.log("reset");
 		objAddCartPageObject.resetBag();
@@ -76,7 +76,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct extends BaseAndroidTest {
 		objCheckOutPageObject.resetAddress();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, dependsOnMethods = {"LoginInWithEmail"})
 	public void searchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("searchItem");
 		objHomePageObject.clickOnSearch();
@@ -84,7 +84,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct extends BaseAndroidTest {
 		
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5, dependsOnMethods = {"searchItem"})
 	public void EmptyWishlist() throws InterruptedException {
 		Reporter.log("EmptyWishlist");
 		objProductDescriptionPageObject.verifyPdpTitle("pdpTitle");
@@ -97,7 +97,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct extends BaseAndroidTest {
 		objWishListPageObject.clickBagBtn();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6, dependsOnMethods = {"EmptyWishlist"})
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		Reporter.log("EditAddress");
 		// objProductListPageObject.clickOkButton();
@@ -159,7 +159,7 @@ public class VEGASF_398_FB_User_Sort_SimilarProduct extends BaseAndroidTest {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_398_END=====================");

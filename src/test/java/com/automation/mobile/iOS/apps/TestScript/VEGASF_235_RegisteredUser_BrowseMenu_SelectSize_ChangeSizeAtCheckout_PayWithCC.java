@@ -67,7 +67,7 @@ public class VEGASF_235_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -116,21 +116,22 @@ public class VEGASF_235_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 //		objMenCategoriesPageObjects.clickOnProduct(0);
 //		objPLPageObjets.clickOnOkAndTouch();
 		objHomePageObject2.clickOnSearchButton();
-		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
+		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
+		objHomePageObject2.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//	public void PLPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objAssertionPageObject.verifyDiscount();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+	public void PLPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objAssertionPageObject.verifyDiscount();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -143,7 +144,8 @@ public class VEGASF_235_RegisteredUser_BrowseMenu_SelectSize_ChangeSizeAtCheckou
 		objCartPageObject.clickGoBackPage();
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
-		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search2"));
+		String search = objiOSGenericMethods.getValueByKey(TestName, "Search2");
+		objHomePageObject2.enterSearchitem(search);
 		objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);

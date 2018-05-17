@@ -170,7 +170,7 @@ public class VEGASF_402_Google_User_PersonalizedCoupon extends BaseAndroidTest {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_402_END=====================");

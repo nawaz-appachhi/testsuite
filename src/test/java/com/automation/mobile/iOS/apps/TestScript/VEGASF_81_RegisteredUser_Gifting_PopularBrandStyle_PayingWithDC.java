@@ -64,7 +64,7 @@ public class VEGASF_81_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 	AssertionPageObject objAssertionPageObject;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -94,7 +94,6 @@ public class VEGASF_81_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		objLoginPageObject.loginInApp(email, password);
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-	//	objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 8);
 		objLoginPageObject.removeAddress();
 	}
@@ -110,20 +109,19 @@ public class VEGASF_81_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-	//	objiOSGenericMethods.acceptAlert();
 	}
 
-//	@Test(priority = 3)
-//	public void Sort() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
-//
-//		objPLPageObjets.clickOnSort();
-//		objPLPageObjets.clickOnPopularitySort();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	@Test(priority = 3)
+	public void Sort() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
+
+		objPLPageObjets.clickOnSort();
+		objPLPageObjets.clickOnPopularitySort();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+
+	}
 
 	@Test(priority = 4)
 	public void SaveProduct() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
@@ -162,7 +160,7 @@ public class VEGASF_81_RegisteredUser_Gifting_PopularBrandStyle_PayingWithDC ext
 		// objCartPage.enterCoupon(coupon);
 		objCartPage.clickOnApplyButton();
 		objiOSGenericMethods.swipeDown(100, 7);
-	//	objAssertionPageObject.verifyPriceDetails();
+		objAssertionPageObject.verifyPriceDetails();
 		objCartPage.clickOnplaceOrder();
 	}
 

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.collections.set.SynchronizedSortedSet;
 import org.ini4j.InvalidFileFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -41,8 +43,10 @@ import io.appium.java_client.ios.IOSElement;
  * Facebook registered user - Login Home Page List page to PDP navigation Filter
  * Products Verify ProductPrice Move to bag Add more from wishlist Apply
  * Personalized Coupons Remove address
- */
-public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
+ */ 
+
+public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest{
+
 	GlobalVariables objGlobalVariables;
 	iOSGenericMethods objiOSGenericMethods;
 	PLPageObjects objPLPageObjets;
@@ -51,14 +55,15 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 	AssertionPageObject objAssertionPageObject;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	// IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> wd;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
 	PaymentPageObject objPaymentPageObjects;
 	String TestName = "VEGASF_357";
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
+
 	public void LoginApp() throws InterruptedException, InvalidFileFormatException, IOException {
 		try {
 			objLoginPageObject.clickOnOnBoardingCrossButton();
@@ -70,6 +75,72 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
+		objLoginPageObject.clickOnFaceBook();
+	/**
+	 * @author 300019221
+	 * explicitly we are using Thread.sleep to handle Native to Web view switch.
+	 */
+		Thread.sleep(5000);
+		Set<String> contextNames = wd.getContextHandles();
+		for (String contextName : contextNames) {
+			if (contextName.contains("WEBVIEW"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		//	System.out.println(wd.getPageSource());
+		}
+
+		try {
+			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
+			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
+			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
+			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
+			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
+			Thread.sleep(2000);
+			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
+			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
+			if (emailid.isDisplayed()) {
+				emailid.sendKeys(email);
+				pass.sendKeys(password);
+				loginButton.click(); 
+			}
+
+			if (continueLogin.isDisplayed()) {
+				objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin.click();
+			}else if(continueLogin2.isDisplayed()) {
+				//objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin2.click();
+			}
+		} catch (Exception e) {
+			System.out.println("user can continue with face book login!");
+		}
+		try {
+			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
+			objiOSGenericMethods.fluentWait(cont);
+			cont.click();
+		} catch (Exception e) {
+			System.out.println("User is already login, No continue button to click!");
+		}
+		Set<String> contextNames2 = wd.getContextHandles();
+		for (String contextName : contextNames2) {
+			if (contextName.contains("NATIVE_APP"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		}
+		objAssertionPageObject.verifyUserName();
+		objiOSGenericMethods.swipeDown(100, 6);
+		objLoginPageObject.removeAddress();
+	}
+
+	
+	
+	@Test(priority = 1)
+	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		objLoginPageObject.clickOnProfileButton();
+		objiOSGenericMethods.swipeDown(100, 8);
+		objLoginPageObject.clickOnLogOut();
 		objLoginPageObject.clickOnLogin();
 		String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
 		String password = iOSGenericMethods.getValueByKey(TestName, "Password");
@@ -77,11 +148,14 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 		objLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
 		objiOSGenericMethods.acceptAlert();
-		// objiOSGenericMethods.swipeDown(100, 6);
-		// objLoginPageObject.removeAddress();
+		objiOSGenericMethods.swipeDown(100, 6);
+		objLoginPageObject.removeAddress();
 	}
+	
+	
+	
+	@Test(priority = 2)
 
-	@Test(priority = 2, dependsOnMethods = { "LoginApp" })
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		objHomePageObjects.emptyBag();
 		objHomePageObjects.clickOnHomeButton();
@@ -90,57 +164,76 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 		objHomePageObjects.enterSearchitem(search);
 	}
 
-//	@Test(priority = 4, dependsOnMethods = { "SearchItem" })
-//	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPDPageObject.clickOnAddToBag();
-//		objPDPageObject.getSizeListinString(0);
-//		// objPDPageObject.getSizeListinString(1);
-//		objPDPageObject.clickonDoneButton();
-//		objPDPageObject.clickOnGoToBag();
-//	}
-//
-//	@Test(priority = 5, dependsOnMethods = { "productDiscriptionPage" })
-//	public void couponPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objAssertionPageObject.verifyMyBag();
-//		objiOSGenericMethods.swipeDown(100, 3);
-//		objCartPage.ClickOnApplyCoupon();
-//		objAssertionPageObject.verifyApplyCouponHeaders();
-//		// String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
-//		// objCartPage.enterCoupon(coupon);
-//		objCartPage.clickOnApplyButton();
-//	}
-//
-//	@Test(priority = 6, dependsOnMethods = { "couponPage" })
-//	public void cartPage() throws InterruptedException {
-//		objAssertionPageObject.verifyMyBag();
-//		objiOSGenericMethods.swipeDown(100, 6);
-//		objAssertionPageObject.verifyPriceDetails();
-//		objCartPage.clickOnplaceOrder();
-//	}
-//
-//	@Test(priority = 7, dependsOnMethods = { "cartPage" })
-//	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objAssertionPageObject.verifyAddressHeaders();
-//		objAddNewAdressPageObjects.clickOnAddNewAddress();
-//		String pincode = iOSGenericMethods.getValueByKey(TestName, "Pincode");
-//		String locality = iOSGenericMethods.getValueByKey(TestName, "Locality");
-//		String name = iOSGenericMethods.getValueByKey(TestName, "Name");
-//		String address = iOSGenericMethods.getValueByKey(TestName, "Address");
-//		String mobile = iOSGenericMethods.getValueByKey(TestName, "Mobile");
-//		objAddNewAdressPageObjects.EnterContinueOrderAddingAddress(pincode, locality, name, address, mobile);
-//		objiOSGenericMethods.swipeDown(100, 1);
-//		objCartPage.clickOnContinueOrder();
-//	}
-//
-//	@Test(priority = 8, dependsOnMethods = { "AddNewAddress_Home" })
-//	public void payment() throws InterruptedException {
-//		objAssertionPageObject.verifypaymenttext();
-//		objPaymentPageObjects.clickOnCOD();
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+//		objPLPageObjets.clickOnPriceButton();
+//		objPLPageObjets.clickOnPrice(20);
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnFilterDiscountPercentage(11);
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
+
+	@Test(priority = 4)
+
+	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		objPDPageObject.clickOnAddToBag();
+		objPDPageObject.getSizeListinString(0);
+		objPDPageObject.clickonDoneButton();
+		objPDPageObject.clickOnGoToBag();
+
+	}
+
+	@Test(priority = 5)
+
+	public void couponPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		objAssertionPageObject.verifyMyBag();
+		objiOSGenericMethods.swipeDown(100, 3);
+		objCartPage.ClickOnApplyCoupon();
+		objAssertionPageObject.verifyApplyCouponHeaders();
+//		String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
+//		objCartPage.enterCoupon(coupon);
+		objCartPage.clickOnApplyButton();
+	}
+
+	@Test(priority = 6)
+
+	public void cartPage() throws InterruptedException {
+		objAssertionPageObject.verifyMyBag();
+		objiOSGenericMethods.swipeDown(100, 6);
+		objAssertionPageObject.verifyPriceDetails();
+		objCartPage.clickOnplaceOrder();
+	}
+
+	@Test(priority = 7)
+	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
+		objAssertionPageObject.verifyAddressHeaders();
+		objAddNewAdressPageObjects.clickOnAddNewAddress();
+		String pincode = iOSGenericMethods.getValueByKey(TestName, "Pincode");
+		String locality = iOSGenericMethods.getValueByKey(TestName, "Locality");
+		String name = iOSGenericMethods.getValueByKey(TestName, "Name");
+		String address = iOSGenericMethods.getValueByKey(TestName, "Address");
+		String mobile = iOSGenericMethods.getValueByKey(TestName, "Mobile");
+		objAddNewAdressPageObjects.EnterContinueOrderAddingAddress(pincode, locality, name, address, mobile);
+		objiOSGenericMethods.swipeDown(100, 1);
+		objCartPage.clickOnContinueOrder();
+
+	}
+
+	@Test(priority = 8)
+	public void payment() throws InterruptedException {
+		objAssertionPageObject.verifypaymenttext();
+		objPaymentPageObjects.clickOnCOD();
+	}
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
 			"platform_" })
 	@BeforeTest
+
 	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
 			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
 			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
@@ -156,17 +249,21 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 		params.put("screenshotPath_", screenshotPath_);
 		params.put("engine_", engine_);
 		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppiOS(params);
-		} else {
-			try {
-				setUpTest();
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-		}
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest();
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
 		wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		// Make sure that Page object object creation should be after this line
@@ -180,19 +277,17 @@ public class VEGASF_357_FB_User_Offers_Concious extends BaseIOSTest {
 		objCartPage = new CartPageObject(wd);
 		objAssertionPageObject = new AssertionPageObject(wd);
 		objiOSGenericMethods = new iOSGenericMethods(wd);
-	}
 
-	@Parameters({ "engine_" })
-	@AfterTest
-	public void quit(@Optional("TD") String engine_) {
-		try {
-			if ((engine_.equalsIgnoreCase("TD"))) {
-				quitAppiumSession();
-			}
+	}
+	 @AfterTest
+		public void quit() {
+			 try {
+			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("Locally test completed");
+			e.printStackTrace();
 		}
-		wd.quit();
-	}
+		 wd.quit();
+		}
+
 }

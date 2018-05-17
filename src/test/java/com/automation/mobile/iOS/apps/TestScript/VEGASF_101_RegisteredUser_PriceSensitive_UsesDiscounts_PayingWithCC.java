@@ -51,7 +51,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver; 
 import io.appium.java_client.ios.IOSElement;
 
-public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC  extends BaseIOSTest{
+public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	AppiumServer objAppiumServer;
@@ -89,8 +89,8 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 		objProfileLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
 //		objiOSGenericMethods.acceptAlert();
-		objiOSGenericMethods.swipeDown(100,4);
-		objProfileLoginPageObject.removeAddress();
+	//	objiOSGenericMethods.swipeDown(100,4);
+		//objProfileLoginPageObject.removeAddress();
 		
 	}
 
@@ -100,21 +100,21 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 		objHomePageObject2.clickOnHomeButton();
 		objHomePageObject2.clickOnSearchButton();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objAssertionPageObject.VerifyAutoSuggestionList();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
+		objAssertionPageObject.VerifyAutoSuggestionList();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
 	}
 
-//	@Test(priority = 3)
-//	public void Filter() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPLPageObjets.clickOnFilter();
+	@Test(priority = 3)
+	public void Filter() throws InterruptedException, InvalidFileFormatException, IOException {
+		objPLPageObjets.clickOnFilter();
 //		objAssertionPageObject.verifyDiscount();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objPLPageObjets.clickOnFirstproductofPLP();
+	}
 
 	@Test(priority = 4)
 	public void SizeChart() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -132,10 +132,7 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 		objAssertionPageObject.verifyMyBag();
 		objAssertionPageObject.veirfyCartPageWishlist();
 		objAssertionPageObject.verifyProductTitleCartPage();
-		objCartPageObject.clickOnChangeSize();
-		objCartPageObject.clickOnChangeSizeFromList();
-//		objCartPageObject.clickOnQuantity();
-//		objCartPageObject.clickOnChangequantityList();
+
 	}
 
 	@Test(priority = 6)
@@ -176,8 +173,7 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
 			"platform_" })
 	@BeforeTest
-
-public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
+	public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") String UDID_,
 			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
 			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
 			throws Exception {
@@ -192,24 +188,24 @@ public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") Strin
         params.put("URL_", URL_);
         params.put("appUrl_", appUrl_);
         params.put("screenshotPath_", screenshotPath_);
-        params.put("engine_", engine_);
+		params.put("engine_", engine_);
 		params.put("platform_", platform_);
 		if (!(params.get("engine_").equalsIgnoreCase("TD")))
-        {
-                wd =  objMobileDrivers.launchAppiOS(params);
-        }
-        else
-        {
-                try {
-                     setUpTest();
-                     System.out.println("TestDroid Execution Started");
-                 } catch (Exception e) {
-                     // TODO Auto-generated catch block
-                     System.out.println("Error :: Please change suite parameter to run locally.");
-                 }
-                
-        }
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest();
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		objPLPageObjets = new PLPageObjects(wd);
 		objPDPageObject = new PDPageObject(wd);
@@ -226,7 +222,7 @@ public void beforeTest(@Optional("TD") String deviceName_, @Optional("TD") Strin
 	}
 	 @AfterTest
 		public void quit() {
-		 try {
+			 try {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

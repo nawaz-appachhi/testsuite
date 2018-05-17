@@ -2,6 +2,7 @@ package com.automation.mobile.Android.apps.TestScript;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -115,6 +116,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 extends BaseAndro
 		Reporter.log("PaymnetWithCreditDebitCard");
 		objPaymentPageObject.verifyPaymentHeader();
 		objPaymentPageObject.selectPaymentOption("Credit/Debit Card");
+
 	}
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_", "engine_",
@@ -166,7 +168,7 @@ public class VEGASF_380_FB_User_Giftwrap_BOGO_ViewDetails_CoD2 extends BaseAndro
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_380_END=====================");

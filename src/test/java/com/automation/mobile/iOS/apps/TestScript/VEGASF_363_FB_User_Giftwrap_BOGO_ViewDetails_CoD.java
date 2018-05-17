@@ -73,7 +73,7 @@ public class VEGASF_363_FB_User_Giftwrap_BOGO_ViewDetails_CoD extends BaseIOSTes
 	 *         Gift wrap Buy One get One View Details Payment : Mynt+ COD
 	 */
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void Login() throws InterruptedException, InvalidFileFormatException, IOException {
 		try {
 			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
@@ -85,56 +85,67 @@ public class VEGASF_363_FB_User_Giftwrap_BOGO_ViewDetails_CoD extends BaseIOSTes
 		objProfileLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objProfileLoginPageObject.clickOnLogOut();
-//		objProfileLoginPageObject.clickOnFaceBook();
-//		Thread.sleep(5000);
-//		Set<String> contextNames = wd.getContextHandles();
-//		for (String contextName : contextNames) {
-//			if (contextName.contains("WEBVIEW"))
-//				wd.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + wd.getContext());
-//		}
-//		// objiOSGenericMethods.acceptAlert();
-//		try {
-//
-//			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
-//			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
-//			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
-//			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
-//			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
-//			Thread.sleep(2000);
-//			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
-//			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
-//			if (emailid.isDisplayed()) {
-//				emailid.sendKeys(email);
-//				pass.sendKeys(password);
-//				loginButton.click(); 
-//			}
-//
-//			if (continueLogin.isDisplayed()) {
-//				objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin.click();
-//			}else if(continueLogin2.isDisplayed()) {
-//				//objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin2.click();
-//			}
-//		} catch (Exception e) {
-//			System.out.println("user can continue with face book login!");
-//		}
-//		try {
-//			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
-//			objiOSGenericMethods.fluentWait(cont);
-//			cont.click();
-//		} catch (Exception e) {
-//			System.out.println("User is already login, No continue button to click!");
-//		}
-//		Set<String> contextNames2 = wd.getContextHandles();
-//		for (String contextName : contextNames2) {
-//			if (contextName.contains("NATIVE_APP"))
-//				wd.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + wd.getContext());
-//		}
+		objProfileLoginPageObject.clickOnFaceBook();
+		Thread.sleep(5000);
+		Set<String> contextNames = wd.getContextHandles();
+		for (String contextName : contextNames) {
+			if (contextName.contains("WEBVIEW"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		}
+		try {
+
+			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
+			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
+			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
+			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
+			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
+			Thread.sleep(2000);
+			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
+			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
+			if (emailid.isDisplayed()) {
+				emailid.sendKeys(email);
+				pass.sendKeys(password);
+				loginButton.click(); 
+			}
+
+			if (continueLogin.isDisplayed()) {
+				objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin.click();
+			}else if(continueLogin2.isDisplayed()) {
+				//objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin2.click();
+			}
+		} catch (Exception e) {
+			System.out.println("user can continue with face book login!");
+		}
+		try {
+			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
+			objiOSGenericMethods.fluentWait(cont);
+			cont.click();
+		} catch (Exception e) {
+			System.out.println("User is already login, No continue button to click!");
+		}
+		Set<String> contextNames2 = wd.getContextHandles();
+		for (String contextName : contextNames2) {
+			if (contextName.contains("NATIVE_APP"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		}
+		objAssertionPageObject.verifyUserName();
+		objiOSGenericMethods.swipeDown(100, 4);
+		objProfileLoginPageObject.removeAddress();
+	}
+
+	
+	
+	@Test(priority = 1)
+	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		objProfileLoginPageObject.clickOnProfileButton();
+		objiOSGenericMethods.swipeDown(100, 8);
+		objProfileLoginPageObject.clickOnLogOut();
 		objProfileLoginPageObject.clickOnLogin();
 		String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
 		String password = iOSGenericMethods.getValueByKey(TestName, "Password");
@@ -145,7 +156,8 @@ public class VEGASF_363_FB_User_Giftwrap_BOGO_ViewDetails_CoD extends BaseIOSTes
 		objiOSGenericMethods.swipeDown(100, 6);
 		objProfileLoginPageObject.removeAddress();
 	}
-
+	
+	
 	@Test(priority = 2)
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
 		objHomePageObject2.emptyBag();
@@ -153,19 +165,19 @@ public class VEGASF_363_FB_User_Giftwrap_BOGO_ViewDetails_CoD extends BaseIOSTes
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
 
 	}
 
 	@Test(priority = 3)
 	public void Filter() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnDiscountPercent();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnDiscountPercent();
+		objPLPageObjets.clickOnApplyDiscount();
+		objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();

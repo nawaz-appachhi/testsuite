@@ -57,7 +57,7 @@ public class VEGASF_238_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -106,19 +106,19 @@ public class VEGASF_238_RegisteredUser_Filter_ShowSimilar_AddHomeAddress_PayWith
 //		objiOSGenericMethods.acceptAlert();
 	}
 
-//	@Test(priority = 3)
-//	public void PLPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPLPageObjets.clickOnFilter();
-//		objAssertionPageObject.verifyGenderFilter();
-//		objPLPageObjets.clickOnFilterGender();
-//		objPLPageObjets.clickOnFirstFilterGender();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-////		objPLPageObjets.clickOnFirstproductofPLP();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+	public void PLPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		objPLPageObjets.clickOnFilter();
+		objAssertionPageObject.verifyGenderFilter();
+		objPLPageObjets.clickOnFilterGender();
+		objPLPageObjets.clickOnFirstFilterGender();
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+//		objPLPageObjets.clickOnFirstproductofPLP();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 	public void PDPage() throws InterruptedException, InvalidFileFormatException, IOException {

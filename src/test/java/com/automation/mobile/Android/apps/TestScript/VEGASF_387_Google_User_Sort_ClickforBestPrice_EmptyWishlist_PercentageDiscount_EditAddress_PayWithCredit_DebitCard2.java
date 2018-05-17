@@ -170,7 +170,7 @@ public class VEGASF_387_Google_User_Sort_ClickforBestPrice_EmptyWishlist_Percent
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_387_END=====================");

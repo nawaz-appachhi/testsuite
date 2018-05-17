@@ -43,6 +43,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 //Click for offer
 //Add New address - Home
 //Manual GC +Online
+/*Test comment*/
 public class VEGASF_155_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD extends BaseAndroidTest {
 	AndroidElement SizeChartbtn;
 	GlobalVariables objGlobalVariables;

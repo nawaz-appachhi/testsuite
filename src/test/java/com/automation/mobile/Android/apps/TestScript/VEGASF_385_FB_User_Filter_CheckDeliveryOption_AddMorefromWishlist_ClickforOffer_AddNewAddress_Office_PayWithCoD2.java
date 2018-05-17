@@ -87,10 +87,10 @@ public class VEGASF_385_FB_User_Filter_CheckDeliveryOption_AddMorefromWishlist_C
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText("CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
 	}
 
 	@Test(priority = 5)

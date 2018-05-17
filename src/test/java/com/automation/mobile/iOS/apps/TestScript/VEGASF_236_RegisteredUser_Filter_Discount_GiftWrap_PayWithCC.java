@@ -59,7 +59,7 @@ public class VEGASF_236_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC extend
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
 	AssertionPageObject objAssertionPageObject;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -108,19 +108,19 @@ public class VEGASF_236_RegisteredUser_Filter_Discount_GiftWrap_PayWithCC extend
 		objHomePageObjects.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnFilterDiscountPercentage(11);
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnFilterDiscountPercentage(11);
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+
+	}
 
 	@Test(priority = 4)
 

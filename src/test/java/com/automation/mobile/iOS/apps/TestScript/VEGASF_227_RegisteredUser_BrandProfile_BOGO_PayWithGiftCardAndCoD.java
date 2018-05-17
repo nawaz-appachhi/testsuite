@@ -53,7 +53,7 @@ public class VEGASF_227_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD e
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	EditAdressPageObject objEditAddressObjects;
@@ -98,14 +98,14 @@ public class VEGASF_227_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD e
 		objHomePageObjects.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 
@@ -197,7 +197,7 @@ public class VEGASF_227_RegisteredUser_BrandProfile_BOGO_PayWithGiftCardAndCoD e
 	                 }
 	                
 	        }
-		wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		// Make sure that Page object object creation should be after this line
 		objPLPageObjets = new PLPageObjects(wd);

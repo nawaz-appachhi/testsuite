@@ -156,7 +156,7 @@ public class VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer extends BaseAnd
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_388_START=====================");

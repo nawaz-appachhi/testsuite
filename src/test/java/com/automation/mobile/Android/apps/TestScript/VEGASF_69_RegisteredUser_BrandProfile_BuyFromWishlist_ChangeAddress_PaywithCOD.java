@@ -80,11 +80,11 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		objAndroidGenericMethods.scrollToText(wd, "+INFO");
+//		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText(wd, "+INFO");
 		objProductDescriptionPageObject.clickGoToBag();
 		// objAddCartPageObject.clickShoppingBag();
 		// objProductDescriptionPageObject.clickbagHeaderbtn();
@@ -166,7 +166,7 @@ public class VEGASF_69_RegisteredUser_BrandProfile_BuyFromWishlist_ChangeAddress
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_69_END=====================");

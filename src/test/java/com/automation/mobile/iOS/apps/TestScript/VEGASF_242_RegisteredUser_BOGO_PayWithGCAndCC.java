@@ -71,7 +71,7 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC extends BaseIOSTest{
 	HomePageObject2 objHomePageObject2;
 	EditAdressPageObject objEditAdressPageObject;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -113,25 +113,25 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC extends BaseIOSTest{
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObject2.enterSearchitem(search);
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
 
 	}
 
-//	@Test(priority = 3)
-//	public void Filter() throws InterruptedException, InvalidFileFormatException, IOException {
-//
-//		objPLPageObjets.clickOnFilter();
-//		objAssertionPageObject.verifyDiscount();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//	}
+	@Test(priority = 3)
+	public void Filter() throws InterruptedException, InvalidFileFormatException, IOException {
+
+		objPLPageObjets.clickOnFilter();
+		objAssertionPageObject.verifyDiscount();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+	}
 
 	@Test(priority = 4)
 	public void Save() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPLPageObjets.clickOnFirstproductofPLP();
+		objPLPageObjets.clickOnFirstproductofPLP();
 		objPDPageObject.clickOnSaveButton();
 	}
 
@@ -144,19 +144,20 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC extends BaseIOSTest{
 		objPDPageObject.clickonDoneButton();
 		objPDPageObject.clickOnGoToBag();
 		objiOSGenericMethods.swipeDown(100, 6);
-		objAssertionPageObject.verifyMyBag();
-		objAssertionPageObject.veirfyCartPageWishlist();
-		objAssertionPageObject.verifyProductTitleCartPage();
+	
 
 	}
 
 	@Test(priority = 6)
 	public void ApplyCoupons() throws InterruptedException, InvalidFileFormatException, IOException {
-		objiOSGenericMethods.swipeDown(100, 3);
+		objAssertionPageObject.verifyMyBag();
+//		objAssertionPageObject.veirfyCartPageWishlist();
+		objAssertionPageObject.verifyProductTitleCartPage();
+		objiOSGenericMethods.swipeDown(100, 2);
 		objCartPageObject.ClickOnApplyCoupon();
-		// objAssertionPageObject.verifyApplyCouponHeaders();
-		// String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
-		// objCartPage.enterCoupon(coupon);
+		objAssertionPageObject.verifyApplyCouponHeaders();
+//		String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
+//		objCartPage.enterCoupon(coupon);
 		objCartPageObject.clickOnApplyButton();
 		objiOSGenericMethods.swipeDown(100, 6);
 		objAssertionPageObject.verifyPriceDetails();
@@ -193,6 +194,7 @@ public class VEGASF_242_RegisteredUser_BOGO_PayWithGCAndCC extends BaseIOSTest{
 			@Optional("TD") String platformVersion_, @Optional("TD") String URL_, @Optional("TD") String appUrl_,
 			@Optional("TD") String screenshotPath_, @Optional("TD") String engine_, @Optional("TD") String platform_)
 			throws Exception {
+
 		objGlobalVariables = new GlobalVariables();
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();

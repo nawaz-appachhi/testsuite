@@ -160,7 +160,7 @@ public class VEGASF_377_FB_User_Offers_Concious extends BaseAndroidTest {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_377_END=====================");

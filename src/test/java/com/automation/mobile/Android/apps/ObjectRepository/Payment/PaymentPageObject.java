@@ -240,12 +240,16 @@ public class PaymentPageObject {
 		System.out.println("payment options size is" + options.size() );
 		for (AndroidElement option: options) {
 			String optionValue= option.getText();
+			String COD = "Not available for this order. Why?";
 			System.out.println("payment options available are" + optionValue );
 			if (optionValue.endsWith(paymentOption)) {
 			//	objAndroidGenericMethods.clickOnAndroidElementforwebVIew(option, paymentOption);
 				objAndroidGenericMethods.scrollDown(option, 100);
 				break; 
-			}else {
+			}else if (optionValue.endsWith(COD)){
+				System.out.println("wrong input or cash on delivery is not available");
+			}
+			else {
 				System.out.println("wrong input");
 			}
 		}

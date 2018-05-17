@@ -163,7 +163,7 @@ public class VEGASF_390_FB_User_FreeGift_AddOfficeAddress_CoD2 extends BaseAndro
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_390_END=====================");

@@ -42,9 +42,31 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Running Android Tests..."
     echo “mvn started”
-mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/onescript.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/onescript.xml -DexecutionType=serverside
 #mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/CasualUserFlow.xml -DexecutionType=serverside
 #mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/CouponForCasualUser.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/CouponWithCC_DC_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/CouponWithCC_DC_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/CouponWithCOD.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/DiscountWithCC_DC_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/DiscountWithCC_DC_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/DiscountWithCOD.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/GIftWrapwithCC_DC.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCC_DC_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCC_DC_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCC_DC_Part3.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCC_DC_Part4.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCOD_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/PaymentWithCOD_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistForCasualUser.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistWithCC_DC_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistWithCOD_Part1.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistWithCOD_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistWithCC_DC_Part2.xml -DexecutionType=serverside
+#mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/Android/apps/Prod_Suites/WishlistWithCC_DC_Part3.xml -DexecutionType=serverside
+
+#=======ios
+mvn clean test -Dsurefire.suiteXmlFiles=TestSuites/mobile/iOS/apps/oneScript.xml -DexecutionType=serverside
 
 fi
 echo "Finished Running Tests!"

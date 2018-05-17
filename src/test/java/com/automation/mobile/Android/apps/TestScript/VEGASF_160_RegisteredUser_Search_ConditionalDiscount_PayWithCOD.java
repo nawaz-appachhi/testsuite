@@ -159,7 +159,7 @@ public class VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD ext
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_160_END=====================");

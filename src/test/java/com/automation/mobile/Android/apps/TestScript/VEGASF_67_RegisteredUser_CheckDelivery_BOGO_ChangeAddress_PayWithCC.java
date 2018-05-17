@@ -82,11 +82,11 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickSaveToWishlist();
 		// objAndroidGenericMethods.scrolltoElementAndClick("down",pincodeHeader, 5000);
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		objAndroidGenericMethods.scrollToText(wd, "+INFO");
+//		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText(wd, "+INFO");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.verifySize_selector("Size");
 		objProductDescriptionPageObject.selectASize();
@@ -160,7 +160,7 @@ public class VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_67_END=====================");

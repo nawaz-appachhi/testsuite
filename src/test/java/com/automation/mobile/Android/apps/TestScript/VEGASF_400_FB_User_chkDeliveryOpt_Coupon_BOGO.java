@@ -93,11 +93,11 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO extends BaseAndroidTe
 		objProductDescriptionPageObject.assertProductPrice();
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		objAndroidGenericMethods.scrollToText(wd, "+INFO");
+//		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText(wd, "+INFO");
 	}
 
 	@Test(priority = 5)
@@ -178,7 +178,7 @@ public class VEGASF_400_FB_User_chkDeliveryOpt_Coupon_BOGO extends BaseAndroidTe
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_400_END=====================");

@@ -7,10 +7,10 @@
 	</listeners> -->
 	 <test name="VEGASF_357_FB_User_Offers_Concious">
 		<parameter name="deviceName_" value="iPhone 8" />
-		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
+		<parameter name="UDID_" value="f6bcff807a2e4fe0c9105db00c1891422c8b1d44" />
 		<parameter name="platformVersion_" value="11.3" />
 		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
-		<parameter name="appUrl_" value="./apps/iOS/apps/Prod_iOS_V3.16.0.ipa" />
+		<parameter name="appUrl_" value="./apps/iOS/apps/Myntra.ipa" />
 		<parameter name="screenshotPath_" value="" />
 		<parameter name="engine_" value="local" />  <!-- engine_ values ::::::  TD/local -->
 		<parameter name="platform_" value="iOS" /> <!-- platform_ values ::::::  iOS/iOS_mWeb/ANDROID/ANDROID_mWeb -->

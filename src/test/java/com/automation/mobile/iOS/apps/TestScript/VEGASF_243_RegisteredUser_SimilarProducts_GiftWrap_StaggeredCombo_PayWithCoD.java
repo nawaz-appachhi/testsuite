@@ -69,7 +69,7 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 	HomePageObject2 objHomePageObject2;
 	EditAdressPageObject objEditAdressPageObject;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -112,15 +112,15 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		objHomePageObject2.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+
+	}
 
 	@Test(priority = 4)
 	public void AddToBag() throws InterruptedException {
@@ -146,10 +146,12 @@ public class VEGASF_243_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 		String msg = objiOSGenericMethods.getValueByKey(TestName, "GiftMessage");
 		String senderName = objiOSGenericMethods.getValueByKey(TestName, "SenderName");
 		objCartPageObject.giftWrap(recipentName, msg, senderName);
-		objiOSGenericMethods.swipeDown(100, 6);
+		objiOSGenericMethods.SwipeUp(100, 3);
+		objCartPageObject.clickOnSaveGift();
+		objiOSGenericMethods.swipeDown(100, 5);
 		objAssertionPageObject.verifyPriceDetails();
 		objCartPageObject.clickOnplaceOrder();
-		
+
 	}
 
 	@Test(priority = 6)

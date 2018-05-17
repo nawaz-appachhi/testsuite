@@ -46,7 +46,7 @@ public class VEGASF_92_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC e
 	AddNewAdressPageObjects objAddAddressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -85,13 +85,13 @@ public class VEGASF_92_RegisteredUser_BrandConcious_SizeSensitive_PayingWithCC e
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(iOSGenericMethods.getValueByKey(TestName, "Search"));
-//		objiOSGenericMethods.acceptAlert();
-//		objPLPageObjets.clickOnSort();
-//		objPLPageObjets.clickOnNewSort();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
+		objiOSGenericMethods.acceptAlert();
+		objPLPageObjets.clickOnSort();
+		objPLPageObjets.clickOnNewSort();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
 	}
 
 	@Test(priority = 3)

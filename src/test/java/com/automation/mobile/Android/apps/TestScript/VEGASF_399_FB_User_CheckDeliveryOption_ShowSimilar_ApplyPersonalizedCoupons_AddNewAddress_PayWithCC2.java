@@ -88,11 +88,11 @@ public class VEGASF_399_FB_User_CheckDeliveryOption_ShowSimilar_ApplyPersonalize
 		Reporter.log("MoveToBag");
 		objProductDescriptionPageObject.clickAddToBagbtn();
 		objProductDescriptionPageObject.selectASize();
-		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
-		objProductDescriptionPageObject.clickEnterPincodebtn();
-		objProductDescriptionPageObject.clickPincodeTxt("560068");
-		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
-		objAndroidGenericMethods.scrollToText(wd, "+INFO");
+//		objAndroidGenericMethods.scrollToText(wd, "CHECK DELIVERY");
+//		objProductDescriptionPageObject.clickEnterPincodebtn();
+//		objProductDescriptionPageObject.clickPincodeTxt("560068");
+//		objProductDescriptionPageObject.checkDeliveryOptionsbtn();
+//		objAndroidGenericMethods.scrollToText(wd, "+INFO");
 		objProductDescriptionPageObject.clickGoToBag();
 	}
 

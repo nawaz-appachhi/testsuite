@@ -115,7 +115,7 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 	CartPageObject objCartPageObject;
 	AssertionPageObject objAssertionPageObject;
 	MenCategoriesPageObjects objMenCategoriesPageObjects;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	String TestName = "VEGASF_224";
 
@@ -158,18 +158,18 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 		objHomePageObjects.clickOnSearchButton();
 		String search = objiOSGenericMethods.getValueByKey(TestName, "Search");
 		objHomePageObjects.enterSearchitem(search);
-//		objiOSGenericMethods.clickOkButton();
+		objiOSGenericMethods.clickOkButton();
 	}
 
-//	@Test(priority = 3)
-//	public void selectProductPLPage() throws InterruptedException {
-//
-//		// objPLPageObjets.clickOnOkAndTouch();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//
-//	}
+	@Test(priority = 3)
+	public void selectProductPLPage() throws InterruptedException {
+
+		// objPLPageObjets.clickOnOkAndTouch();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
+
+	}
 
 	@Test(priority = 4)
 	public void checkForBestPriceAndaddProductToBag() throws InterruptedException {

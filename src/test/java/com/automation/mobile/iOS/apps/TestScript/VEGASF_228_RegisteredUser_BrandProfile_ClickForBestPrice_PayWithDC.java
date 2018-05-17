@@ -87,7 +87,7 @@ public class VEGASF_228_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 	MobileDrivers objMobileDrivers;
 	CartPageObject objCartPageObject;
 	AssertionPageObject objAssertionPageObject;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	PaymentPageObject objPaymentPageObjects;
 	WishlistPageObject objWishlistPageObject;
@@ -132,15 +132,15 @@ public class VEGASF_228_RegisteredUser_BrandProfile_ClickForBestPrice_PayWithDC 
 		objHomePageObjects.enterSearchitem(objiOSGenericMethods.getValueByKey(TestName, "Search"));
 	}
 
-//	@Test(priority = 3)
-//
-//	public void selectProductPLPage() throws InterruptedException {
-//
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objAssertionPageObject.verifyProductBrand();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+
+	public void selectProductPLPage() throws InterruptedException {
+
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objAssertionPageObject.verifyProductBrand();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 

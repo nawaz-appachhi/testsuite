@@ -61,7 +61,7 @@ public class HamburgerPageObject {
 	 * @ModifiedBy:-Rakesh Modified reason: changed the xpath as it contianed ? in
 	 *                     text.
 	 */
-	@FindBy(xpath = "//*[@content-desc='leftElement']")
+	@FindBy(xpath = "//*[@content-desc='leftElement' or @text='leftElement']")
 	public AndroidElement myAccountClosebtn;
 
 	/**

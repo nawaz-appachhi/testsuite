@@ -171,7 +171,7 @@ public class VEGASF_167_RegisteredUser_Filter_Discount_GiftWrap_PayWithCredit_De
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_167_END=====================");

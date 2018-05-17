@@ -169,7 +169,7 @@ public class VEGASF_395_FB_User_EmptyWishlist_AddMoreFromWishlist_PercentageDisc
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_395_END=====================");

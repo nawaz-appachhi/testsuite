@@ -528,7 +528,7 @@ public class ProductDescriptionPageObject {
 	public AndroidElement size_selector;
 
 	// PDP title
-	@FindBy(xpath = "//*[@content-desc ='product_head']/*/android.widget.TextView | //android.view.View[@content-desc ='product_head']/android.view.View/android.widget.TextView")
+	@FindBy(xpath = "//*[@content-desc ='product_head']/*/android.widget.TextView" )
 	public AndroidElement pdpTitle;
 
 	/**

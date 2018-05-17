@@ -54,7 +54,7 @@ Wallet
  *
  */
 
-public class AlertCrawler extends BaseIOSTest {
+public class AlertCrawler extends BaseIOSTest{
 
 	GlobalVariables objGlobalVariables;
 	iOSGenericMethods objiOSGenericMethods;
@@ -64,7 +64,7 @@ public class AlertCrawler extends BaseIOSTest {
 	AssertionPageObject objAssertionPageObject;
 	HomePageObject2 objHomePageObjects;
 	MobileDrivers objMobileDrivers;
-	// IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objLoginPageObject;
 	WishlistPageObject objWishlistPageObject;
 	CartPageObject objCartPage;
@@ -101,7 +101,7 @@ public class AlertCrawler extends BaseIOSTest {
 
 	@Test(priority = 2)
 	public void SearchItem() throws InterruptedException, AWTException, InvalidFileFormatException, IOException {
-		// objHomePageObjects.emptyBag();
+//		objHomePageObjects.emptyBag();
 		objHomePageObjects.clickOnHomeButton();
 		objHomePageObjects.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
@@ -134,6 +134,7 @@ public class AlertCrawler extends BaseIOSTest {
 		objAssertionPageObject.verifyMyBag();
 		objCartPage.clickOnplaceOrder();
 	}
+
 
 	@Test(priority = 6)
 	public void addressPage() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -173,18 +174,21 @@ public class AlertCrawler extends BaseIOSTest {
 		params.put("screenshotPath_", screenshotPath_);
 		params.put("engine_", engine_);
 		params.put("platform_", platform_);
-		if (!(params.get("engine_").equalsIgnoreCase("TD"))) {
-			wd = objMobileDrivers.launchAppiOS(params);
-		} else {
-			try {
-				setUpTest();
-				System.out.println("TestDroid Execution Started");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Error :: Please change suite parameter to run locally.");
-			}
-
-		}
+		if (!(params.get("engine_").equalsIgnoreCase("TD")))
+	        {
+	                wd =   objMobileDrivers.launchAppiOS(params);
+	        }
+	        else
+	        {
+	                try {
+	                     setUpTest();
+	                     System.out.println("TestDroid Execution Started");
+	                 } catch (Exception e) {
+	                     // TODO Auto-generated catch block
+	                     System.out.println("Error :: Please change suite parameter to run locally.");
+	                 }
+	                
+	        }
 		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Test Name " + TestName);
 		// Make sure that Page object object creation should be after this line
@@ -200,15 +204,15 @@ public class AlertCrawler extends BaseIOSTest {
 		objAssertionPageObject = new AssertionPageObject(wd);
 	}
 
-	@AfterTest
+	 @AfterTest
 	public void quit() {
-		try {
+		 try {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		wd.quit();
+		 wd.quit();
 	}
 
 }

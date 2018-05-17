@@ -68,7 +68,7 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC extends 
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -112,17 +112,17 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC extends 
 
 	}
 
-//	@Test(priority = 3)
-//	public void FilterOnPLPage() throws InterruptedException, InvalidFileFormatException, IOException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnFilterDiscountPercentage(11);
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPHeader();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnFirstproductofPLP();
-//	}
+	@Test(priority = 3)
+	public void FilterOnPLPage() throws InterruptedException, InvalidFileFormatException, IOException {
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnFilterDiscountPercentage(11);
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnFirstproductofPLP();
+	}
 
 	@Test(priority = 4)
 	public void PDPPage() throws InterruptedException {

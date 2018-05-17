@@ -162,7 +162,7 @@ public class VEGASF_73_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD 
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_73_END=====================");

@@ -183,7 +183,7 @@ public class VEGASF_174_RegisteredUser_SimilarProducts_GiftWrap_StaggeredCombo_P
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_174_END=====================");

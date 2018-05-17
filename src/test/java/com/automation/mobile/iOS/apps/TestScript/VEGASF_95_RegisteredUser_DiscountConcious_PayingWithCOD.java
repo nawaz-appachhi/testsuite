@@ -44,7 +44,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 	AddNewAdressPageObjects objAddNewAdressPageObjects;
 	HomePageObject2 objHomePageObject2;
 	MobileDrivers objMobileDrivers;
-	//IOSDriver<IOSElement> wd;
+	//IOSDriver<IOSElement> iDriver;
 	ProfileLoginPageObject objProfileLoginPageObject;
 	AssertionPageObject objAssertionPageObject;
 	PaymentPageObject objPaymentPageObject;
@@ -57,7 +57,6 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 
 	@Test(priority = 1)
 	public void LoginInApp() throws InterruptedException, IOException {
-
 		try {
 			objProfileLoginPageObject.clickOnOnBoardingCrossButton();
 			System.out.println("On Boarding screen appeared and closed it");
@@ -73,7 +72,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 				iOSGenericMethods.getValueByKey(TestName, "Password"));
 		objProfileLoginPageObject.clickOnLoginButton();
 		objAssertionPageObject.verifyUserName();
-		// objiOSGenericMethods.acceptAlert();
+//		objiOSGenericMethods.acceptAlert();
 		objiOSGenericMethods.swipeDown(100, 4);
 		objProfileLoginPageObject.removeAddress();
 	}
@@ -85,19 +84,19 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 		objHomePageObject2.clickOnSearchButton();
 		objAssertionPageObject.VerifyAutoSuggestionList();
 		objHomePageObject2.setSearchBox(objiOSGenericMethods.getValueByKey(TestName, "Search"));
-		// objiOSGenericMethods.acceptAlert();
-		// objPLPageObjets.clickOnSort();
-		// objPLPageObjets.clickOnDiscountSort();
-		// objAssertionPageObject.verifyProductname();
-		// objAssertionPageObject.verifyPLPHeader();
-		// objAssertionPageObject.verifyPLPProductCount();
-		// objPLPageObjets.clickOnBrandNamePLP();
+		objiOSGenericMethods.acceptAlert();
+		objPLPageObjets.clickOnSort();
+		objPLPageObjets.clickOnDiscountSort();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPHeader();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
 	}
 
 	@Test(priority = 3)
 	public void PDPage() throws InterruptedException {
-
-		// objAssertionPageObject.verifyStrickPrice();
+		
+		//objAssertionPageObject.verifyStrickPrice();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();
@@ -118,7 +117,6 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 		objAddNewAdressPageObjects.clickOnPlaceOrder();
 
 	}
-
 	@Test(priority = 6)
 	public void AddAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyAddressHeaders();
@@ -136,7 +134,7 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 
 	@Test(priority = 7)
 	public void Payment() throws InterruptedException {
-
+		
 		objiOSGenericMethods.swipeDown(100, 4);
 		objAssertionPageObject.verifyDeliverTo();
 		objiOSGenericMethods.SwipeUp(100, 4);
@@ -155,12 +153,12 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 		objAppiumServer = new AppiumServer();
 		objMobileDrivers = new MobileDrivers();
 		Map<String, String> params = new HashMap<String, String>();
-		params.put("deviceName_", deviceName_);
-		params.put("UDID_", UDID_);
-		params.put("platformVersion_", platformVersion_);
-		params.put("URL_", URL_);
-		params.put("appUrl_", appUrl_);
-		params.put("screenshotPath_", screenshotPath_);
+        params.put("deviceName_", deviceName_);
+        params.put("UDID_", UDID_);
+        params.put("platformVersion_", platformVersion_);
+        params.put("URL_", URL_);
+        params.put("appUrl_", appUrl_);
+        params.put("screenshotPath_", screenshotPath_);
 		params.put("engine_", engine_);
 		params.put("platform_", platform_);
 		if (!(params.get("engine_").equalsIgnoreCase("TD")))
@@ -192,15 +190,14 @@ public class VEGASF_95_RegisteredUser_DiscountConcious_PayingWithCOD extends Bas
 		objHomePageObject2 = new HomePageObject2(wd);
 		objAddNewAdressPageObjects = new AddNewAdressPageObjects(wd);
 	}
-
-	@AfterTest
-	public void quit() {
-		 try {
+	 @AfterTest
+		public void quit() {
+			 try {
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 wd.quit();
-	}
+		}
 }

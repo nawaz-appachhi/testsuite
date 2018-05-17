@@ -61,7 +61,7 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift extends BaseIOSTest{
 	PaymentPageObject objPaymentPageObjects;
 	String TestName = "VEGASF_358";
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 
 	public void LoginApp() throws InterruptedException, InvalidFileFormatException, IOException {
 		try {
@@ -74,56 +74,69 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift extends BaseIOSTest{
 		objLoginPageObject.clickOnProfileButton();
 		objiOSGenericMethods.swipeDown(100, 7);
 		objLoginPageObject.clickOnLogOut();
-//		objLoginPageObject.clickOnFaceBook();
-//		Thread.sleep(5000);
-//		Set<String> contextNames = wd.getContextHandles();
-//		for (String contextName : contextNames) {
-//			if (contextName.contains("WEBVIEW"))
-//				wd.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + wd.getContext());
-//		}
-////		objiOSGenericMethods.acceptAlert();
-//
-//		try {
-//			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
-//			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
-//			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
-//			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
-//			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
-//			Thread.sleep(2000);
-//			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
-//			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
-//			if (emailid.isDisplayed()) {
-//				emailid.sendKeys(email);
-//				pass.sendKeys(password);
-//				loginButton.click(); 
-//			}
-//
-//			if (continueLogin.isDisplayed()) {
-//				objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin.click();
-//			}else if(continueLogin2.isDisplayed()) {
-//				//objiOSGenericMethods.fluentWait(continueLogin);
-//				continueLogin2.click();
-//			}
-//		} catch (Exception e) {
-//			System.out.println("user can continue with face book login!");
-//		} 
-//		try {
-//			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
-//			objiOSGenericMethods.fluentWait(cont);
-//			cont.click();
-//		} catch (Exception e) {
-//			System.out.println("User is already login, No continue button to click!");
-//		}
-//		Set<String> contextNames2 = wd.getContextHandles();
-//		for (String contextName : contextNames2) {
-//			if (contextName.contains("NATIVE_APP"))
-//				wd.context(contextName);
-//			System.out.println(contextName);
-//			System.out.println("Context --> " + wd.getContext());
-//		}
+		objLoginPageObject.clickOnFaceBook();
+		Thread.sleep(5000);
+		Set<String> contextNames = wd.getContextHandles();
+		for (String contextName : contextNames) {
+			if (contextName.contains("WEBVIEW"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		}
+//		objiOSGenericMethods.acceptAlert();
+
+		try {
+			WebElement emailid = wd.findElement(By.cssSelector("#m_login_email"));
+			WebElement pass = wd.findElement(By.cssSelector("#m_login_password"));
+			WebElement loginButton = wd.findElement(By.cssSelector("#u_0_5"));
+			WebElement continueLogin = wd.findElement(By.cssSelector("#u_0_9"));
+			 WebElement continueLogin2 = wd.findElement(By.cssSelector("#u_0_3"));
+			Thread.sleep(2000);
+			String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
+			String password = iOSGenericMethods.getValueByKey(TestName, "Password");
+			if (emailid.isDisplayed()) {
+				emailid.sendKeys(email);
+				pass.sendKeys(password);
+				loginButton.click(); 
+			}
+
+			if (continueLogin.isDisplayed()) {
+				objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin.click();
+			}else if(continueLogin2.isDisplayed()) {
+				//objiOSGenericMethods.fluentWait(continueLogin);
+				continueLogin2.click();
+			}
+		} catch (Exception e) {
+			System.out.println("user can continue with face book login!");
+		} 
+		try {
+			WebElement cont = wd.findElement(By.cssSelector("#u_0_3"));
+			objiOSGenericMethods.fluentWait(cont);
+			cont.click();
+		} catch (Exception e) {
+			System.out.println("User is already login, No continue button to click!");
+		}
+		Set<String> contextNames2 = wd.getContextHandles();
+		for (String contextName : contextNames2) {
+			if (contextName.contains("NATIVE_APP"))
+				wd.context(contextName);
+			System.out.println(contextName);
+			System.out.println("Context --> " + wd.getContext());
+		}
+		objAssertionPageObject.verifyUserName();
+		objiOSGenericMethods.swipeDown(100, 6);
+		objLoginPageObject.removeAddress();
+	}
+
+	
+	
+	
+	@Test(priority = 1)
+	public void LoginInApp() throws InterruptedException, InvalidFileFormatException, IOException {
+		objLoginPageObject.clickOnProfileButton();
+		objiOSGenericMethods.swipeDown(100, 8);
+		objLoginPageObject.clickOnLogOut();
 		objLoginPageObject.clickOnLogin();
 		String email = iOSGenericMethods.getValueByKey(TestName, "UserName");
 		String password = iOSGenericMethods.getValueByKey(TestName, "Password");
@@ -134,7 +147,7 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift extends BaseIOSTest{
 		objiOSGenericMethods.swipeDown(100, 6);
 		objLoginPageObject.removeAddress();
 	}
-
+	
 	@Test(priority = 2)
 
 	public void SearchItem() throws InterruptedException, InvalidFileFormatException, IOException {
@@ -145,17 +158,17 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift extends BaseIOSTest{
 		objHomePageObjects.enterSearchitem(search);
 	}
 
-//	@Test(priority = 3)
-//
-//	public void productListingPage() throws InterruptedException {
-//		objPLPageObjets.clickOnFilter();
-//		objPLPageObjets.clickOnFilterDiscount();
-//		objPLPageObjets.clickOnSelectFirstFilterDiscount();
-//		objPLPageObjets.clickOnApplyDiscount();
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
-//	}
+	@Test(priority = 3)
+
+	public void productListingPage() throws InterruptedException {
+		objPLPageObjets.clickOnFilter();
+		objPLPageObjets.clickOnFilterDiscount();
+		objPLPageObjets.clickOnSelectFirstFilterDiscount();
+		objPLPageObjets.clickOnApplyDiscount();
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
+	}
 
 	@Test(priority = 4)
 
@@ -163,13 +176,13 @@ public class VEGASF_358_FB_User_SaveWishlist_FreeGift extends BaseIOSTest{
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.clickOnSizeChart();
 		objPDPageObject.clickOnSizeChartBackButton();
-//		objPDPageObject.clickOnBack();
-//		objPLPageObjets.clickOnSearchOnPLP();
-//		String search = objiOSGenericMethods.getValueByKey(TestName, "FreeGift");
-//		objHomePageObjects.enterSearchitem(search);
-//		objAssertionPageObject.verifyProductname();
-//		objAssertionPageObject.verifyPLPProductCount();
-//		objPLPageObjets.clickOnBrandNamePLP();
+		objPDPageObject.clickOnBack();
+		objPLPageObjets.clickOnSearchOnPLP();
+		String search = objiOSGenericMethods.getValueByKey(TestName, "FreeGift");
+		objHomePageObjects.enterSearchitem(search);
+		objAssertionPageObject.verifyProductname();
+		objAssertionPageObject.verifyPLPProductCount();
+		objPLPageObjets.clickOnBrandNamePLP();
 		objPDPageObject.clickOnAddToBag();
 		objPDPageObject.getSizeListinString(0);
 		objPDPageObject.clickonDoneButton();

@@ -167,7 +167,7 @@ public class VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_Pa
 			quitAppiumSession();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		wd.quit();
 		System.out.println("=====================VEGASF_170_END=====================");
