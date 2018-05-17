@@ -44,7 +44,7 @@
 					<suiteXmlFiles>
 						<file>${suiteXmlFile}</file>
 					</suiteXmlFiles>
-					<reportsDirectory>Reports/${timestamp}</reportsDirectory>
+					<!-- <reportsDirectory>Reports/${timestamp}</reportsDirectory> -->
 				</configuration> 
 			</plugin>
 		</plugins>
