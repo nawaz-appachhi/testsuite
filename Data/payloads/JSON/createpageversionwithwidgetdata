@@ -1,0 +1,12 @@
+{
+    "createdBy":"${0}",
+    "version":"${1}",
+    "label":"${2}",
+    "widgets": [{
+        "widgetId":"${3}",
+        "data":"{${4}}"
+    },{
+        "widgetId":"${5}",
+        "data":"{${6}}"
+    }]
+}

@@ -1,0 +1,8 @@
+{
+"description": "${0}",
+"aspectRatio": "2:1",
+"imageId": 3604555,
+"image": "http://assets.myntassets.com/assets/images/2015/9/22/11442915813438-75798-19rvmes.png",
+"products": [${1}],
+"tags": [${2}]
+}

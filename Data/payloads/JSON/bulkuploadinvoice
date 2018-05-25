@@ -1,0 +1,51 @@
+{
+    "invoiceDetailResponse": {
+        "invoiceDetails": [
+            {
+                "poNumber": "${0}",
+                "invoiceRef": "${1}",
+                "invoiceDate": "${2}",
+                "vanNumber": "${3}",
+                "productDescription": "${4}",
+                "quantity": "${5}",
+                "unitPrice": "${6}",
+                "totalBasePrice": "${7}",
+                "taxPercentage": "${8}",
+                "taxType": "${9}",
+                "taxValue": "${10}",
+                "totalIncludingTax": "${11}",
+                "vendorCode":"${12}"
+            },
+            {
+                "poNumber": "${13}",
+                "invoiceRef": "${14}",
+                "invoiceDate": "${15}",
+                "vanNumber": "${16}",
+                "productDescription": "${17}",
+                "quantity": "${18}",
+                "unitPrice": "${19}",
+                "totalBasePrice": "${20}",
+                "taxPercentage": "${21}",
+                "taxType": "${22}",
+                "taxValue": "${23}",
+                "totalIncludingTax": "${24}",
+                "vendorCode":"${25}"
+            },
+            {
+                "poNumber": "${26}",
+                "invoiceRef": "${27}",
+                "invoiceDate": "${28}",
+                "vanNumber": "${29}",
+                "productDescription": "${30}",
+                "quantity": "${31}",
+                "unitPrice": "${32}",
+                "totalBasePrice": "${33}",
+                "taxPercentage": "${34}",
+                "taxType": "${35}",
+                "taxValue": "${36}",
+                "totalIncludingTax": "${37}",
+                "vendorCode":"${38}"
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+<emailEntry>
+    <mimeType>text/html</mimeType>
+    <mode>0</mode>
+    <sender>support@myntra.com</sender>
+    <sent>1</sent>
+    <smtp>AMAZON</smtp>
+    <subject></subject>
+    <templateEntry>
+        <name>return_confirmation_sms</name>
+        <renderPair>
+            <renderKey>customerName</renderKey>
+            <renderValue>sneha agarwal</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>returnId</renderKey>
+            <renderValue>10566617</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>orderId</renderKey>
+            <renderValue>9656783</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>returnMode</renderKey>
+            <renderValue>PICKUP</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>refundMode</renderKey>
+            <renderValue>CASHBACK</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>accountRefundAmount</renderKey>
+            <renderValue>0.00</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>cashbackRefundAmount</renderKey>
+            <renderValue>720.00</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>itemName</renderKey>
+            <renderValue>Roadster Men Navy Casual Shoes</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>agentName</renderKey>
+            <renderValue>Ramesh Kumar</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>agentMobileNo</renderKey>
+            <renderValue>8698244726</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>daysToPickup</renderKey>
+            <renderValue>3</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>walletName</renderKey>
+            <renderValue>PhonePe Wallet</renderValue>
+        </renderPair>
+        <type>0</type>
+    </templateEntry>
+    <to>sneha.agarwal@myntra.com</to>
+</emailEntry>

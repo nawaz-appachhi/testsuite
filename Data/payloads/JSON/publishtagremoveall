@@ -1,0 +1,4 @@
+{
+    "operation": "remove_all",
+    "tagNamespace": "${0}"
+}

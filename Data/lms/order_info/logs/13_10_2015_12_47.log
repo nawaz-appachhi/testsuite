@@ -1,0 +1,58 @@
+------Placing an order=1 -----------------
+address response={
+  "status" : {
+    "statusCode" : 15001,
+    "statusMessage" : "Address added successfully",
+    "statusType" : "SUCCESS",
+    "totalCount" : 1
+  },
+  "xsrfToken" : "C8VM1r4pzClxYP5agizJ2Zb08LTBGir5",
+  "data" : [ {
+    "id" : 14294039,
+    "userId" : "test.myntra.order@gmail.com",
+    "defaultAddress" : false,
+    "name" : "Neha",
+    "address" : "AKR Tech Park,AKR-A,Kudlu",
+    "city" : "Bangalore",
+    "stateCode" : "KA",
+    "stateName" : "Karnataka",
+    "countryCode" : "IN",
+    "countryName" : "India",
+    "pincode" : "560068",
+    "email" : "Neha.Malhan&#x40;myntra.com",
+    "mobile" : "9873485400",
+    "locality" : "Hosur road",
+    "updatedOn" : 1444720644475,
+    "updatedBy" : "test.myntra.order@gmail.com"
+  } ]
+}
+xid response=JJN11273613956b9b04f11856e2a529c691b391444720646M,test.myntra.order@gmail.com
+
+bounty create order=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orderCreationResponse><status><statusCode>1001</statusCode><statusMessage>Order added successfully</statusMessage><statusType>SUCCESS</statusType><totalCount>1</totalCount></status><data><order><id>94941965</id><version>0</version><finalAmount>2500.0</finalAmount></order></data></orderCreationResponse>bounty queue order=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><orderCreationResponse><status><statusCode>1001</statusCode><statusMessage>Order added successfully</statusMessage><statusType>SUCCESS</statusType><totalCount>1</totalCount></status><data><order><id>94941965</id><version>0</version><binNumber>12345</binNumber><cartContext>DEFAULT</cartContext><login>santwana.samantray@myntra.com</login><paymentMethod>cod</paymentMethod><paymentStatus>success</paymentStatus><pgDiscount>0.0</pgDiscount><queuedOrderStatus>Q</queuedOrderStatus><sessionId>JJN11273613956b9b04f11856e2a529c691b391444720646M</sessionId></order></data></orderCreationResponse>delete order response={
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "lYFbZ5bQkEUwVxG32g4FhKscPjjqWLAH",
+  "showCaptcha" : false,
+  "existingUser" : true,
+  "user" : {
+    "login" : "test.myntra.order@gmail.com",
+    "uidx" : "41252801.d595.4c21.8dd4.a71cc2b758ccqpttGZ5rud",
+    "usertype" : "C",
+    "firstname" : "Gurushant",
+    "email" : "test.myntra.order@gmail.com",
+    "mobile" : "8904965969",
+    "new_" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1444631664
+  }
+}
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+

@@ -1,0 +1,120 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"cashbackResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"cashbackBalanceEntry": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"cashbackBalance": {
+							"type":"number",
+							"required":false
+						},
+						"earnedCreditBalance": {
+							"type":"number",
+							"required":false
+						},
+						"storeCreditBalance": {
+							"type":"number",
+							"required":false
+						}
+					}
+				},
+				"cashbackLogEntryList": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"cashbackLogEntry": {
+							"type":"array",
+							"required":false,
+							"items":
+								{
+									"type":"object",
+									"required":false,
+									"properties":{
+										"balance": {
+											"type":"number",
+											"required":false
+										},
+										"businessProcess": {
+											"type":"string",
+											"required":false
+										},
+										"cashbackAccountId": {
+											"type":"number",
+											"required":false
+										},
+										"creditInflow": {
+											"type":"number",
+											"required":false
+										},
+										"creditOutflow": {
+											"type":"number",
+											"required":false
+										},
+										"description1": {
+											"type":"string",
+											"required":false
+										},
+										"descriptionOrderNo": {
+											"type":"number",
+											"required":false
+										},
+										"description": {
+											"type":"string",
+											"required":false
+										},
+										"itemId": {
+											"type":"number",
+											"required":false
+										},
+										"itemType": {
+											"type":"string",
+											"required":false
+										},
+										"modifiedBy": {
+											"type":"string",
+											"required":false
+										},
+										"modifiedOn": {
+											"type":"string",
+											"required":false
+										}
+									}
+								}
+							
+
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":false
+						}
+					}
+				}
+			}
+		}
+	}
+}

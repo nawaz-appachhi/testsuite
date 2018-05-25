@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TaxMasterService" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="TaxMaster"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+	</listeners>
+	<test name="omsTests">
+		<groups>
+			<run>
+				<include name="Sanity"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.taxMaster.RuleEngineGST"/>
+		</classes>
+	</test>
+</suite>

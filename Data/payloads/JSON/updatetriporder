@@ -1,0 +1,21 @@
+{
+    "tripOrderResponse": {
+        "data": {
+            "tripOrder": [
+                {
+                    "id": "${0}",
+                    "remark": "test",
+                    "pickupReasonCode": null,
+                    "deliveryReasonCode": "${1}",
+                    "exchangeOrderId": null,
+                    "deliveryTime": null,
+                    "tripAction": "TRIP_COMPLETE",
+                    "updatedVia": "WEB",
+                    "paymentType": "CASH",
+                    "isReturnScanned": "false",
+                    "isOutScanned": "false"
+                }
+            ]
+        }
+    }
+}

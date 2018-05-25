@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SessionTestSuite" verbose="1">
+    <parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="Session Suite"/>
+    <parameter name="type" value="Sanity"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		
+	</listeners>
+	<test name="SessionServiceTests">
+		<groups>
+			<run>
+				<include name="Sanity" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.SessionServiceTests" />
+		</classes>
+		 <!--<packages>
+		     <package name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+              <package name="com.myntra.apiTests.test.regression.lgpservices.SessionServiceTests" />
+         </packages>  -->
+	</test>
+</suite>

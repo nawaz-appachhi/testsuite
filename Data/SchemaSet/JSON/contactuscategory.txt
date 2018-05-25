@@ -1,0 +1,158 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"level1": {
+			"type":"array",
+			"required":true,
+			"items":
+				{
+					"type":"object",
+					"required":false,
+					"properties":{
+						"displayname": {
+							"type":"string",
+							"required":true
+						},
+						"level1api": {
+							"type":"string",
+							"required":true
+						},
+						"level2": {
+							"type":"array",
+							"required":true,
+							"items":
+								{
+									"type":"object",
+									"required":false,
+									"properties":{
+										"attachmentlimit": {
+											"type":"number",
+											"required":false
+										},
+										"displayname": {
+											"type":"string",
+											"required":false
+										},
+										"inputfields": {
+											"type":"array",
+											"required":false,
+											"items":[
+												{
+													"type":"object",
+													"required":false,
+													"properties":{
+														"mandatory": {
+															"type":"boolean",
+															"required":false
+														},
+														"name": {
+															"type":"string",
+															"required":false
+														},
+														"title": {
+															"type":"string",
+															"required":false
+														},
+														"type": {
+															"type":"string",
+															"required":false
+														}
+													}
+												},
+												{
+													"type":"object",
+													"required":false,
+													"properties":{
+														"mandatory": {
+															"type":"boolean",
+															"required":false
+														},
+														"name": {
+															"type":"string",
+															"required":false
+														},
+														"title": {
+															"type":"string",
+															"required":false
+														},
+														"type": {
+															"type":"string",
+															"required":false
+														}
+													}
+												},
+												{
+													"type":"object",
+													"required":false,
+													"properties":{
+														"editable": {
+															"type":"boolean",
+															"required":false
+														},
+														"mandatory": {
+															"type":"boolean",
+															"required":false
+														},
+														"name": {
+															"type":"string",
+															"required":false
+														},
+														"title": {
+															"type":"string",
+															"required":false
+														},
+														"type": {
+															"type":"string",
+															"required":false
+														}
+													}
+												}
+											]
+										},
+										"level2api": {
+											"type":"string",
+											"required":false
+										},
+										"selfserve": {
+											"type":"array",
+											"required":false,
+											"items":
+												{
+													"type":"object",
+													"required":false,
+													"properties":{
+														"desc": {
+															"type":"string",
+															"required":false
+														},
+														"title": {
+															"type":"string",
+															"required":false
+														},
+														"type": {
+															"type":"string",
+															"required":false
+														}
+													}
+												}
+											
+
+										},
+										"sendquery": {
+											"type":"boolean",
+											"required":false
+										}
+									}
+								}
+							
+
+						}
+					}
+				}
+			
+
+		}
+	}
+}

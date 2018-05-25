@@ -1,0 +1,12 @@
+{
+    "login":"${0}",
+    "password":"${1}",
+    "usertype":"${2}",
+    "gender":"${3}",
+    "title":"${4}",
+    "firstname":"${5}",
+    "lastname":"${6}",
+    "email":"${7}",
+    "mobile":"${8}",
+    "captchaValue":"3572029068"
+}

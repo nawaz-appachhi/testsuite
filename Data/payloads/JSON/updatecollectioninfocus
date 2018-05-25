@@ -1,0 +1,8 @@
+{
+  "collectionInFocusStatuses":[
+    {
+      "id":"${0}",
+      "status":"${1}"
+    }
+    ]
+}

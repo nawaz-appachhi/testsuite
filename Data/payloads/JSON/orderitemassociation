@@ -1,0 +1,11 @@
+{  
+   "checkout":{  
+      "orderId":"${1}",
+      "cartonBarcode":"",
+      "items":[  
+         {  
+            "id":"${2}"
+         }
+      ]
+   }
+}

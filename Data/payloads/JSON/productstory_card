@@ -1,0 +1,14 @@
+ {
+      "appId": 4,
+      "refId": "productStoryobj_${0}",
+      "type": "product-story",
+      "title": "We saw you searching for Tshirts.",
+      "description": "Don't look any further. We've got the perfect collection of Tshirts just for you.",
+      "url": "http://myntra.com/Tshirts",
+      "imageUrl": "",
+      "extraData": "{\"aspectRatio\":\"3:4\"}",
+      "productRack": "{\"productIds\":[563360,563348,563357]}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

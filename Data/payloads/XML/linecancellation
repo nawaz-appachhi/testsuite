@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lineMovementEntry>
+    <releaseId>${0}</releaseId>
+    <action>CANCEL_ITEMS</action>
+    <userLogin>${1}</userLogin>
+    ${2}
+    <cancellationReason>${3}</cancellationReason>
+    <cancellationType>${4}</cancellationType>
+</lineMovementEntry>

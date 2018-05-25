@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "appName": {
+          "id": "http://jsonschema.net/data/appName",
+          "type": "string"
+        },
+        "publicProfileId": {
+          "id": "http://jsonschema.net/data/publicProfileId",
+          "type": "string"
+        },
+        "available": {
+          "id": "http://jsonschema.net/data/available",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "appName",
+        "publicProfileId",
+        "available"
+      ]
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

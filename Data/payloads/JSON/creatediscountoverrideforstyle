@@ -1,0 +1,15 @@
+{
+  "name": "${7}",
+  "description": "Creating Discount Override with startendtime for style id",
+  "startDate": "${5}",
+  "endDate":   "${6}",
+  "categoryManager":"imran.khan2@myntra.com",
+  "discountFundingType":"EOSS",
+  "discountOverrideStyles":[
+    {"styleId":${0},"categoryFundedTD":10,"vendorFundedTD":20,"startTime":"${8}","endTime":"${9}"},
+    {"styleId":${1},"categoryFundedTD":10,"vendorFundedTD":20,"startTime":"${8}","endTime":"${9}"},
+    {"styleId":${2},"categoryFundedTD":12,"vendorFundedTD":15},
+    {"styleId":${3},"categoryFundedTD":12,"vendorFundedTD":15},
+    {"styleId":${4},"categoryFundedTD":10}
+    ]
+}

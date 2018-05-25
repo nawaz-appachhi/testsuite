@@ -1,0 +1,15 @@
+{
+  "checksum" : "${0}",
+  "params" : {
+    "ppsTransactionID" : "${1}",
+    "clientTransactionID" : "${2}",
+    "ppsID" : "${3}",
+    "orderId" : "${4}",
+    "duplicate" : "${5}",
+    "amount" : ${6},
+    "customerID" : "${7}",
+    "txStatus" : "${8}",
+    "comments" : "${9}"
+  }
+}
+

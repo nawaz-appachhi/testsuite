@@ -1,0 +1,11 @@
+{
+    "appName":"myntra",
+    "accessKey":"781234",
+    "firstName":"Testing FirstName",
+    "bio":"Complementing the contemporary urban woman",
+    "email":"${0}",
+    "gender":"NOTSET",
+    "deviceInfo": { "deviceUUID": "${1}"},
+    "phoneNumber": "${2}",
+    "tagsMap":{"myntraVerified":false}
+}

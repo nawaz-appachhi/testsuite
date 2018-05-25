@@ -1,0 +1,26 @@
+{
+  "isAnonymous": false,
+  "duration": 1800000,
+  "pollType": "PRODUCTS",
+  "description": [
+      {
+          "type": "TEXT",
+          "value": "${0}"
+      }
+  ],
+"options": [
+      {
+          "name": "${1}",
+          "product": "${2}"
+      },
+      {
+          "name": "${3}",
+          "product": "${4}"
+      }
+    ],
+   "topics" : [
+       {
+          "topicId": "${5}"
+       }
+    ]
+  }

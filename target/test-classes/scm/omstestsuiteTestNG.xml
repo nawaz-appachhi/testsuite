@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OMSPPSSuite" verbose="1">
+    <parameter name="team" value="SCM"/>
+	<parameter name="core" value="OMS"/>
+	<parameter name="type" value="Regression"/>
+	  <listeners>
+		<!-- <listener class-name="com.myntra.lordoftherings.SCMRetryListner" /> -->
+        <listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	
+	<test name="OMSPPSServiceTests"  parallel="classes" thread-count="5">
+			<groups>
+				<run>
+					<exclude name="OnHold"></exclude>
+				</run>
+			</groups>
+		<classes>
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSLineCancellationTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.OMSOrderCancellationServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSReleaseCancellation" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.PriceOverrideServiceTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.SplitOrderServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.SplitOrderTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.ExpressRefundServiceTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.ExchangeServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSTryAndBuyTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.WHAssignmentServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.SearchServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.VatTests" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.ValidateIdempotencyOMSAction" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.AdditionalChargesSellerCancellationTests"/>
+			<class name="com.myntra.apiTests.erpservices.oms.Test.MultiSellerTests"/>
+			<class name="com.myntra.apiTests.erpservices.oms.Test.InvoiceForMultiSellerTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.OMSFreeGiftItemTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.OMSTaxationDataGST" />
+			<class name="com.myntra.qnotifications.EndToEndNotifications" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.PreOrderTest" />
+
+		</classes>
+	</test>
+	
+	<test name="OMSPPSServiceTests2"  preserve-order="true" parallel="false">
+			<groups>
+				<run>
+					<exclude name="nothing"></exclude>
+				</run>
+			</groups>
+		<classes>
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSOnHoldServiceTest" />
+		</classes>
+	</test>
+</suite>

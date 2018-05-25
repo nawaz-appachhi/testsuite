@@ -1,0 +1,19 @@
+{
+   "sessionId": "${0}",
+   "additionalParams": {
+       "ADDRESS_ID": "9372195",
+       "CLIENT_CONTEXT": "responsive",
+       "CART_CONTEXT": "default"
+   },
+   "paymentsDetailsMap": {
+       "CASHBACK":{  
+         "instrAmount":"${1}"
+        }  
+   }
+}
+
+
+
+
+
+

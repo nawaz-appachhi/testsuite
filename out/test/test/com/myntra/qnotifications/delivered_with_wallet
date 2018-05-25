@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<emailEntry>
+    <mimeType>text/html</mimeType>
+    <mode>0</mode>
+    <sender>support@myntra.com</sender>
+    <sent>1</sent>
+    <smtp>AMAZON</smtp>
+    <subject>Your Myntra shipment has been delivered. ( 79901021 ).</subject>
+    <templateEntry>
+        <name>delivered</name>
+        <renderPair>
+            <renderKey>entry</renderKey>
+            <notifyEvents>
+                <notifyCode>DELIVERED</notifyCode>
+                <islastOrder>false</islastOrder>
+                <ispartOrder>false</ispartOrder>
+                <customerName>sneha agarwal</customerName>
+                <releaseId>79901021</releaseId>
+                <orderId>79901021</orderId>
+                <login>sneha.agarwal@myntra.com</login>
+                <address>Testing team  Myntra, Bangalore, KA, India, 560068</address>
+                <mobile>8792258384</mobile>
+                <email>sneha.agarwal@myntra.com</email>
+                <trackingNo>ML123456</trackingNo>
+                <actualPromiseTime>16 Dec 2015</actualPromiseTime>
+                <cardPaymentEnabled>false</cardPaymentEnabled>
+                <feedbackForm />
+            </notifyEvents>
+        </renderPair>
+        <renderPair>
+            <renderKey>affectedEntry</renderKey>
+            <orderReleaseEntry>
+                <createdBy>2a065148.b2fa.498c.96f8.7b65e19a0fd7jFM6Wg3OMp</createdBy>
+                <createdOn>2016-07-18T22:48:43+05:30</createdOn>
+                <id>79901021</id>
+                <lastModifiedOn>2016-07-20T00:32:02+05:30</lastModifiedOn>
+                <address>002-x,c-block,lakeview county1,singasandra,banglore-560068</address>
+                <addressId>6117516</addressId>
+                <cancellationReason>CC Cancellation - Online Payment Issue</cancellationReason>
+                <cancellationReasonId>2</cancellationReasonId>
+                <cartDiscount>0.0</cartDiscount>
+                <cashRedeemed>0.0</cashRedeemed>
+                <city>Bangalore</city>
+                <codCharge>0.0</codCharge>
+                <codPaymentStatus>pending</codPaymentStatus>
+                <country>India</country>
+                <couponDiscount>0.0</couponDiscount>
+                <discount>0.0</discount>
+                <earnedCredit>0.0</earnedCredit>
+                <email>sneha.agarwal&amp;#x40;myntra.com</email>
+                <emiCharge>0.0</emiCharge>
+                <finalAmount>3196.0</finalAmount>
+                <gift>false</gift>
+                <giftCardAmount>0.0</giftCardAmount>
+                <giftCharge>0.0</giftCharge>
+                <locality>lakeview county</locality>
+                <login>2a065148.b2fa.498c.96f8.7b65e19a0fd7jFM6Wg3OMp</login>
+                <loyaltyConversionFactor>0.0</loyaltyConversionFactor>
+                <loyaltyPointsCredit>0.0</loyaltyPointsCredit>
+                <loyaltyPointsUsed>0.0</loyaltyPointsUsed>
+                <mobile>8792258384</mobile>
+                <mrpTotal>3196.0</mrpTotal>
+                <onHold>false</onHold>
+                <orderId>79901021</orderId>
+                <orderLines>
+                    <orderLine>
+                        <createdBy>2a065148.b2fa.498c.96f8.7b65e19a0fd7jFM6Wg3OMp</createdBy>
+                        <createdOn>2016-07-18T22:48:43+05:30</createdOn>
+                        <id>79752991</id>
+                        <lastModifiedOn>2016-07-20T00:32:02+05:30</lastModifiedOn>
+                        <cartDiscount>0.0</cartDiscount>
+                        <cashRedeemed>0.0</cashRedeemed>
+                        <cashbackOffered>0.0</cashbackOffered>
+                        <couponDiscount>0.0</couponDiscount>
+                        <customizedMessage>Vector E Commerce Private Limited </customizedMessage>
+                        <discount>0.0</discount>
+                        <discountRuleId>0</discountRuleId>
+                        <discountRuleRevId>0</discountRuleRevId>
+                        <discountedProduct>false</discountedProduct>
+                        <discountedQuantity>0</discountedQuantity>
+                        <earnedCredit>0.0</earnedCredit>
+                        <finalAmount>3196.0</finalAmount>
+                        <fragile>false</fragile>
+                        <giftCardAmount>0.0</giftCardAmount>
+                        <hazMat>false</hazMat>
+                        <imageUrl>http://myntra.myntassets.com//images/style/properties/Gritstones-Men-Purple-&amp;-White-T-shirt_5e8df258bb078b2a5681ad74421e52d9_images_360_480.JPG</imageUrl>
+                        <isCustomizable>false</isCustomizable>
+                        <isDiscountedProduct>false</isDiscountedProduct>
+                        <isExchangeableProduct>true</isExchangeableProduct>
+                        <isFragile>false</isFragile>
+                        <isHazMat>false</isHazMat>
+                        <isJewellery>false</isJewellery>
+                        <isReturnableProduct>true</isReturnableProduct>
+                        <isTryAndBuy>false</isTryAndBuy>
+                        <jewellery>false</jewellery>
+                        <loyaltyConversionFactor>0.0</loyaltyConversionFactor>
+                        <loyaltyPointsAwarded>0.0</loyaltyPointsAwarded>
+                        <loyaltyPointsCredit>0.0</loyaltyPointsCredit>
+                        <loyaltyPointsUsed>0.0</loyaltyPointsUsed>
+                        <optionId>898213</optionId>
+                        <orderId>79901021</orderId>
+                        <orderReleaseId>79901021</orderReleaseId>
+                        <packagingStatus>NOT_PACKAGED</packagingStatus>
+                        <packagingType>NORMAL</packagingType>
+                        <paymentPpsId>b3c078d4-29ae-4921-a557-bce4f765434a</paymentPpsId>
+                        <pgDiscount>0.0</pgDiscount>
+                        <poStatus>UNUSED</poStatus>
+                        <productDescription>Gritstones Men Purple &amp; White T-shirt</productDescription>
+                        <quantity>4</quantity>
+                        <sellerId>1</sellerId>
+                        <size>S</size>
+                        <skuId>895230</skuId>
+                        <status>A</status>
+                        <statusDisplayName>Assigned</statusDisplayName>
+                        <storedCredit>0.0</storedCredit>
+                        <styleId>267510</styleId>
+                        <supplyType>ON_HAND</supplyType>
+                        <taxAmount>0.0</taxAmount>
+                        <taxRate>5.0</taxRate>
+                        <tryAndBuy>false</tryAndBuy>
+                        <unitPrice>799.0</unitPrice>
+                        <walletAmount>0.0</walletAmount>
+                    </orderLine>
+                </orderLines>
+                <paymentMethod>on</paymentMethod>
+                <paymentMethodDisplay>Online</paymentMethodDisplay>
+                <paymentPpsId>b3c078d4-29ae-4921-a557-bce4f765434a</paymentPpsId>
+                <personalized>false</personalized>
+                <pgDiscount>0.0</pgDiscount>
+                <receiverName>sneha </receiverName>
+                <refunded>false</refunded>
+                <shippingCharge>0.0</shippingCharge>
+                <shippingMethod>NORMAL</shippingMethod>
+                <singleItemRelease>false</singleItemRelease>
+                <specialPincode>false</specialPincode>
+                <state>KA</state>
+                <status>D</status>
+                <statusDisplayName>Declined</statusDisplayName>
+                <storeId>1</storeId>
+                <storedCredit>0.0</storedCredit>
+                <taxAmount>0.0</taxAmount>
+                <trackingNo></trackingNo>
+                <userContactNo>8792258384</userContactNo>
+                <walletAmount>120.0</walletAmount>
+                <zipcode>560068</zipcode>
+            </orderReleaseEntry>
+        </renderPair>
+        <renderPair>
+            <renderKey>md5Hash</renderKey>
+            <renderValue>7925829461239788018306583903367517178</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>MFBTitle</renderKey>
+            <renderValue>Help us improve. Rate your experience</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>MFBNpsQuestion</renderKey>
+            <renderValue>Based on your Myntra order delivery experience how likely are you to recommend Myntra to your friends and family?</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>MFBLink</renderKey>
+            <renderValue>http://www.myntra.com/feedback.php?allowCrossDomainRequest=1&amp;MFBInstanceId=16284131&amp;MFBInstanceAuthKey=84dfeab0039e02708a2dd99ed245ecaa&amp;MFB_response=0</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>walletName</renderKey>
+            <renderValue>PhonePe Wallet</renderValue>
+        </renderPair>
+        <renderPair>
+            <renderKey>isDisclaimerRequired</renderKey>
+            <renderValue>true</renderValue>
+        </renderPair>
+        <type>0</type>
+    </templateEntry>
+    <to>sneha.agarwal@myntra.com</to>
+</emailEntry>

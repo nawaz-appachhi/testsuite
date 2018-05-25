@@ -1,0 +1,97 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"email": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/email",
+					"required":true
+				},
+				"firstlogin": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/firstlogin",
+					"required":true
+				},
+				"firstname": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/firstname",
+					"required":true
+				},
+				"lastlogin": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/lastlogin",
+					"required":true
+				},
+				"lastname": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/lastname",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/login",
+					"required":true
+				},
+				"mobile": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/mobile",
+					"required":true
+				},
+				"phone": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/phone",
+					"required":true
+				},
+				"status": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/status",
+					"required":true
+				},
+				"title": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/title",
+					"required":true
+				},
+				"usertype": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/usertype",
+					"required":true
+				}
+			}
+		},
+		"meta": {
+			"type":"object",
+			"id": "http://jsonschema.net/meta",
+			"required":true,
+			"properties":{
+				"code": {
+					"type":"number",
+					"id": "http://jsonschema.net/meta/code",
+					"required":true
+				},
+				"token": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/token",
+					"required":true
+				},
+				"xsrfToken": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/xsrfToken",
+					"required":true
+				}
+			}
+		},
+		"notification": {
+			"type":"object",
+			"id": "http://jsonschema.net/notification",
+			"required":true
+		}
+	}
+}

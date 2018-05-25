@@ -1,0 +1,22 @@
+{
+"size": 0,
+   "query": {
+     "filtered": {
+       "filter": {
+         "term": {
+           "styleAttributes.style_status": "p"
+         }
+       }
+     }
+   },
+   "aggs": {
+     "docs": {
+       "filter": {
+         "missing": {
+           "field":"styleAttributes.attrs"
+         }
+
+       }
+     }
+   }
+}

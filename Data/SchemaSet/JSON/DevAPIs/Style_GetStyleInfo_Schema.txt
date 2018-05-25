@@ -1,0 +1,1325 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "notification": {
+      "type": "object",
+      "properties": {},
+      "id": "notification"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        },
+        "requestId": {
+          "type": "string",
+          "id": "requestId"
+        }
+      },
+      "id": "meta",
+      "required": [
+        "code",
+        "requestId"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "id": "id"
+        },
+        "price": {
+          "type": "integer",
+          "id": "price"
+        },
+        "discountedPrice": {
+          "type": "integer",
+          "id": "discountedPrice"
+        },
+        "styleType": {
+          "type": "string",
+          "id": "styleType"
+        },
+        "articleNumber": {
+          "type": "string",
+          "id": "articleNumber"
+        },
+        "visualTag": {
+          "type": "string",
+          "id": "visualTag"
+        },
+        "productDisplayName": {
+          "type": "string",
+          "id": "productDisplayName"
+        },
+        "variantName": {
+          "type": "string",
+          "id": "variantName"
+        },
+        "myntraRating": {
+          "type": "integer",
+          "id": "myntraRating"
+        },
+        "catalogAddDate": {
+          "type": "integer",
+          "id": "catalogAddDate"
+        },
+        "brandName": {
+          "type": "string",
+          "id": "brandName"
+        },
+        "ageGroup": {
+          "type": "string",
+          "id": "ageGroup"
+        },
+        "gender": {
+          "type": "string",
+          "id": "gender"
+        },
+        "baseColour": {
+          "type": "string",
+          "id": "baseColour"
+        },
+        "colour1": {
+          "type": "string",
+          "id": "colour1"
+        },
+        "colour2": {
+          "type": "string",
+          "id": "colour2"
+        },
+        "fashionType": {
+          "type": "string",
+          "id": "fashionType"
+        },
+        "season": {
+          "type": "string",
+          "id": "season"
+        },
+        "year": {
+          "type": "string",
+          "id": "year"
+        },
+        "usage": {
+          "type": "string",
+          "id": "usage"
+        },
+        "weight": {
+          "type": "string",
+          "id": "weight"
+        },
+        "navigationId": {
+          "type": "integer",
+          "id": "navigationId"
+        },
+        "landingPageUrl": {
+          "type": "string",
+          "id": "landingPageUrl"
+        },
+        "articleAttributes": {
+          "type": "object",
+          "properties": {
+            "Neck or Collar": {
+              "type": "string",
+              "id": "Neck or Collar"
+            },
+            "Pattern": {
+              "type": "string",
+              "id": "Pattern"
+            },
+            "Sleeve Length": {
+              "type": "string",
+              "id": "Sleeve Length"
+            },
+            "Multipack Set": {
+              "type": "string",
+              "id": "Multipack Set"
+            },
+            "Occasion": {
+              "type": "string",
+              "id": "Occasion"
+            },
+            "Brand Fit Name": {
+              "type": "string",
+              "id": "Brand Fit Name"
+            },
+            "Main Trend": {
+              "type": "string",
+              "id": "Main Trend"
+            },
+            "Print or Pattern Type": {
+              "type": "string",
+              "id": "Print or Pattern Type"
+            },
+            "Sleeve Type": {
+              "type": "string",
+              "id": "Sleeve Type"
+            },
+            "Fabric Type": {
+              "type": "string",
+              "id": "Fabric Type"
+            },
+            "Care": {
+              "type": "string",
+              "id": "Care"
+            },
+            "Fit": {
+              "type": "string",
+              "id": "Fit"
+            },
+            "Sub Trend": {
+              "type": "string",
+              "id": "Sub Trend"
+            },
+            "Surface Styling": {
+              "type": "string",
+              "id": "Surface Styling"
+            },
+            "Fabric 2": {
+              "type": "string",
+              "id": "Fabric 2"
+            },
+            "Body Length": {
+              "type": "string",
+              "id": "Body Length"
+            },
+            "Fabric 3": {
+              "type": "string",
+              "id": "Fabric 3"
+            },
+            "Print Coverage": {
+              "type": "string",
+              "id": "Print Coverage"
+            },
+            "Fabric": {
+              "type": "string",
+              "id": "Fabric"
+            }
+          },
+          "id": "articleAttributes",
+          "required": [
+            "Neck or Collar",
+            "Pattern",
+            "Sleeve Length",
+            "Multipack Set",
+            "Occasion",
+            "Brand Fit Name",
+            "Main Trend",
+            "Print or Pattern Type",
+            "Sleeve Type",
+            "Fabric Type",
+            "Care",
+            "Fit",
+            "Sub Trend",
+            "Surface Styling",
+            "Fabric 2",
+            "Body Length",
+            "Fabric 3",
+            "Print Coverage",
+            "Fabric"
+          ]
+        },
+        "crossLinks": {
+          "type": "array",
+          "items": {},
+          "id": "crossLinks"
+        },
+        "styleVideoAlbumList": {
+          "type": "array",
+          "items": {},
+          "id": "styleVideoAlbumList"
+        },
+        "brandUserProfile": {
+          "type": "object",
+          "properties": {
+            "image": {
+              "type": "string",
+              "id": "image"
+            },
+            "gender": {
+              "type": "string",
+              "id": "gender"
+            },
+            "bio": {
+              "type": "string",
+              "id": "bio"
+            },
+            "cms_brands$brand_id": {
+              "type": "array",
+              "items": {},
+              "id": "cms_brands$brand_id"
+            },
+            "imageJsonEntryMap": {
+              "type": "object",
+              "properties": {
+                "PROFILE": {
+                  "type": "string",
+                  "id": "PROFILE"
+                },
+                "PROFILE_DEFAULT": {
+                  "type": "string",
+                  "id": "PROFILE_DEFAULT"
+                }
+              },
+              "id": "imageJsonEntryMap",
+              "required": [
+                "PROFILE",
+                "PROFILE_DEFAULT"
+              ]
+            },
+            "registrationOn": {
+              "type": "string",
+              "id": "registrationOn"
+            },
+            "free_shipping$first_order": {
+              "type": "string",
+              "id": "free_shipping$first_order"
+            },
+            "publicProfileId": {
+              "type": "string",
+              "id": "publicProfileId"
+            },
+            "name": {
+              "type": "string",
+              "id": "name"
+            },
+            "buckets$ab-test": {
+              "type": "string",
+              "id": "buckets$ab-test"
+            },
+            "userType": {
+              "type": "string",
+              "id": "userType"
+            },
+            "ideaauth_details$devicelist": {
+              "type": "array",
+              "items": {},
+              "id": "ideaauth_details$devicelist"
+            },
+            "ideaauth_details$lastseen": {
+              "type": "integer",
+              "id": "ideaauth_details$lastseen"
+            },
+            "uidx": {
+              "type": "string",
+              "id": "uidx"
+            }
+          },
+          "id": "brandUserProfile",
+          "required": [
+            "image",
+            "gender",
+            "bio",
+            "cms_brands$brand_id",
+            "imageJsonEntryMap",
+            "registrationOn",
+            "free_shipping$first_order",
+            "publicProfileId",
+            "name",
+            "buckets$ab-test",
+            "userType",
+            "ideaauth_details$devicelist",
+            "ideaauth_details$lastseen",
+            "uidx"
+          ]
+        },
+        "codEnabled": {
+          "type": "boolean",
+          "id": "codEnabled"
+        },
+        "styleImages": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "default",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            },
+            "size_representation": {
+              "type": "string",
+              "id": "size_representation"
+            },
+            "search": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "search",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            },
+            "back": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "back",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            },
+            "left": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "left",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            },
+            "front": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "front",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            },
+            "right": {
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "type": "string",
+                  "id": "imageURL"
+                },
+                "resolutions": {
+                  "type": "object",
+                  "properties": {
+                    "1080X1440Xmini": {
+                      "type": "string",
+                      "id": "1080X1440Xmini"
+                    },
+                    "360X480": {
+                      "type": "string",
+                      "id": "360X480"
+                    },
+                    "180X240": {
+                      "type": "string",
+                      "id": "180X240"
+                    },
+                    "360X480Xmini": {
+                      "type": "string",
+                      "id": "360X480Xmini"
+                    },
+                    "48X64": {
+                      "type": "string",
+                      "id": "48X64"
+                    },
+                    "180X240Xmini": {
+                      "type": "string",
+                      "id": "180X240Xmini"
+                    },
+                    "1080X1440": {
+                      "type": "string",
+                      "id": "1080X1440"
+                    },
+                    "150X200Xmini": {
+                      "type": "string",
+                      "id": "150X200Xmini"
+                    },
+                    "150X200": {
+                      "type": "string",
+                      "id": "150X200"
+                    },
+                    "48X64Xmini": {
+                      "type": "string",
+                      "id": "48X64Xmini"
+                    }
+                  },
+                  "id": "resolutions",
+                  "required": [
+                    "1080X1440Xmini",
+                    "360X480",
+                    "180X240",
+                    "360X480Xmini",
+                    "48X64",
+                    "180X240Xmini",
+                    "1080X1440",
+                    "150X200Xmini",
+                    "150X200",
+                    "48X64Xmini"
+                  ]
+                },
+                "imageType": {
+                  "type": "string",
+                  "id": "imageType"
+                }
+              },
+              "id": "right",
+              "required": [
+                "imageURL",
+                "resolutions",
+                "imageType"
+              ]
+            }
+          },
+          "id": "styleImages",
+          "required": [
+            "default",
+            "size_representation",
+            "search",
+            "back",
+            "left",
+            "front",
+            "right"
+          ]
+        },
+        "lookGoodAlbum": {
+          "type": "object",
+          "properties": {},
+          "id": "lookGoodAlbum"
+        },
+        "style360Images": {
+          "type": "object",
+          "properties": {},
+          "id": "style360Images"
+        },
+        "masterCategory": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "id": "id"
+            },
+            "typeName": {
+              "type": "string",
+              "id": "typeName"
+            },
+            "active": {
+              "type": "boolean",
+              "id": "active"
+            },
+            "socialSharingEnabled": {
+              "type": "boolean",
+              "id": "socialSharingEnabled"
+            },
+            "isReturnable": {
+              "type": "boolean",
+              "id": "isReturnable"
+            },
+            "isExchangeable": {
+              "type": "boolean",
+              "id": "isExchangeable"
+            },
+            "pickupEnabled": {
+              "type": "boolean",
+              "id": "pickupEnabled"
+            },
+            "isTryAndBuyEnabled": {
+              "type": "boolean",
+              "id": "isTryAndBuyEnabled"
+            }
+          },
+          "id": "masterCategory",
+          "required": [
+            "id",
+            "typeName",
+            "active",
+            "socialSharingEnabled",
+            "isReturnable",
+            "isExchangeable",
+            "pickupEnabled",
+            "isTryAndBuyEnabled"
+          ]
+        },
+        "subCategory": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "id": "id"
+            },
+            "typeName": {
+              "type": "string",
+              "id": "typeName"
+            },
+            "active": {
+              "type": "boolean",
+              "id": "active"
+            },
+            "socialSharingEnabled": {
+              "type": "boolean",
+              "id": "socialSharingEnabled"
+            },
+            "isReturnable": {
+              "type": "boolean",
+              "id": "isReturnable"
+            },
+            "isExchangeable": {
+              "type": "boolean",
+              "id": "isExchangeable"
+            },
+            "pickupEnabled": {
+              "type": "boolean",
+              "id": "pickupEnabled"
+            },
+            "isTryAndBuyEnabled": {
+              "type": "boolean",
+              "id": "isTryAndBuyEnabled"
+            }
+          },
+          "id": "subCategory",
+          "required": [
+            "id",
+            "typeName",
+            "active",
+            "socialSharingEnabled",
+            "isReturnable",
+            "isExchangeable",
+            "pickupEnabled",
+            "isTryAndBuyEnabled"
+          ]
+        },
+        "articleType": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "id": "id"
+            },
+            "typeName": {
+              "type": "string",
+              "id": "typeName"
+            },
+            "active": {
+              "type": "boolean",
+              "id": "active"
+            },
+            "socialSharingEnabled": {
+              "type": "boolean",
+              "id": "socialSharingEnabled"
+            },
+            "isReturnable": {
+              "type": "boolean",
+              "id": "isReturnable"
+            },
+            "isExchangeable": {
+              "type": "boolean",
+              "id": "isExchangeable"
+            },
+            "pickupEnabled": {
+              "type": "boolean",
+              "id": "pickupEnabled"
+            },
+            "isTryAndBuyEnabled": {
+              "type": "boolean",
+              "id": "isTryAndBuyEnabled"
+            },
+            "serviceabilityDisclaimer": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "id": "title"
+                },
+                "desc": {
+                  "type": "string",
+                  "id": "desc"
+                }
+              },
+              "id": "serviceabilityDisclaimer",
+              "required": [
+                "title",
+                "desc"
+              ]
+            }
+          },
+          "id": "articleType",
+          "required": [
+            "id",
+            "typeName",
+            "active",
+            "socialSharingEnabled",
+            "isReturnable",
+            "isExchangeable",
+            "pickupEnabled",
+            "isTryAndBuyEnabled",
+            "serviceabilityDisclaimer"
+          ]
+        },
+        "otherFlags": {
+          "type": "array",
+          "items": {},
+          "id": "otherFlags"
+        },
+        "articleDisplayAttr": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "id": "id"
+            },
+            "core": {
+              "type": "object",
+              "properties": {
+                "order": {
+                  "type": "string",
+                  "id": "order"
+                },
+                "display": {
+                  "type": "string",
+                  "id": "display"
+                },
+                "pdtDetail": {
+                  "type": "string",
+                  "id": "pdtDetail"
+                },
+                "pdtDeliveryOptions": {
+                  "type": "string",
+                  "id": "pdtDeliveryOptions"
+                },
+                "pdtSimilar": {
+                  "type": "string",
+                  "id": "pdtSimilar"
+                },
+                "pdtLike": {
+                  "type": "string",
+                  "id": "pdtLike"
+                }
+              },
+              "id": "core",
+              "required": [
+                "order",
+                "display",
+                "pdtDetail",
+                "pdtDeliveryOptions",
+                "pdtSimilar",
+                "pdtLike"
+              ]
+            },
+            "social": {
+              "type": "object",
+              "properties": {
+                "order": {
+                  "type": "string",
+                  "id": "order"
+                },
+                "display": {
+                  "type": "string",
+                  "id": "display"
+                },
+                "userLikes": {
+                  "type": "string",
+                  "id": "userLikes"
+                },
+                "styleNotes": {
+                  "type": "string",
+                  "id": "styleNotes"
+                },
+                "crossSell": {
+                  "type": "string",
+                  "id": "crossSell"
+                }
+              },
+              "id": "social",
+              "required": [
+                "order",
+                "display",
+                "userLikes",
+                "styleNotes",
+                "crossSell"
+              ]
+            },
+            "explore": {
+              "type": "object",
+              "properties": {
+                "display": {
+                  "type": "string",
+                  "id": "display"
+                },
+                "crosslink": {
+                  "type": "string",
+                  "id": "crosslink"
+                },
+                "similar": {
+                  "type": "string",
+                  "id": "similar"
+                },
+                "order": {
+                  "type": "string",
+                  "id": "order"
+                }
+              },
+              "id": "explore",
+              "required": [
+                "display",
+                "crosslink",
+                "similar",
+                "order"
+              ]
+            }
+          },
+          "id": "articleDisplayAttr",
+          "required": [
+            "id",
+            "core",
+            "social",
+            "explore"
+          ]
+        },
+        "productDescriptors": {
+          "type": "object",
+          "properties": {
+            "materials_care_desc": {
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "type": "string",
+                  "id": "descriptorType"
+                },
+                "value": {
+                  "type": "string",
+                  "id": "value"
+                }
+              },
+              "id": "materials_care_desc",
+              "required": [
+                "descriptorType",
+                "value"
+              ]
+            },
+            "size_fit_desc": {
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "type": "string",
+                  "id": "descriptorType"
+                },
+                "value": {
+                  "type": "string",
+                  "id": "value"
+                }
+              },
+              "id": "size_fit_desc",
+              "required": [
+                "descriptorType",
+                "value"
+              ]
+            },
+            "description": {
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "type": "string",
+                  "id": "descriptorType"
+                },
+                "value": {
+                  "type": "string",
+                  "id": "value"
+                }
+              },
+              "id": "description",
+              "required": [
+                "descriptorType",
+                "value"
+              ]
+            },
+            "style_note": {
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "type": "string",
+                  "id": "descriptorType"
+                },
+                "value": {
+                  "type": "string",
+                  "id": "value"
+                }
+              },
+              "id": "style_note",
+              "required": [
+                "descriptorType",
+                "value"
+              ]
+            }
+          },
+          "id": "productDescriptors",
+          "required": [
+            "materials_care_desc",
+            "size_fit_desc",
+            "description",
+            "style_note"
+          ]
+        },
+        "styleOptions": {
+          "type": "array",
+          "items": {},
+          "id": "styleOptions"
+        },
+        "discountData": {
+          "type": "object",
+          "properties": {
+            "discountType": {
+              "type": "integer",
+              "id": "discountType"
+            },
+            "discountAmount": {
+              "type": "number",
+              "id": "discountAmount"
+            },
+            "discountId": {
+              "type": "integer",
+              "id": "discountId"
+            },
+            "discountPercent": {
+              "type": "integer",
+              "id": "discountPercent"
+            },
+            "discountModifiedDate": {
+              "type": "integer",
+              "id": "discountModifiedDate"
+            },
+            "discountText": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "id": "text"
+                },
+                "hasFreeItem": {
+                  "type": "boolean",
+                  "id": "hasFreeItem"
+                }
+              },
+              "id": "discountText",
+              "required": [
+                "text",
+                "hasFreeItem"
+              ]
+            },
+            "discountToolTipText": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "id": "text"
+                },
+                "hasFreeItem": {
+                  "type": "boolean",
+                  "id": "hasFreeItem"
+                }
+              },
+              "id": "discountToolTipText",
+              "required": [
+                "text",
+                "hasFreeItem"
+              ]
+            }
+          },
+          "id": "discountData",
+          "required": [
+            "discountType",
+            "discountAmount",
+            "discountId",
+            "discountPercent",
+            "discountModifiedDate",
+            "discountText",
+            "discountToolTipText"
+          ]
+        },
+        "associatedImageProducts": {
+          "type": "array",
+          "items": {},
+          "id": "associatedImageProducts"
+        }
+      },
+      "id": "data",
+      "required": [
+        "id",
+        "price",
+        "discountedPrice",
+        "styleType",
+        "articleNumber",
+        "visualTag",
+        "productDisplayName",
+        "variantName",
+        "myntraRating",
+        "catalogAddDate",
+        "brandName",
+        "ageGroup",
+        "gender",
+        "baseColour",
+        "colour1",
+        "colour2",
+        "fashionType",
+        "season",
+        "year",
+        "usage",
+        "weight",
+        "navigationId",
+        "landingPageUrl",
+        "articleAttributes",
+        "crossLinks",
+        "styleVideoAlbumList",
+        "brandUserProfile",
+        "codEnabled",
+        "styleImages",
+        "lookGoodAlbum",
+        "style360Images",
+        "masterCategory",
+        "subCategory",
+        "articleType",
+        "otherFlags",
+        "articleDisplayAttr",
+        "productDescriptors",
+        "styleOptions",
+        "discountData",
+        "associatedImageProducts"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "notification",
+    "meta",
+    "data"
+  ]
+}

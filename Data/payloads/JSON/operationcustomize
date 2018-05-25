@@ -1,0 +1,7 @@
+{
+	"itemId": ${0},
+	"operation": "${1}",
+	"customName": "${2}",
+	"customNumber": "${3}", 
+	"doCustomize": ${4}
+}	

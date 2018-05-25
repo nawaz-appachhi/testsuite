@@ -1,0 +1,35 @@
+{
+    "name":"Sample Discount",
+    "description":"Sample Discount",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":false,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"admin",
+    "discountRules":[
+    {
+        "type":"2",
+        "count":"${3}",
+        "id":"",
+        "placeHolderText":"Items",
+        "buyCount":"${2}",
+        "discountFreeItems":[]
+    }],
+    "discountStyles":[
+    {
+        "id":"",
+        "styleId":"${4}",
+        "discountId":null
+    }],
+    "discountFilters":[
+    {
+        "brand":"u.s. polo assn."
+    }],
+    "onCart":false,
+    "discountFunding":"vendor-EOSS",
+    "fundingPercentage":"50",
+    "fundingTax":"1",
+    "fundingBasis":"discount",
+    "discountLimit":"75"
+}

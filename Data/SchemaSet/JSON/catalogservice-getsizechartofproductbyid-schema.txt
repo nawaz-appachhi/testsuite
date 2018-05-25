@@ -1,0 +1,221 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"ageGroup": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/ageGroup",
+						"required":true
+					},
+					"articleType": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/articleType",
+						"required":true,
+						"properties":{
+							"filterOrder": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/articleType/filterOrder",
+								"required":true
+							},
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/articleType/id",
+								"required":true
+							},
+							"isActive": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/articleType/isActive",
+								"required":true
+							},
+							"isSocialSharingEnabled": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/articleType/isSocialSharingEnabled",
+								"required":true
+							},
+							"typeCode": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/articleType/typeCode",
+								"required":true
+							},
+							"typeName": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/articleType/typeName",
+								"required":true
+							}
+						}
+					},
+					"brand": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/brand",
+						"required":false,
+						"properties":{
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/brand/id",
+								"required":false
+							},
+							"logoURL": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/brand/logoURL",
+								"required":false
+							},
+							"name": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/brand/name",
+								"required":false
+							}
+						}
+					},
+					"dynamicSizeChartImage": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/dynamicSizeChartImage",
+						"required":true
+					},
+					"isUnified": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isUnified",
+						"required":true
+					},
+					"productDisplayName": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/productDisplayName",
+						"required":true
+					},
+					"productId": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/productId",
+						"required":true
+					},
+					"productOptions": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/productOptions",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/productOptions/0",
+							"required":true,
+							"properties":{
+								"active": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/productOptions/0/active",
+									"required":true
+								},
+								"allSize": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/allSize",
+									"required":true
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productOptions/0/id",
+									"required":true
+								},
+								"isActive": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/productOptions/0/isActive",
+									"required":true
+								},
+								"measurement": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/measurement",
+									"required":true
+								},
+								"name": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/name",
+									"required":true
+								},
+								"price": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productOptions/0/price",
+									"required":true
+								},
+								"skuId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productOptions/0/skuId",
+									"required":true
+								},
+								"unifiedSizeValueId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSizeValueId",
+									"required":true
+								},
+								"unifiedSizeValue": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSizeValue",
+									"required":true
+								},
+								"unifiedSize": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSize",
+									"required":true
+								},
+								"value": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productOptions/0/value",
+									"required":true
+								}
+							}
+						}
+					},
+					"sizes": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/sizes",
+						"required":true,
+						"items":
+						{
+							"type":"array",
+							"id": "http://jsonschema.net/data/0/sizes/0",
+							"required":true
+						}
+					},
+					"title": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/title",
+						"required":true
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

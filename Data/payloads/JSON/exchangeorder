@@ -1,0 +1,43 @@
+{
+    "originalOrderID": "${0}",
+    "originalPpsID": "${1}",
+    "txRefId": "${2}",
+    "items": [
+        {
+            "original": {
+                "type": "SKU",
+                "itemIdentifier": "${3}",
+                "quantity": 1,
+                "sellerId": "21",
+                "optionId": "${3}",
+                "styleId": "${4}",
+                "supplyType":"ON_HAND"
+            },
+            "exchange": {
+                "type": "SKU",
+                "itemIdentifier": "${5}",
+                "quantity": 1,
+                "sellerId": "21",
+                "optionId": "${5}",
+                "styleId": "${4}",
+                "supplyType":"ON_HAND"
+            },
+            "originalOrderLineId": "${6}",
+            "reasonCode": "DNL"
+        }
+    ],
+    "shippingAddress": {
+        "receiverName": "Abhijit Pati",
+        "shippingAddress": "Myntra Design Pvt. Ltd.",
+        "shippingLocality": "Singasandra",
+        "shippingCity": "Bangalore",
+        "shippingState": "KA",
+        "shippingCountry": "India",
+        "shippingZipcode": "560068",
+        "receiverMobile": "9439543863",
+        "receiverEmail": "end2endautomation@gmail.com"
+    },
+    "userComments": "Exchange Request",
+    "userLogin": "${7}",
+    "reasonCode": "DNL"
+}

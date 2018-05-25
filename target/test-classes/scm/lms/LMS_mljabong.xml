@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--<suite name="LMS Regression" parallel="methods" thread-count="5" verbose="1" data-provider-thread-count="5" >-->
+<suite name="LMS Regression" verbose="1" >
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="LMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="LMS_Regression" preserve-order="true" >
+		<groups>
+			<run>
+				<include name="Regression"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.lms.tests.LMS_MLJabongTest" />
+		</classes>
+	</test>
+</suite>

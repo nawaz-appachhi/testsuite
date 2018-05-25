@@ -1,0 +1,14 @@
+{
+  "sellerPaymentConfiguration": {
+    "enabled": "${0}",
+    "marginMinimum": "${1}",
+    "marginPercentage": "${2}",
+    "offset": "${3}",
+    "sellerEntry": {
+  
+      "id": "${4}"
+
+    },
+    "sellerPayoutScheduleType": "${5}"
+  }
+}

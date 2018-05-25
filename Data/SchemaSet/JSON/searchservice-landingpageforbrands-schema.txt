@@ -1,0 +1,77 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/id",
+					"required":true
+				},
+				"isAutoCreated": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/data/isAutoCreated",
+					"required":true
+				},
+				"isAutoSuggest": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/data/isAutoSuggest",
+					"required":true
+				},
+				"numberOfResults": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/numberOfResults",
+					"required":true
+				},
+				"numberOfTimesDispalyed": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/numberOfTimesDispalyed",
+					"required":true
+				},
+				"pageUrl": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/pageUrl",
+					"required":true
+				},
+				"parameterizedPageId": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/parameterizedPageId",
+					"required":true
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

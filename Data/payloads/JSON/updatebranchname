@@ -1,0 +1,8 @@
+{
+  "login" : "${0}", 
+  "accountId":"${1}",
+  "branch":"${2}", 
+  "client":"${3}",
+  "version":"${4}",
+  "signature":"${5}"
+}

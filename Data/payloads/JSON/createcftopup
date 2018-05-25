@@ -1,0 +1,16 @@
+{
+   "topUpType": "${0}",
+   "fundingType": "${1}",
+   "name": "Test IMR",
+   "description": "Thursday test",
+   "startDate": ${2},
+   "endDate": ${3},
+   "cfTopUpItemMap": 
+       {
+           "${4}": 
+           {
+               "categoryFunding": 10
+           }
+       }
+   
+}

@@ -1,0 +1,21 @@
+    {
+     "name": "${3}",
+     "description": "Creating Discount Override with for seller",
+     "startDate": "${1}",
+     "endDate":   "${2}",
+     "categoryManager":"imran.khan2@myntra.com",
+     "discountFundingType":"${4}",
+     "discountOverrideStyles":[
+       {
+           "styleId":${0},
+           "categoryFundedTD":9,
+           "vendorFundedTD":${6},
+           "tradeDiscount":${5},
+           "sellerFundingPercentage":12, 
+           "discountLimit":70
+           
+       }
+       ]
+    }
+    
+   

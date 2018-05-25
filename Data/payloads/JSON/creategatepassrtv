@@ -1,0 +1,6 @@
+{
+    "fromPartyId": "${0}",
+    "purpose": "Testing Create GatePass",
+    "toPartyId": "${1}",
+    "type": "${2}"
+}

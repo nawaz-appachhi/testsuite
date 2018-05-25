@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OMSPPSSuite" verbose="1">
+    <parameter name="team" value="SCM"/>
+    <parameter name="core" value="OMS"/>
+    <parameter name="type" value="Regression"/>
+    <listeners>
+        <listener class-name="com.myntra.lordoftherings.SCMRetryListner" />
+    </listeners>
+    <test name="OMSPPSServiceTests"  preserve-order="true">
+        <classes>
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSLineCancellationTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSOnHoldServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSOrderCancellationServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSReleaseCancellation" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.PriceOverrideServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.SplitOrderServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.SplitOrderTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.ExpressRefundServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.ExchangeServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.GovtTaxCalculationTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.OMSTryAndBuyTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.WHAssignmentServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.SearchServiceTest" />
+            <class name="com.myntra.apiTests.erpservices.oms.Test.VatTests" />
+        </classes>
+    </test>
+</suite>

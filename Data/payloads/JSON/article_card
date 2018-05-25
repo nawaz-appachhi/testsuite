@@ -1,0 +1,28 @@
+ {
+      "appId": 2,
+      "refId": "articleobj_${0}",
+      "type": "article",
+      "title": "3 WAYS TO GET A FRESH SUMMER LOOK WITH INDIGO KNIT",
+      "description": "It\u2019s time to spice up your wardrobe with Indigo Knit.",
+      "url": "http://www.myntra.com/lookgood/2015/06/3-ways-to-get-a-fresh-summer-look-with-indigo-knit/",
+      "imageUrl": "http://assets.myntassets.com/assets/images/2015/6/16/11434439152106-1434439152077Jack-and-Jones.jpg",
+      "extraData": "{\"aspectRatio\":\"80:43\"}",
+      "topics": [
+        {
+          "name": "featured",
+          "type": "theme"
+        },
+        {
+          "name": "denim",
+          "type": "brand"
+        },
+        {
+          "name": "Jeans",
+          "type": "articletype"
+        }
+      ],
+      "productRack": "",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

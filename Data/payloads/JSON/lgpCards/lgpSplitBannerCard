@@ -1,0 +1,23 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "split-banner",
+	"title": "Split Banner !!!",
+	"imageUrl": "http://assets.myntassets.com/assets/images/banners/2016/7/14/11468504477851-HOME-PAGE_02.jpg,http://assets.myntassets.com/assets/images/banners/2016/7/14/11468504477870-HOME-PAGE_01.jpg",
+
+    "extraData": "{\"children\":[\"2:2cc17ca0-d766-4959-9335-c21391fc39da\",\"2:a4ab8ab7-2ee1-43c5-a22f-3ca6119d4efb\"]}",
+
+	"topics": [
+        {
+          "id": 3796,
+          "name": "deals",
+          "type": "theme",
+          "displayName": "Deals",
+          "followEnabled": true
+        }
+      ],
+	"isPrivate":false,
+	"createAction": "posted",
+	"enabled": true,
+	"isSpam": false
+}

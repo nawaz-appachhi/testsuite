@@ -1,0 +1,1271 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"required":true,
+			"items":
+				{
+					"type":"number",
+					"required":false,
+					"properties":{
+						"addDate": {
+							"type":"number",
+							"required":false
+						},
+						"ageGroup": {
+							"type":"string",
+							"required":false
+						},
+						"articleAttributes": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"Ankle Height": {
+									"type":"string",
+									"required":false
+								},
+								"Casual Shoe Type": {
+									"type":"string",
+									"required":false
+								},
+								"Fastening": {
+									"type":"string",
+									"required":false
+								},
+								"Occasion": {
+									"type":"string",
+									"required":false
+								},
+								"Upper Material": {
+									"type":"string",
+									"required":false
+								}
+							}
+						},
+						"articleNumber": {
+							"type":"string",
+							"required":false
+						},
+						"articleType": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"active": {
+									"type":"boolean",
+									"required":false
+								},
+								"filterOrder": {
+									"type":"number",
+									"required":false
+								},
+								"id": {
+									"type":"number",
+									"required":false
+								},
+								"socialSharingEnabled": {
+									"type":"boolean",
+									"required":false
+								},
+								"typeCode": {
+									"type":"string",
+									"required":false
+								},
+								"typeName": {
+									"type":"string",
+									"required":false
+								}
+							}
+						},
+						"baseColour": {
+							"type":"string",
+							"required":false
+						},
+						"brandDetailsEntry": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"id": {
+									"type":"number",
+									"required":false
+								},
+								"logoURL": {
+									"type":"string",
+									"required":false
+								},
+								"name": {
+									"type":"string",
+									"required":false
+								}
+							}
+						},
+						"brandLogo": {
+							"type":"string",
+							"required":false
+						},
+						"brandName": {
+							"type":"string",
+							"required":false
+						},
+						"catalogAddDate": {
+							"type":"number",
+							"required":false
+						},
+						"catalogDate": {
+							"type":"number",
+							"required":false
+						},
+						"colour1": {
+							"type":"string",
+							"required":false
+						},
+						"colour2": {
+							"type":"string",
+							"required":false
+						},
+						"colours": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"107151": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"dre_landing_page_url": {
+											"type":"string",
+											"required":false
+										},
+										"global_attr_base_colour": {
+											"type":"string",
+											"required":false
+										},
+										"global_attr_colour1": {
+											"type":"string",
+											"required":false
+										},
+										"search_image": {
+											"type":"string",
+											"required":false
+										},
+										"styleid": {
+											"type":"string",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"comments": {
+							"type":"string",
+							"required":false
+						},
+						"discountedPrice": {
+							"type":"number",
+							"required":false
+						},
+						"displayCategories": {
+							"type":"string",
+							"required":false
+						},
+						"fashionType": {
+							"type":"string",
+							"required":false
+						},
+						"gender": {
+							"type":"string",
+							"required":false
+						},
+						"id": {
+							"type":"number",
+							"required":false
+						},
+						"landingPageUrl": {
+							"type":"string",
+							"required":false
+						},
+						"masterCategory": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"active": {
+									"type":"boolean",
+									"required":false
+								},
+								"filterOrder": {
+									"type":"number",
+									"required":false
+								},
+								"id": {
+									"type":"number",
+									"required":false
+								},
+								"socialSharingEnabled": {
+									"type":"boolean",
+									"required":false
+								},
+								"typeCode": {
+									"type":"string",
+									"required":false
+								},
+								"typeName": {
+									"type":"string",
+									"required":false
+								}
+							}
+						},
+						"myntraRating": {
+							"type":"number",
+							"required":false
+						},
+						"navigationId": {
+							"type":"number",
+							"required":false
+						},
+						"price": {
+							"type":"number",
+							"required":false
+						},
+						"productDescriptors": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"description": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"descriptorType": {
+											"type":"string",
+											"required":false
+										},
+										"value": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"materials_care_desc": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"descriptorType": {
+											"type":"string",
+											"required":false
+										},
+										"value": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"style_note": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"descriptorType": {
+											"type":"string",
+											"required":false
+										},
+										"value": {
+											"type":"string",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"productDisplayName": {
+							"type":"string",
+							"required":false
+						},
+						"productTag": {
+							"type":"string",
+							"required":false
+						},
+						"productTypeId": {
+							"type":"number",
+							"required":false
+						},
+						"recommendations": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"alsoPopular": {
+									"type":"array",
+									"required":false,
+									"items":
+										{
+											"type":"string",
+											"required":false
+										}
+									
+
+								},
+								"matchWith": {
+									"type":"array",
+									"required":false,
+									"items":
+										{
+											"type":"string",
+											"required":false
+										}
+									
+
+								}
+							}
+						},
+						"season": {
+							"type":"string",
+							"required":false
+						},
+						"styleImages": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"back": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"default_deprecated": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"default": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"front": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"left": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"right": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"search": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"size_chart": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"size_representation": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"top": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"domain": {
+											"type":"string",
+											"required":false
+										},
+										"imageType": {
+											"type":"string",
+											"required":false
+										},
+										"imageURL": {
+											"type":"string",
+											"required":false
+										},
+										"path": {
+											"type":"string",
+											"required":false
+										},
+										"relativePath": {
+											"type":"string",
+											"required":false
+										},
+										"resolutionFormula": {
+											"type":"string",
+											"required":false
+										},
+										"resolutions": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"1080X1440Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"1080X1440": {
+													"type":"string",
+													"required":false
+												},
+												"150X200Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"150X200": {
+													"type":"string",
+													"required":false
+												},
+												"180X240Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"180X240": {
+													"type":"string",
+													"required":false
+												},
+												"360X480Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"360X480": {
+													"type":"string",
+													"required":false
+												},
+												"48X64Xmini": {
+													"type":"string",
+													"required":false
+												},
+												"48X64": {
+													"type":"string",
+													"required":false
+												}
+											}
+										},
+										"securedDomain": {
+											"type":"string",
+											"required":false
+										},
+										"servingUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"storedUploaderType": {
+											"type":"string",
+											"required":false
+										},
+										"supportedResolutions": {
+											"type":"string",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"styleOptions": {
+							"type":"array",
+							"required":false,
+							"items":
+								{
+									"type":"object",
+									"required":false,
+									"properties":{
+										"active": {
+											"type":"boolean",
+											"required":false
+										},
+										"allSize": {
+											"type":"string",
+											"required":false
+										},
+										"available": {
+											"type":"boolean",
+											"required":false
+										},
+										"id": {
+											"type":"number",
+											"required":false
+										},
+										"inventoryCount": {
+											"type":"number",
+											"required":false
+										},
+										"name": {
+											"type":"string",
+											"required":false
+										},
+										"skuAvailabilityDetailMap": {
+											"type":"object",
+											"required":false
+										},
+										"skuId": {
+											"type":"number",
+											"required":false
+										},
+										"unifiedSizeValue": {
+											"type":"string",
+											"required":false
+										},
+										"unifiedSize": {
+											"type":"string",
+											"required":false
+										},
+										"value": {
+											"type":"string",
+											"required":false
+										},
+										"warehouseIdToItemCountMap": {
+											"type":"object",
+											"required":false
+										}
+									}
+								}
+							
+
+						},
+						"styleType": {
+							"type":"string",
+							"required":false
+						},
+						"subCategory": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"active": {
+									"type":"boolean",
+									"required":false
+								},
+								"filterOrder": {
+									"type":"number",
+									"required":false
+								},
+								"id": {
+									"type":"number",
+									"required":false
+								},
+								"socialSharingEnabled": {
+									"type":"boolean",
+									"required":false
+								},
+								"typeCode": {
+									"type":"string",
+									"required":false
+								},
+								"typeName": {
+									"type":"string",
+									"required":false
+								}
+							}
+						},
+						"usage": {
+							"type":"string",
+							"required":false
+						},
+						"variantName": {
+							"type":"string",
+							"required":false
+						},
+						"vat": {
+							"type":"number",
+							"required":false
+						},
+						"visualTag": {
+							"type":"string",
+							"required":false
+						},
+						"weight": {
+							"type":"string",
+							"required":false
+						},
+						"year": {
+							"type":"string",
+							"required":false
+						}
+					}
+				}
+			
+
+		},
+		"status": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"required":false
+				}
+			}
+		}
+	}
+}

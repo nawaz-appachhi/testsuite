@@ -1,0 +1,15 @@
+{
+    "name": "${0}",
+    "description": "${1}",
+    "startAt": ${2},
+    "endAt": ${3},
+    "dealType": "FlatPercent",
+    "styleSpecificDetailMap": {
+        "${4}": {
+            "vendorFundedDiscount": ${5},
+            "categoryFundedDiscount": ${6},
+            "showInCard": ${7}
+            
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "searchQuery": "${0}",
+  "rows": ${1},
+  "return_docs": ${2},
+  "is_facet": ${3}
+}

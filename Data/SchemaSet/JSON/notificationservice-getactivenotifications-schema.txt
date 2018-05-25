@@ -1,0 +1,129 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"actions": {
+			"type":"object",
+			"id": "http://jsonschema.net/actions",
+			"required":true,
+			"properties":{
+				"next": {
+					"type":"string",
+					"id": "http://jsonschema.net/actions/next",
+					"required":true
+				},
+				"self": {
+					"type":"string",
+					"id": "http://jsonschema.net/actions/self",
+					"required":true
+				}
+			}
+		},
+		"notifications": {
+			"type":"array",
+			"id": "http://jsonschema.net/notifications",
+			"required":true,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/notifications/0",
+					"required":true,
+					"properties":{
+						"actions": {
+							"type":"object",
+							"id": "http://jsonschema.net/notifications/0/actions",
+							"required":true,
+							"properties":{
+								"markAsRead": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/actions/markAsRead",
+									"required":true
+								}
+							}
+						},
+						"notification": {
+							"type":"object",
+							"id": "http://jsonschema.net/notifications/0/notification",
+							"required":true,
+							"properties":{
+								"cdnURLForImage": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/cdnURLForImage",
+									"required":true
+								},
+								"endTime": {
+									"type":"number",
+									"id": "http://jsonschema.net/notifications/0/notification/endTime",
+									"required":true
+								},
+								"id": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/id",
+									"required":true
+								},
+								"masterNotificationId": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/masterNotificationId",
+									"required":true
+								},
+								"notificationStatus": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/notificationStatus",
+									"required":true
+								},
+								"notificationText": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/notificationText",
+									"required":true
+								},
+								"notificationTitle": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/notificationTitle",
+									"required":true
+								},
+								"notificationType": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/notificationType",
+									"required":true
+								},
+								"publishTime": {
+									"type":"number",
+									"id": "http://jsonschema.net/notifications/0/notification/publishTime",
+									"required":true
+								},
+								"startTime": {
+									"type":"number",
+									"id": "http://jsonschema.net/notifications/0/notification/startTime",
+									"required":true
+								},
+								"urlForLandingPage": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/urlForLandingPage",
+									"required":true
+								},
+								"userId": {
+									"type":"string",
+									"id": "http://jsonschema.net/notifications/0/notification/userId",
+									"required":true
+								}
+							}
+						},
+						"success": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/notifications/0/success",
+							"required":true
+						}
+					}
+				}
+			
+
+		},
+		"success": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/success",
+			"required":true
+		}
+	}
+}

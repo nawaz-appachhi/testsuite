@@ -1,0 +1,23 @@
+{
+   "appId": ${1},
+   "appName":"${2}",
+   "notificationId":"${3}",
+   "notificationType":"${4}",
+   "ttlInMillis":${5},
+   "heading":"${6}",
+   "title":"${7}",
+   "description":"${8}",
+   "pageUrl":"${9}",
+   "imageUrl":"${10}",
+   "targetPortalName":"${11}",
+   "channels":[
+      {
+         "version":"${12}",
+         "channelName":"${13}"
+      }
+   ],
+   "targetInfo":{
+      "version":"${14}",
+      "userList":"${15}"
+   }
+}

@@ -1,0 +1,7 @@
+{"keys" : 
+	[
+		${0}
+	],
+	"totalNumberOfKeys" : ${1},
+	"namespace" : "${2}"
+}

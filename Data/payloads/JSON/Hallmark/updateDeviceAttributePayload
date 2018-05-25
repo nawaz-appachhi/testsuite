@@ -1,0 +1,9 @@
+[
+   { 
+       "deviceId":"${0}",
+        "attributeEntryList":${1}
+    
+   }
+    
+    
+]

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sessionInvalid>
+    <id>${0}</id>
+    <data><![CDATA[${1}]]></data>
+</sessionInvalid>

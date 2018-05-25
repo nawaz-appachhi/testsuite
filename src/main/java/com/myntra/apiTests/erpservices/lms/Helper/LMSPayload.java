@@ -1,0 +1,130 @@
+package com.myntra.apiTests.erpservices.lms.Helper;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.xml.bind.JAXBException;
+
+import com.myntra.lordoftherings.gandalf.APIUtilities;
+import com.myntra.oms.client.entry.OrderLineEntry;
+import com.myntra.oms.client.entry.OrderReleaseEntry;
+import com.myntra.oms.client.response.OrderReleaseResponse;
+
+public class LMSPayload {
+
+	public String createPayload(String trackingNumber) throws JAXBException {
+		OrderReleaseEntry orderReleaseEntry = new OrderReleaseEntry();
+		OrderReleaseResponse orderReleaseResponse = new OrderReleaseResponse();
+		OrderLineEntry orderLineEntry = new OrderLineEntry();
+		orderReleaseEntry.setCreatedBy("sps automation");
+		orderReleaseEntry.setCreatedOn(new Date());
+		orderReleaseEntry.setId(70020644L); //
+		orderReleaseEntry.setLastModifiedOn(new Date());
+		orderReleaseEntry.setAddress("Myntra design, AKR tech park, Near kudlu gate");
+		orderReleaseEntry.setAddressId((long) 6118996);
+		orderReleaseEntry.setCartDiscount(0.0);
+//		orderReleaseEntry.setCashRedeemed(0.0);
+		orderReleaseEntry.setCity("Bangalore");
+		orderReleaseEntry.setCodCharge(0.0);
+		orderReleaseEntry.setCodPaymentStatus("pending");
+		orderReleaseEntry.setCountry("India");
+		orderReleaseEntry.setCouponDiscount(0.0);
+		orderReleaseEntry.setDiscount(0.0);
+		orderReleaseEntry.setEarnedCredit(0.0);
+		orderReleaseEntry.setEmail("spsautomation@myntra.com");
+		orderReleaseEntry.setEmiCharge(0.0);
+		orderReleaseEntry.setFinalAmount(1199.00);
+		orderReleaseEntry.setGift(false);
+//		orderReleaseEntry.setGiftCardAmount(0.0);
+		orderReleaseEntry.setGiftCharge(0.0);
+		orderReleaseEntry.setLocality("Bangalore");
+		orderReleaseEntry.setLogin("spsautomation@myntra.com");
+		orderReleaseEntry.setLoyaltyConversionFactor(0.0);
+		orderReleaseEntry.setLoyaltyPointsCredit(0.0);
+//		orderReleaseEntry.setLoyaltyPointsUsed(0.0);
+		orderReleaseEntry.setMobile("9191919191");
+		orderReleaseEntry.setMrpTotal(1199.00);
+		orderReleaseEntry.setOnHold(false);
+		orderReleaseEntry.setOrderId(70020644L);
+		orderReleaseEntry.setPaymentMethod("on");
+		orderReleaseEntry.setPaymentMethodDisplay("Credit card");
+		orderReleaseEntry.setPersonalized(false);
+		orderReleaseEntry.setPgDiscount(0.0);
+		orderReleaseEntry.setReceiverName("sps automation");
+		orderReleaseEntry.setRefunded(false);
+		orderReleaseEntry.setShippingCharge(0.0);
+		orderReleaseEntry.setShippingMethod("NORMAL");
+		orderReleaseEntry.setSingleItemRelease(false);
+		orderReleaseEntry.setSpecialPincode(false);
+		orderReleaseEntry.setState("KA");
+		orderReleaseEntry.setStatus("PK");
+		orderReleaseEntry.setStatusDisplayName("Packed");
+		orderReleaseEntry.setStoreId((long) 1);
+		orderReleaseEntry.setStoredCredit(0.0);
+		orderReleaseEntry.setTaxAmount(0.0);
+		orderReleaseEntry.setCourierCode("DE");
+		orderReleaseEntry.setTrackingNo(trackingNumber);
+		orderReleaseEntry.setUserContactNo("9191919191");
+		orderReleaseEntry.setZipcode("560076");
+		orderReleaseEntry.setWarehouseId(1);
+
+		orderLineEntry.setCreatedBy("sps automation");
+		orderLineEntry.setCreatedOn(new Date());
+		orderLineEntry.setId(52667615L);// lineId long
+		orderLineEntry.setLastModifiedOn(new Date());
+		orderLineEntry.setCartDiscount(0.0);
+//		orderLineEntry.setCashRedeemed(0.0);
+		orderLineEntry.setCashbackOffered(0.0);
+		orderLineEntry.setCouponDiscount(0.0);
+		orderLineEntry.setCustomizedMessage("Test");
+		orderLineEntry.setDiscount(0.0);
+		orderLineEntry.setDiscountRuleId(0);
+		orderLineEntry.setDiscountRuleRevId(0);
+		orderLineEntry.setDiscountedProduct(false);
+		orderLineEntry.setDiscountedQuantity(0);
+		orderLineEntry.setEarnedCredit(0.0);
+		orderLineEntry.setFinalAmount(1199.0);
+		orderLineEntry.setFragile(false);
+//		orderLineEntry.setGiftCardAmount(0.0);
+//		orderLineEntry.setGovtTaxAmount(0.0);
+//		orderLineEntry.setGovtTaxRate(5.0);
+		orderLineEntry.setHazMat(false);
+		orderLineEntry.setIsCustomizable(false);
+		orderLineEntry.setIsDiscountedProduct(false);
+		orderLineEntry.setIsExchangeableProduct(true);
+		orderLineEntry.setIsReturnableProduct(true);
+		orderLineEntry.setIsFragile(false);
+		orderLineEntry.setIsJewellery(false);
+		orderLineEntry.setJewellery(false);
+		orderLineEntry.setLoyaltyConversionFactor(0.0);
+		orderLineEntry.setLoyaltyPointsAwarded(0.0);
+		orderLineEntry.setLoyaltyPointsCredit(0.0);
+		//orderLineEntry.setLoyaltyPointsUsed(0.0);
+		orderLineEntry.setOptionId(825090L);
+		orderLineEntry.setOrderId(70020644L);
+		orderLineEntry.setOrderReleaseId(70020644L);
+		orderLineEntry.setPackagingStatus("NOT_PACKAGED");
+		orderLineEntry.setPackagingType("NORMAL");
+		orderLineEntry.setPgDiscount(0.0);
+		orderLineEntry.setPoStatus("UNUSED");
+		orderLineEntry.setQuantity(1);
+		orderLineEntry.setSellerId(1L);
+		orderLineEntry.setSkuId(822644L);
+		orderLineEntry.setStatus("QD");
+		orderLineEntry.setStatusDisplayName("QC Done");
+		orderLineEntry.setStoredCredit(0.0);
+		orderLineEntry.setStyleId(245024L);
+		orderLineEntry.setSupplyType("ON_HAND");
+		orderLineEntry.setTaxAmount(0.0);
+		orderLineEntry.setTaxRate(5.0);
+		List<OrderLineEntry> orderLineEntries = new ArrayList<OrderLineEntry>();
+		orderLineEntries.add(orderLineEntry);
+		orderReleaseEntry.setOrderLines(orderLineEntries);
+		List<OrderReleaseEntry> orderReleaseEntries = new ArrayList<>();
+		orderReleaseEntries.add(orderReleaseEntry);
+		orderReleaseResponse.setData(orderReleaseEntries);
+		String message = APIUtilities.convertXMLObjectToString(orderReleaseResponse);
+		return message;
+	}
+}

@@ -1,0 +1,2527 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "id": "http://jsonschema.net/id",
+      "type": "integer"
+    },
+    "createdOn": {
+      "id": "http://jsonschema.net/createdOn",
+      "type": "integer"
+    },
+    "name": {
+      "id": "http://jsonschema.net/name",
+      "type": "string"
+    },
+    "description": {
+      "id": "http://jsonschema.net/description",
+      "type": "string"
+    },
+    "isDynamic": {
+      "id": "http://jsonschema.net/isDynamic",
+      "type": "boolean"
+    },
+    "isEnabled": {
+      "id": "http://jsonschema.net/isEnabled",
+      "type": "boolean"
+    },
+    "startedOn": {
+      "id": "http://jsonschema.net/startedOn",
+      "type": "integer"
+    },
+    "expiredOn": {
+      "id": "http://jsonschema.net/expiredOn",
+      "type": "integer"
+    },
+    "discountFunding": {
+      "id": "http://jsonschema.net/discountFunding",
+      "type": "string"
+    },
+    "fundingPercentage": {
+      "id": "http://jsonschema.net/fundingPercentage",
+      "type": "integer"
+    },
+    "fundingTax": {
+      "id": "http://jsonschema.net/fundingTax",
+      "type": "integer"
+    },
+    "fundingBasis": {
+      "id": "http://jsonschema.net/fundingBasis",
+      "type": "string"
+    },
+    "discountLimit": {
+      "id": "http://jsonschema.net/discountLimit",
+      "type": "integer"
+    },
+    "stylesCount": {
+      "id": "http://jsonschema.net/stylesCount",
+      "type": "integer"
+    },
+    "discountRules": {
+      "id": "http://jsonschema.net/discountRules",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/discountRules/0",
+        "type": "object",
+        "properties": {
+          "type": {
+            "id": "http://jsonschema.net/discountRules/0/type",
+            "type": "string"
+          },
+          "id": {
+            "id": "http://jsonschema.net/discountRules/0/id",
+            "type": "integer"
+          },
+          "createdOn": {
+            "id": "http://jsonschema.net/discountRules/0/createdOn",
+            "type": "null"
+          },
+          "groupId": {
+            "id": "http://jsonschema.net/discountRules/0/groupId",
+            "type": "integer"
+          },
+          "discountFreeItems": {
+            "id": "http://jsonschema.net/discountRules/0/discountFreeItems",
+            "type": "array",
+            "items": []
+          },
+          "percent": {
+            "id": "http://jsonschema.net/discountRules/0/percent",
+            "type": "integer"
+          },
+          "amount": {
+            "id": "http://jsonschema.net/discountRules/0/amount",
+            "type": "integer"
+          },
+          "active": {
+            "id": "http://jsonschema.net/discountRules/0/active",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "discountFilters": {
+      "id": "http://jsonschema.net/discountFilters",
+      "type": "array",
+      "items": []
+    },
+    "discountStyles": {
+      "id": "http://jsonschema.net/discountStyles",
+      "type": "array",
+      "items": [
+        {
+          "id": "http://jsonschema.net/discountStyles/0",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/0/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/0/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/0/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/1",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/1/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/1/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/1/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/2",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/2/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/2/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/2/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/3",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/3/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/3/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/3/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/4",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/4/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/4/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/4/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/5",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/5/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/5/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/5/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/6",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/6/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/6/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/6/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/7",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/7/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/7/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/7/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/8",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/8/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/8/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/8/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/9",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/9/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/9/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/9/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/10",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/10/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/10/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/10/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/11",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/11/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/11/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/11/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/12",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/12/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/12/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/12/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/13",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/13/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/13/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/13/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/14",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/14/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/14/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/14/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/15",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/15/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/15/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/15/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/16",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/16/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/16/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/16/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/17",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/17/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/17/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/17/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/18",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/18/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/18/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/18/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/19",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/19/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/19/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/19/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/20",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/20/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/20/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/20/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/21",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/21/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/21/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/21/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/22",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/22/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/22/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/22/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/23",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/23/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/23/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/23/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/24",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/24/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/24/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/24/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/25",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/25/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/25/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/25/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/26",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/26/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/26/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/26/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/27",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/27/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/27/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/27/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/28",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/28/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/28/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/28/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/29",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/29/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/29/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/29/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/30",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/30/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/30/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/30/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/31",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/31/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/31/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/31/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/32",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/32/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/32/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/32/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/33",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/33/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/33/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/33/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/34",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/34/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/34/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/34/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/35",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/35/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/35/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/35/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/36",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/36/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/36/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/36/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/37",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/37/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/37/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/37/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/38",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/38/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/38/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/38/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/39",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/39/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/39/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/39/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/40",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/40/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/40/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/40/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/41",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/41/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/41/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/41/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/42",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/42/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/42/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/42/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/43",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/43/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/43/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/43/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/44",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/44/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/44/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/44/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/45",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/45/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/45/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/45/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/46",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/46/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/46/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/46/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/47",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/47/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/47/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/47/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/48",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/48/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/48/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/48/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/49",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/49/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/49/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/49/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/50",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/50/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/50/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/50/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/51",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/51/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/51/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/51/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/52",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/52/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/52/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/52/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/53",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/53/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/53/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/53/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/54",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/54/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/54/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/54/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/55",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/55/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/55/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/55/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/56",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/56/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/56/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/56/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/57",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/57/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/57/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/57/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/58",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/58/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/58/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/58/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/59",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/59/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/59/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/59/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/60",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/60/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/60/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/60/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/61",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/61/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/61/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/61/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/62",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/62/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/62/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/62/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/63",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/63/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/63/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/63/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/64",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/64/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/64/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/64/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/65",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/65/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/65/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/65/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/66",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/66/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/66/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/66/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/67",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/67/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/67/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/67/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/68",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/68/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/68/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/68/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/69",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/69/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/69/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/69/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/70",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/70/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/70/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/70/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/71",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/71/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/71/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/71/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/72",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/72/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/72/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/72/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/73",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/73/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/73/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/73/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/74",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/74/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/74/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/74/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/75",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/75/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/75/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/75/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/76",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/76/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/76/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/76/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/77",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/77/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/77/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/77/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/78",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/78/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/78/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/78/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/79",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/79/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/79/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/79/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/80",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/80/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/80/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/80/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/81",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/81/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/81/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/81/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/82",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/82/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/82/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/82/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/83",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/83/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/83/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/83/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/84",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/84/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/84/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/84/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/85",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/85/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/85/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/85/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/86",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/86/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/86/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/86/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/87",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/87/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/87/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/87/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/88",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/88/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/88/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/88/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/89",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/89/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/89/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/89/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/90",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/90/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/90/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/90/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/91",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/91/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/91/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/91/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/92",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/92/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/92/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/92/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/93",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/93/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/93/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/93/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/94",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/94/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/94/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/94/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/95",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/95/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/95/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/95/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/96",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/96/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/96/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/96/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/97",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/97/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/97/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/97/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/98",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/98/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/98/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/98/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/99",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/99/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/99/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/99/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/100",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/100/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/100/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/100/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/101",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/101/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/101/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/101/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/102",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/102/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/102/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/102/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/103",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/103/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/103/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/103/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/104",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/104/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/104/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/104/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/105",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/105/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/105/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/105/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/106",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/106/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/106/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/106/styleId",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/discountStyles/107",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/discountStyles/107/id",
+              "type": "integer"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/discountStyles/107/createdOn",
+              "type": "integer"
+            },
+            "styleId": {
+              "id": "http://jsonschema.net/discountStyles/107/styleId",
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "excludedStyles": {
+      "id": "http://jsonschema.net/excludedStyles",
+      "type": "array",
+      "items": [
+        {
+          "id": "http://jsonschema.net/excludedStyles/0",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/1",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/2",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/3",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/4",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/5",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/6",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/7",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/8",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/9",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/10",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/11",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/12",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/13",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/14",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/15",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/16",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/17",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/18",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/19",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/20",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/21",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/22",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/23",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/24",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/25",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/26",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/27",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/28",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/29",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/30",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/31",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/32",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/33",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/34",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/35",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/36",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/37",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/38",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/39",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/40",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/41",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/42",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/43",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/44",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/45",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/46",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/47",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/48",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/49",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/50",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/51",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/52",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/53",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/54",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/55",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/56",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/57",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/58",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/59",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/60",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/61",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/62",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/63",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/64",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/65",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/66",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/67",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/68",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/69",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/70",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/71",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/72",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/73",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/74",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/75",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/76",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/77",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/78",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/79",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/80",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/81",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/82",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/83",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/84",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/85",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/86",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/87",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/88",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/89",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/90",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/91",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/92",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/93",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/94",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/95",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/96",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/97",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/98",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/99",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/100",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/101",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/102",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/103",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/104",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/105",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/106",
+          "type": "integer"
+        },
+        {
+          "id": "http://jsonschema.net/excludedStyles/107",
+          "type": "integer"
+        }
+      ]
+    },
+    "td": {
+      "id": "http://jsonschema.net/td",
+      "type": "boolean"
+    },
+    "onCart": {
+      "id": "http://jsonschema.net/onCart",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "createdOn",
+    "name",
+    "description",
+    "isDynamic",
+    "isEnabled",
+    "startedOn",
+    "expiredOn",
+    "discountFunding",
+    "fundingPercentage",
+    "fundingTax",
+    "fundingBasis",
+    "discountLimit",
+    "stylesCount",
+    "discountRules",
+    "discountFilters",
+    "discountStyles",
+    "excludedStyles",
+    "td",
+    "onCart"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+	"name": "Test Event Automation ",
+	"description": "Event description Automation",
+	"startTime": ${0},
+	"eventType" : "${1}",
+	"endTime": ${2}
+}

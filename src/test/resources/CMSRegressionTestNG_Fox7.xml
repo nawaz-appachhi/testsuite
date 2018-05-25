@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="e2eCMSRegression" verbose="1">
+    <parameter name="team" value="StoreFrontApp"/>
+	<parameter name="core" value="CMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener"/>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+	</listeners>
+	<test name="e2eCMSRegression">
+		<groups>
+			<run>
+				<include name="e2eCMSRegression" />
+			</run>
+		</groups>
+		<classes>
+			<!--  Catalog tests -->
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRegressionCmsMultiParamTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRegressionCmsFactoryClass" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRegressionCmsSearchApiTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRegressionCmsProductCategoryTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.HSNTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRgrnCmsOldNewSearchAPIWithSkuDiffTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.e2eRgrnCmsNewSearchAPIWithTagTest" />
+<!--  Commenting below test file only in pre-prod after discussion with Sumit -->
+<!-- 			<class name="com.myntra.apiTests.test.regression.cms.PIMMigrationFactoryClass_Fox7" /> -->
+<!-- 			<class name="com.myntra.apiTests.portalservices.cms.HSNValidateAPITest" /> -->
+<!-- 			<class name="com.myntra.apiTests.portalservices.cms.HSNFindAPITest" /> -->
+			<class name="com.myntra.apiTests.portalservices.cms.DIYTest_1AT" />
+			<class name="com.myntra.apiTests.portalservices.cms.DIYTest_2AT" />
+			<class name="com.myntra.apiTests.portalservices.cms.DIY_EndToEndFlowTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.DIYCuration" />
+			<class name="com.myntra.apiTests.portalservices.cms.VirtualBundle_SkuCreation" />
+			<class name="com.myntra.apiTests.portalservices.cms.VirtualBundle_BundleCreation" />
+			<class name="com.myntra.apiTests.portalservices.cms.ChangeManagementTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.AttributeTypeServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.AttributeValueAndBrandServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.CMSProductServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.CMSTaxonomyServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.GlobalAttributeServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.MiscServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.ProductDetailServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.SellerServiceDelegateTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.StyleGroupServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.StyleUpdateTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.TaxonomyServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.MiscServiceWithListTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.JobTrackerServiceTest" />
+			<class name="com.myntra.apiTests.portalservices.cms.ProductExportServiceTest" />
+			
+		</classes>
+<!-- 		<packages> -->
+<!-- 		    <package name="com.myntra.apiTests.test.regression.cms.*" /> -->
+<!-- 		</packages> -->
+	</test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<invoiceSku>
+    <id></id>
+    <quantity>${0}</quantity>
+    <landedPrice>100</landedPrice>
+    <sku>
+        <id>${1}</id>
+    </sku>
+    <invoice>
+        <id>${2}</id>
+    </invoice>
+    <cartonCode>ven1</cartonCode>
+   <invoiceNumber>auto1</invoiceNumber>
+    
+</invoiceSku>

@@ -1,0 +1,14 @@
+{
+    "cartItemEntries": [{
+        "styleId": ${0},
+        "skuId": ${1},
+        "operation": "UPDATE",
+        "quantity": 1,
+        "customizedMessage": ${2},
+        "itemId":"${3}"
+    }],
+    "giftMessage": {
+        "message": "${4}",
+        "recipientEmailId": "${5}"
+    }
+}

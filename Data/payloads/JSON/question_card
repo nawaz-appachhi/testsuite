@@ -1,0 +1,13 @@
+ {
+      "appId": 7,
+      "refId": "questionobj_${0}",
+      "type": "QUESTION",
+      "title": "Asked by MyntraApp test Team",
+      "description": "Hey Malika,what you think a better colour of shirts on  male? And any extra hints in regard to look good.",
+      "url": "/forum/question/7182",
+      "imageUrl": "",
+      "extraData": "{\"products\":null,\"collections\":null,\"questionType\":null,\"answerCount\":0,\"commentCount\":0,\"followersCount\":0,\"viewCount\":0,\"spamCount\":0}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

@@ -1,0 +1,194 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 112, Failures: 19, Errors: 0, Skipped: 0, Time elapsed: 31.853 sec <<< FAILURE! - in TestSuite
+testGetATSDetailsWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.225 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetATSDetailsWithoutClientID(TestATSAPISV2.java:252)
+
+testPostATSDetailsWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.241 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPostATSDetailsWithoutClientID(TestATSAPISV2.java:261)
+
+testGetOutstandingCODLimitWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.281 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetOutstandingCODLimitWithoutClientID(TestATSAPISV2.java:270)
+
+testGetOpenOrdersValueWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.164 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetOpenOrdersValueWithoutClientID(TestATSAPISV2.java:278)
+
+testPutOpenOrdersValueWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.171 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutOpenOrdersValueWithoutClientID(TestATSAPISV2.java:286)
+
+testGetReturnAbuserWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.231 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetReturnAbuserWithoutClientID(TestATSAPISV2.java:294)
+
+testPutReturnAbuserWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.393 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutReturnAbuserWithoutClientID(TestATSAPISV2.java:302)
+
+testGetBlockedCustomerByLoginWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.232 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByLoginWithoutClientID(TestATSAPISV2.java:311)
+
+testGetBlockedCustomerByPhoneWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.043 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByPhoneWithoutClientID(TestATSAPISV2.java:318)
+
+testGetBlockedCustomerByDeviceIDWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.035 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByDeviceIDWithoutClientID(TestATSAPISV2.java:325)
+
+testIsCustomerBlockedWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.29 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testIsCustomerBlockedWithoutClientID(TestATSAPISV2.java:333)
+
+testPutCustomerBlockedWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.036 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutCustomerBlockedWithoutClientID(TestATSAPISV2.java:340)
+
+testGetLinkedAccbyEmailWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.062 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyEmailWithoutClientID(TestATSAPISV2.java:347)
+
+testGetLinkedAccbyDeviceWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.052 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyDeviceWithoutClientID(TestATSAPISV2.java:353)
+
+testGetLinkedAccbyPhoneWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.037 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyPhoneWithoutClientID(TestATSAPISV2.java:359)
+
+testPutLinkedAccbyPhoneWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.235 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutLinkedAccbyPhoneWithoutClientID(TestATSAPISV2.java:367)
+
+testGetFakeEmailWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.261 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetFakeEmailWithoutClientID(TestATSAPISV2.java:375)
+
+testPutFakeEmailWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.167 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutFakeEmailWithoutClientID(TestATSAPISV2.java:383)
+
+testAddressScoreWithoutClientID(com.myntra.apiTests.portalservices.atsService.TestATSAPISV2)  Time elapsed: 0.043 sec  <<< FAILURE!
+java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreWithoutClientID(TestATSAPISV2.java:390)
+

@@ -1,0 +1,21 @@
+ {
+            "startDate": ${3},
+            "endDate": ${4},
+            "criterias": {
+                "brands": ["${0}","${1}","${2}"],
+                "styleIds": [],
+                "articleTypes": [],
+                "categories": [],
+                "categoryManagers": [],
+                "subCategories": [],
+                "seasonCodes": [],
+                "genders": [],
+                "merchandiseTypes": [
+                    "MMP"
+                ],
+                "mrpRanges": [],
+                "name": "${5}",
+                "description": "d3"
+            }
+        }
+	

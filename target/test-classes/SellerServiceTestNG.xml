@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SellerServices" verbose="1">
+		<parameter name="team" value="InBound"/>
+	<parameter name="core" value="PartnerExp"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.CustomReportListener" /> 
+	</listeners>
+	<test name="SellerTestServiceTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.SellerServices" />
+		</classes>
+	</test>
+</suite>

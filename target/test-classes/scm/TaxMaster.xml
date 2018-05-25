@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TaxMasterService" verbose="1"  data-provider-thread-count="16">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="TaxMaster"/>
+	<parameter name="type" value="Regression"/>
+<!-- 	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener"/>
+	</listeners> -->
+	<test name="Taxmaster">
+		<groups>
+			<run>
+				<include name="Sanity"/>
+			</run>
+		</groups>
+		<classes>
+			<!--<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />-->
+			<class name="com.myntra.apiTests.erpservices.taxMaster.RuleEngineGST"/>
+			<class name="com.myntra.apiTests.erpservices.taxMaster.GetItemLevelTaxAPI"/>
+			<!--  <class name="com.myntra.apiTests.erpservices.taxMaster.getVatToRecover"/>-->
+		</classes>
+	</test>
+</suite>

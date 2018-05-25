@@ -1,0 +1,13 @@
+{
+ "discountType": "${0}",
+ "discountValue": ${1},
+ "startDate": "${2}",
+ "endDate": "${3}",
+ "description": "Style Id-Created By Automation ",
+ "startIndex": 0,
+ "recordCount": 13,
+ "user": "SUBHADEEP MKTPLACE",
+ "admin":true,
+ "show": "All",
+ "styleIdList":[338661,338660]
+}

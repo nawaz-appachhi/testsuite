@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="StyleForum-TestSuite" verbose="1">
+			<parameter name="team" value="Storefront"/>
+			<parameter name="core" value="Style Forum"/>
+			<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />		
+	</listeners>
+	<test name="StyleForum_Tests">
+			
+		<groups>
+			<run>
+				<include name="ExhaustiveRegression" />
+				<include name="SchemaValidation"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.StyleForumApiTests" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,13 @@
+ {
+      "appId": 7,
+      "refId": "answerobj_${0}",
+      "type": "ANSWER",
+      "title": "Answered by Myntra App Test Team",
+      "description": "Hi, i'm 21 & not sure about my body type. My measurement are 34:30:34. Suggest me which type clothes suits me on western and ethic wear.",
+      "url": "/forum/question/5442",
+      "imageUrl": "http://assets.myntassets.com/assets/images/2015/6/16/11434439152106-1434439152077Jack-and-Jones.jpg",
+      "extraData": "{\"products\":\"967630,559795,967635,1077721\"}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

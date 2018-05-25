@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="End_To_End_ERP_Suite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="EndToEnd">
+		<classes>
+			<class name="com.myntra.apiTests.test.regression.erpservices.lms.EndToEnd" />
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes>
+	</test>
+</suite>

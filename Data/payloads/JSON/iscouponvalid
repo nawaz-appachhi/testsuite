@@ -1,0 +1,7 @@
+{
+"coupon":"${0}",
+"login" : "${1}" ,
+"validateGroup" : true,
+"channel" : "${2}"
+
+}

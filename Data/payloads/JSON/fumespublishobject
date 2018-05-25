@@ -1,0 +1,18 @@
+{
+    "whom":"${0}",
+    "whomType":"Object",
+
+    "userMessage" : "Check out this article!", 
+    "channels": [{"name": "andriod"},{"name": "ios"}],
+    "persona" : "men",   
+  "extraData": "{\"credits\":\"500\" , \"boost\":\"400\", \"platform\" : \"android\"}",
+
+    "target" : {
+        "userTargettingType": "EVERYONE",   
+        "segmentQuery" : "", 
+        "allowUsers" : "", 
+        "allowUsersUrl" : "", 
+        "denyUsers" : "", 
+        "denyUsersUrl" : "" 
+    }
+}

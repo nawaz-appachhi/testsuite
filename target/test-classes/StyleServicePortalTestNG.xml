@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="StyleServicePortalTestSuite" verbose="1">
+	<parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="StyleService"/>
+    <parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="StyleServicePortalTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.StyleServiceApiTests" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,372 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#", 
+  "definitions": {}, 
+  "id": "http://example.com/example.json", 
+  "properties": {
+    "data": {
+      "id": "http://example.com/example.json/properties/data", 
+      "items": {
+        "id": "http://example.com/example.json/properties/data/items", 
+        "properties": {
+          "attributeValues": {
+            "id": "http://example.com/example.json/properties/data/items/properties/attributeValues", 
+            "items": {
+              "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items", 
+              "properties": {
+                "attributeCode": {
+                  "default": "COTTON", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeCode", 
+                  "title": "The attributecode schema", 
+                  "type": "string"
+                }, 
+                "attributeType": {
+                  "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType", 
+                  "properties": {
+                    "code": {
+                      "default": "fabric", 
+                      "description": "An explanation about the purpose of this instance.", 
+                      "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType/properties/code", 
+                      "title": "The code schema", 
+                      "type": "string"
+                    }, 
+                    "id": {
+                      "default": 1439, 
+                      "description": "An explanation about the purpose of this instance.", 
+                      "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType/properties/id", 
+                      "title": "The id schema", 
+                      "type": "integer"
+                    }, 
+                    "isActive": {
+                      "default": true, 
+                      "description": "An explanation about the purpose of this instance.", 
+                      "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType/properties/isActive", 
+                      "title": "The isactive schema", 
+                      "type": "boolean"
+                    }, 
+                    "typeName": {
+                      "default": "Fabric", 
+                      "description": "An explanation about the purpose of this instance.", 
+                      "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType/properties/typeName", 
+                      "title": "The typename schema", 
+                      "type": "string"
+                    }, 
+                    "typeOfAttribute": {
+                      "default": "singleValued", 
+                      "description": "An explanation about the purpose of this instance.", 
+                      "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeType/properties/typeOfAttribute", 
+                      "title": "The typeofattribute schema", 
+                      "type": "string"
+                    }
+                  }, 
+                  "required": [
+                    "isActive", 
+                    "id", 
+                    "typeOfAttribute", 
+                    "code", 
+                    "typeName"
+                  ], 
+                  "type": "object"
+                }, 
+                "attributeValue": {
+                  "default": "Cotton", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/attributeValue", 
+                  "title": "The attributevalue schema", 
+                  "type": "string"
+                }, 
+                "code": {
+                  "default": "COTTON", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/attributeValues/items/properties/code", 
+                  "title": "The code schema", 
+                  "type": "string"
+                }
+              }, 
+              "required": [
+                "attributeType", 
+                "attributeValue", 
+                "code", 
+                "attributeCode"
+              ], 
+              "type": "object"
+            }, 
+            "type": "array"
+          }, 
+          "globalAttributes": {
+            "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes", 
+            "properties": {
+              "ageGroup": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/ageGroup", 
+                "title": "The agegroup schema", 
+                "type": "null"
+              }, 
+              "baseColour": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/baseColour", 
+                "title": "The basecolour schema", 
+                "type": "null"
+              }, 
+              "brandName": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/brandName", 
+                "title": "The brandname schema", 
+                "type": "null"
+              }, 
+              "colour1": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/colour1", 
+                "title": "The colour1 schema", 
+                "type": "null"
+              }, 
+              "colour2": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/colour2", 
+                "title": "The colour2 schema", 
+                "type": "null"
+              }, 
+              "fashionType": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/fashionType", 
+                "title": "The fashiontype schema", 
+                "type": "null"
+              }, 
+              "gender": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/gender", 
+                "title": "The gender schema", 
+                "type": "null"
+              }, 
+              "season": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/season", 
+                "title": "The season schema", 
+                "type": "null"
+              }, 
+              "usage": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/usage", 
+                "title": "The usage schema", 
+                "type": "null"
+              }, 
+              "year": {
+                "default": null, 
+                "description": "An explanation about the purpose of this instance.", 
+                "id": "http://example.com/example.json/properties/data/items/properties/globalAttributes/properties/year", 
+                "title": "The year schema", 
+                "type": "null"
+              }
+            }, 
+            "required": [
+              "ageGroup", 
+              "usage", 
+              "year", 
+              "baseColour", 
+              "brandName", 
+              "colour1", 
+              "colour2", 
+              "season", 
+              "fashionType", 
+              "gender"
+            ], 
+            "type": "object"
+          }, 
+          "id": {
+            "default": 123456, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/id", 
+            "title": "The id schema", 
+            "type": "integer"
+          }, 
+          "productOptionEntries": {
+            "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries", 
+            "items": {
+              "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items", 
+              "properties": {
+                "active": {
+                  "default": true, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/active", 
+                  "title": "The active schema", 
+                  "type": "boolean"
+                }, 
+                "allSize": {
+                  "default": "XS", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/allSize", 
+                  "title": "The allsize schema", 
+                  "type": "string"
+                }, 
+                "id": {
+                  "default": 422420, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/id", 
+                  "title": "The id schema", 
+                  "type": "integer"
+                }, 
+                "inBrand": {
+                  "default": true, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/inBrand", 
+                  "title": "The inbrand schema", 
+                  "type": "boolean"
+                }, 
+                "isActive": {
+                  "default": true, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/isActive", 
+                  "title": "The isactive schema", 
+                  "type": "boolean"
+                }, 
+                "measurement": {
+                  "default": "{\"Bust\":{\"value\":{\"unit\":\"Inches\",\"value\":32}}}", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/measurement", 
+                  "title": "The measurement schema", 
+                  "type": "string"
+                }, 
+                "myntraSize": {
+                  "default": "XS", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/myntraSize", 
+                  "title": "The myntrasize schema", 
+                  "type": "string"
+                }, 
+                "name": {
+                  "default": "Size", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/name", 
+                  "title": "The name schema", 
+                  "type": "string"
+                }, 
+                "skuCode": {
+                  "default": "MNRLTOPS00372", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/skuCode", 
+                  "title": "The skucode schema", 
+                  "type": "string"
+                }, 
+                "skuId": {
+                  "default": 422420, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/skuId", 
+                  "title": "The skuid schema", 
+                  "type": "integer"
+                }, 
+                "styleId": {
+                  "default": 123456, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/styleId", 
+                  "title": "The styleid schema", 
+                  "type": "integer"
+                }, 
+                "value": {
+                  "default": "XS", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/productOptionEntries/items/properties/value", 
+                  "title": "The value schema", 
+                  "type": "string"
+                }
+              }, 
+              "required": [
+                "isActive", 
+                "id", 
+                "active", 
+                "measurement", 
+                "myntraSize", 
+                "allSize", 
+                "inBrand", 
+                "value", 
+                "styleId", 
+                "skuCode", 
+                "name", 
+                "skuId"
+              ], 
+              "type": "object"
+            }, 
+            "type": "array"
+          }, 
+          "styleStatus": {
+            "default": "P", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/styleStatus", 
+            "title": "The stylestatus schema", 
+            "type": "string"
+          }, 
+          "variantName": {
+            "default": "PU13-800 KT", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/variantName", 
+            "title": "The variantname schema", 
+            "type": "string"
+          }
+        }, 
+        "required": [
+          "variantName", 
+          "attributeValues", 
+          "styleStatus", 
+          "id", 
+          "globalAttributes", 
+          "productOptionEntries"
+        ], 
+        "type": "object"
+      }, 
+      "type": "array"
+    }, 
+    "status": {
+      "id": "http://example.com/example.json/properties/status", 
+      "properties": {
+        "statusCode": {
+          "default": 3, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusCode", 
+          "title": "The statuscode schema", 
+          "type": "integer"
+        }, 
+        "statusMessage": {
+          "default": "Success", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusMessage", 
+          "title": "The statusmessage schema", 
+          "type": "string"
+        }, 
+        "statusType": {
+          "default": "SUCCESS", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusType", 
+          "title": "The statustype schema", 
+          "type": "string"
+        }, 
+        "totalCount": {
+          "default": 1, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/totalCount", 
+          "title": "The totalcount schema", 
+          "type": "integer"
+        }
+      }, 
+      "required": [
+        "statusCode", 
+        "statusMessage", 
+        "statusType", 
+        "totalCount"
+      ], 
+      "type": "object"
+    }
+  }, 
+  "required": [
+    "data", 
+    "status"
+  ], 
+  "type": "object"
+}

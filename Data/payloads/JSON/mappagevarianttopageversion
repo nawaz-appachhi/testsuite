@@ -1,0 +1,5 @@
+{
+    "userType":"${0}",
+    "abtestName":"${1}",
+    "abtestVariant":"${2}"
+}

@@ -1,0 +1,13 @@
+{
+	"description": [{
+		"type": "TEXT",
+		"value": "${0}"
+		
+	}, {
+		"products": [],
+		"type": "PRODUCTS"
+	}, {
+		"images": [],
+		"type": "PHOTOS"
+	}]
+}

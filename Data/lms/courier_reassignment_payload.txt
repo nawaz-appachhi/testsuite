@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orderTracking>
+    <createdBy>erpMessageQueue</createdBy>
+    <createdOn>2015-11-15T09:40:49+05:30</createdOn>
+    <id>{<id>}</id>
+    <lastModifiedOn>2015-11-15T09:40:50+05:30</lastModifiedOn>
+    <version>3</version>
+    <courierCreationStatus>AWAITING</courierCreationStatus>
+    <courierOperator>{<courierOperator>}</courierOperator>
+    <deliveryStatus>FIT</deliveryStatus>
+    <failedAttempts>0</failedAttempts>
+    <orderId>{<orderId>}</orderId>
+    <orderTrackingDetails>
+        <createdBy>erpMessageQueue</createdBy>
+        <createdOn>2015-11-15T09:40:50+05:30</createdOn>
+        <id>7439</id>
+        <lastModifiedOn>2015-11-15T09:40:50+05:30</lastModifiedOn>
+        <version>0</version>
+        <actionDate>2015-11-15T09:40:50+05:30</actionDate>
+        <activityType>FIT</activityType>
+        <extTrackingCode>RequestAccepted</extTrackingCode>
+        <location>System</location>
+        <rawStatusUpdate></rawStatusUpdate>
+        <remark>shipment_queued:  {}</remark>
+        <createdBy>erpMessageQueue</createdBy>
+        <createdOn>2015-11-15T09:40:49+05:30</createdOn>
+        <id>7438</id>
+        <lastModifiedOn>2015-11-15T09:40:49+05:30</lastModifiedOn>
+        <version>0</version>
+        <actionDate>2015-11-15T09:40:49+05:30</actionDate>
+        <activityType>PK</activityType>
+        <extTrackingCode>PK</extTrackingCode>
+        <location>Myntra warehouse</location>
+        <remark>Order is packed</remark>
+    </orderTrackingDetails>
+    <shipmentType>DL</shipmentType>
+    <trackingNumber>{<trackingNumber>}</trackingNumber>
+    <warning></warning>
+</orderTracking>

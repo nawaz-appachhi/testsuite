@@ -1,0 +1,10 @@
+{
+    "appName": "${0}",
+    "accessKey": "${1}",
+    "firstName": "${2}",
+    "lastName": "${3}",
+    "email": "${4}",
+  	"phoneNumber": "${5}",
+    "gender": "${6}",
+    "dob": "${7}"
+}

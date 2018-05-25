@@ -1,0 +1,68 @@
+{
+	"count": 1,
+	"cards": [{
+		"type": "COMPONENT_CARD",
+		"props": {
+			"id": "2:test-object-3988",
+			"meta": {
+				"og:name": "article",
+				"og:app": {
+					"id": 2
+				},
+				"og:tags": ["test"],
+				"og:title": "Mumbai Sartorial Guide 2015",
+				"og:url": "http://www.urbaneye.in/urbanstyle/mumbai-sartorial-guide-2015/6",
+				"og:image:url": "http://assets.myntassets.com/assets/images/2015/8/4/11438709917576-file",
+				"og:image:width": 251,
+				"og:image:height": 167,
+				"share": {
+					"og:title": "Mumbai Sartorial Guide 2015",
+					"og:url": "http://www.myntra.com/mailers/feedcard/2:test-object-3988",
+					"og:image:url": "http://assets.myntassets.com/assets/images/2015/8/4/11438709917576-file",
+					"og:image:width": 251,
+					"og:image:height": 167
+				}
+			},
+			"activities": {
+				"like": {
+					"liked": false
+				},
+				"spam": {
+					"spammed": false
+				}
+			}
+		},
+		"children": [{
+			"type": "IMAGE_SINGLE",
+			"props": {
+				"image": {
+					"width": 251,
+					"height": 167,
+					"src": "http://assets.myntassets.com/assets/images/2015/8/4/11438709917576-file",
+					"provider": "MYNT_ASSETS"
+				},
+				"link": "http://www.urbaneye.in/urbanstyle/mumbai-sartorial-guide-2015/6"
+			}
+		}, {
+			"type": "TITLE_TEXT",
+			"props": {
+				"text": "Mumbai Sartorial Guide 2015",
+				"link": "http://www.urbaneye.in/urbanstyle/mumbai-sartorial-guide-2015/6"
+			}
+		}, {
+			"type": "DESCRIPTION_TEXT",
+			"props": {
+				"text": "The ultimate men's shopping guide for Mumbai city. We at UrbanEye, India's coolest menswear and luxury blog present the best addresses for men to shop in Mumbai.",
+				"link": "http://www.urbaneye.in/urbanstyle/mumbai-sartorial-guide-2015/6"
+			}
+		}, {
+			"type": "FEEDBACK_VIEW_LIKE",
+			"props": {}
+		}, {
+			"type": "FOOTER_LIKE_SHARE",
+			"props": {
+				"liked": false
+			}
+		}]
+	}]
+}

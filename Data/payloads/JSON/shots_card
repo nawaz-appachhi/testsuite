@@ -1,0 +1,14 @@
+ {
+      "appId": 2,
+      "refId": "Postsobj_${0}",
+      "type": "post.shot",
+      "title": "Hello",
+      "description": "Not all shots need a mark",
+      "url": "/post/shot/2:78c01407-c303-4638-8372-235768178957",
+      "imageUrl": "http://myntra.myntassets.com/assets/images/2015/10/28/11445975971314-42695-6u0r58.jpg",
+      "extraData": "{\"aspectRatio\":\"8:5\"}",
+      "productRack": "{\"productIds\":[1234,3421,5466]}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

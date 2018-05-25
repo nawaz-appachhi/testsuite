@@ -1,0 +1,7 @@
+{
+"login":"${0}",
+"points":${1},
+"businessProcess":"${2}",
+"expiryDate":${3},
+"description":"${4}"
+}

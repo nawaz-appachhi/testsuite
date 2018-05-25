@@ -1,0 +1,9 @@
+{
+"login":"${0}",
+"points":${1},
+"ppsID":"${2}", 
+"ppsTransactionID":"${3}",
+"orderId":"${4}",
+"businessProcess":"${5}",
+"retry":"false"
+}

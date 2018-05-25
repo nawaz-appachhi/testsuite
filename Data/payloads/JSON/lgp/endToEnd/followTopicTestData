@@ -1,0 +1,126 @@
+{
+  "testPayload": [
+    {
+      "user": [
+        {
+          "uidx": ["3b069a1c.8295.4281.b209.67e834357109bbqkJlI5NS"]
+        }
+      ]
+    },
+    {
+      "pumps": [
+        {
+          "registerObject": {
+            "objects": [
+              {
+                "count": 1,
+                "headers": {
+                  "Authorization": "Basic U3lzdGVtflN5c3RlbTpTeXN0ZW0=",
+                  "Content-Type": "application/json",
+                  "Accept": "application/json"
+                },
+                "payload": {
+                  "type": "article",
+                  "title": "StreamTestingKarnataka",
+                  "description": "StreamTesting",
+                  "url": "http://www.myntra.com/cart",
+                  "imageUrl": "http://assets.myntassets.com/h_240,q_100,w_180/v1/image/style/properties/916996/RANGMANCH-BY-PANTALOONS-Women-Kurtas_1_086ca36b57a50e83e1adf99453fc55c0.jpg",
+                  "extraData": "{\"aspectRatio\":\"1:1\"}",
+                  "topics": [
+                    {
+                      "id": 3806,
+                      "name": "casual",
+                      "type": "occasion",
+                      "displayName": "casual"
+                    }
+                  ],
+                  "isPrivate": false,
+                  "createAction": "published",
+                  "enabled": true,
+                  "isSpam": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "publishObject": {
+            "objects": [
+              {
+                "objectIds": "unpublished",
+                "count": 1,
+                "headers": {
+                  "Authorization": "Basic U3lzdGVtflN5c3RlbTpTeXN0ZW0=",
+                  "Content-Type": "application/json",
+                  "Accept": "application/json"
+                },
+                "payload": {
+                  "whomType": "Object",
+                  "userMessage": "Check out this article!",
+                  "channels": [
+                    {
+                      "name": "andriod"
+                    },
+                    {
+                      "name": "ios"
+                    }
+                  ],
+                  "persona": "unknown",
+                  "extraData": "{\"credits\":\"500\",\"boost\":\"0.5\",\"includeLocation\":\"hyderabad,chennai\", \"platform\" : \"android\"}",
+                  "target": {
+                    "userTargettingType": "EVERYONE",
+                    "segmentQuery": "",
+                    "allowUsers": "",
+                    "allowUsersUrl": "",
+                    "denyUsers": "",
+                    "denyUsersUrl": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "serveAssertions": [
+        {
+          "feeds": {
+          	"headers": {
+                  "Content-Type": "application/json",
+                  "Accept": "application/json"
+                },
+            "scenarioType": "Location",
+            "location": [
+              "hyderabad,chennai"
+            ],
+            "previousIterations": 20,
+            "platforms": [
+              "android"
+            ]
+          }
+        },
+        {
+          "streams": {
+          "headers": {
+                  "Content-Type": "application/json",
+                  "Accept": "application/json"
+                },
+            "scenarioType": "Location",
+            "location": [
+              "hyderabad,chennai"
+            ],
+            "nextIterations": 20,
+            "previousIterations": 0,
+            "platforms": [
+              "android"
+            ],
+            "variants": [
+              "variantB"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

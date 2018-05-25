@@ -1,0 +1,70 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/0",
+					"required":false,
+					"properties":{
+						"lastUpdated": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/lastUpdated",
+							"required":false
+						},
+						"maxDiscountCap": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/maxDiscountCap",
+							"required":false
+						},
+						"styleid": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/styleid",
+							"required":false
+						},
+						"updatedBy": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/updatedBy",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

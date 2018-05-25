@@ -1,0 +1,20 @@
+{
+	"pincode": ${0},
+	"options": {
+		"price": ${1},
+		"mrp": ${2},
+		"warehouses": ${3},
+		"leadTime": ${4},
+		"returnPeriod": ${5},
+		"flags": {
+			"isHazmat": ${6},
+			"isFragile": ${7},
+			"isJewellery": ${8},
+			"isExchangeable": ${9},
+			"pickupEnabled": ${10},
+			"isTryable": ${11},
+			"isLarge": ${12},
+			"isReturnable": ${13}
+		}
+	}
+}

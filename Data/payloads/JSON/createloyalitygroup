@@ -1,0 +1,8 @@
+{
+    "brands": ["${0}"],
+    "genders": ["${1}"],
+    "articleTypes": ["${2}"],
+    "groupName" : "${3}",
+    "groupDescription": "${4}",
+    "conversionFactorPoints": "${5}"
+}

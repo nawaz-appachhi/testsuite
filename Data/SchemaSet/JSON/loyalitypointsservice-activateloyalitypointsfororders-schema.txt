@@ -1,0 +1,62 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"userAccountEntry": {
+			"type":"object",
+			"id": "http://jsonschema.net/userAccountEntry",
+			"required":true,
+			"properties":{
+				"activePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/activePointsBalance",
+					"required":true
+				},
+				"inActivePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/inActivePointsBalance",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/userAccountEntry/login",
+					"required":true
+				},
+				"tNcAccepted": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/userAccountEntry/tNcAccepted",
+					"required":true
+				}
+			}
+		}
+	}
+}

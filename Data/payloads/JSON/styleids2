@@ -1,0 +1,59 @@
+[
+    {
+        "query": "(brands_filter_facet:(\"${0}\")) AND (count_options_availbale:[${1}])",
+        "start": ${2},
+        "rows": ${3},
+        "sort": [
+            {
+                "sort_field": "count_options_availbale",
+                "order_by": "desc"
+            },
+            {
+                "sort_field": "revenue_sort_field",
+                "order_by": "desc"
+            },
+            {
+                "sort_field": "potential_revenue_sort_field",
+                "order_by": "desc"
+            },
+            {
+                "sort_field": "global_attr_catalog_add_date",
+                "order_by": "desc"
+            }
+        ],
+        "fq": [
+            
+        ],
+        "colour_grouping": "false",
+        "facet": "true",
+        "facetField": [
+            "Material_article_attr"
+        ],
+        "return_docs": "${4}",
+        "curated_query": {
+            "enable": false,
+            "style": "styleid:( 0 OR 103911 )",
+            "no_slots": 4,
+            "start": 0,
+            "rows": 2,
+            "sort": [
+                {
+                    "sort_field": "count_options_availbale",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "revenue_sort_field",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "potential_revenue_sort_field",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "global_attr_catalog_add_date",
+                    "order_by": "desc"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,13 @@
+{
+      "appId": 5,
+      "refId": "collectionsobj_${0}",
+      "type": "collections",
+      "title": "Items I Own",
+      "description": "",
+      "url": "http://myntra.com/u/Prafulla.Rahatade-taz/collection/da7ce6d0-65db-11e5-803d-9bbf09c3d3c9",
+      "imageUrl": "",
+      "extraData": "{\"listType\":\"wishlist\",\"styleCount\":0,\"tags\":[],\"author\":{\"firstname\":\"App Test\",\"publicProfileId\":\"Manu.Kv-uks\",\"uidx\":\"970794db.228e.4133.933e.1574198ef08frA7cPl428x\"},\"id\":\"00000390-5d3c-11e5-bcd4-3ff5debe8016\",\"name\":\"My Wishlist\",\"access\":\"private\"}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

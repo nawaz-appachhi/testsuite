@@ -1,0 +1,7 @@
+{
+	"cardNumber" : "${0}",
+	"expMonth" : "${1}",
+	"expYear" : "${2}",
+	"name" : "${3}",
+	"csrfToken" : "${4}"
+}

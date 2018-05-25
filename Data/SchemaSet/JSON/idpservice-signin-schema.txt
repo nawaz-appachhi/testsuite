@@ -1,0 +1,92 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"showCaptcha": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/showCaptcha",
+			"required":true
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"user": {
+			"type":"object",
+			"id": "http://jsonschema.net/user",
+			"required":true,
+			"properties":{
+				"email": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/email",
+					"required":true
+				},
+				"firstlogin": {
+					"type":"number",
+					"id": "http://jsonschema.net/user/firstlogin",
+					"required":true
+				},
+				"gender": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/gender",
+					"required":true
+				},
+				"lastlogin": {
+					"type":"number",
+					"id": "http://jsonschema.net/user/lastlogin",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/login",
+					"required":true
+				},
+				"mobile": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/mobile",
+					"required":true
+				},
+				"status": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/status",
+					"required":true
+				},
+				"usertype": {
+					"type":"string",
+					"id": "http://jsonschema.net/user/usertype",
+					"required":true
+				}
+			}
+		},
+		"xsrfToken": {
+			"type":"string",
+			"id": "http://jsonschema.net/xsrfToken",
+			"required":true
+		}
+	}
+}

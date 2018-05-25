@@ -1,0 +1,27 @@
+delete from delivery_center where courier_code like 'DAD7'
+delete from courier_serviceability where courier_code like 'DAD7'
+delete from courier_additional_info where courier_id = (select id from courier where code like 'DAD7')
+delete from courier_warehouse_map where courier_id= (select id from courier where code like 'DAD7')
+delete from courier where code like 'DAD7'
+delete from delivery_center where code like 'DAD7'
+delete from delivery_staff_route_map where delivery_staff_id = (select id from delivery_staff where code  = 'DAD7')
+delete from delivery_staff_location where delivery_staff_id  = (select id from delivery_staff where code = 'DAD7')
+delete from delivery_staff where code  like 'DAD7'
+delete from pincode where region_code like 'DAD7'
+delete from courier_warehouse_map where region_code like 'DAD7'
+delete from courier_warehouse_map_v2 where region_code like 'DAD7';
+delete from courier_preference_v2 where region_code like 'DAD7';
+delete from region where code like 'DAD7'
+delete from courier_warehouse_map where region_code like 'DAD7'
+delete from region where code like 'DAD7'
+delete from courier_warehouse_map where region_code like 'DAD7'
+delete from region where code like 'DAD7'
+delete from courier_serviceability where courier_code='DAD7'
+delete from tat_data where destination_zipcode=100000 and source_warehouse_id=1 and courier_code='BD' and tat_time_in_hours='72'
+delete from tat_data where destination_zipcode=100000 and source_warehouse_id=1 and courier_code='ML' and tat_time_in_hours='72'
+delete from tat_data where destination_zipcode=412114 and source_warehouse_id=1 and courier_code='ML' and tat_time_in_hours='72'
+delete from tat_data where destination_zipcode=412114 and source_warehouse_id=2 and courier_code='ML' and tat_time_in_hours='72'
+delete from delivery_center where code='MADC'
+update trip set trip_status='COMPLETED' where delivery_staff_id=17 and delivery_center_id=1
+delete from courier_capacity where created_on >  (CURDATE() - INTERVAL 1 DAY) and warehouse_id=1  and courier_code='ML' and region_code='BLRP'
+INSERT INTO `courier_capacity` (`warehouse_id`, `region_code`, `courier_code`, `consumed_count`, `created_on`, `last_modified_on`, `version`, `created_by`,`calculation_date`, `name`, `shipping_method`)VALUES( 1, 'BLRP', 'ML', 0, now(), now(), 1, 'system', (CURDATE() + INTERVAL 1 DAY), 'ML-1-BLRP', 'EXPRESS');

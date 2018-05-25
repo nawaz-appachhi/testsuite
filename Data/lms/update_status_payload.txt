@@ -1,0 +1,16 @@
+{
+  "vendor_tracking_id": "<vendor_tracking_id>",
+  "shipment_type": "<shipment_type>",
+  "event": "<event>",
+  "event_date": "2015-08-14 11:05:17",
+  "merchant_reference_id":"<merchant_reference_id>",
+  "status": "<status>",
+  "merchant_name": "Myntra",
+  "merchant_code": "MYN",
+  "seller_id": "MYN",
+  "courier_name": "flipkartlogistics-cod",
+  "location": "ABC_TRADING_PRIVATE_LIMITED_Palam_Vihar_Delhi",
+  "reason": "Customer Related",
+    "sub_reasons": ["ReplacementOrRefundRequested"],
+    "remarks": "thiis remark why test"
+  }

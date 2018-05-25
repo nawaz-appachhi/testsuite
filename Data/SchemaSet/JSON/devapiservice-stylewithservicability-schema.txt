@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "SERVICEABLE": {
+          "id": "http://jsonschema.net/data/SERVICEABLE",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-12"
+          }
+        },
+        "DELIVERY_PROMISE_TIME": {
+          "id": "http://jsonschema.net/data/DELIVERY_PROMISE_TIME",
+          "type": "integer"
+        },
+        "pincode": {
+          "id": "http://jsonschema.net/data/pincode",
+          "type": "string"
+        },
+        "codLimits": {
+          "id": "http://jsonschema.net/data/codLimits",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":false,
+				"properties":{
+					"apiVersion": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/apiVersion",
+						"required":false
+					},
+					"auditLogs": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/auditLogs",
+						"required":false
+					},
+					"filters": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/filters",
+						"required":false
+					},
+					"gaSlot": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/gaSlot",
+						"required":false
+					},
+					"isCompleted": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isCompleted",
+						"required":false
+					},
+					"isEnabled": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isEnabled",
+						"required":false
+					},
+					"name": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/name",
+						"required":false
+					},
+					"omniSlot": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/omniSlot",
+						"required":false
+					},
+					"segmentationAlgo": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/segmentationAlgo",
+						"required":false
+					},
+					"sourceType": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/sourceType",
+						"required":false
+					},
+					"variations": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/variations",
+						"required":false,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/variations/0",
+							"required":false,
+							"properties":{
+								"finalVariant": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/variations/0/finalVariant",
+									"required":false
+								},
+								"inlineHtml": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/variations/0/inlineHtml",
+									"required":false
+								},
+								"name": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/variations/0/name",
+									"required":false
+								},
+								"percentProbability": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/variations/0/percentProbability",
+									"required":false
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

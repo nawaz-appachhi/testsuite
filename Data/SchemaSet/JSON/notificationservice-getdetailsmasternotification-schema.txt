@@ -1,0 +1,75 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"actions": {
+			"type":"object",
+			"id": "http://jsonschema.net/actions",
+			"required":true
+		},
+		"masterNotification": {
+			"type":"object",
+			"id": "http://jsonschema.net/masterNotification",
+			"required":true,
+			"properties":{
+				"cdnURLForImage": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/cdnURLForImage",
+					"required":true
+				},
+				"endTime": {
+					"type":"number",
+					"id": "http://jsonschema.net/masterNotification/endTime",
+					"required":true
+				},
+				"id": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/id",
+					"required":true
+				},
+				"notificationText": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/notificationText",
+					"required":true
+				},
+				"notificationTitle": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/notificationTitle",
+					"required":true
+				},
+				"notificationType": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/notificationType",
+					"required":true
+				},
+				"publishTime": {
+					"type":"number",
+					"id": "http://jsonschema.net/masterNotification/publishTime",
+					"required":true
+				},
+				"startTime": {
+					"type":"number",
+					"id": "http://jsonschema.net/masterNotification/startTime",
+					"required":true
+				},
+				"statsCounters": {
+					"type":"object",
+					"id": "http://jsonschema.net/masterNotification/statsCounters",
+					"required":true
+				},
+				"urlForLandingPage": {
+					"type":"string",
+					"id": "http://jsonschema.net/masterNotification/urlForLandingPage",
+					"required":true
+				}
+			}
+		},
+		"success": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/success",
+			"required":true
+		}
+	}
+}

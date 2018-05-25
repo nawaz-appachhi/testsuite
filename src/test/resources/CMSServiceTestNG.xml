@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CMSServiceTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="CMSServiceTests">
+		<groups>
+			<run>
+				<include name="ExhaustiveRegression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<!-- <class name="com.myntra.apiTests.test.regression.crmservices.CRMPortalService" /> -->
+			<class name="com.myntra.apiTests.portalservices.all.CMSServiceTests" />
+		</classes>
+	</test>
+</suite>

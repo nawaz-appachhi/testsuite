@@ -1,0 +1,95 @@
+<session>
+<id>${0}</id>
+<creation_date>${1}</creation_date>
+<last_accessed_date>${2}</last_accessed_date>
+<last_updated_date>${3}</last_updated_date>
+<last_modified_date>${4}</last_modified_date>
+<expiry_date>${5}</expiry_date>
+<data>
+<![CDATA[
+{ 
+	"DOB": "",
+	"identifiers":{
+		"C":{
+		"login": "${7}",
+		"firstname": "test",
+		"first_login_date": "1365511373",
+		"login_type":"C",
+		"account_type":"C"
+		}
+	},
+	"logout_user":"",
+	"loyaltyPointsHeaderDetails":{
+		"inActivePointsBalance":0,
+		"conversionFactor":0.5,
+		"updatedTimeStamp":1400857928,
+		"tNcAccepted":true,
+		"activePointsBalance":0,
+		"tier":1,
+		"usableActivePointsCashEqualantAmount":0,
+		"usableActivePoints":0,
+		"thresholdForUsage":199,
+		"login":"${7}",
+		"awardFactor":6,
+		"cashEqualantAmount":0
+	},
+	"logged":"",
+	"uip":"182.71.248.194",
+	"mcartidsaved":"b0a1c52e-ccf9-11e2-8375-782bcb67fe55",
+	"returningCustomerTTL":1400858828,
+	"USER_TOKEN":"r479gG3C9Dy2RG2hRpPueApuwGKpDzzJ",
+	"remember_login":false,
+	"gender":"M",
+	"prompt_login":0,
+	"sxid":"MPLz7H9I6qiqgpCQcr2nJSBNYDvVIJWj",
+	"login": "${7}",
+	"mrpData":{
+		"myMyntraCredits":{
+			"couponsCount":0,
+			"cashback":0
+		},
+		"loyaltyPointsDetails":null,
+		"myntCashDetails":{
+			"balance":0,
+			"storeCreditBalance":0,
+			"earnedCreditbalance":0,
+			"login": "${7}"
+		}
+	},
+	"login_type":"C",
+	"account_type":"C",
+	"uaString":"Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/34.0.1847.137 Safari\/537.36",
+	"ipLocationGroups":"___1400857928",
+	"lastSessionTime":1400858092,
+	"userlastname":"test",
+	"is_robot":"N",
+	"returningCustomer":0,
+	"robot":"",
+	"js_enabled":"Y",
+	"user_account_status":"Y",
+	"notificationsData":{
+		"notificationsEnabled":false,
+		"notificationCount":-1,
+		"newNotificationCount":-1
+	},
+	"remember_data":"",
+	"userfirstname":"test",
+	"user_account_membership_details":{
+		"title":"",
+		"flag":null,
+		"membership":null,
+		"membershipid":"0",
+		"lastname":"test",
+		"usertype":"C",
+		"login": "${7}",
+		"firstname":"test",
+		"s_country":null
+	},
+	"channel":"desktop",
+	"mobile":"1111111111"
+}
+]]>
+</data>
+<updated_flag>Y</updated_flag>
+<link>/sessions/${0}</link>
+</session>

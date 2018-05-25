@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SilkRouteRegression" verbose="1" parallel="methods" thread-count="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="OMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+
+	<test name="SilkRouteRegressionTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.silkroute.Tests.SilkRouteServiceTest" />
+			<class name="com.myntra.apiTests.erpservices.silkroute.Tests.SilkrouteRMSTests" />
+		</classes>
+	</test>
+</suite>

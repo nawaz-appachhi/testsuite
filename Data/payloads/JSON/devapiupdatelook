@@ -1,0 +1,172 @@
+{
+  
+	"title": "${0}",
+  
+	"description": "${1}",
+  
+	"isActive": ${2},
+  
+	"isDraft": ${3},
+	"isRemyx": ${4},
+	"occasion": 
+	{
+    
+		"id": 1
+  
+	},
+  
+	"stickers":[
+    
+	{
+      
+		"id": 1,
+      
+		"orientation": 
+		{
+        
+			"height": 0.38421053,
+        
+			"isFlipped": false,
+        
+			"rotation": 0,
+        
+			"scaleFactor": 1,
+        
+			"width": 0.34375,
+        
+			"xPos": 0.5541667,
+        
+			"yPos": 0.17324561,
+        
+			"zIndex": 0
+      
+		}
+    
+	},
+    
+
+	{
+      
+		"id": 2,
+     
+		"orientation": 
+		{
+        
+			"height": 0.38421053,
+        
+			"isFlipped": false,
+        
+			"rotation": 0,
+        
+			"scaleFactor": 1,
+        	
+			"width": 0.34375,
+        
+			"xPos": 0.5541667,
+        
+			"yPos": 0.17324561,
+        
+			"zIndex": 0
+      
+		}
+    
+	}
+],
+  
+	
+	"imageId": 121212,
+  
+	"itemList": [
+    
+	{
+      
+		"styleId": 650782,
+      
+		"orientation": 
+		{
+        
+			"height": 0.38421053,
+        
+			"isFlipped": false,
+        
+			"rotation": 0,
+        
+			"scaleFactor": 1,
+        
+			"width": 0.34375,
+        
+			"xPos": 0.5541667,
+        
+			"yPos": 0.17324561,
+        
+			"zIndex": 0
+      
+		}
+    
+	},
+    
+	
+	{
+      
+		"styleId": 893271,
+      
+		"orientation": 
+		{
+        
+			"height": 0.38421053,
+        
+			"isFlipped": false,
+        
+			"rotation": 0,
+        
+			"scaleFactor": 1,
+        
+			"width": 0.34375,
+        
+			"xPos": 329,
+        
+			"yPos": 436.5,
+        
+			"zIndex": 2
+      
+		}
+    
+	},
+    
+	
+	{
+      
+		"styleId": 871072,
+      
+		"orientation": 
+		{
+        
+			"height": 0.38421053,
+        
+			"isFlipped": false,
+        
+			"rotation": 0,
+        
+			"scaleFactor": 1,
+        
+			"width": 0.34375,
+        
+			"xPos": 329,
+        
+			"yPos": 436.5,
+        
+			"zIndex": 2
+      
+		}
+    
+	}
+],
+  
+	
+	"styleIds": [
+    650782,
+    893271,
+    871072
+  ]
+
+}

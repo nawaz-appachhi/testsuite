@@ -1,0 +1,32 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "post.shot",
+	"title": "SHOTS !!!",
+	"description": "#ootd #date #dealdress #luvdit",
+	"url": "http://myntra.com/shot/2:9847e580-0809-4e13-b0ce-ad7ea2c626eb",
+	"imageUrl": "${2}",
+    "extraData": "{\"aspectRatio\":\"251:167\"}",
+    "author":"${3}",
+	"topics": [
+        {
+          "id": 1238,
+          "name": "deal jeans",
+          "type": "brand",
+          "displayName": "Deal jeans",
+          "followEnabled": true
+        },
+        {
+          "id": 1675,
+          "name": "dresses",
+          "type": "articletype",
+          "displayName": "Dresses",
+          "followEnabled": true
+        }
+      ],
+	"productRack":"{\"productIds\":[\"339187\",\"209125\",\"288501\"]}",
+	"isPrivate": false,
+	"createAction": "publish",
+	"enabled": true,
+	"isSpam": false
+}

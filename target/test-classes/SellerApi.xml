@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SellerApiTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="SellerApiPassTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<!--  <class name="com.myntra.apiTests.helper.erpservices.sellerapis.Tests.SellerServiceE2ETest" />-->
+			<class name="com.myntra.apiTests.erpservices.sellerapis.Tests.SellerServiceTest" />
+		</classes>
+	</test>
+</suite>

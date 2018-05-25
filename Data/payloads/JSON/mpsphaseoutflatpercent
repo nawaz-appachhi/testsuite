@@ -1,0 +1,9 @@
+{   "doType": "${0}",
+    "name": "imr2",   
+    "description": "d2",  
+    "startDate": "${1}",  
+    "endDate":   "${2}",   
+    "categoryManager":"imran_cm@kk.com",  
+    "discountFundingType":"EOSS",   
+    "discountOverrideStyles":[     
+        {"styleId":${3},"categoryFundedTD":${4},"vendorFundedTD":${5}} ] }

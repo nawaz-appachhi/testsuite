@@ -1,0 +1,42 @@
+{ 
+    "batchId": "${0}",
+    "transactionEntryList":[
+        {
+            "login": "${1}",
+            "activeCreditPoints": 10,
+            "inActiveCreditPoints": 0,
+            "activeDebitPoints": 0,
+            "inActiveDebitPoints": 0,
+            "description": "Testing loyalty",
+            "itemType": "PROMOTION",
+            "itemId": "promotion",
+            "businessProcess": "PROMOTION",
+            "createdBy": "achal.sharma@myntra.com"
+        },
+        {
+            "login": "${2}",
+            "activeCreditPoints": 10,
+            "inActiveCreditPoints": 0,
+            "activeDebitPoints": 0,
+            "inActiveDebitPoints": 0,
+            "description": "Testing loyalty",
+            "itemType": "PROMOTION",
+            "itemId": "promotion",
+            "businessProcess": "PROMOTION",
+            "createdBy": "achal.sharma@myntra.com"
+        },
+        {
+            "login": "${3}",
+            "activeCreditPoints": 10,
+            "inActiveCreditPoints": 0,
+            "activeDebitPoints": 0,
+            "inActiveDebitPoints": 0,
+            "description": "Testing loyalty",
+            "itemType": "PROMOTION",
+            "itemId": "promotion",
+            "businessProcess": "PROMOTION",
+            "createdBy": "achal.sharma@myntra.com"
+        }],
+    "lastCallInBatch": false,
+    "transactionId": "${0}"
+}

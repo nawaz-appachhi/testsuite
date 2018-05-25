@@ -1,0 +1,16 @@
+{
+   "sessionId": "${0}",
+   "additionalParams": {
+       "ADDRESS_ID": "9372195",
+       "CLIENT_CONTEXT": "responsive",
+       "CART_CONTEXT": "default"
+   },
+   "paymentsDetailsMap": {
+       "COD": {
+           "instrAmount": ${1},
+           "instrumentParams": {
+               "SESSION_ID": "${0}"
+           }
+       }
+    }
+}

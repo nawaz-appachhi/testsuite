@@ -1,0 +1,36 @@
+{
+	"name": "Discount Service Testing",
+	"description": "Testing Portal Discount Service - Do not edit",
+	"expiredOn": ${0},
+	"isDynamic": false,
+	"isEnabled": false,
+	"startedOn": ${1},
+	"updatedOn": "",
+	"updatedBy": "test-team",
+	"discountRules": [
+		{
+		"type": "1",
+		"percent": "${2}",
+		"id": "",
+		"discountFreeItems": []
+		}
+	],
+	"discountStyles": [
+		{
+		"id": "",
+		"styleId": "${3}",
+		"discountId": null
+		}
+	],
+	"discountFilters": [
+		{
+		"brand": "HRX"
+		}
+	],
+	"onCart": false,
+	"discountFunding": "vendor-Inseason",
+	"fundingPercentage": "20",
+	"fundingTax": "0",
+	"fundingBasis": "MRP",
+	"discountLimit": "23"
+}

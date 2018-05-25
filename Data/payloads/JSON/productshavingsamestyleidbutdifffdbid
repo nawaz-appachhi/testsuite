@@ -1,0 +1,20 @@
+{
+ "size": 0,
+ "query": { "match_all": {} },
+ "_source": ["styleAttributes_source.style_id", "styleAttributes_source.fdb_id"],
+ "aggs": {
+   "duplicateCount": {
+     "terms": {
+     "field": "styleAttributes.style_id"
+     },
+     "aggs": {
+       "duplicateCount": {
+           "terms":{
+                "field": "fdb_id"
+           }
+         
+       }
+     }
+   }
+ }
+}

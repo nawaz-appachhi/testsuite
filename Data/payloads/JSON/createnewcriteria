@@ -1,0 +1,36 @@
+{
+    "vendorScoreCriteriaResponse": {
+        "data": {
+          "vendorScoreCriteria": {
+                "code": "TSCT",
+                "description": "Criteria-Created by Automation",
+                "isActive": true,
+                "maxPoints": 10,
+                "name": "Test Criteria",
+                "actionType" : "CREATE",
+	            
+            "vendorScoreParameterEntries" : [
+                   {
+                  	"code": "TSPT",
+                    "description": "Parameter-Created by Automation",
+                    "isActive": true,
+                    "maxPoints": 10,
+                    "name": "Test Parameter",
+                     "actionType" : "CREATE",
+                     "attentionStartValue" : 9,
+                     "criticalStartValue" : 8
+                  }
+                ]
+            },
+            "vendorScoreCriteria": {
+                "id": 1,
+                "code": "SLS",
+                "description": "Sales",
+                "isActive": true,
+                "maxPoints": 20,
+                "name": "Sales",
+                "actionType" : "UPDATE"
+            }
+        }
+    }
+}

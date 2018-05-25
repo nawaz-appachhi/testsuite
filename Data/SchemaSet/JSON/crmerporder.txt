@@ -1,0 +1,575 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"customerOrderResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"customerOrderEntryList": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"customerOrderEntry": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"cartDiscount": {
+									"type":"number",
+									"required":false
+								},
+								"cashRedeemed": {
+									"type":"number",
+									"required":false
+								},
+								"cashbackOffered": {
+									"type":"number",
+									"required":false
+								},
+								"codCharge": {
+									"type":"number",
+									"required":false
+								},
+								"couponCode": {
+									"type":"string",
+									"required":false
+								},
+								"couponDiscount": {
+									"type":"number",
+									"required":false
+								},
+								"createdOn": {
+									"type":"string",
+									"required":false
+								},
+								"customerName": {
+									"type":"string",
+									"required":false
+								},
+								"customerOrderBillingAddress": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"billingAddress": {
+											"type":"string",
+											"required":false
+										},
+										"billingCity": {
+											"type":"string",
+											"required":false
+										},
+										"billingCounty": {
+											"type":"string",
+											"required":false
+										},
+										"billingEmail": {
+											"type":"string",
+											"required":false
+										},
+										"billingFirstName": {
+											"type":"string",
+											"required":false
+										},
+										"billingLastName": {
+											"type":"string",
+											"required":false
+										},
+										"billingMobile": {
+											"type":"number",
+											"required":false
+										},
+										"billingState": {
+											"type":"string",
+											"required":false
+										},
+										"billingZipCode": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"customerOrderShipments": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"customerOrderShipment": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"actualPromiseDate": {
+													"type":"string",
+													"required":false
+												},
+												"address": {
+													"type":"string",
+													"required":false
+												},
+												"cartDiscount": {
+													"type":"number",
+													"required":false
+												},
+												"cashRedeemed": {
+													"type":"number",
+													"required":false
+												},
+												"city": {
+													"type":"string",
+													"required":false
+												},
+												"codCharge": {
+													"type":"number",
+													"required":false
+												},
+												"country": {
+													"type":"string",
+													"required":false
+												},
+												"couponDiscount": {
+													"type":"number",
+													"required":false
+												},
+												"courierCode": {
+													"type":"string",
+													"required":false
+												},
+												"courierDisplayName": {
+													"type":"string",
+													"required":false
+												},
+												"customerOrderItemEntryList": {
+													"type":"object",
+													"required":false,
+													"properties":{
+														"customerOrderItemEntry": {
+															"type":"object",
+															"required":false,
+															"properties":{
+																"articleTypeName": {
+																	"type":"string",
+																	"required":false
+																},
+																"brandName": {
+																	"type":"string",
+																	"required":false
+																},
+																"cartDiscount": {
+																	"type":"number",
+																	"required":false
+																},
+																"cashRedeemed": {
+																	"type":"number",
+																	"required":false
+																},
+																"cashbackOffered": {
+																	"type":"number",
+																	"required":false
+																},
+																"couponDiscount": {
+																	"type":"number",
+																	"required":false
+																},
+																"customizedMessage": {
+																	"type":"string",
+																	"required":false
+																},
+																"discount": {
+																	"type":"number",
+																	"required":false
+																},
+																"finalAmount": {
+																	"type":"number",
+																	"required":false
+																},
+																"id": {
+																	"type":"number",
+																	"required":false
+																},
+																"isCustomizable": {
+																	"type":"boolean",
+																	"required":false
+																},
+																"isReturnableProduct": {
+																	"type":"boolean",
+																	"required":false
+																},
+																"itemBarcodes": {
+																	"type":"number",
+																	"required":false
+																},
+																"loyaltyAmountUsed": {
+																	"type":"number",
+																	"required":false
+																},
+																"loyaltyPointAwarded": {
+																	"type":"number",
+																	"required":false
+																},
+																"loyaltyPointUsed": {
+																	"type":"number",
+																	"required":false
+																},
+																"quantity": {
+																	"type":"number",
+																	"required":false
+																},
+																"releaseId": {
+																	"type":"number",
+																	"required":false
+																},
+																"searchImagezURL": {
+																	"type":"string",
+																	"required":false
+																},
+																"size": {
+																	"type":"string",
+																	"required":false
+																},
+																"skuId": {
+																	"type":"number",
+																	"required":false
+																},
+																"statusDisplayName": {
+																	"type":"string",
+																	"required":false
+																},
+																"status": {
+																	"type":"string",
+																	"required":false
+																},
+																"styleId": {
+																	"type":"number",
+																	"required":false
+																},
+																"styleName": {
+																	"type":"string",
+																	"required":false
+																},
+																"supplyType": {
+																	"type":"string",
+																	"required":false
+																},
+																"taxAmount": {
+																	"type":"number",
+																	"required":false
+																},
+																"unitPrice": {
+																	"type":"number",
+																	"required":false
+																}
+															}
+														}
+													}
+												},
+												"customerOrderTrackingDetails": {
+													"type":"object",
+													"required":false,
+													"properties":{
+														"customerOrderTrackingDetail": {
+															"type":"array",
+															"required":false,
+															"items":
+																{
+																	"type":"object",
+																	"required":false,
+																	"properties":{
+																		"actionDate": {
+																			"type":"string",
+																			"required":false
+																		},
+																		"activityType": {
+																			"type":"string",
+																			"required":false
+																		},
+																		"location": {
+																			"type":"string",
+																			"required":false
+																		},
+																		"remark": {
+																			"type":"string",
+																			"required":false
+																		}
+																	}
+																}
+									 															"required":false
+														},
+														"deliveryCenterCode": {
+															"type":"string",
+															"required":false
+														},
+														"deliveryCenterId": {
+															"type":"number",
+															"required":false
+														},
+														"enabled": {
+															"type":"boolean",
+															"required":false
+														},
+														"exchangeSupported": {
+															"type":"boolean",
+															"required":false
+														},
+														"expressSupported": {
+															"type":"boolean",
+															"required":false
+														},
+														"id": {
+															"type":"number",
+															"required":false
+														},
+														"lastModifiedOn": {
+															"type":"string",
+															"required":false
+														},
+														"nonCodSupported": {
+															"type":"boolean",
+															"required":false
+														},
+														"number": {
+															"type":"number",
+															"required":false
+														},
+														"pickupSupported": {
+															"type":"boolean",
+															"required":false
+														},
+														"sddSupported": {
+															"type":"boolean",
+															"required":false
+														},
+														"state": {
+															"type":"string",
+															"required":false
+														}
+													}
+												},
+												"deliveryStatus": {
+													"type":"string",
+													"required":false
+												},
+												"discount": {
+													"type":"number",
+													"required":false
+												},
+												"failedAttempts": {
+													"type":"number",
+													"required":false
+												},
+												"finalAmount": {
+													"type":"number",
+													"required":false
+												},
+												"giftCharge": {
+													"type":"number",
+													"required":false
+												},
+												"locality": {
+													"type":"string",
+													"required":false
+												},
+												"loyaltyAmountUsed": {
+													"type":"number",
+													"required":false
+												},
+												"loyaltyPointUsed": {
+													"type":"number",
+													"required":false
+												},
+												"mobile": {
+													"type":"number",
+													"required":false
+												},
+												"mrpTotal": {
+													"type":"number",
+													"required":false
+												},
+												"packedOn": {
+													"type":"string",
+													"required":false
+												},
+												"paymentMethodDisplay": {
+													"type":"string",
+													"required":false
+												},
+												"promisedDate": {
+													"type":"string",
+													"required":false
+												},
+												"quantity": {
+													"type":"number",
+													"required":false
+												},
+												"receiverName": {
+													"type":"string",
+													"required":false
+												},
+												"refunded": {
+													"type":"boolean",
+													"required":false
+												},
+												"rtoStatusDisplay": {
+													"type":"string",
+													"required":false
+												},
+												"rtoStatus": {
+													"type":"string",
+													"required":false
+												},
+												"shipmentId": {
+													"type":"number",
+													"required":false
+												},
+												"shippedOn": {
+													"type":"string",
+													"required":false
+												},
+												"shippingCharge": {
+													"type":"number",
+													"required":false
+												},
+												"shippingMethod": {
+													"type":"string",
+													"required":false
+												},
+												"state": {
+													"type":"string",
+													"required":false
+												},
+												"statusDisplayName": {
+													"type":"string",
+													"required":false
+												},
+												"status": {
+													"type":"string",
+													"required":false
+												},
+												"taxAmount": {
+													"type":"number",
+													"required":false
+												},
+												"trackingNo": {
+													"type":"string",
+													"required":false
+												},
+												"warehouseAddress": {
+													"type":"string",
+													"required":false
+												},
+												"warehouseName": {
+													"type":"string",
+													"required":false
+												},
+												"zipcode": {
+													"type":"number",
+													"required":false
+												}
+											}
+										}
+									}
+								},
+								"discount": {
+									"type":"number",
+									"required":false
+								},
+								"emiCharge": {
+									"type":"number",
+									"required":false
+								},
+								"finalAmount": {
+									"type":"number",
+									"required":false
+								},
+								"giftCharge": {
+									"type":"number",
+									"required":false
+								},
+								"giftOrder": {
+									"type":"boolean",
+									"required":false
+								},
+								"login": {
+									"type":"string",
+									"required":false
+								},
+								"minimumOrder": {
+									"type":"boolean",
+									"required":false
+								},
+								"mrpTotal": {
+									"type":"number",
+									"required":false
+								},
+								"onHold": {
+									"type":"boolean",
+									"required":false
+								},
+								"orderId": {
+									"type":"number",
+									"required":false
+								},
+								"orderTypeDisplay": {
+									"type":"string",
+									"required":false
+								},
+								"orderType": {
+									"type":"string",
+									"required":false
+								},
+								"paymentMethodDisplay": {
+									"type":"string",
+									"required":false
+								},
+								"paymentMethod": {
+									"type":"string",
+									"required":false
+								},
+								"pgDiscount": {
+									"type":"number",
+									"required":false
+								},
+								"quantity": {
+									"type":"number",
+									"required":false
+								},
+								"receiverName": {
+									"type":"string",
+									"required":false
+								},
+								"shippingCharge": {
+									"type":"number",
+									"required":false
+								},
+								"userContactNo": {
+									"type":"number",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":false
+						}
+					}
+				}
+			}
+		}
+	}
+}

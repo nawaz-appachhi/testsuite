@@ -1,0 +1,7 @@
+{
+ "lockId":${0},
+ "lockType": "${1}",
+ "statusCompleted": ${2},
+ "lockedOn": ${3},
+ "lockflag": ${4}
+ }

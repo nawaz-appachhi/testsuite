@@ -1,0 +1,926 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "feed": {
+          "id": "http://jsonschema.net/data/feed",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/data/feed/0",
+              "type": "object",
+              "properties": {
+                "cardId": {
+                  "id": "http://jsonschema.net/data/feed/0/cardId",
+                  "type": "integer"
+                },
+                "cardType": {
+                  "id": "http://jsonschema.net/data/feed/0/cardType",
+                  "type": "string"
+                },
+                "postId": {
+                  "id": "http://jsonschema.net/data/feed/0/postId",
+                  "type": "integer"
+                },
+                "postOwnerId": {
+                  "id": "http://jsonschema.net/data/feed/0/postOwnerId",
+                  "type": "string"
+                },
+                "isHidden": {
+                  "id": "http://jsonschema.net/data/feed/0/isHidden",
+                  "type": "boolean"
+                },
+                "isDeleted": {
+                  "id": "http://jsonschema.net/data/feed/0/isDeleted",
+                  "type": "boolean"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/feed/0/createdOn",
+                  "type": "integer"
+                },
+                "postEntries": {
+                  "id": "http://jsonschema.net/data/feed/0/postEntries",
+                  "type": "array",
+                  "items": {
+                    "id": "http://jsonschema.net/data/feed/0/postEntries/0",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/type",
+                        "type": "string"
+                      },
+                      "pollType": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/pollType",
+                        "type": "string"
+                      },
+                      "id": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/id",
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/createdAt",
+                        "type": "integer"
+                      },
+                      "timeLeft": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/timeLeft",
+                        "type": "integer"
+                      },
+                      "duration": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/duration",
+                        "type": "integer"
+                      },
+                      "since": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/since",
+                        "type": "integer"
+                      },
+                      "hasVoted": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/hasVoted",
+                        "type": "boolean"
+                      },
+                      "commentCount": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/commentCount",
+                        "type": "integer"
+                      },
+                      "isFeatured": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/isFeatured",
+                        "type": "boolean"
+                      },
+                      "isSpammed": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/isSpammed",
+                        "type": "boolean"
+                      },
+                      "isOwner": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/isOwner",
+                        "type": "boolean"
+                      },
+                      "topics": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/topics",
+                        "type": "array",
+                        "items": []
+                      },
+                      "parent": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/parent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/parent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/parent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "topParent": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/topParent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/topParent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/topParent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "isAnonymous": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/isAnonymous",
+                        "type": "boolean"
+                      },
+                      "options": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/options",
+                        "type": "array",
+                        "items": [
+                          {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0",
+                            "type": "object",
+                            "properties": {
+                              "text": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0/text",
+                                "type": "string"
+                              },
+                              "label": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0/label",
+                                "type": "string"
+                              },
+                              "id": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0/id",
+                                "type": "string"
+                              },
+                              "votes": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0/votes",
+                                "type": "integer"
+                              },
+                              "isVoted": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/0/isVoted",
+                                "type": "boolean"
+                              }
+                            }
+                          },
+                          {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1",
+                            "type": "object",
+                            "properties": {
+                              "text": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1/text",
+                                "type": "string"
+                              },
+                              "label": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1/label",
+                                "type": "string"
+                              },
+                              "id": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1/id",
+                                "type": "string"
+                              },
+                              "votes": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1/votes",
+                                "type": "integer"
+                              },
+                              "isVoted": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/options/1/isVoted",
+                                "type": "boolean"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "description": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/description",
+                        "type": "array",
+                        "items": {
+                          "id": "http://jsonschema.net/data/feed/0/postEntries/0/description/0",
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "id": "http://jsonschema.net/data/feed/0/postEntries/0/description/0/type",
+                              "type": "string"
+                            },
+                            "value": {
+                              "id": "http://jsonschema.net/data/feed/0/postEntries/0/description/0/value",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "totalVotes": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/totalVotes",
+                        "type": "integer"
+                      },
+                      "cardId": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/cardId",
+                        "type": "integer"
+                      },
+                      "isFirst": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/isFirst",
+                        "type": "boolean"
+                      },
+                      "user": {
+                        "id": "http://jsonschema.net/data/feed/0/postEntries/0/user",
+                        "type": "object",
+                        "properties": {
+                          "firstname": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/firstname",
+                            "type": "string"
+                          },
+                          "lastname": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/lastname",
+                            "type": "null"
+                          },
+                          "bio": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/bio",
+                            "type": "string"
+                          },
+                          "imageJsonEntryMap": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/imageJsonEntryMap",
+                            "type": "object",
+                            "properties": {
+                              "PROFILE": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/imageJsonEntryMap/PROFILE",
+                                "type": "string"
+                              },
+                              "PROFILE_DEFAULT": {
+                                "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/imageJsonEntryMap/PROFILE_DEFAULT",
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "image": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/image",
+                            "type": "string"
+                          },
+                          "imageType": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/imageType",
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/coverImage",
+                            "type": "null"
+                          },
+                          "coverImageType": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/coverImageType",
+                            "type": "null"
+                          },
+                          "publicProfileId": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/publicProfileId",
+                            "type": "string"
+                          },
+                          "uidx": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/uidx",
+                            "type": "string"
+                          },
+                          "tagsMap": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/tagsMap",
+                            "type": "string"
+                          },
+                          "name": {
+                            "id": "http://jsonschema.net/data/feed/0/postEntries/0/user/name",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "topicId": {
+                  "id": "http://jsonschema.net/data/feed/0/topicId",
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/feed/1",
+              "type": "object",
+              "properties": {
+                "cardId": {
+                  "id": "http://jsonschema.net/data/feed/1/cardId",
+                  "type": "integer"
+                },
+                "cardType": {
+                  "id": "http://jsonschema.net/data/feed/1/cardType",
+                  "type": "string"
+                },
+                "postId": {
+                  "id": "http://jsonschema.net/data/feed/1/postId",
+                  "type": "integer"
+                },
+                "postOwnerId": {
+                  "id": "http://jsonschema.net/data/feed/1/postOwnerId",
+                  "type": "string"
+                },
+                "isHidden": {
+                  "id": "http://jsonschema.net/data/feed/1/isHidden",
+                  "type": "boolean"
+                },
+                "isDeleted": {
+                  "id": "http://jsonschema.net/data/feed/1/isDeleted",
+                  "type": "boolean"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/feed/1/createdOn",
+                  "type": "integer"
+                },
+                "postEntries": {
+                  "id": "http://jsonschema.net/data/feed/1/postEntries",
+                  "type": "array",
+                  "items": {
+                    "id": "http://jsonschema.net/data/feed/1/postEntries/0",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/type",
+                        "type": "string"
+                      },
+                      "pollType": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/pollType",
+                        "type": "string"
+                      },
+                      "id": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/id",
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/createdAt",
+                        "type": "integer"
+                      },
+                      "timeLeft": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/timeLeft",
+                        "type": "integer"
+                      },
+                      "duration": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/duration",
+                        "type": "integer"
+                      },
+                      "since": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/since",
+                        "type": "integer"
+                      },
+                      "hasVoted": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/hasVoted",
+                        "type": "boolean"
+                      },
+                      "commentCount": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/commentCount",
+                        "type": "integer"
+                      },
+                      "isFeatured": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/isFeatured",
+                        "type": "boolean"
+                      },
+                      "isSpammed": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/isSpammed",
+                        "type": "boolean"
+                      },
+                      "isOwner": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/isOwner",
+                        "type": "boolean"
+                      },
+                      "topics": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/topics",
+                        "type": "array",
+                        "items": {
+                          "id": "http://jsonschema.net/data/feed/1/postEntries/0/topics/0",
+                          "type": "object",
+                          "properties": {
+                            "topicId": {
+                              "id": "http://jsonschema.net/data/feed/1/postEntries/0/topics/0/topicId",
+                              "type": "integer"
+                            },
+                            "topicTitle": {
+                              "id": "http://jsonschema.net/data/feed/1/postEntries/0/topics/0/topicTitle",
+                              "type": "string"
+                            },
+                            "isDeleted": {
+                              "id": "http://jsonschema.net/data/feed/1/postEntries/0/topics/0/isDeleted",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      },
+                      "parent": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/parent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/parent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/parent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "topParent": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/topParent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/topParent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/topParent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "isAnonymous": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/isAnonymous",
+                        "type": "boolean"
+                      },
+                      "options": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/options",
+                        "type": "array",
+                        "items": [
+                          {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0",
+                            "type": "object",
+                            "properties": {
+                              "image": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/image",
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/image/id",
+                                    "type": "integer"
+                                  },
+                                  "url": {
+                                    "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/image/url",
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/label",
+                                "type": "string"
+                              },
+                              "id": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/id",
+                                "type": "string"
+                              },
+                              "votes": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/votes",
+                                "type": "integer"
+                              },
+                              "isVoted": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/0/isVoted",
+                                "type": "boolean"
+                              }
+                            }
+                          },
+                          {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1",
+                            "type": "object",
+                            "properties": {
+                              "image": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/image",
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/image/id",
+                                    "type": "integer"
+                                  },
+                                  "url": {
+                                    "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/image/url",
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/label",
+                                "type": "string"
+                              },
+                              "id": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/id",
+                                "type": "string"
+                              },
+                              "votes": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/votes",
+                                "type": "integer"
+                              },
+                              "isVoted": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/options/1/isVoted",
+                                "type": "boolean"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "description": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/description",
+                        "type": "array",
+                        "items": {
+                          "id": "http://jsonschema.net/data/feed/1/postEntries/0/description/0",
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "id": "http://jsonschema.net/data/feed/1/postEntries/0/description/0/type",
+                              "type": "string"
+                            },
+                            "value": {
+                              "id": "http://jsonschema.net/data/feed/1/postEntries/0/description/0/value",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "totalVotes": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/totalVotes",
+                        "type": "integer"
+                      },
+                      "cardId": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/cardId",
+                        "type": "integer"
+                      },
+                      "isFirst": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/isFirst",
+                        "type": "boolean"
+                      },
+                      "user": {
+                        "id": "http://jsonschema.net/data/feed/1/postEntries/0/user",
+                        "type": "object",
+                        "properties": {
+                          "firstname": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/firstname",
+                            "type": "string"
+                          },
+                          "lastname": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/lastname",
+                            "type": "null"
+                          },
+                          "bio": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/bio",
+                            "type": "string"
+                          },
+                          "imageJsonEntryMap": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/imageJsonEntryMap",
+                            "type": "object",
+                            "properties": {
+                              "PROFILE": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/imageJsonEntryMap/PROFILE",
+                                "type": "string"
+                              },
+                              "PROFILE_DEFAULT": {
+                                "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/imageJsonEntryMap/PROFILE_DEFAULT",
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "image": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/image",
+                            "type": "string"
+                          },
+                          "imageType": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/imageType",
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/coverImage",
+                            "type": "null"
+                          },
+                          "coverImageType": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/coverImageType",
+                            "type": "null"
+                          },
+                          "publicProfileId": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/publicProfileId",
+                            "type": "string"
+                          },
+                          "uidx": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/uidx",
+                            "type": "string"
+                          },
+                          "tagsMap": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/tagsMap",
+                            "type": "string"
+                          },
+                          "name": {
+                            "id": "http://jsonschema.net/data/feed/1/postEntries/0/user/name",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "topicId": {
+                  "id": "http://jsonschema.net/data/feed/1/topicId",
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/feed/2",
+              "type": "object",
+              "properties": {
+                "cardId": {
+                  "id": "http://jsonschema.net/data/feed/2/cardId",
+                  "type": "integer"
+                },
+                "cardType": {
+                  "id": "http://jsonschema.net/data/feed/2/cardType",
+                  "type": "string"
+                },
+                "postId": {
+                  "id": "http://jsonschema.net/data/feed/2/postId",
+                  "type": "integer"
+                },
+                "postOwnerId": {
+                  "id": "http://jsonschema.net/data/feed/2/postOwnerId",
+                  "type": "string"
+                },
+                "isHidden": {
+                  "id": "http://jsonschema.net/data/feed/2/isHidden",
+                  "type": "boolean"
+                },
+                "isDeleted": {
+                  "id": "http://jsonschema.net/data/feed/2/isDeleted",
+                  "type": "boolean"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/feed/2/createdOn",
+                  "type": "integer"
+                },
+                "postEntries": {
+                  "id": "http://jsonschema.net/data/feed/2/postEntries",
+                  "type": "array",
+                  "items": {
+                    "id": "http://jsonschema.net/data/feed/2/postEntries/0",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/type",
+                        "type": "string"
+                      },
+                      "id": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/id",
+                        "type": "integer"
+                      },
+                      "createdAt": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/createdAt",
+                        "type": "integer"
+                      },
+                      "since": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/since",
+                        "type": "integer"
+                      },
+                      "commentCount": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/commentCount",
+                        "type": "integer"
+                      },
+                      "answerCount": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/answerCount",
+                        "type": "integer"
+                      },
+                      "isFeatured": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isFeatured",
+                        "type": "boolean"
+                      },
+                      "isSpammed": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isSpammed",
+                        "type": "boolean"
+                      },
+                      "isOwner": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isOwner",
+                        "type": "boolean"
+                      },
+                      "isLiked": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isLiked",
+                        "type": "boolean"
+                      },
+                      "isFollowed": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isFollowed",
+                        "type": "boolean"
+                      },
+                      "hasAnswered": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/hasAnswered",
+                        "type": "boolean"
+                      },
+                      "followersCount": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/followersCount",
+                        "type": "integer"
+                      },
+                      "topics": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/topics",
+                        "type": "array",
+                        "items": {
+                          "id": "http://jsonschema.net/data/feed/2/postEntries/0/topics/0",
+                          "type": "object",
+                          "properties": {
+                            "topicId": {
+                              "id": "http://jsonschema.net/data/feed/2/postEntries/0/topics/0/topicId",
+                              "type": "integer"
+                            },
+                            "topicTitle": {
+                              "id": "http://jsonschema.net/data/feed/2/postEntries/0/topics/0/topicTitle",
+                              "type": "string"
+                            },
+                            "isDeleted": {
+                              "id": "http://jsonschema.net/data/feed/2/postEntries/0/topics/0/isDeleted",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      },
+                      "isAnonymous": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/isAnonymous",
+                        "type": "boolean"
+                      },
+                      "description": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/description",
+                        "type": "array",
+                        "items": [
+                          {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/0",
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/0/type",
+                                "type": "string"
+                              },
+                              "value": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/0/value",
+                                "type": "string"
+                              }
+                            }
+                          },
+                          {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1",
+                            "type": "object",
+                            "properties": {
+                              "images": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1/images",
+                                "type": "array",
+                                "items": {
+                                  "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1/images/0",
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1/images/0/id",
+                                      "type": "integer"
+                                    },
+                                    "url": {
+                                      "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1/images/0/url",
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "type": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/1/type",
+                                "type": "string"
+                              }
+                            }
+                          },
+                          {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/2",
+                            "type": "object",
+                            "properties": {
+                              "products": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/2/products",
+                                "type": "array",
+                                "items": []
+                              },
+                              "type": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/description/2/type",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "parent": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/parent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/parent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/parent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "topParent": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/topParent",
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/topParent/type",
+                            "type": "null"
+                          },
+                          "id": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/topParent/id",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "cardId": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/cardId",
+                        "type": "integer"
+                      },
+                      "answers": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/answers",
+                        "type": "array",
+                        "items": []
+                      },
+                      "user": {
+                        "id": "http://jsonschema.net/data/feed/2/postEntries/0/user",
+                        "type": "object",
+                        "properties": {
+                          "firstname": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/firstname",
+                            "type": "string"
+                          },
+                          "lastname": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/lastname",
+                            "type": "null"
+                          },
+                          "bio": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/bio",
+                            "type": "string"
+                          },
+                          "imageJsonEntryMap": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/imageJsonEntryMap",
+                            "type": "object",
+                            "properties": {
+                              "PROFILE": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/imageJsonEntryMap/PROFILE",
+                                "type": "string"
+                              },
+                              "PROFILE_DEFAULT": {
+                                "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/imageJsonEntryMap/PROFILE_DEFAULT",
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "image": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/image",
+                            "type": "string"
+                          },
+                          "imageType": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/imageType",
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/coverImage",
+                            "type": "null"
+                          },
+                          "coverImageType": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/coverImageType",
+                            "type": "null"
+                          },
+                          "publicProfileId": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/publicProfileId",
+                            "type": "string"
+                          },
+                          "uidx": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/uidx",
+                            "type": "string"
+                          },
+                          "tagsMap": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/tagsMap",
+                            "type": "string"
+                          },
+                          "name": {
+                            "id": "http://jsonschema.net/data/feed/2/postEntries/0/user/name",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "topicId": {
+                  "id": "http://jsonschema.net/data/feed/2/topicId",
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "status": {
+          "id": "http://jsonschema.net/meta/status",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

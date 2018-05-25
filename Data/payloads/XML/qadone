@@ -1,0 +1,8 @@
+<movementEntry>
+    <createdBy>erpadmin</createdBy>
+    <version>0</version>
+    <checkOutside>false</checkOutside>
+    <destinationBinBarcode>${0}</destinationBinBarcode>
+    <destinationBinConfirmationCode>${1}</destinationBinConfirmationCode>
+	<itemBarcodes>${2}</itemBarcodes>
+</movementEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LGPPumpsObjectTestSuite" verbose="1">
+    <parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="LGP Pumps Object Suite"/>
+    <parameter name="type" value="Exhaustive Regression etc"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		
+	</listeners>
+	<test name="LGPRegressionTests">
+		<groups>
+			<run>
+				<include name="Sanity" />
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsObjectTests" />
+		</classes>
+	</test>
+</suite>

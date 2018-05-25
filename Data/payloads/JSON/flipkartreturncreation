@@ -1,0 +1,30 @@
+{
+    "returnId" : "${0}",
+    "eventType" : "${1}",
+    "source" : "${2}",
+    "timestamp" :"${3}",
+    "attributes" : {
+        "status" :"${4}",
+        "returnItems" : [{
+            "returnId" : "${0}",
+            "orderItemId" : "${5}",
+            "source" : "${6}" ,
+            "status" : "${7}", 
+            "action" : "${8}" ,
+            "quantity" : "${9}" , 
+            "orderDate" : "${10}",
+            "createdDate" : "${11}",
+            "updatedDate" : "${12}",
+            "courierName" : "flipkartlogistics",
+            "reason" : "Automation fk return",
+            "subReason" : "Automation fk return sub reason",
+            "trackingId" : "${13}",
+            "shipmentId" : "flipkartlogistics",
+            "comments" : "Automation fk return",
+            "completionDate" : "${12}",
+            "replacementOrderItemId" : "123",
+            "productId" : "productid 123",
+            "listingId" : "LSTTSHDBN3326TEZHQZMOIRZR"
+        }]
+    }
+}

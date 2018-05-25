@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "bio": {
+          "id": "http://jsonschema.net/data/bio",
+          "type": "string"
+        },
+        "gender": {
+          "id": "http://jsonschema.net/data/gender",
+          "type": "string"
+        },
+        "location": {
+          "id": "http://jsonschema.net/data/location",
+          "type": "string"
+        },
+        "name": {
+          "id": "http://jsonschema.net/data/name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bio",
+        "gender",
+        "location",
+        "name"
+      ]
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

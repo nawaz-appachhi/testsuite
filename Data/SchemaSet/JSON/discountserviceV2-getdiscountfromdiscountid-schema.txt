@@ -1,0 +1,192 @@
+{
+  "type": "object",
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "id": {
+      "id":"http://jsonschema.net/id",
+      "type": "integer"
+    },
+    "createdOn": {
+      "id":"http://jsonschema.net/createdOn",
+      "type": "integer"
+    },
+    "name": {
+      "id": "http://jsonschema.net/name",
+      "type": "string"
+    },
+    "description": {
+      "id": "http://jsonschema.net/description",
+      "type": "string"
+    },
+    "isDynamic": {
+      "id": "http://jsonschema.net/isDynamic",
+      "type": "boolean"
+    },
+    "isEnabled": {
+      "id": "http://jsonschema.net/isEnabled",
+      "type": "boolean"
+    },
+    "startedOn": {
+      "id": "http://jsonschema.net/startedOn",
+      "type": "integer"
+    },
+    "expiredOn": {
+      "id": "http://jsonschema.net/expiredOn",
+      "type": "integer"
+    },
+    "discountFunding": {
+      "id": "http://jsonschema.net/discountFunding",
+      "type": "string"
+    },
+    "fundingPercentage": {
+      "id": "http://jsonschema.net/fundingPercentage",
+      "type": "integer"
+    },
+    "fundingTax": {
+      "id": "http://jsonschema.net/fundingTax",
+      "type": "integer"
+    },
+    "fundingBasis": {
+      "id": "http://jsonschema.net/fundingBasis",
+      "type": "string"
+    },
+    "discountLimit": {
+      "id": "http://jsonschema.net/discountLimit",
+      "type": "integer"
+    },
+    "stylesCount": {
+      "id": "http://jsonschema.net/stylesCount",
+      "type": "integer"
+    },
+    "discountRules": {
+      "id": "http://jsonschema.net/discountRules",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/discountRules/0",
+        "type": "object",
+        "properties": {
+          "type": {
+            "id": "http://jsonschema.net/discountRules/0/type",
+            "type": "string"
+          },
+          "id": {
+            "id": "http://jsonschema.net/discountRules/0/id",
+            "type": "integer"
+          },
+          "createdOn": {
+            "id": "http://jsonschema.net/discountRules/0/createdOn",
+            "type": "integer"
+          },
+          "groupId": {
+            "id": "http://jsonschema.net/discountRules/0/groupId",
+            "type": "integer"
+          },
+          "discountFreeItems": {
+            "id": "http://jsonschema.net/discountRules/0/discountFreeItems",
+            "type": "array",
+            "items": []
+          },
+          "percent": {
+            "id": "http://jsonschema.net/discountRules/0/percent",
+            "type": "integer"
+          },
+          "amount": {
+            "id": "http://jsonschema.net/discountRules/0/amount",
+            "type": "integer"
+          },
+          "active": {
+            "id": "http://jsonschema.net/discountRules/0/active",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "discountFilters": {
+      "id": "http://jsonschema.net/discountFilters",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/discountFilters/0",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "http://jsonschema.net/discountFilters/0/id",
+            "type": "integer"
+          },
+          "createdOn": {
+            "id": "http://jsonschema.net/discountFilters/0/createdOn",
+            "type": "integer"
+          },
+          "score": {
+            "id": "http://jsonschema.net/discountFilters/0/score",
+            "type": "integer"
+          },
+          "brand": {
+            "id": "http://jsonschema.net/discountFilters/0/brand",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "discountStyles": {
+      "id": "http://jsonschema.net/discountStyles",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/discountStyles/0",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "http://jsonschema.net/discountStyles/0/id",
+            "type": "integer"
+          },
+          "createdOn": {
+            "id": "http://jsonschema.net/discountStyles/0/createdOn",
+            "type": "integer"
+          },
+          "styleId": {
+            "id": "http://jsonschema.net/discountStyles/0/styleId",
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "excludedStyles": {
+      "id": "http://jsonschema.net/excludedStyles",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/excludedStyles/0",
+        "type": "integer"
+      }
+    },
+    "onCart": {
+      "id": "http://jsonschema.net/onCart",
+      "type": "boolean"
+    },
+    "td": {
+      "id": "http://jsonschema.net/td",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "createdOn",
+    "name",
+    "description",
+    "isDynamic",
+    "isEnabled",
+    "startedOn",
+    "expiredOn",
+    "discountFunding",
+    "fundingPercentage",
+    "fundingTax",
+    "fundingBasis",
+    "discountLimit",
+    "stylesCount",
+    "discountRules",
+    "discountFilters",
+    "discountStyles",
+    "excludedStyles",
+    "onCart",
+    "td"
+  ]
+}

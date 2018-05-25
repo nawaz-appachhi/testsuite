@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RPFServices in fox7" verbose="1">
+ <test name="RFPFOX7">
+  <groups>
+   <run>
+    <include name="RFPFOX7" />
+   </run>
+  </groups>
+  <packages>
+   <package name="com.myntra.apiTests.test.regression.portalservices.*" />
+    </packages>
+ </test>
+</suite>

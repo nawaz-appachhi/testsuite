@@ -1,0 +1,5 @@
+{
+	"dealType": ${0},
+	"state": ${1},
+	"channelType": ${2}
+}

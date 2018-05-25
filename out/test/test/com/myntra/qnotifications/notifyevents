@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<notifyEvents>
+   <notifyCode>ORDER_CONFIRMED</notifyCode>
+   <islastOrder>false</islastOrder>
+   <ispartOrder>false</ispartOrder>
+   <customerName>Sneha  Agarwal</customerName>
+   <orderId>70115495</orderId>
+<releaseId>70115495</releaseId>
+   <login>end2endautomation3@gmail.com</login>
+   <address>Testing team  Myntra, Bangalore, KA, India, 560068</address>
+   <mobile>8088566581</mobile>
+   <email>end2endautomation3@gmail.com</email>
+   <cardPaymentEnabled>false</cardPaymentEnabled>
+    <actualPromiseTime>16 Dec 2015</actualPromiseTime>
+<trackingNo>ML0000180808</trackingNo>
+</notifyEvents>

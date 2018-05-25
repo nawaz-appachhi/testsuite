@@ -1,0 +1,14 @@
+{
+	"vhost": "/",
+	"name": "amq.default",
+	"properties": {
+		"delivery_mode": 1,
+		"headers": {}
+	},
+	"routing_key": "${0}",
+	"delivery_mode": "1",
+	"payload": "${1}",
+	"headers": {},
+	"props": {},
+	"payload_encoding": "string"
+}

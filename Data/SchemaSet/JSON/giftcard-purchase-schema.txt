@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer"
+        },
+        "statusMessage": {
+          "type": "string"
+        },
+        "statusType": {
+          "type": "string"
+        },
+        "totalCount": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    }
+  },
+  "required": [
+    "status"
+  ]
+  }

@@ -1,0 +1,786 @@
+{
+    "gmDifferentialMatrix": [
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 1
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 2
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 60,
+            "dohHigh": -1,
+            "discount": 73
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": -1,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 7
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 3
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 2
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 5
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 4
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 4
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        }
+    ],
+    "fixedCutoffMatrix": [
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 1
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 2
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 60,
+            "dohHigh": -1,
+            "discount": 73
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": -1,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 7
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 3
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 2
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 1,
+            "ageHigh": 30,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 2
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 3
+        },
+        {
+            "ageLow": 30,
+            "ageHigh": 60,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 180,
+            "dohHigh": -1,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 5
+        },
+        {
+            "ageLow": 180,
+            "ageHigh": -1,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 5
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 4
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 1,
+            "dohHigh": 30,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 30,
+            "dohHigh": 60,
+            "discount": 4
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 60,
+            "dohHigh": 90,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 90,
+            "dohHigh": 120,
+            "discount": 3
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 3
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 120,
+            "dohHigh": 150,
+            "discount": 4
+        },
+        {
+            "ageLow": 150,
+            "ageHigh": 180,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 5
+        },
+        {
+            "ageLow": 120,
+            "ageHigh": 150,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 90,
+            "ageHigh": 120,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        },
+        {
+            "ageLow": 60,
+            "ageHigh": 90,
+            "dohLow": 150,
+            "dohHigh": 180,
+            "discount": 4
+        }
+    ],
+    "saleThroughRateAdjustments": [
+        {
+            "low": 1,
+            "high": 500,
+            "discount": 3
+        },
+        {
+            "low": 500,
+            "high": -1,
+            "discount": -3
+        }
+    ],
+    "mrpAdjustments": [
+        {
+            "low": 1,
+            "high": 1000,
+            "discount": 3
+        },
+        {
+            "low": 1000,
+            "high": 2000,
+            "discount": 5
+        },
+        {
+            "low": 2000,
+            "high": 5000,
+            "discount": 7
+        },
+        {
+            "low": 5000,
+            "high": -1,
+            "discount": 15
+        }
+    ],
+    "brokenSKUAdjustments": [
+        {
+            "low": 1,
+            "high": 1,
+            "discount": 3
+        },
+        {
+            "low": 2,
+            "high": 2,
+            "discount": 5
+        },
+        {
+            "low": 3,
+            "high": 3,
+            "discount": 7
+        },
+        {
+            "low": 4,
+            "high": 4,
+            "discount": 9
+        },
+        {
+            "low": 4,
+            "high": 4,
+            "discount": 15
+        }
+    ],
+    "operator": "${0}",
+    "minimumRGMPeritem": ${1},
+    "oldSeasonBoost": ${2},
+    "brandInFocusBoost": ${3},
+    "merchandiseType": "${4}"
+}

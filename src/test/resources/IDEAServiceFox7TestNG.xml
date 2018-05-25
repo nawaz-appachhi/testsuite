@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="IDPFoxTestSuite" verbose="1">
+		<parameter name="team" value="Storefront"/>
+		<parameter name="core" value="IDEA"/>
+		<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="IDEAServiceTests">
+		
+		<groups>
+			<run>
+				<include name="FoxSanity" />
+				
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.IdeaApiTests" />
+		</classes>
+	</test>
+</suite>

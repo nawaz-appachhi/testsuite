@@ -1,0 +1,46 @@
+{
+    "operator": "${0}",
+    "gmDifferentialMatrix": [
+        {
+            "ageLow": ${1},
+            "ageHigh": ${2},
+            "dohLow":${3},
+            "dohHigh": ${4},
+            "discount": ${5}
+        }
+    ],
+    "fixedCutoffMatrix": [
+        {
+            "ageLow": ${6},
+            "ageHigh": ${7},
+            "dohLow": ${8},
+            "dohHigh": ${9},
+            "discount": ${10}
+        }
+    ],
+    "saleThroughRateAdjustments": [
+        {
+            "low": ${11},
+            "high": ${12},
+            "discount": ${13}
+        }
+    ],
+    "mrpAdjustments": [
+        {
+            "low": ${14},
+            "high": ${15},
+            "discount": ${16}
+        }
+    ],
+    "minimumRGMPeritem": ${17},
+    "brokenSKUAdjustments": [
+        {
+            "low": ${18},
+            "high": ${19},
+            "discount": ${20}
+        }],
+    "oldSeasonBoost": ${21},	
+    "brandInFocusBoost": ${22},
+    "merchandiseType": "${23}"
+}
+

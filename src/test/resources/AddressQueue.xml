@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="CARTQueueSuite" verbose="1">
+	<parameter name="team" value="StoreFront" />
+	<parameter name="ServiceName" value="Address" />
+	<parameter name="type" value="Regression" />
+
+<test name="ADDRESSQUEUE">
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.addressServiceV2.AddressConsumerV2Test"/>
+		</classes>
+</test>
+</suite>

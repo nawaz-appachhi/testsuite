@@ -1,0 +1,18 @@
+{
+    "tagsList": [
+        {
+            "styleId": ${0},
+            "tags": [
+                {
+                    "tagString": "${1}"
+                },
+                {
+                    "tagString": "${2}"
+                }
+            ]
+        }
+    ],
+    "operation": "Add",
+    "tagNamespace": "${3}",
+    "ttl": 1000
+}

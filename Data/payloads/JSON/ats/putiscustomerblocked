@@ -1,0 +1,8 @@
+{
+"version":0,
+"login":"${0}",
+"userContactNo":"",
+"isLoyaltyPointsUsed":false,
+"isLoyaltyPointsAwarded":false,
+"totalOrderValue":0.0
+}

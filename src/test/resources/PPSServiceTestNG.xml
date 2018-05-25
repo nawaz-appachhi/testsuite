@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PPSSuite" verbose="1">
+	<parameter name="team" value="StoreFront"/>
+	<parameter name="core" value="PPS"/>
+	<parameter name="type" value="Regression"/>
+	<test name="PPSServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.PPS_Service" />
+		</classes>
+	</test>
+</suite>

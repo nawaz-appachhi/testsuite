@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DevApisTestSuite" verbose="1" parallel="classes" thread-count="2">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />	
+		<listener class-name="com.myntra.lordoftherings.DevAPIRetryListener"/>	
+	</listeners>
+	<test name="DevApisTests">
+		
+		
+		<groups>
+			<run>
+				<include name="SchemaValidation" />					
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.devapis.IDPTests" />
+			<class name="com.myntra.apiTests.portalservices.devapis.StyleTests" />
+			<class name="com.myntra.apiTests.portalservices.devapis.SearchTests" />
+			<class name="com.myntra.apiTests.portalservices.devapis.CartTests" />
+			<class name="com.myntra.apiTests.portalservices.devapis.OnBoardingTests" />
+			<class name="com.myntra.apiTests.portalservices.devapis.DevAPITests" />
+			
+		</classes>
+	</test>
+</suite>

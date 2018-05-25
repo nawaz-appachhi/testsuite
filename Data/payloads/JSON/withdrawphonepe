@@ -1,0 +1,9 @@
+{
+    "login":"${0}",
+    "url":"www.myntra.com",
+    "wallet":"PHONEPE",
+     "mobile":"1234567890",
+	"name":"wallet",
+	"email":"${1}"
+	
+}

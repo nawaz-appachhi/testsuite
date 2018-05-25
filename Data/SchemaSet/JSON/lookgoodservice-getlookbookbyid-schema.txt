@@ -1,0 +1,134 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"description": {
+			"type":"string",
+			"id": "http://jsonschema.net/description",
+			"required":true
+		},
+		"id": {
+			"type":"number",
+			"id": "http://jsonschema.net/id",
+			"required":true
+		},
+		"is_active": {
+			"type":"number",
+			"id": "http://jsonschema.net/is_active",
+			"required":true
+		},
+		"looks": {
+			"type":"array",
+			"id": "http://jsonschema.net/looks",
+			"required":true,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/looks/0",
+				"required":true,
+				"properties":{
+					"description": {
+						"type":"string",
+						"id": "http://jsonschema.net/looks/0/description",
+						"required":true
+					},
+					"id": {
+						"type":"number",
+						"id": "http://jsonschema.net/looks/0/id",
+						"required":true
+					},
+					"image_buy_look": {
+						"type":"string",
+						"id": "http://jsonschema.net/looks/0/image_buy_look",
+						"required":true
+					},
+					"image_look": {
+						"type":"string",
+						"id": "http://jsonschema.net/looks/0/image_look",
+						"required":true
+					},
+					"is_active": {
+						"type":"number",
+						"id": "http://jsonschema.net/looks/0/is_active",
+						"required":true
+					},
+					"is_purchasable": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/looks/0/is_purchasable",
+						"required":true
+					},
+					"is_right_aligned": {
+						"type":"number",
+						"id": "http://jsonschema.net/looks/0/is_right_aligned",
+						"required":true
+					},
+					"is_text_white": {
+						"type":"number",
+						"id": "http://jsonschema.net/looks/0/is_text_white",
+						"required":true
+					},
+					"link_text": {
+						"type":"null",
+						"id": "http://jsonschema.net/looks/0/link_text",
+						"required":true
+					},
+					"link_url": {
+						"type":"null",
+						"id": "http://jsonschema.net/looks/0/link_url",
+						"required":true
+					},
+					"lookStyles": {
+						"type":"array",
+						"id": "http://jsonschema.net/looks/0/lookStyles",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/looks/0/lookStyles/0",
+							"required":true,
+							"properties":{
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/looks/0/lookStyles/0/id",
+									"required":true
+								},
+								"style_id": {
+									"type":"number",
+									"id": "http://jsonschema.net/looks/0/lookStyles/0/style_id",
+									"required":true
+								}
+							}
+						}
+					},
+					"name": {
+						"type":"string",
+						"id": "http://jsonschema.net/looks/0/name",
+						"required":true
+					},
+					"similar_styles_url": {
+						"type":"null",
+						"id": "http://jsonschema.net/looks/0/similar_styles_url",
+						"required":true
+					},
+					"summary": {
+						"type":"string",
+						"id": "http://jsonschema.net/looks/0/summary",
+						"required":true
+					}
+				}
+			}
+		},
+		"name": {
+			"type":"string",
+			"id": "http://jsonschema.net/name",
+			"required":true
+		},
+		"summary": {
+			"type":"string",
+			"id": "http://jsonschema.net/summary",
+			"required":true
+		}
+	}
+}

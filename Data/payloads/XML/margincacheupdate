@@ -1,0 +1,11 @@
+<sellerTermsResponse>
+<sellerTerms>
+  <sellerTerm>
+    <sellerId>${0}</sellerId>
+    <brandName>${1}</brandName>
+    <articleTypeName>${2}</articleTypeName>
+    <gender>${3}</gender>
+    <marginPercentage>${4}</marginPercentage>
+  </sellerTerm>  
+ </sellerTerms>  
+</sellerTermsResponse>

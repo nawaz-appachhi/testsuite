@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/statusCode"
+        },
+        "statusMessage": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusMessage"
+        },
+        "statusType": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusType"
+        },
+        "totalCount": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/totalCount"
+        }
+      },
+      "id": "http://jsonschema.net/status",
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/id"
+          },
+          "typeName": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/typeName"
+          },
+          "typeCode": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/typeCode"
+          },
+          "isActive": {
+            "type": "boolean",
+            "id": "http://jsonschema.net/data/0/isActive"
+          },
+          "allAttributeTypeEntires": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/id"
+                },
+                "typeName": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/typeName"
+                },
+                "isActive": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/isActive"
+                },
+                "isRequired": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/isRequired"
+                },
+                "code": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/code"
+                },
+                "allAttributeValues": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11/id"
+                      },
+                      "attributeValue": {
+                        "type": "string",
+                        "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11/attributeValue"
+                      },
+                      "isActive": {
+                        "type": "boolean",
+                        "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11/isActive"
+                      },
+                      "attributeCode": {
+                        "type": "string",
+                        "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11/attributeCode"
+                      },
+                      "code": {
+                        "type": "string",
+                        "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11/code"
+                      }
+                    },
+                    "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues/11",
+                    "required": [
+                      "id",
+                      "attributeValue",
+                      "isActive",
+                      "attributeCode",
+                      "code"
+                    ]
+                  },
+                  "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12/allAttributeValues"
+                }
+              },
+              "id": "http://jsonschema.net/data/0/allAttributeTypeEntires/12",
+              "required": [
+                "id",
+                "typeName",
+                "isActive",
+                "isRequired",
+                "code",
+                "allAttributeValues"
+              ]
+            },
+            "id": "http://jsonschema.net/data/0/allAttributeTypeEntires"
+          }
+        },
+        "id": "http://jsonschema.net/data/0",
+        "required": [
+          "id",
+          "typeName",
+          "typeCode",
+          "isActive",
+          "allAttributeTypeEntires"
+        ]
+      },
+      "id": "http://jsonschema.net/data"
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "status",
+    "data"
+  ]
+}

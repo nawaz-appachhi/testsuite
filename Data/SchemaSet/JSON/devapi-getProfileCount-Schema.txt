@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "likes": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "id": "count"
+            }
+          },
+          "id": "likes",
+          "required": [
+            "count"
+          ]
+        },
+        "collection": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "id": "count"
+            }
+          },
+          "id": "collection",
+          "required": [
+            "count"
+          ]
+        },
+        "forum": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "id": "count"
+            }
+          },
+          "id": "forum",
+          "required": [
+            "count"
+          ]
+        },
+        "shots": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "id": "count"
+            }
+          },
+          "id": "shots",
+          "required": [
+            "count"
+          ]
+        }
+      },
+      "id": "data",
+      "required": [
+        "likes",
+        "collection",
+        "forum",
+        "shots"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta",
+      "required": [
+        "code"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "data",
+    "meta"
+  ]
+}

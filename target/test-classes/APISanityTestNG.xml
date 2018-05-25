@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="APISanityTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="APISanityTest">
+		<groups>
+			<run>
+				<include name="ProdSanity" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.myntra.apiTests.test.regression.portalservices.*" />
+            <package name="com.myntra.apiTests.test.regression.erpservices.*" />
+		</packages>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes>
+	</test>
+</suite>

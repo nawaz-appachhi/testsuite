@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "data",
+      "type": "object",
+      "properties": {
+        "feed": {
+          "id": "feed",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-415"
+          }
+        }
+      }
+    },
+    "meta": {
+      "id": "meta",
+      "type": "object",
+      "properties": {
+        "status": {
+          "id": "status",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

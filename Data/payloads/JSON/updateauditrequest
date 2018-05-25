@@ -1,0 +1,165 @@
+{
+  "id": 150724,
+  "requestedQuantity": 350,
+  "moId": 173488,
+  "status": "CREATED",
+  "defects": [
+    {
+      "id": 2,
+      "createdBy": "apoorv.singh",
+      "createdOn": 1483209000000,
+      "lastModifiedOn": 1491278521000,
+      "defectId": 1,
+      "quantity": 50,
+      "description": "test",
+      "defectName": "Knitting",
+      "auditRequestId": 150724,
+      "defectClass": "FABRIC_QUALITY"
+    }
+  ],
+  "styles": [
+    {
+      "quantities": [
+        {
+          "id": 2,
+          "createdBy": "system",
+          "createdOn": 1491286340000,
+          "lastModifiedOn": 1491286340000,
+          "manufacturingOrderSizeId": 725478,
+          "approvedQuantity": 5,
+          "auditRequestId": 150724,
+          "size": "M",
+          "skuId": 12755614
+        },
+        {
+          "id": 3,
+          "createdBy": "system",
+          "createdOn": 1491286340000,
+          "lastModifiedOn": 1491286340000,
+          "approvedQuantity": 5,
+          "manufacturingOrderSizeId": 725479,
+          "auditRequestId": 150724,
+          "size": "L",
+          "skuId": 12755615
+        },
+        {
+          "id": 4,
+          "createdBy": "system",
+          "createdOn": 1491286340000,
+          "lastModifiedOn": 1491286340000,
+           "approvedQuantity": 5,
+          "manufacturingOrderSizeId": 725480,
+          "auditRequestId": 150724,
+          "size": "XL",
+          "skuId": 12755616
+        },
+        {
+          "id": 5,
+          "createdBy": "system",
+          "createdOn": 1491286340000,
+          "lastModifiedOn": 1491286340000,
+          "manufacturingOrderSizeId": 725481,
+                    "approvedQuantity": 5,
+
+          "auditRequestId": 150724,
+          "size": "S",
+          "skuId": 12755613
+        },
+        {
+          "id": 6,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+                    "approvedQuantity": 5,
+
+          "manufacturingOrderSizeId": 725482,
+          "auditRequestId": 150724,
+          "size": "M",
+          "skuId": 12755614
+        },
+        {
+          "id": 7,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725483,
+          "auditRequestId": 150724,
+          "size": "L",
+                    "approvedQuantity": 5,
+
+          "skuId": 12755615
+        },
+        {
+          "id": 8,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725484,
+                    "approvedQuantity": 5,
+
+          "auditRequestId": 150724,
+          "size": "XL",
+          "skuId": 12755616
+        },
+        {
+          "id": 9,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+                    "approvedQuantity": 5,
+
+          "manufacturingOrderSizeId": 725485,
+          "auditRequestId": 150724,
+          "size": "S",
+          "skuId": 12755613
+        },
+        {
+          "id": 10,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725486,
+                    "approvedQuantity": 5,
+          "auditRequestId": 150724,
+          "size": "M",
+          "skuId": 12755614
+        },
+        {
+          "id": 11,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725487,
+          "auditRequestId": 150724,
+                    "approvedQuantity": 5,
+          "size": "L",
+          "skuId": 12755615
+        },
+        {
+          "id": 12,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725488,
+          "auditRequestId": 150724,
+          "size": "XL",
+                    "approvedQuantity": 5,
+          "skuId": 12755616
+        },
+        {
+          "id": 13,
+          "createdBy": "system",
+          "createdOn": 1491286341000,
+          "lastModifiedOn": 1491286341000,
+          "manufacturingOrderSizeId": 725489,
+          "auditRequestId": 150724,
+          "size": "S",
+          "approvedQuantity": 5,
+          "skuId": 12755613
+        }
+      ],
+      "styleId": 1719897,
+      "poBarcode": "FRAC120117-07"
+    }
+  ]
+}

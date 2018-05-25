@@ -1,0 +1,16 @@
+{
+  "name": "${0}",
+  "likeCount": "${1}",
+  "layout": "${2}",
+  "UserId": "${3}",
+  "occasions": ["${4}","${5}"],
+  "gender": "${6}",
+  "description":"${7}",
+  "styles": [
+    {
+      "position": "${10}",
+      "styleid": "${8}",
+      "description":"${9}"
+    }
+  ]
+}

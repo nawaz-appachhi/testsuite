@@ -1,0 +1,110 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/0",
+					"required":false,
+					"properties":{
+						"applicable": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/0/applicable",
+							"required":false
+						},
+						"conditionMax": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/conditionMax",
+							"required":false
+						},
+						"conditionMin": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/conditionMin",
+							"required":false
+						},
+						"couponAmount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponAmount",
+							"required":false
+						},
+						"couponDescriptionText": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/couponDescriptionText",
+							"required":false
+						},
+						"couponPercentage": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponPercentage",
+							"required":false
+						},
+						"couponType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/couponType",
+							"required":false
+						},
+						"coupon": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/coupon",
+							"required":false
+						},
+						"displayType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/displayType",
+							"required":false
+						},
+						"expiryDate": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/expiryDate",
+							"required":false
+						},
+						"minMore": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/minMore",
+							"required":false
+						},
+						"status": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/status",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

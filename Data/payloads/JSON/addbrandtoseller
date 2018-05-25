@@ -1,0 +1,14 @@
+{
+  "sellerBrandResponse": {
+    "data": {
+      "sellerBrand": {
+        "brandId": "${0}",
+        "brandName": "${1}",
+        "enabled": "${2}",
+        "sellerEntry": {
+          "id": "${3}"        
+        }
+      }
+    }
+  }
+}

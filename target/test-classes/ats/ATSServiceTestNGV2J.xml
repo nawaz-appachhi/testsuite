@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ATSSuite" verbose="1">
+	<parameter name="team" value="StoreFront" />
+	<parameter name="ServiceName" value="ATS" />
+	<parameter name="type" value="Regression" />
+
+
+	<test name="ATSServiceTestV1">
+		<groups>
+			<run>
+				<include name="v2" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" />
+		</classes>
+	</test>
+
+</suite>

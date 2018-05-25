@@ -1,0 +1,75 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"codOnHoldLogResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"codOnHoldLogEntryList": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"codOnHoldLogEntry": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"createdBy": {
+									"type":"string",
+									"required":false
+								},
+								"createdDate": {
+									"type":"string",
+									"required":true
+								},
+								"disposition": {
+									"type":"string",
+									"required":false
+								},
+								"orderId": {
+									"type":"number",
+									"required":true
+								},
+								"reasonDisplayName": {
+									"type":"string",
+									"required":false
+								},
+								"reason": {
+									"type":"string",
+									"required":true
+								},
+								"trialNumber": {
+									"type":"number",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":true,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":true
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":true
+						},
+						"totalCount": {
+							"type":"number",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="sample_test_oms" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="OMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="oms test">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.oms.Test.SampleTest" />
+		</classes>
+	</test>
+</suite>

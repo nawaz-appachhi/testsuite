@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PartnersTestSuite" verbose="1">
+    <parameter name="team" value="SCM"/>
+	<parameter name="core" value="Marketplace"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="PartnersTests">
+		
+		<classes>
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.PartnerPortalService" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.ManageFulfillment" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.SellerPaymentServiceOnline" />
+             <class name="com.myntra.apiTests.erpservices.partners.Tests.SellerPaymentServiceCOD" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.SellerServices" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VendorItemMasterServices" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VendorManagementService" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VendorScoreCardService" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VendorStockMovement" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VmsInvoiceUpload" />
+            <class name="com.myntra.apiTests.erpservices.partners.Tests.VendorTermsTest" />
+           
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LoyaltyPointsServiceTest" verbose="1">
+    <parameter name="team" value="BUY SERVICE"/>
+	<parameter name="core" value="LoyaltyPoints"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="LoyaltyServiceTest">
+		<groups>
+			<run>
+				<include name="LPV1" />
+			</run>
+		</groups>
+	    <packages>
+            <package name="com.myntra.apiTests.buyservices.loyalty.Tests.*" />
+		</packages><!-- 
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes> -->
+	</test>
+</suite>

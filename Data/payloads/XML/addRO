@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ro>
+   <id />
+   <barcode />
+   <vendor>
+      <id>${0}</id>
+   </vendor>
+   <buyer><id>${9}</id></buyer>
+   <warehouse>
+      <id>${1}</id>
+   </warehouse>
+   <brand>
+      <brandId>${2}</brandId>
+   </brand>
+   <lotId />
+   <rmaId>${3}</rmaId>
+   <roMode>${4}</roMode>
+   <roType>${5}</roType>
+   <vendorPickupDate>${6}</vendorPickupDate>
+   <alternatePickupDate>${7}</alternatePickupDate>
+   <scheduledDate />
+   <description>${8}</description>
+</ro>
+

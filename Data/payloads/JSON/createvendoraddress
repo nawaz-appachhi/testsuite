@@ -1,0 +1,26 @@
+{
+  "partnerContactAddressResponse": {
+    "data": {
+      "partnerContactAddress": [
+        {
+          "partnerId": "${0}",
+          "addressType": "${1}",
+          "address1": "${2}",
+          "address2": "${3}",
+          "city": "${4}",
+          "state": "${5}",
+          "pinCode": "${6}",
+          "country": "${7}",
+          "phone1": "${8}",
+          "phone2": "${9}",
+          "email1": "${10}",
+          "email2": "${11}",
+          "notes": "${12}",
+          "partnerType": "${13}",
+          "isInternational":"${14}",
+          "enabled": "${15}",
+        }
+      ]
+    }
+  }
+}

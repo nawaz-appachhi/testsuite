@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        },
+        "token": {
+          "id": "http://jsonschema.net/meta/token",
+          "type": "string"
+        },
+        "xsrfToken": {
+          "id": "http://jsonschema.net/meta/xsrfToken",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "token",
+        "xsrfToken"
+      ]
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "login": {
+          "id": "http://jsonschema.net/data/login",
+          "type": "string"
+        },
+        "usertype": {
+          "id": "http://jsonschema.net/data/usertype",
+          "type": "string"
+        },
+        "email": {
+          "id": "http://jsonschema.net/data/email",
+          "type": "string"
+        },
+        "mobile": {
+          "id": "http://jsonschema.net/data/mobile",
+          "type": "string"
+        },
+        "status": {
+          "id": "http://jsonschema.net/data/status",
+          "type": "string"
+        },
+        "lastlogin": {
+          "id": "http://jsonschema.net/data/lastlogin",
+          "type": "integer"
+        },
+        "firstlogin": {
+          "id": "http://jsonschema.net/data/firstlogin",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "meta",
+    "notification",
+    "data"
+  ]
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pi>
+    <piName></piName>
+    <vendor>
+        <id>${0}</id>
+    </vendor>
+     <buyer>
+     <id>${3}</id>
+     </buyer>
+    <createdBy>erpadmin</createdBy>
+    <createdOn></createdOn>
+    <description></description>
+    <eta></eta>
+    <requestDate>2016-02-09</requestDate>
+    <jit>0</jit>
+    <piStatus></piStatus>
+    <updatedOn></updatedOn>
+   
+    <id></id>
+    <approver>santwana.samantray@myntra.com</approver>
+    <toRecipients>subhadeep.saha@myntra.com</toRecipients>
+    <ccRecipients>commercial_team@myntra.com,shanmukappa.nayak@myntra.com</ccRecipients>
+    <billingAddress></billingAddress>
+    <mailContent>Kind Attn: null null null null</mailContent>
+    <vendorContactPerson>null null null null</vendorContactPerson>
+    <vendorContactAddress>null
+null
+null
+null
+Ph 1:null
+Ph 2:null</vendorContactAddress>
+    <vendorState></vendorState>
+    <piType>CONSIGNMENT</piType>
+    <categoryManagerId>${1}</categoryManagerId>
+    <seasonId>138</seasonId>
+    <seasonYear>2016</seasonYear>
+    <estimatedShipmentDate>${2}</estimatedShipmentDate>
+    <letterHeading>Vector E-Commerce Pvt Ltd</letterHeading>
+    <eoss>0</eoss>
+    <creditBasisAsOn>INVOICE_DATE</creditBasisAsOn>
+    <paymentTerms>CHEQUE</paymentTerms>
+    <stockOrigin>DOMESTIC</stockOrigin>
+    <brandType>IMPORT_EXTERNAL</brandType>
+    <isTermValidated></isTermValidated>
+    <piPrioritization></piPrioritization>
+    <piOrderType></piOrderType>
+</pi>
+
+
+
+
+
+
+
+
+
+
+

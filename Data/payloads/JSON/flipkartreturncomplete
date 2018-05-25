@@ -1,0 +1,12 @@
+{
+    "returnId" : "${0}",
+    "eventType" : "${1}",
+    "source" : "${2}",
+    "timestamp" : "${3}",
+    "attributes" : {
+        "status":  "${4}",
+        "returnItems" : [{
+            "orderItemId": "${5}"
+        }]
+    }
+}

@@ -1,0 +1,119 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"transactiontEntry": {
+			"type":"object",
+			"id": "http://jsonschema.net/transactiontEntry",
+			"required":true,
+			"properties":{
+				"activeCreditPoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/transactiontEntry/activeCreditPoints",
+					"required":true
+				},
+				"activeDebitPoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/transactiontEntry/activeDebitPoints",
+					"required":true
+				},
+				"businessProcess": {
+					"type":"string",
+					"id": "http://jsonschema.net/transactiontEntry/businessProcess",
+					"required":true
+				},
+				"createdBy": {
+					"type":"string",
+					"id": "http://jsonschema.net/transactiontEntry/createdBy",
+					"required":true
+				},
+				"description": {
+					"type":"string",
+					"id": "http://jsonschema.net/transactiontEntry/description",
+					"required":true
+				},
+				"inActiveCreditPoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/transactiontEntry/inActiveCreditPoints",
+					"required":true
+				},
+				"inActiveDebitPoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/transactiontEntry/inActiveDebitPoints",
+					"required":true
+				},
+				"itemId": {
+					"type":"number",
+					"id": "http://jsonschema.net/transactiontEntry/itemId",
+					"required":true
+				},
+				"itemType": {
+					"type":"string",
+					"id": "http://jsonschema.net/transactiontEntry/itemType",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/transactiontEntry/login",
+					"required":true
+				}
+			}
+		},
+		"userAccountEntry": {
+			"type":"object",
+			"id": "http://jsonschema.net/userAccountEntry",
+			"required":true,
+			"properties":{
+				"activePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/activePointsBalance",
+					"required":true
+				},
+				"inActivePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/inActivePointsBalance",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/userAccountEntry/login",
+					"required":true
+				},
+				"tNcAccepted": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/userAccountEntry/tNcAccepted",
+					"required":true
+				}
+			}
+		}
+	}
+}

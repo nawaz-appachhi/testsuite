@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer",
+          "id": "statusCode"
+        },
+        "statusMessage": {
+          "type": "string",
+          "id": "statusMessage"
+        },
+        "statusType": {
+          "type": "string",
+          "id": "statusType"
+        },
+        "totalCount": {
+          "type": "integer",
+          "id": "totalCount"
+        }
+      },
+      "id": "status",
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    },
+    "transactiontEntry": {
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string",
+          "id": "createdBy"
+        },
+        "login": {
+          "type": "string",
+          "id": "login"
+        },
+        "activeCreditPoints": {
+          "type": "integer",
+          "id": "activeCreditPoints"
+        },
+        "inActiveCreditPoints": {
+          "type": "integer",
+          "id": "inActiveCreditPoints"
+        },
+        "activeDebitPoints": {
+          "type": "integer",
+          "id": "activeDebitPoints"
+        },
+        "inActiveDebitPoints": {
+          "type": "integer",
+          "id": "inActiveDebitPoints"
+        },
+        "description": {
+          "type": "string",
+          "id": "description"
+        },
+        "itemType": {
+          "type": "string",
+          "id": "itemType"
+        },
+        "itemId": {
+          "type": "string",
+          "id": "itemId"
+        },
+        "businessProcess": {
+          "type": "string",
+          "id": "businessProcess"
+        }
+      },
+      "id": "transactiontEntry",
+      "required": [
+        "createdBy",
+        "login",
+        "activeCreditPoints",
+        "inActiveCreditPoints",
+        "activeDebitPoints",
+        "inActiveDebitPoints",
+        "description",
+        "itemType",
+        "itemId",
+        "businessProcess"
+      ]
+    },
+    "userAccountEntry": {
+      "type": "object",
+      "properties": {
+        "activePointsBalance": {
+          "type": "integer",
+          "id": "activePointsBalance"
+        },
+        "inActivePointsBalance": {
+          "type": "integer",
+          "id": "inActivePointsBalance"
+        },
+        "tNcAccepted": {
+          "type": "boolean",
+          "id": "tNcAccepted"
+        },
+        "login": {
+          "type": "string",
+          "id": "login"
+        }
+      },
+      "id": "userAccountEntry",
+      "required": [
+        "activePointsBalance",
+        "inActivePointsBalance",
+        "tNcAccepted",
+        "login"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "status",
+    "transactiontEntry",
+    "userAccountEntry"
+  ]
+}

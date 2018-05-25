@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CartServiceTestSuiteV1" verbose="1">
+	<parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="CartService"/>
+    <parameter name="type" value="Regression"/>
+    
+	<test name="CartService">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.absolutService.CartServiceTestSuite" />
+			<class name="com.myntra.apiTests.portalservices.absolutService.CartServiceTestSuiteV2" />
+		</classes>
+	</test>
+</suite>

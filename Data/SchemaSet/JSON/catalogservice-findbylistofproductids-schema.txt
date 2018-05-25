@@ -1,0 +1,1608 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":[
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"addDate": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/addDate",
+						"required":true
+					},
+					"articleNumber": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/articleNumber",
+						"required":true
+					},
+					"articleType": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/articleType",
+						"required":true,
+						"properties":{
+							"filterOrder": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/articleType/filterOrder",
+								"required":true
+							},
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/articleType/id",
+								"required":true
+							},
+							"isActive": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/articleType/isActive",
+								"required":true
+							},
+							"isSocialSharingEnabled": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/articleType/isSocialSharingEnabled",
+								"required":true
+							},
+							"typeCode": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/articleType/typeCode",
+								"required":true
+							},
+							"typeName": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/articleType/typeName",
+								"required":true
+							}
+						}
+					},
+					"brandDetails": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/brandDetails",
+						"required":false,
+						"properties":{
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/brandDetails/id",
+								"required":false
+							},
+							"logoURL": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/brandDetails/logoURL",
+								"required":false
+							},
+							"name": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/brandDetails/name",
+								"required":false
+							}
+						}
+					},
+					"catalogAddDate": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/catalogAddDate",
+						"required":true
+					},
+					"catalogDate": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/catalogDate",
+						"required":true
+					},
+					"categories": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/categories",
+						"required":true
+					},
+					"codEnabled": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/codEnabled",
+						"required":true
+					},
+					"comments": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/comments",
+						"required":true
+					},
+					"globalAttributes": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/globalAttributes",
+						"required":true,
+						"properties":{
+							"ageGroup": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/ageGroup",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/ageGroup/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"baseColour": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/baseColour",
+								"required":true,
+								"properties":{
+									"attributeValueFamily": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/globalAttributes/baseColour/attributeValueFamily",
+										"required":true,
+										"properties":{
+											"familyName": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/globalAttributes/baseColour/attributeValueFamily/familyName",
+												"required":true
+											},
+											"familySwatchPosition": {
+												"type":"number",
+												"id": "http://jsonschema.net/data/0/globalAttributes/baseColour/attributeValueFamily/familySwatchPosition",
+												"required":true
+											}
+										}
+									},
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/baseColour/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"brandName": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/brandName",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/brandName/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"colour1": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/colour1",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/colour1/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"colour2": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/colour2",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/colour2/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"fashionType": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/fashionType",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/fashionType/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"gender": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/gender",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/gender/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"season": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/season",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/season/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"usage": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/usage",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/usage/attributeValue",
+										"required":true
+									}
+								}
+							},
+							"year": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/globalAttributes/year",
+								"required":true,
+								"properties":{
+									"attributeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/globalAttributes/year/attributeValue",
+										"required":true
+									}
+								}
+							}
+						}
+					},
+					"imageCollection": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/imageCollection",
+						"required":true,
+						"properties":{
+							"albumName": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/imageCollection/albumName",
+								"required":true
+							},
+							"imageEntryMap": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap",
+								"required":true,
+								"properties":{
+									"back": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/back/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"default_deprecated": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default_deprecated/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"default": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/default/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"front": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/front/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"left": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/left/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"right": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/right/supportedResolutions",
+												"required":true
+											}
+										}
+									},
+									"search_deprecated": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/relativePath",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search_deprecated/storedUploaderType",
+												"required":true
+											}
+										}
+									},
+									"search": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/domain",
+												"required":true
+											},
+											"imageType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/imageType",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/path",
+												"required":true
+											},
+											"relativePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/relativePath",
+												"required":true
+											},
+											"resolutionFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/resolutionFormula",
+												"required":true
+											},
+											"securedDomain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/securedDomain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/imageEntryMap/search/supportedResolutions",
+												"required":true
+											}
+										}
+									}
+								}
+							},
+							"isDefault": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/imageCollection/isDefault",
+								"required":true
+							},
+							"priorityOrder": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/imageCollection/priorityOrder",
+								"required":true
+							}
+						}
+					},
+					"isCustomizable": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isCustomizable",
+						"required":true
+					},
+					"landingPageUrl": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/landingPageUrl",
+						"required":true
+					},
+					"masterCatagory": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/masterCatagory",
+						"required":true,
+						"properties":{
+							"filterOrder": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/masterCatagory/filterOrder",
+								"required":true
+							},
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/data/0/masterCatagory/id",
+								"required":true
+							},
+							"isActive": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/masterCatagory/isActive",
+								"required":true
+							},
+							"isSocialSharingEnabled": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/data/0/masterCatagory/isSocialSharingEnabled",
+								"required":true
+							},
+							"typeCode": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/masterCatagory/typeCode",
+								"required":true
+							},
+							"typeName": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/masterCatagory/typeName",
+								"required":true
+							}
+						}
+					},
+					"myntraRating": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/myntraRating",
+						"required":true
+					},
+					"navigationId": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/navigationId",
+						"required":true
+					},
+					"price": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/price",
+						"required":true
+					},
+					"productAlbums": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/productAlbums",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/productAlbums/0",
+							"required":true,
+							"properties":{
+								"albumName": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productAlbums/0/albumName",
+									"required":true
+								},
+								"imageEntryMap": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap",
+									"required":true,
+									"properties":{
+										"back": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/back/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"default_deprecated": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default_deprecated/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"default": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/default/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"front": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/front/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"left": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/left/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"right": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/right/supportedResolutions",
+													"required":true
+												}
+											}
+										},
+										"search_deprecated": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/relativePath",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search_deprecated/storedUploaderType",
+													"required":true
+												}
+											}
+										},
+										"search": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search",
+											"required":true,
+											"properties":{
+												"domain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/domain",
+													"required":true
+												},
+												"imageType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/imageType",
+													"required":true
+												},
+												"path": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/path",
+													"required":true
+												},
+												"relativePath": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/relativePath",
+													"required":true
+												},
+												"resolutionFormula": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/resolutionFormula",
+													"required":true
+												},
+												"securedDomain": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/securedDomain",
+													"required":true
+												},
+												"servingUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/servingUploaderType",
+													"required":true
+												},
+												"storedUploaderType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/storedUploaderType",
+													"required":true
+												},
+												"supportedResolutions": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/0/productAlbums/0/imageEntryMap/search/supportedResolutions",
+													"required":true
+												}
+											}
+										}
+									}
+								},
+								"isDefault": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/productAlbums/0/isDefault",
+									"required":true
+								},
+								"priorityOrder": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productAlbums/0/priorityOrder",
+									"required":true
+								}
+							}
+						}
+					},
+					"productArticleTypeAttributeValues": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0",
+							"required":true,
+							"properties":{
+								"applicableSet": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/applicableSet",
+									"required":false
+								},
+								"attributeType": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/attributeType",
+									"required":true,
+									"properties":{
+										"id": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/attributeType/id",
+											"required":true
+										},
+										"typeName": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/attributeType/typeName",
+											"required":true
+										},
+										"typeOfAttribute": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/attributeType/typeOfAttribute",
+											"required":true
+										}
+									}
+								},
+								"attributeValue": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/attributeValue",
+									"required":true
+								},
+								"filterOrder": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/filterOrder",
+									"required":true
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/id",
+									"required":true
+								},
+								"isActive": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/isActive",
+									"required":true
+								},
+								"isFeatured": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/isFeatured",
+									"required":true
+								},
+								"isLatest": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/isLatest",
+									"required":true
+								},
+								"updatedBy": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/updatedBy",
+									"required":true
+								},
+								"updatedOn": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productArticleTypeAttributeValues/0/updatedOn",
+									"required":true
+								}
+							}
+						}
+					},
+					"productDescriptorCollection": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/productDescriptorCollection",
+						"required":true,
+						"properties":{
+							"productDescriptorMap": {
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap",
+								"required":true,
+								"properties":{
+									"description": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/description",
+										"required":true,
+										"properties":{
+											"descriptorType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/description/descriptorType",
+												"required":true
+											},
+											"value": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/description/value",
+												"required":true
+											}
+										}
+									},
+									"materials_care_desc": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/materials_care_desc",
+										"required":true,
+										"properties":{
+											"descriptorType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/materials_care_desc/descriptorType",
+												"required":true
+											},
+											"value": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/materials_care_desc/value",
+												"required":true
+											}
+										}
+									},
+									"style_note": {
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/style_note",
+										"required":true,
+										"properties":{
+											"descriptorType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/style_note/descriptorType",
+												"required":true
+											},
+											"value": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/productDescriptorCollection/productDescriptorMap/style_note/value",
+												"required":true
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"productDisplayName": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/productDisplayName",
+						"required":true
+					},
+					"productId": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/productId",
+						"required":true
+					},
+					"productOptions": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/productOptions",
+						"required":true,
+						"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/0/productOptions/0",
+								"required":true,
+								"properties":{
+									"active": {
+										"type":"boolean",
+										"id": "http://jsonschema.net/data/0/productOptions/0/active",
+										"required":true
+									},
+									"allSize": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/allSize",
+										"required":true
+									},
+									"id": {
+										"type":"number",
+										"id": "http://jsonschema.net/data/0/productOptions/0/id",
+										"required":true
+									},
+									"isActive": {
+										"type":"boolean",
+										"id": "http://jsonschema.net/data/0/productOptions/0/isActive",
+										"required":true
+									},
+									"measurement": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/measurement",
+										"required":true
+									},
+									"name": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/name",
+										"required":true
+									},
+									"price": {
+										"type":"number",
+										"id": "http://jsonschema.net/data/0/productOptions/0/price",
+										"required":true
+									},
+									"skuId": {
+										"type":"number",
+										"id": "http://jsonschema.net/data/0/productOptions/0/skuId",
+										"required":true
+									},
+									"unifiedSizeValueId": {
+										"type":"number",
+										"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSizeValueId",
+										"required":true
+									},
+									"unifiedSizeValue": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSizeValue",
+										"required":true
+									},
+									"unifiedSize": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/unifiedSize",
+										"required":true
+									},
+									"value": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/0/productOptions/0/value",
+										"required":true
+									}
+								}
+							}
+						},
+						"productTag": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/productTag",
+							"required":true
+						},
+						"productTags": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/productTags",
+							"required":true
+						},
+						"productType": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/productType",
+							"required":true,
+							"properties":{
+								"codEnabled": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productType/codEnabled",
+									"required":true
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productType/id",
+									"required":true
+								},
+								"name": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/productType/name",
+									"required":true
+								},
+								"productGroup": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/0/productType/productGroup",
+									"required":true,
+									"properties":{
+										"id": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/0/productType/productGroup/id",
+											"required":true
+										},
+										"name": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/0/productType/productGroup/name",
+											"required":true
+										}
+									}
+								},
+								"vat": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/productType/vat",
+									"required":true
+								}
+							}
+						},
+						"sizeGroupEntry": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/sizeGroupEntry",
+							"required":false,
+							"properties":{
+								"articleTypeId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/sizeGroupEntry/articleTypeId",
+									"required":false
+								},
+								"groupName": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/sizeGroupEntry/groupName",
+									"required":false
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/sizeGroupEntry/id",
+									"required":false
+								}
+							}
+						},
+						"sizeRepresentationUrl": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/sizeRepresentationUrl",
+							"required":false
+						},
+						"styleGroups": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/0/styleGroups",
+							"required":true
+						},
+						"styleType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/styleType",
+							"required":true
+						},
+						"subCatagory": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/subCatagory",
+							"required":true,
+							"properties":{
+								"filterOrder": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/subCatagory/filterOrder",
+									"required":true
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/subCatagory/id",
+									"required":true
+								},
+								"isActive": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/subCatagory/isActive",
+									"required":true
+								},
+								"isSocialSharingEnabled": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/subCatagory/isSocialSharingEnabled",
+									"required":true
+								},
+								"typeCode": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/subCatagory/typeCode",
+									"required":true
+								},
+								"typeName": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/subCatagory/typeName",
+									"required":true
+								}
+							}
+						},
+						"taxation": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/taxation",
+							"required":true,
+							"properties":{
+								"taxPercentage": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/taxation/taxPercentage",
+									"required":true
+								}
+							}
+						},
+						"title": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/title",
+							"required":true
+						},
+						"variantName": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/variantName",
+							"required":true
+						},
+						"visualTags": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/visualTags",
+							"required":true
+						}
+					}
+				}
+			]
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

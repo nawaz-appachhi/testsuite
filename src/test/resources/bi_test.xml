@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="bi_suite" verbose="1"  data-provider-thread-count="1">
+<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="lms_test_refresh" >
+	<!--  	<groups>
+			<run>
+				<include name="TempGroup" />
+			</run>
+		</groups>-->
+		<classes>
+			<class name="com.myntra.apiTests.analytics.AnalyticsTest"/>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes>
+	</test>
+</suite>

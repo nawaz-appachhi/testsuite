@@ -1,0 +1,78 @@
+{
+	"piSkuResponse": {
+		"success": true,
+		"data": {
+			"piSku": [
+				{
+					"row": 2,
+					"qty": "${0}",
+					"mrp": "999",
+					"discount": null,
+					"moq": "",
+					"marginType": "NOT",
+					"trendType": "Core",
+					"agreedMargin": "35",
+					"estimatedDeliveryDate": "2016-04-22",
+					"poSku": [
+						{
+							"price": "1536.735808",
+							"warehouse": {
+								"name": "Bangalore - New Whitefield W/H"
+							},
+							"taxAmount": "30.73471616",
+							"totalQty": "${0}",
+							"mrp": "999",
+							"landedPrice": "1567.47",
+							"sellingVatPercentage": "379.279476",
+							"discount": "1048.25",
+							"taxRate": "2",
+							"taxType": "CST",
+							"estimatedDeliveryDate": "2016-04-22"
+						},
+						{
+							"price": "1451.56",
+							"warehouse": {
+								"name": "Gurgaon-Binola W/H"
+							},
+							"taxAmount": "190.52",
+							"totalQty": "${0}",
+							"mrp": "999",
+							"landedPrice": "1642.08",
+							"sellingVatPercentage": "13.13",
+							"discount": "50.23",
+							"taxRate": "13.13",
+							"taxType": "VAT",
+							"estimatedDeliveryDate": "2016-04-22"
+						},
+						{
+							"price": "1451.56",
+							"warehouse": {
+								"name": "Myntra warehouse ( Mumbai )"
+							},
+							"taxAmount": "190.52",
+							"totalQty": "${0}",
+							"mrp": "999",
+							"landedPrice": "1642.08",
+							"sellingVatPercentage": "13.13",
+							"discount": "50.23",
+							"taxRate": "13.13",
+							"taxType": "VAT",
+							"estimatedDeliveryDate": "2019-04-22"
+						}
+					],
+					"sku": {
+						"id": ${1}
+					},
+					"searchParams": {
+						"code": "${2}",
+						"vendorArticleNo": "${3}",
+						"size": "${4}",
+						"vendorArticleName": "${5}",
+						"gtin": null,
+						"row": 2
+					}
+				}
+			]
+		}
+	}
+}

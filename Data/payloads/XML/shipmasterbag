@@ -1,0 +1,7 @@
+<shipmentResponse>
+    <data>
+        <shipment>
+            <id>${0}</id>
+        </shipment>
+    </data>
+</shipmentResponse>

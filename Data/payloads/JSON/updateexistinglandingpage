@@ -1,0 +1,7 @@
+{
+"id":"${0}",
+"pageUrl":"${1}",
+"parameterizedPageId":"${2}",
+"altText":"${3}",
+"isAutoSuggest":"${4}"
+}

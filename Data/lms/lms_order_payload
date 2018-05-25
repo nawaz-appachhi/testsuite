@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orderResponse>
+   <data>
+       <order>
+           <version>0</version>
+           <orderId>{<orderId>}</orderId>
+           <title>Mr.</title>
+           <firstName>Rahim</firstName>
+           <lastName>Ram</lastName>
+           <address>Agara Lake</address>
+           <city>Bangalore</city>
+           <state>KA</state>
+           <country>India</country>
+           <zipcode>560011</zipcode>
+           <mobile>9999999999</mobile>
+           <email>ram.rahim@myntra.com</email>
+           <trackingNumber>{<trackingNumber>}</trackingNumber>
+           <cod>false</cod>
+           <codAmount>0.0</codAmount>
+           <status>PK</status>
+           <shipmentType>DL</shipmentType>
+           <warehouseId>1</warehouseId>
+           <courierOperator>{<courierOperator>}</courierOperator>
+            <packedOn>{<packedon>}T01:45:00+05:30</packedOn>
+           <locality>HSR</locality>
+           <shippingMethod>{<shippingMethod>}</shippingMethod>
+           <govtTaxAmount>10.5</govtTaxAmount>
+           <total>1000.0</total>
+           <promiseDate>2016-01-12T17:30:00+05:30</promiseDate>
+           <storeId>1</storeId>
+           <itemDescription>Badminton Racquet</itemDescription>
+           <expectedDeliveryCenterId>1</expectedDeliveryCenterId>
+           <isCardPaymentEnabled>false</isCardPaymentEnabled>
+       </order>
+   </data>
+</orderResponse>

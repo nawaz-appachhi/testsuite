@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AddressServiceV2TestSuite" verbose="1">
+    <parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="AddressServiceV2"/>
+    <parameter name="type" value="Regression"/>
+    <test name="AddressServiceV2">
+        <classes>
+            <class name="com.myntra.apiTests.portalservices.addressServiceV2.AddressServiceV2Test" />
+            <class name="com.myntra.apiTests.portalservices.addressServiceV2.AddressServiceConcurrencyTest" />
+        </classes>
+    </test>
+</suite>

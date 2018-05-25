@@ -1,0 +1,7 @@
+{
+  "sellerFinanceInformation": {
+    "accountId": "${0}",
+    "enabled": "${1}",
+    "sellerEntry": { "id": "${2}" }
+  }
+}

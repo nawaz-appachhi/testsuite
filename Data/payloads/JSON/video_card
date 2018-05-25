@@ -1,0 +1,27 @@
+ {
+      "appId": 2,
+      "refId": "videoobj_${0}",
+      "type": "video",
+      "title": "Day to Night Makeup Tutorial",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=DdCvK01qwAM",
+      "imageUrl": "http://assets.myntassets.com/assets/images/2015/10/6/11444110362621-eye.jpg",
+      "extraData": "{\"aspectRatio\":\"251:167\"}",
+      "topics": [
+        {
+          "name": "fashion",
+          "type": "theme"
+        },
+        {
+          "name": "hrx",
+          "type": "brand"
+        },
+        {
+          "name": "bottomwear",
+          "type": "articletype"
+        }
+      ],
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

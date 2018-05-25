@@ -1,0 +1,15 @@
+{  
+   "blockInventoryRequest":{  
+      "storeId":"1",
+      "data":{  
+         "blockInventory":[  
+            {  
+               "sellerId":"1",
+               "skuId":"${0}",
+               "supplyType":"ON_HAND",
+               "quantity":"${1}"
+            }
+         ]
+      }
+   }
+}

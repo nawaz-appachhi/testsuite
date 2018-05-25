@@ -1,0 +1,13 @@
+{
+    "fromState": "RPU",
+    "toState": "RRC",
+    "orderId": "${0}",
+    "returnId": "${1}",
+    "returnLineId": "${2}",
+    "returnReasonId": "${3}",
+    "itembarcode": "${4}",
+    "trackingNumber": "${5}",
+    "courierService": "${6}",
+    "createdBy": "rms_s",
+    "warehouseId": "${7}"
+}

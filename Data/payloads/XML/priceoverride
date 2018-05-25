@@ -1,0 +1,6 @@
+<priceOverrideEntry>
+    <lineId>${0}</lineId>
+    <newUnitPrice>${1}</newUnitPrice>
+    <userLogin>${2}</userLogin>
+    <comment>${3}</comment>
+</priceOverrideEntry>

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RDS" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="RDSServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.rds.RDSServiceTest" />
+		</classes>
+	</test>
+</suite>

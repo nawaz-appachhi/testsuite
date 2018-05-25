@@ -1,0 +1,5 @@
+{
+  "groupName": "${0}",
+  "offset": ${1},
+  "rowsPerpage": ${2}
+}

@@ -1,0 +1,15 @@
+{
+            "LocationGroup": {
+                "createdBy": "${0}",
+                 
+                "description": "${1}",
+                "locationGroupMapList": {
+                     
+                    "city": "${2}",
+                    "country": "${3}",
+                    "region": "${4}"
+                },
+                "title": "${5}",
+                "type": "${6}"
+            }
+}

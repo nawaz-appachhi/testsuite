@@ -1,0 +1,26 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "article",
+	"title": "Still in love with these?",
+	"description": "Don't let it get away.",
+	"url": "http://www.myntra.com/cart",
+	"imageUrl": "http://assets.myntassets.com/h_240,q_100,w_180/v1/image/style/properties/916996/RANGMANCH-BY-PANTALOONS-Women-Kurtas_1_086ca36b57a50e83e1adf99453fc55c0.jpg",
+
+    "extraData": "{\"aspectRatio\":\"1:1\",  \"quote\" : \"article quote\" }",
+
+	"topics": [
+        {
+          "id": 3806,
+          "name": "casual",
+          "type": "occasion",
+          "displayName": "casual",
+          "followEnabled": true
+        }
+      ],
+	"productRack": "{\"productIds\":[\"339187\",\"209125\",\"288501\"]}",
+	"isPrivate": false,
+	"createAction": "published",
+	"enabled": true,
+	"isSpam": false
+}

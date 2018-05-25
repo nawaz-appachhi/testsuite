@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PartnerPortalServices" verbose="1">
+    <parameter name="team" value="InBound"/>
+	<parameter name="core" value="PartnerExp"/>
+	<parameter name="type" value="Regression"/> 
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="PartnerPortalTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.PartnerPortalService" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.VendorStockMovement" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.PartnerPortalSeller" />
+		</classes>
+	</test>
+</suite>

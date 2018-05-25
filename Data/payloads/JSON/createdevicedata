@@ -1,0 +1,33 @@
+{  
+   "OSVersion":"Android 4.4.2 (API 19) Build/KOT49H",
+   "accountsLoggedInFrom":[  
+      "${0}"
+   ],
+   "appBuildNumber":110068,
+   "appIdentifier":"com.myntra.android",
+   "appName":"Myntra",
+   "appVersion":"2.6.0-QA",
+   "userId":"${0}",
+   "deviceAccounts":[  
+      "aravind.referral.automation06@myntra.com"
+   ],
+   "deviceBuildNumber":"t03gxx",
+   "deviceId":"${1}",
+   "deviceManufacturer":"samsung",
+   "deviceName":"samsung GT-N7100",
+   "deviceScreenResolution":"720x1280",
+   "deviceTimeZone":"Asia/Kolkata",
+   "deviceToken":"APA91bGZhWlrVwshMtzttBaLDRs8IZqme1B7KngDG9KdDYpwNa7oSZ134TQS2A4Bzc8-Fu-voD8nakVWcuozsxX695ledYDLbKcFmzks4m5JNAhgOJvT4HghhhL7uSju2hV6X0pZ2JYf",
+   "userAgentString":"Mozilla/5.0 (Linux; Android 4.4.2; GT-N7100 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36; MyntraRetailAndroid/2.6.0-QA (Phone, 320dpi); MyntraAndroid/2.6.0-QA (Phone, 320dpi); DEVICE_ID\u003d630608424646626",
+   "deviceType":"android",
+   "gcmSenderId":"815179539363",
+   "imei":${2},
+   "isRooted":${3},
+   "limitAdTracking":false,
+   "notificationsDisabled":false,
+   "preBurn":false,
+   "pushType":"gcm",
+   "updatedAt":0,
+   "deviceTokenLastModified":1442911534346,
+   "createdAt":0
+}

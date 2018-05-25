@@ -1,0 +1,11 @@
+{
+  "sellerTurnoverIncentivePercentageSlabEntry": {
+    "createdBy": "erpadmin",
+    "createdOn": "2015-07-27T17:04:02+05:30",
+    "id": "6",
+    "lastModifiedOn": "2015-07-27T17:04:02+05:30",
+    "bottomRange": "${0}",
+    "percentage": "${1}",
+    "topRange": "${2}"
+  }
+}

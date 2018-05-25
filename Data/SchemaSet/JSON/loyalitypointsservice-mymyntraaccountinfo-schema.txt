@@ -1,0 +1,220 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"loyaltyPointsTransactionHistoryConsolidated": {
+			"type":"array",
+			"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated",
+			"required":true,
+			"items":
+				{
+				"type":"object",
+				"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0",
+				"required":true,
+				"properties":{
+					"accountType": {
+						"type":"string",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/accountType",
+						"required":true
+					},
+					"balance": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/balance",
+						"required":true
+					},
+					"businesProcess": {
+						"type":"string",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/businesProcess",
+						"required":true
+					},
+					"creditInflow": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/creditInflow",
+						"required":true
+					},
+					"creditOutflow": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/creditOutflow",
+						"required":true
+					},
+					"description": {
+						"type":"string",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/description",
+						"required":true
+					},
+					"itemId": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/itemId",
+						"required":true
+					},
+					"itemType": {
+						"type":"string",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/itemType",
+						"required":true
+					},
+					"loyaltyPointsAccountId": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/loyaltyPointsAccountId",
+						"required":true
+					},
+					"modifiedBy": {
+						"type":"string",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/modifiedBy",
+						"required":true
+					},
+					"modifiedOn": {
+						"type":"number",
+						"id": "http://jsonschema.net/loyaltyPointsTransactionHistoryConsolidated/0/modifiedOn",
+						"required":true
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"tierInfo": {
+			"type":"object",
+			"id": "http://jsonschema.net/tierInfo",
+			"required":true,
+			"properties":{
+				"loyaltyPointsUserAwardFactor": {
+					"type":"number",
+					"id": "http://jsonschema.net/tierInfo/loyaltyPointsUserAwardFactor",
+					"required":true
+				},
+				"presentTierNumber": {
+					"type":"number",
+					"id": "http://jsonschema.net/tierInfo/presentTierNumber",
+					"required":true
+				},
+				"tierSlabsInfo": {
+					"type":"array",
+					"id": "http://jsonschema.net/tierInfo/tierSlabsInfo",
+					"required":true,
+					"items":
+						{
+						"type":"object",
+						"id": "http://jsonschema.net/tierInfo/tierSlabsInfo/0",
+						"required":true,
+						"properties":{
+							"loyaltyPointsUserAwardFactor": {
+								"type":"number",
+								"id": "http://jsonschema.net/tierInfo/tierSlabsInfo/0/loyaltyPointsUserAwardFactor",
+								"required":true
+							},
+							"minPurchaseValue": {
+								"type":"number",
+								"id": "http://jsonschema.net/tierInfo/tierSlabsInfo/0/minPurchaseValue",
+								"required":true
+							},
+							"tierMessage": {
+								"type":"string",
+								"id": "http://jsonschema.net/tierInfo/tierSlabsInfo/0/tierMessage",
+								"required":true
+							},
+							"tierNumber": {
+								"type":"number",
+								"id": "http://jsonschema.net/tierInfo/tierSlabsInfo/0/tierNumber",
+								"required":true
+							}
+						}
+					}
+				},
+				"validUpto": {
+					"type":"number",
+					"id": "http://jsonschema.net/tierInfo/validUpto",
+					"required":true
+				}
+			}
+		},
+		"userAccountInfo": {
+			"type":"object",
+			"id": "http://jsonschema.net/userAccountInfo",
+			"required":true,
+			"properties":{
+				"activePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/activePointsBalance",
+					"required":true
+				},
+				"awardFactor": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/awardFactor",
+					"required":true
+				},
+				"cashEqualantAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/cashEqualantAmount",
+					"required":true
+				},
+				"conversionFactor": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/conversionFactor",
+					"required":true
+				},
+				"inActivePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/inActivePointsBalance",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/userAccountInfo/login",
+					"required":true
+				},
+				"tNcAccepted": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/userAccountInfo/tNcAccepted",
+					"required":true
+				},
+				"thresholdForUsage": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/thresholdForUsage",
+					"required":true
+				},
+				"tier": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/tier",
+					"required":true
+				},
+				"usableActivePointsCashEqualantAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/usableActivePointsCashEqualantAmount",
+					"required":true
+				},
+				"usableActivePoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountInfo/usableActivePoints",
+					"required":true
+				}
+			}
+		}
+	}
+}

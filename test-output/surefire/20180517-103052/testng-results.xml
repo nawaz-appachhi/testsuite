@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATSSuite" duration-ms="1267" started-at="2018-05-17T10:31:38Z" finished-at="2018-05-17T10:31:39Z">
+    <groups>
+      <group name="appachhi">
+        <method signature="TestATSAPISV2.testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- appachhi -->
+      <group name="Regression">
+        <method signature="TestATSAPISV2.testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- Regression -->
+      <group name="testreportcheck">
+        <method signature="TestATSAPISV2.testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- testreportcheck -->
+      <group name="v1">
+        <method signature="TestATSAPISV2.testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- v1 -->
+      <group name="v2">
+        <method signature="TestATSAPISV2.testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- v2 -->
+    </groups>
+    <test name="ATSServiceTest" duration-ms="1267" started-at="2018-05-17T10:31:38Z" finished-at="2018-05-17T10:31:39Z">
+      <class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="setup" is-config="true" duration-ms="1074" started-at="2018-05-17T16:01:37Z" finished-at="2018-05-17T16:01:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7cf283e1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="555" started-at="2018-05-17T16:01:38Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a6 hermes drome near kailash super market vimannagar puneviman nagar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="43" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Webenza India Pvt Ltd #207 Regent Prime Whitefield main road]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="114" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="56" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, Cachar, Assam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="121" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="62" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[somedummy Address]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="48" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[inland container depot icd ppg ghazipur new delhi-110096ghazipur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="53" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HCB Road]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="44" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ma suman plazabhagalpur central jail]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+        <test-method status="PASS" signature="testAddressScoreAPIValidatation(java.lang.String, java.lang.Boolean, java.lang.Boolean)[pri:1, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@8576fa0]" name="testAddressScoreAPIValidatation" duration-ms="114" started-at="2018-05-17T16:01:39Z" data-provider="ats_AddressScoreVerify" finished-at="2018-05-17T16:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ram nagar colony khair road aligarh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddressScoreAPIValidatation -->
+      </class> <!-- com.myntra.apiTests.portalservices.atsService.TestATSAPISV2 -->
+    </test> <!-- ATSServiceTest -->
+  </suite> <!-- ATSSuite -->
+</testng-results>

@@ -1,0 +1,5 @@
+Warehouse Id, Destination Pincode, Courier Code, TAT Time In Hours, Service Type, Shipping Cutoff
+1,100000,BD,72,NORMAL,00:00:00
+1,100000,ML,72,NORMAL,00:00:00
+1,412114,ML,72,NORMAL,00:00:00
+2,412114,ML,72,NORMAL,00:00:00

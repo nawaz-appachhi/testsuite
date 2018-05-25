@@ -1,0 +1,7 @@
+{
+  "login" : "${0}", 
+  "accountId":"${1}", 
+  "client":"${2}",
+  "version":"${3}",
+  "signature":"${4}"
+}

@@ -1,0 +1,32 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "video",
+	"title": "Testing Video Card",
+	"description": "Validating rules for Video card",
+	"url": "https://www.youtube.com/watch?v=XKbiIahG6okkkdcmnklnknckmcklmc",
+	"imageUrl": "http://assets.myntassets.com/v1/image/style/properties/777272/Lomdmflkdmcmmxklsmdklmsksflkaummlmis-Philippe-Menfgsgfgsdhfgdsk-Formal-Shoes-mc,mv,cxblack_1_2c8da54fdc92ae82bd4a8da6e1d46618.jpg",
+    "extraData": "{\"aspectRatio\":\"251:167\"}",
+    "author":"${2}",
+	"topics": [
+        {
+          "id": 260,
+          "name": "hrx",
+          "type": "brand",
+          "displayName": "Hrx",
+          "followEnabled": true
+        },
+        {
+          "id": 1675,
+          "name": "dresses",
+          "type": "articletype",
+          "displayName": "Dresses",
+          "followEnabled": true
+        }
+      ],
+	"productRack":"{\"productIds\":[\"339187\",\"209125\",\"288501\"]}",
+	"isPrivate": false,
+	"createAction": "publish",
+	"enabled": true,
+	"isSpam": false
+}

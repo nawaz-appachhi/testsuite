@@ -1,0 +1,16 @@
+{
+  "topics": [
+        {
+          "name": "fashion",
+          "type": "theme"
+        },
+        {
+          "name": "hrx",
+          "type": "brand"
+        },
+        {
+          "name": "bottomwear",
+          "type": "articletype"
+        }
+      ]
+}

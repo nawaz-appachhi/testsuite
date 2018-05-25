@@ -1,0 +1,17 @@
+{
+   "name": "${0}",
+   "description": "${1}",
+   "dealType": ${2},
+   "startTime":${3},
+   "endTime":${4},
+   "visible": "${5}",
+   "state": ${6},
+   "discountPercent": ${7},
+   "bannerURL": "${8}",
+   "dealStyles": [{
+       "styleId":${9}           
+   }],
+   "dealChannels": [{          
+       "channelType": ${10}
+   }]  
+}

@@ -1,0 +1,10 @@
+
+ {
+  "styleObjects" :[{
+    "styleId": "${0}",
+    "brand":   "${1}",
+    "gender" : "${2}",
+    "articleType" : "${3}"
+  }
+  ]
+}

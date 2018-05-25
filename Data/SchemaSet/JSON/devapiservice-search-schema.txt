@@ -1,0 +1,237 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "id": "query"
+            },
+            "start": {
+              "type": "integer",
+              "id": "start"
+            },
+            "rows": {
+              "type": "integer",
+              "id": "rows"
+            },
+            "facetField": {
+              "type": "array",
+              "items": {},
+              "id": "facetField"
+            },
+            "pivotFacets": {
+              "type": "array",
+              "items": {},
+              "id": "pivotFacets"
+            },
+            "fq": {
+              "type": "array",
+              "items": {},
+              "id": "fq"
+            },
+            "sort": {
+              "type": "array",
+              "items": {},
+              "id": "sort"
+            },
+            "return_docs": {
+              "type": "boolean",
+              "id": "return_docs"
+            },
+            "colour_grouping": {
+              "type": "boolean",
+              "id": "colour_grouping"
+            },
+            "upsInfo": {
+              "type": "object",
+              "properties": {
+                "personalizationSortAlgoUsed": {
+                  "type": "string",
+                  "id": "personalizationSortAlgoUsed"
+                },
+                "numPersonalizedProductShown": {
+                  "type": "integer",
+                  "id": "numPersonalizedProductShown"
+                }
+              },
+              "id": "upsInfo"
+            },
+            "useCache": {
+              "type": "boolean",
+              "id": "useCache"
+            },
+            "flatshot": {
+              "type": "boolean",
+              "id": "flatshot"
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "id": "outOfStock"
+            },
+            "showInactiveStyles": {
+              "type": "boolean",
+              "id": "showInactiveStyles"
+            },
+            "facet": {
+              "type": "boolean",
+              "id": "facet"
+            }
+          },
+          "id": "search"
+        },
+        "synonymMap": {
+          "type": "object",
+          "properties": {},
+          "id": "synonymMap"
+        },
+        "queryType": {
+          "type": "array",
+          "items": {},
+          "id": "queryType"
+        },
+        "totalProductsCount": {
+          "type": "integer",
+          "id": "totalProductsCount"
+        },
+        "listGroup": {
+          "type": "string",
+          "id": "listGroup"
+        },
+        "searchMessage": {
+          "type": "string",
+          "id": "searchMessage"
+        },
+        "results": {
+          "type": "object",
+          "properties": {
+            "totalProductsCount": {
+              "type": "integer",
+              "id": "totalProductsCount"
+            },
+            "filters": {
+              "type": "array",
+              "items": {},
+              "id": "filters"
+            },
+            "products": {
+              "type": "array",
+              "items": {},
+              "id": "products"
+            }
+          },
+          "id": "results"
+        },
+        "seo": {
+          "type": "object",
+          "properties": {
+            "isNoIndexed": {
+              "type": "boolean",
+              "id": "isNoIndexed"
+            },
+            "isSynonym": {
+              "type": "boolean",
+              "id": "isSynonym"
+            },
+            "isOrSearch": {
+              "type": "boolean",
+              "id": "isOrSearch"
+            },
+            "isAndSearch": {
+              "type": "boolean",
+              "id": "isAndSearch"
+            },
+            "canonicalUri": {
+              "type": "string",
+              "id": "canonicalUri"
+            },
+            "uri": {
+              "type": "string",
+              "id": "uri"
+            },
+            "isParametrized": {
+              "type": "boolean",
+              "id": "isParametrized"
+            },
+            "pattern": {
+              "type": "string",
+              "id": "pattern"
+            },
+            "footerData": {
+              "type": "null",
+              "id": "footerData"
+            },
+            "dnsPrefetch": {
+              "type": "array",
+              "items": {},
+              "id": "dnsPrefetch"
+            },
+            "shortcutIcon": {
+              "type": "string",
+              "id": "shortcutIcon"
+            },
+            "gPublisher": {
+              "type": "string",
+              "id": "gPublisher"
+            },
+            "twitterCard": {
+              "type": "string",
+              "id": "twitterCard"
+            },
+            "twitterSite": {
+              "type": "string",
+              "id": "twitterSite"
+            },
+            "socialImage": {
+              "type": "string",
+              "id": "socialImage"
+            },
+            "fbAdmins": {
+              "type": "string",
+              "id": "fbAdmins"
+            },
+            "fbAppId": {
+              "type": "string",
+              "id": "fbAppId"
+            },
+            "ogType": {
+              "type": "string",
+              "id": "ogType"
+            },
+            "ogSiteName": {
+              "type": "string",
+              "id": "ogSiteName"
+            }
+          },
+          "id": "seo"
+        },
+        "styleRevenueAdjusted6": {
+          "type": "string",
+          "id": "styleRevenueAdjusted6"
+        },
+        "collectionEntries": {
+          "type": "array",
+          "items": {},
+          "id": "collectionEntries"
+        }
+      },
+      "id": "data"
+    }
+  },
+  "id": "/"
+}

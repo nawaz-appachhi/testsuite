@@ -1,0 +1,18 @@
+{
+	"description": [{
+		"type": "TEXT",
+		"value": "${0}"
+	}],
+	"duration": 86400000,
+	"isAnonymous": false,
+	"options": [{
+		"option": "A",
+		"${1}": "${2}"
+	}, {
+		"option": "B",
+		"${3}": "${4}"
+	}],
+	"pollType": "${5}",
+	"topics": [],
+	"type": "POLL"
+}

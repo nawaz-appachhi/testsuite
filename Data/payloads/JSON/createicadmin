@@ -1,0 +1,29 @@
+{
+  "data":{
+    "type":"Text",
+    "layoutType":"1*1",
+    "contenttype":"contenttype",
+    "isPublished":true,
+    "content":{
+      "body":"body-Video-Manu",
+      "title":"title-manu-video",
+      "theme":"theme",
+      "actionURL":"www.myntra.com",
+      "actionText":"Myntra Website",
+      "imgURL":"myntra.com/123.jpg",
+      "subtitle":"Que?",
+      "landingURL":"www.myntra.com/adidas",
+      "videoThumbnail":"myntra.com/234.jpg",
+      "videoURL":"https://www.youtube.com/watch?v=v9HIlXkl0bo"
+    }
+  },
+  "rules":{
+    "author":"${0}",
+    "fix":false,
+    "color":["${1}"],
+    "department":["${2}"],
+    "brand":["${3}"],
+    "articletype":["${4}"],
+    "mastercategory":["${5}"]
+  }
+}

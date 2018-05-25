@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "referrals": {
+          "id": "http://jsonschema.net/data/referrals",
+          "type": "array",
+          "items": []
+        },
+        "totalEarnings": {
+          "id": "http://jsonschema.net/data/totalEarnings",
+          "type": "integer"
+        },
+        "invitedBy": {
+          "id": "http://jsonschema.net/data/invitedBy",
+          "type": "array",
+          "items": []
+        },
+        "otpEnabled": {
+          "id": "http://jsonschema.net/data/otpEnabled",
+          "type": "boolean"
+        }
+      }
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    }
+  }
+}

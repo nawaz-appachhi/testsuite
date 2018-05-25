@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Environment>
+	<framework>
+		<paths>
+			<jsonpayloads>./Data/payloads/JSON/</jsonpayloads>
+			<xmlpayloads>./Data/payloads/XML/</xmlpayloads>
+			<urlencodedpayloads>./Data/payloads/URLENCODED/</urlencodedpayloads>
+		</paths>
+		<mailformatfolder>./Data/MailFormats/ </mailformatfolder>
+	</framework>
+	<name>play</name>
+	<urls>
+		<portal_home>http://spot.mynt.myntra.com</portal_home>
+		<page_relative_urls>
+			<url1>http://spot.mynt.myntra.com</url1>
+			<url2>http://spot.mynt.myntra.com</url2>
+		</page_relative_urls>
+	</urls>
+	<services>
+		<endpoints>
+			<endpoint core="play" servicename="oi"
+				baseurl="http://order-indent-play-service.myntra.com/myntra-order-indent-service"
+				port="" protocol="http" authenticationrequired="false" userid=""
+				password="" securitytoken="" />
+
+			<endpoint core="play" servicename="jobtracker"
+				baseurl="http://jobtracker-play-service.myntra.com" port=""
+				protocol="http" authenticationrequired="false" userid="" password=""
+				securitytoken="" />
+
+			<endpoint core="play" servicename="marvin"
+				baseurl="http://marvinapi-play.myntra.com/marvin/workspace/topsellerreplenishment"
+				port="" protocol="http" authenticationrequired="false" userid=""
+				password="" securitytoken="" />
+
+			<endpoint core="play" servicename="marvin_rconfig"
+				baseurl="http://marvinapi-play.myntra.com/marvin/replenishmentconfiguration"
+				port="" protocol="http" authenticationrequired="false" userid=""
+				password="" securitytoken="" />
+
+			<endpoint core="erp" servicename="marketplacevms"
+				baseurl="http://pp1vms.myntra.com/myntra-vms-service/vms" port=""
+				protocol="http" authenticationrequired="false" userid="" password=""
+				securitytoken="" />
+
+		</endpoints>
+
+	</services>
+
+</Environment>

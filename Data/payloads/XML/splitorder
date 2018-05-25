@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lineMovementEntry>
+    <releaseId>${0}</releaseId>
+    <action>SPLIT_ORDER</action>
+    <warehouseId>${1}</warehouseId>
+    <userLogin>abhijit.pati@myntra.com</userLogin>
+    <courierCode>${2}</courierCode>
+    <linesToBeMoved>
+        <id>${3}</id>
+        <quantity>${4}</quantity>
+    </linesToBeMoved>
+</lineMovementEntry>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LGA-Lists-TestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		
+	</listeners>
+	<test name="LGA_Lists_Tests">
+		<groups>
+			<run>
+				<include name="ExhaustiveRegression" />
+				<include name="SchemaValidation"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.LGAListsAPITests" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,41 @@
+{ 
+    "transactionId": "${0}",
+    "batchId": "${1}",
+    "creditEntryList":[
+        {
+            "login": "${2}",
+            "points": "${3}",
+            "expiryDate": "${4}",
+            "description": "Testing loyalty",
+            "businessProcess": "PROMOTION"
+        },
+        {
+            "login": "${2}",
+            "points": "${5}",
+            "expiryDate": "${6}",
+            "description": "Testing loyalty",
+            "businessProcess": "PROMOTION"
+        },
+        {
+            "login": "${2}",
+            "points": "${7}",
+            "expiryDate": "${8}",
+            "description": "Testing loyalty",
+            "businessProcess": "PROMOTION"
+        },
+        {
+            "login": "${2}",
+            "points": "${3}",
+            "expiryDate": "${4}",
+            "description": "Testing loyalty",
+            "businessProcess": "PROMOTION"
+         },
+         {
+          "login": "${2}",
+          "points": "${3}",
+          "expiryDate": "${4}",
+          "description": "Testing loyalty",
+          "businessProcess": "PROMOTION"
+         }
+        ]
+}

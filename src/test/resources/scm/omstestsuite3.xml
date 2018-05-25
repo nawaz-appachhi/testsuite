@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OMSPPSSuite" verbose="1">
+	<parameter name="team" value="SCM" />
+	<parameter name="core" value="OMS" />
+	<parameter name="type" value="Regression" />
+	<listeners>
+		<!-- <listener class-name="com.myntra.lordoftherings.SCMRetryListner" /> -->
+		<!--  <listener class-name="com.myntra.lordoftherings.SCMTestListener" />-->
+	</listeners>
+
+	<test name="OMSPPSServiceTests">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.oms.Test.WHAssignmentServiceTest" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.SearchServiceTest" />			
+			<class name="com.myntra.apiTests.erpservices.oms.Test.ValidateIdempotencyOMSAction" />
+			<class name="com.myntra.apiTests.erpservices.oms.Test.AdditionalChargesSellerCancellationTests" />
+	
+			
+			<!--  Removing these testcases from Automation as either they are not running and getting executed
+			manually or have been moved to other classes-->
+			
+			<!--  <class name="com.myntra.qnotifications.EndToEndNotifications" /> -->
+			<!--  <class name="com.myntra.apiTests.erpservices.oms.Test.InvoiceForMultiSellerTest" /> -->
+			<!--  <class name="com.myntra.apiTests.erpservices.oms.Test.VatTests" /> -->
+			<!-- <class name="com.myntra.apiTests.erpservices.oms.Test.PriceOverrideServiceTest" Not used after LMC/> -->
+			<!-- <class name="com.myntra.apiTests.erpservices.oms.Test.MultiSellerTests" Moved testcases to consolidation/> -->
+			<!-- <class name="com.myntra.apiTests.erpservices.oms.Test.SplitOrderTest" /> Not used after LMC -->
+
+		</classes>
+	</test>
+</suite>

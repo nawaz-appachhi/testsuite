@@ -1,0 +1,66 @@
+{
+    "id": 10000242,
+    "createdBy": "RMS-SYSTEM",
+    "createdOn": "2015-09-03T06:29:09Z",
+    "lastModifiedOn": "2015-09-03T06:29:09Z",
+    "version": 0,
+    "orderId": 70017579,
+    "statusCode": "RRQP",
+    "returnMode": "PICKUP",
+    "comment": "test",
+    "login": "test_1@myntra.com",
+    "mobile": "1211111111",
+    "email": "gurushant.jidagi@myntra.com",
+    "customerName": "test_1@myntra.com",
+    "returnLineEntries": [
+        {
+            "id": 100000421,
+            "createdBy": "RMS-SYSTEM",
+            "createdOn": "2015-09-03T06:29:09Z",
+            "lastModifiedOn": "2015-09-03T06:29:09Z",
+            "version": 0,
+            "returnId": 10000242,
+            "orderId": 70017579,
+            "orderReleaseId": 70017579,
+            "orderLineId": 52663722,
+            "skuId": 1248182,
+            "optionId": 1247768,
+            "returnReasonId": 11,
+            "quantity": 1,
+            "statusCode": "RRQP",
+            "warehouseId": 1,
+            "supplyType": "ON_HAND",
+            "groupKey": "0",
+            "styleId": 372716,
+            "unitPrice": 2299,
+            "returnLineRefundDetailsEntry": {
+                "refundAmount": 2298.8,
+                "refunded": false
+            },
+            "returnLineTrackingDetailsEntry": {},
+            "returnLineAdditionalDetailsEntry": {
+                "version": 0
+            }
+        }
+    ],
+    "returnAddressDetailsEntry": {
+        "address": "test1,test3",
+        "city": "Bangalore",
+        "state": "KA",
+        "country": "India",
+        "zipcode": "560011"
+    },
+    "returnTrackingDetailsEntry": {
+        "courierCode": "[courierCode]"
+    },
+    "returnRefundDetailsEntry": {
+        "deliveryCredit": 0,
+        "pickupCharges": 100,
+        "refundAmount": 2298.8,
+        "refunded": false,
+        "refundMode": "CASHBACK"
+    },
+    "returnAdditionalDetailsEntry": {
+        "version": 0
+    }
+}

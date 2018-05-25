@@ -1,0 +1,13 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "banner",
+	"title": "/men-leather-jackets?sort=popularity",
+	"url": "/men-leather-jackets?sort=popularity",
+	"imageUrl": "http://assets.myntassets.com/v1/Trend-refresh-02_021445922499126_eq47qs.jpg",
+	"extraData": "{\"aspectRatio\":\"245:41\"}",
+	"isPrivate": false,
+	"createAction": "posted",
+	"enabled": true,
+	"isSpam": false
+}

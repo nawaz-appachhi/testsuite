@@ -1,0 +1,116 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"categories": {
+					"type":"array",
+					"id": "http://jsonschema.net/data/categories",
+					"required":true,
+					"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/categories/0",
+							"required":true,
+							"properties":{
+								"categories": {
+									"type":"array",
+									"id": "http://jsonschema.net/data/categories/0/categories",
+									"required":true,
+									"items":
+										{
+											"type":"object",
+											"id": "http://jsonschema.net/data/categories/0/categories/0",
+											"required":true,
+											"properties":{
+												"categories": {
+													"type":"array",
+													"id": "http://jsonschema.net/data/categories/0/categories/0/categories",
+													"required":true
+												},
+												"linkUrl": {
+													"type":"object",
+													"id": "http://jsonschema.net/data/categories/0/categories/0/linkUrl",
+													"required":true,
+													"properties":{
+														"resourceType": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/categories/0/categories/0/linkUrl/resourceType",
+															"required":true
+														},
+														"resourceValue": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/categories/0/categories/0/linkUrl/resourceValue",
+															"required":true
+														}
+													}
+												},
+												"name": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/categories/0/categories/0/name",
+													"required":true
+												}
+											}
+										}
+									
+
+								},
+								"linkUrl": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/categories/0/linkUrl",
+									"required":true,
+									"properties":{
+										"resourceType": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/categories/0/linkUrl/resourceType",
+											"required":true
+										},
+										"resourceValue": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/categories/0/linkUrl/resourceValue",
+											"required":true
+										}
+									}
+								},
+								"name": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/categories/0/name",
+									"required":true
+								}
+							}
+						}
+					
+
+				}
+			}
+		},
+		"meta": {
+			"type":"object",
+			"id": "http://jsonschema.net/meta",
+			"required":true,
+			"properties":{
+				"code": {
+					"type":"number",
+					"id": "http://jsonschema.net/meta/code",
+					"required":true
+				},
+				"requestId": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/requestId",
+					"required":true
+				}
+			}
+		},
+		"notification": {
+			"type":"object",
+			"id": "http://jsonschema.net/notification",
+			"required":true
+		}
+	}
+}

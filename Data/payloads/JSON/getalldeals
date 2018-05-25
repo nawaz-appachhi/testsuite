@@ -1,0 +1,6 @@
+{
+	"visible": ${0}, 
+	"dealType": ${1},
+	"state": ${2},
+	"channelType": ${3}
+}

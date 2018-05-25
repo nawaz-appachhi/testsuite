@@ -1,0 +1,9 @@
+{  
+   "groupname":"${0}",
+   "channel":"${1}",
+   "active":"D",
+   "groupType":"",
+   "lastEdited":${2},
+   "lastEditedBy":"engg.provider",
+   "applicableDevice":""
+}

@@ -1,0 +1,87 @@
+{
+    "size":0,
+    "aggs":{
+        "docs":{
+	   "filter": {
+       "bool": {
+         "must": [
+           {
+             "exists": {
+               "field": "styleAttributes"
+             }
+           },
+           {
+             "exists": {
+               "field": "skus"
+             }
+           },
+           {
+             "exists": {
+               "field": "vendor_info"
+             }
+           },
+           {
+             "exists": {
+               "field": "fdb_id"
+             }
+           },
+           {
+             "exists": {
+               "field": "demandForecast"
+             }
+           },
+           {
+             "exists": {
+               "field": "aggMetrics"
+             }
+           },
+           {
+             "exists": {
+               "field": "clusterInfo"
+             }
+           },
+           {
+             "exists": {
+               "field": "styleBreakDates"
+             }
+           },
+           {
+             "exists": {
+               "field": "timeseries"
+             }
+           },
+           {
+             "exists": {
+               "field": "productStreamMetrics"
+             }
+           },
+           {
+             "exists": {
+               "field": "productStreamTimeseries"
+             }
+           },
+           {
+             "exists": {
+               "field": "aggMetricsTimeseries.tsr"
+             }
+           },
+           {
+             "term": {
+               "styleAttributes.style_status": "p"
+             }
+           },
+           {
+             "terms": {
+               "styleAttributes.commercial_type": [
+                 "sor",
+                 "outright"
+               ]
+             }
+           }
+         ]
+       }
+     }
+   }
+ }
+}
+

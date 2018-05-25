@@ -1,0 +1,40 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true
+		},
+		"meta": {
+			"type":"object",
+			"id": "http://jsonschema.net/meta",
+			"required":true,
+			"properties":{
+				"code": {
+					"type":"number",
+					"id": "http://jsonschema.net/meta/code",
+					"required":true
+				},
+				"token": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/token",
+					"required":true
+				},
+				"xsrfToken": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/xsrfToken",
+					"required":true
+				}
+			}
+		},
+		"notification": {
+			"type":"object",
+			"id": "http://jsonschema.net/notification",
+			"required":true
+		}
+	}
+}

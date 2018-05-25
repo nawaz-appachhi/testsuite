@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SanityOfAllServicesTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListenerV2" />
+	</listeners>
+	<test name="SanityOfAllServicesTests">
+		<groups>
+			<run>
+				<include name="SanityonFox" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.SanityOfAllServices" />
+		</classes>
+	</test>
+</suite>

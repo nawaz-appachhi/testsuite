@@ -1,0 +1,50 @@
+{
+            "id": ${0},
+            "createdBy": "${1}",
+            "createdOn": 1373541928000,
+            "lastModifiedOn": 1373541928000,
+            "guid": "1",
+            "type": "${2}",
+            "assets": [
+                {
+                    "id": ${0},
+                    "createdBy": "${1}",
+                    "createdOn": 1369387255000,
+                    "lastModifiedOn": 1369387255000,
+                    "format": "jpeg",
+                    "path": "images/banners/1368202493-Style-Savings2_mini.jpg",
+                    "domain": "http://myntra.myntassets.com/",
+                    "securedDomain": "https://myntrawebimages.s3.amazonaws.com/",
+                    "identifyingType": "${3}",
+                    "storedUploaderType": "S3",
+                    "servingUploaderType": "S3",
+                    "isDynamicallyUploaded": false,
+                    "isCompressed": true,
+                    "attributes": {
+                        "name": "Style-Savings2",
+                        "path": "http://myntra.myntassets.com/images/banners/1368202493-Style-Savings2.jpg",
+                        "aspectRatio": "849:416"
+                    },
+                    "resolutions": {
+                        "849x416Xmini": {
+                            "domain": "http://myntra.myntassets.com/",
+                            "securedDomain": "https://myntrawebimages.s3.amazonaws.com/",
+                            "path": "images/banners/1368202493-Style-Savings2_mini_mini.jpg"
+                        },
+                        "849x416": {
+                            "domain": "http://myntra.myntassets.com/",
+                            "securedDomain": "https://myntrawebimages.s3.amazonaws.com/",
+                            "path": "images/banners/1368202493-Style-Savings2_mini.jpg"
+                        }
+                    }
+                }
+            ],
+            "attributes": {
+                "title": "Banner Image Title",
+                "asset": "1",
+                "description": "Banner Image Description"
+            },
+            "tags": [
+                ${4}
+            ]
+        }

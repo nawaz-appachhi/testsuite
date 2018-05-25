@@ -1,0 +1,7 @@
+<suite name="WMSInStockTest" data-provider-thread-count="10" >
+	<test name="WMSInStockTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.utility.WMSInStock" />
+		</classes>
+	</test>
+</suite>

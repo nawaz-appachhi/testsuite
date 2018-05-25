@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<po>
+    <poName></poName>
+    <vendor>
+        <id>${0}</id>
+    </vendor>
+    <warehouse>
+        <id>${1}</id>
+    </warehouse>
+    <createdBy>erpadmin</createdBy>
+    <createdOn></createdOn>
+    <description></description>
+    <eta></eta>
+    <requestDate>${2}</requestDate>
+    <enabled>0</enabled>
+    <jit>0</jit>
+    <poStatus>${3}</poStatus>
+    <updatedOn></updatedOn>
+    <id>${4}</id>
+    <taxInfo>
+        <id></id>
+    </taxInfo>
+    <approver>santwana.samantray@myntra.com</approver>
+    <toRecipients>subhadeep.saha@myntra.com</toRecipients>
+    <ccRecipients>commercial_team@myntra.com,shanmukappa.nayak@myntra.com</ccRecipients>
+    <shippingAddress>Khasra No. 14//6,7,13,14,15,17,18,23,24,25
+16//1,2,9,10,11
+12/1,17//3,4,5,6,7,8,11/2,12,13,14,15, Village Binola, Tehsil Manesar, Dist Gurgaon , Haryana.
+</shippingAddress>
+    <mailContent>Kind Attn: null null null null</mailContent>
+    <vendorContactPerson>null null null null</vendorContactPerson>
+    <vendorState></vendorState>
+    <vendorContactAddress>null
+null
+null
+null
+Ph 1:undefined
+Ph 2:null</vendorContactAddress>
+    <poType>SOR</poType>
+    <taxType>VAT</taxType>
+    <taxRate></taxRate>
+    <categoryManagerId>${5}</categoryManagerId>
+    <seasonId>137</seasonId>
+    <seasonYear>2016</seasonYear>
+    <estimatedShipmentDate>2019-04-22</estimatedShipmentDate>
+    <actualShipmentDate></actualShipmentDate>
+    <letterHeading>Vector E-Commerce Pvt Ltd</letterHeading>
+    <eoss>0</eoss>
+    <creditBasisAsOn></creditBasisAsOn>
+    <paymentTerms>CHEQUE</paymentTerms>
+    <stockOrigin>DOMESTIC</stockOrigin>
+    <brandType></brandType>
+    <isTermValidated></isTermValidated>
+    <poPrioritization></poPrioritization>
+    <piOrderType></piOrderType>
+    <workedBy></workedBy>
+    <piId></piId>
+    <piBarcode></piBarcode>
+    <approvee></approvee>
+    <stockCorrection>0</stockCorrection>
+    <samplePOs/>
+</po>
+

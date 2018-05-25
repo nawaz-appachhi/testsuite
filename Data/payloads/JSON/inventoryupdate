@@ -1,0 +1,8 @@
+{
+ "inventory": [
+    {
+       "skuCode": "${1}",
+       "inventoryCount": "${2}"
+     }
+  ]
+}

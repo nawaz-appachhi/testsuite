@@ -1,0 +1,5 @@
+{
+    "login": "${0}",
+    "isFakeEmail": ${1},
+    "reasonFakeEmail": "HIGH_RETURNS"
+}

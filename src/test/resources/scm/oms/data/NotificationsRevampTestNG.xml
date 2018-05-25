@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CRM Notifications Sanity Suite" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="CRM"/>
+	<parameter name="type" value="Sanity"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+	</listeners>
+	<test name="crmTests">
+		<!--<groups>-->
+			<!--<run>-->
+				<!--<include name="Sanity"/>-->
+			<!--</run>-->
+		<!--</groups>-->
+		<classes>
+			<class name="com.myntra.qnotifications.APItoPushNotifications_Updated">
+				<methods>
+					<include name="pushNotifications_withAllSetAsProd"/>
+					<include name="verificationForNoneEmail"/>
+					<include name="verificationForMyntraEmail"/>
+					<include name="verificationForAllEmail"/>
+					<include name="verifyidempotency"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

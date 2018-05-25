@@ -1,0 +1,32 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "post.styleupdate",
+	"title": "Style Update Card !!",
+	"description": "Enjoy your time out in the sun with the range from all about you.",
+	"url": "http://www.myntra.com/carlton-london?userQuery=true&s=acc&f=gender%3Amen%2520women%2Cwomen",
+	"imageUrl": "http://assets.myntassets.com/assets/images/2016/2/26/11456467033748-nn.jpg",
+    "extraData": "{\"aspectRatio\":\"251:167\"}",
+    "author":"${2}",
+	"topics": [
+        {
+          "id": 1746,
+          "name": "tops",
+          "type": "articletype",
+          "displayName": "Tops",
+          "followEnabled": true
+        },
+        {
+          "id": 3806,
+          "name": "casual",
+          "type": "occasion",
+          "displayName": "casual",
+          "followEnabled": true
+        }
+      ],
+	"productRack":"{\"productIds\":[\"339187\",\"209125\",\"288501\"]}",
+	"isPrivate": false,
+	"createAction": "publish",
+	"enabled": true,
+	"isSpam": false
+}

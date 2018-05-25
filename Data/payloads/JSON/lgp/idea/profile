@@ -1,0 +1,15 @@
+{
+    "appName":"${0}",
+    "uidx": "${1}",
+    "emailDetails": [
+        {
+            "email": "${2}"
+        }
+    ],
+    "phoneDetails": [
+        {
+            "phone": "${3}"
+        }
+    ]
+    
+}

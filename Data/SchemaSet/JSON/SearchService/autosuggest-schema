@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/statusCode"
+        },
+        "statusMessage": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusMessage"
+        },
+        "statusType": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusType"
+        },
+        "totalCount": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/totalCount"
+        }
+      },
+      "id": "http://jsonschema.net/status",
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    },
+    "data": {
+      "type": "array",
+      "items": {},
+      "id": "http://jsonschema.net/data"
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "status",
+    "data"
+  ]
+}

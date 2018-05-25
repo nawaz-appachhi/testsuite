@@ -1,0 +1,5 @@
+<expressChargesRefundEntry>
+    <releaseId>${0}</releaseId>
+    <userLogin>${1}</userLogin>
+    <comment>${2}</comment>
+</expressChargesRefundEntry>

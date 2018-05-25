@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "occasions": {
+          "id": "http://jsonschema.net/data/occasions",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/data/occasions/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/occasions/0/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/occasions/0/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/occasions/0/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/occasions/0/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/occasions/0/version",
+                  "type": "integer"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/data/occasions/0/description",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/occasions/1",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/occasions/1/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/occasions/1/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/occasions/1/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/occasions/1/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/occasions/1/version",
+                  "type": "integer"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/data/occasions/1/description",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/occasions/2",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/occasions/2/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/occasions/2/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/occasions/2/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/occasions/2/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/occasions/2/version",
+                  "type": "integer"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/data/occasions/2/description",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

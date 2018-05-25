@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shipment>
+    <originPremisesId>${0}</originPremisesId>
+    <originPremisesType>WH</originPremisesType>
+    <originCity>${1}</originCity>
+    <destinationPremisesId>${2}</destinationPremisesId>
+    <destinationPremisesType>DC</destinationPremisesType>
+    <destinationCity>${3}</destinationCity>
+    <capacity>20</capacity>
+    <status>NEW</status>
+    <createdBy>erpadmin</createdBy>
+</shipment>

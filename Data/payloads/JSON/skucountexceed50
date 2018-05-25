@@ -1,0 +1,28 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "should": [
+            {
+              "range": {
+                "aggMetrics.sku_count":{
+                     "gt": 50
+                }
+              }
+            }
+            
+          ],
+          "must": [
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

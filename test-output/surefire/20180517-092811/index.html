@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-ATSSuite">
+              <span class="suite-name border-passed">ATSSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-ATSSuite">
+                    <span>ATSServiceTestNG.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-ATSSuite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-ATSSuite">
+                    <span>4 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-ATSSuite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-ATSSuite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-ATSSuite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-ATSSuite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ATSSuite" class="hide-methods passed suite-ATSSuite"> (hide)</a> <!-- hide-methods passed suite-ATSSuite -->
+                      <a href="#" panel-name="suite-ATSSuite" class="show-methods passed suite-ATSSuite"> (show)</a> <!-- show-methods passed suite-ATSSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ATSSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, ...)">testAddressScoreAPIValidatation(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true)">testAddressScoreAPIValidatation(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true)">testAddressScoreAPIValidatation(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(HCB Road, false, false)">testAddressScoreAPIValidatation(HCB Road, false, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true)">testAddressScoreAPIValidatation(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true)">testAddressScoreAPIValidatation(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(ma suman plazabhagalpur central jail, false, false)">testAddressScoreAPIValidatation(ma suman plazabhagalpur central jail, false, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true)">testAddressScoreAPIValidatation(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(ram nagar colony khair road aligarh, false, true)">testAddressScoreAPIValidatation(ram nagar colony khair road aligarh, false, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATSSuite" title="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" hash-for-method="testAddressScoreAPIValidatation(somedummy Address, false, false)">testAddressScoreAPIValidatation(somedummy Address, false, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ATSSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-ATSSuite" class="panel ATSSuite">
+          <div class="suite-ATSSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.myntra.apiTests.portalservices.atsService.TestATSAPISV2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, ...)">
+                  </a> <!-- testAddressScoreAPIValidatation(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, ...) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, Cachar, Assam, true, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(HCB Road, false, false)">
+                  </a> <!-- testAddressScoreAPIValidatation(HCB Road, false, false) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(HCB Road, false, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(ma suman plazabhagalpur central jail, false, false)">
+                  </a> <!-- testAddressScoreAPIValidatation(ma suman plazabhagalpur central jail, false, false) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(ma suman plazabhagalpur central jail, false, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(ram nagar colony khair road aligarh, false, true)">
+                  </a> <!-- testAddressScoreAPIValidatation(ram nagar colony khair road aligarh, false, true) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(ram nagar colony khair road aligarh, false, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressScoreAPIValidatation(somedummy Address, false, false)">
+                  </a> <!-- testAddressScoreAPIValidatation(somedummy Address, false, false) -->
+                  <span class="method-name">testAddressScoreAPIValidatation</span>
+                  <span class="parameters">(somedummy Address, false, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ATSSuite-class-passed -->
+        </div> <!-- panel ATSSuite -->
+        <div panel-name="test-xml-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/src/test/resources/ats/ATSServiceTestNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;ATSSuite&quot;&gt;
+  &lt;parameter name=&quot;ServiceName&quot; value=&quot;ATS&quot;/&gt;
+  &lt;parameter name=&quot;team&quot; value=&quot;StoreFront&quot;/&gt;
+  &lt;parameter name=&quot;type&quot; value=&quot;Regression&quot;/&gt;
+  &lt;test name=&quot;ATSServiceTest&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;testreportcheck&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.myntra.apiTests.portalservices.atsService.TestATSAPISV2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ATSServiceTest --&gt;
+&lt;/suite&gt; &lt;!-- ATSSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ATSSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">ATSServiceTest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ATSSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddressScoreAPIValidatation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">testreportcheck</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddressScoreAPIValidatation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">v1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddressScoreAPIValidatation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">v2</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testAddressScoreAPIValidatation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ATSSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ATSSuite');
+function tableData_ATSSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testAddressScoreAPIValidatation')
+data.setCell(0, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(0, 3, 939);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddressScoreAPIValidatation')
+data.setCell(1, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(1, 3, 149);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testAddressScoreAPIValidatation')
+data.setCell(2, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(2, 3, 128);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testAddressScoreAPIValidatation')
+data.setCell(3, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(3, 3, 117);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testAddressScoreAPIValidatation')
+data.setCell(4, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(4, 3, 110);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testAddressScoreAPIValidatation')
+data.setCell(5, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(5, 3, 101);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testAddressScoreAPIValidatation')
+data.setCell(6, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(6, 3, 101);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testAddressScoreAPIValidatation')
+data.setCell(7, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(7, 3, 99);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testAddressScoreAPIValidatation')
+data.setCell(8, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(8, 3, 90);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testAddressScoreAPIValidatation')
+data.setCell(9, 2, 'com.myntra.apiTests.portalservices.atsService.TestATSAPISV2')
+data.setCell(9, 3, 73);
+window.suiteTableData['ATSSuite']= { tableData: data, tableDiv: 'times-div-ATSSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <div id="times-div-ATSSuite">
+              </div> <!-- times-div-ATSSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ATSSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">31 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.myntra.apiTests.portalservices.atsService.TestATSAPISV2</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testSetandGetATSUserDetailsVerification</span>
+                <br/>
+                <span class="ignored-method-name">testGetOpenOrdersValueWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testGetBlockedCustomerByPhoneWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testAddressScoreWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testIsCustomerBlockedWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testGetLinkedAccbyDeviceWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetBlockedCustomerByPhone</span>
+                <br/>
+                <span class="ignored-method-name">testPutLinkedAccbyPhoneWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetLinkedDevice</span>
+                <br/>
+                <span class="ignored-method-name">testSetandGetATSUserOpenOrdersValue</span>
+                <br/>
+                <span class="ignored-method-name">testPutCustomerBlockedWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetLinkedPhone</span>
+                <br/>
+                <span class="ignored-method-name">testGetLinkedAccbyEmailWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetBlockedCustomerByLogin</span>
+                <br/>
+                <span class="ignored-method-name">testGetLinkedAccbyPhoneWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPostandGetOutstandingCODLimit</span>
+                <br/>
+                <span class="ignored-method-name">testGetATSDetailsWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testGetBlockedCustomerByDeviceIDWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutFakeEmailWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetLinkedEmail</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetFakeEmailDetails</span>
+                <br/>
+                <span class="ignored-method-name">testGetFakeEmailWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPostATSDetailsWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testGetReturnAbuserWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testGetBlockedCustomerByLoginWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetBlockedCustomerByDevice</span>
+                <br/>
+                <span class="ignored-method-name">testPutOpenOrdersValueWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetReturnAbuserDetails</span>
+                <br/>
+                <span class="ignored-method-name">testPutReturnAbuserWithoutClientID</span>
+                <br/>
+                <span class="ignored-method-name">testPutandGetIsCustomerBlocked</span>
+                <br/>
+                <span class="ignored-method-name">testGetOutstandingCODLimitWithoutClientID</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ATSSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myntra.apiTests.portalservices.atsService.TestATSAPISV2</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setup(org.testng.TestRunner@7cf283e1)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(a6 hermes drome near kailash super market vimannagar puneviman nagar, true, true)</span>
+                <span class="method-start">1650 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(Webenza India Pvt Ltd #207 Regent Prime Whitefield main road, true, true)</span>
+                <span class="method-start">2590 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(Myntra, Flat 123,Near Kudlu Gate,Bommanhalli, 560068, true, true)</span>
+                <span class="method-start">2663 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(C/O-Shri Sushil Kumar Sinha, Doordarshan Staff Qtr, Qtr no-C-V/V, Chandmari road, Tarapur, Silchar, ...)</span>
+                <span class="method-start">2763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(Kalpana chawla block(b block),Ladies hostel,VIT university,Vellore,Pin-632014, true, true)</span>
+                <span class="method-start">2865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(somedummy Address, false, false)</span>
+                <span class="method-start">2993 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(inland container depot icd ppg ghazipur new delhi-110096ghazipur, false, true)</span>
+                <span class="method-start">3111 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(HCB Road, false, false)</span>
+                <span class="method-start">3222 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(ma suman plazabhagalpur central jail, false, false)</span>
+                <span class="method-start">3324 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddressScoreAPIValidatation(ram nagar colony khair road aligarh, false, true)</span>
+                <span class="method-start">3414 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

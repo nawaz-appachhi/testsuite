@@ -1,0 +1,10 @@
+{
+    "returnLineId": "${0}",
+    "fromState": "RRC",
+    "returnId": "${1}",
+    "orderId": "${2}",
+    "itembarcode": "${3}",
+    "createdBy": "rms_s",
+    "toState": "RQP",
+    "quality": "${4}"
+}

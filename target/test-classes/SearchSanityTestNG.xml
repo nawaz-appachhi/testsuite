@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SearchSanityTestSuite" verbose="1" parallel="classes" thread-count="2">
+		<parameter name="team" value="Storefront"/>
+		<parameter name="core" value="SearchRegression"/>
+		<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />	
+	</listeners>
+	<test name="SanityOfSearchServices">
+		<groups>
+			<run>
+				<include name="SearchSanity" />
+				<include name="SearchRegression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.SearchServiceTests" />
+		</classes>
+	</test>
+</suite>

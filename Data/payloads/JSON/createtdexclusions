@@ -1,0 +1,20 @@
+{
+           "startDate": ${0},
+           "endDate": ${1},
+           "criterias": {
+               "brands": [],
+               "styleIds": [${2}],
+               "articleTypes": [],
+               "categories": [],
+               "categoryManagers": [],
+               "subCategories": [],
+               "seasonCodes": [],
+               "genders": [],
+               "merchandiseTypes": [
+                   "OUTRIGHT"
+               ],
+               "mrpRanges": [],
+               "name": "to test im",
+               "description": "d3"
+           }
+       }

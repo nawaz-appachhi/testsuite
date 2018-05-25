@@ -1,0 +1,73 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"abTestName": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/abTestName",
+						"required":true
+					},
+					"cookieValue": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/cookieValue",
+						"required":true
+					},
+					"segmentValue": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/segmentValue",
+						"required":true
+					}
+				}
+			}
+		},
+		"gaCall": {
+			"type":"string",
+			"id": "http://jsonschema.net/gaCall",
+			"required":true
+		},
+		"mab": {
+			"type":"string",
+			"id": "http://jsonschema.net/mab",
+			"required":true
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+    "name":"Discount Service Testing",
+    "description":"Testing Portal Discount Service - Do not edit",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":false,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"admin",
+    "discountRules":[
+    {
+        "type":"8",
+        "percent":"0",
+        "amount":"${2}",
+        "id":"",
+        "discountFreeItems":[],
+        "buyCount":"0",
+        "buyAmount":"${3}",
+        "placeHolderText":"Helix Items"
+    }],
+    "discountStyles":[
+    {
+        "id":"",
+        "styleId":"${4}",
+        "discountId":null
+    }],
+    "discountFilters":[
+    {
+        "brand":"helix"
+    }],
+    "onCart":false,
+    "discountFunding":"marketing",
+    "fundingPercentage":"12",
+    "fundingTax":"0",
+    "fundingBasis":"MRP",
+    "discountLimit":"23"
+}

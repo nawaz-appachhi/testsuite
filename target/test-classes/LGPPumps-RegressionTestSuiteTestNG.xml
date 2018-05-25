@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LGPPumpsRegressionTestSuite" verbose="1">
+    <parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="LGP Pump Suite"/>
+    <parameter name="type" value="Exhaustive Regression etc"/>
+
+	<test name="LGPPumpsRegressionTests">
+		<groups>
+			<run>
+				<include name="Sanity" />
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<!--<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsObjectTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsActionTests" />-->
+
+
+			<!--<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.HotListTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.StreamSanityTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.LGPFeedFlowTest" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.StreamFlowTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.OnBoardingTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.TimeLineTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.LgpUserTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpservices.LgpActionsTest" />
+
+			<class name="com.myntra.apiTests.portalservices.lgpservices.CampaignSystemTests"/>-->
+
+			<class name="com.myntra.apiTests.portalservices.lgpservices.SNSTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsObjectTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsActionTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsTagsTest" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsUserTests" />
+
+			<!--<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsObjectTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsActionTests" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsTagsTest" />
+			<class name="com.myntra.apiTests.portalservices.lgpServicesOnDemand.PumpsUserTests" />-->
+
+
+		</classes>
+		<!-- <packages>
+		     <package name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+              <package name="com.myntra.apiTests.test.regression.lgpservices" />
+         </packages>-->
+	</test>
+</suite>

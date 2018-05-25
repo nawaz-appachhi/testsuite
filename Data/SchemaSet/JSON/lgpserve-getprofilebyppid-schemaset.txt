@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "firstname": {
+      "id": "http://jsonschema.net/firstname",
+      "type": "string"
+    },
+    "lastname": {
+      "id": "http://jsonschema.net/lastname",
+      "type": "null"
+    },
+    "bio": {
+      "id": "http://jsonschema.net/bio",
+      "type": "null"
+    },
+    "imageJsonEntryMap": {
+      "id": "http://jsonschema.net/imageJsonEntryMap",
+      "type": "null"
+    },
+    "image": {
+      "id": "http://jsonschema.net/image",
+      "type": "null"
+    },
+    "imageType": {
+      "id": "http://jsonschema.net/imageType",
+      "type": "null"
+    },
+    "coverImage": {
+      "id": "http://jsonschema.net/coverImage",
+      "type": "null"
+    },
+    "coverImageType": {
+      "id": "http://jsonschema.net/coverImageType",
+      "type": "null"
+    },
+    "publicProfileId": {
+      "id": "http://jsonschema.net/publicProfileId",
+      "type": "string"
+    },
+    "uidx": {
+      "id": "http://jsonschema.net/uidx",
+      "type": "string"
+    },
+    "tagsMap": {
+      "id": "http://jsonschema.net/tagsMap",
+      "type": "null"
+    },
+    "counts": {
+      "id": "http://jsonschema.net/counts",
+      "type": "object",
+      "properties": {}
+    },
+    "relations": {
+      "id": "http://jsonschema.net/relations",
+      "type": "object",
+      "properties": {
+        "following": {
+          "id": "http://jsonschema.net/relations/following",
+          "type": "boolean"
+        },
+        "follower": {
+          "id": "http://jsonschema.net/relations/follower",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

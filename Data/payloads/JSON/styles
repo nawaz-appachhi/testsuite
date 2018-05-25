@@ -1,0 +1,4 @@
+{
+ "styles":["81349","99257"],
+ "fields":["styleid","global_attr_master_category_facet","global_attr_sub_category_facet","global_attr_article_type_facet"]
+}

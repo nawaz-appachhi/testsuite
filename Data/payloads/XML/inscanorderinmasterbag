@@ -1,0 +1,7 @@
+<shipment>
+    <id>${0}</id>
+    <orderShipmentAssociationEntries>
+        <shipmentId>${0}</shipmentId>
+        <orderId>${1}</orderId>
+    </orderShipmentAssociationEntries>
+</shipment>

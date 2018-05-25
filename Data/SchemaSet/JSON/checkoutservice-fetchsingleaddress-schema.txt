@@ -1,0 +1,123 @@
+{
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required": true,
+	"type": "object" ,
+	"properties": {
+	"data" : {
+		"id": "http://jsonschema.net/data",
+		"required": true,
+		"type": "array" ,
+		"items":
+		{
+			"id": "http://jsonschema.net/data/0",
+			"required": true,
+			"type": "object" ,
+			"properties": {
+				"address" : {
+					"id": "http://jsonschema.net/data/0/address",
+					"required": true,
+					"type": "string"
+				},
+				"city" : {
+					"id": "http://jsonschema.net/data/0/city",
+					"required": true,
+					"type": "string"
+				},
+				"countryCode" : {
+					"id": "http://jsonschema.net/data/0/countryCode",
+					"required": true,
+					"type": "string"
+				},
+				"countryName" : {
+					"id": "http://jsonschema.net/data/0/countryName",
+					"required": true,
+					"type": "string"
+				},
+				"defaultAddress" : {
+					"id": "http://jsonschema.net/data/0/defaultAddress",
+					"required": true,
+					"type": "boolean"
+				},
+				"email" : {
+					"id": "http://jsonschema.net/data/0/email",
+					"required": true,
+					"type": "string"
+				},
+				"id" : {
+					"id": "http://jsonschema.net/data/0/id",
+					"required": true,
+					"type": "number"
+				},
+				"locality" : {
+					"id": "http://jsonschema.net/data/0/locality",
+					"required": true,
+					"type": "string"
+				},
+				"mobile" : {
+					"id": "http://jsonschema.net/data/0/mobile",
+					"required": true,
+					"type": "string"
+				},
+				"name" : {
+					"id": "http://jsonschema.net/data/0/name",
+					"required": true,
+					"type": "string"
+				},
+				"pincode" : {
+					"id": "http://jsonschema.net/data/0/pincode",
+					"required": true,
+					"type": "string"
+				},
+				"stateCode" : {
+					"id": "http://jsonschema.net/data/0/stateCode",
+					"required": true,
+					"type": "string"
+				},
+				"stateName" : {
+					"id": "http://jsonschema.net/data/0/stateName",
+					"required": true,
+					"type": "string"
+				},
+				"userId" : {
+				"id": "http://jsonschema.net/data/0/userId",
+				"required": true,
+				"type": "string"
+				}
+			}
+		}
+	},
+	"status" : {
+		"id": "http://jsonschema.net/status",
+		"required": true,
+		"type": "object" ,
+		"properties": {
+			"statusCode" : {
+				"id": "http://jsonschema.net/status/statusCode",
+				"required": true,
+				"type": "number"
+			},
+			"statusMessage" : {
+				"id": "http://jsonschema.net/status/statusMessage",
+				"required": true,
+				"type": "string"
+			},
+			"statusType" : {
+				"id": "http://jsonschema.net/status/statusType",
+				"required": true,
+				"type": "string"
+			},
+			"totalCount" : {
+				"id": "http://jsonschema.net/status/totalCount",
+				"required": true,
+				"type": "number"
+			}
+		}
+	},
+	"xsrfToken" : {
+		"id": "http://jsonschema.net/xsrfToken",
+		"required": true,
+		"type": "string"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+    "id": ${0},
+    "createdOn": "1412750631000",
+    "name": "${1}",
+    "discountId": null,
+    "description": "${2}",
+    "dealType": ${3},
+    "startTime": ${4},
+    "endTime": ${5},
+    "discountPercent": ${6},
+    "visible": ${7},
+    "state": ${8},
+    "bannerURL": "${9}"
+}

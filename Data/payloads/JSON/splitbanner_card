@@ -1,0 +1,19 @@
+{
+     "appId": 2,
+     "refId": "splitbannerobj_${0}",
+     "type": "split-banner",
+     "title": "",
+     "description": "",
+     "url": "",
+     "imageUrl": "http://assets.myntassets.com/v1/Storewidgets_Footwear1445968361175_wwxbqo.jpg,http://assets.myntassets.com/v1/Storewidgets_runnning1445968442578_jfjdeb.jpg",
+     "extraData": "{\"children\":[\"2:2b33009a-ebad-410e-91b5-1b545469521b\",\"2:b42cadc1-8200-4ea1-b8e4-54823726f525\"]}",
+     "topics": [
+       {
+         "name": "sale",
+         "type": "theme"
+       }
+     ],
+     "isPrivate": false,
+     "author" : "${1}",
+     "createAction" : "posted"
+   }

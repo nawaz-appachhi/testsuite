@@ -1,0 +1,13 @@
+ {
+      "appId": 7,
+      "refId": "pollobj_${0}",
+      "type": "POLL",
+      "title": "Asked by MyntraApp Test Team",
+      "description": "I need first one olive sandle I like very much my size 6. But its out of stock. :( I want this please)",
+      "url": "/forum/poll/1398",
+      "imageUrl": "",
+      "extraData": "{\"products\":\"893365,539735\",\"collections\":null,\"pollType\":\"PRODUCTS\",\"expiresOn\":1450527929000,\"createdOn\":1450268729000,\"identifiers\":[{\"type\":\"POLL\",\"id\"}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

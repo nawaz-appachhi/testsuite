@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "http://jsonschema.net/meta/code"
+        }
+      },
+      "id": "http://jsonschema.net/meta",
+      "required": [
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "serviceable": {
+          "type": "boolean",
+          "id": "http://jsonschema.net/data/serviceable"
+        },
+        "pincode": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/pincode"
+        },
+        "codLimits": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/codLimits"
+        },
+        "paymentModes": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/paymentModes"
+        },
+        "options": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/options"
+        }
+      },
+      "id": "http://jsonschema.net/data",
+      "required": [
+        "serviceable",
+        "pincode",
+        "codLimits",
+        "paymentModes",
+        "options"
+      ]
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "meta",
+    "data"
+  ]
+}

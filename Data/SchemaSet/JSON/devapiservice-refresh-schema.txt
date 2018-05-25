@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        },
+        "token": {
+          "id": "http://jsonschema.net/meta/token",
+          "type": "string"
+        },
+        "xsrfToken": {
+          "id": "http://jsonschema.net/meta/xsrfToken",
+          "type": "string"
+        }
+      }
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "login": {
+          "id": "http://jsonschema.net/data/login",
+          "type": "string"
+        },
+        "usertype": {
+          "id": "http://jsonschema.net/data/usertype",
+          "type": "string"
+        },
+        "email": {
+          "id": "http://jsonschema.net/data/email",
+          "type": "string"
+        },
+        "mobile": {
+          "id": "http://jsonschema.net/data/mobile",
+          "type": "string"
+        },
+        "status": {
+          "id": "http://jsonschema.net/data/status",
+          "type": "string"
+        },
+        "lastlogin": {
+          "id": "http://jsonschema.net/data/lastlogin",
+          "type": "integer"
+        },
+        "firstlogin": {
+          "id": "http://jsonschema.net/data/firstlogin",
+          "type": "integer"
+        },
+        "gender": {
+          "id": "http://jsonschema.net/data/gender",
+          "type": "string"
+        },
+        "uidx": {
+          "id": "http://jsonschema.net/data/uidx",
+          "type": "string"
+        },
+        "new_": {
+          "id": "http://jsonschema.net/data/new_",
+          "type": "boolean"
+        },
+        "profile": {
+          "id": "http://jsonschema.net/data/profile",
+          "type": "object",
+          "properties": {
+            "counts": {
+              "id": "http://jsonschema.net/data/profile/counts",
+              "type": "object",
+              "properties": {
+                "followers": {
+                  "id": "http://jsonschema.net/data/profile/counts/followers",
+                  "type": "integer"
+                }
+              }
+            },
+            "firstname": {
+              "id": "http://jsonschema.net/data/profile/firstname",
+              "type": "null"
+            },
+            "lastname": {
+              "id": "http://jsonschema.net/data/profile/lastname",
+              "type": "null"
+            },
+            "bio": {
+              "id": "http://jsonschema.net/data/profile/bio",
+              "type": "null"
+            },
+            "imageJsonEntryMap": {
+              "id": "http://jsonschema.net/data/profile/imageJsonEntryMap",
+              "type": "null"
+            },
+            "image": {
+              "id": "http://jsonschema.net/data/profile/image",
+              "type": "null"
+            },
+            "imageType": {
+              "id": "http://jsonschema.net/data/profile/imageType",
+              "type": "null"
+            },
+            "coverImage": {
+              "id": "http://jsonschema.net/data/profile/coverImage",
+              "type": "null"
+            },
+            "coverImageType": {
+              "id": "http://jsonschema.net/data/profile/coverImageType",
+              "type": "null"
+            },
+            "publicProfileId": {
+              "id": "http://jsonschema.net/data/profile/publicProfileId",
+              "type": "string"
+            },
+            "uidx": {
+              "id": "http://jsonschema.net/data/profile/uidx",
+              "type": "string"
+            },
+            "tagsMap": {
+              "id": "http://jsonschema.net/data/profile/tagsMap",
+              "type": "string"
+            },
+            "gender": {
+              "id": "http://jsonschema.net/data/profile/gender",
+              "type": "string"
+            },
+            "location": {
+              "id": "http://jsonschema.net/data/profile/location",
+              "type": "null"
+            },
+            "dob": {
+              "id": "http://jsonschema.net/data/profile/dob",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

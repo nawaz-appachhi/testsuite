@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "checksum": {
+      "type": "string",
+      "default": "4d35de50c77dac43db5b3ee99caec4854f447afb",
+      "id": "http://jsonschema.net/checksum"
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "ppsTransactionID": {
+          "type": "string",
+          "default": "fitav",
+          "id": "http://jsonschema.net/params/ppsTransactionID"
+        },
+        "clientTransactionID": {
+          "type": "string",
+          "default": "13798236",
+          "id": "http://jsonschema.net/params/clientTransactionID"
+        },
+        "ppsID": {
+          "type": "string",
+          "default": "2828",
+          "id": "http://jsonschema.net/params/ppsID"
+        },
+        "orderId": {
+          "type": "string",
+          "default": "2828",
+          "id": "http://jsonschema.net/params/orderId"
+        },
+        "duplicate": {
+          "type": "boolean",
+          "default": false,
+          "id": "http://jsonschema.net/params/duplicate"
+        },
+        "amount": {
+          "type": "integer",
+          "default": 500,
+          "id": "http://jsonschema.net/params/amount"
+        },
+        "ppsType": {
+          "type": "string",
+          "default": "ORDER",
+          "id": "http://jsonschema.net/params/ppsType"
+        },
+        "ppsActionType": {
+          "type": "string",
+          "default": "SALE",
+          "id": "http://jsonschema.net/params/ppsActionType"
+        },
+        "instrumentActionType": {
+          "type": "string",
+          "default": "DEBIT",
+          "id": "http://jsonschema.net/params/instrumentActionType"
+        },
+        "customerID": {
+          "type": "string",
+          "default": "f91bd8ea.450c.41d8.b125.16485ce78e2fx56OptRg1x",
+          "id": "http://jsonschema.net/params/customerID"
+        },
+        "txStatus": {
+          "type": "string",
+          "default": "TX_SUCCESS",
+          "id": "http://jsonschema.net/params/txStatus"
+        }
+      },
+      "id": "http://jsonschema.net/params",
+      "required": [
+        "ppsTransactionID",
+        "clientTransactionID",
+        "ppsID",
+        "orderId",
+        "duplicate",
+        "amount",
+        "ppsType",
+        "ppsActionType",
+        "instrumentActionType",
+        "customerID",
+        "txStatus"
+      ]
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "checksum",
+    "params"
+  ]
+}

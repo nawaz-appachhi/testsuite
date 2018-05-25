@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ABTestServiceTestSuite" verbose="1">
+	<parameter name="team" value="StoreFront"/>
+    <parameter name="core" value="WalletService"/>
+    <parameter name="type" value="PPSide"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="WalletService">
+		<groups>
+			<run>
+				<include name="PPSide" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.pricingpromotionservices.WalletService" />
+		</classes>
+	</test>
+</suite>

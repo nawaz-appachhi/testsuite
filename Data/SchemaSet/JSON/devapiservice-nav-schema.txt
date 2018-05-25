@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "categories": {
+          "id": "http://jsonschema.net/data/categories",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/data/categories/6",
+            "type": "object",
+            "properties": {
+              "categories": {
+                "id": "http://jsonschema.net/data/categories/6/categories",
+                "type": "array",
+                "items": {}
+              },
+              "linkUrl": {
+                "id": "http://jsonschema.net/data/categories/6/linkUrl",
+                "type": "object",
+                "properties": {
+                  "resourceType": {
+                    "id": "http://jsonschema.net/data/categories/6/linkUrl/resourceType",
+                    "type": "string"
+                  },
+                  "resourceValue": {
+                    "id": "http://jsonschema.net/data/categories/6/linkUrl/resourceValue",
+                    "type": "string"
+                  }
+                }
+              },
+              "name": {
+                "id": "http://jsonschema.net/data/categories/6/name",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

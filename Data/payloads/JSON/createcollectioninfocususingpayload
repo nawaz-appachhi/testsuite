@@ -1,0 +1,26 @@
+{
+	"startDate" : ${0},
+	"endDate" : ${1},
+	"boost" : "${2}",
+	"criterias" : {
+		"brands" : [ ],
+		"styleIds" : [ ${3}],
+		"articleTypes" : [ ],
+		"categories" : [ ],
+		"categoryManagers" : [ ],
+		"subCategories" : [ ],
+		"seasonCodes" : [ ],
+		"genders" : [ ],
+		"merchandiseTypes" : [
+			"OUTRIGHT"
+		],
+		"mrpRanges" : [
+			{
+				"minMrp" : "0",
+				"maxMrp" : "100000"
+			}
+		],
+		"name" : "${4}",
+		"description" : "${5}"
+	}
+}

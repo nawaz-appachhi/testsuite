@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string",
+          "id": "token"
+        },
+        "xsrfToken": {
+          "type": "string",
+          "id": "xsrfToken"
+        },
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta"
+    },
+    "notification": {
+      "type": "object",
+      "properties": {},
+      "id": "notification"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "wishListID": {
+          "type": "string",
+          "id": "wishListID"
+        },
+        "login": {
+          "type": "string",
+          "id": "login"
+        },
+        "totalWishlistCount": {
+          "type": "integer",
+          "id": "totalWishlistCount"
+        },
+        "wishListItemEntries": {
+          "type": "array",
+          "items": {},
+          "id": "wishListItemEntries"
+        }
+      },
+      "id": "data"
+    }
+  },
+  "id": "/"
+}

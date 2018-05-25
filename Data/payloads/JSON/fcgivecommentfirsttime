@@ -1,0 +1,7 @@
+{
+ "user":{
+   "name":"${0}"
+  },
+ "description":"${1}",
+ "OutfitId":"${2}"
+}

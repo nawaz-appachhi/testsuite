@@ -1,0 +1,13 @@
+ {
+      "appId": 2,
+      "refId": "bannerobj_${0}",
+      "type": "banner",
+      "title": "",
+      "description": "",
+      "url": "/contemporary-necklaces-trend?f=price%3A249%2C999",
+      "imageUrl": "http://myntra.myntassets.com/assets/banners/home/04/11/2015/hf/women-shine-on.jpg",
+      "extraData": "{\"aspectRatio\":\"80:111\"}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

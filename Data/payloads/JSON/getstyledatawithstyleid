@@ -1,0 +1,4 @@
+{
+"style_id": ["123456"],
+"fields": ["cluster", "attrs", "gender", "article_type", "revLast15"]
+}

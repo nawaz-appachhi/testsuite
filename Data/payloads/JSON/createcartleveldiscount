@@ -1,0 +1,34 @@
+{
+    "name":"Sample Cart",
+    "description":"Sample Cart",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":false,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"admin",
+    "discountRules":[
+    {
+        "type":8,
+        "percent":"${3}",
+        "amount":"0",
+        "id":"",
+        "discountFreeItems":[],
+        "buyCount":"0",
+        "buyAmount":"${2}",
+        "placeHolderText":"Items"
+    }],
+    "discountStyles":[],
+    "discountFilters":[
+    {
+        "brand":"${4}"
+    },{
+        "brand":"${5}"
+    }],
+    "onCart":true,
+    "discountFunding":"vendor-EOSS",
+    "fundingPercentage":"50",
+    "fundingTax":"1",
+    "fundingBasis":"discount",
+    "discountLimit":"100"
+}

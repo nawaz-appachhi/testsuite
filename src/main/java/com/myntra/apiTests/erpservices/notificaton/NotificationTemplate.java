@@ -1,0 +1,19 @@
+package com.myntra.apiTests.erpservices.notificaton;
+
+/**
+ * Created by abhijit.pati on 12/06/16.
+ */
+public enum NotificationTemplate {
+    ORDERCORFIRMATION,
+    ORDERSHIPPED,
+    ORDERSHIPPEDCOD,
+    ORDEROUTFORDELIVERY,
+    ORDERDELIVERED,
+    RETURNEDCREATED,
+    EXCHANGECONFIRMED,
+    EXCHANGESHIPPED,
+    EXCHNAGEOUTFOREXCHANGE,
+    ORDERDISPATCHED,
+    RETURNCOMPLETED,
+    QUEUECORFIRMATION;
+}

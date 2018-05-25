@@ -1,0 +1,5 @@
+{
+"pageUrl":"${0}",
+"parameterizedPageId":"${1}",
+"altText":"${2}"
+}

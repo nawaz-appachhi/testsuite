@@ -1,0 +1,10 @@
+{  
+   "groupname":"${0}",
+   "channel":"${1}",
+   "timeCreated":${2},
+   "creator":"engg.provider",
+   "groupType":"",
+   "active":"A",
+   "count":0,
+   "applicableDevice":""
+}

@@ -1,0 +1,42 @@
+{
+    "name":"Sample Discount",
+    "description":"Sample Discount",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":false,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"admin",
+    "discountRules":[
+    {
+        "type":"4",
+        "buyCount":"0",
+        "buyAmount":"${2}",
+        "placeHolderText":"Helix Items",
+        "count":1,
+        "id":"",
+        "discountFreeItems":[
+        {
+            "id":"",
+            "groupId":1,
+            "itemId":"${3}",
+            "type":"1","isActive":1
+        }]
+    }],
+    "discountStyles":[
+    {
+        "id":"",
+        "styleId":"${4}",
+        "discountId":null
+    }],
+    "discountFilters":[
+    {
+        "brand":"helix"
+    }],
+    "onCart":false,
+    "discountFunding":"category",
+    "fundingPercentage":"12",
+    "fundingTax":"0",
+    "fundingBasis":"MRP",
+    "discountLimit":"23"
+}

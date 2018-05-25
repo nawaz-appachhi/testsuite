@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<orderCreationRequest>
+    <cart>${0}</cart>
+    <ppsId>${1}</ppsId>
+    <login>${2}</login>
+    <sessionId>${3}</sessionId>
+    <binNumber>${4}</binNumber>
+    <pgDiscount>${5}</pgDiscount>
+    <emiCharge>${6}</emiCharge>
+    <address>${7}</address>
+    <clientContext>${8}</clientContext>
+    <cartContext>${9}</cartContext>
+    <paymentMethod>${10}</paymentMethod>
+</orderCreationRequest>

@@ -1,0 +1,18 @@
+	{
+	    "totalStyles":"${0}",
+	    "endDate":"${1}",
+	    "stylesFilter" :{
+	        
+	        "actions":["${2}"],
+	        "merchandiseTypes": [],
+	        "businessUnits": [{"id": "${3}","name": "${4}"}],
+	        "brands":[],
+	        "discountFundings":["${5}","${6}","${7}"],
+	        "seasons":[{"id":"${8}", "name":"${9}"}],
+	        
+	        "ageRange":{
+	              "minAge":"${10}",
+	              "maxAge":"${11}"
+	        }
+	    }
+	}

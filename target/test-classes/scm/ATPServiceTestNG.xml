@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ATP" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	
+	<!--<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>-->
+	<test name="ATPServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.atp.Test.ATPServiceTests" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,272 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"properties":{
+				"apply_category_once": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/apply_category_once",
+					"required":false
+				},
+				"apply_product_once": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/apply_product_once",
+					"required":false
+				},
+				"categoryIds": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/categoryIds",
+					"required":false
+				},
+				"categoryid": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/categoryid",
+					"required":false
+				},
+				"code": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/code",
+					"required":false
+				},
+				"comments": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/comments",
+					"required":false
+				},
+				"couponType": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/couponType",
+					"required":false
+				},
+				"coupon_type": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/coupon_type",
+					"required":false
+				},
+				"description": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/description",
+					"required":false
+				},
+				"discountOffered": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/discountOffered",
+					"required":false
+				},
+				"discount": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/discount",
+					"required":false
+				},
+				"excludeCategoryIds": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/excludeCategoryIds",
+					"required":false
+				},
+				"excludeProductTypeIds": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/excludeProductTypeIds",
+					"required":false
+				},
+				"excludeSKUs": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/excludeSKUs",
+					"required":false
+				},
+				"excludeStyleIds": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/excludeStyleIds",
+					"required":false
+				},
+				"excludeUsers": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/excludeUsers",
+					"required":false
+				},
+				"expire": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/expire",
+					"required":false
+				},
+				"freeShipping": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/freeShipping",
+					"required":false
+				},
+				"freeship": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/freeship",
+					"required":false
+				},
+				"groupName": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/groupName",
+					"required":false
+				},
+				"isInfinitePerUser": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/data/isInfinitePerUser",
+					"required":false
+				},
+				"isInfinite": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/data/isInfinite",
+					"required":false
+				},
+				"maxAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/maxAmount",
+					"required":false
+				},
+				"maxUsageByUser": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/maxUsageByUser",
+					"required":false
+				},
+				"maxUsagePerCart": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/maxUsagePerCart",
+					"required":false
+				},
+				"max_count": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/max_count",
+					"required":false
+				},
+				"maximum": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/maximum",
+					"required":false
+				},
+				"min_count": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/min_count",
+					"required":false
+				},
+				"minimum": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/minimum",
+					"required":false
+				},
+				"mrpAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/mrpAmount",
+					"required":false
+				},
+				"mrpPercentage": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/mrpPercentage",
+					"required":false
+				},
+				"per_user": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/per_user",
+					"required":false
+				},
+				"productid": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/productid",
+					"required":false
+				},
+				"provider": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/provider",
+					"required":false
+				},
+				"recursive": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/recursive",
+					"required":false
+				},
+				"showInMyMyntra": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/data/showInMyMyntra",
+					"required":false
+				},
+				"skus": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/skus",
+					"required":false
+				},
+				"startdate": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/startdate",
+					"required":false
+				},
+				"status": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/status",
+					"required":false
+				},
+				"styleIds": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/styleIds",
+					"required":false
+				},
+				"subtotal": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/subtotal",
+					"required":false
+				},
+				"timeCreated": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/timeCreated",
+					"required":false
+				},
+				"times_locked": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/times_locked",
+					"required":false
+				},
+				"times_used": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/times_used",
+					"required":false
+				},
+				"times": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/times",
+					"required":false
+				},
+				"users": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/users",
+					"required":false
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

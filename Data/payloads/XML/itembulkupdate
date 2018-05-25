@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemResponse>
+   <data>
+      <item>
+         <id>${0}</id>
+         <itemStatus>${1}</itemStatus>
+         <orderId>0</orderId>
+         <quality>${2}</quality>
+      </item>
+   </data>
+</itemResponse>

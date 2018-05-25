@@ -1,0 +1,17 @@
+{
+    "styleList": [
+        {
+            "articleType": "",
+            "styleId": ${0},
+            "brand": "",
+            "category": "",
+            "categoryManager": "",
+            "subCategory": "",
+            "merchandiseType": "OUTRIGHT",
+            "seasonCode": "",
+            "gender": "",
+            "maximumRetailPrice": "1000"
+        }
+        
+      ]
+}

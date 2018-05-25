@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "message": {
+          "id": "http://jsonschema.net/data/message",
+          "type": "string"
+        },
+        "numberOfCoupons": {
+          "id": "http://jsonschema.net/data/numberOfCoupons",
+          "type": "integer"
+        }
+      }
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

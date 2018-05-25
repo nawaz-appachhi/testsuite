@@ -1,0 +1,12 @@
+{
+  "vendorBrandResponse": {
+    "data": {
+      "vendorBrand": {
+        "brandId": "${0}",
+        "brandName": "${1}",
+        "enabled": "${2}",
+        "vendor": {"id": "${3}"}
+      }
+    }
+  }
+}

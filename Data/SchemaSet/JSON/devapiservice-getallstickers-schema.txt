@@ -1,0 +1,557 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "stickers": {
+          "id": "http://jsonschema.net/data/stickers",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/data/stickers/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/0/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/0/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/0/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/0/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/0/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/0/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/0/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/0/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/0/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/1",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/1/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/1/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/1/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/1/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/1/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/1/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/1/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/1/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/1/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/2",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/2/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/2/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/2/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/2/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/2/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/2/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/2/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/2/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/2/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/3",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/3/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/3/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/3/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/3/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/3/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/3/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/3/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/3/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/3/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/4",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/4/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/4/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/4/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/4/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/4/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/4/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/4/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/4/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/4/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/5",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/5/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/5/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/5/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/5/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/5/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/5/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/5/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/5/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/5/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/6",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/6/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/6/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/6/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/6/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/6/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/6/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/6/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/6/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/6/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/7",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/7/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/7/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/7/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/7/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/7/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/7/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/7/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/7/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/7/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/8",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/8/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/8/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/8/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/8/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/8/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/8/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/8/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/8/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/8/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/9",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/9/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/9/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/9/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/9/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/9/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/9/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/9/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/9/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/9/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/10",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/10/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/10/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/10/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/10/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/10/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/10/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/10/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/10/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/10/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/stickers/11",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/stickers/11/id",
+                  "type": "integer"
+                },
+                "createdBy": {
+                  "id": "http://jsonschema.net/data/stickers/11/createdBy",
+                  "type": "string"
+                },
+                "createdOn": {
+                  "id": "http://jsonschema.net/data/stickers/11/createdOn",
+                  "type": "integer"
+                },
+                "lastModifiedOn": {
+                  "id": "http://jsonschema.net/data/stickers/11/lastModifiedOn",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/stickers/11/version",
+                  "type": "integer"
+                },
+                "damsImageId": {
+                  "id": "http://jsonschema.net/data/stickers/11/damsImageId",
+                  "type": "string"
+                },
+                "damImage": {
+                  "id": "http://jsonschema.net/data/stickers/11/damImage",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http://jsonschema.net/data/stickers/11/damImage/id",
+                      "type": "string"
+                    },
+                    "url": {
+                      "id": "http://jsonschema.net/data/stickers/11/damImage/url",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

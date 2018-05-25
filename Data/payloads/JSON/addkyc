@@ -1,0 +1,14 @@
+{
+  "partnerKYCDocumentResponse": {
+    "data": {
+      "partnerKYCDocument": {
+        "documentType": "${0}",
+        "documnetNumebr": "${1}",
+        "documnetRefId": "${2}",
+        "enabled": "${3}",
+        "entityId": "${4}",
+        "partnerType": "${5}"
+      }
+    }
+  }
+}

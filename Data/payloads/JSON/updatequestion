@@ -1,0 +1,38 @@
+{
+   "isAnonymous":false,
+   "description":[
+      {
+         "type":"TEXT",
+         "value":"${0}"
+      },
+      {
+         "type":"PRODUCT",
+         "products":[
+            754582,
+            123123
+         ]
+      },
+      {
+         "type":"IMAGE",
+         "images":[
+            {
+               "id":"99698",
+               "url":{
+
+               }
+            },
+            {
+               "id":"99698",
+               "url":{
+
+               }
+            }
+         ]
+      }
+   ],
+   "topics":[
+      {
+         "topicId":${1}
+      }
+   ]
+}

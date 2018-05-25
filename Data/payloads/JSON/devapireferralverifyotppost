@@ -1,0 +1,15 @@
+{
+  
+
+	"code":"${0}",
+  
+	"email":"${1}",
+  
+	"otp":"${2}",
+  
+	"mobile":"${3}",
+	
+	"fraud":{"notificationsDisabled":false,"isRooted":false}
+
+
+}

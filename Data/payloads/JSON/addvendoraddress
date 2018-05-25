@@ -1,0 +1,17 @@
+{
+  "addressEntry": {
+    "address1": "${0}",
+    "address2": "${1}",
+    "city": "${2}",
+    "country": "${3}",
+    "entityId": "${4}",
+    "entityName": "${5}",
+    "notes": "${6}",
+    "postalCode": "${7}",
+    "primaryEmail": "${8}",
+    "primaryPhoneNumber": "${9}",
+    "secondaryEmail": "${10}",
+    "secondaryPhoneNumber": "${11}",
+    "state": "${12}"
+  }
+}

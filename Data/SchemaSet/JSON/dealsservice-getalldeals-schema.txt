@@ -1,0 +1,126 @@
+{
+	"type":"any",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"0": {
+			"type":"object",
+			"id": "http://jsonschema.net/0",
+			"required":true,
+			"properties":{
+				"bannerURL": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/bannerURL",
+					"required":true
+				},
+				"createdOn": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/createdOn",
+					"required":true
+				},
+				"dealChannels": {
+					"type":"array",
+					"id": "http://jsonschema.net/0/dealChannels",
+					"required":true,
+					"items":
+					{
+						"type":"object",
+						"id": "http://jsonschema.net/0/dealChannels/0",
+						"required":true,
+						"properties":{
+							"channelType": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealChannels/0/channelType",
+								"required":true
+							},
+							"createdOn": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealChannels/0/createdOn",
+								"required":true
+							},
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealChannels/0/id",
+								"required":true
+							}
+						}
+					}
+				},
+				"dealStyles": {
+					"type":"array",
+					"id": "http://jsonschema.net/0/dealStyles",
+					"required":true,
+					"items":
+					{
+						"type":"object",
+						"id": "http://jsonschema.net/0/dealStyles/0",
+						"required":true,
+						"properties":{
+							"createdOn": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealStyles/0/createdOn",
+								"required":true
+							},
+							"id": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealStyles/0/id",
+								"required":true
+							},
+							"styleId": {
+								"type":"number",
+								"id": "http://jsonschema.net/0/dealStyles/0/styleId",
+								"required":true
+							}
+						}
+					}
+				},
+				"dealType": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/dealType",
+					"required":true
+				},
+				"description": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/description",
+					"required":true
+				},
+				"discountPercent": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/discountPercent",
+					"required":true
+				},
+				"endTime": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/endTime",
+					"required":true
+				},
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/id",
+					"required":true
+				},
+				"name": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/name",
+					"required":true
+				},
+				"startTime": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/startTime",
+					"required":true
+				},
+				"state": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/state",
+					"required":true
+				},
+				"visible": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/0/visible",
+					"required":true
+				}
+			}
+		}
+	}
+}

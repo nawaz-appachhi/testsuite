@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "shots": {
+          "id": "http://jsonschema.net/data/shots",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-913"
+          }
+        },
+        "totalCount": {
+          "id": "http://jsonschema.net/data/totalCount",
+          "type": "integer"
+        },
+        "next": {
+          "id": "http://jsonschema.net/data/next",
+          "type": "integer"
+        }
+      }
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "status": {
+          "id": "http://jsonschema.net/meta/status",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

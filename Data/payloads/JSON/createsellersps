@@ -1,0 +1,14 @@
+{
+"seller_name":"${0}",
+"seller_add1":"${1}",
+"seller_mobile":"${2}",
+"seller_city":"${3}",
+"seller_state":"${4}",
+"seller_country":"${5}",
+"zip":"${6}",
+"businessUrl":"${7}",
+"selleremail":"${8}",
+"seller_ifsc_code":"${9}",
+"seller_acc_num":"${10}",
+"active":"${11}"
+}

@@ -1,0 +1,13 @@
+ {
+      "appId": 2,
+      "refId": "productobj_${0}",
+      "type": "product",
+      "title": "Black & White Striped T-shirt",
+      "description": "This trendy T-shirt from the house of Hypernation is sure to lend you a bold and contemporary appeal. Team it with a pair of jeans or trousers and sneakers.",
+      "url": "/1017329",
+      "imageUrl": "http://assets.myntassets.com/assets/images/1017329/2015/10/8/11444287570824-Hypernation-Black--White-Striped-T-shirt-7401444287570428-1.jpg",
+      "extraData": "{\"aspectRatio\":\"3:4\",\"type\":\"product\"}",
+      "isPrivate": false,
+      "author" : "${1}",
+      "createAction" : "posted"
+    }

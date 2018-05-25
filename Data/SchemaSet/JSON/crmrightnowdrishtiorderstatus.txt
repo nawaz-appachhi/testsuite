@@ -1,0 +1,82 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":true,
+	"properties":{
+		"drishtiOrderResponse": {
+			"type":"object",
+			"required":true,
+			"properties":{
+				"drishtiOrderShipments": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"drishtiOrderShipment": {
+							"type":"array",
+							"required":false,
+							"items":
+								{
+									"type":"object",
+									"required":false,
+									"properties":{
+										"OMSStatusDisplayName": {
+											"type":"string",
+											"required":false
+										},
+										"OMSStatus": {
+											"type":"string",
+											"required":false
+										},
+										"date": {
+											"type":"string",
+											"required":false
+										},
+										"drishtiOrderStatus": {
+											"type":"string",
+											"required":false
+										},
+										"remark": {
+											"type":"string",
+											"required":false
+										},
+										"shipmentId": {
+											"type":"number",
+											"required":false
+										}
+									}
+								}
+							
+
+						}
+					}
+				},
+				"numberOfShipments": {
+					"type":"number",
+					"required":false
+				},
+				"status": {
+					"type":"object",
+					"required":true,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

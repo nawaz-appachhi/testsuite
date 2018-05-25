@@ -1,0 +1,32 @@
+{
+   "size": 0,
+   "query": {
+     "filtered": {
+
+       "filter": {
+         "term": {
+           "styleAttributes.style_status": "p"
+         }
+       }
+     }
+   },
+   "aggs": {
+     "rdf_forecast": {
+       "filter": {
+         "exists": {
+           "field": "demandForecast.rdf"
+         }
+       }
+     },
+
+
+     "ros_forecast": {
+       "filter": {
+         "exists": {
+           "field": "demandForecast.ros"
+         }
+       }
+
+     }
+   }
+}

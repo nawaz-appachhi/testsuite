@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "count": {
+      "id": "count",
+      "type": "integer"
+    },
+    "cards": {
+      "id": "cards",
+      "type": "array",
+      "items": {
+        "id": "0",
+        "type": "object",
+        "properties": {
+          "type": {
+            "id": "type",
+            "type": "string"
+          },
+          "props": {
+            "id": "props",
+            "type": "object",
+            "properties": {
+              "id": {
+                "id": "id",
+                "type": "string"
+              },
+              "meta": {
+                "id": "meta",
+                "type": "object",
+                "properties": {
+                  "og:name": {
+                    "id": "og:name",
+                    "type": "string"
+                  },
+                  "og:app": {
+                    "id": "og:app",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "id",
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "og:tags": {
+                    "id": "og:tags",
+                    "type": "array",
+                    "items": []
+                  },
+                  "og:title": {
+                    "id": "og:title",
+                    "type": "string"
+                  },
+                  "og:url": {
+                    "id": "og:url",
+                    "type": "string"
+                  },
+                  "og:image:url": {
+                    "id": "og:image:url",
+                    "type": "string"
+                  },
+                  "og:image:width": {
+                    "id": "og:image:width",
+                    "type": "null"
+                  },
+                  "share": {
+                    "id": "share",
+                    "type": "object",
+                    "properties": {
+                      "og:title": {
+                        "id": "og:title",
+                        "type": "string"
+                      },
+                      "og:url": {
+                        "id": "og:url",
+                        "type": "string"
+                      },
+                      "og:image:url": {
+                        "id": "og:image:url",
+                        "type": "string"
+                      },
+                      "og:image:width": {
+                        "id": "og:image:width",
+                        "type": "null"
+                      }
+                    }
+                  }
+                }
+              },
+              "activities": {
+                "id": "activities",
+                "type": "object",
+                "properties": {
+                  "like": {
+                    "id": "like",
+                    "type": "object",
+                    "properties": {
+                      "liked": {
+                        "id": "liked",
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children": {
+            "id": "children",
+            "type": "array",
+            "items": {
+              "id": "0",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "id": "type",
+                  "type": "string"
+                },
+                "props": {
+                  "id": "props",
+                  "type": "object",
+                  "properties": {
+                    "image": {
+                      "id": "image",
+                      "type": "object",
+                      "properties": {
+                        "width": {
+                          "id": "width",
+                          "type": "null"
+                        },
+                        "src": {
+                          "id": "src",
+                          "type": "string"
+                        },
+                        "provider": {
+                          "id": "provider",
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "link": {
+                      "id": "link",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "count",
+    "cards"
+  ]
+}

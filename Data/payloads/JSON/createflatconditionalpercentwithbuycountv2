@@ -1,0 +1,33 @@
+{
+    "name":"Sample Cart",
+    "description":"Sample Cart",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":true,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"Through Automation BY manish",
+    "discountRules":[
+    {
+        "type":8,
+        "percent":"${2}",
+        "amount":"",
+        "id":"",
+        "discountFreeItems":[],
+        "buyCount":"${4}",
+        "buyAmount":"",
+        "placeHolderText":"Items"
+    }],
+    "discountStyles":[
+      {
+        "styleId":"${3}"
+      }
+    ],
+    "discountFilters":[],
+    "onCart":false,
+    "discountFunding":"vendor-EOSS",
+    "fundingPercentage":"50",
+    "fundingTax":"1",
+    "fundingBasis":"discount",
+    "discountLimit":"100"
+}

@@ -1,0 +1,89 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"customerProfileResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"createdRN": {
+					"type":"boolean",
+					"required":false
+				},
+				"customerProfileEntry": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"email": {
+							"type":"string",
+							"required":true
+						},
+						"firstLogin": {
+							"type":"string",
+							"required":false
+						},
+						"firstName": {
+							"type":"string",
+							"required":false
+						},
+						"gender": {
+							"type":"string",
+							"required":false
+						},
+						"lastLogin": {
+							"type":"string",
+							"required":false
+						},
+						"lastName": {
+							"type":"string",
+							"required":false
+						},
+						"login": {
+							"type":"string",
+							"required":true
+						},
+						"mobile": {
+							"type":"number",
+							"required":false
+						},
+						"phone": {
+							"type":"string",
+							"required":false
+						},
+						"referer": {
+							"type":"string",
+							"required":false
+						},
+						"status": {
+							"type":"string",
+							"required":false
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":true
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":true
+						},
+						"totalCount": {
+							"type":"number",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

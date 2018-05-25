@@ -1,0 +1,12 @@
+{
+ "txRefId":"${0}",
+ "ppsId":"${1}",
+ "ppsActionType" : "${2}",
+ "orderId":"${3}",
+ "returnId":"${4}",
+ "refundItem":{
+   "items":[
+   	${5}
+  ]
+ }
+}

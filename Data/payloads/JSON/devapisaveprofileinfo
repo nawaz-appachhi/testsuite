@@ -1,0 +1,8 @@
+{
+	"bio": "${0}",
+	"dob": ${1},
+	"gender": "${2}",
+	"location": "${3}",
+	"name": "${4}",
+	"publicProfileId": "${5}"
+}

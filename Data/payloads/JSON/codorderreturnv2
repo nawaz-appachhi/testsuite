@@ -1,0 +1,17 @@
+ {
+ "txRefId":"${0}",
+ "ppsId":"${1}",
+ "ppsActionType" : "${2}",
+ "orderId":"${3}",
+ "returnId":"${4}",
+ "refundItem":{
+ 	"paymentMethodMap": {
+                "WALLET": {
+                    "instrAmount": "80100"
+                }
+            },
+   "items":[
+   	${5}
+  ]
+ }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta",
+      "required": [
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "SERVICEABLE": {
+          "type": "array",
+          "items": {},
+          "id": "SERVICEABLE"
+        },
+        "DELIVERY_PROMISE_TIME": {
+          "type": "integer",
+          "id": "DELIVERY_PROMISE_TIME"
+        },
+        "pincode": {
+          "type": "string",
+          "id": "pincode"
+        },
+        "codLimits": {
+          "type": "string",
+          "id": "codLimits"
+        }
+      },
+      "id": "data",
+      "required": [
+        "SERVICEABLE",
+        "DELIVERY_PROMISE_TIME",
+        "pincode",
+        "codLimits"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "meta",
+    "data"
+  ]
+}

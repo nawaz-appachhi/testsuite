@@ -1,0 +1,305 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":[
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/0",
+					"required":true,
+					"properties":{
+						"applicable": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/0/applicable",
+							"required":true
+						},
+						"benefit": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/benefit",
+							"required":true
+						},
+						"conditionMax": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/conditionMax",
+							"required":true
+						},
+						"conditionMin": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/conditionMin",
+							"required":true
+						},
+						"couponAmount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponAmount",
+							"required":true
+						},
+						"couponApplicabilityMessage": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/0/couponApplicabilityMessage",
+							"required":true
+						},
+						"couponDescriptionText": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/couponDescriptionText",
+							"required":true
+						},
+						"couponPercentage": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponPercentage",
+							"required":true
+						},
+						"couponType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/couponType",
+							"required":true
+						},
+						"coupon": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/coupon",
+							"required":true
+						},
+						"displayType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/displayType",
+							"required":true
+						},
+						"expiryDate": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/expiryDate",
+							"required":true
+						},
+						"minMore": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/minMore",
+							"required":true
+						},
+						"notApplicableProducts": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/notApplicableProducts",
+							"required":true,
+							"properties":{
+								"-1": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/notApplicableProducts/-1",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/1",
+					"required":true,
+					"properties":{
+						"applicable": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/1/applicable",
+							"required":true
+						},
+						"benefit": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/benefit",
+							"required":true
+						},
+						"conditionMax": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/conditionMax",
+							"required":true
+						},
+						"conditionMin": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/conditionMin",
+							"required":true
+						},
+						"couponAmount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/couponAmount",
+							"required":true
+						},
+						"couponApplicabilityMessage": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/1/couponApplicabilityMessage",
+							"required":true
+						},
+						"couponDescriptionText": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/1/couponDescriptionText",
+							"required":true
+						},
+						"couponPercentage": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/couponPercentage",
+							"required":true
+						},
+						"couponType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/1/couponType",
+							"required":true
+						},
+						"coupon": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/1/coupon",
+							"required":true
+						},
+						"displayType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/1/displayType",
+							"required":true
+						},
+						"expiryDate": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/expiryDate",
+							"required":true
+						},
+						"minMore": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/1/minMore",
+							"required":true
+						},
+						"notApplicableProducts": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/1/notApplicableProducts",
+							"required":true,
+							"properties":{
+								"-1": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/1/notApplicableProducts/-1",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/2",
+					"required":true,
+					"properties":{
+						"applicable": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/2/applicable",
+							"required":true
+						},
+						"conditionMax": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/conditionMax",
+							"required":true
+						},
+						"conditionMin": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/conditionMin",
+							"required":true
+						},
+						"couponAmount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/couponAmount",
+							"required":true
+						},
+						"couponApplicabilityMessage": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/2/couponApplicabilityMessage",
+							"required":true,
+							"items":
+								{
+									"type":"string",
+									"id": "http://jsonschema.net/data/2/couponApplicabilityMessage/0",
+									"required":true
+								}
+						},
+						"couponDescriptionText": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/2/couponDescriptionText",
+							"required":true
+						},
+						"couponPercentage": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/couponPercentage",
+							"required":true
+						},
+						"couponType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/2/couponType",
+							"required":true
+						},
+						"coupon": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/2/coupon",
+							"required":true
+						},
+						"displayType": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/2/displayType",
+							"required":true
+						},
+						"expiryDate": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/expiryDate",
+							"required":true
+						},
+						"minMore": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/2/minMore",
+							"required":true
+						},
+						"notApplicableProducts": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/2/notApplicableProducts",
+							"required":true,
+							"properties":{
+								"-1": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/2/notApplicableProducts/-1",
+									"required":false
+								},
+								"1418704376": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/2/notApplicableProducts/1418704376",
+									"required":false
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"xsrfToken": {
+			"type":"string",
+			"id": "http://jsonschema.net/xsrfToken",
+			"required":true
+		}
+	}
+}

@@ -1,0 +1,270 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"contentEntries": {
+			"type":"array",
+			"id": "http://jsonschema.net/contentEntries",
+			"required":true,
+			"items":[
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/contentEntries/0",
+					"required":true,
+					"properties":{
+						"assets": {
+							"type":"array",
+							"id": "http://jsonschema.net/contentEntries/0/assets",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/contentEntries/0/assets/0",
+								"required":true,
+								"properties":{
+									"attributes": {
+										"type":"object",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/attributes",
+										"required":true,
+										"properties":{
+											"aspectRatio": {
+												"type":"string",
+												"id": "http://jsonschema.net/contentEntries/0/assets/0/attributes/aspectRatio",
+												"required":true
+											},
+											"name": {
+												"type":"string",
+												"id": "http://jsonschema.net/contentEntries/0/assets/0/attributes/name",
+												"required":true
+											},
+											"path": {
+												"type":"string",
+												"id": "http://jsonschema.net/contentEntries/0/assets/0/attributes/path",
+												"required":true
+											}
+										}
+									},
+									"createdBy": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/createdBy",
+										"required":true
+									},
+									"createdOn": {
+										"type":"number",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/createdOn",
+										"required":true
+									},
+									"domain": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/domain",
+										"required":true
+									},
+									"format": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/format",
+										"required":true
+									},
+									"id": {
+										"type":"number",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/id",
+										"required":true
+									},
+									"identifyingType": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/identifyingType",
+										"required":true
+									},
+									"isCompressed": {
+										"type":"boolean",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/isCompressed",
+										"required":true
+									},
+									"isDynamicallyUploaded": {
+										"type":"boolean",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/isDynamicallyUploaded",
+										"required":true
+									},
+									"lastModifiedOn": {
+										"type":"number",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/lastModifiedOn",
+										"required":true
+									},
+									"path": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/path",
+										"required":true
+									},
+									"resolutions": {
+										"type":"object",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions",
+										"required":true,
+										"properties":{
+											"849x416Xmini": {
+												"type":"object",
+												"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416Xmini",
+												"required":true,
+												"properties":{
+													"domain": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416Xmini/domain",
+														"required":true
+													},
+													"path": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416Xmini/path",
+														"required":true
+													},
+													"securedDomain": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416Xmini/securedDomain",
+														"required":true
+													}
+												}
+											},
+											"849x416": {
+												"type":"object",
+												"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416",
+												"required":true,
+												"properties":{
+													"domain": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416/domain",
+														"required":true
+													},
+													"path": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416/path",
+														"required":true
+													},
+													"securedDomain": {
+														"type":"string",
+														"id": "http://jsonschema.net/contentEntries/0/assets/0/resolutions/849x416/securedDomain",
+														"required":true
+													}
+												}
+											}
+										}
+									},
+									"securedDomain": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/securedDomain",
+										"required":true
+									},
+									"servingUploaderType": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/servingUploaderType",
+										"required":true
+									},
+									"storedUploaderType": {
+										"type":"string",
+										"id": "http://jsonschema.net/contentEntries/0/assets/0/storedUploaderType",
+										"required":true
+									}
+								}
+							}
+							
+
+						},
+						"attributes": {
+							"type":"object",
+							"id": "http://jsonschema.net/contentEntries/0/attributes",
+							"required":true,
+							"properties":{
+								"asset": {
+									"type":"string",
+									"id": "http://jsonschema.net/contentEntries/0/attributes/asset",
+									"required":true
+								},
+								"description": {
+									"type":"string",
+									"id": "http://jsonschema.net/contentEntries/0/attributes/description",
+									"required":true
+								},
+								"title": {
+									"type":"string",
+									"id": "http://jsonschema.net/contentEntries/0/attributes/title",
+									"required":true
+								}
+							}
+						},
+						"createdBy": {
+							"type":"string",
+							"id": "http://jsonschema.net/contentEntries/0/createdBy",
+							"required":true
+						},
+						"createdOn": {
+							"type":"number",
+							"id": "http://jsonschema.net/contentEntries/0/createdOn",
+							"required":true
+						},
+						"guid": {
+							"type":"string",
+							"id": "http://jsonschema.net/contentEntries/0/guid",
+							"required":true
+						},
+						"id": {
+							"type":"number",
+							"id": "http://jsonschema.net/contentEntries/0/id",
+							"required":true
+						},
+						"lastModifiedOn": {
+							"type":"number",
+							"id": "http://jsonschema.net/contentEntries/0/lastModifiedOn",
+							"required":true
+						},
+						"tags": {
+							"type":"array",
+							"id": "http://jsonschema.net/contentEntries/0/tags",
+							"required":true,
+							"items":
+							{
+								"type":"string",
+								"id": "http://jsonschema.net/contentEntries/0/tags/0",
+								"required":true
+							}
+						},
+						"type": {
+							"type":"string",
+							"id": "http://jsonschema.net/contentEntries/0/type",
+							"required":true
+						}
+					}
+				}
+			]
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"success": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/status/success",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

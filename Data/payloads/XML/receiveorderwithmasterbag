@@ -1,0 +1,14 @@
+<shipment>
+    <id>${0}</id>
+    <status>RECEIVED</status>
+    <lastScannedCity>${1}</lastScannedCity>
+    <lastScannedPremisesId>1</lastScannedPremisesId>
+    <lastScannedPremisesType>DC</lastScannedPremisesType>
+    <arrivedOn>${2}</arrivedOn>
+    <lastScannedOn>${3}</lastScannedOn>
+    <orderShipmentAssociationEntries>
+        <orderId>${4}</orderId>
+        <shipmentId>${0}</shipmentId>
+        <status>RECEIVED</status>
+    </orderShipmentAssociationEntries>
+</shipment>

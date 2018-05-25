@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LMS_Data_Prep" verbose="1" data-provider-thread-count="5">
+    <parameter name="team" value="SCM"/>
+    <parameter name="core" value="LMS"/>
+    <parameter name="type" value="Regression"/>
+    <listeners>
+        <listener class-name="com.myntra.lordoftherings.SCMRetryListner" />
+        <listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+    </listeners>
+    <test name="LMS_Data_Prep" preserve-order="true">
+        <classes>
+            <class name="com.myntra.apiTests.erpservices.utility.RemoveDiscountForStyles" />
+            <class name="com.myntra.apiTests.erpservices.lms.tests.LMSDataPrep" />
+            <class name="com.myntra.apiTests.erpservices.lms.tests.LMSCreateTestOrders" />
+        </classes>
+    </test>
+</suite>

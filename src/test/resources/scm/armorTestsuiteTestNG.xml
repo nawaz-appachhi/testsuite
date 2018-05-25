@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OMSPPSSuite" verbose="1">
+    <parameter name="team" value="SCM"/>
+	<parameter name="core" value="ARMOR"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMRetryListner" />
+        <listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	
+	<test name="ARMORServiceTests"  parallel="classes" thread-count="1">
+		<classes>
+            <class name="com.myntra.apiTests.erpservices.oms.Test.ArmorTest" />
+		</classes>
+	</test>
+</suite>

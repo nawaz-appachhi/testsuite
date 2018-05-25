@@ -1,0 +1,15 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "${2}",
+	"title": "${3}",
+	"imageUrl": "${4}",
+
+    "extraData": "${5}",
+
+	"topics": ${6},
+	"isPrivate": ${7},
+	"createAction": "${8}",
+	"enabled": ${9},
+	"isSpam": ${10}
+}

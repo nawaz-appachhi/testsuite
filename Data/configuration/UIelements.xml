@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+	<!-- MyntBasePage -->
+	<Element name="MyntBasePage.closeButtonOnLoginPopUp" value="cssSelector@#@#lb-login .close,.shim #login .close" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_headerLogin" value="cssSelector@#@.btn-login.d-gray,.header [href*='/register.php'],#login-trigger,.login.button.big.fill" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_popUpLogin" value="cssSelector@#@.blue.showLogin,.switch .signin" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txbx_username" value="cssSelector@#@.frm-login [name='email'],.signin[name='signin'] .custom[type='email']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txbx_password" value="cssSelector@#@.frm-login [type='password'],.signin[name='signin'] .custom[type='password']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.btn_login" value="cssSelector@#@.signin-button,.signin .signin .primary[type='submit']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.lnk_logout" value="cssSelector@#@.form-logout .link-btn,.button" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.lnk_forgotPassword" value="xpath@#@//div[text()='Forgot password?']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txtbx_search" value="cssSelector@#@#q,#search_query" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_search" value="cssSelector@#@.icon-search,.mk-site-search-btn.mk-f-left" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_myBag" value="cssSelector@#@.mk-bag,.header .cart" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_itemAddedSuccessPopup" value="cssSelector@#@.notify" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.list_ItemsInCartLinks" value="cssSelector@#@.col25>a" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.l_popUpSignup" value="cssSelector@#@.showSignup,.switch .signup" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txbx_signupUsername" value="cssSelector@#@.frm-signup input[name='email'],.signup .custom[type='email']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txbx_signupPassword" value="cssSelector@#@.frm-signup input[name='password'],.signup .custom[type='password']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.txbx_signupMobile" value="cssSelector@#@.frm-signup input[name='mobile'],.signup .custom[type='tel']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.rb_genderM" value="cssSelector@#@.frm-signup input[value='M'],.signup .gender [value='M']" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.btn_createMyAccount" value="cssSelector@#@.btn-signup,.signup .primary" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.l_myOrders" value="cssSelector@#@#orders-track-link,.contents>[href*='orders']" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.tab_myMytra" value="cssSelector@#@.user>.text" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_headerCartBag" value="xpath@#@//div[@class='header']/div/a[@class='cart']" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.l_dockedHeaderCartBag" value="xpath@#@//div[@class='navbar']/div/a[@class='cart']" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.list_itemsInCart" value="cssSelector@#@.items>.section" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.l_dockedHeaderWishlist" value="cssSelector@#@.dock .wishlist" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.l_headerWishlist" value="cssSelector@#@.header .wishlist" jValue="" type="webDriver" />
+	<Element name="MyntBasePage.btn_connectWithFacebook" value="cssSelector@#@.btn-fb-connect" type="webDriver" jValue="" />
+	<Element name="MyntBasePage.l_skipAndReturnToMyntra" value="cssSelector@#@.content .success .right .close" type="webDriver" jValue="" />
+	
+	<!-- HomePage -->
+	<Element name="HomePage.l_user" value="xpath@#@//span[@class='d-gray']" type="webDriver" jValue="" />
+
+	<!-- ListPage -->
+	<Element name="ListPage.l_totalProducts" value="xpath@#@//div[@class='mk-product-count']" type="webDriver" jValue="" />
+	<Element name="ListPage.l_searchTitle" value="" type="webDriver" jValue="" />
+	<Element name="ListPage.list_size" value="" type="webDriver" jValue="" />
+	<Element name="ListPage.list_mkFilterProductCount" jValue="className@#@mk-filter-product-count" type="js" value="" />
+	<Element name="ListPage.list_itemResults" value="cssSelector@#@.mk-product,.results>li" jValue="" type="webDriver" />
+	<Element name="ListPage.l_itemAddedSuccessPopup" value="xpath@#@//div[contains(@class,'notify')]" jValue="" type="webDriver" />
+	<Element name="ListPage.list_itemResultsWithPlusItems" value="xpath@#@//div[@class='colours']//ancestor::li" jValue="" type="webDriver" />
+	<Element name="ListPage.list_productNames" value="className@#@product" jValue="" type="webDriver" />
+	<Element name="ListPage.list_prices" value="xpath@#@//ul[contains(@class,'results')]//*[@class='price']" jvalue="" type="webDriver" />
+	<Element name="ListPage.lbl_flyoutItem" value="xpath@#@//div[@class='text']/p" jvalue="" type="webDriver" />
+	<Element name="ListPage.l_buyOptsClose" value="xpath@#@//*[@class='buy-opts']/div/span[@class='close']" jValue="" type="webDriver" />
+	<Element name="ListPage.lbl_flyoutPrice" value="xpath@#@//div[@class='text']/div" jValue="" type="webDriver" />
+	<Element name="ListPage.list_articleTypeFacet" value="xpath@#@//div[@data-filter='global_attr_article_type_facet' and contains(@class,'panel')]//li" jValue="" type="webDriver" />
+	<Element name="ListPage.list_itemBrands" value="className@#@brand" jValue="" type="webDriver" />
+	<Element name="ListPage.list_brandFilterFacet" value="xpath@#@//li[@data-filter='brands_filter_facet']" jValue="" type="webDriver" />
+	<Element name="ListPage.list_itemPercentageDiscounts" value="xpath@#@//span[@class='discount' and contains(text(),'%')]" jValue="" type="webDriver" />
+	<Element name="ListPage.l_resetAll" value="id@#@reset-all" jValue="" type="webDriver" />
+	<Element name="ListPage.l_moreBrands" value="cssSelector@#@[data-filter='brands_filter_facet'].more" jValue="" type="webDriver" />
+	<Element name="ListPage.l_moreBrandsClose" value="cssSelector@#@div.expanded>div.title-bar>div.close" jValue="" type="webDriver" />
+	<Element name="ListPage.list_discountFilterFacet" value="cssSelector@#@[data-filter='discount_percentage']:not([data-disabled='data-disabled']).option" jValue="" type="webDriver" />
+	<Element name="ListPage.l_priceSortAsc" value="cssSelector@#@[data-sortkey=':low']" jValue="" type="webDriver" />
+	<Element name="ListPage.l_priceSortDsc" value="cssSelector@#@[data-sortkey=':high']" jValue="" type="webDriver" />
+	<Element name="ListPage.slider_left" value="cssSelector@#@.from" jValue="" type="webDriver" />
+	<Element name="ListPage.slider_right" value="cssSelector@#@.to" jValue="" type="webDriver" />
+	<Element name="ListPage.slider_info" value="cssSelector@#@.info" jValue="" type="webDriver" />
+	<Element name="ListPage.list_priceRangeFilter" value="cssSelector@#@.mk-labelx_check.price-range-filter" jValue="" type="webDriver" />
+
+	<!-- QuickViewOPage -->
+	<Element name="QuickViewOPage.list_sizes" value="xpath@#@//div[@class='quicklook']//button[@class='size']" jValue="" type="webDriver" />
+	<Element name="QuickViewOPage.btn_addToBag" value="cssSelector@#@.quicklook .buy" jValue="" type="webDriver" />
+	<Element name="QuickViewOPage.btn_close" value="xpath@#@//div[@class='quicklook']//div[@class='close']" jValue="" type="webDriver" />
+	<Element name="QuickViewOPage.lbl_dataStyleId" value="xpath@#@//h4" jValue="" type="webDriver" />
+	<Element name="QuickViewOPage.lbl_productName" value="xpath@#@//h1" jValue="" type="webDriver" />
+	<Element name="QuickViewOPage.lbl_price" value="xpath@#@//div[@class='quicklook']//div[@class='price']" jValue="" type="webDriver" />
+
+	<!-- CartPage -->
+	<Element name="CartPage.btn_placeOrder" value="cssSelector@#@.btn.primary-btn.btn-continue" type="webDriver" jValue="" />
+	<Element name="CartPage.list_deleteItem" value="cssSelector@#@.cart-section .delete-item" type="webDriver" jValue="" />
+	<Element name="CartPage.l_deleteItem" value="cssSelector@#@.cart-section .delete-item" type="webDriver" jValue="" />
+	<Element name="CartPage.list_moveToWishlist" value="cssSelector@#@.cart-section .move-item" type="webDriver" jValue="" />
+	<Element name="CartPage.list_productCode" value="cssSelector@#@.cart-section .prod-code>span" type="webDriver" jValue="" />
+	<Element name="CartPage.list_productCodeWishlist" value="cssSelector@#@.wishlist-section .prod-code>span" type="webDriver" jValue="" />
+	<Element name="CartPage.l_wishlist" value="cssSelector@#@.cart-section .checkout-wishlist-header" type="webDriver" jValue="" />
+	<Element name="CartPage.list_deleteItemWishlist" value="cssSelector@#@.wishlist-section .delete-item" type="webDriver" jValue="" />
+	<Element name="CartPage.l_applyCoupon" value="cssSelector@#@.apply-coupon" type="webDriver" jValue="" />
+	<Element name="CartPage.txbx_enterCouponCode" value="name@#@coupon-code" type="webDriver" jValue="" />
+	<Element name="CartPage.btn_Apply" value="cssSelector@#@.btn-apply" type="webDriver" jValue="" />
+	<Element name="CartPage.l_removeCoupon" value="cssSelector@#@.delete-coupon" type="webDriver" jValue="" />
+	<Element name="CartPage.l_addGiftWrap" value="cssSelector@#@.edit-giftcard-lbl" type="webDriver" jValue="" />
+	<Element name="CartPage.txbx_recipientName" value="cssSelector@#@#gift-to" type="webDriver" jValue="" />
+	<Element name="CartPage.txbx_giftMessage" value="cssSelector@#@#gift-msg" type="webDriver" jValue="" />
+	<Element name="CartPage.txbx_senderName" value="cssSelector@#@#gift-from" type="webDriver" jValue="" />
+	<Element name="CartPage.btn_Save" value="cssSelector@#@.btn-proceed" type="webDriver" jValue="" />
+	<Element name="CartPage.l_removeGiftWrap" value="cssSelector@#@.delete-giftcard" type="webDriver" jValue="" />
+	<Element name="CartPage.l_editSizeQty" value="cssSelector@#@.edit-item" type="webDriver" jValue="" />
+	<Element name="CartPage.btn_SaveSize" value="cssSelector@#@.btn-save" type="webDriver" jValue="" />
+	<Element name="CartPage.msg_itemIsOOSOnCart" value="cssSelector@#@.myntra-tooltip.out-of-stock-tooltip .arrow.a-in.arrow-top-inner" type="webDriver" jValue="" />
+
+	<!-- AddressPage -->
+	<Element name="AddressPage.btn_continueToPayment" value="xpath@#@//div[@class='addressListContainer']/button[@class='btn primary-btn btn-continue btn-continue-addr']" type="webDriver" jValue="" />
+	<Element name="AddressPage.l_addNewAddress" value="cssSelector@#@.add-new-address" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_customerName" value="cssSelector@#@.name[type=text]" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_customerPincode" value="cssSelector@#@.pincode" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_customerAddress" value="cssSelector@#@.address[name='address']" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_addressLocality" value="cssSelector@#@.locality.ui-autocomplete-input" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_addressMobileNumber" value="cssSelector@#@.mobile[name=mobile]" type="webDriver" jValue="" />
+	<Element name="AddressPage.dd_addressCityDisabled" value="cssSelector@#@.city[disabled=disabled][name=city],.sel-city" type="webDriver" jValue="" />
+	<Element name="AddressPage.dd_addressStateDisabled" value="cssSelector@#@.sel-state[disabled=disabled]" type="webDriver" jValue="" />
+	<Element name="AddressPage.ico_makeDefaultAddress" value="cssSelector@#@.default-address-icon" type="webDriver" jValue="" />
+	<Element name="AddressPage.list_deleteDefaultAddress" value="cssSelector@#@.edit-delete-address:not(.hide) .delete-item" type="webDriver" jValue="" />
+	<Element name="AddressPage.l_editDefaultAddress" value="cssSelector@#@[data-index='0'] .address .edit-item" type="webDriver" jValue="" />
+	<Element name="AddressPage.dd_addressCityEnabled" value="cssSelector@#@.city[name='city']" type="webDriver" jValue="" />
+	<Element name="AddressPage.dd_addressStateEnabled" value="cssSelector@#@.sel-state [value='AP']" type="webDriver" jValue="" />
+	<Element name="AddressPage.ico_NonServiciableErrorIcon" value="cssSelector@#@.err-pincode-service" type="webDriver" jValue="" />
+	<Element name="AddressPage.msg_codNotServiciableForPincodeErrorOnAddress" value="cssSelector@#@.msg.info" type="webDriver" jValue="" />
+	<Element name="AddressPage.l_secureLoginPopUp" value="cssSelector@#@.showSignup,.switch .signup" type="webDriver" jValue="" />
+	<Element name="AddressPage.txbx_securePassword" value="cssSelector@#@.frm-login [type='password'],.signin[name='signin'] .custom[type='password']" type="webDriver" jValue="" />
+	<Element name="AddressPage.btn_secureLogin" value="cssSelector@#@.signin-button,.signin .signin .primary[type='submit']" type="webDriver" jValue="" />
+	
+	<!-- PaymentPage -->
+	<Element name="PaymentPage.l_creditCard" value="xpath@#@//div[@class='tabs']/ul/li[@id='tab_credit_card']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.txbx_ccNumber" value="xpath@#@//span[@class='card-num-wrap']//input[@name='card_number']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.txbx_ccName" value="xpath@#@//div[@class='card-input card-form']//input[@name='bill_name']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.dd_ccExpiryMonth" value="xpath@#@//form[@id='credit_card']//select[@name='card_month']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.dd_ccExpiryYear" value="xpath@#@//form[@id='credit_card']//select[@name='card_year']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.txbx_ccCVV" value="xpath@#@//div[@class='card-input card-form']//input[@name='cvv_code']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.cxbx_savedCard" value="xpath@#@//form[@id='credit_card']//input[@name='save_card']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.btn_payNow" value="cssSelector@#@[id='credit_card'] .card-details .pay-btn" type="webDriver" jValue="" />
+	<Element name="PaymentPage.btn_cancelPayment" value="xpath@#@//*[@id='cancel-payment-btn']" type="webDriver" jValue="" />
+	<Element name="PaymentPage.l_cod" value="cssSelector@#@#tab_cod" type="webDriver" jValue="" />
+	<Element name="PaymentPage.txbx_captcha" value="cssSelector@#@#cod-cap-txt" type="webDriver" jValue="" />
+	<Element name="PaymentPage.btn_payOnDelivery" value="cssSelector@#@#cod-btn-confirm" type="webDriver" jValue="" />
+	<Element name="PaymentPage.ico_bag" value="cssSelector@#@.step1 a" type="webDriver" jValue="" />
+	<Element name="PaymentPage.ico_delivery" value="cssSelector@#@.step2 a" type="webDriver" jValue="" />
+	<Element name="PaymentPage.l_netBankingTab" value="cssSelector@#@#tab_net_banking" type="webDriver" jValue="" />
+	<Element name="PaymentPage.l_bankSelect" value="cssSelector@#@#netBanking" type="webDriver" jValue="" />
+	<Element name="PaymentPage.btn_netbankingPayNow" value="cssSelector@#@#net_banking .btn.primary-btn.pay-btn" type="webDriver" jValue="" />
+	<Element name="PaymentPage.msg_codLimitMessage" value="cssSelector@#@.msg.info" type="webDriver" jValue="" />
+	<Element name="PaymentPage.ico_editAddressOnPayment" value="cssSelector@#@.address-summary .edit" type="webDriver" jValue="" />
+	<Element name="PaymentPage.msg_codNotServiciableForPincodeErrorOnPayment" value="cssSelector@#@.msg.info" type="webDriver" jValue="" />
+
+
+	<!-- PdpPage -->
+	<Element name="PdpPage.list_sizes" value="cssSelector@#@.options>.size-btn:not(.unavailable),.sizes>.size:not(.unavailable)" type="webDriver" jValue="" />
+	<Element name="PdpPage.btn_buyNow" value="cssSelector@#@.mk-add-to-cart,.buy>.button" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_productCode" value="cssSelector@#@.p-code,.pdt-code" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_sizeChartLink" value="cssSelector@#@.sizechart-link-text,.sizing-help-link" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_sizeOptionsLink" value="cssSelector@#@.link-tab" type="webDriver" jValue="" />
+	<Element name="PdpPage.btn_SizeBuyNow" value="cssSelector@#@.sub-btn,.size-box .button.big.fill" type="webDriver" jValue="" />
+	<Element name="PdpPage.zm_zoomImage" value="cssSelector@#@#zoom1" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_showSize" value="cssSelector@#@.zoom-close.mk-show" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_saveWishlist" value="cssSelector@#@.mk-save-for-later,.wishlist .link" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_couponOfferWidget" value="cssSelector@#@.coupon-pdp-text,.coupon-offer-text" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_closeOfferWidget" value="cssSelector@#@#lb-coupon-widget .close,.coupon-widget .close" type="webDriver" jValue="" />
+	<Element name="PdpPage.tab_matchWithSection" value="cssSelector@#@.ui-state-default.ui-corner-top>[href*='tabs-2']" type="webDriver" jValue="" />
+	<Element name="PdpPage.list_matchWith" value="cssSelector@#@#tabs-2 .mk-cycle-inner" type="webDriver" jValue="" />
+	<Element name="PdpPage.list_alsoPopular" value="cssSelector@#@#tabs-1 .mk-cycle-inner" type="webDriver" jValue="" />
+	<Element name="PdpPage.list_moreFromThisBrand" value="cssSelector@#@#tabs-3 .mk-cycle-inner" type="webDriver" jValue="" />
+	<Element name="PdpPage.tab_moreFromThisBrandsection" value="cssSelector@#@.ui-state-default.ui-corner-top>[href*='tabs-3']" type="webDriver" jValue="" />
+	<Element name="PdpPage.btn_top" value="cssSelector@#@.go-to-top-btn" type="webDriver" jValue="" />
+	<Element name="PdpPage.l_pincodeWidget" value="cssSelector@#@.changeable,.delivery-opts" type="webDriver" jValue="" />
+	<Element name="PdpPage.txbx_pincode" value="cssSelector@#@.contents input" type="webDriver" jValue="" />
+	<Element name="PdpPage.btn_checkPincode" value="cssSelector@#@.primary-btn.small-btn.btn,.pincode-check" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_closePincodeWidget" value="cssSelector@#@#pincode-widget .close,.action-close .button" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_deliveryTimeIconSuccess" value="cssSelector@#@#delivery-time .icon-success,#pincode .icon-tick" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_codAvailableIconSuccess" value="cssSelector@#@#cod-available .icon-success,#pincode .icon-tick" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_codUnavailableIconAlert" value="cssSelector@#@#cod-unavailable .icon-alert,#pincode .icon-cross" type="webDriver" jValue="" />
+	<Element name="PdpPage.ico_outsideNetworkIconError" value="cssSelector@#@#outside-network .icon-error,#pincode .icon-cross" type="webDriver" jValue="" />
+	<Element name="PdpPage.list_sizes_sizeChart" value="cssSelector@#@.size-box .size.available" type="webDriver" jValue="" />
+
+
+	<!-- ConfirmationPage -->
+	<Element name="ConfirmationPage.lbl_congrats" value="cssSelector@#@.congrats" type="webDriver" jValue="" />
+	<Element name="ConfirmationPage.btn_continueShopping" value="cssSelector@#@.btn-continue" type="webDriver" jValue="" />
+	<Element name="ConfirmationPage.lbl_orderId" value="cssSelector@#@.order-number" type="webDriver" jValue="" />
+	<Element name="ConfirmationPage.btn_closeValidateMobileNumberPopup" value="cssSelector@#@#splash-mobile-verify .close" type="webDriver" jValue="" />
+
+	<!-- MyMyntraPage -->
+	<Element name="MyMyntraPage.list_orderCancelLinks" value="cssSelector@#@.mk-cancel-order" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.list_orderCancelReason" value="cssSelector@#@.return-select" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.list_additionalRemarks" value="cssSelector@#@[name='details']" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.list_cancelYes" value="cssSelector@#@.cancel-submit" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.list_orderCancelledConfirmation" value="cssSelector@#@div[id^='msg-box-']" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.list_orderIds" value="cssSelector@#@.mk-order-number" type="webDriver" jValue="" />
+	<Element name="MyMyntraPage.btn_displayedCancelOrderPopupClose" value="cssSelector@#@.orderbox[style*='display: block;'] .close" type="webDriver" jValue="" />
+
+	<!-- MobileMyntBasePage -->
+	<Element name="MobileMyntBasePage.l_headerLogin" value="cssSelector@#@.btn-login.right:not(.small-btn),.icon-list" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.closeButtonOnLoginPopUp" value="cssSelector@#@.btn-close" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.l_popUpLogin" value="cssSelector@#@.btn.btn-login-now.btn-grey,[href^='/login']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txbx_username" value="cssSelector@#@.frm-login>[name^='email'],[name^='email']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txbx_password" value="cssSelector@#@.frm-login>[name^='password'],[name^='password']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.btn_login" value="cssSelector@#@.btn-signin,.primary" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.lnk_logout" value="cssSelector@#@.m-header-left .mk-sign-out" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.lnk_forgotPassword" value="cssSelector@#@#forgot-password" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txtbx_search" value="cssSelector@#@div.m-header-search div.mk-search .pseudo-search-input,.frmSearch" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txtbx_search_type" value="cssSelector@#@#q,#search_query,.search" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.l_search" value="cssSelector@#@.mk-search-form>button,.submit.right" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.l_myBag" value="cssSelector@#@.m-cart-icon" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.l_itemAddedSuccessPopup" value="cssSelector@#@.notify" jValue="" type="webDriver" />
+	<Element name="MobileMyntBasePage.list_ItemsInCartLinks" value="cssSelector@#@.col25>a" jValue="" type="webDriver" />
+	<Element name="MobileMyntBasePage.l_popUpSignup" value="cssSelector@#@.btn.btn-register-now.btn-grey" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txbx_signupUsername" value="cssSelector@#@.frm-signup input[name='email']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txbx_signupPassword" value="cssSelector@#@.frm-signup input[name='password']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.txbx_signupMobile" value="cssSelector@#@.frm-signup input[name='mobile']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.rb_genderM" value="cssSelector@#@.frm-signup input[value='M']" jValue="" type="webDriver" />
+	<Element name="MobileMyntBasePage.btn_createMyAccount" value="cssSelector@#@.btn.btn-signup.btn-orange" jValue="" type="webDriver" />
+	<Element name="MobileMyntBasePage.l_myOrders" value="cssSelector@#@#orders-track-link,.contents>[href*='orders']" type="webDriver" jValue="" />
+	<Element name="MobileMyntBasePage.tab_myMytra" value="cssSelector@#@.user>.text" type="webDriver" jValue="" />
+
+	<!-- MobileHomePage -->
+	<Element name="MobileHomePage.l_user" value="xpath@#@//span[@class='d-gray']" type="webDriver" jValue="" />
+
+	<!-- MobileListPage -->
+	<Element name="MobileListPage.l_totalProducts" value="xpath@#@//div[@class='mk-product-count']" type="webDriver" jValue="" />
+	<Element name="MobileListPage.l_searchTitle" value="" type="webDriver" jValue="" />
+	<Element name="MobileListPage.list_size" value="" type="webDriver" jValue="" />
+	<Element name="MobileListPage.list_mkFilterProductCount" jValue="className@#@mk-filter-product-count" type="js" value="" />
+	<Element name="MobileListPage.list_itemResults" value="cssSelector@#@.mk-product,.results>li,.product" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_headerCartBag" value="xpath@#@//div[@class='header']/div/a[@class='cart']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_dockedHeaderCartBag" value="xpath@#@//div[@class='navbar']/div/a[@class='cart']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_itemsInCart" value="cssSelector@#@.items>.section" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_itemAddedSuccessPopup" value="xpath@#@//div[contains(@class,'notify')]" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_itemResultsWithPlusItems" value="xpath@#@//div[@class='colours']//ancestor::li" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_productNames" value="cssSelector@#@.mk-prod-brand-name,.product .brand" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_prices" value="cssSelector@#@.results .price,.product .price,.mk-prod-price.red" jvalue="" type="webDriver" />
+	<Element name="MobileListPage.lbl_flyoutItem" value="xpath@#@//div[@class='text']/p" jvalue="" type="webDriver" />
+	<Element name="MobileListPage.l_buyOptsClose" value="xpath@#@//*[@class='buy-opts']/div/span[@class='close']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.lbl_flyoutPrice" value="xpath@#@//div[@class='text']/div" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_articleTypeFacet" value="xpath@#@//div[@data-filter='global_attr_article_type_facet' and contains(@class,'panel')]//li" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_itemBrands" value="className@#@brand" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_brandFilterFacet" value="xpath@#@//li[@data-filter='brands_filter_facet']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_itemPercentageDiscounts" value="xpath@#@//span[@class='discount' and contains(text(),'%')]" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_resetAll" value="id@#@reset-all" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_moreBrands" value="cssSelector@#@[data-filter='brands_filter_facet'].more" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_moreBrandsClose" value="cssSelector@#@div.expanded>div.title-bar>div.close" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_discountFilterFacet" value="cssSelector@#@[data-filter='discount_percentage']:not([data-disabled='data-disabled']).option" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_priceSortAsc" value="cssSelector@#@[data-sortkey=':low']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_priceSortDsc" value="cssSelector@#@[data-sortkey=':high']" jValue="" type="webDriver" />
+	<Element name="MobileListPage.slider_left" value="cssSelector@#@.from" jValue="" type="webDriver" />
+	<Element name="MobileListPage.slider_right" value="cssSelector@#@.to" jValue="" type="webDriver" />
+	<Element name="MobileListPage.slider_info" value="cssSelector@#@.info" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_filter" value="cssSelector@#@#filter-btn" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_priceFilter" value="cssSelector@#@[data-name^='Price']>.anim-link" jValue="" type="webDriver" />
+	<Element name="MobileListPage.list_priceFilter" value="cssSelector@#@.unchecked.price-range-filter" jValue="" type="webDriver" />
+	<Element name="MobileListPage.l_showResults" value="cssSelector@#@.btn-show-filter-results" jValue="" type="webDriver" />
+
+	<!-- MobileCartPage -->
+	<Element name="MobileCartPage.btn_placeOrder" value="cssSelector@#@.btn-place-order" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_cartEdit" value="cssSelector@#@.cart-list .mk-edit" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_wishlistEdit" value="cssSelector@#@.save-list .mk-edit" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_deleteItem" value="cssSelector@#@.prompt.lb-remove" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_moveToWishlist" value="cssSelector@#@.prompt.lb-move-to-wishlist" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_wishlistSection" value="cssSelector@#@.wishlist-header" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_deleteItemWishlist" value="cssSelector@#@.prompt.lb-remove-saved-item" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_applyCoupon" value="cssSelector@#@.apply-coupons-link" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_enterACouponCode" value="cssSelector@#@.anim-link.prompt.enter-coupon-span" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.txbx_enterCouponCode" value="cssSelector@#@#othercouponcode" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.btn_Apply" value="cssSelector@#@.enter-coupon-code.link-details .btn-apply-user-coupon" type="webDriver" jValue="" />
+	<Element name="MobileCartPage.l_removeCoupon" value="cssSelector@#@.remove-coupons-link" type="webDriver" jValue="" />
+
+	<!-- MobileAddressPage -->
+	<Element name="MobileAddressPage.btn_continueToPayment" value="cssSelector@#@.btn.primary-btn.btn-continue.btn-orange" type="webDriver" jValue="" />
+
+	<!-- MobilePaymentPage -->
+	<Element name="MobilePaymentPage.l_creditCard" value="xpath@#@//div[@class='tabs']/ul/li[@id='tab_credit_card']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.txbx_ccNumber" value="xpath@#@//span[@class='card-num-wrap']//input[@name='card_number']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.txbx_ccName" value="xpath@#@//div[@class='card-input card-form']//input[@name='bill_name']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.dd_ccExpiryMonth" value="xpath@#@//form[@id='credit_card']//select[@name='card_month']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.dd_ccExpiryYear" value="xpath@#@//form[@id='credit_card']//select[@name='card_year']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.txbx_ccCVV" value="xpath@#@//div[@class='card-input card-form']//input[@name='cvv_code']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.cxbx_savedCard" value="xpath@#@//form[@id='credit_card']//input[@name='save_card']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.btn_payNow" value="cssSelector@#@[id='credit_card'] .card-details .pay-btn" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.btn_cancelPayment" value="xpath@#@//*[@id='cancel-payment-btn']" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.l_cod" value="cssSelector@#@#pay_by_cod" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.txbx_captcha" value="cssSelector@#@#captcha-form" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.btn_payOnDelivery" value="cssSelector@#@#cod-verify-captcha" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.l_changeAddress" value="cssSelector@#@div .address-name .blue-text" type="webDriver" jValue="" />
+	<Element name="MobilePaymentPage.l_orderSummary" value="cssSelector@#@div .order-summary .blue-text" type="webDriver" jValue="" />
+
+	<!-- MobilePdpPage -->
+	<Element name="MobilePdpPage.list_sizes" value="cssSelector@#@.options>.size-btn:not(.unavailable),.sizes>.size:not(.unavailable)" type="webDriver" jValue="" />
+	<Element name="MobilePdpPage.btn_buyNow" value="cssSelector@#@.mk-add-to-cart,.buy>.buttonS" type="webDriver" jValue="" />
+	<Element name="MobilePdpPage.l_productCode" value="cssSelector@#@.p-code" type="webDriver" jValue="" />
+
+	<!-- MobileConfirmationPage -->
+	<Element name="MobileConfirmationPage.lbl_congrats" value="cssSelector@#@.success-msg" type="webDriver" jValue="" />
+	<Element name="MobileConfirmationPage.btn_continueShopping" value="cssSelector@#@.btn.normal-btn" type="webDriver" jValue="" />
+	<Element name="MobileConfirmationPage.lbl_orderId" value="cssSelector@#@.order-number" type="webDriver" jValue="" />
+	<Element name="MobileConfirmationPage.btn_closeValidateMobileNumberPopup" value="cssSelector@#@.mod>.close" type="webDriver" jValue="" />
+
+	<!-- AdminHomePage -->
+	<Element name="AdminHomePage.txbx_username" value="cssSelector@#@[name^='username']" type="webDriver" jValue="" />
+	<Element name="AdminHomePage.txbx_password" value="cssSelector@#@[name^='password']" type="webDriver" jValue="" />
+	<Element name="AdminHomePage.btn_login" value="cssSelector@#@.SimpleButton" type="webDriver" jValue="" />
+
+	<!-- AdminNavBarPage -->
+	<Element name="AdminNavBarPage.l_widgetKeyValuePairs" value="cssSelector@#@[href*='keyvaluepairs_widget.php']" type="webDriver" jValue="" />
+	<Element name="AdminNavBarPage.l_onlineOrdersLink" value="cssSelector@#@[href*='orders_search.php']" type="webDriver" jValue="" />
+
+	<!-- AdminWidgetKeyValuePairsPage -->
+	<Element name="AdminWidgetKeyValuePairsPage.list_key" value="cssSelector@#@[name^='updatekeyvaluepairs'] tbody>tr>td:nth-of-type(1)>input" type="webDriver" jValue="" />
+	<Element name="AdminWidgetKeyValuePairsPage.list_value" value="cssSelector@#@[name^='updatekeyvaluepairs'] tbody>tr>td:nth-of-type(2)>textarea" type="webDriver" jValue="" />
+	<Element name="AdminWidgetKeyValuePairsPage.list_desc" value="cssSelector@#@[name^='updatekeyvaluepairs'] tbody>tr>td:nth-of-type(3)>textarea" type="webDriver" jValue="" />
+	<Element name="AdminWidgetKeyValuePairsPage.list_delete" value="cssSelector@#@[name^='updatekeyvaluepairs'] tbody>tr>td:nth-of-type(4)>input" type="webDriver" jValue="" />
+	<Element name="AdminWidgetKeyValuePairsPage.btn_updateSelected" value="cssSelector@#@.SubmitBox" type="webDriver" jValue="" />
+
+	<!-- AdminOnlineOrderPage -->
+	<Element name="AdminOnlineOrdersPage.btn_orderSearch" value="cssSelector@#@#orders_search_btn" type="webDriver" jValue="" />
+	<Element name="AdminOnlineOrdersPage.l_nextPageLink" value="cssSelector@#@.next_page_link" type="webDriver" jValue="" />
+
+	<!-- AdminXCachePage -->
+	<Element name="AdminXCachePage.l_listVarData" value="cssSelector@#@[href^='?type=1']" type="webDriver" jValue="" />
+	<Element name="AdminXCachePage.btn_clearVarCache" value="cssSelector@#@.col1 .submit" type="webDriver" jValue="" />
+
+	<!-- FacebookLoginPopUp -->
+	<Element name="FacebookLoginPopUp.txbx_username" value="cssSelector@#@#email" type="webDriver" jValue="" />
+	<Element name="FacebookLoginPopUp.txbx_password" value="cssSelector@#@#pass" type="webDriver" jValue="" />
+	<Element name="FacebookLoginPopUp.btn_login" value="cssSelector@#@#loginbutton" type="webDriver" jValue="" />
+
+</Elements>

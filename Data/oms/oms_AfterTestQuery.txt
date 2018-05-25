@@ -1,0 +1,4 @@
+{
+"oms":["update myntra_oms.on_hold_reasons_master set is_enabled=0 where id in (23,35,37);"],
+"tools":["update myntra_tools.core_application_properties set value=20000000 where name = 'condCODOH.unpaidamount.limit' and owner = 'oms';"]
+}

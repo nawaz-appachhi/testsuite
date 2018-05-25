@@ -1,0 +1,41 @@
+{
+    "isTDGreaterThanVFAllowed": true,
+    "noCategoryFundingApplicability": [
+        {
+            "merchandiseType": "MFB",
+            "applicable": false
+        },
+        {
+            "merchandiseType": "MMP",
+            "applicable": false
+        },
+        {
+            "merchandiseType": "SOR",
+            "applicable": false
+        },
+        {
+            "merchandiseType": "OUTRIGHT",
+            "applicable": false
+        }
+    ],
+    "turnOffAutopricing": [
+        {
+            "merchandiseType": "MFB",
+            "applicable": true
+        },
+        {
+            "merchandiseType": "MMP",
+            "applicable": true
+        },
+        {
+            "merchandiseType": "SOR",
+            "applicable": true
+        },
+        {
+            "merchandiseType": "OUTRIGHT",
+            "applicable": false
+        }
+    ],
+    "minTDAllowed": 0,
+    "maxTDAllowed": 100
+}

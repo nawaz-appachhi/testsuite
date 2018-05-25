@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "id": "http://jsonschema.net/firstname"
+    },
+    "lastname": {
+      "type": "null",
+      "id": "http://jsonschema.net/lastname"
+    },
+    "imageJsonEntryMap": {
+      "type": "object",
+      "properties": {
+        "PROFILE": {
+          "type": "string",
+          "id": "http://jsonschema.net/imageJsonEntryMap/PROFILE"
+        },
+        "PROFILE_DEFAULT": {
+          "type": "string",
+          "id": "http://jsonschema.net/imageJsonEntryMap/PROFILE_DEFAULT"
+        }
+      },
+      "id": "http://jsonschema.net/imageJsonEntryMap"
+    },
+    "image": {
+      "type": "string",
+      "id": "http://jsonschema.net/image"
+    },
+    "imageType": {
+      "type": "string",
+      "id": "http://jsonschema.net/imageType"
+    },
+    "coverImage": {
+      "type": "null",
+      "id": "http://jsonschema.net/coverImage"
+    },
+    "coverImageType": {
+      "type": "null",
+      "id": "http://jsonschema.net/coverImageType"
+    },
+    "publicProfileId": {
+      "type": "string",
+      "id": "http://jsonschema.net/publicProfileId"
+    },
+    "uidx": {
+      "type": "string",
+      "id": "http://jsonschema.net/uidx"
+    },
+    "pLevel": {
+      "type": "integer",
+      "id": "http://jsonschema.net/pLevel"
+    },
+    "counts": {
+      "type": "object",
+      "properties": {},
+      "id": "http://jsonschema.net/counts"
+    },
+    "bio": {
+      "type": "string",
+      "id": "http://jsonschema.net/bio"
+    },
+    "tagsMap": {
+      "type": "string",
+      "id": "http://jsonschema.net/tagsMap"
+    },
+    "gender": {
+      "type": "string",
+      "id": "http://jsonschema.net/gender"
+    },
+    "location": {
+      "type": "string",
+      "id": "http://jsonschema.net/location"
+    },
+    "dob": {
+      "type": "integer",
+      "id": "http://jsonschema.net/dob"
+    },
+    "usertype": {
+      "type": "string",
+      "id": "http://jsonschema.net/usertype"
+    }
+  },
+  "id": "http://jsonschema.net"
+}

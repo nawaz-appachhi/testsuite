@@ -1,0 +1,23 @@
+{
+   "appId":1,
+   "appName":"Myntra",
+   "notificationId":${0},
+   "notificationType":"Engagement",
+   "publishTimeInMillis":${1},
+   "heading":"${2}",
+   "title":"${3}",
+   "description":"${4}",
+   "pageUrl":"${5}",
+   "imageUrl":"${6}",
+   "targetPortalName":"myntra",
+   "channels":[
+      {
+         "version":0,
+         "channelName":"android"
+      }
+   ],
+   "targetInfo":{
+      "version":0,
+      "userList":"${7}"
+   }
+}

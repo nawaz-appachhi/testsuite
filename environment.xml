@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+<Environment>
+	<name>functional</name>
+	<framework>
+		<paths>
+			<xmlpayloads>./Data/payloads/XML/</xmlpayloads>
+			<jsonpayloads>./Data/payloads/JSON/</jsonpayloads>
+		</paths>
+		<portal_home>http://fox7.myntra.com</portal_home>
+	</framework>
+	<urls>
+		<mailformatfolder>./Data/MailFormats/ </mailformatfolder>
+		<page_relative_urls>
+			<url1>http://www.qa1.testing.myntra.com</url1>
+			<url2>http://www.qa1.testing.myntra.com</url2>
+		</page_relative_urls>
+	</urls>
+	<services>
+		<endpoints>
+			<endpoint core="erp" service_name="lms"
+				baseurl="http://54.251.103.6:7050/myntra-lms-service" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="erp" service_name="mps" baseurl="server1"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="erp" service_name="oms"
+				baseurl="http://54.251.103.6:7030/myntra-oms-service/oms"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="erp" service_name="wms"
+				baseurl="http://54.251.99.33:7007/myntra-wms-service/wms"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="search"
+				baseurl="http://127.0.0.2:8081/searchws/search" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="loyality"
+				baseurl="http://122.248.204.5:7900/lp/loyalty" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="searchservice"
+				baseurl="http://54.251.114.206:7400/search-service/searchservice"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="discountservice"
+				baseurl="http://54.251.114.206:6000/pp" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="erp" service_name="atp"
+				baseurl="http://54.251.103.6:7012/myntra-atp-service/atp"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="checkout"
+				baseurl="http://127.0.0.1:8080/myntra-absolut-service/absolut"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="mobilepdp"
+				baseurl="http://122.248.250.113:4444" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="portal" service_name="notifications"
+				baseurl="http://54.255.88.207:8080/notification-api/rest/v1"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="topnav"
+				baseurl="http://180.179.145.1:6400/configuration/topnav"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="idp"
+				baseurl="http://122.248.204.5:6060/idp/auth" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="mobileappwebservices"
+				baseurl="http://qa1www15.myntra.com:4444" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="portal" service_name="myntcashservice"
+				baseurl="http://54.251.114.206:6000" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="portal" service_name="configuration"
+				baseurl="http://54.251.114.206:6400/configuration" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="giftcardservice"
+				baseurl="http://54.251.114.206:6000/pp" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="portal" service_name="giftbigservice"
+				baseurl="http://54.251.102.248:8010/giftcard-service" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="location"
+				baseurl="http://54.251.114.206:7200/myntra-user-group-webapp/user"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="styleapi"
+				baseurl="http://122.248.204.5:9880/style-service/pdpservice/style"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="banner"
+				baseurl="http://54.251.114.206:7300/myntra-banner-webapp/banner/personalizedbanner"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="lookgood"
+				baseurl="http://122.248.254.2:8000/lookgood/lg" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="cmsservice"
+				baseurl="http://54.251.103.6:7070/myntra-cms-service" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="catalogservice"
+				baseurl="http://54.251.103.6:7072/myntra-catalog-service"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="session"
+				baseurl="http://54.251.102.248:8080/SessionStoreService/rest"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="giftcardservice"
+				baseurl="http://122.248.204.5:8010/giftcard-service" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="devapis"
+				baseurl="http://54.251.99.33:4444" authrequired="0" userid=""
+				password="" securitytoken="" />
+			<endpoint core="portal" service_name="dealsservice"
+				baseurl="http://54.251.114.206:6000/pp/deal" authrequired="0"
+				userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="marketplace"
+				baseurl="http://54.251.103.6:7061/analytics-service/vss"
+				authrequired="0" userid="" password="" securitytoken="" />
+			<endpoint core="portal" service_name="upsservice"
+				baseurl=" http://10.145.172.160:8080/sort-api/rest/v1/personalized-sort"
+				authrequired="0" userid="" password="" securitytoken="" />
+		</endpoints>
+		<apis>
+			<lms>
+				<api apiname="checkservicability" name=""
+					path="pincode/checkServiceability/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1005" />
+				<api apiname="checkservicabilityputcall" name=""
+					path="pincode/checkServiceability" requestmethod="PUT"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="1005" />
+			</lms>
+			<mps />
+			<oms />
+			<wms>
+				<api apiname="warehousesearch" name="" path="warehouses/search"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1005" />
+				<api apiname="ordersearch" name=""
+					path="orderRelease/search?q=isExpress.eq:false&amp;start=0&amp;fetchSize=20&amp;sortBy=id&amp;sortOrder=DESC"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1005" />
+			</wms>
+			<search>
+				<api apiname="styleids2" name="" path="styleids2" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2001" />
+				<api apiname="styles" name="" path="styles" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2002" />
+			</search>
+			<loyality>
+				<api apiname="createloyalitygroup" name=""
+					path="loyaltyPointsManager/groups/create" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2001" />
+				<api apiname="indexstylelistloyalitygroup" name=""
+					path="loyaltyPointsManager/index/stylesList" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2003" />
+				<api apiname="deleteloyalitygroup" name=""
+					path="loyaltyPointsManager/group/delete/${0}" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2002" />
+				<api apiname="deleteloyalitygroupbyname" name=""
+					path="loyaltyPointsManager/group/delete/name/${0}" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2002" />
+				<api apiname="creditloyalitypoints" name="" path="loyaltyPoints/credit"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2004" />
+				<api apiname="debitloyalitypoints" name="" path="loyaltyPoints/debit"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2004" />
+				<api apiname="transactionhistoryinactive" name=""
+					path="/loyaltyPoints/transactionHistory/inActivePoints/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2004" />
+				<api apiname="transactionhistoryactive" name=""
+					path="/loyaltyPoints/transactionHistory/activePoints/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2004" />
+				<api apiname="accountinfoloyality" name=""
+					path="/loyaltyPoints/accountInfo/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2004" />
+				<api apiname="activateloyalitypoints" name=""
+					path="/loyaltyPoints/activatePoints" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="creditloyalityorderconfirmation" name=""
+					path="/loyaltyPointsManager/credit/orderConfirmation"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2004" />
+				<api apiname="debitloyalityitemcancellation" name=""
+					path="/loyaltyPointsManager/debit/itemCancellation" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="creditloyalityitemcancellation" name=""
+					path="/loyaltyPointsManager/credit/itemCancellation" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="debitloyalityorderusage" name=""
+					path="/loyaltyPointsManager/debit/order" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="activateloyalitypointsfororder" name=""
+					path="/loyaltyPointsManager/activatePoints/" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="mymyntraaccountinfo" name=""
+					path="/loyaltyPointsManager/myMyntra/accountInfo/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2004" />
+				<api apiname="accepttermsandconditions" name=""
+					path="/loyaltyPointsManager/users/acceptTNC/${0}" requestmethod="POST"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2004" />
+				<api apiname="loyalityconfiguration" name=""
+					path="/loyaltyPointsConfiguration/keyValue" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="getkeyname" name=""
+					path="/loyaltyPointsConfiguration/keyValue/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2004" />
+				<api apiname="keyvaluefetchall" name=""
+					path="/loyaltyPointsConfiguration/keyValue/fetchAll" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="computetierinfo" name=""
+					path="/loyaltyPointsManager/process/users/computeTierInfo/${0}"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2004" />
+				<api apiname="processuserstiers" name=""
+					path="/loyaltyPointsManager/process/users/tiers" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2004" />
+				<api apiname="processordersactivatepoints" name=""
+					path="/loyaltyPointsManager/process/orders/activatePoints"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2004" />
+			</loyality>
+			<searchservice>
+				<api apiname="getquery" name="" path="search/getquery"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="1002" />
+				<api apiname="landingpage" name="" path="securesearch/landingpage/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1003" />
+				<api apiname="parameterizedpage" name=""
+					path="securesearch/parameterizedpage/id/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1003" />
+				<api apiname="parameterizedpagekey" name=""
+					path="securesearch/parameterizedpage/key/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1004" />
+				<api apiname="autosuggest" name="" path="search/autoSuggest/${0}"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="1005" />
+				<api apiname="curatedsearchlistbyparampageid" name=""
+					path="securesearch/curatedsearch/pageid/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1005" />
+				<api apiname="curatedsearchlistbyparampagekey" name=""
+					path="securesearch/curatedsearch/pagekey/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1005" />
+				<api apiname="autosuggestapiget" name="" path="search/autoSuggest/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1005" />
+				<api apiname="invalidateCache" name=""
+					path="search/invalidateCache/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="1003" />
+				<api apiname="invalidateCacheAll" name="" path="search/invalidateCache"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="1003" />
+				<api apiname="reCache" name="" path="search/reCache/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1003" />
+				<api apiname="getquerygetreq" name="" path="search/getquery"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="1002" />
+			</searchservice>
+			<discountservice>
+				<api apiname="getalldiscounts" name="" path="discount"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2020" />
+				<api apiname="getdiscountbyid" name="" path="discount/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2021" />
+				<api apiname="createflatdiscount" name="" path="discount"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2022" />
+			</discountservice>
+			<atp>
+				<api apiname="availableinventory" name=""
+					path="inventory/availableInventory" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2030" />
+			</atp>
+			<checkout>
+				<api apiname="getcart" name="" path="cart/default"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2040" />
+				<api apiname="additemstocart" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2041" />
+				<api apiname="getalladdress" name="" path="address"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="fetchsingleaddress" name="" path="address/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="addnewaddress" name="" path="address"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="updateaddress" name="" path="address/${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="deleteaddress" name="" path="address/${0}"
+					requestmethod="DELETE" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="listalladdresswithserviceability" name=""
+					path="address/cartserviceability/default" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="operationfetchcart" name="" path="cart/default"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="additemtocart" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="removeitemfromcart" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="updateitemincart" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="clearcart" name="" path="cart/default"
+					requestmethod="DELETE" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="addgiftwrapandmessage" name=""
+					path="cart/default/giftwrap" requestmethod="PUT" payloadrequired="1"
+					queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="removegiftwrapandmessage" name=""
+					path="cart/default/giftwrap" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="changefreegift" name="" path="cart/default/changefreegift"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="movetowishlist" name="" path="cart/default/movetowishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="operationcustomize" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="operationfetchwishlist" name="" path="wishlist"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="additemtowishlistusingstyleid" name="" path="wishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="additemtowishlistusingskuid" name="" path="wishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="removeitemfromwishlist" name="" path="wishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="updateiteminwishlist" name="" path="wishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="moveitemtocart" name="" path="wishlist/movetocart"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getmyntcredit" name="" path="myntcredits"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="applymyntcredit" name=""
+					path="cart/default/applymyntcredit" requestmethod="PUT"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="removemyntcredit" name=""
+					path="cart/default/applymyntcredit" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="fetchallcoupons" name="" path="myntcoupons"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="applycoupon" name="" path="cart/default/applymyntcoupon"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="removecoupon" name="" path="cart/default/applymyntcoupon"
+					requestmethod="DELETE" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+			</checkout>
+			<mobilepdp>
+				<api apiname="getstyledetails" name="" path="style/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+			</mobilepdp>
+			<notifications>
+				<api apiname="getactivenotificationscount" name=""
+					path="notifications/${0}/${1}/getActiveNotificationsCount"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="getactivenotifications" name=""
+					path="notifications/${0}/${1}/getActiveNotifications"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="deletenotifications" name=""
+					path="notifications/masterNotification/${0}/${1}/delete"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="createnotificationsingleuser" name=""
+					path="notifications/createNotificationForUser/${0}/${1}/${2}"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="createnotificationsetofuser" name=""
+					path="notifications/createNotificationsForUsers/${0}/${1}?userIds=${2}"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="createmasternotification" name=""
+					path="notifications/masterNotification/createMasterNotification"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2001" />
+				<api apiname="getportalgroups" name=""
+					path="notifications/getPortalGroups" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2001" />
+				<api apiname="getnotificationtypes" name=""
+					path="notifications/getNotificationTypes" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2001" />
+				<api apiname="getdetailsmasternotification" name=""
+					path="notifications/masterNotification/${0}/${1}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2001" />
+				<api apiname="searchmasternotification" name=""
+					path="notifications/masterNotification/${0}/${1}/search?startTime=1"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="searchmasternotificationwithstet" name=""
+					path="notifications/masterNotification/${0}/${1}/search?startTime=${2}&amp;endTime=${3}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="markasread" name=""
+					path="notifications/${0}/${1}/${2}/${3}/markAsRead" requestmethod="POST"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2001" />
+				<api apiname="createnotificationforuser" name=""
+					path="notifications/createNotificationForUser/${0}/${1}"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2001" />
+			</notifications>
+			<topnav>
+				<api apiname="getalltopnav" name="" path="getall" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getwindowsphonetopnav" name="" path="get/0/windowsphon"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getandroidphonetopnav" name="" path="get/0/android"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getiosphonetopnav" name="" path="get/0/ios"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getmobilewebtopnav" name="" path="get/0/mobileweb"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+			</topnav>
+			<idp>
+				<api apiname="signup" name="" path="signup" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2001" />
+				<api apiname="signin" name="" path="signin" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2002" />
+				<api apiname="signout" name="" path="signout" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2003" />
+				<api apiname="forgotpassword" name="" path="forgot"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2004" />
+				<api apiname="resetpassword" name="" path="forgot/reset"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2005" />
+				<api apiname="fblogin" name="" path="fblogin" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2006" />
+			</idp>
+			<mobileappwebservices>
+				<api apiname="mobileappsearchgetfirstpage" name="" path="search"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2001" />
+				<api apiname="mobileappsearchapplyfilter" name="" path="search"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2002" />
+				<api apiname="mobileappsearchgetnextpage" name="" path="search"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2002" />
+				<api apiname="mobileappsearchsortby" name="" path="search"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2002" />
+				<api apiname="mobileappsearchwithpresetfilters" name="" path="search"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2002" />
+				<api apiname="mobileappgetstylebyid" name="" path="style/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2002" />
+				<api apiname="mobileappgetnav" name="" path="nav" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2002" />
+				<api apiname="mobileidplogin" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2002" />
+				<api apiname="mobileappsearchdataquery" name="" path="search/data/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="mobileappsearchdataapplyonefilter" name=""
+					path="search/data/${0}?f=${1}:${2}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2001" />
+				<api apiname="mobileappsearchdataapplytwofilters" name=""
+					path="search/data/${0}?f=${1}:${2}::${3}:${4}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2001" />
+				<api apiname="mobileappsearchdataapplyallfilters" name=""
+					path="search/data/${0}?f=${1}:${2}::${3}:${4}::${5}:${6}::${7}:${8}::${9}:${10}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="mobileappsearchdatasortby" name=""
+					path="search/data/${0}?sort=${1}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2001" />
+			</mobileappwebservices>
+			<myntcashservice>
+				<api apiname="checkbalance" name="" path="pp/cashback/balance/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="checktransactionlogsofuser" name=""
+					path="pp/cashback/transactionlogs/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="debitcashback" name="" path="pp/cashback/debit"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="creditcashback" name="" path="pp/cashback/credit"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+			</myntcashservice>
+			<configuration>
+				<api apiname="getabtest" name="" path="abtest/test/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getabtestforgivenlist" name="" path="abtest/tests"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getallabtests" name="" path="abtest/alltests"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getallabtestnames" name="" path="abtest/alltest/names"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getallabtestvariants" name=""
+					path="abtest/allvariants/${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="createnewabtest" name="" path="abtest/test"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getvariantofgivenabtest" name=""
+					path="abtest/segment/${0}" requestmethod="POST" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="deleteexistingabtest" name="" path="abtest/test/${0}"
+					requestmethod="DELETE" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="updateexistingabtest" name="" path="abtest/test"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getkeyvalue" name="" path="keyValuePair/featureGate/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getkeyvalueforgivenlist" name=""
+					path="keyValuePair/featureGate/keys" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getallkeyvaluepair" name=""
+					path="keyValuePair/featureGate" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="createnewfeaturekeyvaluepair" name=""
+					path="keyValuePair/featureGate" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="deletefeaturekeyvaluepair" name=""
+					path="keyValuePair/featureGate/${0}" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="updatefeaturekeyvaluepair" name=""
+					path="keyValuePair/featureGate" requestmethod="PUT"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="updatelistoffeaturekeyvaluepair" name=""
+					path="keyValuePair/featureGate/keys" requestmethod="PUT"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getpagetype" name="" path="page/types"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getallpagevariants" name="" path="page/variants"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getallpageversions" name="" path="page/versions"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getallinfogivenpagetypeandpageurl" name=""
+					path="page/type/${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getallpageversionsassociatedwithwidgetid" name=""
+					path="page/versions/${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getallwidgetsassociatedwithpageVersion" name=""
+					path="page/widgets/${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getallwidgets" name="" path="page/widgets"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="createnewpageversion" name="" path="page/version"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="createnewpagetype" name="" path="page/type"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="createnewpagevariant" name="" path="page/variant"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="mappagevarianttopageversion" name=""
+					path="page/variant/map/${0}" requestmethod="POST" payloadrequired="1"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="mappagetypetopageversion" name=""
+					path="page/type/map/${0}" requestmethod="POST" payloadrequired="1"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getcurrentversionforpagetypeandvariant" name=""
+					path="page/current/version/${0}" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="createpageversionwithwidgetdata" name=""
+					path="page/version" requestmethod="POST" payloadrequired="1"
+					queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="createupdatelistofwidgets" name="" path="page/widget"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getallvariantsassociatedwithpagetype" name=""
+					path="page/variants/map/${0}" requestmethod="POST" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="gettopnav" name="" path="topnav/getall"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2020" />
+			</configuration>
+			<giftcardservice>
+				<api apiname="getgiftcards" name="" path="giftcards"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2020" />
+			</giftcardservice>
+			<giftbigservice>
+				<api apiname="redeemgiftcards" name="" path="giftcard/redeem"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2020" />
+			</giftbigservice>
+			<location>
+				<api apiname="getlocationgroup" name="" path="locationGroup"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2020" />
+				<api apiname="getlocationgroupbyid" name="" path="locationGroup/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2020" />
+				<api apiname="getlocationbyip" name=""
+					path="locationGroup/location/ip/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2020" />
+				<api apiname="getlocationgroupbyip" name="" path="locationGroup/ip/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2020" />
+				<api apiname="createlocationgroup" name="" path="locationGroup"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2020" />
+				<api apiname="deletelocationgroup" name="" path="locationGroup/${0}"
+					requestmethod="DELETE" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2020" />
+			</location>
+			<styleapi>
+				<api apiname="getstyledataget" name="" path="${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getstyledatapost" name="" path="" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getpdpdataget" name="" path="${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getpdpdatapost" name="" path="" requestmethod="POST"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getpdpdatabyskuid" name="" path="pdp/bysku/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getpdpdataforsinglestylewithimage" name=""
+					path="pdp/${0}?fetchResolutions=${1}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="dostyleindexbystyleid" name="" path="index/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="dostyleindexpost" name="" path="index"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="dostyleindexskus" name="" path="indexskus/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="dostyleindexskuspost" name="" path="index"
+					requestmethod="POST" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="doinvalidatestyles" name="" path="invalidateStyles"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="fullreindexing" name="" path="fullindex"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+			</styleapi>
+			<banner>
+				<api apiname="getpersonalizedbanner" name=""
+					path="getBanners?location_type=${0}&amp;section=${1}&amp;page_location=${2}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+			</banner>
+			<lookgood>
+				<api apiname="getlookbookbyid" name="" path="lookbook/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2020" />
+			</lookgood>
+			<cmsservice>
+				<api apiname="getcontentbyid" name="" path="content/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="filteredcontentsearch" name=""
+					path="content/contentsearch?${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="relatedcontentsearch" name=""
+					path="content/relatedsearch?type=${0}&amp;relation=${1}&amp;productId=${2}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="clearcontentcache" name=""
+					path="content/clearcontentcache/${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="clearallcontentcache" name=""
+					path="content/clearallcontentcache" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="clearrelatedcontentcache" name=""
+					path="content/relatedsearch/clearrelatedsearchcache/${0}/${1}/${2}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="clearallrelatedcontentcache" name=""
+					path="content/relatedsearch/clearallrelatedsearchcache"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="getproductdetailsfromcms" name=""
+					path="catalog/product/${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getlookbookbyidcms" name="" path="content/lookbook/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="createcontentusingbody" name="" path="content"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="updatecontentusingbody" name="" path="content/${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2042" />
+			</cmsservice>
+			<catalogservice>
+				<api apiname="getproductbyid" name="" path="product/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="searchforproductbycriteria" name=""
+					path="product/search?${0}" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="clearcacheforproduct" name=""
+					path="product/${0}/clearcache" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="clearcacheforallproduct" name=""
+					path="product/clearallcache" requestmethod="GET" payloadrequired="0"
+					queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="clearcacheforlistofproduct" name=""
+					path="product/clearcacheinbulk" requestmethod="POST"
+					payloadrequired="0" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="getsizechartofproductbyid" name="" path="sizechart/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="findbylistofids" name=""
+					path="product/ids?productIdsCSV=${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+			</catalogservice>
+			<session>
+				<api apiname="getsession" name="" path="sessions/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="updatesession" name="" path="sessions/${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="updatesessioncdata" name="" path="sessions/${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2001" />
+				<api apiname="getscore" name="" path="${0}/${1}/myntra/getStyleScores"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="omswarehousesearch" name="" path="remote/warehouses"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="1005" />
+				<api apiname="createnewdeal" name="" path="" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="createnewdealwithmultiplestyleidschanneltypes"
+					name="" path="" requestmethod="POST" payloadrequired="1"
+					queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="deleteStyleIds" name="" path="${0}/deletestyle"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="getDeal" name="" path="${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="addStyleToExistingDeal" name="" path="${0}/addstyle"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="updateState" name="" path="active?state=${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="updateVisibility" name="" path="visibility?isvisible=${0}"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="updateDeal" name="" path="${0}" requestmethod="PUT"
+					payloadrequired="1" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getAllVisibleDeals" name="" path="visible"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="deleteDeals" name="" path="${0}" requestmethod="DELETE"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="getAllDeals" name="" path="all" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+			</session>
+			<giftcardservice>
+				<api apiname="getgiftcards" name="" path="giftcards"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2020" />
+			</giftcardservice>
+			<devapis>
+				<api apiname="devapisignin" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="devapisignup" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="devapirefresh" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="devapilogout" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="devapifacebook" name="" path="idp" requestmethod="POST"
+					payloadrequired="1" queryparamsrequired="0" payloadtype="2042" />
+				<api apiname="devapiforgotpassword" name="" path="idp"
+					requestmethod="POST" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="devapistyle" name="" path="style/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="devapistyleoffers" name="" path="style/offers/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="devapinav" name="" path="nav/0/android"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="devapisearch" name="" path="search/data/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="devapisearchwithfacets" name="" path="search/data/${0}"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="devapistyleservicability" name=""
+					path="style/servicability?${0}" requestmethod="GET"
+					payloadrequired="0" queryparamsrequired="1" payloadtype="2042" />
+				<api apiname="devapiaddtocart" name="" path="cart/default"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="devapigetcart" name="" path="cart/default"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+				<api apiname="devapiaddtowishlist" name="" path="cart/wishlist"
+					requestmethod="PUT" payloadrequired="1" queryparamsrequired="0"
+					payloadtype="2042" />
+				<api apiname="devapigetwishlist" name="" path="cart/wishlist"
+					requestmethod="GET" payloadrequired="0" queryparamsrequired="1"
+					payloadtype="2042" />
+			</devapis>
+			<dealsservice />
+			<marketplace />
+			<upsservice />
+		</apis>
+	</services>
+	<Database />
+</Environment>

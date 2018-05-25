@@ -1,0 +1,9 @@
+{
+	"action": "signup",
+	"userId": "${0}",
+	"password": "${1}",
+	"firstname": "${2}",
+	"gender": "${3}",
+	"mobile": "${4}",
+	"usertype": "C"
+}

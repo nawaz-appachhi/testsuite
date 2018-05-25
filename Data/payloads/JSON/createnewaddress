@@ -1,0 +1,16 @@
+{
+            "userId": "${0}",
+            "defaultAddress": ${1},
+            "name": "${2}",
+            "address": "${3}",
+            "city": "${4}",
+            "stateCode": "${5}",
+            "countryCode": "${6}",
+            "pincode": "${7}",
+            "email": "${8}",
+            "mobile": "${9}",
+            "locality": "${10}"
+        }
+        
+        
+				

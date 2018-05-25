@@ -1,0 +1,11 @@
+<allocateExtInventoryRequest> 
+<data>
+<allocateExtInventory>
+<storeName>${0}</storeName>
+<warehouseName>${1}</warehouseName>
+<skuCode>${2}</skuCode>
+<quantity>${3}</quantity>
+<remarks>Remarks</remarks>
+</allocateExtInventory>
+  </data>
+</allocateExtInventoryRequest>

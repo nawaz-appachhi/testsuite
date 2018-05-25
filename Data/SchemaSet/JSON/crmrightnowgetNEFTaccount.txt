@@ -1,0 +1,79 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":true,
+	"properties":{
+		"neftAccountResponse": {
+			"type":"object",
+			"required":true,
+			"properties":{
+				"data": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"neftAccountEntry": {
+							"type":"object",
+							"required":false,
+							"properties":{
+								"accountName": {
+									"type":"string",
+									"required":false
+								},
+								"accountNumber": {
+									"type":"number",
+									"required":false
+								},
+								"accountType": {
+									"type":"string",
+									"required":false
+								},
+								"bankName": {
+									"type":"string",
+									"required":false
+								},
+								"branch": {
+									"type":"string",
+									"required":false
+								},
+								"ifscCode": {
+									"type":"string",
+									"required":false
+								},
+								"login": {
+									"type":"string",
+									"required":false
+								},
+								"neftAccountId": {
+									"type":"number",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":true,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer",
+          "id": "statusCode"
+        },
+        "statusMessage": {
+          "type": "string",
+          "id": "statusMessage"
+        },
+        "statusType": {
+          "type": "string",
+          "id": "statusType"
+        },
+        "totalCount": {
+          "type": "integer",
+          "id": "totalCount"
+        }
+      },
+      "id": "status",
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    },
+    "userAccountEntry": {
+      "type": "object",
+      "properties": {
+        "activePointsBalance": {
+          "type": "integer",
+          "id": "activePointsBalance"
+        },
+        "inActivePointsBalance": {
+          "type": "integer",
+          "id": "inActivePointsBalance"
+        },
+        "tNcAccepted": {
+          "type": "boolean",
+          "id": "tNcAccepted"
+        },
+        "login": {
+          "type": "string",
+          "id": "login"
+        }
+      },
+      "id": "userAccountEntry",
+      "required": [
+        "activePointsBalance",
+        "inActivePointsBalance",
+        "tNcAccepted",
+        "login"
+      ]
+    },
+    "activePointsTransactionHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "loyaltyPointsAccountId": {
+            "type": "integer",
+            "id": "loyaltyPointsAccountId"
+          },
+          "itemId": {
+            "type": "string",
+            "id": "itemId"
+          },
+          "itemType": {
+            "type": "string",
+            "id": "itemType"
+          },
+          "businesProcess": {
+            "type": "string",
+            "id": "businesProcess"
+          },
+          "creditInflow": {
+            "type": "integer",
+            "id": "creditInflow"
+          },
+          "creditOutflow": {
+            "type": "integer",
+            "id": "creditOutflow"
+          },
+          "balance": {
+            "type": "integer",
+            "id": "balance"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "id": "modifiedBy"
+          },
+          "modifiedOn": {
+            "type": "integer",
+            "id": "modifiedOn"
+          },
+          "description": {
+            "type": "string",
+            "id": "description"
+          }
+        },
+        "id": "34",
+        "required": [
+          "loyaltyPointsAccountId",
+          "itemId",
+          "itemType",
+          "businesProcess",
+          "creditInflow",
+          "creditOutflow",
+          "balance",
+          "modifiedBy",
+          "modifiedOn",
+          "description"
+        ]
+      },
+      "id": "activePointsTransactionHistory"
+    }
+  },
+  "id": "/",
+  "required": [
+    "status",
+    "userAccountEntry",
+    "activePointsTransactionHistory"
+  ]
+}

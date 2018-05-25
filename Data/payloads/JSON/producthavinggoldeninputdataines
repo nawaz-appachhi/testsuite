@@ -1,0 +1,10 @@
+{
+ "query": {
+   "match": {
+     "styleAttributes.style_id": {
+       "query": "1000048"
+     }
+   }
+ },
+ "_source": ["aggMetricsTimeseries"]
+}

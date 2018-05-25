@@ -1,0 +1,36 @@
+{
+            "name": "mps Cart",
+            "description": "mps test by Automation _IMR ",
+            "expiredOn": ${0},
+            "isDynamic": false,
+            "isEnabled": true,
+            "startedOn": ${1},
+            "updatedOn": "",
+            "updatedBy": "Through Automation Testcases",
+            "discountRules": [
+              {
+                "type": 1,
+                "id": "",
+                "percent": ${2},
+                "discountFreeItems": [],
+                "placeHolderText": "Items"
+              }],
+            "discountStyles": [
+              {
+                "styleId": ${3}
+              },{
+                "styleId": ${4}
+              },{
+                "styleId": ${5}
+              },{
+                "styleId": ${6}
+              }
+            ],
+            "discountFilters": [],
+            "onCart": false,
+            "discountFunding": "vendor-EOSS",
+            "fundingPercentage": "20",
+            "fundingTax": "1",
+            "fundingBasis": "discount",
+            "discountLimit": "100"
+          }

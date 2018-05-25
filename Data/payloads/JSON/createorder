@@ -1,0 +1,32 @@
+{  
+   "orderItemId":${0},
+   "eventType":"${1}",
+   "source":"flipkart",
+   "timestamp":"2016-07-18T10:00:00Z",
+   "attributes":{  
+      "orderItemId":${2},
+      "status":"${3}",
+      "hold":"${4}",
+      "orderDate":"2016-07-18T10:00:00Z",
+      "dispatchAfterDate": "${5}",
+      "dispatchByDate":"${6}",
+      "sla":1,
+      "quantity":${7},
+      "cancelledQuantity":${8},
+      "title":"Automation Order",
+      "listingId":"${9}",
+      "fsn":"MOBDACGHGSMVG9VS",
+      "sku":"${10}",
+      "price":${11},
+      "shippingFee":50,
+      "octroi":0,
+      "emi":0,
+      "shippingPincode":${12},
+      "stateDocuments":[  
+         "eSugam"
+      ],
+      "subItems":[  
+
+      ]
+   }
+}

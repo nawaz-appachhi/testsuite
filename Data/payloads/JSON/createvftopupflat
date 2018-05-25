@@ -1,0 +1,9 @@
+{"name" : "VFTOpupSample_Imr005", 
+"description" : "Automation",
+"topUpType":"FlatPercent",
+"startDate": "${0}",
+"endDate":   "${1}",
+"approvalLink": "http://www.google.com",
+"topUpFundingType":"${2}",
+"topUpStyles" :[ {"styleId" : ${3}, "categoryFundingPercentage" :9, "vendorFundingPercentage" :10}]
+}

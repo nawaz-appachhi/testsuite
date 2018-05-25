@@ -1,0 +1,13 @@
+{
+  "login" : "${0}", 
+  "bank":"${1}", 
+  "branch":"${2}",
+  "accountType":"${3}",
+  "accountNumber":"${4}", 
+  "accountName":"${5}", 
+  "ifsc":"${6}", 
+  "client":"${7}",
+  "version":"${8}",
+  "signature":"${9}"
+
+}

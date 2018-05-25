@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATSSuite" duration-ms="1976" started-at="2018-05-23T04:47:52Z" finished-at="2018-05-23T04:47:54Z">
+    <groups>
+      <group name="Regression">
+        <method signature="TestATSAPISV2.testSetandGetATSUserOpenOrdersValue(java.lang.Double)[pri:3, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="testSetandGetATSUserOpenOrdersValue" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- Regression -->
+      <group name="v1">
+        <method signature="TestATSAPISV2.testSetandGetATSUserOpenOrdersValue(java.lang.Double)[pri:3, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="testSetandGetATSUserOpenOrdersValue" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- v1 -->
+      <group name="v2">
+        <method signature="TestATSAPISV2.testSetandGetATSUserOpenOrdersValue(java.lang.Double)[pri:3, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="testSetandGetATSUserOpenOrdersValue" class="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+      </group> <!-- v2 -->
+    </groups>
+    <test name="ATSServiceTest" duration-ms="1976" started-at="2018-05-23T04:47:52Z" finished-at="2018-05-23T04:47:54Z">
+      <class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="setup" is-config="true" duration-ms="1132" started-at="2018-05-23T10:17:51Z" finished-at="2018-05-23T10:17:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1eff3cfb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testSetandGetATSUserOpenOrdersValue(java.lang.Double)[pri:3, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="testSetandGetATSUserOpenOrdersValue" duration-ms="1655" started-at="2018-05-23T10:17:52Z" data-provider="ats_SetandGetOpenOrdersValue" finished-at="2018-05-23T10:17:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1000.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetandGetATSUserOpenOrdersValue -->
+        <test-method status="PASS" signature="testSetandGetATSUserOpenOrdersValue(java.lang.Double)[pri:3, instance:com.myntra.apiTests.portalservices.atsService.TestATSAPISV2@5f354bcf]" name="testSetandGetATSUserOpenOrdersValue" duration-ms="278" started-at="2018-05-23T10:17:54Z" data-provider="ats_SetandGetOpenOrdersValue" finished-at="2018-05-23T10:17:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-2000.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetandGetATSUserOpenOrdersValue -->
+      </class> <!-- com.myntra.apiTests.portalservices.atsService.TestATSAPISV2 -->
+    </test> <!-- ATSServiceTest -->
+  </suite> <!-- ATSSuite -->
+</testng-results>

@@ -1,0 +1,8 @@
+<shipment>
+    <id>${0}</id>
+    <status>IN_TRANSIT</status>
+    <lastScannedCity>${1}</lastScannedCity>
+    <lastScannedPremisesId>${2}</lastScannedPremisesId>
+    <lastScannedPremisesType>DC</lastScannedPremisesType>
+    <lastScannedOn>${3}</lastScannedOn>
+</shipment>

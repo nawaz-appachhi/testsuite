@@ -1,0 +1,44 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "range": {
+                "aggMetrics.totalOrders":{
+                    "gt":0
+                }
+              }
+            },
+            
+            {
+              "range": {
+                "aggMetrics.totQty":{
+                    "gt":0
+                }
+              }
+            },
+            {
+                
+                    "missing":{
+                        "field":"timeseries"
+                    }
+                
+            },
+            
+            
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            }
+
+          ]
+          
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+        "login": "${0}",
+        "sessionId": "${1}",
+        "binNumber": "${2}",
+        "pgDiscount": "${3}",
+        "emiCharge": "${4}",
+        "address": "${5}",
+        "clientContext": "${6}",
+        "cartContext": "${7}",
+        "paymentMethod": "${8}"
+}

@@ -1,0 +1,30 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "missing": {
+                "field": "productStreamMetrics"
+              }
+            },
+            {
+              "missing": {
+                "field": "productStreamTimeseries"
+              }
+            },
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            }
+
+          ]
+          
+        }
+      }
+    }
+  }
+}

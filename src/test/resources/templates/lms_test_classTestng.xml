@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regressuin_suite_lms" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="lmsTests">
+		<classes>
+			<class name="com.myntra.apiTests.test.regression.erpservices.lms.lmsTests" />
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes>
+	</test>
+</suite>

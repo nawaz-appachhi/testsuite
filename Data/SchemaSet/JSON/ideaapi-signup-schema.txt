@@ -1,0 +1,158 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"entry": {
+			"type":"object",
+			"id": "http://jsonschema.net/entry",
+			"required":true,
+			"properties":{
+				"channel": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/channel",
+					"required":true
+				},
+				"dob": {
+					"type":"number",
+					"id": "http://jsonschema.net/entry/dob",
+					"required":true
+				},
+				"emailDetails": {
+					"type":"array",
+					"id": "http://jsonschema.net/entry/emailDetails",
+					"required":true,
+					"items":
+					{
+						"type":"object",
+						"id": "http://jsonschema.net/entry/emailDetails/0",
+						"required":true,
+						"properties":{
+							"email": {
+								"type":"string",
+								"id": "http://jsonschema.net/entry/emailDetails/0/email",
+								"required":true
+							},
+							"primary": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/entry/emailDetails/0/primary",
+								"required":true
+							},
+							"verfied": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/entry/emailDetails/0/verfied",
+								"required":true
+							}
+						}
+					}
+				},
+				"firstName": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/firstName",
+					"required":true
+				},
+				"gender": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/gender",
+					"required":true
+				},
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/entry/id",
+					"required":true
+				},
+				"lastName": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/lastName",
+					"required":true
+				},
+				"new_": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/entry/new_",
+					"required":true
+				},
+				"phoneDetails": {
+					"type":"array",
+					"id": "http://jsonschema.net/entry/phoneDetails",
+					"required":true,
+					"items":
+					{
+						"type":"object",
+						"id": "http://jsonschema.net/entry/phoneDetails/0",
+						"required":true,
+						"properties":{
+							"phone": {
+								"type":"string",
+								"id": "http://jsonschema.net/entry/phoneDetails/0/phone",
+								"required":true
+							},
+							"primary": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/entry/phoneDetails/0/primary",
+								"required":true
+							},
+							"verfied": {
+								"type":"boolean",
+								"id": "http://jsonschema.net/entry/phoneDetails/0/verfied",
+								"required":true
+							}
+						}
+					}
+				},
+				"status": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/status",
+					"required":true
+				},
+				"uidx": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/uidx",
+					"required":true
+				},
+				"userType": {
+					"type":"string",
+					"id": "http://jsonschema.net/entry/userType",
+					"required":true
+				},
+				"verified": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/entry/verified",
+					"required":true
+				}
+			}
+		},
+		"showCaptcha": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/showCaptcha",
+			"required":true
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

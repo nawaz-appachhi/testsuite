@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "description": {
+          "id": "http://jsonschema.net/data/description",
+          "type": "string"
+        },
+        "imageUrl": {
+          "id": "http://jsonschema.net/data/imageUrl",
+          "type": "string"
+        },
+        "code": {
+          "id": "http://jsonschema.net/data/code",
+          "type": "string"
+        },
+        "shareLink": {
+          "id": "http://jsonschema.net/data/shareLink",
+          "type": "string"
+        }
+      }
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+"checksum":"${0}",
+"params":{
+    "ppsID":"${1}",
+    "ppsTransactionID":"${2}",
+    "clientTransactionID":"${3}",
+    "orderId":"${4}",
+    "amount":"${5}",
+    "ppsType":"ORDER",
+    "ppsActionType":"SALE",
+    "instrumentActionType":"CREDIT",
+    "customerID":"${6}"
+    }
+}

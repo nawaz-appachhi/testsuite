@@ -1,0 +1,16 @@
+{
+  "checksum" : "${0}",
+  "params" : {
+    "ppsTransactionID" : "${1}",
+    "clientTransactionID" :"${10}",
+    "ppsID" : "${2}",
+    "orderId" : "${3}",
+    "duplicate" :"${11}",
+    "amount" :"${4}",
+    "ppsType" : "${5}",
+    "ppsActionType" : "${6}",
+    "instrumentActionType" : "${7}",
+    "customerID" : "${8}",
+    "txStatus" : "${9}"
+  }
+}

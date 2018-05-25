@@ -1,0 +1,5 @@
+{
+    "login": "${0}",
+    "isReturnAbuser": ${1},
+    "reasonReturnAbuser": "HIGH_RETURNS"
+}

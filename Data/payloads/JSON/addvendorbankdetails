@@ -1,0 +1,9 @@
+{
+	"vendorFinanceInformation":
+	{
+  		"vendorId": "${0}",
+  		"accountId":"${1}",
+  		"city": "${2}",
+  		"enabled":"${3}",
+	}
+}

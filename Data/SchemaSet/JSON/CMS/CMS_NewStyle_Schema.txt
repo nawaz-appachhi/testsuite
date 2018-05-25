@@ -1,0 +1,435 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/statusCode"
+        },
+        "statusMessage": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusMessage"
+        },
+        "statusType": {
+          "type": "string",
+          "id": "http://jsonschema.net/status/statusType"
+        },
+        "totalCount": {
+          "type": "integer",
+          "id": "http://jsonschema.net/status/totalCount"
+        }
+      },
+      "id": "http://jsonschema.net/status",
+      "required": [
+        "statusCode",
+        "statusMessage",
+        "statusType",
+        "totalCount"
+      ]
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/id"
+          },
+          "name": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/name"
+          },
+          "description": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/description"
+          },
+          "price": {
+            "type": "number",
+            "id": "http://jsonschema.net/data/0/price"
+          },
+          "styleStatus": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/styleStatus"
+          },
+          "codEnabled": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/codEnabled"
+          },
+          "articleNumber": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/articleNumber"
+          },
+          "vendorArticleNumber": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/vendorArticleNumber"
+          },
+          "productDisplayName": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/productDisplayName"
+          },
+          "variantName": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/variantName"
+          },
+          "addDate": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/addDate"
+          },
+          "modifiedDate": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/modifiedDate"
+          },
+          "styleNote": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/styleNote"
+          },
+          "materialCareDescription": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/materialCareDescription"
+          },
+          "sizeFitDescription": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/sizeFitDescription"
+          },
+          "comments": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/comments"
+          },
+          "global_attr_article_type": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/global_attr_article_type"
+          },
+          "global_attr_article_type_name": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/global_attr_article_type_name"
+          },
+          "parent1Id": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/parent1Id"
+          },
+          "parent1Name": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/parent1Name"
+          },
+          "parent2Id": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/0/parent2Id"
+          },
+          "parent2Name": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/parent2Name"
+          },
+          "listViewName": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/listViewName"
+          },
+          "globalAttributes": {
+            "type": "object",
+            "properties": {
+              "baseColour": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/baseColour"
+              },
+              "season": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/season"
+              },
+              "usage": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/usage"
+              },
+              "gender": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/gender"
+              },
+              "year": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/year"
+              },
+              "colour2": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/colour2"
+              },
+              "brandName": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/brandName"
+              },
+              "colour1": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/colour1"
+              },
+              "ageGroup": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/ageGroup"
+              },
+              "fashionType": {
+                "type": "string",
+                "id": "http://jsonschema.net/data/0/globalAttributes/fashionType"
+              }
+            },
+            "id": "http://jsonschema.net/data/0/globalAttributes",
+            "required": [
+              "baseColour",
+              "season",
+              "usage",
+              "gender",
+              "year",
+              "colour2",
+              "brandName",
+              "colour1",
+              "ageGroup",
+              "fashionType"
+            ]
+          },
+          "brandName": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/brandName"
+          },
+          "ageGroup": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/ageGroup"
+          },
+          "gender": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/gender"
+          },
+          "baseColour": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/baseColour"
+          },
+          "colour1": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/colour1"
+          },
+          "colour2": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/colour2"
+          },
+          "fashionType": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/fashionType"
+          },
+          "season": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/season"
+          },
+          "year": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/year"
+          },
+          "usage": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/usage"
+          },
+          "productOptionEntries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/id"
+                },
+                "name": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/name"
+                },
+                "value": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/value"
+                },
+                "isActive": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/isActive"
+                },
+                "price": {
+                  "type": "number",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/price"
+                },
+                "styleId": {
+                  "type": "integer",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/styleId"
+                },
+                "skuId": {
+                  "type": "integer",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/skuId"
+                },
+                "skuCode": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/skuCode"
+                },
+                "active": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/0/productOptionEntries/1/active"
+                }
+              },
+              "id": "http://jsonschema.net/data/0/productOptionEntries/1",
+              "required": [
+                "id",
+                "name",
+                "value",
+                "isActive",
+                "price",
+                "styleId",
+                "skuId",
+                "skuCode",
+                "active"
+              ]
+            },
+            "id": "http://jsonschema.net/data/0/productOptionEntries"
+          },
+          "attributeValues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "id": "http://jsonschema.net/data/0/attributeValues/14/id"
+                },
+                "attributeValue": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/attributeValues/14/attributeValue"
+                },
+                "attributeCode": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/attributeValues/14/attributeCode"
+                },
+                "attributeType": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType/id"
+                    },
+                    "typeName": {
+                      "type": "string",
+                      "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType/typeName"
+                    },
+                    "isActive": {
+                      "type": "boolean",
+                      "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType/isActive"
+                    },
+                    "typeOfAttribute": {
+                      "type": "string",
+                      "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType/typeOfAttribute"
+                    },
+                    "code": {
+                      "type": "string",
+                      "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType/code"
+                    }
+                  },
+                  "id": "http://jsonschema.net/data/0/attributeValues/14/attributeType",
+                  "required": [
+                    "id",
+                    "typeName",
+                    "isActive",
+                    "typeOfAttribute",
+                    "code"
+                  ]
+                },
+                "code": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/0/attributeValues/14/code"
+                }
+              },
+              "id": "http://jsonschema.net/data/0/attributeValues/14",
+              "required": [
+                "id",
+                "attributeValue",
+                "attributeCode",
+                "attributeType",
+                "code"
+              ]
+            },
+            "id": "http://jsonschema.net/data/0/attributeValues"
+          },
+          "trialAttributeValues": {
+            "type": "array",
+            "items": {},
+            "id": "http://jsonschema.net/data/0/trialAttributeValues"
+          },
+          "productTag": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/0/productTag"
+          },
+          "associatedImageProducts": {
+            "type": "object",
+            "properties": {
+              "default": {
+                "type": "object",
+                "properties": {
+                  "styleIds": {
+                    "type": "array",
+                    "items": {},
+                    "id": "http://jsonschema.net/data/0/associatedImageProducts/default/styleIds"
+                  }
+                },
+                "id": "http://jsonschema.net/data/0/associatedImageProducts/default",
+                "required": [
+                  "styleIds"
+                ]
+              }
+            },
+            "id": "http://jsonschema.net/data/0/associatedImageProducts",
+            "required": [
+              "default"
+            ]
+          }
+        },
+        "id": "http://jsonschema.net/data/0",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "price",
+          "styleStatus",
+          "codEnabled",
+          "articleNumber",
+          "vendorArticleNumber",
+          "productDisplayName",
+          "variantName",
+          "addDate",
+          "modifiedDate",
+          "styleNote",
+          "materialCareDescription",
+          "sizeFitDescription",
+          "comments",
+          "global_attr_article_type",
+          "global_attr_article_type_name",
+          "parent1Id",
+          "parent1Name",
+          "parent2Id",
+          "parent2Name",
+          "listViewName",
+          "globalAttributes",
+          "brandName",
+          "ageGroup",
+          "gender",
+          "baseColour",
+          "colour1",
+          "colour2",
+          "fashionType",
+          "season",
+          "year",
+          "usage",
+          "productOptionEntries",
+          "attributeValues",
+          "trialAttributeValues",
+          "productTag",
+          "associatedImageProducts"
+        ]
+      },
+      "id": "http://jsonschema.net/data"
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "status",
+    "data"
+  ]
+}

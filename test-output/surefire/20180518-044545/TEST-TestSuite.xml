@@ -1,0 +1,3869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="29.047" tests="112" errors="0" skipped="0" failures="19">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="suiteXmlFile" value="src/test/resources/ats/ATSServiceTestNG.xml"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.15.0-20-generic"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/myntra"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="myntra"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="debug"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -X -e clean test -P SuiteRuns -DsuiteXmlFile=src/test/resources/ats/ATSServiceTestNG.xml"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.589"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.07"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.044"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.045"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.041"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.039"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.039"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.039"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.045"/>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.04"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="1.119"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.257"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.242"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.252"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.235"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.221"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.414"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.221"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.209"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.211"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.209"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.199"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.192"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.198"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.188"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.208"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.215"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.207"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.208"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.21"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.2"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.263"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.207"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.202"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.221"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.226"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.234"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.268"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.245"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.21"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.202"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.205"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.194"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.192"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.193"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.186"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.243"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.188"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.191"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.191"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.192"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.172"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.19"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.193"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.194"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.204"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.207"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.205"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.251"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.197"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.204"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.225"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.21"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.214"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.194"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.185"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.202"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.183"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.191"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.191"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.186"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.196"/>
+  <testcase name="testSetandGetATSUserDetailsVerification" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.194"/>
+  <testcase name="testSetandGetATSUserOpenOrdersValue" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.298"/>
+  <testcase name="testSetandGetATSUserOpenOrdersValue" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.25"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.286"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.22"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.208"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.183"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.229"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.21"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.2"/>
+  <testcase name="testPostandGetOutstandingCODLimit" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.246"/>
+  <testcase name="testPutandGetReturnAbuserDetails" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.384"/>
+  <testcase name="testPutandGetReturnAbuserDetails" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.218"/>
+  <testcase name="testPutandGetFakeEmailDetails" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.283"/>
+  <testcase name="testPutandGetFakeEmailDetails" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.214"/>
+  <testcase name="testPutandGetLinkedPhone" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="2.813"/>
+  <testcase name="testPutandGetLinkedEmail" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="2.662"/>
+  <testcase name="testPutandGetIsCustomerBlocked" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.436"/>
+  <testcase name="testPutandGetBlockedCustomerByLogin" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.456"/>
+  <testcase name="testPutandGetBlockedCustomerByPhone" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.411"/>
+  <testcase name="testPutandGetBlockedCustomerByDevice" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.394"/>
+  <testcase name="testGetATSDetailsWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.225">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetATSDetailsWithoutClientID(TestATSAPISV2.java:252)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:32 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:32 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "8iZrb43Y4b1kZhgngntK0yVa1uiuImnv",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "8iZrb43Y4b1kZhgngntK0yVa1uiuImnv",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "8iZrb43Y4b1kZhgngntK0yVa1uiuImnv",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637537,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092376,
+    "userType" : "REGULAR",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-jqn-qtlv",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637537,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092376,
+    "userType" : "REGULAR",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-jqn-qtlv",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637537,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092376,
+    "userType" : "REGULAR",
+    "uidx" : "13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-jqn-qtlv",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c13@myntra.com
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:32 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/getUserDetails/13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:32 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@310ad792} 
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/getUserDetails/13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1","isReturnAbuser":false,"minCOD":299.0,"maxCOD":20000.0,"isFakeEmail":false,"reasonCOD":"COD101"}
+]]></system-out>
+  </testcase>
+  <testcase name="testPostATSDetailsWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.241">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPostATSDetailsWithoutClientID(TestATSAPISV2.java:261)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:32 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:32 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "tnZYALi2AAMydVXGlkwBuPuU6hjfVRTd",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "tnZYALi2AAMydVXGlkwBuPuU6hjfVRTd",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "tnZYALi2AAMydVXGlkwBuPuU6hjfVRTd",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637538,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092599,
+    "userType" : "REGULAR",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-noa-yrad",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637538,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092599,
+    "userType" : "REGULAR",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-noa-yrad",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637538,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092599,
+    "userType" : "REGULAR",
+    "uidx" : "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-noa-yrad",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c14@myntra.com
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/postatsuserdetails'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:32 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:198 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/abuser/details/set
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:220 - POST response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:32 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@5c47ef5f} 
+2018-05-18 10:21:32 [main] DEBUG BaseSvcImpl:223 - POST response status 200 
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/abuser/details/set
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "login": "ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh",
+    "reasonReturnAbuser": "HIGH_RETURNS",
+    "isCODThrottled": false,
+    "reasonRTOAbuser": "COD102",
+    "isFakeEmail": false,
+    "reasonFakeEmail": "DEFAULT",
+    "maxCOD": "4",
+    "isReturnAbuser": false,
+    "amount": "0.0"
+}
+2018-05-18 10:21:32 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh","isReturnAbuser":false,"reasonReturnAbuser":"HIGH_RETURNS","isCODThrottled":false,"reasonRTOAbuser":"COD102","isFakeEmail":false,"reasonFakeEmail":"DEFAULT","maxCOD":"4","amount":0.0}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetOutstandingCODLimitWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.281">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetOutstandingCODLimitWithoutClientID(TestATSAPISV2.java:270)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:32 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:32 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "7ssiEUOIXsvQorn8bZN5WG1jJ4dbo4Sb",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "7ssiEUOIXsvQorn8bZN5WG1jJ4dbo4Sb",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "7ssiEUOIXsvQorn8bZN5WG1jJ4dbo4Sb",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619092
+  }
+}
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:32 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:32 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637539,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092850,
+    "userType" : "REGULAR",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-vlv-inzi",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637539,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092850,
+    "userType" : "REGULAR",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-vlv-inzi",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637539,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619092850,
+    "userType" : "REGULAR",
+    "uidx" : "fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-vlv-inzi",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c15@myntra.com
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:33 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/getCumulativecodlimit/fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:32 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@1565c047} 
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/getCumulativecodlimit/fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:62 - Response Body :- {"outstandingCODLimit":20000.0,"userid":"fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X","limitCheck":true}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetOpenOrdersValueWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.164">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetOpenOrdersValueWithoutClientID(TestATSAPISV2.java:278)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:33 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:33 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "gk2W87DGOI6lKF05fNy98i8XKDHnQgBL",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "gk2W87DGOI6lKF05fNy98i8XKDHnQgBL",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "gk2W87DGOI6lKF05fNy98i8XKDHnQgBL",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637513,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085208,
+    "userType" : "REGULAR",
+    "uidx" : "4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-uyz-bmrl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637513,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085208,
+    "userType" : "REGULAR",
+    "uidx" : "4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-uyz-bmrl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637513,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085208,
+    "userType" : "REGULAR",
+    "uidx" : "4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-uyz-bmrl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c16@myntra.com
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:33 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/cod/difference/4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:33 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@56c278bf} 
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/cod/difference/4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"4bd136ac.22f1.4deb.95d3.20ab1f8df42cGXV7ei1Mjd","amount":0.0}
+]]></system-out>
+  </testcase>
+  <testcase name="testPutOpenOrdersValueWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.171">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutOpenOrdersValueWithoutClientID(TestATSAPISV2.java:286)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:33 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:33 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "1WG0gNfwY99Hw9KMWoY1McoX0JGL2iBw",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "1WG0gNfwY99Hw9KMWoY1McoX0JGL2iBw",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "1WG0gNfwY99Hw9KMWoY1McoX0JGL2iBw",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "1268490244",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637523,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619088011,
+    "userType" : "REGULAR",
+    "uidx" : "22470392.ffc3.4134.bef3.9d475d6c45e2N4vsWcFqJD",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-gtw-awtx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "1268490244",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637523,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619088011,
+    "userType" : "REGULAR",
+    "uidx" : "22470392.ffc3.4134.bef3.9d475d6c45e2N4vsWcFqJD",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-gtw-awtx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "1268490244",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637523,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619088011,
+    "userType" : "REGULAR",
+    "uidx" : "22470392.ffc3.4134.bef3.9d475d6c45e2N4vsWcFqJD",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-gtw-awtx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c17@myntra.com
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putopenordersvalue'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:33 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/cod/difference/set
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/cod/difference/set
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "login": "22470392.ffc3.4134.bef3.9d475d6c45e2N4vsWcFqJD",
+    "amount": -1000.0
+}
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"22470392.ffc3.4134.bef3.9d475d6c45e2N4vsWcFqJD","amount":-1000.0}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetReturnAbuserWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.231">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetReturnAbuserWithoutClientID(TestATSAPISV2.java:294)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:33 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:33 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "wgtaVeKaroNcoxPgciL4Bufid2SINGAC",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "wgtaVeKaroNcoxPgciL4Bufid2SINGAC",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "wgtaVeKaroNcoxPgciL4Bufid2SINGAC",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637540,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093462,
+    "userType" : "REGULAR",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-lgt-hxnl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637540,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093462,
+    "userType" : "REGULAR",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-lgt-hxnl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637540,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093462,
+    "userType" : "REGULAR",
+    "uidx" : "c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-lgt-hxnl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c18@myntra.com
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:33 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/high/returns/c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:33 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@5633e852} 
+2018-05-18 10:21:33 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/high/returns/c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:33 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K","isReturnAbuser":false,"reasonReturnAbuser":"DEFAULT"}
+]]></system-out>
+  </testcase>
+  <testcase name="testPutReturnAbuserWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.393">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutReturnAbuserWithoutClientID(TestATSAPISV2.java:302)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:33 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:33 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "XokmyWLCe3RyNZAUzPBHz8jC9d8yVB9C",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "XokmyWLCe3RyNZAUzPBHz8jC9d8yVB9C",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "XokmyWLCe3RyNZAUzPBHz8jC9d8yVB9C",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619093
+  }
+}
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:33 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637541,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093696,
+    "userType" : "REGULAR",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-zpo-ljit",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637541,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093696,
+    "userType" : "REGULAR",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-zpo-ljit",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637541,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619093696,
+    "userType" : "REGULAR",
+    "uidx" : "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-zpo-ljit",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c19@myntra.com
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putreturnabuser'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/returns/abuser/details/set
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/returns/abuser/details/set
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "login": "19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH",
+    "isReturnAbuser": false,
+    "reasonReturnAbuser": "HIGH_RETURNS"
+}
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH","isReturnAbuser":false,"reasonReturnAbuser":"HIGH_RETURNS"}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBlockedCustomerByLoginWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.232">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByLoginWithoutClientID(TestATSAPISV2.java:311)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:34 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "h5x48EKebBAVBV3VawmlCVtKSHLxXSuF",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "h5x48EKebBAVBV3VawmlCVtKSHLxXSuF",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "h5x48EKebBAVBV3VawmlCVtKSHLxXSuF",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637542,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094088,
+    "userType" : "REGULAR",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-kbt-nglx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637542,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094088,
+    "userType" : "REGULAR",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-kbt-nglx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637542,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094088,
+    "userType" : "REGULAR",
+    "uidx" : "e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-kbt-nglx",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/blocked/login/7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@4afd8f16} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/blocked/login/7819beb0-3d69-4975-8bd0-e617c556cb6c20@myntra.com
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- false
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBlockedCustomerByPhoneWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.043">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByPhoneWithoutClientID(TestATSAPISV2.java:318)
+</failure>
+    <system-out><![CDATA[isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/blocked/mobile/4018884985
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@12c53d97} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/blocked/mobile/4018884985
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- false
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBlockedCustomerByDeviceIDWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.035">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetBlockedCustomerByDeviceIDWithoutClientID(TestATSAPISV2.java:325)
+</failure>
+    <system-out><![CDATA[isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/blocked/deviceid/1fc5feac-ad93-464f-ae35-b70099618154
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@7ef60643} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/blocked/deviceid/1fc5feac-ad93-464f-ae35-b70099618154
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- false
+]]></system-out>
+  </testcase>
+  <testcase name="testIsCustomerBlockedWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.29">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testIsCustomerBlockedWithoutClientID(TestATSAPISV2.java:333)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:34 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "MOwRyNu4DUCZChXRyOrjx0kBSH12DHVu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "MOwRyNu4DUCZChXRyOrjx0kBSH12DHVu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "MOwRyNu4DUCZChXRyOrjx0kBSH12DHVu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637543,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094401,
+    "userType" : "REGULAR",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-oqa-xijn",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637543,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094401,
+    "userType" : "REGULAR",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-oqa-xijn",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637543,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094401,
+    "userType" : "REGULAR",
+    "uidx" : "fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-oqa-xijn",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putiscustomerblocked'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/blocked/oms
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/blocked/oms
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+"version":0,
+"login":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+"userContactNo":"",
+"isLoyaltyPointsUsed":false,
+"isLoyaltyPointsAwarded":false,
+"totalOrderValue":0.0
+}
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"blocked":false,"reason":null}
+]]></system-out>
+  </testcase>
+  <testcase name="testPutCustomerBlockedWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.036">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutCustomerBlockedWithoutClientID(TestATSAPISV2.java:340)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putcustomerblocked'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/store/set
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/store/set
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+"keys" : [
+	{
+	"key":"7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com",
+	"value":"true"
+	}
+ ],
+"totalNumberOfKeys" : 1,
+"namespace" : "blockedLogin"
+}
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"keys":[],"totalNoOfKeys":1,"successfulUpdates":1,"failedUpdates":0}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetLinkedAccbyEmailWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.062">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyEmailWithoutClientID(TestATSAPISV2.java:347)
+</failure>
+    <system-out><![CDATA[isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/linked/getlinkedaccounts/7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@1b3a8691} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/linked/getlinkedaccounts/7819beb0-3d69-4975-8bd0-e617c556cb6c23@myntra.com
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"uidx":["95b28ce8.e5b0.449e.ad6d.6cda9c115522Ey7C6PjSlC","7021058c.fa77.490b.919a.0c7c36d04040OC0fMJmgsJ","c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K","19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH","db621b38.b0e2.41d8.a0b0.1450afb9e9d79LeTqiwvem","98fe0fe3.3de0.497f.988f.ec246868c904JdouSeTtM3","13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1","f6ebdfab.95d1.49ed.9986.ec11e7c0b593LhTpbiGxwy","e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7","fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X","734893fb.4fde.4562.b503.6586fff596b3Rly4xCkY6B","ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh","59d2741c.0422.439f.931e.2c238c9cd8d7huaBezaRY8","71363409.e47f.4717.815d.010cbdf4a8042WChIuKicl","d6526796.4dee.426e.abd6.211a2cab1ce593iZVdIyYG"]}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetLinkedAccbyDeviceWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.052">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyDeviceWithoutClientID(TestATSAPISV2.java:353)
+</failure>
+    <system-out><![CDATA[isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/linked/getlinkedaccounts/date/1fc5feac-ad93-464f-ae35-b70099618154
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@22271065} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/linked/getlinkedaccounts/date/1fc5feac-ad93-464f-ae35-b70099618154
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"uidx":null}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetLinkedAccbyPhoneWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.037">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetLinkedAccbyPhoneWithoutClientID(TestATSAPISV2.java:359)
+</failure>
+    <system-out><![CDATA[isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:34 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/linked/getLinkedCustomersByPhone/4018884985
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:34 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@4d8d21a3} 
+2018-05-18 10:21:34 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/linked/getLinkedCustomersByPhone/4018884985
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:34 [main] DEBUG HttpExecutorService:62 - Response Body :- {"uidx":["95b28ce8.e5b0.449e.ad6d.6cda9c115522Ey7C6PjSlC","7021058c.fa77.490b.919a.0c7c36d04040OC0fMJmgsJ","c71ac82d.94d0.4a50.9d21.0339af39b80aZ9JmKryF9K","19fb2778.0e33.4f06.bb25.ecf708c539090dAs1oawjH","db621b38.b0e2.41d8.a0b0.1450afb9e9d79LeTqiwvem","fac7116d.b5c4.42ca.92af.1a1242142171RgZ1GiItle","98fe0fe3.3de0.497f.988f.ec246868c904JdouSeTtM3","13f7b476.15cf.42e7.b73c.1eca965e1f93Lgjyi6C8s1","f6ebdfab.95d1.49ed.9986.ec11e7c0b593LhTpbiGxwy","e13fa161.6796.4f94.a9b0.0cabd84f9d2eLx6YA46Xr7","fd54c4c8.6ad7.4402.907c.a2eb83468e18EvuTappZ9X","734893fb.4fde.4562.b503.6586fff596b3Rly4xCkY6B","ec8cd535.b03d.4184.ae98.196cecd3fca0aav3KTqebh","59d2741c.0422.439f.931e.2c238c9cd8d7huaBezaRY8","71363409.e47f.4717.815d.010cbdf4a8042WChIuKicl","d6526796.4dee.426e.abd6.211a2cab1ce593iZVdIyYG"]}
+]]></system-out>
+  </testcase>
+  <testcase name="testPutLinkedAccbyPhoneWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.235">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutLinkedAccbyPhoneWithoutClientID(TestATSAPISV2.java:367)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:34 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:34 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "3yvhpIiMkOgeiLVM607ECTlaGnJ35TR2",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "3yvhpIiMkOgeiLVM607ECTlaGnJ35TR2",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "3yvhpIiMkOgeiLVM607ECTlaGnJ35TR2",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619094
+  }
+}
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:34 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637544,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094886,
+    "userType" : "REGULAR",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-wop-phrr",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637544,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094886,
+    "userType" : "REGULAR",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-wop-phrr",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637544,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619094886,
+    "userType" : "REGULAR",
+    "uidx" : "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-wop-phrr",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c24@myntra.com
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putlinkedphone'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:35 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/linked/mobile/set
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/linked/mobile/set
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "uidx": "ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK",
+    "phone": "4018884985"
+}
+
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:62 - Response Body :- {"uidx":"ec738c09.8329.4e6c.9961.78c83569efab6bSm2zLDqK","phone":"4018884985"}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetFakeEmailWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.261">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testGetFakeEmailWithoutClientID(TestATSAPISV2.java:375)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:35 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:35 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:35 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "Qd5wjlUXZCil943oZX5J3Ag5HwvlWFLu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619095
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "Qd5wjlUXZCil943oZX5J3Ag5HwvlWFLu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619095
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "Qd5wjlUXZCil943oZX5J3Ag5HwvlWFLu",
+  "showCaptcha" : false,
+  "existingUser" : false,
+  "user" : {
+    "login" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "usertype" : "C",
+    "firstname" : "First Name",
+    "lastname" : "Last Name",
+    "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile" : "4018884985",
+    "new_" : true,
+    "migrated" : true,
+    "phoneVerified" : false,
+    "gender" : "M",
+    "status" : "Y",
+    "lastlogin" : 0,
+    "firstlogin" : 1526619095
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com
+2018-05-18 10:21:35 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:35 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637545,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619095116,
+    "userType" : "REGULAR",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-xgs-bwkl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637545,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619095116,
+    "userType" : "REGULAR",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-xgs-bwkl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4018884985",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637545,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619095116,
+    "userType" : "REGULAR",
+    "uidx" : "ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-xgs-bwkl",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c25@myntra.com
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:35 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:337 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/fake/email/ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:352 - GET response received HttpResponseProxy{HTTP/1.1 200 OK [Server: Apache-Coyote/1.1, X-Application-Context: application:index:7009, Content-Disposition: inline;filename=f.txt, Content-Type: application/json;charset=UTF-8, Transfer-Encoding: chunked, Vary: Accept-Encoding, Date: Fri, 18 May 2018 04:51:35 GMT, Connection: close] org.apache.http.client.entity.DecompressingEntity@393bd750} 
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:355 - GET response status 200 
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/fake/email/ea7d76e2.076b.4cc0.86d2.cfe7c39f67eaVVTb5PkU0C
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:61 - Request Body :- null
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":null,"isFakeEmail":false,"reasonFakeEmail":null}
+]]></system-out>
+  </testcase>
+  <testcase name="testPutFakeEmailWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.167">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testPutFakeEmailWithoutClientID(TestATSAPISV2.java:383)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:35 [main] INFO  Payload:179 - ./Data/payloads/JSON/signup
+2018-05-18 10:21:35 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/signup'
+
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:35 [main] INFO  IDPServiceHelper:62 - 
+Printing IDPService SignUp API URL : http://idp.mjint.myntra.com/idp/auth/signup
+
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  IDPServiceHelper:65 - 
+Printing IDPService SignUp API Payload : 
+
+{
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:289 - posting the json request payload
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "QzWkF9joxizDEfkrp2hmyrSdHVSgoIc6",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "QzWkF9joxizDEfkrp2hmyrSdHVSgoIc6",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 110003,
+    "statusMessage" : "The email you entered already exists",
+    "statusType" : "ERROR",
+    "totalCount" : 0
+  },
+  "xsrfToken" : "QzWkF9joxizDEfkrp2hmyrSdHVSgoIc6",
+  "showCaptcha" : false
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:554 - http://idp.mjint.myntra.com/idp/auth/signup
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ {
+    "login":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "password":"password123",
+    "usertype":"C",
+    "gender":"M",
+    "title":"Mr",
+    "firstname":"First Name",
+    "lastname":"Last Name",
+    "email":"7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+    "mobile":"4018884985",
+    "captchaValue":"3572029068"
+}
+
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:558 - RequestMethod : POST
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:559 - RequestMethod : POST
+
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com
+2018-05-18 10:21:35 [main] INFO  IdeaApiHelper:73 - 
+Printing IdeaApi getProfileByEmail API URL : http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com
+
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:35 [main] INFO  IdeaApiHelper:76 - 
+Printing IdeaApi getProfileByEmail API Payload :  
+
+null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:282 - debug:typeofdataresponse=application/json
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:283 - debug:typeofdatarequest=null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:286 - this is json path
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637514,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085479,
+    "userType" : "REGULAR",
+    "uidx" : "2a574212.5cac.4115.82e0.a4a457655bfcZgWanyTkzU",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-ggb-suck",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:60 - {
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637514,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085479,
+    "userType" : "REGULAR",
+    "uidx" : "2a574212.5cac.4115.82e0.a4a457655bfcZgWanyTkzU",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-ggb-suck",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:89 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:103 - Printing response from service :{
+  "status" : {
+    "statusCode" : 3,
+    "statusMessage" : "Success",
+    "statusType" : "SUCCESS",
+    "totalCount" : 0
+  },
+  "entry" : {
+    "status" : "ACTIVE",
+    "verified" : false,
+    "channel" : "EMAIL",
+    "emailDetails" : [ {
+      "email" : "7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "phoneDetails" : [ {
+      "phone" : "4436097398",
+      "verfied" : false,
+      "primary" : true
+    } ],
+    "id" : 637514,
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "gender" : "MALE",
+    "registrationOn" : 1526619085479,
+    "userType" : "REGULAR",
+    "uidx" : "2a574212.5cac.4115.82e0.a4a457655bfcZgWanyTkzU",
+    "new_" : false,
+    "publicProfileId" : "FirstName.LastName-ggb-suck",
+    "tagsMap" : {
+      "myntraVerified" : false,
+      "invited" : true
+    },
+    "migrated" : true
+  }
+}
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:554 - http://idea.mjint.myntra.com/idea/opt/profile/email/myntra/7819beb0-3d69-4975-8bd0-e617c556cb6c26@myntra.com
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:555 - Payload :: FORMAT = JSON 
+
+ null
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:556 - Payload Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:557 - Response Data type : JSON
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:558 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:559 - RequestMethod : GET
+2018-05-18 10:21:35 [main] INFO  RequestGenerator:536 - this is considered to be a JSON response
+2018-05-18 10:21:35 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putfakeemail'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:35 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/customer/fake/email/set
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/customer/fake/email/set
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "login": "2a574212.5cac.4115.82e0.a4a457655bfcZgWanyTkzU",
+    "isFakeEmail": false,
+    "reasonFakeEmail": "HIGH_RETURNS"
+}
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:62 - Response Body :- {"login":"2a574212.5cac.4115.82e0.a4a457655bfcZgWanyTkzU","isFakeEmail":false,"reasonFakeEmail":"HIGH_RETURNS"}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreWithoutClientID" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.043">
+    <failure message="expected [400] but found [200]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreWithoutClientID(TestATSAPISV2.java:390)
+</failure>
+    <system-out><![CDATA[2018-05-18 10:21:35 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-18 10:21:35 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-18 10:21:35 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:60 - ats.mjint.myntra.com/myntra-ats-service/address/getscore
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:61 - Request Body :- {
+    "value": "Test CCOD Address, 560068"
+}
+2018-05-18 10:21:35 [main] DEBUG HttpExecutorService:62 - Response Body :- {"score":0.9524,"address":"Test CCOD Address, 560068","valid_address":false}
+]]></system-out>
+  </testcase>
+</testsuite>

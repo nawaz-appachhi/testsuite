@@ -1,0 +1,10 @@
+{
+  "groupname": "${0}",
+  "channel": "${1}",
+  "groupType": "${2}",
+  "applicableDevice": "${3}",
+  "couponGroupStatus": "${4}",
+  "groupBehaviour": "${5}",
+  "timeCreated": ${6},
+  "creator":"${7}"
+}

@@ -1,0 +1,7 @@
+{  
+    "tgid": ${0},
+    "version": ${1},
+    "tags": ${2},
+    "appid": ${3},
+    "template": ${4}
+}

@@ -1,0 +1,73 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+		"type":"array",
+		"id": "http://jsonschema.net/data",
+		"required":true,
+		"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"balance": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/balance",
+						"required":true
+					},
+					"earnedCreditBalance": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/earnedCreditBalance",
+						"required":true
+					},
+					"storeCreditBalance": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/storeCreditBalance",
+						"required":true
+					},
+					"useAmount": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/useAmount",
+						"required":true
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"xsrfToken": {
+			"type":"string",
+			"id": "http://jsonschema.net/xsrfToken",
+			"required":true
+		}
+	}
+}

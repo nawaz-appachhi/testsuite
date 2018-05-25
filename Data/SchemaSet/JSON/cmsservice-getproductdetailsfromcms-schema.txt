@@ -1,0 +1,159 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"id": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/id",
+						"required":true
+					},
+					"imageCollection": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/imageCollection",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/imageCollection/0",
+							"required":true,
+							"properties":{
+								"albumName": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/albumName",
+									"required":true
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/id",
+									"required":true
+								},
+								"imageEntries": {
+									"type":"array",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries",
+									"required":true,
+									"items":
+									{
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0",
+										"required":true,
+										"properties":{
+											"domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/domain",
+												"required":true
+											},
+											"id": {
+												"type":"number",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/id",
+												"required":true
+											},
+											"imagePath": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/imagePath",
+												"required":true
+											},
+											"resolutionPathFormula": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/resolutionPathFormula",
+												"required":true
+											},
+											"secured_domain": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/secured_domain",
+												"required":true
+											},
+											"servingUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/servingUploaderType",
+												"required":true
+											},
+											"storedUploaderType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/storedUploaderType",
+												"required":true
+											},
+											"supportedResolutions": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/supportedResolutions",
+												"required":true
+											},
+											"viewType": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/imageCollection/0/imageEntries/0/viewType",
+												"required":true
+											}
+										}
+									}
+								},
+								"isDefault": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/isDefault",
+									"required":true
+								},
+								"isDisabled": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/isDisabled",
+									"required":true
+								},
+								"metaData": {
+									"type":"array",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/metaData",
+									"required":true
+								},
+								"priorityOrder": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/imageCollection/0/priorityOrder",
+									"required":true
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"success": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/status/success",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

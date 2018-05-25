@@ -1,0 +1,22 @@
+{
+    "variations":[{
+        "name":"${0}",
+        "percentProbability":${1},
+        "inlineHtml":${2},
+        "finalVariant":${3},
+        "jsFile":${4},
+        "cssFile":${5},
+        "configJson":"${6}",
+        "algoConfigJson":"${7}"
+    }],
+    "auditLogs":${8},
+    "name":"${9}",
+    "isEnabled":${10},
+    "gaSlot":${11},
+    "omniSlot":${12},
+    "filters":${13},
+    "segmentationAlgo":"${14}",
+    "sourceType":"${15}",
+    "isCompleted":${16},
+    "apiVersion":${17}
+}

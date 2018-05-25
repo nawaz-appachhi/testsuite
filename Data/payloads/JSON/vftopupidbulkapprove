@@ -1,0 +1,9 @@
+{
+	"vfTopUpIDStatusList" :[
+		
+		{
+			"vfTopupId" : ${0},
+			"vfTopUpStatus" : "${1}"
+		}
+	]
+}

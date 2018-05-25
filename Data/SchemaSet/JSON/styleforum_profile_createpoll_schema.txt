@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "type": {
+          "id": "http://jsonschema.net/data/type",
+          "type": "string"
+        },
+        "pollType": {
+          "id": "http://jsonschema.net/data/pollType",
+          "type": "string"
+        },
+        "id": {
+          "id": "http://jsonschema.net/data/id",
+          "type": "string"
+        },
+        "createdAt": {
+          "id": "http://jsonschema.net/data/createdAt",
+          "type": "integer"
+        },
+        "timeLeft": {
+          "id": "http://jsonschema.net/data/timeLeft",
+          "type": "integer"
+        },
+        "duration": {
+          "id": "http://jsonschema.net/data/duration",
+          "type": "integer"
+        },
+        "since": {
+          "id": "http://jsonschema.net/data/since",
+          "type": "integer"
+        },
+        "hasVoted": {
+          "id": "http://jsonschema.net/data/hasVoted",
+          "type": "boolean"
+        },
+        "commentCount": {
+          "id": "http://jsonschema.net/data/commentCount",
+          "type": "integer"
+        },
+        "isFeatured": {
+          "id": "http://jsonschema.net/data/isFeatured",
+          "type": "boolean"
+        },
+        "isSpammed": {
+          "id": "http://jsonschema.net/data/isSpammed",
+          "type": "boolean"
+        },
+        "isOwner": {
+          "id": "http://jsonschema.net/data/isOwner",
+          "type": "boolean"
+        },
+        "topics": {
+          "id": "http://jsonschema.net/data/topics",
+          "type": "array",
+          "items": []
+        },
+        "parent": {
+          "id": "http://jsonschema.net/data/parent",
+          "type": "object",
+          "properties": {
+            "type": {
+              "id": "http://jsonschema.net/data/parent/type",
+              "type": "null"
+            },
+            "id": {
+              "id": "http://jsonschema.net/data/parent/id",
+              "type": "integer"
+            }
+          }
+        },
+        "topParent": {
+          "id": "http://jsonschema.net/data/topParent",
+          "type": "object",
+          "properties": {
+            "type": {
+              "id": "http://jsonschema.net/data/topParent/type",
+              "type": "null"
+            },
+            "id": {
+              "id": "http://jsonschema.net/data/topParent/id",
+              "type": "integer"
+            }
+          }
+        },
+        "isAnonymous": {
+          "id": "http://jsonschema.net/data/isAnonymous",
+          "type": "boolean"
+        },
+        "options": {
+          "id": "http://jsonschema.net/data/options",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/data/options/0",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "http://jsonschema.net/data/options/0/text",
+                  "type": "string"
+                },
+                "label": {
+                  "id": "http://jsonschema.net/data/options/0/label",
+                  "type": "string"
+                },
+                "id": {
+                  "id": "http://jsonschema.net/data/options/0/id",
+                  "type": "string"
+                },
+                "votes": {
+                  "id": "http://jsonschema.net/data/options/0/votes",
+                  "type": "integer"
+                },
+                "isVoted": {
+                  "id": "http://jsonschema.net/data/options/0/isVoted",
+                  "type": "boolean"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/options/1",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "http://jsonschema.net/data/options/1/text",
+                  "type": "string"
+                },
+                "label": {
+                  "id": "http://jsonschema.net/data/options/1/label",
+                  "type": "string"
+                },
+                "id": {
+                  "id": "http://jsonschema.net/data/options/1/id",
+                  "type": "string"
+                },
+                "votes": {
+                  "id": "http://jsonschema.net/data/options/1/votes",
+                  "type": "integer"
+                },
+                "isVoted": {
+                  "id": "http://jsonschema.net/data/options/1/isVoted",
+                  "type": "boolean"
+                }
+              }
+            }
+          ]
+        },
+        "description": {
+          "id": "http://jsonschema.net/data/description",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/data/description/0",
+            "type": "object",
+            "properties": {
+              "type": {
+                "id": "http://jsonschema.net/data/description/0/type",
+                "type": "string"
+              },
+              "value": {
+                "id": "http://jsonschema.net/data/description/0/value",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "totalVotes": {
+          "id": "http://jsonschema.net/data/totalVotes",
+          "type": "integer"
+        },
+        "isFirst": {
+          "id": "http://jsonschema.net/data/isFirst",
+          "type": "boolean"
+        },
+        "user": {
+          "id": "http://jsonschema.net/data/user",
+          "type": "object",
+          "properties": {
+            "firstname": {
+              "id": "http://jsonschema.net/data/user/firstname",
+              "type": "null"
+            },
+            "lastname": {
+              "id": "http://jsonschema.net/data/user/lastname",
+              "type": "null"
+            },
+            "bio": {
+              "id": "http://jsonschema.net/data/user/bio",
+              "type": "null"
+            },
+            "imageJsonEntryMap": {
+              "id": "http://jsonschema.net/data/user/imageJsonEntryMap",
+              "type": "null"
+            },
+            "image": {
+              "id": "http://jsonschema.net/data/user/image",
+              "type": "null"
+            },
+            "imageType": {
+              "id": "http://jsonschema.net/data/user/imageType",
+              "type": "null"
+            },
+            "coverImage": {
+              "id": "http://jsonschema.net/data/user/coverImage",
+              "type": "null"
+            },
+            "coverImageType": {
+              "id": "http://jsonschema.net/data/user/coverImageType",
+              "type": "null"
+            },
+            "publicProfileId": {
+              "id": "http://jsonschema.net/data/user/publicProfileId",
+              "type": "string"
+            },
+            "uidx": {
+              "id": "http://jsonschema.net/data/user/uidx",
+              "type": "string"
+            },
+            "tagsMap": {
+              "id": "http://jsonschema.net/data/user/tagsMap",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "status": {
+          "id": "http://jsonschema.net/meta/status",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

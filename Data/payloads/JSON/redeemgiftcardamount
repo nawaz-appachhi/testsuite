@@ -1,0 +1,9 @@
+{
+	"type": "${0}",
+	"cardNumber": "${1}",
+	"pin": "${2}",
+	"login": "${3}",
+	"orderId": "${4}",
+	"amount": "${5}",
+	"totalBillAmount": "${6}"
+}

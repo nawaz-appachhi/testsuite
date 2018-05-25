@@ -1,0 +1,38 @@
+{
+  "sellerBrandResponse": {
+    "data": {
+      "sellerBrand": [
+        {
+          "brandId": "${0}",
+          "brandName": "${1}",
+          "enabled": "${2}",
+          "sellerEntry": {
+            
+            "id": "${3}"          
+           
+          }
+        },
+        {
+          "brandId": "${4}",
+          "brandName": "${5}",
+          "enabled": "${6}",
+          "sellerEntry": {
+            
+            "id": "${7}"
+            
+          }
+        },
+        {
+          "brandId": "${8}",
+          "brandName": "${9}",
+          "enabled": "${10}",
+          "sellerEntry": {
+            
+            "id": "${11}"          
+           
+          }
+        }
+      ]
+    }
+  }
+}

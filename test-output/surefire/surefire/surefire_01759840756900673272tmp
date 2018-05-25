@@ -1,0 +1,7 @@
+#surefire_0
+#Thu May 17 16:03:07 IST 2018
+groups=appachhi
+user.dir=/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests
+suiteXmlFile=src/test/resources/ats/ATSServiceTestNG.xml
+localRepository=/home/myntra/.m2/repository
+basedir=/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests

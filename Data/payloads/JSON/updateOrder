@@ -1,0 +1,47 @@
+{
+    "orderItem": {
+        "orderItemId": 1245623,
+        "eventType": ${0} ,
+        "source": "flipkart",
+        "timestamp": "2014-07-18T10:00:00Z",
+        "attributes": {
+            "orderItemId": 1245623,
+            "status": "APPROVED",
+            "orderDate": "2014-07-18T10:00:00Z",
+            "dispatchByDate": "2014-07-20T10:00:00Z",
+            "sla": 1,
+            "quantity": 1,
+            "title": "Samsung Galaxy S3 Pebble Blue",
+            "listingId": "LSTMOBDACGHGSMVG9VSIQLWV5",
+            "fsn": "MOBDACGHGSMVG9VS",
+            "sku": "NIKESPSH104271",
+            "price": 100,
+            "shippingFee": 50,
+            "octroi": 0,
+            "emi": 0,
+            "pincode": 56,
+            "stateDocuments": [
+                "eSugam"
+            ],
+            "subItems": [
+                {
+                    "orderItemId": 1245614,
+                    "status": "APPROVED",
+                    "quantity": 1,
+                    "title": "Skullcandy 2XL Headphone Black Shakedown X5SHFZ-820",
+                    "listingId": "LSTACCDB56E2HUNGVNMPLEDW2",
+                    "fsn": "ACCDB56E2HUNGVNM",
+                    "sku": "NIKESPSH104271",
+                    "price": 100,
+                    "shippingFee": 50,
+                    "octroi": 0,
+                    "emi": 0,
+                    "pincode": 560001,
+                    "orderDate": "2014-07-18T10:00:00Z",
+                    "dispatchByDate": "2014-07-20T10:00:00Z",
+                    "sla": 1
+                }
+            ]
+        }
+    }
+}

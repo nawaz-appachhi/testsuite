@@ -1,0 +1,10 @@
+<suite name="IMSSuite" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	<test name="IMSServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.ims.Tests.ItemStateTransitionStates" />
+		</classes>
+	</test>
+</suite>

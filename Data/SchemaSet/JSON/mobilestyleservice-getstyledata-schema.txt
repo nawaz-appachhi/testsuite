@@ -1,0 +1,826 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"ageGroup": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/ageGroup",
+					"required":true
+				},
+				"articleAttributes": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/articleAttributes",
+					"required":true,
+					"properties":{
+						"Alarm": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/articleAttributes/Alarm",
+							"required":false
+						},
+						"Features": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/articleAttributes/Features",
+							"required":false
+						},
+						"Movement": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/articleAttributes/Movement",
+							"required":false
+						},
+						"Occasion": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/articleAttributes/Occasion",
+							"required":false
+						}
+					}
+				},
+				"articleNumber": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/articleNumber",
+					"required":true
+				},
+				"articleType": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/articleType",
+					"required":true,
+					"properties":{
+						"active": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/articleType/active",
+							"required":true
+						},
+						"id": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/articleType/id",
+							"required":true
+						},
+						"socialSharingEnabled": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/articleType/socialSharingEnabled",
+							"required":true
+						},
+						"typeName": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/articleType/typeName",
+							"required":true
+						}
+					}
+				},
+				"baseColour": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/baseColour",
+					"required":true
+				},
+				"brandName": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/brandName",
+					"required":true
+				},
+				"catalogAddDate": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/catalogAddDate",
+					"required":true
+				},
+				"colour1": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/colour1",
+					"required":true
+				},
+				"colour2": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/colour2",
+					"required":true
+				},
+				"discountedPrice": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/discountedPrice",
+					"required":true
+				},
+				"displayCategories": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/displayCategories",
+					"required":true
+				},
+				"fashionType": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/fashionType",
+					"required":true
+				},
+				"gender": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/gender",
+					"required":true
+				},
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/id",
+					"required":true
+				},
+				"landingPageUrl": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/landingPageUrl",
+					"required":true
+				},
+				"masterCategory": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/masterCategory",
+					"required":true,
+					"properties":{
+						"active": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/masterCategory/active",
+							"required":false
+						},
+						"id": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/masterCategory/id",
+							"required":false
+						},
+						"socialSharingEnabled": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/masterCategory/socialSharingEnabled",
+							"required":false
+						},
+						"typeName": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/masterCategory/typeName",
+							"required":false
+						}
+					}
+				},
+				"myntraRating": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/myntraRating",
+					"required":true
+				},
+				"navigationId": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/navigationId",
+					"required":true
+				},
+				"price": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/price",
+					"required":true
+				},
+				"productDescriptors": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/productDescriptors",
+					"required":true,
+					"properties":{
+						"description": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/productDescriptors/description",
+							"required":false,
+							"properties":{
+								"descriptorType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/description/descriptorType",
+									"required":false
+								},
+								"value": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/description/value",
+									"required":false
+								}
+							}
+						},
+						"size_fit_desc": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/productDescriptors/size_fit_desc",
+							"required":false,
+							"properties":{
+								"descriptorType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/size_fit_desc/descriptorType",
+									"required":false
+								},
+								"value": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/size_fit_desc/value",
+									"required":false
+								}
+							}
+						},
+						"style_note": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/productDescriptors/style_note",
+							"required":false,
+							"properties":{
+								"descriptorType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/style_note/descriptorType",
+									"required":false
+								},
+								"value": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/productDescriptors/style_note/value",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"productDisplayName": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/productDisplayName",
+					"required":false
+				},
+				"productTypeId": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/productTypeId",
+					"required":false
+				},
+				"season": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/season",
+					"required":false
+				},
+				"styleImages": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/styleImages",
+					"required":false,
+					"properties":{
+						"back": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/back",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/back/imageType",
+									"required":false
+								},
+								"imageURL": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/back/imageURL",
+									"required":false
+								},
+								"resolutions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleImages/back/resolutions",
+									"required":false,
+									"properties":{
+										"1080X1440Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/1080X1440Xmini",
+											"required":false
+										},
+										"1080X1440": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/1080X1440",
+											"required":false
+										},
+										"150X200Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/150X200Xmini",
+											"required":false
+										},
+										"150X200": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/150X200",
+											"required":false
+										},
+										"180X240Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/180X240Xmini",
+											"required":false
+										},
+										"180X240": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/180X240",
+											"required":false
+										},
+										"360X480Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/360X480Xmini",
+											"required":false
+										},
+										"360X480": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/360X480",
+											"required":false
+										},
+										"48X64Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/48X64Xmini",
+											"required":false
+										},
+										"48X64": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/back/resolutions/48X64",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"default": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/default",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/default/imageType",
+									"required":false
+								},
+								"imageURL": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/default/imageURL",
+									"required":false
+								},
+								"resolutions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleImages/default/resolutions",
+									"required":false,
+									"properties":{
+										"1080X1440Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/1080X1440Xmini",
+											"required":false
+										},
+										"1080X1440": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/1080X1440",
+											"required":false
+										},
+										"150X200Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/150X200Xmini",
+											"required":false
+										},
+										"150X200": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/150X200",
+											"required":false
+										},
+										"180X240Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/180X240Xmini",
+											"required":false
+										},
+										"180X240": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/180X240",
+											"required":false
+										},
+										"360X480Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/360X480Xmini",
+											"required":false
+										},
+										"360X480": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/360X480",
+											"required":false
+										},
+										"48X64Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/48X64Xmini",
+											"required":false
+										},
+										"48X64": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/default/resolutions/48X64",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"front": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/front",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/front/imageType",
+									"required":false
+								},
+								"imageURL": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/front/imageURL",
+									"required":false
+								},
+								"resolutions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleImages/front/resolutions",
+									"required":false,
+									"properties":{
+										"1080X1440Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/1080X1440Xmini",
+											"required":false
+										},
+										"1080X1440": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/1080X1440",
+											"required":false
+										},
+										"150X200Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/150X200Xmini",
+											"required":false
+										},
+										"150X200": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/150X200",
+											"required":false
+										},
+										"180X240Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/180X240Xmini",
+											"required":false
+										},
+										"180X240": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/180X240",
+											"required":false
+										},
+										"360X480Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/360X480Xmini",
+											"required":false
+										},
+										"360X480": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/360X480",
+											"required":false
+										},
+										"48X64Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/48X64Xmini",
+											"required":false
+										},
+										"48X64": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/front/resolutions/48X64",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"right": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/right",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/right/imageType",
+									"required":false
+								},
+								"imageURL": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/right/imageURL",
+									"required":false
+								},
+								"resolutions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleImages/right/resolutions",
+									"required":false,
+									"properties":{
+										"1080X1440Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/1080X1440Xmini",
+											"required":false
+										},
+										"1080X1440": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/1080X1440",
+											"required":false
+										},
+										"150X200Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/150X200Xmini",
+											"required":false
+										},
+										"150X200": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/150X200",
+											"required":false
+										},
+										"180X240Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/180X240Xmini",
+											"required":false
+										},
+										"180X240": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/180X240",
+											"required":false
+										},
+										"360X480Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/360X480Xmini",
+											"required":false
+										},
+										"360X480": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/360X480",
+											"required":false
+										},
+										"48X64Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/48X64Xmini",
+											"required":false
+										},
+										"48X64": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/right/resolutions/48X64",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"search": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/search",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/search/imageType",
+									"required":false
+								},
+								"imageURL": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/search/imageURL",
+									"required":false
+								},
+								"resolutions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleImages/search/resolutions",
+									"required":false,
+									"properties":{
+										"1080X1440Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/1080X1440Xmini",
+											"required":false
+										},
+										"1080X1440": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/1080X1440",
+											"required":false
+										},
+										"150X200Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/150X200Xmini",
+											"required":false
+										},
+										"150X200": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/150X200",
+											"required":false
+										},
+										"180X240Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/180X240Xmini",
+											"required":false
+										},
+										"180X240": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/180X240",
+											"required":false
+										},
+										"360X480Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/360X480Xmini",
+											"required":false
+										},
+										"360X480": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/360X480",
+											"required":false
+										},
+										"48X64Xmini": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/48X64Xmini",
+											"required":false
+										},
+										"48X64": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/styleImages/search/resolutions/48X64",
+											"required":false
+										}
+									}
+								}
+							}
+						},
+						"size_representation": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleImages/size_representation",
+							"required":false,
+							"properties":{
+								"imageType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleImages/size_representation/imageType",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"styleOptions": {
+					"type":"array",
+					"id": "http://jsonschema.net/data/styleOptions",
+					"required":false,
+					"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/styleOptions/0",
+							"required":false,
+							"properties":{
+								"active": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/styleOptions/0/active",
+									"required":false
+								},
+								"available": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/styleOptions/0/available",
+									"required":false
+								},
+								"id": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/styleOptions/0/id",
+									"required":false
+								},
+								"inventoryCount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/styleOptions/0/inventoryCount",
+									"required":false
+								},
+								"name": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleOptions/0/name",
+									"required":false
+								},
+								"skuAvailabilityDetailMap": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap",
+									"required":false,
+									"properties":{
+										"1": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1",
+											"required":false,
+											"properties":{
+												"availableCount": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/availableCount",
+													"required":false
+												},
+												"availableInWarehouses": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/availableInWarehouses",
+													"required":false
+												},
+												"leadTime": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/leadTime",
+													"required":false
+												},
+												"sellerid": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/sellerid",
+													"required":false
+												},
+												"sellername": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/sellername",
+													"required":false
+												},
+												"storeid": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/storeid",
+													"required":false
+												},
+												"supplyType": {
+													"type":"string",
+													"id": "http://jsonschema.net/data/styleOptions/0/skuAvailabilityDetailMap/1/supplyType",
+													"required":false
+												}
+											}
+										}
+									}
+								},
+								"skuId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/styleOptions/0/skuId",
+									"required":false
+								},
+								"value": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/styleOptions/0/value",
+									"required":false
+								},
+								"warehouseIdToItemCountMap": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/styleOptions/0/warehouseIdToItemCountMap",
+									"required":false
+								}
+							}
+						}
+					
+
+				},
+				"styleType": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/styleType",
+					"required":false
+				},
+				"subCategory": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/subCategory",
+					"required":false,
+					"properties":{
+						"active": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/subCategory/active",
+							"required":false
+						},
+						"id": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/subCategory/id",
+							"required":false
+						},
+						"socialSharingEnabled": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/subCategory/socialSharingEnabled",
+							"required":false
+						},
+						"typeName": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/subCategory/typeName",
+							"required":false
+						}
+					}
+				},
+				"usage": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/usage",
+					"required":false
+				},
+				"variantName": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/variantName",
+					"required":false
+				},
+				"vat": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/vat",
+					"required":false
+				},
+				"visualTag": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/visualTag",
+					"required":false
+				},
+				"weight": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/weight",
+					"required":false
+				},
+				"year": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/year",
+					"required":false
+				}
+			}
+		},
+		"meta": {
+			"type":"object",
+			"id": "http://jsonschema.net/meta",
+			"required":false,
+			"properties":{
+				"code": {
+					"type":"number",
+					"id": "http://jsonschema.net/meta/code",
+					"required":true
+				},
+				"requestId": {
+					"type":"string",
+					"id": "http://jsonschema.net/meta/requestId",
+					"required":true
+				}
+			}
+		},
+		"notification": {
+			"type":"object",
+			"id": "http://jsonschema.net/notification",
+			"required":true
+		}
+	}
+}

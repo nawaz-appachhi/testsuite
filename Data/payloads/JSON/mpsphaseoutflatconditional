@@ -1,0 +1,10 @@
+ {   "doType": "${0}",
+     "name": "IMR005_Tst_Automation",   
+     "description": "Automation_Scripts",   
+     "startDate": "${1}",   
+     "endDate":   "${2}",   
+     "categoryManager":"ik5_cm@kk.com",  
+     "discountFundingType":"EOSS_SOR",   
+     "discountOverrideStyles":[     
+              
+         {"styleId":${3},"categoryFundedTD":0,"vendorFundedTD":11,"tradeDiscount" : 20, "onBuyAmount" : ${4}}] }

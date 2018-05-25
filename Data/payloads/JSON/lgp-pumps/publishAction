@@ -1,0 +1,15 @@
+{
+    "whom":"${0}",
+    "whomType":"Object",
+
+    "channels": [{"name": "andriod"},{"name": "ios"}],
+    
+    "target" : {
+        "userTargettingType": "EVERYONE", 
+        "segmentQuery" : "", 
+        "allowUsers" : "", 
+        "allowUsersUrl" : "", 
+        "denyUsers" : "", 
+        "denyUsersUrl" : "" 
+    }
+}

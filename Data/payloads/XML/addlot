@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lot>
+    <description>ssssss</description>
+    <po>
+        <id>${0}</id>
+    </po>
+    <receivedOn>2016-02-09T17:08:00+05:30</receivedOn>
+    <transporter>sss</transporter>
+    <vehicleNumber>sss</vehicleNumber>
+    <cartonCount>${1}</cartonCount>
+    <piecesCount>${2}</piecesCount>
+    <lrAwbNumber>zzz</lrAwbNumber>
+    <invoiceNumber>auto1</invoiceNumber>
+    <gatepassId>NA</gatepassId>
+    <excessQty>0</excessQty>
+    <missingQty>0</missingQty>
+    <securityCode>zzzz</securityCode>
+</lot>
+
+
+
+
+
+
+
+
+

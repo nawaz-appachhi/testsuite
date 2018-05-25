@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="IDPFoxTestSuite" verbose="1">
+		<parameter name="team" value="Retail Lab"/>
+		<parameter name="core" value="Loyalty"/>
+		<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />		
+	</listeners>
+	<test name="LoyaltyPointServiceTests">
+		
+		
+		<groups>
+			<run>
+				<include name="Fox7Sanity" />
+				
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.LoyaltyService" />
+			<class name="com.myntra.apiTests.portalservices.all.LoyalityPointsTests" >
+			<methods>
+			<exclude name="LoyaltyPoints_createLoyaltyGroup_VerifySuccessResponse" />
+			<exclude name="LoyaltyPoints_createLoyaltyGroup_verifyGroupName" />
+			<exclude name="LoyaltyPoints_getAccountInfo_verifyStatusMessage" />
+			<exclude name="LoyaltyPoints_deleteGroupByID_verifySuccessResponse" />
+			<exclude name="LoyaltyPoints_deleteGroupByID_verifyStatusType" />
+			<exclude name="LoyaltyPoints_getAccountInfo_verifyStatusMessage" />
+			
+			
+			</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

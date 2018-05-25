@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "http://jsonschema.net/meta/code"
+        }
+      },
+      "id": "http://jsonschema.net/meta"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/search/query"
+            },
+            "start": {
+              "type": "integer",
+              "id": "http://jsonschema.net/data/search/start"
+            },
+            "rows": {
+              "type": "integer",
+              "id": "http://jsonschema.net/data/search/rows"
+            },
+            "facetField": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/search/facetField"
+            },
+            "pivotFacets": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/search/pivotFacets"
+            },
+            "fq": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/search/fq"
+            },
+            "return_docs": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/return_docs"
+            },
+            "colour_grouping": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/colour_grouping"
+            },
+            "useCache": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/useCache"
+            },
+            "flatshot": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/flatshot"
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/outOfStock"
+            },
+            "showInactiveStyles": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/showInactiveStyles"
+            },
+            "upsOnly": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/upsOnly"
+            },
+            "connectionClass": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/search/connectionClass"
+            },
+            "facet": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/search/facet"
+            }
+          },
+          "id": "http://jsonschema.net/data/search"
+        },
+        "synonymMap": {
+          "type": "object",
+          "properties": {},
+          "id": "http://jsonschema.net/data/synonymMap"
+        },
+        "queryType": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/queryType"
+        },
+        "totalProductsCount": {
+          "type": "integer",
+          "id": "http://jsonschema.net/data/totalProductsCount"
+        },
+        "listGroup": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/listGroup"
+        },
+        "guidedNavField": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/guidedNavField/name"
+            },
+            "guidedNavEntries": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/guidedNavField/guidedNavEntries"
+            }
+          },
+          "id": "http://jsonschema.net/data/guidedNavField"
+        },
+        "results": {
+          "type": "object",
+          "properties": {
+            "totalProductsCount": {
+              "type": "integer",
+              "id": "http://jsonschema.net/data/results/totalProductsCount"
+            },
+            "filters": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/results/filters"
+            },
+            "products": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/results/products"
+            }
+          },
+          "id": "http://jsonschema.net/data/results"
+        },
+        "seo": {
+          "type": "object",
+          "properties": {
+            "isNoIndexed": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/seo/isNoIndexed"
+            },
+            "isSynonym": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/seo/isSynonym"
+            },
+            "isOrSearch": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/seo/isOrSearch"
+            },
+            "isAndSearch": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/seo/isAndSearch"
+            },
+            "canonicalUri": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/canonicalUri"
+            },
+            "uri": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/uri"
+            },
+            "isParametrized": {
+              "type": "boolean",
+              "id": "http://jsonschema.net/data/seo/isParametrized"
+            },
+            "pattern": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/pattern"
+            },
+            "footerData": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/seo/footerData"
+            },
+            "metaData": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/title"
+                },
+                "keywords": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/keywords"
+                },
+                "description": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/description"
+                },
+                "twitter_card": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/twitter_card"
+                },
+                "twitter_url": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/twitter_url"
+                },
+                "twitter_title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/twitter_title"
+                },
+                "twitter_description": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/twitter_description"
+                },
+                "twitter_image": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/twitter_image"
+                },
+                "image": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/image"
+                },
+                "og_title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/og_title"
+                },
+                "og_url": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/og_url"
+                },
+                "og_description": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/og_description"
+                },
+                "page_title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/page_title"
+                },
+                "ic_title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/ic_title"
+                },
+                "ic_sub_title": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/ic_sub_title"
+                },
+                "ic_content": {
+                  "type": "string",
+                  "id": "http://jsonschema.net/data/seo/metaData/ic_content"
+                }
+              },
+              "id": "http://jsonschema.net/data/seo/metaData"
+            },
+            "dnsPrefetch": {
+              "type": "array",
+              "items": {},
+              "id": "http://jsonschema.net/data/seo/dnsPrefetch"
+            },
+            "shortcutIcon": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/shortcutIcon"
+            },
+            "gPublisher": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/gPublisher"
+            },
+            "twitterCard": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/twitterCard"
+            },
+            "twitterSite": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/twitterSite"
+            },
+            "socialImage": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/socialImage"
+            },
+            "fbAdmins": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/fbAdmins"
+            },
+            "fbAppId": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/fbAppId"
+            },
+            "ogType": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/ogType"
+            },
+            "ogSiteName": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/ogSiteName"
+            },
+            "title": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/seo/title"
+            }
+          },
+          "id": "http://jsonschema.net/data/seo"
+        },
+        "styleRevenueAdjusted6": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/styleRevenueAdjusted6"
+        },
+        "collectionEntries": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/collectionEntries"
+        }
+      },
+      "id": "http://jsonschema.net/data"
+    }
+  },
+  "id": "http://jsonschema.net"
+}

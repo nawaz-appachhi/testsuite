@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GiftBigServicesTestSuite" verbose="1">
+	<parameter name="team" value="Retail Lab"/>
+    <parameter name="core" value="GiftPps"/>
+    <parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="GiftCardServicesTest">
+	
+	<parameter name="team" value="StoreFront Team"/>
+   <parameter name="core" value="GiftCardServices"/>
+   <parameter name="type" value="M7Sanity"/>
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.all.GiftCardServicesTest" />
+		</classes>
+	</test>
+</suite>

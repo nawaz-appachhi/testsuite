@@ -1,0 +1,5 @@
+{
+        "id": ${0},
+        "paymentStatus": "${1}",
+        "declineReasonId": ${2}
+}

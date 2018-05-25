@@ -1,0 +1,71 @@
+{
+    "id": 13004653,
+    "createdBy": "RMS-SYSTEM",
+    "createdOn": "2016-04-04T10:36:33Z",
+    "lastModifiedOn": "2016-04-04T10:36:33Z",
+    "version": 0,
+    "orderId": 109840281,
+    "statusCode": "RRQP",
+    "returnMode": "PICKUP",
+    "comment": "Return created from MyMyntra",
+    "login": "gurushant.jidagi@myntra.com",
+    "mobile": "8095904427",
+    "email": "gurushant.jidagi@myntra.com",
+    "customerName": "Ateeb Hussain",
+    "returnLineEntries": [
+        {
+            "id": 15056499,
+            "createdBy": "RMS-SYSTEM",
+            "createdOn": "2016-04-04T10:36:33Z",
+            "lastModifiedOn": "2016-04-04T10:36:33Z",
+            "version": 0,
+            "returnId": 13004653,
+            "orderId": 109840281,
+            "orderReleaseId": 109840281,
+            "orderLineId": 109299064,
+            "skuId": 5708408,
+            "optionId": 2832324,
+            "returnReasonId": 8,
+            "quantity": 1,
+            "statusCode": "RRQP",
+            "warehouseId": 36,
+            "supplyType": "ON_HAND",
+            "groupKey": "537405",
+            "styleId": 833224,
+            "unitPrice": 1099,
+            "sellerId": 1,
+            "returnLineRefundDetailsEntry": {
+                "refundAmount": 461.58,
+                "cashRedeemed": 0,
+                "refunded": false
+            },
+            "returnLineTrackingDetailsEntry": {},
+            "returnLineAdditionalDetailsEntry": {
+                "version": 0
+            }
+        }
+    ],
+    "returnAddressDetailsEntry": {
+        "addressId": 12291012,
+        "address": "46-89-1, Budhwarapeta",
+        "city": "Kurnool",
+        "state": "AP",
+        "country": "India",
+        "zipcode": "560068"
+    },
+    "returnTrackingDetailsEntry": {
+        "courierCode": "EK"
+    },
+    "returnRefundDetailsEntry": {
+        "deliveryCredit": 0,
+        "pickupCharges": 0,
+        "refundAmount": 461.58,
+        "refunded": false,
+        "refundMode": "OR",
+        "refundAccountId": ""
+    },
+    "returnAdditionalDetailsEntry": {
+        "version": 0,
+        "idealReturnWarehouse": 36
+    }
+}

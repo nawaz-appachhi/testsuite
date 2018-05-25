@@ -1,0 +1,20 @@
+{
+  "checksum": "${0}",
+  "params": {
+    "ppsID": "${1}",
+    "ppsTransactionID": "${2}",
+    "orderId": "${3}",
+    "amount": "${4}",
+    "ppsType": "${5}",
+    "ppsActionType": "SALE",
+    "instrumentActionType": "VOID",
+    "customerID": "${6}",
+    "clientTransactionID" : "${7}",
+    "requestParams": {
+      "partner_name": "${8}",
+      "cardNumber": "${9}",
+      "pinNumber": "${10}",
+      "bill_amount": "${11}"
+    }
+  }
+}

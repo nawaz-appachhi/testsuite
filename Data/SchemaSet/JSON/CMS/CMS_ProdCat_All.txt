@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#", 
+  "definitions": {}, 
+  "id": "http://example.com/example.json", 
+  "properties": {
+    "data": {
+      "id": "http://example.com/example.json/properties/data", 
+      "items": {
+        "id": "http://example.com/example.json/properties/data/items", 
+        "properties": {
+          "filterOrder": {
+            "default": 115, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/filterOrder", 
+            "title": "The filterorder schema", 
+            "type": "integer"
+          }, 
+          "fragile": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/fragile", 
+            "title": "The fragile schema", 
+            "type": "boolean"
+          }, 
+          "id": {
+            "default": 185, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/id", 
+            "title": "The id schema", 
+            "type": "integer"
+          }, 
+          "isActive": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isActive", 
+            "title": "The isactive schema", 
+            "type": "boolean"
+          }, 
+          "isExchangeable": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isExchangeable", 
+            "title": "The isexchangeable schema", 
+            "type": "boolean"
+          }, 
+          "isHazmat": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isHazmat", 
+            "title": "The ishazmat schema", 
+            "type": "boolean"
+          }, 
+          "isJewellery": {
+            "default": false, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isJewellery", 
+            "title": "The isjewellery schema", 
+            "type": "boolean"
+          }, 
+          "isLarge": {
+            "default": false, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isLarge", 
+            "title": "The islarge schema", 
+            "type": "boolean"
+          }, 
+          "isReturnable": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isReturnable", 
+            "title": "The isreturnable schema", 
+            "type": "boolean"
+          }, 
+          "isSocialSharingEnabled": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isSocialSharingEnabled", 
+            "title": "The issocialsharingenabled schema", 
+            "type": "boolean"
+          }, 
+          "isTryAndBuyEnabled": {
+            "default": false, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isTryAndBuyEnabled", 
+            "title": "The istryandbuyenabled schema", 
+            "type": "boolean"
+          }, 
+          "parent1Id": {
+            "default": 166, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/parent1Id", 
+            "title": "The parent1id schema", 
+            "type": "integer"
+          }, 
+          "parent2Id": {
+            "default": 1, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/parent2Id", 
+            "title": "The parent2id schema", 
+            "type": "integer"
+          }, 
+          "pickupEnabled": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/pickupEnabled", 
+            "title": "The pickupenabled schema", 
+            "type": "boolean"
+          }, 
+          "typeCode": {
+            "default": "ACGS", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/typeCode", 
+            "title": "The typecode schema", 
+            "type": "string"
+          }, 
+          "typeName": {
+            "default": "Accessory Gift Set", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/typeName", 
+            "title": "The typename schema", 
+            "type": "string"
+          }
+        }, 
+        "required": [
+          "isTryAndBuyEnabled", 
+          "isActive", 
+          "id", 
+          "isLarge", 
+          "isExchangeable", 
+          "isHazmat", 
+          "typeName", 
+          "parent2Id", 
+          "isSocialSharingEnabled", 
+          "fragile", 
+          "isReturnable", 
+          "isJewellery", 
+          "typeCode", 
+          "parent1Id", 
+          "pickupEnabled"
+        ], 
+        "type": "object"
+      }, 
+      "type": "array"
+    }, 
+    "status": {
+      "id": "http://example.com/example.json/properties/status", 
+      "properties": {
+        "statusCode": {
+          "default": 3, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusCode", 
+          "title": "The statuscode schema", 
+          "type": "integer"
+        }, 
+        "statusMessage": {
+          "default": "Success", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusMessage", 
+          "title": "The statusmessage schema", 
+          "type": "string"
+        }, 
+        "statusType": {
+          "default": "SUCCESS", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusType", 
+          "title": "The statustype schema", 
+          "type": "string"
+        }, 
+        "totalCount": {
+          "default": 392, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/totalCount", 
+          "title": "The totalcount schema", 
+          "type": "integer"
+        }
+      }, 
+      "required": [
+        "statusCode", 
+        "statusMessage", 
+        "statusType", 
+        "totalCount"
+      ], 
+      "type": "object"
+    }
+  }, 
+  "required": [
+    "data", 
+    "status"
+  ], 
+  "type": "object"
+}

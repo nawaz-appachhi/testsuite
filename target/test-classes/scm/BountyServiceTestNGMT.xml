@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Bounty" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="OMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<!--  <listener class-name="com.myntra.lordoftherings.SCMTestListener" />-->
+	</listeners>
+	<test name="BountyServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.bounty.Test.BountyServiceTestMT" />
+		</classes>
+	</test>
+</suite>

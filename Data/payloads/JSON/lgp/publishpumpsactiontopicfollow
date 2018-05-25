@@ -1,0 +1,5 @@
+{
+   "whom":"${0}",
+   "whomType":"User",
+   "verb":"topic_follow"
+}

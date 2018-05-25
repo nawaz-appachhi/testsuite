@@ -1,0 +1,8 @@
+{
+  "transactionId": "${0}",
+  "merchantId": "M2306160483220675579140",
+  "merchantUserId": "${1}",
+  "amount": ${2},
+  "shortName": "test",
+  "email": "debjyoti.roy@myntra.com"
+}

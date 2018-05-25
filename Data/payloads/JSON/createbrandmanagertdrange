@@ -1,0 +1,27 @@
+{
+	"startDate" : ${2},
+	"endDate" : ${3},
+	"minTD" : "10",
+	"maxTD" : "15",
+	"criterias" : {
+		"brands" : ["${1}"],
+		"styleIds" : [${0}],
+		"articleTypes" : [ ],
+		"categories" : [ ],
+		"categoryManagers" : ["${4}"],
+		"subCategories" : [ ],
+		"seasonCodes" : [ ],
+		"genders" : [ ],
+		"merchandiseTypes" : [
+			"OUTRIGHT"
+		],
+		"mrpRanges" : [
+			{
+				"minMrp" : "",
+				"maxMrp" : ""
+			}
+		],
+		"name" : "created by Manish Kumasr",
+		"description" : "Createing TD range for one styleid"
+	}
+}

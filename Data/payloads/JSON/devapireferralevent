@@ -1,0 +1,16 @@
+{
+  
+
+	"eventname":"transaction",
+  
+	"code":"${0}",
+  
+	"email":"${1}",
+  
+	"channelName":"ios/android/windows",
+    
+    "orderId":"${2}",
+
+	"fraud":{"notificationsDisabled":false,"isRooted":false}
+
+}

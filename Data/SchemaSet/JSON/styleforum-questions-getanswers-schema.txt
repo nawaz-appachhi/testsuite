@@ -1,0 +1,350 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "answers": {
+          "id": "http://jsonschema.net/data/answers",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/data/answers/0",
+            "type": "object",
+            "properties": {
+              "type": {
+                "id": "http://jsonschema.net/data/answers/0/type",
+                "type": "string"
+              },
+              "id": {
+                "id": "http://jsonschema.net/data/answers/0/id",
+                "type": "string"
+              },
+              "createdAt": {
+                "id": "http://jsonschema.net/data/answers/0/createdAt",
+                "type": "integer"
+              },
+              "since": {
+                "id": "http://jsonschema.net/data/answers/0/since",
+                "type": "integer"
+              },
+              "commentCount": {
+                "id": "http://jsonschema.net/data/answers/0/commentCount",
+                "type": "integer"
+              },
+              "isFeatured": {
+                "id": "http://jsonschema.net/data/answers/0/isFeatured",
+                "type": "boolean"
+              },
+              "isSpammed": {
+                "id": "http://jsonschema.net/data/answers/0/isSpammed",
+                "type": "boolean"
+              },
+              "isOwner": {
+                "id": "http://jsonschema.net/data/answers/0/isOwner",
+                "type": "boolean"
+              },
+              "isLiked": {
+                "id": "http://jsonschema.net/data/answers/0/isLiked",
+                "type": "boolean"
+              },
+              "upVotes": {
+                "id": "http://jsonschema.net/data/answers/0/upVotes",
+                "type": "integer"
+              },
+              "isAnonymous": {
+                "id": "http://jsonschema.net/data/answers/0/isAnonymous",
+                "type": "boolean"
+              },
+              "description": {
+                "id": "http://jsonschema.net/data/answers/0/description",
+                "type": "array",
+                "items": [
+                  {
+                    "id": "http://jsonschema.net/data/answers/0/description/0",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/answers/0/description/0/type",
+                        "type": "string"
+                      },
+                      "value": {
+                        "id": "http://jsonschema.net/data/answers/0/description/0/value",
+                        "type": "string"
+                      }
+                    }
+                  },
+                  {
+                    "id": "http://jsonschema.net/data/answers/0/description/1",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/answers/0/description/1/type",
+                        "type": "string"
+                      },
+                      "products": {
+                        "id": "http://jsonschema.net/data/answers/0/description/1/products",
+                        "type": "array",
+                        "items": {
+                          "id": "http://jsonschema.net/data/answers/0/description/1/products/0",
+                          "type": "object",
+                          "properties": {
+                            "sizes": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/sizes",
+                              "type": "string"
+                            },
+                            "stylename": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/stylename",
+                              "type": "string"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/search_image",
+                              "type": "string"
+                            },
+                            "discounted_price": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/discounted_price",
+                              "type": "integer"
+                            },
+                            "score": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/score",
+                              "type": "integer"
+                            },
+                            "discount_label": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/discount_label",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "visual_tag": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/visual_tag",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "discount": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/discount",
+                              "type": "integer"
+                            },
+                            "id": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/id",
+                              "type": "string"
+                            },
+                            "product": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/product",
+                              "type": "string"
+                            },
+                            "imageEntry_default": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/imageEntry_default",
+                              "type": "string"
+                            },
+                            "price": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/price",
+                              "type": "integer"
+                            },
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/styleid",
+                              "type": "integer"
+                            },
+                            "brands_filter_facet": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/brands_filter_facet",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/global_attr_colour1",
+                              "type": "string"
+                            },
+                            "style_group": {
+                              "id": "http://jsonschema.net/data/answers/0/description/1/products/0/style_group",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "http://jsonschema.net/data/answers/0/description/2",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "id": "http://jsonschema.net/data/answers/0/description/2/type",
+                        "type": "string"
+                      },
+                      "images": {
+                        "id": "http://jsonschema.net/data/answers/0/description/2/images",
+                        "type": "array",
+                        "items": [
+                          {
+                            "id": "http://jsonschema.net/data/answers/0/description/2/images/0",
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "id": "http://jsonschema.net/data/answers/0/description/2/images/0/id",
+                                "type": "string"
+                              },
+                              "url": {
+                                "id": "http://jsonschema.net/data/answers/0/description/2/images/0/url",
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          },
+                          {
+                            "id": "http://jsonschema.net/data/answers/0/description/2/images/1",
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "id": "http://jsonschema.net/data/answers/0/description/2/images/1/id",
+                                "type": "string"
+                              },
+                              "url": {
+                                "id": "http://jsonschema.net/data/answers/0/description/2/images/1/url",
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "parent": {
+                "id": "http://jsonschema.net/data/answers/0/parent",
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "id": "http://jsonschema.net/data/answers/0/parent/type",
+                    "type": "null"
+                  },
+                  "id": {
+                    "id": "http://jsonschema.net/data/answers/0/parent/id",
+                    "type": "integer"
+                  }
+                }
+              },
+              "topParent": {
+                "id": "http://jsonschema.net/data/answers/0/topParent",
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "id": "http://jsonschema.net/data/answers/0/topParent/type",
+                    "type": "null"
+                  },
+                  "id": {
+                    "id": "http://jsonschema.net/data/answers/0/topParent/id",
+                    "type": "integer"
+                  }
+                }
+              },
+              "questionId": {
+                "id": "http://jsonschema.net/data/answers/0/questionId",
+                "type": "integer"
+              },
+              "user": {
+                "id": "http://jsonschema.net/data/answers/0/user",
+                "type": "object",
+                "properties": {
+                  "firstname": {
+                    "id": "http://jsonschema.net/data/answers/0/user/firstname",
+                    "type": "null"
+                  },
+                  "lastname": {
+                    "id": "http://jsonschema.net/data/answers/0/user/lastname",
+                    "type": "null"
+                  },
+                  "bio": {
+                    "id": "http://jsonschema.net/data/answers/0/user/bio",
+                    "type": "null"
+                  },
+                  "imageJsonEntryMap": {
+                    "id": "http://jsonschema.net/data/answers/0/user/imageJsonEntryMap",
+                    "type": "null"
+                  },
+                  "image": {
+                    "id": "http://jsonschema.net/data/answers/0/user/image",
+                    "type": "null"
+                  },
+                  "imageType": {
+                    "id": "http://jsonschema.net/data/answers/0/user/imageType",
+                    "type": "null"
+                  },
+                  "coverImage": {
+                    "id": "http://jsonschema.net/data/answers/0/user/coverImage",
+                    "type": "null"
+                  },
+                  "coverImageType": {
+                    "id": "http://jsonschema.net/data/answers/0/user/coverImageType",
+                    "type": "null"
+                  },
+                  "publicProfileId": {
+                    "id": "http://jsonschema.net/data/answers/0/user/publicProfileId",
+                    "type": "string"
+                  },
+                  "uidx": {
+                    "id": "http://jsonschema.net/data/answers/0/user/uidx",
+                    "type": "string"
+                  },
+                  "tagsMap": {
+                    "id": "http://jsonschema.net/data/answers/0/user/tagsMap",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id",
+              "createdAt",
+              "since",
+              "commentCount",
+              "isFeatured",
+              "isSpammed",
+              "isOwner",
+              "isLiked",
+              "upVotes",
+              "isAnonymous",
+              "description",
+              "parent",
+              "topParent",
+              "questionId",
+              "user"
+            ]
+          },
+          "required": [
+            "0"
+          ]
+        },
+        "count": {
+          "id": "http://jsonschema.net/data/count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answers",
+        "count"
+      ]
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "status": {
+          "id": "http://jsonschema.net/meta/status",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

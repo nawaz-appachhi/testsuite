@@ -1,0 +1,9 @@
+{
+	"vfStyleDTOs" :[
+		{
+			"styleId" : ${0},
+			"vendorFundedPercentage": ${1}
+		}
+		]
+		
+}

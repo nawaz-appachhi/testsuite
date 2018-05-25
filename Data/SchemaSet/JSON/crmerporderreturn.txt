@@ -1,0 +1,273 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"customerReturnResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"customerReturnEntryList": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"customerReturnEntry": {
+							"type":"object",
+	
+							"required":false,
+							"properties":{
+								"city": {
+									"type":"string",
+									"required":false
+								},
+								"country": {
+									"type":"string",
+									"required":false
+								},
+								"courierService": {
+									"type":"string",
+									"required":false
+								},
+								"customeReturnTripAssignments": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"customerReturnTripAssignment": {
+											"type":"object",
+											"required":false,
+											"properties":{
+												"deliveryStaffName": {
+													"type":"string",
+													"required":false
+												},
+												"remark": {
+													"type":"string",
+													"required":false
+												}
+											}
+										}
+									}
+								},
+								"customerName": {
+									"type":"string",
+									"required":false
+								},
+								"customerReturnCommentEntryList": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"customerReturnCommentEntry": {
+											"type":"array",
+											"required":false,
+											"items":
+												{
+													"type":"object",
+													"required":false,
+													"properties":{
+														"returnCommentBy": {
+															"type":"string",
+															"required":false
+														},
+														"returnCommentCreatedDate": {
+															"type":"string",
+															"required":false
+														},
+														"returnCommentDescription": {
+															"type":"string",
+															"required":false
+														},
+														"returnComment": {
+															"type":"string",
+															"required":false
+														}
+													}
+												}
+											
+
+										}
+									}
+								},
+								"customerReturnItemEntry": {
+									"type":"object",
+									"required":false,
+									"properties":{
+										"articleTypeName": {
+											"type":"string",
+											"required":false
+										},
+										"brandName": {
+											"type":"string",
+											"required":false
+										},
+										"searchImagezURL": {
+											"type":"string",
+											"required":false
+										},
+										"size": {
+											"type":"string",
+											"required":false
+										},
+										"skuId": {
+											"type":"number",
+											"required":false
+										},
+										"styleId": {
+											"type":"number",
+											"required":false
+										},
+										"styleName": {
+											"type":"string",
+											"required":false
+										},
+										"unitPrice": {
+											"type":"number",
+											"required":false
+										},
+										"vendorArticleNo": {
+											"type":"string",
+											"required":false
+										}
+									}
+								},
+								"customerReturnTrackingDetails": {
+									"type":"string",
+									"required":false
+								},
+								"itemBarCode": {
+									"type":"number",
+									"required":false
+								},
+								"itemId": {
+									"type":"number",
+									"required":false
+								},
+								"login": {
+									"type":"string",
+									"required":false
+								},
+								"mobile": {
+									"type":"number",
+									"required":false
+								},
+								"orderId": {
+									"type":"number",
+									"required":false
+								},
+								"pickupApprovalStatus": {
+									"type":"string",
+									"required":false
+								},
+								"pickupCharge": {
+									"type":"number",
+									"required":false
+								},
+								"pickupDeliveryStatus": {
+									"type":"string",
+									"required":false
+								},
+								"quantity": {
+									"type":"number",
+									"required":false
+								},
+								"refundAmount": {
+									"type":"number",
+									"required":false
+								},
+								"returnAddress": {
+									"type":"string",
+									"required":false
+								},
+								"returnCreatedDate": {
+									"type":"string",
+									"required":false
+								},
+								"returnDescription": {
+									"type":"string",
+									"required":false
+								},
+								"returnId": {
+									"type":"number",
+									"required":false
+								},
+								"returnMode": {
+									"type":"string",
+									"required":false
+								},
+								"returnReason": {
+									"type":"string",
+									"required":false
+								},
+								"returnStatusCode": {
+									"type":"string",
+									"required":false
+								},
+								"returnStatusDescription": {
+									"type":"string",
+									"required":false
+								},
+								"returnStatusName": {
+									"type":"string",
+									"required":false
+								},
+								"returnStatus": {
+									"type":"string",
+									"required":false
+								},
+								"size": {
+									"type":"string",
+									"required":false
+								},
+								"skuCode": {
+									"type":"string",
+									"required":false
+								},
+								"state": {
+									"type":"string",
+									"required":false
+								},
+								"trackingNumber": {
+									"type":"string",
+									"required":false
+								},
+								"wareHouseId": {
+									"type":"number",
+									"required":false
+								},
+								"wareHouseName": {
+									"type":"string",
+									"required":false
+								},
+								"zipCode": {
+									"type":"number",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":true
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":true
+						},
+						"statusType": {
+							"type":"string",
+							"required":true
+						},
+						"totalCount": {
+							"type":"number",
+							"required":false
+						}
+					}
+				}
+			}
+		}
+	}
+}

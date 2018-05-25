@@ -1,0 +1,12 @@
+{
+
+"login" : "${0}",
+"earnedCreditAmount" :"${1}" ,
+"storeCreditAmount" : "0",
+"debitAmount" : "0",
+"description" : "test",
+"businessProcess" : "CASHBACK_REVERSAL",
+"itemType" : "ORDER",
+"itemId" : "123412"
+
+}

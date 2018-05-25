@@ -1,0 +1,8 @@
+{
+    "checksum":"${0}",
+    "params":{
+        "ppsID":"${1}",
+        "clientTransactionID":"${2}",
+        "orderId":"${3}"
+    }
+}

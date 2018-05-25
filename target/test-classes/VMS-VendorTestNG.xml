@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="VendorService" verbose="1">
+    <parameter name="team" value="InBound"/>
+	<parameter name="core" value="PartnerExp"/>
+	<parameter name="type" value="Regression"/>
+	<parameter name="environment" value="M7"/>
+	<parameter name="vendorServiceURL" value="http://m7vmsservice.mpreprod.myntra.com/myntra-vms-service/vendorService"/>
+	<parameter name="vmsURL" value="http://m7vmsservice.mpreprod.myntra.com/myntra-vms-service/vms"/>
+	<parameter name="termsURL" value="http://m7termsservice.mpreprod.myntra.com/terms-service"/>
+	<parameter name="searchPOTermMultiplePartners" value="{&quot;searchEntries&quot;:[{&quot;searchType&quot;:&quot;FILTER&quot;,&quot;requestId&quot;:1,&quot;searchTermTypes&quot;:[&quot;PO&quot;],&quot;start&quot;:0,&quot;fetchSize&quot;:50,&quot;vendorTermsSearchRequest&quot;:{&quot;brandTypeIds&quot;:[],&quot;agreementTypeIds&quot;:[46],&quot;masterCategoryIds&quot;:[1],&quot;additionalClassificationIds&quot;:[11]},&quot;partyIds&quot;:%s,&quot;accountId&quot;:1,&quot;contractTypeId&quot;:1}]}" />
+	<parameter name="createMoqTerm" value="{&quot;moqTermsResponse&quot;:{&quot;moqTermEntries&quot;:[{&quot;accountId&quot;:1,&quot;contractTypeId&quot;:1,&quot;partyEntry&quot;:{&quot;id&quot;:%s},&quot;agmntStartDate&quot;:&quot;2016-09-01&quot;,&quot;agmntEndDate&quot;:&quot;2017-09-01&quot;,&quot;autoRenewal&quot;:&quot;YES&quot;,&quot;autoRenewalCycleEntry&quot;:{&quot;id&quot;:18},&quot;termStatus&quot;:&quot;DRAFT&quot;,&quot;brandCode&quot;:&quot;PUMA&quot;,&quot;moq&quot;:250,&quot;termType&quot;:&quot;MOQ&quot;,&quot;termAction&quot;:&quot;CREATE&quot;}]}}" />
+	<parameter name="searchMoqTerm" value="{&quot;searchEntries&quot;:[{&quot;searchType&quot;:&quot;FILTER&quot;,&quot;requestId&quot;:1,&quot;searchTermTypes&quot;:[&quot;MOQ&quot;],&quot;start&quot;:0,&quot;fetchSize&quot;:50,&quot;moqTermsSearchRequest&quot;:{&quot;brandCode&quot;:[&quot;PUMA&quot;]},&quot;partyIds&quot;:%s,&quot;accountId&quot;:1,&quot;contractTypeId&quot;:1}]}" />
+	<parameter name="updateMoqTerm" value="{&quot;moqTermsResponse&quot;:{&quot;moqTermEntries&quot;:[{&quot;id&quot;:%s,&quot;createdBy&quot;:&quot;system&quot;,&quot;createdOn&quot;:1498894576901,&quot;lastModifiedOn&quot;:1498894576901,&quot;version&quot;:0,&quot;accountId&quot;:1,&quot;contractTypeId&quot;:1,&quot;contractId&quot;:1620,&quot;partyEntry&quot;:{&quot;id&quot;:%s},&quot;agmntStartDate&quot;:&quot;2016-09-01&quot;,&quot;agmntEndDate&quot;:&quot;2017-09-01&quot;,&quot;isOnHold&quot;:&quot;NO&quot;,&quot;archiveId&quot;:-2,&quot;autoRenewal&quot;:&quot;YES&quot;,&quot;autoRenewalCycleEntry&quot;:{&quot;id&quot;:18},&quot;termStatus&quot;:&quot;DRAFT&quot;,&quot;brandCode&quot;:&quot;REEBOK&quot;,&quot;moq&quot;:250,&quot;termType&quot;:&quot;MOQ&quot;,&quot;termAction&quot;:&quot;SEND_FOR_ACTIVATION&quot;}]}}" />
+	<parameter name="unityUsername" value="erpadmin" />
+	<parameter name="unityPassword" value="welcome@258" />
+	<parameter name="bulkUploadFile" value="vendor-terms-PO-Template.csv" />
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.CustomReportListener" />
+	</listeners>
+	<test name="VendorServiceTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+				<exclude name="exclude" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.VendorManagementService" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.VmsInvoiceUpload" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.VendorItemMasterServices" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.TermsTest" />
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.SellerConfigurationTest" />
+		</classes>
+	</test>
+</suite>

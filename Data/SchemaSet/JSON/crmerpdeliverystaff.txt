@@ -1,0 +1,113 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"tripDeliveryStaffResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":false
+						}
+					}
+				},
+				"tripDeliveryStaffEntry": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"available": {
+							"type":"boolean",
+							"required":false
+						},
+						"code": {
+							"type":"string",
+							"required":false
+						},
+						"dcActive": {
+							"type":"boolean",
+							"required":false
+						},
+						"dcAddress": {
+							"type":"string",
+							"required":false
+						},
+						"dcCityCode": {
+							"type":"string",
+							"required":false
+						},
+						"dcCity": {
+							"type":"string",
+							"required":false
+						},
+						"dcCode": {
+							"type":"string",
+							"required":false
+						},
+						"dcContactNumber": {
+							"type":"number",
+							"required":false
+						},
+						"dcCourierCode": {
+							"type":"string",
+							"required":false
+						},
+						"dcManager": {
+							"type":"string",
+							"required":false
+						},
+						"dcName": {
+							"type":"string",
+							"required":false
+						},
+						"dcPincode": {
+							"type":"number",
+							"required":false
+						},
+						"dcSelfShipSupport": {
+							"type":"boolean",
+							"required":false
+						},
+						"dcState": {
+							"type":"string",
+							"required":false
+						},
+						"deleted": {
+							"type":"boolean",
+							"required":false
+						},
+						"firstName": {
+							"type":"string",
+							"required":false
+						},
+						"lastName": {
+							"type":"string",
+							"required":false
+						},
+						"mobile": {
+							"type":"number",
+							"required":false
+						}
+					}
+				}
+			}
+		}
+	}
+}

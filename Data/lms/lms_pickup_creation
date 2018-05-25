@@ -1,0 +1,14 @@
+delete from trip_order_assignment where return_id=10566583;
+delete from order_tracking_detail where order_tracking_id =(select id from order_tracking where return_id=10566583);
+delete from order_tracking where return_id=10566583;
+delete from pickup where return_id=10566583;
+
+
+INSERT INTO `order_tracking` (`id`, `created_by`, `created_on`, `last_modified_on`, `version`, `courier_code`, `delivery_date`, `delivery_status`, `failed_attempts`, `last_scan_time`, `pickup_date`, `order_id`, `return_id`, `shipment_type`, `tracking_no`, `tracking_task_status`, `is_synced_with_portal`, `rto_date`, `first_attempt_date`, `last_attempt_date`, `lost_on_date`, `courier_creation_status`, `order_tracking_status`, `shipment_status`, `rto_received_date`)
+VALUES
+	(null, 'vkr.mpfc', now(), now(), 1, 'ML', NULL, 'RIT', 0, NULL, NULL, 70041547, 10566583, 'PU', 'ML0008926195', NULL, 0, NULL, null, null, NULL, NULL, NULL, NULL, NULL);
+
+
+INSERT INTO `pickup` (`id`, `created_by`, `created_on`, `last_modified_on`, `version`, `return_id`, `order_id`, `address`, `city`, `country`, `email`, `first_name`, `last_name`, `mobile`, `state`, `title`, `zipcode`, `cust_mobile`, `status`, `delivery_center_id`, `exchange_order_id`, `item_description`, `approval_status`, `customer_signature`, `locality`, `po_number`, `dest_warehouse_id`, `courier_code`, `quantity`, `vendor_code`, `remarks`, `route`, `style_ids`)
+VALUES
+	(1648659, 'system', now(), now(), 1, 10566583, 70041547, '002-x,c-block,lakeview county1,singasandra,banglore-560068', 'Bangalore', 'IN', 'ashutosh.tripathi@myntra.com', 'ashutosh', 'ashutosh', '8792258384', 'KA', NULL, '560068', '8792258384', 'FP', 33, NULL, 'Roadster Men Black Casual Shoes:Size - UK9:SKU code - RDSTCASH01336:Qty - 1:Article No - 4049-BLACK-288607:MRP per qty - 1499.0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '288607');

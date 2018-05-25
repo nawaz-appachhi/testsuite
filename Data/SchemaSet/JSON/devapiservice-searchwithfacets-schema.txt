@@ -1,0 +1,1566 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "search": {
+          "id": "http://jsonschema.net/data/search",
+          "type": "object",
+          "properties": {
+            "query": {
+              "id": "http://jsonschema.net/data/search/query",
+              "type": "string"
+            },
+            "start": {
+              "id": "http://jsonschema.net/data/search/start",
+              "type": "integer"
+            },
+            "rows": {
+              "id": "http://jsonschema.net/data/search/rows",
+              "type": "integer"
+            },
+            "facetField": {
+              "id": "http://jsonschema.net/data/search/facetField",
+              "type": "array",
+              "items": []
+            },
+            "fq": {
+              "id": "http://jsonschema.net/data/search/fq",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/data/search/fq/0",
+                  "type": "string"
+                },
+                {
+                  "id": "http://jsonschema.net/data/search/fq/1",
+                  "type": "string"
+                }
+              ]
+            },
+            "sort": {
+              "id": "http://jsonschema.net/data/search/sort",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/data/search/sort/0",
+                  "type": "object",
+                  "properties": {
+                    "sort_field": {
+                      "id": "http://jsonschema.net/data/search/sort/0/sort_field",
+                      "type": "string"
+                    },
+                    "order_by": {
+                      "id": "http://jsonschema.net/data/search/sort/0/order_by",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/search/sort/1",
+                  "type": "object",
+                  "properties": {
+                    "sort_field": {
+                      "id": "http://jsonschema.net/data/search/sort/1/sort_field",
+                      "type": "string"
+                    },
+                    "order_by": {
+                      "id": "http://jsonschema.net/data/search/sort/1/order_by",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/search/sort/2",
+                  "type": "object",
+                  "properties": {
+                    "sort_field": {
+                      "id": "http://jsonschema.net/data/search/sort/2/sort_field",
+                      "type": "string"
+                    },
+                    "order_by": {
+                      "id": "http://jsonschema.net/data/search/sort/2/order_by",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/search/sort/3",
+                  "type": "object",
+                  "properties": {
+                    "sort_field": {
+                      "id": "http://jsonschema.net/data/search/sort/3/sort_field",
+                      "type": "string"
+                    },
+                    "order_by": {
+                      "id": "http://jsonschema.net/data/search/sort/3/order_by",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/search/sort/4",
+                  "type": "object",
+                  "properties": {
+                    "sort_field": {
+                      "id": "http://jsonschema.net/data/search/sort/4/sort_field",
+                      "type": "string"
+                    },
+                    "order_by": {
+                      "id": "http://jsonschema.net/data/search/sort/4/order_by",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "return_docs": {
+              "id": "http://jsonschema.net/data/search/return_docs",
+              "type": "boolean"
+            },
+            "colour_grouping": {
+              "id": "http://jsonschema.net/data/search/colour_grouping",
+              "type": "boolean"
+            },
+            "useCache": {
+              "id": "http://jsonschema.net/data/search/useCache",
+              "type": "boolean"
+            },
+            "facet": {
+              "id": "http://jsonschema.net/data/search/facet",
+              "type": "boolean"
+            }
+          }
+        },
+        "synonymMap": {
+          "id": "http://jsonschema.net/data/synonymMap",
+          "type": "object",
+          "properties": {}
+        },
+        "queryType": {
+          "id": "http://jsonschema.net/data/queryType",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/data/queryType/0",
+            "type": "string"
+          }
+        },
+        "totalProductsCount": {
+          "id": "http://jsonschema.net/data/totalProductsCount",
+          "type": "integer"
+        },
+        "listGroup": {
+          "id": "http://jsonschema.net/data/listGroup",
+          "type": "string"
+        },
+        "results": {
+          "id": "http://jsonschema.net/data/results",
+          "type": "object",
+          "properties": {
+            "totalProductsCount": {
+              "id": "http://jsonschema.net/data/results/totalProductsCount",
+              "type": "integer"
+            },
+            "filters": {
+              "id": "http://jsonschema.net/data/results/filters",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/data/results/filters/0",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/0/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/0/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/0/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/0/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/0/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/0/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/0/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/1",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/1/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/1/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/1/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/1/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/1/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/1/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/1/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/2",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/2/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/2/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/2/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/2/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/2/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/2/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/2/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/3",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/3/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/3/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/3/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/3/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/3/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/3/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/3/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/4",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/4/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/4/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/4/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/4/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/4/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/4/values/2",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/2/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/2/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/2/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/2/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/4/values/3",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/3/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/3/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/3/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/4/values/3/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/4/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/5",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/5/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/5/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/5/values",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/5/values/0",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/0/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/0/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/0/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/0/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/5/values/1",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/1/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/1/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/1/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/1/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/5/values/2",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/2/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/2/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/2/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/2/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/filters/5/values/3",
+                          "type": "object",
+                          "properties": {
+                            "num": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/3/num",
+                              "type": "integer"
+                            },
+                            "option": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/3/option",
+                              "type": "string"
+                            },
+                            "disabled": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/3/disabled",
+                              "type": "boolean"
+                            },
+                            "checked": {
+                              "id": "http://jsonschema.net/data/results/filters/5/values/3/checked",
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/5/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/6",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/6/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/6/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/6/values",
+                      "type": "object",
+                      "properties": {
+                        "breakUps": {
+                          "id": "http://jsonschema.net/data/results/filters/6/values/breakUps",
+                          "type": "array",
+                          "items": [
+                            {
+                              "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/0",
+                              "type": "object",
+                              "properties": {
+                                "range": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/0/range",
+                                  "type": "string"
+                                },
+                                "rangeMin": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/0/rangeMin",
+                                  "type": "string"
+                                },
+                                "occurrence": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/0/occurrence",
+                                  "type": "string"
+                                },
+                                "rangeMax": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/0/rangeMax",
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/1",
+                              "type": "object",
+                              "properties": {
+                                "range": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/1/range",
+                                  "type": "string"
+                                },
+                                "rangeMin": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/1/rangeMin",
+                                  "type": "string"
+                                },
+                                "occurrence": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/1/occurrence",
+                                  "type": "string"
+                                },
+                                "rangeMax": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/1/rangeMax",
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/2",
+                              "type": "object",
+                              "properties": {
+                                "range": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/2/range",
+                                  "type": "string"
+                                },
+                                "rangeMin": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/2/rangeMin",
+                                  "type": "string"
+                                },
+                                "occurrence": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/2/occurrence",
+                                  "type": "string"
+                                },
+                                "rangeMax": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/2/rangeMax",
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/3",
+                              "type": "object",
+                              "properties": {
+                                "range": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/3/range",
+                                  "type": "string"
+                                },
+                                "rangeMin": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/3/rangeMin",
+                                  "type": "string"
+                                },
+                                "occurrence": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/3/occurrence",
+                                  "type": "string"
+                                },
+                                "rangeMax": {
+                                  "id": "http://jsonschema.net/data/results/filters/6/values/breakUps/3/rangeMax",
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "rangeMin": {
+                          "id": "http://jsonschema.net/data/results/filters/6/values/rangeMin",
+                          "type": "integer"
+                        },
+                        "rangeMax": {
+                          "id": "http://jsonschema.net/data/results/filters/6/values/rangeMax",
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/6/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/7",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/7/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/7/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/7/values",
+                      "type": "array",
+                      "items": []
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/7/common",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/filters/8",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "id": "http://jsonschema.net/data/results/filters/8/title",
+                      "type": "string"
+                    },
+                    "key": {
+                      "id": "http://jsonschema.net/data/results/filters/8/key",
+                      "type": "string"
+                    },
+                    "values": {
+                      "id": "http://jsonschema.net/data/results/filters/8/values",
+                      "type": "array",
+                      "items": []
+                    },
+                    "common": {
+                      "id": "http://jsonschema.net/data/results/filters/8/common",
+                      "type": "boolean"
+                    }
+                  }
+                }
+              ]
+            },
+            "products": {
+              "id": "http://jsonschema.net/data/results/products",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/data/results/products/0",
+                  "type": "object",
+                  "properties": {
+                    "sizes": {
+                      "id": "http://jsonschema.net/data/results/products/0/sizes",
+                      "type": "string"
+                    },
+                    "stylename": {
+                      "id": "http://jsonschema.net/data/results/products/0/stylename",
+                      "type": "string"
+                    },
+                    "search_image": {
+                      "id": "http://jsonschema.net/data/results/products/0/search_image",
+                      "type": "string"
+                    },
+                    "discounted_price": {
+                      "id": "http://jsonschema.net/data/results/products/0/discounted_price",
+                      "type": "integer"
+                    },
+                    "score": {
+                      "id": "http://jsonschema.net/data/results/products/0/score",
+                      "type": "integer"
+                    },
+                    "discount_label": {
+                      "id": "http://jsonschema.net/data/results/products/0/discount_label",
+                      "type": "string"
+                    },
+                    "dre_landing_page_url": {
+                      "id": "http://jsonschema.net/data/results/products/0/dre_landing_page_url",
+                      "type": "string"
+                    },
+                    "visual_tag": {
+                      "id": "http://jsonschema.net/data/results/products/0/visual_tag",
+                      "type": "string"
+                    },
+                    "global_attr_base_colour": {
+                      "id": "http://jsonschema.net/data/results/products/0/global_attr_base_colour",
+                      "type": "string"
+                    },
+                    "discount": {
+                      "id": "http://jsonschema.net/data/results/products/0/discount",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "id": "http://jsonschema.net/data/results/products/0/id",
+                      "type": "string"
+                    },
+                    "product": {
+                      "id": "http://jsonschema.net/data/results/products/0/product",
+                      "type": "string"
+                    },
+                    "imageEntry_default": {
+                      "id": "http://jsonschema.net/data/results/products/0/imageEntry_default",
+                      "type": "string"
+                    },
+                    "price": {
+                      "id": "http://jsonschema.net/data/results/products/0/price",
+                      "type": "integer"
+                    },
+                    "brands_filter_facet": {
+                      "id": "http://jsonschema.net/data/results/products/0/brands_filter_facet",
+                      "type": "string"
+                    },
+                    "styleid": {
+                      "id": "http://jsonschema.net/data/results/products/0/styleid",
+                      "type": "integer"
+                    },
+                    "global_attr_colour1": {
+                      "id": "http://jsonschema.net/data/results/products/0/global_attr_colour1",
+                      "type": "string"
+                    },
+                    "style_group": {
+                      "id": "http://jsonschema.net/data/results/products/0/style_group",
+                      "type": "string"
+                    },
+                    "allSkuForSizes": {
+                      "id": "http://jsonschema.net/data/results/products/0/allSkuForSizes",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/data/results/products/0/allSkuForSizes/0",
+                          "type": "string"
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/products/0/allSkuForSizes/1",
+                          "type": "string"
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/products/0/allSkuForSizes/2",
+                          "type": "string"
+                        },
+                        {
+                          "id": "http://jsonschema.net/data/results/products/0/allSkuForSizes/3",
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/products/1",
+                  "type": "object",
+                  "properties": {
+                    "sizes": {
+                      "id": "http://jsonschema.net/data/results/products/1/sizes",
+                      "type": "string"
+                    },
+                    "colourVariantsData": {
+                      "id": "http://jsonschema.net/data/results/products/1/colourVariantsData",
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "stylename": {
+                      "id": "http://jsonschema.net/data/results/products/1/stylename",
+                      "type": "string"
+                    },
+                    "search_image": {
+                      "id": "http://jsonschema.net/data/results/products/1/search_image",
+                      "type": "string"
+                    },
+                    "discounted_price": {
+                      "id": "http://jsonschema.net/data/results/products/1/discounted_price",
+                      "type": "integer"
+                    },
+                    "score": {
+                      "id": "http://jsonschema.net/data/results/products/1/score",
+                      "type": "integer"
+                    },
+                    "discount_label": {
+                      "id": "http://jsonschema.net/data/results/products/1/discount_label",
+                      "type": "string"
+                    },
+                    "dre_landing_page_url": {
+                      "id": "http://jsonschema.net/data/results/products/1/dre_landing_page_url",
+                      "type": "string"
+                    },
+                    "visual_tag": {
+                      "id": "http://jsonschema.net/data/results/products/1/visual_tag",
+                      "type": "string"
+                    },
+                    "global_attr_base_colour": {
+                      "id": "http://jsonschema.net/data/results/products/1/global_attr_base_colour",
+                      "type": "string"
+                    },
+                    "discount": {
+                      "id": "http://jsonschema.net/data/results/products/1/discount",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "id": "http://jsonschema.net/data/results/products/1/id",
+                      "type": "string"
+                    },
+                    "product": {
+                      "id": "http://jsonschema.net/data/results/products/1/product",
+                      "type": "string"
+                    },
+                    "imageEntry_default": {
+                      "id": "http://jsonschema.net/data/results/products/1/imageEntry_default",
+                      "type": "string"
+                    },
+                    "price": {
+                      "id": "http://jsonschema.net/data/results/products/1/price",
+                      "type": "integer"
+                    },
+                    "brands_filter_facet": {
+                      "id": "http://jsonschema.net/data/results/products/1/brands_filter_facet",
+                      "type": "string"
+                    },
+                    "styleid": {
+                      "id": "http://jsonschema.net/data/results/products/1/styleid",
+                      "type": "integer"
+                    },
+                    "global_attr_colour1": {
+                      "id": "http://jsonschema.net/data/results/products/1/global_attr_colour1",
+                      "type": "string"
+                    },
+                    "style_group": {
+                      "id": "http://jsonschema.net/data/results/products/1/style_group",
+                      "type": "string"
+                    },
+                    "allSkuForSizes": {
+                      "id": "http://jsonschema.net/data/results/products/1/allSkuForSizes",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/products/2",
+                  "type": "object",
+                  "properties": {
+                    "sizes": {
+                      "id": "http://jsonschema.net/data/results/products/2/sizes",
+                      "type": "string"
+                    },
+                    "colourVariantsData": {
+                      "id": "http://jsonschema.net/data/results/products/2/colourVariantsData",
+                      "type": "object",
+                      "properties": {
+                        "84324": {
+                          "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324",
+                          "type": "object",
+                          "properties": {
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324/styleid",
+                              "type": "integer"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324/search_image",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/results/products/2/colourVariantsData/84324/global_attr_colour1",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "stylename": {
+                      "id": "http://jsonschema.net/data/results/products/2/stylename",
+                      "type": "string"
+                    },
+                    "search_image": {
+                      "id": "http://jsonschema.net/data/results/products/2/search_image",
+                      "type": "string"
+                    },
+                    "discounted_price": {
+                      "id": "http://jsonschema.net/data/results/products/2/discounted_price",
+                      "type": "integer"
+                    },
+                    "score": {
+                      "id": "http://jsonschema.net/data/results/products/2/score",
+                      "type": "integer"
+                    },
+                    "discount_label": {
+                      "id": "http://jsonschema.net/data/results/products/2/discount_label",
+                      "type": "string"
+                    },
+                    "dre_landing_page_url": {
+                      "id": "http://jsonschema.net/data/results/products/2/dre_landing_page_url",
+                      "type": "string"
+                    },
+                    "visual_tag": {
+                      "id": "http://jsonschema.net/data/results/products/2/visual_tag",
+                      "type": "string"
+                    },
+                    "global_attr_base_colour": {
+                      "id": "http://jsonschema.net/data/results/products/2/global_attr_base_colour",
+                      "type": "string"
+                    },
+                    "discount": {
+                      "id": "http://jsonschema.net/data/results/products/2/discount",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "id": "http://jsonschema.net/data/results/products/2/id",
+                      "type": "string"
+                    },
+                    "product": {
+                      "id": "http://jsonschema.net/data/results/products/2/product",
+                      "type": "string"
+                    },
+                    "imageEntry_default": {
+                      "id": "http://jsonschema.net/data/results/products/2/imageEntry_default",
+                      "type": "string"
+                    },
+                    "price": {
+                      "id": "http://jsonschema.net/data/results/products/2/price",
+                      "type": "integer"
+                    },
+                    "brands_filter_facet": {
+                      "id": "http://jsonschema.net/data/results/products/2/brands_filter_facet",
+                      "type": "string"
+                    },
+                    "styleid": {
+                      "id": "http://jsonschema.net/data/results/products/2/styleid",
+                      "type": "integer"
+                    },
+                    "global_attr_colour1": {
+                      "id": "http://jsonschema.net/data/results/products/2/global_attr_colour1",
+                      "type": "string"
+                    },
+                    "style_group": {
+                      "id": "http://jsonschema.net/data/results/products/2/style_group",
+                      "type": "string"
+                    },
+                    "allSkuForSizes": {
+                      "id": "http://jsonschema.net/data/results/products/2/allSkuForSizes",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/products/3",
+                  "type": "object",
+                  "properties": {
+                    "sizes": {
+                      "id": "http://jsonschema.net/data/results/products/3/sizes",
+                      "type": "string"
+                    },
+                    "colourVariantsData": {
+                      "id": "http://jsonschema.net/data/results/products/3/colourVariantsData",
+                      "type": "object",
+                      "properties": {
+                        "84339": {
+                          "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339",
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/id",
+                              "type": "string"
+                            },
+                            "product": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/product",
+                              "type": "string"
+                            },
+                            "price": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/price",
+                              "type": "integer"
+                            },
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/styleid",
+                              "type": "integer"
+                            },
+                            "stylename": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/stylename",
+                              "type": "string"
+                            },
+                            "visual_tag": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/visual_tag",
+                              "type": "string"
+                            },
+                            "imageEntry_default": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/imageEntry_default",
+                              "type": "string"
+                            },
+                            "allSkuForSizes": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/allSkuForSizes",
+                              "type": "string"
+                            },
+                            "discount": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/discount",
+                              "type": "integer"
+                            },
+                            "discount_label": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/discount_label",
+                              "type": "string"
+                            },
+                            "discounted_price": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/discounted_price",
+                              "type": "integer"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/search_image",
+                              "type": "string"
+                            },
+                            "brands_filter_facet": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/brands_filter_facet",
+                              "type": "string"
+                            },
+                            "style_group": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/style_group",
+                              "type": "string"
+                            },
+                            "sizes": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/sizes",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/global_attr_colour1",
+                              "type": "string"
+                            },
+                            "score": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84339/score",
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        "84340": {
+                          "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340",
+                          "type": "object",
+                          "properties": {
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340/styleid",
+                              "type": "integer"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340/search_image",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/results/products/3/colourVariantsData/84340/global_attr_colour1",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "stylename": {
+                      "id": "http://jsonschema.net/data/results/products/3/stylename",
+                      "type": "string"
+                    },
+                    "search_image": {
+                      "id": "http://jsonschema.net/data/results/products/3/search_image",
+                      "type": "string"
+                    },
+                    "discounted_price": {
+                      "id": "http://jsonschema.net/data/results/products/3/discounted_price",
+                      "type": "integer"
+                    },
+                    "score": {
+                      "id": "http://jsonschema.net/data/results/products/3/score",
+                      "type": "integer"
+                    },
+                    "discount_label": {
+                      "id": "http://jsonschema.net/data/results/products/3/discount_label",
+                      "type": "string"
+                    },
+                    "dre_landing_page_url": {
+                      "id": "http://jsonschema.net/data/results/products/3/dre_landing_page_url",
+                      "type": "string"
+                    },
+                    "visual_tag": {
+                      "id": "http://jsonschema.net/data/results/products/3/visual_tag",
+                      "type": "string"
+                    },
+                    "global_attr_base_colour": {
+                      "id": "http://jsonschema.net/data/results/products/3/global_attr_base_colour",
+                      "type": "string"
+                    },
+                    "discount": {
+                      "id": "http://jsonschema.net/data/results/products/3/discount",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "id": "http://jsonschema.net/data/results/products/3/id",
+                      "type": "string"
+                    },
+                    "product": {
+                      "id": "http://jsonschema.net/data/results/products/3/product",
+                      "type": "string"
+                    },
+                    "imageEntry_default": {
+                      "id": "http://jsonschema.net/data/results/products/3/imageEntry_default",
+                      "type": "string"
+                    },
+                    "price": {
+                      "id": "http://jsonschema.net/data/results/products/3/price",
+                      "type": "integer"
+                    },
+                    "brands_filter_facet": {
+                      "id": "http://jsonschema.net/data/results/products/3/brands_filter_facet",
+                      "type": "string"
+                    },
+                    "styleid": {
+                      "id": "http://jsonschema.net/data/results/products/3/styleid",
+                      "type": "integer"
+                    },
+                    "global_attr_colour1": {
+                      "id": "http://jsonschema.net/data/results/products/3/global_attr_colour1",
+                      "type": "string"
+                    },
+                    "style_group": {
+                      "id": "http://jsonschema.net/data/results/products/3/style_group",
+                      "type": "string"
+                    },
+                    "allSkuForSizes": {
+                      "id": "http://jsonschema.net/data/results/products/3/allSkuForSizes",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/data/results/products/4",
+                  "type": "object",
+                  "properties": {
+                    "sizes": {
+                      "id": "http://jsonschema.net/data/results/products/4/sizes",
+                      "type": "string"
+                    },
+                    "colourVariantsData": {
+                      "id": "http://jsonschema.net/data/results/products/4/colourVariantsData",
+                      "type": "object",
+                      "properties": {
+                        "84338": {
+                          "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338",
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/id",
+                              "type": "string"
+                            },
+                            "product": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/product",
+                              "type": "string"
+                            },
+                            "price": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/price",
+                              "type": "integer"
+                            },
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/styleid",
+                              "type": "integer"
+                            },
+                            "stylename": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/stylename",
+                              "type": "string"
+                            },
+                            "visual_tag": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/visual_tag",
+                              "type": "string"
+                            },
+                            "imageEntry_default": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/imageEntry_default",
+                              "type": "string"
+                            },
+                            "allSkuForSizes": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/allSkuForSizes",
+                              "type": "string"
+                            },
+                            "discount": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/discount",
+                              "type": "integer"
+                            },
+                            "discount_label": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/discount_label",
+                              "type": "string"
+                            },
+                            "discounted_price": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/discounted_price",
+                              "type": "integer"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/search_image",
+                              "type": "string"
+                            },
+                            "brands_filter_facet": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/brands_filter_facet",
+                              "type": "string"
+                            },
+                            "style_group": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/style_group",
+                              "type": "string"
+                            },
+                            "sizes": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/sizes",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/global_attr_colour1",
+                              "type": "string"
+                            },
+                            "score": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84338/score",
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        "84340": {
+                          "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340",
+                          "type": "object",
+                          "properties": {
+                            "styleid": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340/styleid",
+                              "type": "integer"
+                            },
+                            "search_image": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340/search_image",
+                              "type": "string"
+                            },
+                            "dre_landing_page_url": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340/dre_landing_page_url",
+                              "type": "string"
+                            },
+                            "global_attr_base_colour": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340/global_attr_base_colour",
+                              "type": "string"
+                            },
+                            "global_attr_colour1": {
+                              "id": "http://jsonschema.net/data/results/products/4/colourVariantsData/84340/global_attr_colour1",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "stylename": {
+                      "id": "http://jsonschema.net/data/results/products/4/stylename",
+                      "type": "string"
+                    },
+                    "search_image": {
+                      "id": "http://jsonschema.net/data/results/products/4/search_image",
+                      "type": "string"
+                    },
+                    "discounted_price": {
+                      "id": "http://jsonschema.net/data/results/products/4/discounted_price",
+                      "type": "integer"
+                    },
+                    "score": {
+                      "id": "http://jsonschema.net/data/results/products/4/score",
+                      "type": "integer"
+                    },
+                    "discount_label": {
+                      "id": "http://jsonschema.net/data/results/products/4/discount_label",
+                      "type": "string"
+                    },
+                    "dre_landing_page_url": {
+                      "id": "http://jsonschema.net/data/results/products/4/dre_landing_page_url",
+                      "type": "string"
+                    },
+                    "visual_tag": {
+                      "id": "http://jsonschema.net/data/results/products/4/visual_tag",
+                      "type": "string"
+                    },
+                    "global_attr_base_colour": {
+                      "id": "http://jsonschema.net/data/results/products/4/global_attr_base_colour",
+                      "type": "string"
+                    },
+                    "discount": {
+                      "id": "http://jsonschema.net/data/results/products/4/discount",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "id": "http://jsonschema.net/data/results/products/4/id",
+                      "type": "string"
+                    },
+                    "product": {
+                      "id": "http://jsonschema.net/data/results/products/4/product",
+                      "type": "string"
+                    },
+                    "imageEntry_default": {
+                      "id": "http://jsonschema.net/data/results/products/4/imageEntry_default",
+                      "type": "string"
+                    },
+                    "price": {
+                      "id": "http://jsonschema.net/data/results/products/4/price",
+                      "type": "integer"
+                    },
+                    "brands_filter_facet": {
+                      "id": "http://jsonschema.net/data/results/products/4/brands_filter_facet",
+                      "type": "string"
+                    },
+                    "styleid": {
+                      "id": "http://jsonschema.net/data/results/products/4/styleid",
+                      "type": "integer"
+                    },
+                    "global_attr_colour1": {
+                      "id": "http://jsonschema.net/data/results/products/4/global_attr_colour1",
+                      "type": "string"
+                    },
+                    "style_group": {
+                      "id": "http://jsonschema.net/data/results/products/4/style_group",
+                      "type": "string"
+                    },
+                    "allSkuForSizes": {
+                      "id": "http://jsonschema.net/data/results/products/4/allSkuForSizes",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "filterQueryParam": {
+              "id": "http://jsonschema.net/data/results/filterQueryParam",
+              "type": "string"
+            }
+          }
+        },
+        "seo": {
+          "id": "http://jsonschema.net/data/seo",
+          "type": "object",
+          "properties": {
+            "metaData": {
+              "id": "http://jsonschema.net/data/seo/metaData",
+              "type": "object",
+              "properties": {
+                "page_title": {
+                  "id": "http://jsonschema.net/data/seo/metaData/page_title",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

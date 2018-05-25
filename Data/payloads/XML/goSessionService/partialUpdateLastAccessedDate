@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session>
+	<id>${0}</id>
+    <data><![CDATA[${1}]]></data>
+    <last_accessed_date>${2}</last_accessed_date>
+</Session>

@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#", 
+  "definitions": {}, 
+  "id": "http://example.com/example.json", 
+  "properties": {
+    "data": {
+      "id": "http://example.com/example.json/properties/data", 
+      "items": {
+        "id": "http://example.com/example.json/properties/data/items", 
+        "properties": {
+          "allAttributeValues": {
+            "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues", 
+            "items": {
+              "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items", 
+              "properties": {
+                "applicableSet": {
+                  "default": "Default", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/applicableSet", 
+                  "title": "The applicableset schema", 
+                  "type": "string"
+                }, 
+                "attributeCode": {
+                  "default": "SHORT_SLEEVES", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/attributeCode", 
+                  "title": "The attributecode schema", 
+                  "type": "string"
+                }, 
+                "attributeTypeId": {
+                  "default": 90, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/attributeTypeId", 
+                  "title": "The attributetypeid schema", 
+                  "type": "integer"
+                }, 
+                "attributeValue": {
+                  "default": "Short Sleeves", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/attributeValue", 
+                  "title": "The attributevalue schema", 
+                  "type": "string"
+                }, 
+                "filterOrder": {
+                  "default": 1, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/filterOrder", 
+                  "title": "The filterorder schema", 
+                  "type": "integer"
+                }, 
+                "id": {
+                  "default": 847, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/id", 
+                  "title": "The id schema", 
+                  "type": "integer"
+                }, 
+                "isActive": {
+                  "default": true, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/isActive", 
+                  "title": "The isactive schema", 
+                  "type": "boolean"
+                }, 
+                "isFeatured": {
+                  "default": 0, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/isFeatured", 
+                  "title": "The isfeatured schema", 
+                  "type": "integer"
+                }, 
+                "isLatest": {
+                  "default": 0, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/isLatest", 
+                  "title": "The islatest schema", 
+                  "type": "integer"
+                }, 
+                "updatedBy": {
+                  "default": "sikhajyoti.das", 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/updatedBy", 
+                  "title": "The updatedby schema", 
+                  "type": "string"
+                }, 
+                "updatedOn": {
+                  "default": 1437642683, 
+                  "description": "An explanation about the purpose of this instance.", 
+                  "id": "http://example.com/example.json/properties/data/items/properties/allAttributeValues/items/properties/updatedOn", 
+                  "title": "The updatedon schema", 
+                  "type": "integer"
+                }
+              }, 
+              "required": [
+                "filterOrder", 
+                "isActive", 
+                "id", 
+                "isLatest", 
+                "updatedBy", 
+                "attributeTypeId", 
+                "attributeCode", 
+                "isFeatured", 
+                "updatedOn", 
+                "attributeValue"
+              ], 
+              "type": "object"
+            }, 
+            "type": "array"
+          }, 
+          "code": {
+            "default": "sleeve_length_measurement", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/code", 
+            "title": "The code schema", 
+            "type": "string"
+          }, 
+          "id": {
+            "default": 90, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/id", 
+            "title": "The id schema", 
+            "type": "integer"
+          }, 
+          "isActive": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isActive", 
+            "title": "The isactive schema", 
+            "type": "boolean"
+          }, 
+          "isFilter": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isFilter", 
+            "title": "The isfilter schema", 
+            "type": "boolean"
+          }, 
+          "isRequired": {
+            "default": true, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/isRequired", 
+            "title": "The isrequired schema", 
+            "type": "boolean"
+          }, 
+          "productCategoryId": {
+            "default": 89, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/productCategoryId", 
+            "title": "The productcategoryid schema", 
+            "type": "integer"
+          }, 
+          "typeName": {
+            "default": "Sleeve Length", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/typeName", 
+            "title": "The typename schema", 
+            "type": "string"
+          }, 
+          "typeOfAttribute": {
+            "default": "singleValued", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/typeOfAttribute", 
+            "title": "The typeofattribute schema", 
+            "type": "string"
+          }, 
+          "updatedBy": {
+            "default": "sikhajyoti.das", 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/updatedBy", 
+            "title": "The updatedby schema", 
+            "type": "string"
+          }, 
+          "updatedOn": {
+            "default": 1437642521, 
+            "description": "An explanation about the purpose of this instance.", 
+            "id": "http://example.com/example.json/properties/data/items/properties/updatedOn", 
+            "title": "The updatedon schema", 
+            "type": "integer"
+          }
+        }, 
+        "required": [
+          "updatedOn", 
+          "isActive", 
+          "id", 
+          "updatedBy", 
+          "isFilter", 
+          "typeName", 
+          "allAttributeValues", 
+          "typeOfAttribute", 
+          "productCategoryId", 
+          "isRequired", 
+          "code"
+        ], 
+        "type": "object"
+      }, 
+      "type": "array"
+    }, 
+    "status": {
+      "id": "http://example.com/example.json/properties/status", 
+      "properties": {
+        "statusCode": {
+          "default": 3, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusCode", 
+          "title": "The statuscode schema", 
+          "type": "integer"
+        }, 
+        "statusMessage": {
+          "default": "Success", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusMessage", 
+          "title": "The statusmessage schema", 
+          "type": "string"
+        }, 
+        "statusType": {
+          "default": "SUCCESS", 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/statusType", 
+          "title": "The statustype schema", 
+          "type": "string"
+        }, 
+        "totalCount": {
+          "default": 1, 
+          "description": "An explanation about the purpose of this instance.", 
+          "id": "http://example.com/example.json/properties/status/properties/totalCount", 
+          "title": "The totalcount schema", 
+          "type": "integer"
+        }
+      }, 
+      "required": [
+        "statusCode", 
+        "statusMessage", 
+        "statusType", 
+        "totalCount"
+      ], 
+      "type": "object"
+    }
+  }, 
+  "required": [
+    "data", 
+    "status"
+  ], 
+  "type": "object"
+}

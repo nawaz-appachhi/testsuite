@@ -1,0 +1,32 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "should": [
+            {
+              "missing": {
+                "field": "styleAttributes"
+              }
+            }
+
+          ],
+          "must": [
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            },
+            {
+              "exists": {
+                "field":"aggMetrics"
+              }
+            }
+            
+          ]
+        }
+      }
+    }
+  }
+}

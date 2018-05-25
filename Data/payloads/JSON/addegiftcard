@@ -1,0 +1,13 @@
+{
+    “cartItemEntries”: [{
+        “styleId”: 1522720,
+        “skuId”: ${0},
+        “operation”: “ADD”,
+        “quantity”: 1,
+        “customizedMessage”: “{\“configId\“:\“M8e1ec2dac24148149740eec5e2576995\“}”
+    }],
+    “giftMessage”: {
+        “message”: “Happy Mother day to the greatest Mom in the world!“,
+        “recipientEmailId”: “a@a.aa”
+    }
+}

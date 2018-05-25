@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/data/code",
+          "type": "string"
+        },
+        "imageUrl": {
+          "id": "http://jsonschema.net/data/imageUrl",
+          "type": "string"
+        },
+        "conf": {
+          "id": "http://jsonschema.net/data/conf",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/data/conf/0",
+              "type": "object",
+              "properties": {
+                "referrer": {
+                  "id": "http://jsonschema.net/data/conf/0/referrer",
+                  "type": "integer"
+                },
+                "friend": {
+                  "id": "http://jsonschema.net/data/conf/0/friend",
+                  "type": "integer"
+                },
+                "event": {
+                  "id": "http://jsonschema.net/data/conf/0/event",
+                  "type": "string"
+                },
+                "message": {
+                  "id": "http://jsonschema.net/data/conf/0/message",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/data/conf/1",
+              "type": "object",
+              "properties": {
+                "referrer": {
+                  "id": "http://jsonschema.net/data/conf/1/referrer",
+                  "type": "integer"
+                },
+                "friend": {
+                  "id": "http://jsonschema.net/data/conf/1/friend",
+                  "type": "integer"
+                },
+                "event": {
+                  "id": "http://jsonschema.net/data/conf/1/event",
+                  "type": "string"
+                },
+                "message": {
+                  "id": "http://jsonschema.net/data/conf/1/message",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "success": {
+          "id": "http://jsonschema.net/data/success",
+          "type": "boolean"
+        },
+        "referrer": {
+          "id": "http://jsonschema.net/data/referrer",
+          "type": "string"
+        }
+      }
+    },
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    }
+  }
+}

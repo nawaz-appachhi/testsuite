@@ -1,0 +1,70 @@
+{
+	"type":"array",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"0": {
+			"type":"object",
+			"id": "http://jsonschema.net/0",
+			"required":true,
+			"properties":{
+				"balance": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/balance",
+					"required":true
+				},
+				"businesProcess": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/businesProcess",
+					"required":true
+				},
+				"cashbackAccountId": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/cashbackAccountId",
+					"required":true
+				},
+				"creditInflow": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/creditInflow",
+					"required":true
+				},
+				"creditOutflow": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/creditOutflow",
+					"required":true
+				},
+				"description": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/description",
+					"required":true
+				},
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/id",
+					"required":true
+				},
+				"itemId": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/itemId",
+					"required":true
+				},
+				"itemType": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/itemType",
+					"required":true
+				},
+				"modifiedBy": {
+					"type":"string",
+					"id": "http://jsonschema.net/0/modifiedBy",
+					"required":true
+				},
+				"modifiedOn": {
+					"type":"number",
+					"id": "http://jsonschema.net/0/modifiedOn",
+					"required":true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DiscountServiceV2TestSuite" verbose="1">
+	<parameter name="team" value="RetailLab_New"/>
+    <parameter name="core" value="DiscountService"/>
+    <parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener"/>
+		
+	</listeners>
+	<test name="DiscountServiceV2Tests">
+	
+	<parameter name="team" value="RetailLab_New"/>
+   <parameter name="core" value="DiscountService"/>
+   <parameter name="type" value="Regression"/>
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.discountService.DiscountServiceV2" />
+		   	<class name="com.myntra.apiTests.portalservices.pricingpromotionservices.pricingservices.DiscountOverrideWithDarwinChanges" />
+		</classes>
+	</test>
+</suite>

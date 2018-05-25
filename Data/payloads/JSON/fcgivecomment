@@ -1,0 +1,8 @@
+ {
+  "where":{
+ "OutfitId": "${0}"
+   },
+ "include":[
+  "User"
+  ]
+ }

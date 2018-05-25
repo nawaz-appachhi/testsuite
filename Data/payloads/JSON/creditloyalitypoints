@@ -1,0 +1,11 @@
+{
+"login":"${0}",
+"activeCreditPoints":${1},
+"inActiveCreditPoints":${2},
+"activeDebitPoints":${3},
+"inActiveDebitPoints":${4},
+"description":"${5}",
+"itemType":"${6}",
+"itemId":${7},
+"businessProcess":"${8}"
+}

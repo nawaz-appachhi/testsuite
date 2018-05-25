@@ -1,0 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <orderRelease>
+ <id>${0}</id>
+ <lastModifiedOn>2015-12-14T13:00:43.194+05:30</lastModifiedOn>
+ <gift>false</gift>
+ <orderLines/>
+ <personalized>false</personalized>
+ <singleItemRelease>true</singleItemRelease>
+ <specialPincode>false</specialPincode>
+ </orderRelease>

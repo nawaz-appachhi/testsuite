@@ -1,0 +1,9 @@
+{ "doType": "${0}",
+"name": "Swat_TestAutomation",
+ "description": "d2",
+  "startDate": "${1}",
+  "endDate":   "${2}",
+  "categoryManager":"kk_cm@kk.com",
+   "discountFundingType":"EOSS",
+     "discountOverrideStyles":
+     [ {"styleId":${3},"discountLimit":10,"fundingPercentage":10,"onBuyCount": ${4}, "count" : ${5}}] }

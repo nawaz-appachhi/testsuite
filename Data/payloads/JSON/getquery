@@ -1,0 +1,8 @@
+{
+"query": "${0}",
+"return_docs": ${1},
+"is_facet": ${2},
+ "user": {
+   "login":"${3}"
+ }
+}

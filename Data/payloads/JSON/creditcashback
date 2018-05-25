@@ -1,0 +1,12 @@
+{
+
+"login" : "${0}",
+"earnedCreditAmount" :"${1}" ,
+"storeCreditAmount" : "${2}",
+"debitAmount" : "${3}",
+"description" : "${4}",
+"businessProcess" : "${5}",
+"itemType" : "${6}",
+"itemId" : "${7}"
+
+}

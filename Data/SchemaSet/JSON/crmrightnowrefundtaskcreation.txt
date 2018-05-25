@@ -1,0 +1,35 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":true,
+	"properties":{
+		"rightnowTaskResponse": {
+			"type":"object",
+			"required":true,
+			"properties":{
+				"status": {
+					"type":"object",
+					"required":true,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":true
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":true
+						},
+						"statusType": {
+							"type":"string",
+							"required":true
+						},
+						"totalCount": {
+							"type":"number",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

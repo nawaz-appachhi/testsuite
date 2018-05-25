@@ -1,0 +1,317 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "array",
+      "items": [
+        {
+          "id": "http://jsonschema.net/data/0",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/1",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/2",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/3",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/4",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/5",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/6",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/data/6/id",
+              "type": "integer"
+            },
+            "createdBy": {
+              "id": "http://jsonschema.net/data/6/createdBy",
+              "type": "string"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/data/6/createdOn",
+              "type": "integer"
+            },
+            "lastModifiedOn": {
+              "id": "http://jsonschema.net/data/6/lastModifiedOn",
+              "type": "integer"
+            },
+            "version": {
+              "id": "http://jsonschema.net/data/6/version",
+              "type": "integer"
+            },
+            "title": {
+              "id": "http://jsonschema.net/data/6/title",
+              "type": "string"
+            },
+            "description": {
+              "id": "http://jsonschema.net/data/6/description",
+              "type": "string"
+            },
+            "creatorId": {
+              "id": "http://jsonschema.net/data/6/creatorId",
+              "type": "string"
+            },
+            "isActive": {
+              "id": "http://jsonschema.net/data/6/isActive",
+              "type": "boolean"
+            },
+            "isDraft": {
+              "id": "http://jsonschema.net/data/6/isDraft",
+              "type": "boolean"
+            },
+            "isRemyx": {
+              "id": "http://jsonschema.net/data/6/isRemyx",
+              "type": "boolean"
+            },
+            "detailJson": {
+              "id": "http://jsonschema.net/data/6/detailJson",
+              "type": "string"
+            },
+            "occasion": {
+              "id": "http://jsonschema.net/data/6/occasion",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/6/occasion/id",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/6/occasion/version",
+                  "type": "integer"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/data/6/occasion/description",
+                  "type": "string"
+                }
+              }
+            },
+            "stickers": {
+              "id": "http://jsonschema.net/data/6/stickers",
+              "type": "array",
+              "items": {
+                "id": "http://jsonschema.net/data/6/stickers/0",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/id",
+                    "type": "integer"
+                  },
+                  "version": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/version",
+                    "type": "integer"
+                  },
+                  "damsImageId": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/damsImageId",
+                    "type": "string"
+                  },
+                  "createdBy": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/createdBy",
+                    "type": "string"
+                  },
+                  "createdOn": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/createdOn",
+                    "type": "integer"
+                  },
+                  "lastModifiedOn": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/lastModifiedOn",
+                    "type": "integer"
+                  },
+                  "damImage": {
+                    "id": "http://jsonschema.net/data/6/stickers/0/damImage",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "http://jsonschema.net/data/6/stickers/0/damImage/id",
+                        "type": "string"
+                      },
+                      "url": {
+                        "id": "http://jsonschema.net/data/6/stickers/0/damImage/url",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "styles": {
+              "id": "http://jsonschema.net/data/6/styles",
+              "type": "array",
+              "items": []
+            },
+            "owner": {
+              "id": "http://jsonschema.net/data/6/owner",
+              "type": "object",
+              "properties": {}
+            },
+            "productData": {
+              "id": "http://jsonschema.net/data/6/productData",
+              "type": "array",
+              "items": []
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/data/7",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/data/7/id",
+              "type": "integer"
+            },
+            "createdBy": {
+              "id": "http://jsonschema.net/data/7/createdBy",
+              "type": "string"
+            },
+            "createdOn": {
+              "id": "http://jsonschema.net/data/7/createdOn",
+              "type": "integer"
+            },
+            "lastModifiedOn": {
+              "id": "http://jsonschema.net/data/7/lastModifiedOn",
+              "type": "integer"
+            },
+            "version": {
+              "id": "http://jsonschema.net/data/7/version",
+              "type": "integer"
+            },
+            "title": {
+              "id": "http://jsonschema.net/data/7/title",
+              "type": "string"
+            },
+            "description": {
+              "id": "http://jsonschema.net/data/7/description",
+              "type": "string"
+            },
+            "creatorId": {
+              "id": "http://jsonschema.net/data/7/creatorId",
+              "type": "string"
+            },
+            "isActive": {
+              "id": "http://jsonschema.net/data/7/isActive",
+              "type": "boolean"
+            },
+            "isDraft": {
+              "id": "http://jsonschema.net/data/7/isDraft",
+              "type": "boolean"
+            },
+            "isRemyx": {
+              "id": "http://jsonschema.net/data/7/isRemyx",
+              "type": "boolean"
+            },
+            "detailJson": {
+              "id": "http://jsonschema.net/data/7/detailJson",
+              "type": "string"
+            },
+            "occasion": {
+              "id": "http://jsonschema.net/data/7/occasion",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://jsonschema.net/data/7/occasion/id",
+                  "type": "integer"
+                },
+                "version": {
+                  "id": "http://jsonschema.net/data/7/occasion/version",
+                  "type": "integer"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/data/7/occasion/description",
+                  "type": "string"
+                }
+              }
+            },
+            "stickers": {
+              "id": "http://jsonschema.net/data/7/stickers",
+              "type": "array",
+              "items": {
+                "id": "http://jsonschema.net/data/7/stickers/0",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/id",
+                    "type": "integer"
+                  },
+                  "version": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/version",
+                    "type": "integer"
+                  },
+                  "damsImageId": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/damsImageId",
+                    "type": "string"
+                  },
+                  "createdBy": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/createdBy",
+                    "type": "string"
+                  },
+                  "createdOn": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/createdOn",
+                    "type": "integer"
+                  },
+                  "lastModifiedOn": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/lastModifiedOn",
+                    "type": "integer"
+                  },
+                  "damImage": {
+                    "id": "http://jsonschema.net/data/7/stickers/0/damImage",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "http://jsonschema.net/data/7/stickers/0/damImage/id",
+                        "type": "string"
+                      },
+                      "url": {
+                        "id": "http://jsonschema.net/data/7/stickers/0/damImage/url",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "styles": {
+              "id": "http://jsonschema.net/data/7/styles",
+              "type": "array",
+              "items": []
+            },
+            "owner": {
+              "id": "http://jsonschema.net/data/7/owner",
+              "type": "object",
+              "properties": {}
+            },
+            "productData": {
+              "id": "http://jsonschema.net/data/7/productData",
+              "type": "array",
+              "items": []
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RedisDataService" verbose="1"  data-provider-thread-count="10">
+    <parameter name="team" value="SCM"/>
+    <parameter name="core" value="RedisData"/>
+    <test name="RedisData">
+        <classes>
+            <class name="com.myntra.apiTests.erpservices.ims.Tests.redisTest"/>
+        </classes>
+    </test>
+</suite>

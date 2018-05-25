@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ATSSuite" verbose="1">
+	<parameter name="team" value="StoreFront" />
+	<parameter name="ServiceName" value="ATS" />
+	<parameter name="type" value="Regression" />
+
+
+<test name="ATSServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.atsService.TestATSShieldSignupV2" />
+		</classes>
+</test>
+
+</suite>

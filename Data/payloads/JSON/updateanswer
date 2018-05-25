@@ -1,0 +1,33 @@
+{
+   "isAnonymous":false,
+   "description":[
+      {
+         "type":"TEXT",
+         "value":"${0}"
+      },
+      {
+         "type":"PRODUCT",
+         "products":[
+            754582,
+            123123
+         ]
+      },
+      {
+         "type":"IMAGE",
+         "images":[
+            {
+               "id":"8826",
+               "url":{
+
+               }
+            },
+            {
+               "id":"8825",
+               "url":{
+
+               }
+            }
+         ]
+      }
+   ]
+}

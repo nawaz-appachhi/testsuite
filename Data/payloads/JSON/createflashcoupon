@@ -1,0 +1,43 @@
+{  
+   "code":"${2}",
+   "startdate":${0},
+   "expire":${1},
+   "times":"1",
+   "maximum":0,
+   "isInfinite":1,
+   "maxUsagePerCart":"-1",
+   "times_used":0,
+   "times_locked":0,
+   "maxUsageByUser":"1",
+   "isInfinitePerUser":1,
+   "minimum":"200",
+   "maxAmount":0,
+   "users":"",
+   "excludeUsers":"",
+   "timeCreated":${3},
+   "couponType":"${7}",
+   "mrpAmount":"${4}",
+   "mrpPercentage":"${5}",
+   "freeShipping":0,
+   "status":"A",
+   "comments":"test",
+   "producttypeid":"",
+   "excludeProductTypeIds":"",
+   "styleIds":"",
+   "excludeStyleIds":"",
+   "catStyleIds":null,
+   "excludeCatStyleIds":null,
+   "categoryIds":"",
+   "excludeCategoryIds":"",
+   "skus":"",
+   "excludeSKUs":"",
+   "description":"${6}",
+   "showInMyMyntra":1,
+   "min_count":0,
+   "max_count":0,
+   "groupName":"inteligence"
+}
+		 
+		 
+		 
+		 

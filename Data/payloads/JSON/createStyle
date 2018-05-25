@@ -1,0 +1,113 @@
+{
+ 
+  "name": "Reid & Taylor Men Solid Dark Green Trousers",
+  "description": "<div><br></div><div><br></div>",
+  "price": "123.03",
+  "styleStatus": "D",
+  "codEnabled": "Y",
+  "articleNumber": "ART NO2",
+  "productDisplayName": "abcd456995dw",
+  "variantName": "",
+  "myntraRating": "0",
+  "addDate": "1319802780000",
+  "catalogDate": "1425010309",
+  "styleNote": "Not Applicable",
+  "sizeRepresentationUrl": "skin1/myntra_images/sizechart/sizechart_formal-trouser_v5.png",
+  "sizeFitDescription": "eeee<div><br></div>",
+  "comments": "ddd4e",
+  "global_attr_article_type": "70",
+  "global_attr_article_type_name": "Jeans",
+  "parent1Name": "Bottomwear",
+  "parent2Name": "Apparel",
+  "globalAttributes": {
+    "season": "Spring",
+    "baseColour": "Red",
+    "usage": "Sports",
+    "gender": "Men",
+    "year": "2011",
+    "colour2": "Red",
+    "brandName": "Red Chilli",
+    "colour1": "Red",
+    "fashionType": "Fashion",
+    "ageGroup": "Adults-Men"
+  },
+  "brandName": "Red Chilli",
+  "ageGroup": "Adults-Men",
+  "gender": "Men",
+  "baseColour": "Red",
+  "colour1": "Red",
+  "colour2": "Red",
+  "fashionType": "Fashion",
+  "season": "Spring",
+  "year": "2011",
+  "usage": "Sports",
+  "productOptionEntries": [
+    {
+      "id": "372023",
+      "name": "fffb5bbn1",
+      "value": "M",
+      "price": "123.03",
+      "unifiedSize": "35"
+    },
+    {
+      "id": "372085",
+      "name": "22225bbn1",
+      "value": "L",
+      "price": "123.03"
+    },
+    {
+      "id": "372086",
+      "name": "33335bbn1",
+      "value": "",
+      "price": "123.03"
+    }
+  ],
+  "attributeValues": [
+    {
+      "id": "1004",
+      "attributeValue": "Cotton",
+      "attributeType": {
+        "id": "104",
+        "typeName": "Fabricc",
+        "isActive": "true",
+        "typeOfAttribute": "singleValued"
+      }
+    },
+    {
+      "id": "526",
+      "attributeValue": "Solid",
+      "attributeType": {
+        "id": "110",
+        "typeName": "Pattern",
+        "isActive": "true",
+        "typeOfAttribute": "singleValued"
+      }
+    },
+    {
+      "id": "320",
+      "attributeValue": "Straight Leg",
+      "attributeType": {
+        "id": "111",
+        "typeName": "Fit",
+        "isActive": true,
+        "typeOfAttribute": "singleValued"
+      }
+    }
+  ],
+  "defaultImage": "http://myntra.myntassets.com/images/style/properties/ab9f0fca3a96440d41e547230fe47202_images.jpg",
+  "searchImage": "http://myntra.myntassets.com/images/style/style_search_image/ab9f0fca3a96440d41e547230fe47202_images_180_240.jpg",
+  "searchZoomImage": "",
+  "frontImage": "http://myntra.myntassets.com/images/style/properties/b314c96688ee765f65c908715b774a85_images.jpg",
+  "leftImage": "http://myntra.myntassets.com/images/style/properties/8ea5ade0a4e9e8240ca9d344ae780a48_images.jpg",
+  "rightImage": "http://myntra.myntassets.com/images/style/properties/93053ecdd14d053bfd763828c13ad6e8_images.jpg",
+  "bottomImage": "",
+  "productTypeEntry": {
+    "id": "0",
+    "name": "temp",
+    "productGroup": {
+      "id": "0",
+      "name": "zerogroup"
+    }
+  },
+  "productTag": "Men,Reid & Taylor,fashion-essentials-marcat,xmas-sale,hny-sale,luckysize-men-apparel,jan-end-sale,february-formals,sometag"
+}

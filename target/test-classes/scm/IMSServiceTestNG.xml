@@ -1,0 +1,17 @@
+<suite name="IMSSuite" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		
+	</listeners>
+	<test name="IMSServiceTest">
+		<classes>
+		    <class name="com.myntra.apiTests.erpservices.ims.Tests.IMSServiceTest" />
+			<class name="com.myntra.apiTests.erpservices.ims.Tests.IMSFKInvAutomationTest" />
+			<class name="com.myntra.apiTests.erpservices.ims.Tests.ItemStateTransitionStates" />
+		</classes>
+	</test>
+</suite>

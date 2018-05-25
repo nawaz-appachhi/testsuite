@@ -1,0 +1,7 @@
+{
+  "seller": {
+    "description": "${0}",
+    "enabled": "${1}",
+    "status": "${2}"
+  }
+}

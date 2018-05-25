@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DevApiShotsTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		
+	</listeners>
+	<test name="DevApiShotsTests">
+		<groups>
+			<run>
+				<include name="Smoke" />
+				<include name="Exhaustive Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.DevApiShotsTests" />
+		</classes>
+	</test>
+</suite>

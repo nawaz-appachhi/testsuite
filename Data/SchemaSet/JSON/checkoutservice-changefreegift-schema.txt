@@ -1,0 +1,796 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"items":
+			{
+				"type":"object",
+				"id": "http://jsonschema.net/data/0",
+				"required":true,
+				"properties":{
+					"appliedCoupons": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/appliedCoupons",
+						"required":true
+					},
+					"bagDiscountDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/bagDiscountDecimal",
+						"required":true
+					},
+					"bagDiscount": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/bagDiscount",
+						"required":true
+					},
+					"cartCreateDate": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/cartCreateDate",
+						"required":true
+					},
+					"cartID": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/cartID",
+						"required":true
+					},
+					"cartIsNew": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/cartIsNew",
+						"required":true
+					},
+					"cartItemEntries": {
+						"type":"array",
+						"id": "http://jsonschema.net/data/0/cartItemEntries",
+						"required":true,
+						"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/cartItemEntries/0",
+							"required":true,
+							"properties":{
+								"articleTypeId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/articleTypeId",
+									"required":true
+								},
+								"availableSizes": {
+									"type":"array",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes",
+									"required":true,
+									"items":
+									{
+										"type":"object",
+										"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0",
+										"required":true,
+										"properties":{
+											"availableQuantity": {
+												"type":"number",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/availableQuantity",
+												"required":true
+											},
+											"available": {
+												"type":"boolean",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/available",
+												"required":true
+											},
+											"itemAvailabilityDetailMap": {
+												"type":"object",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap",
+												"required":true,
+												"properties":{
+													"1": {
+														"type":"object",
+														"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1",
+														"required":false,
+														"properties":{
+															"availableCount": {
+																"type":"number",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/availableCount",
+																"required":false
+															},
+															"availableInWarehouses": {
+																"type":"string",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/availableInWarehouses",
+																"required":false
+															},
+															"sellerId": {
+																"type":"number",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/sellerId",
+																"required":false
+															},
+															"sellerName": {
+																"type":"string",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/sellerName",
+																"required":false
+															},
+															"storeId": {
+																"type":"number",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/storeId",
+																"required":false
+															},
+															"supplyType": {
+																"type":"string",
+																"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/itemAvailabilityDetailMap/1/supplyType",
+																"required":false
+															}
+														}
+													}
+												}
+											},
+											"size": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/size",
+												"required":true
+											},
+											"skuId": {
+												"type":"number",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/skuId",
+												"required":true
+											},
+											"unifiedSize": {
+												"type":"string",
+												"id": "http://jsonschema.net/data/0/cartItemEntries/0/availableSizes/0/unifiedSize",
+												"required":true
+											}
+										}
+									}
+								},
+								"brand": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/brand",
+									"required":true
+								},
+								"comboId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/comboId",
+									"required":true
+								},
+								"conflictedTime": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/conflictedTime",
+									"required":true
+								},
+								"couponApplicable": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/couponApplicable",
+									"required":true
+								},
+								"discountQuantity": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/discountQuantity",
+									"required":true
+								},
+								"discountRuleHistoryId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/discountRuleHistoryId",
+									"required":true
+								},
+								"discountRuleId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/discountRuleId",
+									"required":true
+								},
+								"doCustomize": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/doCustomize",
+									"required":true
+								},
+								"freeItem": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/freeItem",
+									"required":true
+								},
+								"gender": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/gender",
+									"required":true
+								},
+								"isCustomizable": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isCustomizable",
+									"required":true
+								},
+								"isCustomized": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isCustomized",
+									"required":true
+								},
+								"isDiscountRuleApplied": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isDiscountRuleApplied",
+									"required":true
+								},
+								"isDiscountedProduct": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isDiscountedProduct",
+									"required":true
+								},
+								"isFineJewellery": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isFineJewellery",
+									"required":true
+								},
+								"isFragile": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isFragile",
+									"required":true
+								},
+								"isHazmat": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isHazmat",
+									"required":true
+								},
+								"isPublicItem": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isPublicItem",
+									"required":true
+								},
+								"isReturnable": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/isReturnable",
+									"required":true
+								},
+								"itemAddTime": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/itemAddTime",
+									"required":true
+								},
+								"itemId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/itemId",
+									"required":true
+								},
+								"itemImage": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/itemImage",
+									"required":true
+								},
+								"landingPageUrl": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/landingPageUrl",
+									"required":true
+								},
+								"loyaltyPointsAwardFactor": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/loyaltyPointsAwardFactor",
+									"required":true
+								},
+								"loyaltyPointsAwarded": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/loyaltyPointsAwarded",
+									"required":true
+								},
+								"loyaltyPointsConversionFactor": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/loyaltyPointsConversionFactor",
+									"required":true
+								},
+								"loyaltyPointsUsed": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/loyaltyPointsUsed",
+									"required":true
+								},
+								"maxDiscountApplicableFlag": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/maxDiscountApplicableFlag",
+									"required":true
+								},
+								"negativeVotes": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/negativeVotes",
+									"required":true
+								},
+								"oldPrice": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/oldPrice",
+									"required":true
+								},
+								"optionId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/optionId",
+									"required":true
+								},
+								"packagingType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/packagingType",
+									"required":true
+								},
+								"positiveVotes": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/positiveVotes",
+									"required":true
+								},
+								"productStyleType": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/productStyleType",
+									"required":true
+								},
+								"productTypeId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/productTypeId",
+									"required":true
+								},
+								"quantity": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/quantity",
+									"required":true
+								},
+								"selectedSize": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize",
+									"required":true,
+									"properties":{
+										"availableQuantity": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/availableQuantity",
+											"required":true
+										},
+										"available": {
+											"type":"boolean",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/available",
+											"required":true
+										},
+										"itemAvailabilityDetailMap": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap",
+											"required":true,
+											"properties":{
+												"1": {
+													"type":"object",
+													"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1",
+													"required":false,
+													"properties":{
+														"availableCount": {
+															"type":"number",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/availableCount",
+															"required":false
+														},
+														"availableInWarehouses": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/availableInWarehouses",
+															"required":false
+														},
+														"sellerId": {
+															"type":"number",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/sellerId",
+															"required":false
+														},
+														"sellerName": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/sellerName",
+															"required":false
+														},
+														"storeId": {
+															"type":"number",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/storeId",
+															"required":false
+														},
+														"supplyType": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/itemAvailabilityDetailMap/1/supplyType",
+															"required":false
+														}
+													}
+												}
+											}
+										},
+										"size": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/size",
+											"required":true
+										},
+										"skuId": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/skuId",
+											"required":true
+										},
+										"unifiedSize": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/0/cartItemEntries/0/selectedSize/unifiedSize",
+											"required":true
+										}
+									}
+								},
+								"sellerId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/sellerId",
+									"required":true
+								},
+								"skuId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/skuId",
+									"required":true
+								},
+								"styleId": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/styleId",
+									"required":true
+								},
+								"subTotalDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/subTotalDecimal",
+									"required":true
+								},
+								"subTotal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/subTotal",
+									"required":true
+								},
+								"title": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/title",
+									"required":true
+								},
+								"totalBagDiscountDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalBagDiscountDecimal",
+									"required":true
+								},
+								"totalBagDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalBagDiscount",
+									"required":true
+								},
+								"totalCouponDiscountDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalCouponDiscountDecimal",
+									"required":true
+								},
+								"totalCouponDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalCouponDiscount",
+									"required":true
+								},
+								"totalDiscountDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalDiscountDecimal",
+									"required":true
+								},
+								"totalDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalDiscount",
+									"required":true
+								},
+								"totalEffectivePriceDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalEffectivePriceDecimal",
+									"required":true
+								},
+								"totalEffectivePriceWithoutMyntCashDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalEffectivePriceWithoutMyntCashDecimal",
+									"required":true
+								},
+								"totalEffectivePriceWithoutMyntCash": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalEffectivePriceWithoutMyntCash",
+									"required":true
+								},
+								"totalEffectivePrice": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalEffectivePrice",
+									"required":true
+								},
+								"totalMrpDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalMrpDecimal",
+									"required":true
+								},
+								"totalMrp": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalMrp",
+									"required":true
+								},
+								"totalMyntCashUsageDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalMyntCashUsageDecimal",
+									"required":true
+								},
+								"totalMyntCashUsage": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalMyntCashUsage",
+									"required":true
+								},
+								"totalPriceDecimal": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalPriceDecimal",
+									"required":true
+								},
+								"totalPrice": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/totalPrice",
+									"required":true
+								},
+								"unitAdditionalCharge": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitAdditionalCharge",
+									"required":true
+								},
+								"unitBagDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitBagDiscount",
+									"required":true
+								},
+								"unitCouponDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitCouponDiscount",
+									"required":true
+								},
+								"unitDiscount": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitDiscount",
+									"required":true
+								},
+								"unitMrp": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitMrp",
+									"required":true
+								},
+								"unitMyntCashUsage": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/unitMyntCashUsage",
+									"required":true
+								},
+								"vatRate": {
+									"type":"number",
+									"id": "http://jsonschema.net/data/0/cartItemEntries/0/vatRate",
+									"required":true
+								}
+							}
+						}
+					},
+					"conflictState": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/conflictState",
+						"required":false
+					},
+					"conflictedTime": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/conflictedTime",
+						"required":false
+					},
+					"context": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/context",
+						"required":true
+					},
+					"dirty": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/dirty",
+						"required":true
+					},
+					"giftCharge": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/giftCharge",
+						"required":true
+					},
+					"giftMessage": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/giftMessage",
+						"required":false,
+						"properties":{
+							"message": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/giftMessage/message",
+								"required":false
+							},
+							"recipient": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/giftMessage/recipient",
+								"required":false
+							},
+							"sender": {
+								"type":"string",
+								"id": "http://jsonschema.net/data/0/giftMessage/sender",
+								"required":false
+							}
+						}
+					},
+					"isCached": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isCached",
+						"required":true
+					},
+					"isGiftOrder": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/isGiftOrder",
+						"required":true
+					},
+					"lastContentUpdated": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/lastContentUpdated",
+						"required":true
+					},
+					"lastSavedTotalCartPrice": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/lastSavedTotalCartPrice",
+						"required":true
+					},
+					"lastmodified": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/lastmodified",
+						"required":false
+					},
+					"login": {
+						"type":"string",
+						"id": "http://jsonschema.net/data/0/login",
+						"required":true
+					},
+					"loyaltyPointsAwarded": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/loyaltyPointsAwarded",
+						"required":true
+					},
+					"loyaltyPointsConversionFactor": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/loyaltyPointsConversionFactor",
+						"required":true
+					},
+					"loyaltyPointsUsedCashEqualent": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/loyaltyPointsUsedCashEqualent",
+						"required":true
+					},
+					"loyaltyPointsUsed": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/loyaltyPointsUsed",
+						"required":true
+					},
+					"oldPrice": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/oldPrice",
+						"required":true
+					},
+					"readyForCheckout": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/readyForCheckout",
+						"required":true
+					},
+					"setDisplayData": {
+						"type":"object",
+						"id": "http://jsonschema.net/data/0/setDisplayData",
+						"required":true
+					},
+					"shippingCharge": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/shippingCharge",
+						"required":true
+					},
+					"subTotalPriceDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/subTotalPriceDecimal",
+						"required":true
+					},
+					"subTotalPrice": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/subTotalPrice",
+						"required":true
+					},
+					"totalCartCount": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalCartCount",
+						"required":true
+					},
+					"totalCouponDiscountDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalCouponDiscountDecimal",
+						"required":true
+					},
+					"totalCouponDiscount": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalCouponDiscount",
+						"required":true
+					},
+					"totalDiscountDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalDiscountDecimal",
+						"required":true
+					},
+					"totalDiscount": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalDiscount",
+						"required":true
+					},
+					"totalMrpDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalMrpDecimal",
+						"required":true
+					},
+					"totalMrp": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalMrp",
+						"required":true
+					},
+					"totalMyntCashUsageDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalMyntCashUsageDecimal",
+						"required":true
+					},
+					"totalMyntCashUsage": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalMyntCashUsage",
+						"required":true
+					},
+					"totalPriceDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalPriceDecimal",
+						"required":true
+					},
+					"totalPriceWithoutMyntCashDecimal": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalPriceWithoutMyntCashDecimal",
+						"required":true
+					},
+					"totalPriceWithoutMyntCash": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalPriceWithoutMyntCash",
+						"required":true
+					},
+					"totalPrice": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/totalPrice",
+						"required":true
+					},
+					"useLoyaltyPoints": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/useLoyaltyPoints",
+						"required":true
+					},
+					"useMyntCash": {
+						"type":"boolean",
+						"id": "http://jsonschema.net/data/0/useMyntCash",
+						"required":true
+					},
+					"userEnteredLoyaltyPoints": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/userEnteredLoyaltyPoints",
+						"required":true
+					},
+					"vatCharge": {
+						"type":"number",
+						"id": "http://jsonschema.net/data/0/vatCharge",
+						"required":true
+					}
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"xsrfToken": {
+			"type":"string",
+			"id": "http://jsonschema.net/xsrfToken",
+			"required":true
+		}
+	}
+}

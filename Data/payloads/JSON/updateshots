@@ -1,0 +1,15 @@
+{
+  "description": "${0}",
+  "imageId": 5463764,
+  "image": "http://assets.myntassets.com/assets/images/2015/9/22/11442915813438-75798-19rvmes.png",
+  "products": [${1}],
+    "tags" : [{
+                   "id": 3807,
+                   "name": "outdoor",
+                   "type": "occasion",
+                   "displayName": "outdoor",
+                   "followEnabled": true,
+                   "displayEnabled": false,
+                   "clickEnabled": false
+       }]
+}

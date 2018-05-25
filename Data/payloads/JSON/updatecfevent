@@ -1,0 +1,8 @@
+{
+	"cfStyleDTOs" : [
+		{
+			"styleId" : ${0},
+			"categoryFundedPercentage": ${1}
+		}
+		]
+}

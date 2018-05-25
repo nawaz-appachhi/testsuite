@@ -1,0 +1,12 @@
+on,NORMAL,true,true
+cod,ALL,true,true
+cod,NORMAL,true,true
+on,NORMAL,true,false
+cod,ALL,true,false
+cod,NORMAL,true,false
+on,NORMAL,false,true
+cod,ALL,false,true
+cod,NORMAL,false,true
+on,NORMAL,false,false
+cod,ALL,false,false
+cod,NORMAL,false,false

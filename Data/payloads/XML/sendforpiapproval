@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pi>
+    <piName></piName>
+    <vendor>
+        <id>${0}</id>
+    </vendor>
+    <createdBy>erpadmin</createdBy>
+    <createdOn></createdOn>
+    <description></description>
+    <eta></eta>
+    <requestDate>2016-04-11</requestDate>
+    <jit>0</jit>
+    <piStatus>${1}</piStatus>
+    <updatedOn></updatedOn>
+    <id>${2}</id>
+    <approver>santwana.samantray@myntra.com</approver>
+    <toRecipients>subhadeep.saha@myntra.com</toRecipients>
+    <ccRecipients>commercial_team@myntra.com,shanmukappa.nayak@myntra.com</ccRecipients>
+    <billingAddress></billingAddress>
+    <mailContent>Kind Attn: null null null null</mailContent>
+    <vendorContactPerson>null null null null</vendorContactPerson>
+    <vendorContactAddress>null
+null
+null
+null
+Ph 1:undefined
+Ph 2:null</vendorContactAddress>
+    <vendorState></vendorState>
+    <piType>SOR</piType>
+    <categoryManagerId>${3}</categoryManagerId>
+    <seasonId>137</seasonId>
+    <seasonYear>2016</seasonYear>
+    <estimatedShipmentDate>2019-04-22</estimatedShipmentDate>
+    <letterHeading>Vector E-Commerce Pvt Ltd</letterHeading>
+    <eoss>0</eoss>
+    <creditBasisAsOn></creditBasisAsOn>
+    <paymentTerms>CHEQUE</paymentTerms>
+    <stockOrigin>DOMESTIC</stockOrigin>
+    <brandType>IMPORT_INTERNAL</brandType>
+    <isTermValidated></isTermValidated>
+    <piPrioritization></piPrioritization>
+    <piOrderType></piOrderType>
+    <stockCorrection>0</stockCorrection>
+</pi>
+

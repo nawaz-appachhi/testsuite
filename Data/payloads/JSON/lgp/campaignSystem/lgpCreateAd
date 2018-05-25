@@ -1,0 +1,17 @@
+{
+	"name": ${0},
+	"description": ${1},
+	"objectId": ${2},
+	"budget": ${3},
+	"boost" : ${4},
+	"targetInfo": {
+        "persona":${5}
+    },
+    "startTime":${6},
+    "endTime":${7},
+    "slotInfo":{
+    	"position":${8},
+    	"costPerView":${9}
+    },
+    "frequencyCap":${10}
+}

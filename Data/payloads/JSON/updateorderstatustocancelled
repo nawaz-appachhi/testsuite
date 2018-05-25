@@ -1,0 +1,8 @@
+{
+  "orderCancellationEntry": {
+    "releaseId": ${0},
+    "cancellationReasonId": "1",
+    "userLogin": ${1},
+    "comment": "test order"
+  }
+}

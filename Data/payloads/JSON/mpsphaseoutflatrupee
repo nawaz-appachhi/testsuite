@@ -1,0 +1,10 @@
+{
+  "doType": "${0}",
+  "name": "IMR005_AutomationFlatRupeeTst",
+  "description": "d2_verifyFlatRupee",
+  "startDate": "${1}",
+  "endDate":   "${2}",
+  "categoryManager":"ik_pm@it.com",
+  "discountFundingType":"EOSS",
+  "discountOverrideStyles":[
+      {"styleId":${3},"discountLimit":10,"amount":${4}}]}

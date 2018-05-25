@@ -1,0 +1,8 @@
+{"name" : "VFTOpupFlatRupee", 
+"description" : "vf top up Flat Rupee Automation ",
+"topUpType":"FlatRupee",
+"startDate": "${0}",
+"endDate":   "${1}",
+"topUpFundingType":"${2}",
+"topUpStyles" :[ {"styleId" : ${3}, "categoryFundingRupeeOff" : 9, "vendorFundingRupeeOff" :90}]
+}

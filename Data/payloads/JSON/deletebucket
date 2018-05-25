@@ -1,0 +1,14 @@
+{
+  "id": 6,
+  "minAverageOrder": 1001,
+  "maxAverageOrder": 1200,
+  "upperThreshold": 3,
+  "lowerThreshold": 1,
+  "weightDay0": "1",
+  "weightDay1": "1",
+  "weightDay2": "1",
+  "weightDay3": "1",
+  "weightDay4": "1",
+  "weightDay5": "1",
+  "weightDay6": "1"
+}

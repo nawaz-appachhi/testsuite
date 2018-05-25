@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "children": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/children"
+        },
+        "props": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/props/title"
+            }
+          },
+          "id": "http://jsonschema.net/data/props",
+          "required": [
+            "title"
+          ]
+        }
+      },
+      "id": "http://jsonschema.net/data",
+      "required": [
+        "children",
+        "props"
+      ]
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "data"
+  ]
+}

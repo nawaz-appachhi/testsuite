@@ -1,0 +1,25 @@
+{
+  "sellerItemMasterResponse": {
+    "data": {
+      "sellerItemMaster": [
+        {
+          "enabled": "true",
+          "myntraSkuCode": "${0}",
+          "sellerBarCode": "${1}",
+          "sellerId": "${2}",
+          "sellerSkuCode": "${3}",
+          "styleId": "${4}"
+        },
+        {
+          "enabled": "true",
+          "myntraSkuCode": "${5}",
+          "sellerBarCode": "${6}",
+          "sellerId": "${7}",
+          "sellerSkuCode": "${8}",
+          "styleId": "${9}"
+        }
+        
+      ]
+    }
+  }
+}

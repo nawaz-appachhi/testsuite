@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "type": {
+      "id": "type",
+      "type": "string"
+    },
+    "props": {
+      "id": "props",
+      "type": "object",
+      "properties": {
+        "title": {
+          "id": "title",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-601"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "props"
+  ]
+}

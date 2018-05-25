@@ -1,0 +1,10 @@
+{
+  "vendor": {
+    "approver": "${0}",
+    "description": "${1}",
+    "name": "${2}",
+    "poReceiversEmails": "${3}",
+    "readyToSplit": "${4}",
+    "shipToAllWarehouses": "${5}"
+  }
+}

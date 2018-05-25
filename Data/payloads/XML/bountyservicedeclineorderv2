@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<orderCreationRequest>
+	<id>${0}</id>
+	<paymentStatus>${1}</paymentStatus>
+	<declineReasonId>${2}</declineReasonId>
+</orderCreationRequest>

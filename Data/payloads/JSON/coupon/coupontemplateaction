@@ -1,0 +1,10 @@
+{
+	"couponTemplateIDStatuses" : [
+		{
+            "id":${0},
+            "couponRequestStatus": "${1}",
+            "comments":"${2}"
+        }
+		
+		]
+}

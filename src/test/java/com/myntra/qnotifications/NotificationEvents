@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<notifyEvents>
+   <eventKey>ORDER_CONFIRMED</eventKey>
+   <idempotencyKey>abc123</idempotencyKey>
+   <data>
+       <entry>
+           <key>orderId</key>
+           <value>79900370</value>
+       </entry>
+   </data>
+</notifyEvents>

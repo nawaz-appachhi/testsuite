@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://example.com/root.json",
+    "properties": {
+        "data": {
+            "id": "http://example.com/root.json/data",
+            "properties": {
+                "trendingTerms": {
+                    "id": "http://example.com/root.json/data/trendingTerms",
+                    "items": {
+                        "default": "nike",
+                        "description": "An explanation about the purpose of this instance.",
+                        "id": "http://example.com/root.json/data/trendingTerms/0",
+                        "title": "The 0 schema.",
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "trendingTerms"
+            ],
+            "type": "object"
+        },
+        "meta": {
+            "id": "http://example.com/root.json/meta",
+            "properties": {
+                "code": {
+                    "default": 200,
+                    "description": "An explanation about the purpose of this instance.",
+                    "id": "http://example.com/root.json/meta/code",
+                    "title": "The Code schema.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "code"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "meta",
+        "data"
+    ],
+    "type": "object"
+}

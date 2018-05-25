@@ -1,0 +1,97 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		},
+		"userAccountEntry": {
+			"type":"object",
+			"id": "http://jsonschema.net/userAccountEntry",
+			"required":true,
+			"properties":{
+				"activePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/activePointsBalance",
+					"required":true
+				},
+				"awardFactor": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/awardFactor",
+					"required":true
+				},
+				"cashEqualantAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/cashEqualantAmount",
+					"required":true
+				},
+				"conversionFactor": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/conversionFactor",
+					"required":true
+				},
+				"inActivePointsBalance": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/inActivePointsBalance",
+					"required":true
+				},
+				"login": {
+					"type":"string",
+					"id": "http://jsonschema.net/userAccountEntry/login",
+					"required":true
+				},
+				"tNcAccepted": {
+					"type":"boolean",
+					"id": "http://jsonschema.net/userAccountEntry/tNcAccepted",
+					"required":true
+				},
+				"thresholdForUsage": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/thresholdForUsage",
+					"required":true
+				},
+				"tier": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/tier",
+					"required":true
+				},
+				"usableActivePointsCashEqualantAmount": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/usableActivePointsCashEqualantAmount",
+					"required":true
+				},
+				"usableActivePoints": {
+					"type":"number",
+					"id": "http://jsonschema.net/userAccountEntry/usableActivePoints",
+					"required":true
+				}
+			}
+		}
+	}
+}

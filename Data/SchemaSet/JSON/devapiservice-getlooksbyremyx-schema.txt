@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "array",
+      "items": [
+        {
+          "id": "http://jsonschema.net/data/0",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/1",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/2",
+          "type": "null"
+        },
+        {
+          "id": "http://jsonschema.net/data/3",
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

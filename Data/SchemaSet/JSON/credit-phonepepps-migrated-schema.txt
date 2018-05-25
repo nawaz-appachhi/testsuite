@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "checksum": {
+      "type": "string"
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "ppsTransactionID": {
+          "type": "string"
+        },
+        "clientTransactionID": {
+          "type": "string"
+        },
+        "ppsID": {
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        },
+        "duplicate": {
+          "type": "boolean"
+        },
+        "amount": {
+          "type": "integer"
+        },
+        "ppsType": {
+          "type": "string"
+        },
+        "ppsActionType": {
+          "type": "string"
+        },
+        "instrumentActionType": {
+          "type": "string"
+        },
+        "customerID": {
+          "type": "string"
+        },
+        "txStatus": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ppsTransactionID",
+        "clientTransactionID",
+        "ppsID",
+        "orderId",
+        "duplicate",
+        "amount",
+        "ppsType",
+        "ppsActionType",
+        "instrumentActionType",
+        "customerID",
+        "txStatus"
+      ]
+    }
+  },
+  "required": [
+    "checksum",
+    "params"
+  ]
+}

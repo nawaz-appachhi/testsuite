@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PackmanServiceSuite"  parallel="classes" thread-count="4">
+ <parameter name="team" value="SCM"/>
+	<parameter name="core" value="OMS"/>
+	<parameter name="type" value="Regression"/>
+	  <listeners>
+		<!-- <listener class-name="com.myntra.lordoftherings.SCMRetryListner" /> -->
+        <listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+  <test name="PackmanServiceTest">
+    <classes>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.CreateSellerPacketTest"/>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.MarkItemQcPassTest"/>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.GetSellerPacketTest"/>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.MarkItemPremiumPackedTest"/>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.MarkReadyToDispatchTest"/>
+      <class name="com.myntra.apiTests.erpservices.packman.Test.CancelItemsBySellerTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

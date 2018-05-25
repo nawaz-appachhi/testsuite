@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "count": {
+      "id": "count",
+      "type": "integer"
+    },
+    "cards": {
+      "id": "cards",
+      "type": "array",
+      "items": {
+        "id": "auto-generated-schema-916"
+      }
+    }
+  },
+  "required": [
+    "count",
+    "cards"
+  ]
+}

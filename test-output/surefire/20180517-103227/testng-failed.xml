@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [ATSSuite]">
+  <parameter name="ServiceName" value="ATS"/>
+  <parameter name="team" value="StoreFront"/>
+  <parameter name="type" value="Regression"/>
+  <test name="ATSServiceTest">
+    <groups>
+      <run>
+        <include name="appachhi"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+    </classes>
+  </test> <!-- ATSServiceTest -->
+</suite> <!-- Failed suite [ATSSuite] -->

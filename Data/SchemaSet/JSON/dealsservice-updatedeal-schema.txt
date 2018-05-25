@@ -1,0 +1,73 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"bannerURL": {
+			"type":"string",
+			"id": "http://jsonschema.net/bannerURL",
+			"required":true
+		},
+		"createdOn": {
+			"type":"number",
+			"id": "http://jsonschema.net/createdOn",
+			"required":true
+		},
+		"dealChannels": {
+			"type":"array",
+			"id": "http://jsonschema.net/dealChannels",
+			"required":true
+		},
+		"dealStyles": {
+			"type":"array",
+			"id": "http://jsonschema.net/dealStyles",
+			"required":true
+		},
+		"dealType": {
+			"type":"number",
+			"id": "http://jsonschema.net/dealType",
+			"required":true
+		},
+		"description": {
+			"type":"string",
+			"id": "http://jsonschema.net/description",
+			"required":true
+		},
+		"discountPercent": {
+			"type":"number",
+			"id": "http://jsonschema.net/discountPercent",
+			"required":true
+		},
+		"endTime": {
+			"type":"number",
+			"id": "http://jsonschema.net/endTime",
+			"required":true
+		},
+		"id": {
+			"type":"number",
+			"id": "http://jsonschema.net/id",
+			"required":true
+		},
+		"name": {
+			"type":"string",
+			"id": "http://jsonschema.net/name",
+			"required":true
+		},
+		"startTime": {
+			"type":"number",
+			"id": "http://jsonschema.net/startTime",
+			"required":true
+		},
+		"state": {
+			"type":"number",
+			"id": "http://jsonschema.net/state",
+			"required":true
+		},
+		"visible": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/visible",
+			"required":true
+		}
+	}
+}

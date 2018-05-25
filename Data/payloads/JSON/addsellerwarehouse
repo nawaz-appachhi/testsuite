@@ -1,0 +1,9 @@
+{
+  "sellerWarehouse": {
+    "leadTime": "${0}",
+    "myntraReturnWarehouse": { "id": "${1}" },
+    "sellerEntry": { "id": "${2}" },
+    "supplyType": "${3}",
+    "warehouseEntry": { "id": "${4}" }
+  }
+}

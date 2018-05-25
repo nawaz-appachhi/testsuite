@@ -1,0 +1,14 @@
+{
+  "personEntry": {
+    "entityId": "${0}",
+    "entityName": "${1}",
+    "firstName": "${2}",
+    "lastName": "${3}",
+    "middleName": "${4}",
+    "primaryEmail": "${5}",
+    "primaryPhoneNumber": "${6}",
+    "secondaryEmail": "${7}",
+    "secondaryPhoneNumber": "${8}",
+    "title": "${9}"
+  }
+}

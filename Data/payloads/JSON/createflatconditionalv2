@@ -1,0 +1,33 @@
+{
+    "name":"MPs Cart",
+    "description":"MPs Cart",
+    "expiredOn":${0},
+    "isDynamic":false,
+    "isEnabled":true,
+    "startedOn":${1},
+    "updatedOn":"",
+    "updatedBy":"through automation by manish",
+    "discountRules":[
+    {
+        "type":8,
+        "percent":"${2}",
+        "amount":"",
+        "id":"",
+        "discountFreeItems":[],
+        "buyCount":"0",
+        "buyAmount":"${3}",
+        "placeHolderText":"Items"
+    }],
+    "discountStyles":[
+      {
+        "styleId":"${4}"
+      }
+    ],
+    "discountFilters":[],
+    "onCart":false,
+    "discountFunding":"vendor-EOSS",
+    "fundingPercentage":"50",
+    "fundingTax":"1",
+    "fundingBasis":"discount",
+    "discountLimit":"100"
+}

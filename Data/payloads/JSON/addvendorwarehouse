@@ -1,0 +1,9 @@
+{
+  "vendorWarehouse": {
+    "leadTime": "${0}",
+    "supplyType": "${1}",
+    "taxType": "${2}",
+    "vendor": {"id": "${3}"},
+    "warehouse": { "id": "${4}"}
+  }
+}

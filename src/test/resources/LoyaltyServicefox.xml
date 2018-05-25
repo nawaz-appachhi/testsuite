@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoyaltyService" verbose="1">
+	<parameter name="team" value="Retail Lab"/>
+    <parameter name="core" value="LoyaltyPps"/>
+    <parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="LoyaltyPointsPpsServiceTest">
+	
+	<parameter name="team" value="Retail Lab"/>
+   <parameter name="core" value="LoyaltyPointsPpsService"/>
+   <parameter name="type" value="Fox7Sanity"/>
+		<groups>
+			<run>
+				<include name="Fox7Sanity" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.portalservices.all.LoyaltyService" />
+		</classes>
+	</test>
+</suite>

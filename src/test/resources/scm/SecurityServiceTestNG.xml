@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Security" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="SecurityServiceTest">
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.security.Tests.SecurityServiceTest" />
+		</classes>
+	</test>
+</suite>

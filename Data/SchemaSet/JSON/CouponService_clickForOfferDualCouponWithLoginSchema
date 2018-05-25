@@ -1,0 +1,157 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"array",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/data/0",
+					"required":false,
+					"properties":{
+						"applicableCondition": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/applicableCondition",
+							"required":false
+						},
+						"applicableOn": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/applicableOn",
+							"required":false
+						},
+						"couponAmount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponAmount",
+							"required":false
+						},
+						"couponExtraTNC": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/couponExtraTNC",
+							"required":false
+						},
+						"couponPercentage": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/couponPercentage",
+							"required":false
+						},
+						"coupon": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/coupon",
+							"required":false
+						},
+						"coupondiscount": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/coupondiscount",
+							"required":false
+						},
+						"display": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/0/display",
+							"required":false,
+							"properties":{
+								"Applicable on:": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/display/Applicable on:",
+									"required":false
+								},
+								"Coupon Discount:": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/display/Coupon Discount:",
+									"required":false
+								},
+								"Coupon code:": {
+									"type":"string",
+									"id": "http://jsonschema.net/data/0/display/Coupon code:",
+									"required":false
+								}
+							}
+						},
+						"endTime": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/endTime",
+							"required":false
+						},
+						"enddate": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/enddate",
+							"required":false
+						},
+						"minimumCount": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/minimumCount",
+							"required":false
+						},
+						"minimum": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/minimum",
+							"required":false
+						},
+						"originalPrice": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/originalPrice",
+							"required":false
+						},
+						"price": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/price",
+							"required":false
+						},
+						"totalSavings": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/0/totalSavings",
+							"required":false
+						},
+						"type": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/0/type",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"message": {
+			"type":"string",
+			"id": "http://jsonschema.net/message",
+			"required":false
+		},
+		"numberOfCoupons": {
+			"type":"number",
+			"id": "http://jsonschema.net/numberOfCoupons",
+			"required":false
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+     {
+      "id": "http://jsonschema.net/109146",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://jsonschema.net/109146/id",
+          "type": "integer"
+        },
+        "createdOn": {
+          "id": "http://jsonschema.net/109146/createdOn",
+          "type": "integer"
+        },
+        "styleId": {
+          "id": "http://jsonschema.net/109146/styleId",
+          "type": "integer"
+        },
+        "discountId": {
+          "id": "http://jsonschema.net/109146/discountId",
+          "type": "integer"
+        }
+      }
+    },
+    {
+      "id": "http://jsonschema.net/170767",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://jsonschema.net/170767/id",
+          "type": "integer"
+        },
+        "createdOn": {
+          "id": "http://jsonschema.net/170767/createdOn",
+          "type": "integer"
+        },
+        "styleId": {
+          "id": "http://jsonschema.net/170767/styleId",
+          "type": "integer"
+        },
+        "discountId": {
+          "id": "http://jsonschema.net/170767/discountId",
+          "type": "integer"
+        }
+      }
+    },
+     {
+      "id": "http://jsonschema.net/236229",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://jsonschema.net/236229/id",
+          "type": "integer"
+        },
+        "createdOn": {
+          "id": "http://jsonschema.net/236229/createdOn",
+          "type": "integer"
+        },
+        "styleId": {
+          "id": "http://jsonschema.net/236229/styleId",
+          "type": "integer"
+        },
+        "discountId": {
+          "id": "http://jsonschema.net/236229/discountId",
+          "type": "integer"
+        }
+      }
+    },
+     {
+      "id": "http://jsonschema.net/273194",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://jsonschema.net/273194/id",
+          "type": "integer"
+        },
+        "createdOn": {
+          "id": "http://jsonschema.net/273194/createdOn",
+          "type": "integer"
+        },
+        "styleId": {
+          "id": "http://jsonschema.net/273194/styleId",
+          "type": "integer"
+        },
+        "discountId": {
+          "id": "http://jsonschema.net/273194/discountId",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

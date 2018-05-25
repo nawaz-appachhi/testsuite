@@ -1,0 +1,11 @@
+{
+    "senderName": "${0}",
+    "senderEmail": "${1}",
+    "recipientName": "${2}",
+    "recipientEmail": "${3}",
+    "message": "${4}",
+    "gcImage": "${5}",
+    "coverImage" : "${6}",
+	"cardImage" : "${7}",
+	"isPersonalised" : ${8}
+}

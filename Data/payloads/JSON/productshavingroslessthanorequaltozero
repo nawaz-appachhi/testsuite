@@ -1,0 +1,43 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "range": {
+                "aggMetrics.totalOrders":{
+                    "gt":100
+                }
+              }
+            },
+            
+            {
+              "range": {
+                "aggMetrics.daysLive":{
+                    "gt":30
+                }
+              }
+            },
+            
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            },
+            {
+              "range": {
+                "aggMetrics.ros":{
+                    "lte":0
+                }
+              }
+            }
+
+          ]
+          
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PlanningAndBuying" verbose="1">
+	<parameter name="team" value="InBound"/>
+	<parameter name="core" value="InBound"/>
+	<parameter name="type" value="Sanity"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+	</listeners>
+	<test name="OrderIndent Regression Tests">
+		<classes>
+			<class name="com.myntra.apiTests.inbound.planningandbuying.test.InseasonOrderIndent" />
+			<class name="com.myntra.apiTests.inbound.planningandbuying.test.TsrOrderIndent" />
+			
+		</classes>
+	</test>
+	
+</suite>

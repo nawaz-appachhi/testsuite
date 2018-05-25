@@ -1,0 +1,6 @@
+delete from hub_activity_detail where shipment_id=<order_id>;
+delete from order_tracking_detail where order_tracking_id=(select id from order_tracking where order_id=<order_id>);
+delete from shipment_order_map where order_id=<order_id>;
+delete from trip_order_assignment where order_id=<order_id>;
+delete from order_tracking where order_id=<order_id>;
+delete from order_to_ship where order_id=<order_id>;

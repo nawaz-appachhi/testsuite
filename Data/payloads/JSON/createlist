@@ -1,0 +1,9 @@
+{
+	"access": "${0}",
+	"collaborators": {},
+	"description": "${1}",
+	"listType": "${2}",
+	"name": "${3}",
+	"styleIds": [${4},${5}],
+	"tags": ["${6}","${7}"]
+}

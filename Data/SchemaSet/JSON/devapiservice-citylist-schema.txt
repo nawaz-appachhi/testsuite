@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "locationList": {
+      "id": "http://jsonschema.net/locationList",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/locationList/0",
+        "type": "object",
+        "properties": {
+          "city": {
+            "id": "http://jsonschema.net/locationList/0/city",
+            "type": "string"
+          },
+          "state": {
+            "id": "http://jsonschema.net/locationList/0/state",
+            "type": "string"
+          },
+          "country": {
+            "id": "http://jsonschema.net/locationList/0/country",
+            "type": "string"
+          }
+        },
+        "required": [
+          "city",
+          "state",
+          "country"
+        ]
+      },
+      "required": [
+        "0"
+      ]
+    }
+  },
+  "required": [
+    "locationList"
+  ]
+}

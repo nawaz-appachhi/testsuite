@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <exchangeOrderEntry>
+        <orderId>${0}</orderId>
+        <exchangeLineEntries>
+            <orderLineId>${1}</orderLineId>
+            <quantity>${2}</quantity>
+            <reasonCode>${3}</reasonCode>
+            <skuId>${4}</skuId>
+            <optionid>${5}</optionid>
+            <styleId>${6}</styleId>
+        </exchangeLineEntries>
+        <userLogin>${7}</userLogin>
+        <userComment>comments</userComment>
+        <paymentPpsId>${8}</paymentPpsId>
+        <shippingAddressEntry>
+            <receiverName>Abhijit Pati</receiverName>
+            <shippingAddress>Myntra Design Pvt. Ltd. </shippingAddress>
+            <shippingLocality>Singasandra</shippingLocality>
+            <shippingCity>Bangalore</shippingCity>
+            <shippingState>KA</shippingState>
+            <shippingCountry>India</shippingCountry>
+            <shippingZipcode>560068</shippingZipcode>
+            <receiverMobile>9439543863</receiverMobile>
+            <receiverEmail>${7}</receiverEmail>
+        </shippingAddressEntry>
+        <billingAddressEntry>
+            <billingFirstName>Abhijit</billingFirstName>
+            <billingLastName>Pati</billingLastName>
+            <billingAddress>Billing Address</billingAddress>
+            <billingCity>Bangalore</billingCity>
+            <billingCounty>India</billingCounty>
+            <billingState>Karnataka</billingState>
+            <billingZipCode>560068</billingZipCode>
+            <billingMobile>9439543863</billingMobile>
+            <billingEmail>${7}</billingEmail>
+        </billingAddressEntry>
+    </exchangeOrderEntry>

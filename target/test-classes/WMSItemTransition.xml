@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="WMSRegressionTest" verbose="1">
+    <parameter name="team" value="SCM"/>
+	<parameter name="core" value="WMS"/>
+	<parameter name="type" value="Regression"/>
+	<test name="WMSTestSuite">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.WMSTest" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.InwardItemTest"/>
+			<class name="com.myntra.apiTests.erpservices.ims.Tests.ItemStateTransitionStates" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.ROTests" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.StockTransferNoteNegativeTests" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.StockTransferPositiveTests" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.InternalOrderNegativeTests" />
+			<class name="com.myntra.apiTests.erpservices.wms.Tests.InternalOrderPositiveTests" />
+		</classes>
+	</test>
+</suite>

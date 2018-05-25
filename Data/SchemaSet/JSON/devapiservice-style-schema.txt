@@ -1,0 +1,1303 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "notification": {
+      "id": "http://jsonschema.net/notification",
+      "type": "object",
+      "properties": {}
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "http://jsonschema.net/meta/code",
+          "type": "integer",
+          "enum": [
+            null,
+            200
+          ]
+        },
+        "requestId": {
+          "id": "http://jsonschema.net/meta/requestId",
+          "type": "string",
+          "enum": [
+            null,
+            "c585c629-4408-4d9e-9015-48c10ca7c75c"
+          ]
+        }
+      }
+    },
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://jsonschema.net/data/id",
+          "type": "integer",
+          "enum": [
+            null,
+            354914
+          ]
+        },
+        "price": {
+          "id": "http://jsonschema.net/data/price",
+          "type": "integer",
+          "enum": [
+            null,
+            2
+          ]
+        },
+        "discountedPrice": {
+          "id": "http://jsonschema.net/data/discountedPrice",
+          "type": "integer",
+          "enum": [
+            null,
+            2
+          ]
+        },
+        "styleType": {
+          "id": "http://jsonschema.net/data/styleType",
+          "type": "string",
+          "enum": [
+            null,
+            "P"
+          ]
+        },
+        "productTypeId": {
+          "id": "http://jsonschema.net/data/productTypeId",
+          "type": "integer",
+          "enum": [
+            null,
+            632
+          ]
+        },
+        "articleNumber": {
+          "id": "http://jsonschema.net/data/articleNumber",
+          "type": "string",
+          "enum": [
+            null,
+            "669594-401-SPACE BLUE/LGHT ASH GREY-WHITE-354914"
+          ]
+        },
+        "visualTag": {
+          "id": "http://jsonschema.net/data/visualTag",
+          "type": "string",
+          "enum": [
+            null
+          ]
+        },
+        "productDisplayName": {
+          "id": "http://jsonschema.net/data/productDisplayName",
+          "type": "string",
+          "enum": [
+            null,
+            "Nike Men Blue Liteforce III Casual Shoes"
+          ]
+        },
+        "variantName": {
+          "id": "http://jsonschema.net/data/variantName",
+          "type": "string",
+          "enum": [
+            null,
+            "NIKE LITEFORCE III MID"
+          ]
+        },
+        "myntraRating": {
+          "id": "http://jsonschema.net/data/myntraRating",
+          "type": "integer",
+          "enum": [
+            null,
+            1
+          ]
+        },
+        "catalogAddDate": {
+          "id": "http://jsonschema.net/data/catalogAddDate",
+          "type": "integer",
+          "enum": [
+            null,
+            1405919357
+          ]
+        },
+        "brandName": {
+          "id": "http://jsonschema.net/data/brandName",
+          "type": "string",
+          "enum": [
+            null,
+            "Nike"
+          ]
+        },
+        "ageGroup": {
+          "id": "http://jsonschema.net/data/ageGroup",
+          "type": "string",
+          "enum": [
+            null,
+            "Adults-Men"
+          ]
+        },
+        "gender": {
+          "id": "http://jsonschema.net/data/gender",
+          "type": "string",
+          "enum": [
+            null,
+            "Men"
+          ]
+        },
+        "baseColour": {
+          "id": "http://jsonschema.net/data/baseColour",
+          "type": "string",
+          "enum": [
+            null,
+            "Blue"
+          ]
+        },
+        "colour1": {
+          "id": "http://jsonschema.net/data/colour1",
+          "type": "string",
+          "enum": [
+            null,
+            "NA"
+          ]
+        },
+        "colour2": {
+          "id": "http://jsonschema.net/data/colour2",
+          "type": "string",
+          "enum": [
+            null,
+            "Beige"
+          ]
+        },
+        "fashionType": {
+          "id": "http://jsonschema.net/data/fashionType",
+          "type": "string",
+          "enum": [
+            null,
+            "Fashion"
+          ]
+        },
+        "season": {
+          "id": "http://jsonschema.net/data/season",
+          "type": "string",
+          "enum": [
+            null,
+            "Fall"
+          ]
+        },
+        "year": {
+          "id": "http://jsonschema.net/data/year",
+          "type": "string",
+          "enum": [
+            null,
+            "2014"
+          ]
+        },
+        "usage": {
+          "id": "http://jsonschema.net/data/usage",
+          "type": "string",
+          "enum": [
+            null,
+            "Casual"
+          ]
+        },
+        "vat": {
+          "id": "http://jsonschema.net/data/vat",
+          "type": "number",
+          "enum": [
+            null,
+            14.5
+          ]
+        },
+        "displayCategories": {
+          "id": "http://jsonschema.net/data/displayCategories",
+          "type": "string",
+          "enum": [
+            null,
+            "Footwear"
+          ]
+        },
+        "weight": {
+          "id": "http://jsonschema.net/data/weight",
+          "type": "string",
+          "enum": [
+            null,
+            "0"
+          ]
+        },
+        "navigationId": {
+          "id": "http://jsonschema.net/data/navigationId",
+          "type": "integer",
+          "enum": [
+            null,
+            18
+          ]
+        },
+        "landingPageUrl": {
+          "id": "http://jsonschema.net/data/landingPageUrl",
+          "type": "string",
+          "enum": [
+            null,
+            "Casual-Shoes/Nike/Nike-Men-Blue-Liteforce-III-Casual-Shoes/354914/buy"
+          ]
+        },
+        "articleAttributes": {
+          "id": "http://jsonschema.net/data/articleAttributes",
+          "type": "object",
+          "properties": {
+            "Fastening": {
+              "id": "http://jsonschema.net/data/articleAttributes/Fastening",
+              "type": "string",
+              "enum": [
+                null,
+                "Laceup"
+              ]
+            },
+            "Upper Material": {
+              "id": "http://jsonschema.net/data/articleAttributes/Upper Material",
+              "type": "string",
+              "enum": [
+                null,
+                "Canvas"
+              ]
+            },
+            "Ankle Height": {
+              "id": "http://jsonschema.net/data/articleAttributes/Ankle Height",
+              "type": "string",
+              "enum": [
+                null,
+                "Mid tops"
+              ]
+            },
+            "Casual Shoe Type": {
+              "id": "http://jsonschema.net/data/articleAttributes/Casual Shoe Type",
+              "type": "string",
+              "enum": [
+                null,
+                "Casual Shoes"
+              ]
+            },
+            "Width": {
+              "id": "http://jsonschema.net/data/articleAttributes/Width",
+              "type": "string",
+              "enum": [
+                null,
+                "Regular"
+              ]
+            }
+          }
+        },
+        "crossLinks": {
+          "id": "http://jsonschema.net/data/crossLinks",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-701"
+          }
+        },
+        "styleImages": {
+          "id": "http://jsonschema.net/data/styleImages",
+          "type": "object",
+          "properties": {
+            "default": {
+              "id": "http://jsonschema.net/data/styleImages/default",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/default/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/default/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_180_240_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_150_200.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_180_240.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/default/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_150_200_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/default/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "default"
+                  ]
+                }
+              }
+            },
+            "size_representation": {
+              "id": "http://jsonschema.net/data/styleImages/size_representation",
+              "type": "string",
+              "enum": [
+                null,
+                "skin1/myntra_images/sizechart/sizecharts_feet_v1.png"
+              ]
+            },
+            "search": {
+              "id": "http://jsonschema.net/data/styleImages/search",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/search/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/search/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_180_240_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_150_200.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_180_240.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/search/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_4b2cc5fafc970a80c82aa7c75d044e4f_images_150_200_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/search/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "search"
+                  ]
+                }
+              }
+            },
+            "back": {
+              "id": "http://jsonschema.net/data/styleImages/back",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/back/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/back/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_81_108_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_81_108.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_81_108.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/back/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_7fffca7af00e9e8430c87439dffe2435_images_81_108_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/back/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "back"
+                  ]
+                }
+              }
+            },
+            "left": {
+              "id": "http://jsonschema.net/data/styleImages/left",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/left/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/left/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_81_108_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_81_108.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_81_108.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/left/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_67c6c66295c293e9aa8eafe4228fa39c_images_81_108_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/left/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "left"
+                  ]
+                }
+              }
+            },
+            "front": {
+              "id": "http://jsonschema.net/data/styleImages/front",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/front/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/front/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_81_108_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_81_108.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_81_108.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/front/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_05c603f909e432924550dad29ad938b3_images_81_108_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/front/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "front"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "id": "http://jsonschema.net/data/styleImages/right",
+              "type": "object",
+              "properties": {
+                "imageURL": {
+                  "id": "http://jsonschema.net/data/styleImages/right/imageURL",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images.jpg"
+                  ]
+                },
+                "resolutions": {
+                  "id": "http://jsonschema.net/data/styleImages/right/resolutions",
+                  "type": "object",
+                  "properties": {
+                    "1080X1440": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/1080X1440",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_1080_1440.jpg"
+                      ]
+                    },
+                    "360X480Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/360X480Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_360_480_mini.jpg"
+                      ]
+                    },
+                    "360X480": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/360X480",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_360_480.jpg"
+                      ]
+                    },
+                    "48X64Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/48X64Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_48_64_mini.jpg"
+                      ]
+                    },
+                    "48X64": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/48X64",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_48_64.jpg"
+                      ]
+                    },
+                    "180X240Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/180X240Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_81_108_mini.jpg"
+                      ]
+                    },
+                    "150X200": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/150X200",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_81_108.jpg"
+                      ]
+                    },
+                    "180X240": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/180X240",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_81_108.jpg"
+                      ]
+                    },
+                    "1080X1440Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/1080X1440Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_1080_1440_mini.jpg"
+                      ]
+                    },
+                    "150X200Xmini": {
+                      "id": "http://jsonschema.net/data/styleImages/right/resolutions/150X200Xmini",
+                      "type": "string",
+                      "enum": [
+                        null,
+                        "http://myntra.myntassets.com/images/style/properties/Nike-Men-Sports-Shoes_e4d959217d48327386f4397c7463aca7_images_81_108_mini.jpg"
+                      ]
+                    }
+                  }
+                },
+                "imageType": {
+                  "id": "http://jsonschema.net/data/styleImages/right/imageType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "right"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "style360Images": {
+          "id": "http://jsonschema.net/data/style360Images",
+          "type": "object",
+          "properties": {}
+        },
+        "masterCategory": {
+          "id": "http://jsonschema.net/data/masterCategory",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/data/masterCategory/id",
+              "type": "integer",
+              "enum": [
+                null,
+                10
+              ]
+            },
+            "typeName": {
+              "id": "http://jsonschema.net/data/masterCategory/typeName",
+              "type": "string",
+              "enum": [
+                null,
+                "Footwear"
+              ]
+            },
+            "active": {
+              "id": "http://jsonschema.net/data/masterCategory/active",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "socialSharingEnabled": {
+              "id": "http://jsonschema.net/data/masterCategory/socialSharingEnabled",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isReturnable": {
+              "id": "http://jsonschema.net/data/masterCategory/isReturnable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isExchangeable": {
+              "id": "http://jsonschema.net/data/masterCategory/isExchangeable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            }
+          }
+        },
+        "subCategory": {
+          "id": "http://jsonschema.net/data/subCategory",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/data/subCategory/id",
+              "type": "integer",
+              "enum": [
+                null,
+                33
+              ]
+            },
+            "typeName": {
+              "id": "http://jsonschema.net/data/subCategory/typeName",
+              "type": "string",
+              "enum": [
+                null,
+                "Shoes"
+              ]
+            },
+            "active": {
+              "id": "http://jsonschema.net/data/subCategory/active",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "socialSharingEnabled": {
+              "id": "http://jsonschema.net/data/subCategory/socialSharingEnabled",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isReturnable": {
+              "id": "http://jsonschema.net/data/subCategory/isReturnable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isExchangeable": {
+              "id": "http://jsonschema.net/data/subCategory/isExchangeable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            }
+          }
+        },
+        "articleType": {
+          "id": "http://jsonschema.net/data/articleType",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http://jsonschema.net/data/articleType/id",
+              "type": "integer",
+              "enum": [
+                null,
+                93
+              ]
+            },
+            "typeName": {
+              "id": "http://jsonschema.net/data/articleType/typeName",
+              "type": "string",
+              "enum": [
+                null,
+                "Casual Shoes"
+              ]
+            },
+            "active": {
+              "id": "http://jsonschema.net/data/articleType/active",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "socialSharingEnabled": {
+              "id": "http://jsonschema.net/data/articleType/socialSharingEnabled",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isReturnable": {
+              "id": "http://jsonschema.net/data/articleType/isReturnable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            },
+            "isExchangeable": {
+              "id": "http://jsonschema.net/data/articleType/isExchangeable",
+              "type": "boolean",
+              "enum": [
+                null,
+                true
+              ]
+            }
+          }
+        },
+        "productDescriptors": {
+          "id": "http://jsonschema.net/data/productDescriptors",
+          "type": "object",
+          "properties": {
+            "materials_care_desc": {
+              "id": "http://jsonschema.net/data/productDescriptors/materials_care_desc",
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "id": "http://jsonschema.net/data/productDescriptors/materials_care_desc/descriptorType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "materials_care_desc"
+                  ]
+                },
+                "value": {
+                  "id": "http://jsonschema.net/data/productDescriptors/materials_care_desc/value",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "<p>Canvas<br />Wipe with a clean, dry cloth when needed<br />Click <a href=\"http://www.myntra.com/textile-care\" target=\"_blank\">here</a> for the perfect care products for shoes made of textile/fabric</p>"
+                  ]
+                }
+              }
+            },
+            "description": {
+              "id": "http://jsonschema.net/data/productDescriptors/description",
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "id": "http://jsonschema.net/data/productDescriptors/description/descriptorType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "description"
+                  ]
+                },
+                "value": {
+                  "id": "http://jsonschema.net/data/productDescriptors/description/value",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "<p>A pair of round-toed, blue casual shoes with central lace-ups and mid top styling<br />Canvas upper with synthetic overlays and stitched detail, perforations on the sides, has multiple branding, a reinforced heel collar with pull loop detail<br />Padded inner and tongue, branding on the tongue<br />Cushioned footbed with branding on the heel<br />Thick midsole<br />Textured outsole with patterned grooves<br />Warranty: 6 months against manufacturing defects (not valid on products with more than 20% discount)</p>"
+                  ]
+                }
+              }
+            },
+            "style_note": {
+              "id": "http://jsonschema.net/data/productDescriptors/style_note",
+              "type": "object",
+              "properties": {
+                "descriptorType": {
+                  "id": "http://jsonschema.net/data/productDescriptors/style_note/descriptorType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "style_note"
+                  ]
+                },
+                "value": {
+                  "id": "http://jsonschema.net/data/productDescriptors/style_note/value",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "<p>Featuring a smart and trendy look, this pair of casual shoes from Nike is a perfect addition to your footwear collection. The cool design will add oomph to your casual outfits.</p>"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "styleOptions": {
+          "id": "http://jsonschema.net/data/styleOptions",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-891"
+          }
+        },
+        "discountData": {
+          "id": "http://jsonschema.net/data/discountData",
+          "type": "object",
+          "properties": {
+            "discountType": {
+              "id": "http://jsonschema.net/data/discountData/discountType",
+              "type": "integer",
+              "enum": [
+                null,
+                8
+              ]
+            },
+            "discountAmount": {
+              "id": "http://jsonschema.net/data/discountData/discountAmount",
+              "type": "integer",
+              "enum": [
+                null
+              ]
+            },
+            "discountId": {
+              "id": "http://jsonschema.net/data/discountData/discountId",
+              "type": "integer",
+              "enum": [
+                null,
+                74793
+              ]
+            },
+            "discountPercent": {
+              "id": "http://jsonschema.net/data/discountData/discountPercent",
+              "type": "number",
+              "enum": [
+                null,
+                15.000001
+              ]
+            },
+            "discountModifiedDate": {
+              "id": "http://jsonschema.net/data/discountData/discountModifiedDate",
+              "type": "integer",
+              "enum": [
+                null,
+                1448612160404
+              ]
+            },
+            "discountText": {
+              "id": "http://jsonschema.net/data/discountData/discountText",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "http://jsonschema.net/data/discountData/discountText/text",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "Special Combo Offer - save upto <strong><span class=\"rupees\">Rs. </span>30</strong>"
+                  ]
+                },
+                "hasFreeItem": {
+                  "id": "http://jsonschema.net/data/discountData/discountText/hasFreeItem",
+                  "type": "boolean",
+                  "enum": [
+                    null
+                  ]
+                }
+              }
+            },
+            "discountToolTipText": {
+              "id": "http://jsonschema.net/data/discountData/discountToolTipText",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "http://jsonschema.net/data/discountData/discountToolTipText/text",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "BUY <em>Items</em> worth <em><span class=\"rupees\">Rs. </span>200</em> & GET <em><span class=\"rupees\">Rs. </span>30</em> Off on the combo"
+                  ]
+                },
+                "discountType": {
+                  "id": "http://jsonschema.net/data/discountData/discountToolTipText/discountType",
+                  "type": "string",
+                  "enum": [
+                    null,
+                    "AMOUNT"
+                  ]
+                },
+                "hasFreeItem": {
+                  "id": "http://jsonschema.net/data/discountData/discountToolTipText/hasFreeItem",
+                  "type": "boolean",
+                  "enum": [
+                    null
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

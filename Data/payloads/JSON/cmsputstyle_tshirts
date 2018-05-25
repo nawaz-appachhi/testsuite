@@ -1,0 +1,129 @@
+{
+      "id": ${24},
+      "name": "new product display name 3",
+      "description": "${0}",
+      "price": ${1},
+      "styleStatus": "${2}",
+      "articleNumber": "abcd123-Blue-1198375",
+      "vendorArticleNumber": "abcd",
+      "productDisplayName": "${3}",
+      "variantName": "eueeodldvai2425",
+      "styleNote": "${4}",
+      "materialCareDescription": "${5}",
+      "sizeFitDescription": "${6}",
+      "comments": "${7}",
+      "global_attr_article_type": 90,
+      "global_attr_article_type_name": "Tshirts",
+      "parent1Id": 31,
+      "parent1Name": "Topwear",
+      "parent2Id": 9,
+      "parent2Name": "Apparel",
+      "listViewName": "${8}",
+      "globalAttributes": {
+        "season": "Spring",
+        "baseColour": "Green",
+        "usage": "Travel",
+        "gender": "Women",
+        "year": "2008",
+        "colour2": "Green",
+        "brandName": "Adidas",
+        "colour1": "Green",
+        "fashionType": "Core",
+        "ageGroup": "Adults-Women"
+      },
+      "brandName": "${9}",
+      "ageGroup": "${10}",
+      "gender": "${11}",
+      "baseColour": "${12}",
+      "colour1": "${13}",
+      "colour2": "${14}",
+      "fashionType": "${15}",
+      "season": "${16}",
+      "year": "${17}",
+      "usage": "${18}",
+      "productOptionEntries": [
+        {
+          "id": 5746082,
+          "name": "Size",
+          "value": "S",
+          "isActive": true,
+          "price": 400,
+          "styleId": 1198380,
+          "skuId": 12265580,
+          "skuCode": "ACTNTSHT00000007",
+          "active": true
+        },
+        {
+          "id": 5746083,
+          "name": "Size",
+          "value": "M",
+          "isActive": true,
+          "price": 400,
+          "styleId": 1198380,
+          "skuId": 12265581,
+          "skuCode": "ACTNTSHT00000008",
+          "active": true
+        },
+        {
+          "id": 5746084,
+          "name": "Size",
+          "value": "L",
+          "isActive": true,
+          "price": 400,
+          "styleId": 1198380,
+          "skuId": 12265582,
+          "skuCode": "ACTNTSHT00000009",
+          "active": true
+        },
+        {
+          "id": 5746085,
+          "name": "Size",
+          "value": "XL",
+          "isActive": true,
+          "price": 400,
+          "styleId": 1198380,
+          "skuId": 12265583,
+          "skuCode": "ACTNTSHT00000010",
+          "active": true
+        }
+      ],
+      "attributeValues": [
+        {
+          "id": ${19},
+          "attributeType": {
+            "id": 80,
+            "typeName": "Fabric",
+            "isActive": true,
+            "typeOfAttribute": "singleValued"
+          }
+        },
+        {
+          "id": ${20},
+          "attributeType": {
+            "id": 81,
+            "typeName": "Collar",
+            "isActive": true,
+            "typeOfAttribute": "singleValued"
+          }
+        },
+        {
+          "id": ${21},
+          "attributeType": {
+            "id": 82,
+            "typeName": "Sleeve Length",
+            "isActive": true,
+            "typeOfAttribute": "singleValued"
+          }
+        },
+        {
+          "id": ${22},
+          "attributeType": {
+            "id": 83,
+            "typeName": "Hemline",
+            "isActive": true,
+            "typeOfAttribute": "singleValued"
+          }
+        }
+      ],
+      "productTag": "${23}"
+    }

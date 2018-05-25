@@ -1,0 +1,53 @@
+[
+    {
+            "query": "${0}",
+            "start": 0,
+            "rows": 50,
+            "facetField": [],
+            "pivotFacets": [],
+            "fq": [
+                "count_options_availbale:[1 TO *]",
+                "styletype:P"
+            ],
+            "sort": [
+                {
+                    "sort_field": "add(1,stylescore(styleid,'{}'))",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "count_options_availbale",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "score",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "style_store18_sort_field",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "potential_revenue_sort_field",
+                    "order_by": "desc"
+                },
+                {
+                    "sort_field": "global_attr_catalog_add_date",
+                    "order_by": "desc"
+                }
+            ],
+            "return_docs": true,
+            "colour_grouping": true,
+            "upsInfo": {
+                "personalizationSortAlgoUsed": "defaultPinAlgo",
+                "numPersonalizedProductShown": 0,
+                "isPersonalized": true
+            },
+            "useCache": false,
+            "flatshot": false,
+            "outOfStock": false,
+            "showInactiveStyles": false,
+            "upsOnly": false,
+            "connectionClass": "DEFAULT",
+            "facet": true
+        }
+]

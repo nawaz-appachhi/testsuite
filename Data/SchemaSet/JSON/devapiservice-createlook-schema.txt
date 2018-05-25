@@ -1,0 +1,486 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "id": "meta",
+      "type": "object",
+      "properties": {
+        "code": {
+          "id": "code",
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "id": "data",
+      "type": "array",
+      "items": {
+        "id": "0",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "id",
+            "type": "integer"
+          },
+          "createdBy": {
+            "id": "createdBy",
+            "type": "string"
+          },
+          "createdOn": {
+            "id": "createdOn",
+            "type": "integer"
+          },
+          "lastModifiedOn": {
+            "id": "lastModifiedOn",
+            "type": "integer"
+          },
+          "version": {
+            "id": "version",
+            "type": "integer"
+          },
+          "title": {
+            "id": "title",
+            "type": "string"
+          },
+          "description": {
+            "id": "description",
+            "type": "string"
+          },
+          "creatorId": {
+            "id": "creatorId",
+            "type": "string"
+          },
+          "isActive": {
+            "id": "isActive",
+            "type": "boolean"
+          },
+          "isDraft": {
+            "id": "isDraft",
+            "type": "boolean"
+          },
+          "isRemyx": {
+            "id": "isRemyx",
+            "type": "boolean"
+          },
+          "detailJson": {
+            "id": "detailJson",
+            "type": "string"
+          },
+          "occasion": {
+            "id": "occasion",
+            "type": "object",
+            "properties": {
+              "id": {
+                "id": "id",
+                "type": "integer"
+              },
+              "version": {
+                "id": "version",
+                "type": "integer"
+              }
+            }
+          },
+          "stickers": {
+            "id": "stickers",
+            "type": "array",
+            "items": [
+              {
+                "id": "0",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "id": "id",
+                    "type": "integer"
+                  },
+                  "orientation": {
+                    "id": "orientation",
+                    "type": "object",
+                    "properties": {
+                      "height": {
+                        "id": "height",
+                        "type": "number"
+                      },
+                      "isFlipped": {
+                        "id": "isFlipped",
+                        "type": "boolean"
+                      },
+                      "rotation": {
+                        "id": "rotation",
+                        "type": "integer"
+                      },
+                      "scaleFactor": {
+                        "id": "scaleFactor",
+                        "type": "integer"
+                      },
+                      "width": {
+                        "id": "width",
+                        "type": "number"
+                      },
+                      "xPos": {
+                        "id": "xPos",
+                        "type": "number"
+                      },
+                      "yPos": {
+                        "id": "yPos",
+                        "type": "number"
+                      },
+                      "zIndex": {
+                        "id": "zIndex",
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "createdBy": {
+                    "id": "createdBy",
+                    "type": "string"
+                  },
+                  "createdOn": {
+                    "id": "createdOn",
+                    "type": "integer"
+                  },
+                  "lastModifiedOn": {
+                    "id": "lastModifiedOn",
+                    "type": "integer"
+                  },
+                  "version": {
+                    "id": "version",
+                    "type": "integer"
+                  },
+                  "damsImageId": {
+                    "id": "damsImageId",
+                    "type": "string"
+                  },
+                  "damImage": {
+                    "id": "damImage",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "id",
+                        "type": "string"
+                      },
+                      "url": {
+                        "id": "url",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "id": "1",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "id": "id",
+                    "type": "integer"
+                  },
+                  "orientation": {
+                    "id": "orientation",
+                    "type": "object",
+                    "properties": {
+                      "height": {
+                        "id": "height",
+                        "type": "number"
+                      },
+                      "isFlipped": {
+                        "id": "isFlipped",
+                        "type": "boolean"
+                      },
+                      "rotation": {
+                        "id": "rotation",
+                        "type": "integer"
+                      },
+                      "scaleFactor": {
+                        "id": "scaleFactor",
+                        "type": "integer"
+                      },
+                      "width": {
+                        "id": "width",
+                        "type": "number"
+                      },
+                      "xPos": {
+                        "id": "xPos",
+                        "type": "number"
+                      },
+                      "yPos": {
+                        "id": "yPos",
+                        "type": "number"
+                      },
+                      "zIndex": {
+                        "id": "zIndex",
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "createdBy": {
+                    "id": "createdBy",
+                    "type": "string"
+                  },
+                  "createdOn": {
+                    "id": "createdOn",
+                    "type": "integer"
+                  },
+                  "lastModifiedOn": {
+                    "id": "lastModifiedOn",
+                    "type": "integer"
+                  },
+                  "version": {
+                    "id": "version",
+                    "type": "integer"
+                  },
+                  "damsImageId": {
+                    "id": "damsImageId",
+                    "type": "string"
+                  },
+                  "damImage": {
+                    "id": "damImage",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "id",
+                        "type": "string"
+                      },
+                      "url": {
+                        "id": "url",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "styles": {
+            "id": "styles",
+            "type": "array",
+            "items": [
+              {
+                "id": "0",
+                "type": "integer"
+              },
+              {
+                "id": "1",
+                "type": "integer"
+              },
+              {
+                "id": "2",
+                "type": "integer"
+              }
+            ]
+          },
+          "itemList": {
+            "id": "itemList",
+            "type": "array",
+            "items": [
+              {
+                "id": "0",
+                "type": "object",
+                "properties": {
+                  "styleId": {
+                    "id": "styleId",
+                    "type": "integer"
+                  },
+                  "orientation": {
+                    "id": "orientation",
+                    "type": "object",
+                    "properties": {
+                      "height": {
+                        "id": "height",
+                        "type": "number"
+                      },
+                      "isFlipped": {
+                        "id": "isFlipped",
+                        "type": "boolean"
+                      },
+                      "rotation": {
+                        "id": "rotation",
+                        "type": "integer"
+                      },
+                      "scaleFactor": {
+                        "id": "scaleFactor",
+                        "type": "integer"
+                      },
+                      "width": {
+                        "id": "width",
+                        "type": "number"
+                      },
+                      "xPos": {
+                        "id": "xPos",
+                        "type": "number"
+                      },
+                      "yPos": {
+                        "id": "yPos",
+                        "type": "number"
+                      },
+                      "zIndex": {
+                        "id": "zIndex",
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "id": "1",
+                "type": "object",
+                "properties": {
+                  "styleId": {
+                    "id": "styleId",
+                    "type": "integer"
+                  },
+                  "orientation": {
+                    "id": "orientation",
+                    "type": "object",
+                    "properties": {
+                      "height": {
+                        "id": "height",
+                        "type": "number"
+                      },
+                      "isFlipped": {
+                        "id": "isFlipped",
+                        "type": "boolean"
+                      },
+                      "rotation": {
+                        "id": "rotation",
+                        "type": "integer"
+                      },
+                      "scaleFactor": {
+                        "id": "scaleFactor",
+                        "type": "integer"
+                      },
+                      "width": {
+                        "id": "width",
+                        "type": "number"
+                      },
+                      "xPos": {
+                        "id": "xPos",
+                        "type": "integer"
+                      },
+                      "yPos": {
+                        "id": "yPos",
+                        "type": "number"
+                      },
+                      "zIndex": {
+                        "id": "zIndex",
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "id": "2",
+                "type": "object",
+                "properties": {
+                  "styleId": {
+                    "id": "styleId",
+                    "type": "integer"
+                  },
+                  "orientation": {
+                    "id": "orientation",
+                    "type": "object",
+                    "properties": {
+                      "height": {
+                        "id": "height",
+                        "type": "number"
+                      },
+                      "isFlipped": {
+                        "id": "isFlipped",
+                        "type": "boolean"
+                      },
+                      "rotation": {
+                        "id": "rotation",
+                        "type": "integer"
+                      },
+                      "scaleFactor": {
+                        "id": "scaleFactor",
+                        "type": "integer"
+                      },
+                      "width": {
+                        "id": "width",
+                        "type": "number"
+                      },
+                      "xPos": {
+                        "id": "xPos",
+                        "type": "integer"
+                      },
+                      "yPos": {
+                        "id": "yPos",
+                        "type": "number"
+                      },
+                      "zIndex": {
+                        "id": "zIndex",
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "imageId": {
+            "id": "imageId",
+            "type": "integer"
+          },
+          "owner": {
+            "id": "owner",
+            "type": "object",
+            "properties": {
+              "firstname": {
+                "id": "firstname",
+                "type": "null"
+              },
+              "lastname": {
+                "id": "lastname",
+                "type": "null"
+              },
+              "bio": {
+                "id": "bio",
+                "type": "null"
+              },
+              "imageJsonEntryMap": {
+                "id": "imageJsonEntryMap",
+                "type": "null"
+              },
+              "image": {
+                "id": "image",
+                "type": "null"
+              },
+              "imageType": {
+                "id": "imageType",
+                "type": "null"
+              },
+              "coverImage": {
+                "id": "coverImage",
+                "type": "null"
+              },
+              "coverImageType": {
+                "id": "coverImageType",
+                "type": "null"
+              },
+              "publicProfileId": {
+                "id": "publicProfileId",
+                "type": "string"
+              },
+              "uidx": {
+                "id": "uidx",
+                "type": "string"
+              },
+              "tagsMap": {
+                "id": "tagsMap",
+                "type": "null"
+              }
+            }
+          },
+          "productData": {
+            "id": "productData",
+            "type": "array",
+            "items": []
+          }
+        }
+      }
+    }
+  }
+}

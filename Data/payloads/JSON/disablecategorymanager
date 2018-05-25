@@ -1,0 +1,11 @@
+{
+  "sellerCategoryManagerResponse": {
+    "data": {
+      "sellerCategoryManager": {
+        "enabled": "${0}",
+        "sellerEntry": { "id": "${1}" },
+        "userEntry": { "id": "${2}" }
+      }
+    }
+  }
+}

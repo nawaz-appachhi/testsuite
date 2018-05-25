@@ -1,0 +1,118 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"required":false,
+	"properties":{
+		"couponResponse": {
+			"type":"object",
+			"required":false,
+			"properties":{
+				"couponEntryList": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"couponEntry": {
+							"type":"array",
+							"required":false,
+							"items":
+								{
+									"type":"object",
+									"required":false,
+									"properties":{
+										"couponStatus": {
+											"type":"string",
+											"required":false
+										},
+										"couponType": {
+											"type":"string",
+											"required":false
+										},
+										"coupon": {
+											"type":"string",
+											"required":false
+										},
+										"expire": {
+											"type":"string",
+											"required":false
+										},
+										"groupName": {
+											"type":"string",
+											"required":false
+										},
+										"isInfinitePerUser": {
+											"type":"boolean",
+											"required":false
+										},
+										"isInfinite": {
+											"type":"boolean",
+											"required":false
+										},
+										"maxUsageByUser": {
+											"type":"number",
+											"required":false
+										},
+										"minimum": {
+											"type":"number",
+											"required":false
+										},
+										"mrpAmount": {
+											"type":"number",
+											"required":false
+										},
+										"mrpPercentage": {
+											"type":"number",
+											"required":false
+										},
+										"per_user": {
+											"type":"string",
+											"required":false
+										},
+										"startdate": {
+											"type":"string",
+											"required":false
+										},
+										"status": {
+											"type":"string",
+											"required":false
+										},
+										"times_used": {
+											"type":"number",
+											"required":false
+										},
+										"times": {
+											"type":"number",
+											"required":false
+										}
+									}
+								}
+							
+
+						}
+					}
+				},
+				"status": {
+					"type":"object",
+					"required":false,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"required":false
+						},
+						"statusMessage": {
+							"type":"string",
+							"required":false
+						},
+						"statusType": {
+							"type":"string",
+							"required":false
+						},
+						"totalCount": {
+							"type":"number",
+							"required":false
+						}
+					}
+				}
+			}
+		}
+	}
+}

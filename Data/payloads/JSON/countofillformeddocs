@@ -1,0 +1,37 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "should": [
+            {
+              "missing": {
+                "field": "styleAttributes"
+              }
+            },
+            {
+              "missing": {
+                "field": "styleAttributes_source"
+              }
+            },
+            {
+              "missing": {
+                "field": "skus"
+              }
+            }
+
+          ],
+          "must": [
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+

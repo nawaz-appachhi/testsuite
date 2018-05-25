@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ProdSIMStylesMonitoringTestSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+	</listeners>
+	<test name="ProdSIMStylesMonitoringTest">
+		<groups>
+			<run>
+				<include name="ProdSanity" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.erpservices.partners.Tests.ValidateSIMStyles" />
+		</classes>
+	</test>
+</suite>

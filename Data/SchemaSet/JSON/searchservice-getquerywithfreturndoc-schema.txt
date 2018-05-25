@@ -1,0 +1,249 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"listGroup": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/listGroup",
+					"required":true
+				},
+				"queryResult": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/queryResult",
+					"required":true
+				},
+				"queryType": {
+					"type":"array",
+					"id": "http://jsonschema.net/data/queryType",
+					"required":true,
+					"items":
+					{
+						"type":"string",
+						"id": "http://jsonschema.net/data/queryType/0",
+						"required":true
+					}
+				},
+				"search": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/search",
+					"required":true,
+					"properties":{
+						"colour_grouping": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/search/colour_grouping",
+							"required":true
+						},
+						"facetField": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/search/facetField",
+							"required":true
+						},
+						"facet": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/search/facet",
+							"required":true
+						},
+						"fq": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/search/fq",
+							"required":true,
+							"items":
+							{
+								"type":"string",
+								"id": "http://jsonschema.net/data/search/fq/0",
+								"required":true
+							}
+						},
+						"query": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/search/query",
+							"required":true
+						},
+						"return_docs": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/search/return_docs",
+							"required":true
+						},
+						"rows": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/search/rows",
+							"required":true
+						},
+						"sort": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/search/sort",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/search/sort/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/search/sort/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/search/sort/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						},
+						"start": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/search/start",
+							"required":true
+						},
+						"useCache": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/search/useCache",
+							"required":true
+						}
+					}
+				},
+				"solr_sort_field": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/solr_sort_field",
+					"required":true,
+					"properties":{
+						"DISCOUNT": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/solr_sort_field/DISCOUNT",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/solr_sort_field/DISCOUNT/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/DISCOUNT/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/DISCOUNT/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						},
+						"POPULAR": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/solr_sort_field/POPULAR",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/solr_sort_field/POPULAR/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/POPULAR/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/POPULAR/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						},
+						"PRICEA": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/solr_sort_field/PRICEA",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/solr_sort_field/PRICEA/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/PRICEA/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/PRICEA/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						},
+						"PRICED": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/solr_sort_field/PRICED",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/solr_sort_field/PRICED/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/PRICED/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/PRICED/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						},
+						"RECENCY": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/solr_sort_field/RECENCY",
+							"required":true,
+							"items":
+							{
+								"type":"object",
+								"id": "http://jsonschema.net/data/solr_sort_field/RECENCY/0",
+								"required":true,
+								"properties":{
+									"order_by": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/RECENCY/0/order_by",
+										"required":true
+									},
+									"sort_field": {
+										"type":"string",
+										"id": "http://jsonschema.net/data/solr_sort_field/RECENCY/0/sort_field",
+										"required":true
+									}
+								}
+							}
+						}
+					}
+				},
+				"synonymMap": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/synonymMap",
+					"required":true
+				},
+				"totalProductsCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/totalProductsCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

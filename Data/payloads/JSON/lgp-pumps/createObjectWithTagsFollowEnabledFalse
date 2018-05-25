@@ -1,0 +1,19 @@
+ {
+      "appId":"${0}",
+      "refId":"${1}",
+      "type":"${2}",
+      "title":"${3}",
+      "description": "The ultimate men's shopping guide for Mumbai city. We at UrbanEye, India's coolest menswear and luxury blog present the best addresses for men to shop in Mumbai.",
+      "url": "http://www.urbaneye.in/urbanstyle/mumbai-sartorial-guide-2015/6",
+      "imageUrl": "http://assets.myntassets.com/assets/images/2015/8/4/11438709917576-file",
+      "extraData": "{\"aspectRatio\":\"251:167\"}",
+      "topics": [
+        {
+         "name": "silver",
+         "type": "theme"
+       }
+      ],
+      "isPrivate": false,
+      "author" : "e5c42230.c5cb.43fc.8240.c746fab2a945Mud3y1HY1E",
+      "createAction" : "posted"
+    }

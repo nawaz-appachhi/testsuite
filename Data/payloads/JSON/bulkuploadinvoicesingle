@@ -1,0 +1,21 @@
+{
+    "invoiceDetailResponse": {
+        "invoiceDetails": [
+            {
+                "poNumber": "${0}",
+                "invoiceRef": "${1}",
+                "invoiceDate": "${2}",
+                "vanNumber": "${3}",
+                "productDescription": "${4}",
+                "quantity": "${5}",
+                "unitPrice": "${6}",
+                "totalBasePrice": "${7}",
+                "taxPercentage": "${8}",
+                "taxType": "${9}",
+                "taxValue": "${10}",
+                "totalIncludingTax": "${11}",
+                "vendorCode":"${12}"
+            }
+        ]
+    }
+}

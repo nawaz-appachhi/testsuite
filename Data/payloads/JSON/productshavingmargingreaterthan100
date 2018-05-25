@@ -1,0 +1,16 @@
+{
+    "size":0,
+    "aggs":{
+    "docs":{
+        "filter":{
+        "range":{
+                "vendor_info.margin" :{
+                            "gte":100
+                }
+        }
+                }
+        }
+    }
+}
+
+

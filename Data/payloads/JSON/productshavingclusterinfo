@@ -1,0 +1,26 @@
+{
+  "size": 0,
+  "aggs": {
+    "docs": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "exists": {
+                "field": "clusterInfo"
+              }
+            },
+            
+            {
+              "term": {
+                "styleAttributes.style_status": "p"
+              }
+            }
+
+          ]
+          
+        }
+      }
+    }
+  }
+}

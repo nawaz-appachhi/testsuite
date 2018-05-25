@@ -1,0 +1,11 @@
+{
+   "notification-text" : "${0}",
+   "notification-title" : "${1}", 
+   "image-url" : "${2}",
+   "page-url" : "${3}",
+   "startTime" : "${4}",
+   "publish-time": "${5}",
+   "end-time":"${6}",
+   "notification-type" : "${7}",
+   "forPortalGroup" : "${8}"
+   }

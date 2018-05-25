@@ -1,0 +1,7 @@
+{
+"fromState":"${0}",
+"returnId":"${1}",
+"toState":"${2}",
+"userComment":"Return Request Updated",
+"createdBy":"erpadmin"
+}

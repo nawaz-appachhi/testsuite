@@ -1,0 +1,42 @@
+{
+"icon_url":"http://myntra.myntassets.com/checkout/images/m_logo.png",
+"channel":"${1}",
+"username":"${2}",
+
+
+    "attachments": [
+        {
+            "fallback": "Required plain-text summary of the attachment.",
+            "color": "#F35A00",
+            "text": "${0}",
+            "mrkdwn_in": [
+                "text",
+                "pretext"
+            ],
+            "title": "Failure Report",
+            "title_link": "http://192.168.20.63:8080/${3}",
+            "fields": [
+                {
+                    "title": "Priority",
+                    "value": "High",
+                    "short": false
+                },
+				{
+                    "title": "Automation Test Name",
+                    "value": "${6}",
+                    "short": true
+                },
+				{
+                    "title": "Environment",
+                    "value": "${4}",
+                    "short": true
+                },
+                {
+                    "title": "Failure Reason",
+                    "value": "${5}",
+                    "short": true
+                }
+            ]
+        }
+    ]
+}

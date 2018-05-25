@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "http://jsonschema.net/meta/code"
+        },
+        "errorDetail": {
+          "type": "null",
+          "id": "http://jsonschema.net/meta/errorDetail"
+        }
+      },
+      "id": "http://jsonschema.net/meta",
+      "required": [
+        "code",
+        "errorDetail"
+      ]
+    },
+    "notification": {
+      "type": "object",
+      "properties": {},
+      "id": "http://jsonschema.net/notification"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/4/id"
+          },
+          "label": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/4/label"
+          },
+          "value": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/4/value"
+          },
+          "count": {
+            "type": "integer",
+            "id": "http://jsonschema.net/data/4/count"
+          },
+          "category": {
+            "type": "string",
+            "id": "http://jsonschema.net/data/4/category"
+          }
+        },
+        "id": "http://jsonschema.net/data/4",
+        "required": [
+          "id",
+          "label",
+          "value",
+          "count",
+          "category"
+        ]
+      },
+      "id": "http://jsonschema.net/data"
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "meta",
+    "notification",
+    "data"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+ "vendor": {
+   "status": "${0}",
+   "poReceiversEmails": "${1}",
+   "description": "${2}",
+   "enabled":"${3}",
+   "readyToSplit": "${4}",
+   "shipToAllWarehouses":"${5}",
+ }
+}

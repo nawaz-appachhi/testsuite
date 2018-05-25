@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/id"
+        },
+        "isEmpty": {
+          "type": "boolean",
+          "id": "http://jsonschema.net/data/isEmpty"
+        },
+        "access": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/access"
+        },
+        "listType": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/listType"
+        },
+        "count": {
+          "type": "integer",
+          "id": "http://jsonschema.net/data/count"
+        },
+        "styleIds": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/styleIds"
+        },
+        "name": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/name"
+        },
+        "description": {
+          "type": "null",
+          "id": "http://jsonschema.net/data/description"
+        },
+        "link": {
+          "type": "string",
+          "id": "http://jsonschema.net/data/link"
+        },
+        "tags": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/tags"
+        },
+        "products": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/products"
+        },
+        "next": {
+          "type": "integer",
+          "id": "http://jsonschema.net/data/next"
+        },
+        "previous": {
+          "type": "integer",
+          "id": "http://jsonschema.net/data/previous"
+        },
+        "author": {
+          "type": "object",
+          "properties": {
+            "firstname": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/firstname"
+            },
+            "lastname": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/lastname"
+            },
+            "imageJsonEntryMap": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/imageJsonEntryMap"
+            },
+            "gender": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/gender"
+            },
+            "image": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/image"
+            },
+            "imageType": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/imageType"
+            },
+            "coverImage": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/coverImage"
+            },
+            "coverImageType": {
+              "type": "null",
+              "id": "http://jsonschema.net/data/author/coverImageType"
+            },
+            "publicProfileId": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/publicProfileId"
+            },
+            "uidx": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/uidx"
+            },
+            "pLevel": {
+              "type": "integer",
+              "id": "http://jsonschema.net/data/author/pLevel"
+            },
+            "counts": {
+              "type": "object",
+              "properties": {},
+              "id": "http://jsonschema.net/data/author/counts"
+            },
+            "bio": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/bio"
+            },
+            "tagsMap": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/tagsMap"
+            },
+            "relations": {
+              "type": "object",
+              "properties": {
+                "following": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/author/relations/following"
+                },
+                "follower": {
+                  "type": "boolean",
+                  "id": "http://jsonschema.net/data/author/relations/follower"
+                }
+              },
+              "id": "http://jsonschema.net/data/author/relations"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://jsonschema.net/data/author/name"
+            }
+          },
+          "id": "http://jsonschema.net/data/author"
+        }
+      },
+      "id": "http://jsonschema.net/data"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "http://jsonschema.net/meta/code"
+        }
+      },
+      "id": "http://jsonschema.net/meta"
+    }
+  },
+  "id": "http://jsonschema.net"
+}

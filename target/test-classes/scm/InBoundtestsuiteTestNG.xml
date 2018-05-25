@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FIFA" verbose="1">
+	<parameter name="team" value="InBound"/>
+	<parameter name="core" value="InBound"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener"/>
+	</listeners>
+	<test name="InBoundTest">
+		<classes>
+			<class name="com.myntra.apiTests.inbound.test.InBoundTests" />
+			<class name="com.myntra.apiTests.inbound.FIFA.ArtieServiceTests" />
+			
+		</classes>
+	</test>
+	
+</suite>

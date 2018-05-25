@@ -1,0 +1,29 @@
+
+<html>
+   <body bgcolor="#E6F8E0">
+      <br><img src="http://myntra.myntassets.com/myx/images/logo.fa00cb4cd9f49f85ce52cf8f215ff8bf00ac2896.png"><br>
+      <hr>
+      <br>
+      ${summary}
+      <br><br><hr><br><br><br>
+      <B><center>Results</center></B>
+      <table align="center" border="0" cellpadding="5" cellspacing="2"  summary="TestResults" width="100%">
+         <thead>
+            <tr bgcolor="#2674a6">
+               <th scope="col"><font color="white">S.No.</font></th>
+               <th scope="col"><font color="white">TestName</font></th>
+               <th scope="col"><font color="white">Result</font></th>
+               <th scope="col"><font color="white">Reason</font></th>
+               <th scope="col"><font color="white">Parameters</font></th>
+            </tr>
+         </thead>
+         <tbody>
+            ${rows}
+         </tbody>
+      </table>
+      <br> <br><br><br><br>
+       Send by and unattended email alias.
+       <br>
+       <b><i>For Clarification/Feedback please mail myntratest@myntra.com</i></b>
+   </body>
+</html>

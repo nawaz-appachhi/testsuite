@@ -1,0 +1,32 @@
+{
+   "name":"mps Cart",
+   "description":"mps test",
+   "expiredOn":${0},
+   "isDynamic":false,
+   "isEnabled":true,
+   "startedOn":${1},
+   "updatedOn":"",
+   "updatedBy":"admin",  
+   "discountRules":[
+   {
+       "type":1,
+       "id":"",
+       "percent":${3},
+       "discountFreeItems":[],
+       "placeHolderText":"Items"
+   }],
+   "discountStyles":[
+     {
+          
+          "styleId":${2}
+          
+     }
+   ],
+   "discountFilters":[],
+   "onCart":false,
+   "discountFunding":"vendor-EOSS",
+   "fundingPercentage":"20",
+   "fundingTax":"1",
+   "fundingBasis":"discount",
+   "discountLimit":"100"
+}

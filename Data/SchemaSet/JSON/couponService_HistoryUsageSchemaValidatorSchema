@@ -1,0 +1,57 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":false,
+			"properties":{
+				"amountSaved": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/amountSaved",
+					"required":false
+				},
+				"noOfTimesUsed": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/noOfTimesUsed",
+					"required":false
+				},
+				"usercouponusagelist": {
+					"type":"array",
+					"id": "http://jsonschema.net/data/usercouponusagelist",
+					"required":false
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":false,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":false
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":false
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":false
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+<partnerItemMasterResponse>
+<partnerItemMasters>
+  <partnerItemMaster>
+    <partnerId>${0}</partnerId>
+    <partnerType>${1}</partnerType>
+    <styleId>${2}</styleId>
+  </partnerItemMaster>  
+ </partnerItemMasters>  
+</partnerItemMasterResponse>

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RMSServiceRegression" verbose="1">
+    <parameter name="team" value="SCM"/>
+	<parameter name="core" value="RMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="RMSServiceTest">
+	  <groups>
+      </groups>
+		<classes>
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<class name="com.myntra.apiTests.erpservices.rms.Test.CreateReturnWithoutAddress" />
+			<class name="com.myntra.apiTests.erpservices.rms.Test.RMSRegressionTest" />
+			<class name="com.myntra.apiTests.erpservices.rms.Test.RMS_E2E" />
+		</classes>
+	</test>
+</suite>

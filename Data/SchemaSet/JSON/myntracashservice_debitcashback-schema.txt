@@ -1,0 +1,48 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"businessProcess": {
+			"type":"string",
+			"id": "http://jsonschema.net/businessProcess",
+			"required":true
+		},
+		"debitAmount": {
+			"type":"number",
+			"id": "http://jsonschema.net/debitAmount",
+			"required":true
+		},
+		"description": {
+			"type":"string",
+			"id": "http://jsonschema.net/description",
+			"required":true
+		},
+		"earnedCreditAmount": {
+			"type":"number",
+			"id": "http://jsonschema.net/earnedCreditAmount",
+			"required":true
+		},
+		"itemId": {
+			"type":"number",
+			"id": "http://jsonschema.net/itemId",
+			"required":true
+		},
+		"itemType": {
+			"type":"string",
+			"id": "http://jsonschema.net/itemType",
+			"required":true
+		},
+		"login": {
+			"type":"string",
+			"id": "http://jsonschema.net/login",
+			"required":true
+		},
+		"storeCreditAmount": {
+			"type":"number",
+			"id": "http://jsonschema.net/storeCreditAmount",
+			"required":true
+		}
+	}
+}

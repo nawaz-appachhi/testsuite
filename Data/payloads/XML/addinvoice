@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<invoice><id></id><invoiceStatus>CREATED</invoiceStatus><warehouse><id></id></warehouse><lot><id>${0}</id><barcode></barcode></lot></invoice>

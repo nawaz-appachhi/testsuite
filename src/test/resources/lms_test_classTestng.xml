@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LMS Regression Suite" verbose="1">
+	<parameter name="team" value="SCM"/>
+	<parameter name="core" value="LMS"/>
+	<parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.MyntraListener" />
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="lmsTests">
+		<classes>
+			<class name="com.myntra.apiTests.test.regression.erpservices.lms.lmsTests" />
+			<class name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+		</classes>
+	</test>
+</suite>

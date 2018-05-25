@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movementEntry>
+    <createdBy>${0}</createdBy>
+    <destinationBinBarcode>${1}</destinationBinBarcode>
+    <destinationBinConfirmationCode>${2}</destinationBinConfirmationCode>
+    <itemBarcodes>${3}</itemBarcodes>
+</movementEntry>

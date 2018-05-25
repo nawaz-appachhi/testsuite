@@ -1,0 +1,34 @@
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "match": {
+                "styleAttributes.brand": {
+                  "query": "Roadster"
+                }
+              }
+            },
+            
+            {"term":{
+              "styleAttributes.style_status":"p"
+            }
+              
+            }
+          ]
+        }
+      },
+      "query": {
+        "filtered": {
+          "filter": {
+            "script": {
+              "script": "doc[\"styleAttributes.asp\"].value == doc[\"styleAttributes.MRP\"].value"
+            }
+          }
+        }
+      }
+    }
+  }
+}

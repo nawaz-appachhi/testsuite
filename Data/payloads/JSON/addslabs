@@ -1,0 +1,7 @@
+{
+  "sellerTurnoverIncentivePercentageSlabEntry": {
+    "bottomRange": "${0}",
+    "percentage": "${1}",
+    "topRange": "${2}"
+  }
+}

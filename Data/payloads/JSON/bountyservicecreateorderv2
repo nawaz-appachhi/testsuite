@@ -1,0 +1,13 @@
+{
+    "cart": ${0},
+    "ppsId": "${1}",
+    "login": "${2}",
+    "sessionId": "${3}",
+    "binNumber": "${4}",
+    "pgDiscount": "${5}",
+    "emiCharge": "${6}",
+    "address": "${7}",
+    "clientContext": "${8}",
+    "cartContext": "${9}",
+    "paymentMethod": "${10}"
+}

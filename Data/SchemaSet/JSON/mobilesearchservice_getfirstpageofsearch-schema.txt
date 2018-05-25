@@ -1,0 +1,414 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"body": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/body",
+					"required":true,
+					"properties":{
+						"filters": {
+							"type":"object",
+							"id": "http://jsonschema.net/data/body/filters",
+							"required":true,
+							"properties":{
+								"Brand": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Brand",
+									"required":true,
+									"properties":{
+										
+									}
+								},
+								"Categories": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Categories",
+									"required":true,
+									"properties":{
+										
+									}
+								},
+								"Colour": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Colour",
+									"required":true,
+									"properties":{
+										
+									}
+								},
+								"Department": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Department",
+									"required":true,
+									"properties":{
+										
+									}
+								},
+								"Discount": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Discount",
+									"required":true,
+									"properties":{
+										"count": {
+											"type":"object",
+											"id": "http://jsonschema.net/data/body/filters/Discount/count",
+											"required":true,
+											"properties":{
+												"10.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/10.0",
+													"required":false
+												},
+												"20.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/20.0",
+													"required":false
+												},
+												"30.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/30.0",
+													"required":false
+												},
+												"40.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/40.0",
+													"required":false
+												},
+												"50.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/50.0",
+													"required":false
+												},
+												"60.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/60.0",
+													"required":false
+												},
+												"70.0": {
+													"type":"number",
+													"id": "http://jsonschema.net/data/body/filters/Discount/count/70.0",
+													"required":false
+												}
+											}
+										},
+										"end": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/filters/Discount/end",
+											"required":true
+										},
+										"gap": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/filters/Discount/gap",
+											"required":true
+										},
+										"start": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/filters/Discount/start",
+											"required":true
+										}
+									}
+								},
+								"Price": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Price",
+									"required":true,
+									"properties":{
+										"breakUps": {
+											"type":"array",
+											"id": "http://jsonschema.net/data/body/filters/Price/breakUps",
+											"required":true,
+											"items":
+												{
+													"type":"object",
+													"id": "http://jsonschema.net/data/body/filters/Price/breakUps/0",
+													"required":true,
+													"properties":{
+														"occurrence": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/body/filters/Price/breakUps/0/occurrence",
+															"required":true
+														},
+														"rangeMax": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/body/filters/Price/breakUps/0/rangeMax",
+															"required":true
+														},
+														"rangeMin": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/body/filters/Price/breakUps/0/rangeMin",
+															"required":true
+														},
+														"range": {
+															"type":"string",
+															"id": "http://jsonschema.net/data/body/filters/Price/breakUps/0/range",
+															"required":true
+														}
+													}
+												}
+										},
+										"rangeMax": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/filters/Price/rangeMax",
+											"required":true
+										},
+										"rangeMin": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/filters/Price/rangeMin",
+											"required":true
+										}
+									}
+								},
+								"Promotions": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Promotions",
+									"required":true
+									"properties":{
+										
+									}
+								},
+								"Sections": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Sections",
+									"required":true,
+									"properties":{
+										
+									}
+								},
+								"Size": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Size",
+									"required":false,
+									"properties":{
+										
+									}
+								},
+								"Subcategories": {
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/filters/Subcategories",
+									"required":true,
+									"properties":{
+										
+									}
+								}
+							}
+						},
+						"products": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/body/products",
+							"required":true,
+							"items":
+								{
+									"type":"object",
+									"id": "http://jsonschema.net/data/body/products/0",
+									"required":true,
+									"properties":{
+										"allSkuForSizes": {
+											"type":"array",
+											"id": "http://jsonschema.net/data/body/products/0/allSkuForSizes",
+											"required":true,
+											"items":
+												{
+													"type":"string",
+													"id": "http://jsonschema.net/data/body/products/0/allSkuForSizes/0",
+													"required":true
+												}
+										},
+										"brands_filter_facet": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/brands_filter_facet",
+											"required":true
+										},
+										"discount_label": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/discount_label",
+											"required":true
+										},
+										"discount": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/products/0/discount",
+											"required":true
+										},
+										"discounted_price": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/products/0/discounted_price",
+											"required":true
+										},
+										"dre_landing_page_url": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/dre_landing_page_url",
+											"required":true
+										},
+										"global_attr_base_colour": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/global_attr_base_colour",
+											"required":true
+										},
+										"global_attr_colour1": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/global_attr_colour1",
+											"required":true
+										},
+										"price": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/products/0/price",
+											"required":true
+										},
+										"product": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/product",
+											"required":true
+										},
+										"search_image": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/search_image",
+											"required":true
+										},
+										"sizes": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/sizes",
+											"required":true
+										},
+										"style_group": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/style_group",
+											"required":true
+										},
+										"styleid": {
+											"type":"number",
+											"id": "http://jsonschema.net/data/body/products/0/styleid",
+											"required":true
+										},
+										"stylename": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/stylename",
+											"required":true
+										},
+										"visual_tag": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/body/products/0/visual_tag",
+											"required":true
+										}
+									}
+								}
+						},
+						"totalProductsCount": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/body/totalProductsCount",
+							"required":true
+						}
+					}
+				},
+				"requestObj": {
+					"type":"object",
+					"id": "http://jsonschema.net/data/requestObj",
+					"required":true,
+					"properties":{
+						"colour_grouping": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/requestObj/colour_grouping",
+							"required":true
+						},
+						"facetField": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/requestObj/facetField",
+							"required":true
+						},
+						"facet": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/requestObj/facet",
+							"required":true
+						},
+						"fq": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/requestObj/fq",
+							"required":true,
+							"items":
+								{
+									"type":"string",
+									"id": "http://jsonschema.net/data/requestObj/fq/0",
+									"required":true
+								}
+						},
+						"query": {
+							"type":"string",
+							"id": "http://jsonschema.net/data/requestObj/query",
+							"required":true
+						},
+						"return_docs": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/requestObj/return_docs",
+							"required":true
+						},
+						"rows": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/requestObj/rows",
+							"required":true
+						},
+						"sort": {
+							"type":"array",
+							"id": "http://jsonschema.net/data/requestObj/sort",
+							"required":true,
+							"items":
+								{
+									"type":"object",
+									"id": "http://jsonschema.net/data/requestObj/sort/0",
+									"required":true,
+									"properties":{
+										"order_by": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/requestObj/sort/0/order_by",
+											"required":true
+										},
+										"sort_field": {
+											"type":"string",
+											"id": "http://jsonschema.net/data/requestObj/sort/0/sort_field",
+											"required":true
+										}
+									}
+								}
+						},
+						"start": {
+							"type":"number",
+							"id": "http://jsonschema.net/data/requestObj/start",
+							"required":true
+						},
+						"useCache": {
+							"type":"boolean",
+							"id": "http://jsonschema.net/data/requestObj/useCache",
+							"required":true
+						}
+					}
+				}
+			}
+		},
+		"meta": {
+			"type":"object",
+			"id": "http://jsonschema.net/meta",
+			"required":false,
+			"properties":{
+				"code": {
+					"type":"number",
+					"id": "http://jsonschema.net/meta/code",
+					"required":true
+				},
+				"errorDetail": {
+					"type":"null",
+					"id": "http://jsonschema.net/meta/errorDetail",
+					"required":true
+				}
+			}
+		},
+		"notification": {
+			"type":"object",
+			"id": "http://jsonschema.net/notification",
+			"required":true
+		}
+	}
+}

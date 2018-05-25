@@ -1,0 +1,6 @@
+{
+	"access": "${0}",
+	"description": "${1}",
+	"listID": "${2}",
+	"name": "${3}"
+}

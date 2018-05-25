@@ -1,0 +1,10 @@
+{
+ "query": {
+   "match": {
+     "styleAttributes.style_id": {
+       "query": "1139215"
+     }
+   }
+ },
+ "_source": "aggMetrics.daysLive"
+}

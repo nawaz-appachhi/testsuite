@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta",
+      "required": [
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "object",
+                "properties": {
+                  "contentType": {
+                    "type": "string",
+                    "id": "contentType"
+                  },
+                  "description": {
+                    "type": "string",
+                    "id": "description"
+                  },
+                  "extras": {
+                    "type": "object",
+                    "properties": {
+                      "baseColor": {
+                        "type": "string",
+                        "id": "baseColor"
+                      },
+                      "description2": {
+                        "type": "string",
+                        "id": "description2"
+                      },
+                      "footerLinks": {
+                        "type": "string",
+                        "id": "footerLinks"
+                      },
+                      "link": {
+                        "type": "string",
+                        "id": "link"
+                      },
+                      "referralCode": {
+                        "type": "string",
+                        "id": "referralCode"
+                      }
+                    },
+                    "id": "extras",
+                    "required": [
+                      "baseColor",
+                      "description2",
+                      "footerLinks",
+                      "link",
+                      "referralCode"
+                    ]
+                  },
+                  "imageUrl": {
+                    "type": "string",
+                    "id": "imageUrl"
+                  },
+                  "title": {
+                    "type": "string",
+                    "id": "title"
+                  },
+                  "type": {
+                    "type": "string",
+                    "id": "type"
+                  },
+                  "url": {
+                    "type": "string",
+                    "id": "url"
+                  }
+                },
+                "id": "object",
+                "required": [
+                  "contentType",
+                  "description",
+                  "extras",
+                  "imageUrl",
+                  "title",
+                  "type",
+                  "url"
+                ]
+              }
+            },
+            "id": "0",
+            "required": [
+              "object"
+            ]
+          },
+          "id": "data"
+        },
+        "count": {
+          "type": "integer",
+          "id": "count"
+        }
+      },
+      "id": "data",
+      "required": [
+        "data",
+        "count"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "meta",
+    "data"
+  ]
+}

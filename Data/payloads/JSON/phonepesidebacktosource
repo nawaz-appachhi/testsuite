@@ -1,0 +1,9 @@
+{
+  "transactionId": "${0}",
+  "merchantId": "M2306160483220675579140",
+  "merchantUserId": "${1}",
+  "merchantOrderId": "8787",
+  "amount": ${2},
+  "providerReferenceId": "${3}",
+  "message": "Hi"
+}

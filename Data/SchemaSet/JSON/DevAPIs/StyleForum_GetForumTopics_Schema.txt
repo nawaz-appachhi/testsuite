@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "topics": {
+          "type": "array",
+          "items": {},
+          "id": "http://jsonschema.net/data/topics"
+        }
+      },
+      "id": "http://jsonschema.net/data"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "id": "http://jsonschema.net/meta/status"
+        }
+      },
+      "id": "http://jsonschema.net/meta"
+    }
+  },
+  "id": "http://jsonschema.net"
+}

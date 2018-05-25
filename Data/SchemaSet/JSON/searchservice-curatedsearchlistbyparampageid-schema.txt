@@ -1,0 +1,67 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"data": {
+			"type":"object",
+			"id": "http://jsonschema.net/data",
+			"required":true,
+			"properties":{
+				"fkParameterizedPageId": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/fkParameterizedPageId",
+					"required":true
+				},
+				"id": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/id",
+					"required":true
+				},
+				"numberSlots": {
+					"type":"number",
+					"id": "http://jsonschema.net/data/numberSlots",
+					"required":true
+				},
+				"remainingSlotsRule": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/remainingSlotsRule",
+					"required":true
+				},
+				"styleIdCsv": {
+					"type":"string",
+					"id": "http://jsonschema.net/data/styleIdCsv",
+					"required":true
+				}
+			}
+		},
+		"status": {
+			"type":"object",
+			"id": "http://jsonschema.net/status",
+			"required":true,
+			"properties":{
+				"statusCode": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/statusCode",
+					"required":true
+				},
+				"statusMessage": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusMessage",
+					"required":true
+				},
+				"statusType": {
+					"type":"string",
+					"id": "http://jsonschema.net/status/statusType",
+					"required":true
+				},
+				"totalCount": {
+					"type":"number",
+					"id": "http://jsonschema.net/status/totalCount",
+					"required":true
+				}
+			}
+		}
+	}
+}

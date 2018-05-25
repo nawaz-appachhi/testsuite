@@ -1,0 +1,28 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"email": {
+			"type":"string",
+			"id": "http://jsonschema.net/email",
+			"required":true
+		},
+		"first name": {
+			"type":"string",
+			"id": "http://jsonschema.net/firstname",
+			"required":true
+		},
+		"last name": {
+			"type":"string",
+			"id": "http://jsonschema.net/lastname",
+			"required":true
+		},
+		"phoneNumber": {
+			"type":"string",
+			"id": "http://jsonschema.net/phoneNumber",
+			"required":true
+		}
+	}
+}

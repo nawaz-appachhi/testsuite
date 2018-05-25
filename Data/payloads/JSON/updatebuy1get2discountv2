@@ -1,0 +1,34 @@
+{
+   "name":"Test Discount",
+   "description":"Test 9Apr2015",
+   "startedOn": ${1},
+   "expiredOn":${0},
+   "isDynamic":false,
+   "isEnabled":true,
+   "updatedOn":"",
+   "updatedBy":"admin",
+   "discountRules":[
+   {
+       "type":2,
+       "id":"",
+       "buyCount":2,
+       "count":1,
+       "discountFreeItems":[],
+       "placeHolderText":"Items"
+   }],
+   "discountStyles":[
+     {           
+          "styleId":${2}           
+     },
+     {           
+          "styleId":${3}           
+     }
+   ],
+   "discountFilters":[],
+   "onCart":false,
+   "discountFunding":"vendor-EOSS",
+   "fundingPercentage":"50",
+   "fundingTax":"1",
+   "fundingBasis":"discount",
+   "discountLimit":"100"
+}

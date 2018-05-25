@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="0.716" tests="10" errors="0" skipped="0" failures="10">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests"/>
+    <property name="groups" value="testreportcheck"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="suiteXmlFile" value="src/test/resources/ats/ATSServiceTestNG.xml"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.15.0-20-generic"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/myntra"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="myntra"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="debug"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -X test -P SuiteRuns -DsuiteXmlFile=src/test/resources/ats/ATSServiceTestNG.xml -Dgroups=testreportcheck"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.655">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+2018-05-17 15:50:08 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:08 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:08 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:08 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:08 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:08 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:08 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:08 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:08 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:08 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - /Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests//Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:09 [main] INFO  Initialize:33 - Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/Data/configuration
+2018-05-17 15:50:09 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:09 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:09 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+2018-05-17 15:50:10 [main] INFO  Setup:68 - Current Directory
+2018-05-17 15:50:10 [main] DEBUG Setup:42 - Environment URL is: file:////home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/Data/configuration/mjint/environment.xml
+2018-05-17 15:50:11 [main] INFO  Initialize:33 - Data/configuration
+Current dir With Config Path/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/Data/configuration
+2018-05-17 15:50:11 [main] INFO  PropertyReader:68 - properties file used for framework initialize is :/home/myntra/Desktop/apiAutomation/apiTests-1/apiTests/Data/configuration/testsettings.properties
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:11 [main] INFO  Configuration:359 - Portal Home : http://mjint.myntra.com
+2018-05-17 15:50:11 [main] INFO  TestEnvironmentDetails:14 - This is the info log from TestEnvironmentDetails
+Getting Env Details for Jenkinsnull
+ReturnValue==mjint
+testenv = mjint
+2018-05-17 15:50:11 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:11 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:11 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/myntra/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.1/log4j-slf4j-impl-2.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/myntra/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/myntra/.m2/repository/org/slf4j/slf4j-log4j12/1.7.7/slf4j-log4j12-1.7.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/myntra/.m2/repository/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+]]></system-err>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.005">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.006">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.005">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.007">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.007">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.007">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.01">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.006">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+  <testcase name="testAddressScoreAPIValidatation" classname="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2" time="0.008">
+    <failure message="Error calling Put request " type="java.lang.RuntimeException">java.lang.RuntimeException: Error calling Put request 
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.myntra.test.commons.service.impl.BaseSvcImpl.put(BaseSvcImpl.java:476)
+	at com.myntra.test.commons.service.HttpExecutorService.executeHttpService(HttpExecutorService.java:49)
+	at com.myntra.apiTests.portalservices.atsService.ATSHelperV2.getATSAddresscore(ATSHelperV2.java:102)
+	at com.myntra.apiTests.portalservices.atsService.TestATSAPISV2.testAddressScoreAPIValidatation(TestATSAPISV2.java:33)
+</failure>
+    <system-out><![CDATA[2018-05-17 15:50:12 [main] INFO  Toolbox:74 - Begining reading file './Data/payloads/JSON/ats/putaddresscore'
+isV2TestCase: false
+version: v1
+tenantId: myntra
+2018-05-17 15:50:12 [main] DEBUG DBValidator:57 - Passed Headers:  {Accept=Application/json, Content-Type=Application/json}
+2018-05-17 15:50:12 [main] DEBUG BaseSvcImpl:455 - URI http://ats.mjint.myntra.com/myntra-ats-service/address/getscore
+]]></system-out>
+  </testcase>
+</testsuite>

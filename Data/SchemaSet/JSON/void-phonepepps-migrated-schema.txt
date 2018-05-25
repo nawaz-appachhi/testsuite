@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "checksum": {
+      "type": "string",
+      "default": "8193b1bfbee939197aa5e0ba10348694689e3480",
+      "id": "http://jsonschema.net/checksum"
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "ppsTransactionID": {
+          "type": "string",
+          "default": "8513",
+          "id": "http://jsonschema.net/params/ppsTransactionID"
+        },
+        "clientTransactionID": {
+          "type": "string",
+          "default": "13798235",
+          "id": "http://jsonschema.net/params/clientTransactionID"
+        },
+        "ppsID": {
+          "type": "string",
+          "default": "qsmae",
+          "id": "http://jsonschema.net/params/ppsID"
+        },
+        "duplicate": {
+          "type": "boolean",
+          "default": false,
+          "id": "http://jsonschema.net/params/duplicate"
+        },
+        "txStatus": {
+          "type": "string",
+          "default": "TX_SUCCESS",
+          "id": "http://jsonschema.net/params/txStatus"
+        }
+      },
+      "id": "http://jsonschema.net/params",
+      "required": [
+        "ppsTransactionID",
+        "clientTransactionID",
+        "ppsID",
+        "duplicate",
+        "txStatus"
+      ]
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "checksum",
+    "params"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+    "size": 0,
+      "aggs": {
+        "docs": {
+          "filter": {
+            "bool": {
+              "should": [
+                {
+                  "missing": {
+                    "field": "vendor_info.vendor_name"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "vendor_info.basis_of_margin"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "vendor_info.margin_type"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "vendor_info.po_type"
+                  }
+                }
+
+              ],
+              "must": [
+                {
+                  "term": {
+                    "styleAttributes.style_status": "p"
+                          }
+                },
+                  {
+                      "terms": {
+                            "styleAttributes.commercial_type": [
+                                "outright",
+                                    "sor"
+                                                                ]
+                                }
+                      
+                  },
+                  {
+                      "term":{
+                          "styleAttributes.supply_type":"ON_HAND"
+                      }
+                  }
+                
+              ]
+            }
+          }
+        }
+      }
+}
+

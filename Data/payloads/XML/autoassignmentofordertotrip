@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trip>
+    <tripDate>${0}</tripDate>
+    <deliveryCenterId>${1}</deliveryCenterId>
+    <deliveryStaffId></deliveryStaffId>
+    <createdBy>lmsadmin</createdBy>
+    <isCardEnabled>1</isCardEnabled>
+    <isInbound>false</isInbound>
+</trip>

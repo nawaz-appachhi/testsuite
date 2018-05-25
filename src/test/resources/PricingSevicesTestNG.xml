@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PrincingPolicyTestSuite" verbose="1">
+	<parameter name="team" value="Retail Lab"/>
+    <parameter name="core" value="PricingService"/>
+    <parameter name="type" value="Regression"/>
+	<listeners>
+		<listener class-name="com.myntra.lordoftherings.SCMTestListener" />
+	</listeners>
+	<test name="PrincingPolicyTest">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.myntra.apiTests.notification.TestNGconfiguration_Low" />
+			<package name="com.myntra.apiTests.test.regression.pricingpromotionservices.pricingservices" />
+		</packages>
+	</test>
+</suite>

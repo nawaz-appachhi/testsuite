@@ -1,0 +1,34 @@
+{
+  "vendorScoreParameterResponse": {
+    "status": "",
+    "data": {
+      "vendorScoreParameter": [
+        {
+          "id": "4",
+          "attentionStartValue": "9.0",
+          "code": "LVS",
+          "criteriaIdFk": "2",
+          "criticalStartValue": "8.0",
+          "description": "Live styles",
+          "isActive": "true",
+          "isVisible": "true",
+          "maxPoints": "3",
+          "name": "Live styles",
+          "actionType": "UPDATE"
+        },
+        {
+          "attentionStartValue": "9.0",
+          "code": "PAM",
+          "criteriaIdFk": "2",
+          "criticalStartValue": "7.0",
+          "description": "PAM-Created By Automation",
+          "isActive": "true",
+          "isVisible": "true",
+          "maxPoints": "2",
+          "name": "Test Parameter",
+          "actionType": "CREATE"
+        }
+      ]
+    }
+  }
+}

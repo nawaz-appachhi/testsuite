@@ -1,0 +1,13 @@
+{
+	"testPayload": [{
+		"user": [{
+			"uidx": ["3b069a1c.8295.4281.b209.67e834357109bbqkJlI5NS"]
+		}]
+	}, {
+		"pumps": {
+			"pumpsActions": ["REGISTEROBJECT", "PUBLISHOBJECT"]
+		}
+	}, {
+		"serveAssertions": [ "feeds","streams"]
+	}]
+}

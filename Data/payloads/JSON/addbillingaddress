@@ -1,0 +1,24 @@
+{
+  "partnerContactAddressResponse": {
+    "data":{
+    "partnerContactAddress": {
+    "address1": "${0}",
+    "address2": "${1}",
+    "addressType": "${2}",
+    "city": "${3}",
+    "country": "${4}",
+    "email1": "${5}",
+    "email2": "${6}",
+    "enabled": "${7}",
+    "partnerId": "${8}",
+    "notes": "${9}",
+    "partnerType": "${10}",
+    "phone1": "${11}",
+    "phone2": "${12}",
+    "pinCode": "${13}",
+    "state": "${14}"
+    }
+  }
+  }
+  }
+  

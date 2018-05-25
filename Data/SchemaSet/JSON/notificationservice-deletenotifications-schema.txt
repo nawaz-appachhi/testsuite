@@ -1,0 +1,18 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"action": {
+			"type":"string",
+			"id": "http://jsonschema.net/action",
+			"required":true
+		},
+		"success": {
+			"type":"boolean",
+			"id": "http://jsonschema.net/success",
+			"required":true
+		}
+	}
+}

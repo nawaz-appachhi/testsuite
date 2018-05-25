@@ -1,0 +1,47 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"personalizedBannerResponse": {
+			"type":"object",
+			"id": "http://jsonschema.net/personalizedBannerResponse",
+			"required":true,
+			"properties":{
+				"data": {
+					"type":"string",
+					"id": "http://jsonschema.net/personalizedBannerResponse/data",
+					"required":true
+				},
+				"status": {
+					"type":"object",
+					"id": "http://jsonschema.net/personalizedBannerResponse/status",
+					"required":true,
+					"properties":{
+						"statusCode": {
+							"type":"number",
+							"id": "http://jsonschema.net/personalizedBannerResponse/status/statusCode",
+							"required":true
+						},
+						"statusMessage": {
+							"type":"string",
+							"id": "http://jsonschema.net/personalizedBannerResponse/status/statusMessage",
+							"required":true
+						},
+						"statusType": {
+							"type":"string",
+							"id": "http://jsonschema.net/personalizedBannerResponse/status/statusType",
+							"required":true
+						},
+						"totalCount": {
+							"type":"number",
+							"id": "http://jsonschema.net/personalizedBannerResponse/status/totalCount",
+							"required":true
+						}
+					}
+				}
+			}
+		}
+	}
+}

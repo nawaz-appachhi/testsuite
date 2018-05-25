@@ -1,0 +1,19 @@
+{
+	"appId": ${0},
+	"refId": "${1}",
+	"type": "${2}",
+	"title": "${3}",
+	"description": "${4}",
+	"url": "${5}",
+	"imageUrl": "${6}",
+
+    "extraData": "${7}",
+
+	"topics": ${8},
+	"author":"${9}"
+	"productRack": "${10}",
+	"isPrivate": ${11},
+	"createAction": "${12}",
+	"enabled": ${13},
+	"isSpam": ${14}
+}

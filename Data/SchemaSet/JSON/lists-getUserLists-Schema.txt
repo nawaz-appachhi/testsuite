@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "listCount": {
+          "id": "http://jsonschema.net/data/listCount",
+          "type": "integer"
+        },
+        "lists": {
+          "id": "http://jsonschema.net/data/lists",
+          "type": "array",
+          "items": {
+            "id": "auto-generated-schema-52"
+          }
+        },
+        "next": {
+          "id": "http://jsonschema.net/data/next",
+          "type": "integer"
+        },
+        "previous": {
+          "id": "http://jsonschema.net/data/previous",
+          "type": "integer"
+        }
+      }
+    },
+    "meta": {
+      "id": "http://jsonschema.net/meta",
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "id": "http://jsonschema.net/meta/statusCode",
+          "type": "integer"
+        },
+        "error": {
+          "id": "http://jsonschema.net/meta/error",
+          "type": "string"
+        },
+        "errorDetail": {
+          "id": "http://jsonschema.net/meta/errorDetail",
+          "type": "null"
+        }
+      }
+    }
+  }
+}

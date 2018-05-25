@@ -1,0 +1,13 @@
+<whSyncInventory>
+            <warehouseId>${0}</warehouseId>
+            <storeId>${1}</storeId>
+            <sellerId>${2}</sellerId>
+            <supplyType>${3}</supplyType>
+            <skuId>${4}</skuId>
+            <skuCode>${5}</skuCode>
+            <whInventoryOperation>${6}</whInventoryOperation>
+            <fromQuality>Q1</fromQuality>
+            <toQuality>Q1</toQuality>
+            <quantity>${7}</quantity>
+        </whSyncInventory>
+       

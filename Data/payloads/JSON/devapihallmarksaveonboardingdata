@@ -1,0 +1,4 @@
+{
+ "deviceId" : "${0}",
+ "strategies" : [${1}]
+ }

@@ -1,0 +1,42 @@
+{
+    "size": 0,
+      "aggs": {
+        "docs": {
+          "filter": {
+            "bool": {
+              "should": [
+                {
+                  "missing": {
+                    "field": "styleAttributes.article_type"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "styleAttributes.brand"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "styleAttributes.gender"
+                  }
+                },
+                {
+                  "missing": {
+                    "field": "styleAttributes.MRP"
+                  }
+                }
+                 
+
+              ],
+              "must": [
+                {
+                  "term": {
+                    "styleAttributes.style_status": "p"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "${0}",
+    "sessionId": "${1}",
+    "giftCartAmount": "${2}",
+    "login": "${3}",
+    "cartContext": "${4}",
+    "binNumber": "${5}",
+    "paymentMethod": "${6}",
+    "pgDiscount": "${7}",
+    "paymentStatus": "${8}",
+    "putOnHold": "${9}"
+}

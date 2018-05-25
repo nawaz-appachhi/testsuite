@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "data": {
+      "id": "http://jsonschema.net/data",
+      "type": "object",
+      "properties": {
+        "lgp.rollout": {
+          "id": "http://jsonschema.net/data/lgp.rollout",
+          "type": "string"
+        }
+      }
+    },
+    "state": {
+      "id": "http://jsonschema.net/state",
+      "type": "string"
+    }
+  }
+}

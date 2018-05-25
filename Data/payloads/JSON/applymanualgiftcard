@@ -1,0 +1,6 @@
+{
+  "operation":"${0}",
+  "cardNumber" : "${1}",
+  "pin" : "${2}",
+  "token" : ${3}
+}

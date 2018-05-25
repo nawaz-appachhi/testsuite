@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RPFServices in prod" verbose="1">
+ <test name="RFPPROD">
+  <groups>
+   <run>
+    <include name="RFPPROD" />
+   </run>
+  </groups>
+  <packages>
+   <package name="com.myntra.apiTests.test.regression.portalservices.*" />
+    </packages>
+ </test>
+</suite>

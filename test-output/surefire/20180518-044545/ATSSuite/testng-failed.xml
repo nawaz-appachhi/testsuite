@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [ATSSuite]">
+  <parameter name="ServiceName" value="ATS"/>
+  <parameter name="team" value="StoreFront"/>
+  <parameter name="type" value="Regression"/>
+  <test name="ATSServiceTest">
+    <classes>
+      <class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2"/>
+    </classes>
+  </test> <!-- ATSServiceTest -->
+  <test name="ATSServiceTest(failed)">
+    <classes>
+      <class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2">
+        <methods>
+          <include name="testGetLinkedAccbyEmailWithoutClientID"/>
+          <include name="testGetOpenOrdersValueWithoutClientID"/>
+          <include name="testGetLinkedAccbyPhoneWithoutClientID"/>
+          <include name="testGetATSDetailsWithoutClientID"/>
+          <include name="testGetBlockedCustomerByDeviceIDWithoutClientID"/>
+          <include name="testPutFakeEmailWithoutClientID"/>
+          <include name="setup"/>
+          <include name="testGetBlockedCustomerByPhoneWithoutClientID"/>
+          <include name="testAddressScoreWithoutClientID"/>
+          <include name="testIsCustomerBlockedWithoutClientID"/>
+          <include name="testGetFakeEmailWithoutClientID"/>
+          <include name="testGetLinkedAccbyDeviceWithoutClientID"/>
+          <include name="testPutLinkedAccbyPhoneWithoutClientID"/>
+          <include name="testGetBlockedCustomerByLoginWithoutClientID"/>
+          <include name="testGetReturnAbuserWithoutClientID"/>
+          <include name="testPostATSDetailsWithoutClientID"/>
+          <include name="testPutOpenOrdersValueWithoutClientID"/>
+          <include name="testPutCustomerBlockedWithoutClientID"/>
+          <include name="testPutReturnAbuserWithoutClientID"/>
+          <include name="testGetOutstandingCODLimitWithoutClientID"/>
+        </methods>
+      </class> <!-- com.myntra.apiTests.portalservices.atsService.TestATSAPISV2 -->
+    </classes>
+  </test> <!-- ATSServiceTest(failed) -->
+</suite> <!-- Failed suite [ATSSuite] -->

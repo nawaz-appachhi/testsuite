@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NotificationTestSuite" verbose="1">
+<parameter name="team" value="StoreFront"/>
+<parameter name="core" value="NotificationService"/>
+<parameter name="type" value="Regression"/>
+
+	<listeners>
+		<!--listener class-name="com.myntra.lordoftherings.SCMTestListener" /-->
+	</listeners>
+	<test name="LGPNotificationTests">
+		<groups>
+			<run>
+				<include name="Sanity" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.myntra.apiTests.portalservices.lgpservices.NotificationTest" />
+		</classes>
+	</test>
+</suite>

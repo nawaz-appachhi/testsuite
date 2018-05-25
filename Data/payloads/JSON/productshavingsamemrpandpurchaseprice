@@ -1,0 +1,57 @@
+{
+  "query": {
+      "filtered":{
+      "filter":{    
+    
+       "script": {
+         "script": "doc[\"vendor_info.item_purchase_price\"].value == doc[\"vendor_info.last_mrp\"].value"
+       }
+      },
+      "query":{
+          
+      "filtered":{
+      "filter":{    
+      "bool":{
+      "must":[
+          {    
+      
+    "match":{
+             "styleAttributes.supply_type":{
+                 "query":"on_hand"
+         }
+     }
+   },
+   {
+       "match":{
+        "styleAttributes.commercial_type": 
+            "outright"
+   }
+   },
+   {
+   "match":{
+       "styleAttributes.style_status":"p"
+   }
+   },
+   {
+    "range": {
+          "aggMetrics.inventory": {
+            "gt": "0"
+          }
+        }
+   },
+   {
+    "range": {
+          "vendor_info.item_purchase_price": {
+            "gt": "0"
+          }
+        }
+   }
+   ]
+ 
+      }
+  }
+}
+}
+}
+}
+}

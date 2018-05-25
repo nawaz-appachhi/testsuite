@@ -1,0 +1,12 @@
+{
+
+"login" : "${0}",
+"earnedCreditAmount" :"0" ,
+"storeCreditAmount" : "${1}",
+"debitAmount" : "0",
+"description" : "redemption against cancellation of order id: 109494428",
+"businessProcess" : "GOOD_WILL",
+"itemType" : "ORDER",
+"itemId" : "109494428"
+
+}

@@ -1,0 +1,11 @@
+{
+    "login": "${0}",
+    "reasonReturnAbuser": "HIGH_RETURNS",
+    "isCODThrottled": true,
+    "reasonRTOAbuser": "COD102",
+    "isFakeEmail": false,
+    "reasonFakeEmail": "DEFAULT",
+    "maxCOD": "${1}",
+    "isReturnAbuser": ${2},
+    "amount": 0
+}

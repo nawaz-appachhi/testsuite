@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "id": "code"
+        }
+      },
+      "id": "meta",
+      "required": [
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "serviceable": {
+          "type": "boolean",
+          "id": "serviceable"
+        },
+        "pincode": {
+          "type": "string",
+          "id": "pincode"
+        },
+        "codLimits": {
+          "type": "string",
+          "id": "codLimits"
+        },
+        "paymentModes": {
+          "type": "array",
+          "items": {},
+          "id": "paymentModes"
+        },
+        "methods": {
+          "type": "object",
+          "properties": {
+            "NORMAL": {
+              "type": "object",
+              "properties": {
+                "serviceable": {
+                  "type": "boolean",
+                  "id": "serviceable"
+                },
+                "cutoffMinutes": {
+                  "type": "integer",
+                  "id": "cutoffMinutes"
+                },
+                "maxPromiseDate": {
+                  "type": "string",
+                  "id": "maxPromiseDate"
+                },
+                "days": {
+                  "type": "integer",
+                  "id": "days"
+                }
+              },
+              "id": "NORMAL",
+              "required": [
+                "serviceable",
+                "cutoffMinutes",
+                "maxPromiseDate",
+                "days"
+              ]
+            }
+          },
+          "id": "methods",
+          "required": [
+            "NORMAL"
+          ]
+        }
+      },
+      "id": "data",
+      "required": [
+        "serviceable",
+        "pincode",
+        "codLimits",
+        "paymentModes",
+        "methods"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "meta",
+    "data"
+  ]
+}

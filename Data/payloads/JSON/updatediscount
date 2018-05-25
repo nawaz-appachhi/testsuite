@@ -1,0 +1,39 @@
+{
+    "id": ${0},
+    "name": "${1}",
+    "description": "DY-PD-VEN100-30%Off-Derby-Aug13",
+    "startedOn": ${2},
+    "expiredOn": ${3},
+    "onCart": false,
+    "fundingPercentage": 100,
+    "fundingTax": 0,
+    "fundingBasis": "discount",
+    "discountLimit": 100,
+    "discountFilters": [
+        {
+            "id": 5938,
+            "score": "3",
+            "brand": "Nike",
+            "articleType": "Sports Shoes"
+        }
+    ],
+    "discountStyles": [
+        {
+            "discountId": ${0},
+            "styleId": ${4}
+        }
+    ],
+    "isEnabled": true,
+    "isDynamic": true,
+    "discountFunding": "vendor-EOSS",
+    "discountRules": [
+        {
+            "id": 5963,
+            "groupId": 0,
+            "active": true,
+            "type": 1,
+            "percent": 30,
+            "discountFreeItems": []
+        }
+    ]
+}
