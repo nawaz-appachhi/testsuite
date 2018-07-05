@@ -61,5 +61,4 @@ public class TestATSAPISV2 extends BaseTest implements ATSConstants {
 		assertEquals(isFakeEmail, JsonPath.read(jsonResp, "$.isFakeEmail"));
 		assertEquals(reasonRTOAbuser, JsonPath.read(jsonResp, "$.reasonCOD").toString());
 	}
-
 }
