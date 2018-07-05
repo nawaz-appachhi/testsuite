@@ -62,5 +62,4 @@ public class TestATSAPISV2 extends BaseTest implements ATSConstants {
 		assertEquals(reasonRTOAbuser, JsonPath.read(jsonResp, "$.reasonCOD").toString());
 	}
 
-	
 }

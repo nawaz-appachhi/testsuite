@@ -6,9 +6,12 @@
 
 
 <test name="ATSServiceTest">
-		<classes>
-			<class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2_test" />
-		</classes>
+	<classes>
+		<class name="com.myntra.apiTests.portalservices.atsService.TestATSAPISV2_latest" />
+		<methods>
+        		<include name="testSetandGetATSUserOpenOrdersValue" />
+      		</methods>
+	</classes>
 </test>
 
 </suite>
