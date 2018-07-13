@@ -164,57 +164,57 @@ public class VEGASF_357_FB_User_Offers_Concious {
 //		objPLPageObjets.clickOnBrandNamePLP();
 //	}
 
-	@Test(priority = 4)
+// 	@Test(priority = 4)
 
-	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		objPDPageObject.clickOnAddToBag();
-		objPDPageObject.getSizeListinString(0);
-		objPDPageObject.clickonDoneButton();
-		objPDPageObject.clickOnGoToBag();
+// 	public void productDiscriptionPage() throws InterruptedException, InvalidFileFormatException, IOException {
+// 		objPDPageObject.clickOnAddToBag();
+// 		objPDPageObject.getSizeListinString(0);
+// 		objPDPageObject.clickonDoneButton();
+// 		objPDPageObject.clickOnGoToBag();
 
-	}
+// 	}
 
-	@Test(priority = 5)
+// 	@Test(priority = 5)
 
-	public void couponPage() throws InterruptedException, InvalidFileFormatException, IOException {
-		objAssertionPageObject.verifyMyBag();
-		objiOSGenericMethods.swipeDown(100, 3);
-		objCartPage.ClickOnApplyCoupon();
-		objAssertionPageObject.verifyApplyCouponHeaders();
-//		String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
-//		objCartPage.enterCoupon(coupon);
-		objCartPage.clickOnApplyButton();
-	}
+// 	public void couponPage() throws InterruptedException, InvalidFileFormatException, IOException {
+// 		objAssertionPageObject.verifyMyBag();
+// 		objiOSGenericMethods.swipeDown(100, 3);
+// 		objCartPage.ClickOnApplyCoupon();
+// 		objAssertionPageObject.verifyApplyCouponHeaders();
+// //		String coupon = objiOSGenericMethods.getValueByKey(TestName, "Coupon");
+// //		objCartPage.enterCoupon(coupon);
+// 		objCartPage.clickOnApplyButton();
+// 	}
 
-	@Test(priority = 6)
+// 	@Test(priority = 6)
 
-	public void cartPage() throws InterruptedException {
-		objAssertionPageObject.verifyMyBag();
-		objiOSGenericMethods.swipeDown(100, 6);
-		objAssertionPageObject.verifyPriceDetails();
-		objCartPage.clickOnplaceOrder();
-	}
+// 	public void cartPage() throws InterruptedException {
+// 		objAssertionPageObject.verifyMyBag();
+// 		objiOSGenericMethods.swipeDown(100, 6);
+// 		objAssertionPageObject.verifyPriceDetails();
+// 		objCartPage.clickOnplaceOrder();
+// 	}
 
-	@Test(priority = 7)
-	public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
-		objAssertionPageObject.verifyAddressHeaders();
-		objAddNewAdressPageObjects.clickOnAddNewAddress();
-		String pincode = iOSGenericMethods.getValueByKey(TestName, "Pincode");
-		String locality = iOSGenericMethods.getValueByKey(TestName, "Locality");
-		String name = iOSGenericMethods.getValueByKey(TestName, "Name");
-		String address = iOSGenericMethods.getValueByKey(TestName, "Address");
-		String mobile = iOSGenericMethods.getValueByKey(TestName, "Mobile");
-		objAddNewAdressPageObjects.EnterContinueOrderAddingAddress(pincode, locality, name, address, mobile);
-		objiOSGenericMethods.swipeDown(100, 1);
-		objCartPage.clickOnContinueOrder();
+	// @Test(priority = 7)
+	// public void AddNewAddress_Home() throws InterruptedException, InvalidFileFormatException, IOException {
+	// 	objAssertionPageObject.verifyAddressHeaders();
+	// 	objAddNewAdressPageObjects.clickOnAddNewAddress();
+	// 	String pincode = iOSGenericMethods.getValueByKey(TestName, "Pincode");
+	// 	String locality = iOSGenericMethods.getValueByKey(TestName, "Locality");
+	// 	String name = iOSGenericMethods.getValueByKey(TestName, "Name");
+	// 	String address = iOSGenericMethods.getValueByKey(TestName, "Address");
+	// 	String mobile = iOSGenericMethods.getValueByKey(TestName, "Mobile");
+	// 	objAddNewAdressPageObjects.EnterContinueOrderAddingAddress(pincode, locality, name, address, mobile);
+	// 	objiOSGenericMethods.swipeDown(100, 1);
+	// 	objCartPage.clickOnContinueOrder();
 
-	}
+	// }
 
-	@Test(priority = 8)
-	public void payment() throws InterruptedException {
-		objAssertionPageObject.verifypaymenttext();
-		objPaymentPageObjects.clickOnCOD();
-	}
+	// @Test(priority = 8)
+	// public void payment() throws InterruptedException {
+	// 	objAssertionPageObject.verifypaymenttext();
+	// 	objPaymentPageObjects.clickOnCOD();
+	// }
 
 	@Parameters({ "deviceName_", "UDID_", "platformVersion_", "URL_", "appUrl_", "screenshotPath_" })
 	@BeforeTest

@@ -133,7 +133,7 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 		objCartPageObject.clickOnplaceOrder();
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyAddressHeaders();
 		objAddNewAdressPageObjects.clickOnAddNewAddress();
@@ -148,7 +148,7 @@ public class VEGASF_102_RegisteredUser_PriceFilter_BuyFromWishlist_PayingWithCoD
 
 	}
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void NetBanking() throws InterruptedException, InvalidFileFormatException, IOException {
 		objiOSGenericMethods.swipeDown(100, 3);
 		objAssertionPageObject.verifyDeliverTo();

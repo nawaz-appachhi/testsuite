@@ -131,7 +131,7 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC {
 
 	}
 
-	@Test(priority = 5)
+	// @Test(priority = 5)
 	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyMyBag();
 		objiOSGenericMethods.swipeDown(100, 7);
@@ -139,7 +139,7 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC {
 		objCartPageObject.clickOnplaceOrder();
 	}
 	
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 
 		objAssertionPageObject.verifyAddressHeaders();
@@ -158,7 +158,7 @@ public class VEGASF_225_RegisteredUser_PDPToWishlist_Checkout_PayWithDC {
 
 
 
-	@Test(priority =7)
+	// @Test(priority =7)
 	public void payment() throws InterruptedException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObject.clickOnCreditCardPayment();

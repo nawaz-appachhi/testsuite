@@ -135,14 +135,14 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 //		objCartPageObject.clickOnChangequantityList();
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void PlaceOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		objiOSGenericMethods.swipeDown(100, 7);
 		objCartPageObject.clickOnplaceOrder();
 		 
 	} 
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 
 		objAssertionPageObject.verifyAddressHeaders();
@@ -160,7 +160,7 @@ public class VEGASF_101_RegisteredUser_PriceSensitive_UsesDiscounts_PayingWithCC
 
 	
 
-	@Test(priority = 8)
+	// @Test(priority = 8)
 	public void paymentCC () throws InterruptedException, InvalidFileFormatException, IOException {
 		
 		objiOSGenericMethods.swipeDown(100, 3);

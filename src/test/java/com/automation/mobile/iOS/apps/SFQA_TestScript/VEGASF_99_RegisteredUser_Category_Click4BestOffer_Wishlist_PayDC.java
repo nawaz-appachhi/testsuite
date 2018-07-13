@@ -129,7 +129,7 @@ public class VEGASF_99_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 
 	}
 
-	@Test(priority = 4)
+	// @Test(priority = 4)
 	public void MoveToWishlist() throws InterruptedException {
 
 		//objPLPageObjets.clickOnOkAndTouch();
@@ -138,13 +138,13 @@ public class VEGASF_99_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 
 	}
 
-	@Test(priority = 5)
+	// @Test(priority = 5)
 	public void PlaceOrder() throws InterruptedException {
 		objiOSGenericMethods.swipeDown(100, 7);
 		objCartPageObject.clickOnplaceOrder();
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void EditAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyAddressHeaders();
 		objAddNewAdressPageObjects.clickOnAddNewAddress();
@@ -158,7 +158,7 @@ public class VEGASF_99_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC {
 		objCartPageObject.clickOnContinueOrder();
 	}
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void ConfirmOrder() throws InterruptedException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObject.clickOnCreditCardPayment();

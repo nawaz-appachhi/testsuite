@@ -139,7 +139,7 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void newAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		// Pincode,Location,Name,Address,Mobile Number
 		objAssertionPageObject.verifyAddressHeaders();
@@ -154,7 +154,7 @@ public class VEGASF_222_RegisteredUser_BrandConcious_NewAddress_PayWithDC {
 		objCartPage.clickOnContinueOrder();
 	}
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void payment() throws InterruptedException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObjects.clickOnCreditCardPayment();

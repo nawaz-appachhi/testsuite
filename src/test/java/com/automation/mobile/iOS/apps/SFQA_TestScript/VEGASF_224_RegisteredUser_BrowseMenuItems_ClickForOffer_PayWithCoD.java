@@ -189,7 +189,7 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void placeOrder() throws InterruptedException {
 
 		objAssertionPageObject.verifyMyBag();
@@ -200,7 +200,7 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 
 	}
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void AddNewAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 
 		objAssertionPageObject.verifyAddressHeaders();
@@ -216,7 +216,7 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 
 	}
 
-	@Test(priority = 8)
+	// @Test(priority = 8)
 	public void placOrder() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObjects.clickOnCOD();
@@ -224,7 +224,7 @@ public class VEGASF_224_RegisteredUser_BrowseMenuItems_ClickForOffer_PayWithCoD 
 
 	}
 
-	@Test(priority = 9)
+	// @Test(priority = 9)
 	public void payment() throws InterruptedException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObjects.clickOnNetBanking();

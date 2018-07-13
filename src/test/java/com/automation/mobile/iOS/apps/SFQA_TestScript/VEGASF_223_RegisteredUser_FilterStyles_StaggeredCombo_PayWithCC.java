@@ -131,8 +131,7 @@ public class VEGASF_223_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 		objPDPageObject.clickOnGoToBag();
 	}
 
-	@Test(priority = 5)
-
+	// @Test(priority = 5)
 	public void cartPage() throws InterruptedException {
 		objAssertionPageObject.verifyMyBag();
 		objiOSGenericMethods.swipeDown(100, 6);
@@ -141,7 +140,7 @@ public class VEGASF_223_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 
 	}
 
-	@Test(priority = 6)
+	// @Test(priority = 6)
 	public void editAddress() throws InterruptedException, InvalidFileFormatException, IOException {
 		objAssertionPageObject.verifyAddressHeaders();
 		objAddNewAdressPageObjects.clickOnAddNewAddress();
@@ -155,7 +154,7 @@ public class VEGASF_223_RegisteredUser_FilterStyles_StaggeredCombo_PayWithCC {
 		objCartPage.clickOnContinueOrder();
 	}
 
-	@Test(priority = 7)
+	// @Test(priority = 7)
 	public void payment() throws InterruptedException {
 		objAssertionPageObject.verifypaymenttext();
 		objPaymentPageObjects.clickOnCreditCardPayment();

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    
+<!--     	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	 <test name="VEGASF_357_FB_User_Offers_Concious">
+		<classes>
+			<class name="com.automation.mobile.iOS.apps.SFQA_TestScript.VEGASF_357_FB_User_Offers_Concious" />
+		</classes>
+	</test>
+</suite>
