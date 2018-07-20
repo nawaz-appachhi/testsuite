@@ -14,5 +14,16 @@
 		<classes>
 			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_388_GoogleRegistered_User_AddQTY_Click4Offer" />
 		</classes>
+	</test>    
+   <test name="VEGASF_377_FB_User_Offers_Concious_UPDATED_ANUP">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="c1eb8af8" />
+		<parameter name="platformVersion_" value="8.0.0" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-qa.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.TestScript.VEGASF_162_RegisteredUser_Search_ShowMore_ShowSimilar_PayWithCredit_DebitCard" />
+		</classes>
 	</test>
 </suite>
