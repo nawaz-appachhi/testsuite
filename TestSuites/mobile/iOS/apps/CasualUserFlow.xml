@@ -16,26 +16,4 @@
 			<class name="com.automation.mobile.iOS.apps.SFQA_TestScript.VEGASF_357_FB_User_Offers_Concious" />
 		</classes>
 	</test>
-	<test name="VEGASF_359_FB_User_chkDeliveryOpt_Coupon_BOGO">
-		<parameter name="deviceName_" value="iPhone 7" />
-		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
-		<parameter name="platformVersion_" value="11.2.6" />
-		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
-		<parameter name="appUrl_" value="./apps/iOS/apps/Myntra.app" />
-		<parameter name="screenshotPath_" value="" />
-		<classes>
-			<class name="com.automation.mobile.iOS.apps.SFQA_TestScript.VEGASF_359_FB_User_chkDeliveryOpt_Coupon_BOGO" />
-		</classes>
-	</test> 
-	<test name="VEGASF_361_FB_User_Chk4BestPrice_PercentageDiscount">
-		<parameter name="deviceName_" value="iPhone 7" />
-		<parameter name="UDID_" value="17db95b85b8c94003c9af03351b320337a6902d8" />
-		<parameter name="platformVersion_" value="11.2.6" />
-		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
-		<parameter name="appUrl_" value="./apps/iOS/apps/Myntra.app" />
-		<parameter name="screenshotPath_" value="" />
-		<classes>
-			<class name="com.automation.mobile.iOS.apps.SFQA_TestScript.VEGASF_361_FB_User_Chk4BestPrice_PercentageDiscount" />
-		</classes>
-	</test> 
 </suite>
