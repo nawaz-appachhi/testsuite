@@ -1,0 +1,11 @@
+[ {
+  "uid" : "4f97d6e331624f31",
+  "name" : "TC_ID:1622 - Select Size, Apply Coupon, BOGO, Remove Address, Pay using Manual GC+Online",
+  "time" : {
+    "start" : 1532533500222,
+    "stop" : 1532533554704,
+    "duration" : 54482
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,47 @@
+commonTestData:
+  user: &cUser1
+    username: test_user_stage_desktop_1@myntra.com
+    password: 123456
+  user: &cUser2
+    username: test_user_stage_desktop_2@myntra.com
+    password: 654321
+
+  address: &cAddress1
+    pincode: 987654
+    locality: Begur
+    name: add1name
+    address: AKR Tech Park- A Block, 7th Mile, Off Hosur Road, Kudlu Gate
+    mobileNumber: 9066776629
+    rdoType: rdoHome
+  address: &cAddress2
+    pincode: 560068
+    locality: Begur
+    name: Vegasf
+    address: AKR Tech Park- B Block, 7th Mile, Off Hosur Road, Kudlu Gate
+    mobileNumber: 9066776629
+    rdoType: rdoOffice
+  product: &cProduct1
+    searchItem: 371389
+    personalisedCoupons: Desktop_1
+  product: &cProduct2
+    searchItem: 983173
+    personalisedCoupons: Desktop_2
+
+tests:
+-
+  addProductToCartPlaceOrderAddNewAddressHomePayUsingNetBanking:
+    user: *cUser1
+    address:
+      <<: *cAddress1
+      pincode: 34349
+      line2: dfjdsf
+    product:
+      <<: *cProduct1
+
+  searchaddProductToCartPlaceOrderConditionalDiscountAddNewAddressHomePayUsingNetBanking:
+    user: *cUser2
+    address:
+      <<: *cAddress2
+    product:
+      <<: *cProduct2
+      searchItem: 1203

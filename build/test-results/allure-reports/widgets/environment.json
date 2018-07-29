@@ -1,0 +1,187 @@
+[ {
+  "values" : [ "false" ],
+  "name" : "print.assertion"
+}, {
+  "values" : [ "true" ],
+  "name" : "app.wipe_user_data"
+}, {
+  "values" : [ "desktop" ],
+  "name" : "channel"
+}, {
+  "values" : [ "http://chromedriver.storage.googleapis.com" ],
+  "name" : "chrome.driver.download.url"
+}, {
+  "values" : [ "4623" ],
+  "name" : "default.appium.port.chromedriver"
+}, {
+  "values" : [ "delta7mdb.myntra.com" ],
+  "name" : "cicd.db.host"
+}, {
+  "values" : [ "" ],
+  "name" : "jdbc.url"
+}, {
+  "values" : [ "<path>" ],
+  "name" : "android.sdk.home"
+}, {
+  "values" : [ "data" ],
+  "name" : "testDataDir"
+}, {
+  "values" : [ "false" ],
+  "name" : "local.tests"
+}, {
+  "values" : [ "0.0.0.0" ],
+  "name" : "default.appium.host"
+}, {
+  "values" : [ "https://github.com/mozilla/geckodriver/releases/latest" ],
+  "name" : "firefox.driver.download.url"
+}, {
+  "values" : [ "com.myntra.Myntra" ],
+  "name" : "ios.app.package"
+}, {
+  "values" : [ "true" ],
+  "name" : "appachhi.enabled"
+}, {
+  "values" : [ "yes" ],
+  "name" : "database.enabled"
+}, {
+  "values" : [ "src/test/resources/app/Myntra.app" ],
+  "name" : "ios.app.path"
+}, {
+  "values" : [ "true" ],
+  "name" : "ui.tests.enabled"
+}, {
+  "values" : [ "1400x1200" ],
+  "name" : "ui.desktop.dimension"
+}, {
+  "values" : [ "http://dockins.myntra.com/data/getServices/" ],
+  "name" : "dockinsurl"
+}, {
+  "values" : [ "src/test/resources/driver/chrome" ],
+  "name" : "ui.driver.chrome.path"
+}, {
+  "values" : [ "60000" ],
+  "name" : "api.response.timeout"
+}, {
+  "values" : [ "com.myntra.android" ],
+  "name" : "android.app.package"
+}, {
+  "values" : [ "/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre" ],
+  "name" : "java.home"
+}, {
+  "values" : [ "https://www.myntra.com" ],
+  "name" : "ui.base.url"
+}, {
+  "values" : [ "false" ],
+  "name" : "rotate.device.landscape"
+}, {
+  "values" : [ "pageLocators" ],
+  "name" : "pageLocatorsDir"
+}, {
+  "values" : [ "yyyy-MM-dd HH:mm:ss" ],
+  "name" : "test.dateformat"
+}, {
+  "values" : [ "screenshots" ],
+  "name" : "ui.screenshots.directory"
+}, {
+  "values" : [ "4723" ],
+  "name" : "default.appium.port"
+}, {
+  "values" : [ "" ],
+  "name" : "jdbc.drivers"
+}, {
+  "values" : [ "src/test/resources/locators" ],
+  "name" : "ui.locators.base_dir"
+}, {
+  "values" : [ "iphonex" ],
+  "name" : "device"
+}, {
+  "values" : [ "false" ],
+  "name" : "ui.webdriver.grid"
+}, {
+  "values" : [ "" ],
+  "name" : "jdbc.password"
+}, {
+  "values" : [ "60" ],
+  "name" : "ui.page.timeout"
+}, {
+  "values" : [ "" ],
+  "name" : "ios.app.activity"
+}, {
+  "values" : [ "false" ],
+  "name" : "attach.logs"
+}, {
+  "values" : [ "4823" ],
+  "name" : "default.appium.port.bootstrap"
+}, {
+  "values" : [ "test" ],
+  "name" : "dockEnvName"
+}, {
+  "values" : [ "src/test/resources/app/myntra.apk" ],
+  "name" : "android.app.path"
+}, {
+  "values" : [ "60" ],
+  "name" : "ui.wait.timeout"
+}, {
+  "values" : [ "5" ],
+  "name" : "db.maxpool.size"
+}, {
+  "values" : [ "android" ],
+  "name" : "ui.mobile_web.os"
+}, {
+  "values" : [ "src/test/resources/driver/firefox" ],
+  "name" : "ui.driver.firefox.path"
+}, {
+  "values" : [ "true" ],
+  "name" : "android.remove_appium_apps"
+}, {
+  "values" : [ "chrome" ],
+  "name" : "browser"
+}, {
+  "values" : [ "4923" ],
+  "name" : "default.appium.port.selendroid"
+}, {
+  "values" : [ "0" ],
+  "name" : "retry.count"
+}, {
+  "values" : [ "10000" ],
+  "name" : "api.connection.timeout"
+}, {
+  "values" : [ "true" ],
+  "name" : "use.emulation"
+}, {
+  "values" : [ "" ],
+  "name" : "jdbc.username"
+}, {
+  "values" : [ "true" ],
+  "name" : "app.reinstall"
+}, {
+  "values" : [ "false" ],
+  "name" : "is.cicd"
+}, {
+  "values" : [ "" ],
+  "name" : "ui.mobile.deviceid"
+}, {
+  "values" : [ "false" ],
+  "name" : "isDockinsEnabled"
+}, {
+  "values" : [ "true" ],
+  "name" : "open.report"
+}, {
+  "values" : [ "chrome" ],
+  "name" : "ui.driver.type"
+}, {
+  "values" : [ "stage" ],
+  "name" : "environment"
+}, {
+  "values" : [ "false" ],
+  "name" : "useDynamicLogger"
+}, {
+  "values" : [ "5" ],
+  "name" : "parallel.thread.count"
+}, {
+  "values" : [ "com.myntra.android.retention.activities.D7OnBoardingActivity" ],
+  "name" : "android.app.activity"
+}, {
+  "values" : [ "<path>" ],
+  "name" : "homebrew.home"
+} ]

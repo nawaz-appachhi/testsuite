@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "EN-AnbarasuA",
+    "children" : [ {
+      "name" : "30046@EN-AnbarasuA.Test worker(11)",
+      "children" : [ {
+        "name" : "TC_ID:1622 - Select Size, Apply Coupon, BOGO, Remove Address, Pay using Manual GC+Online",
+        "uid" : "4f97d6e331624f31",
+        "parentUid" : "76579dbf93095b32d5873337d71e74a5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1532533500222,
+          "stop" : 1532533554704,
+          "duration" : 54482
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "76579dbf93095b32d5873337d71e74a5"
+    } ],
+    "uid" : "7473b827219c140632b5dc6dbfa2c18f"
+  } ]
+}

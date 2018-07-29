@@ -1,0 +1,85 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Myntra Test Suite" verbose="5" configfailurepolicy="continue">
+
+    <listeners>
+        <listener
+                class-name="com.myntra.utils.listeners.WebDriverListener"/>
+        <listener
+                class-name="com.myntra.utils.listeners.ReportListener"/>
+        <listener
+                class-name="com.myntra.utils.listeners.RetryListener"/>
+        <listener
+                class-name="com.myntra.utils.listeners.TestExecutionListener"/>
+        <listener
+                class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+
+
+<!--  <test name="Test Scenario" thread-count="1">
+        <packages>
+            <package name="com.myntra.scenarios"/>
+        </packages>
+  </test>
+ -->
+
+ 	<test name="Test Scenario1">
+ 		<groups>
+	        <define name="functest">
+		      <include name="windows"/>
+		      <include name="linux"/>
+		    </define>
+		  
+		    <define name="all">
+		      <include name="functest"/>
+		      <include name="checkintest"/>
+		    </define>
+	  
+		    <run>
+		      <include name="all"/>
+		       <include name="functest"/>
+		    </run>
+        </groups>
+         <packages>
+            <package name="com.myntra1.scenarios"/>
+        </packages>
+         
+      <classes>
+           <class name="com.myntra.scenarios.CCDCTest">
+             <methods>
+               <include name="addToBagSizeQuantityInCartVerifyFreeGiftViewDetailsPayUsingCreditCard" />
+        
+             </methods>
+           </class>
+           <class name="com.myntra.scenarios.OnlineTest"></class>
+       </classes>
+        
+   </test>
+
+    <test name="Test Scenario2">
+            <groups>
+               
+             <define name="functestfsdf">
+		      <include name="windowfsdfss"/>
+		      <include name="linux"/>
+		    </define>
+		  
+		    <define name="all">
+		      <include name="functest"/>
+		      <include name="checkintest"/>
+		    </define>
+		     <run>
+                    <include name="ManiTest" />
+                </run>
+            </groups>
+
+        <packages>
+            <package name="com.myntra.scenarios"/>
+        </packages> 
+      <classes>
+           <class name="com.myntra.scenarios.OnlineTest"></class>
+           <class name="com.myntra.scenarios.CasualUserTest"></class>
+       </classes>
+    </test> 
+
+</suite>

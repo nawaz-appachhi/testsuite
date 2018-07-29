@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.myntra.scenarios.OnlineTest",
+    "children" : [ {
+      "name" : "addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline",
+      "uid" : "4f97d6e331624f31",
+      "parentUid" : "928cec57b8f80d79bcbe3dff765c5aa4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1532533500222,
+        "stop" : 1532533554704,
+        "duration" : 54482
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.myntra.scenarios.OnlineTest"
+  } ]
+}

@@ -1,0 +1,29 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Myntra Test Suite",
+    "children" : [ {
+      "name" : "Test Scenario2",
+      "children" : [ {
+        "name" : "com.myntra.scenarios.OnlineTest",
+        "children" : [ {
+          "name" : "TC_ID:1622 - Select Size, Apply Coupon, BOGO, Remove Address, Pay using Manual GC+Online",
+          "uid" : "4f97d6e331624f31",
+          "parentUid" : "f843543f9b1d6f3a18537758ddc5f6ee",
+          "status" : "passed",
+          "time" : {
+            "start" : 1532533500222,
+            "stop" : 1532533554704,
+            "duration" : 54482
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f843543f9b1d6f3a18537758ddc5f6ee"
+      } ],
+      "uid" : "20d2e87bf5d895b1b84260e1d7e7ce30"
+    } ],
+    "uid" : "be74a6cac6d80383daa636ba1519444a"
+  } ]
+}

@@ -1,0 +1,132 @@
+2018-07-25 21:14:53,854 INFO  com.myntra.utils.config.ConfigManager.<init>(): Configurations are loaded from config.properties and default.properties, where config.properties taking preference
+2018-07-25 21:14:54,287 INFO  org.springframework.context.support.AbstractApplicationContext.prepareRefresh(): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6d8f32cd: startup date [Wed Jul 25 21:14:54 IST 2018]; root of context hierarchy
+2018-07-25 21:14:54,375 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(): Loading XML bean definitions from URL [jar:file:/Users/300019226/.gradle/caches/modules-2/files-2.1/com.myntra.myntra-core-test-framework/myntra-core-automation-frmwk/2.1.1-SNAPSHOT/2332de94546e4a38009dad38e4a150f2c27ac346/myntra-core-automation-frmwk-2.1.1-SNAPSHOT.jar!/db-config.xml]
+2018-07-25 21:14:54,525 ERROR com.myntra.utils.db.DBUtilities.initializeDBUtils(): db-configuration.xml not found
+2018-07-25 21:14:54,527 INFO  com.myntra.utils.test_utils.BaseTest.initBeforeSuite(): running tests in parallel mode => none
+2018-07-25 21:14:54,533 INFO  com.myntra.scenarios.SupportTest.beforeSuite(): OnlineTest - beforeSuite
+2018-07-25 21:14:54,597 INFO  com.myntra.core.central.SessionContext.addDynamicLoggerListener(): Adding TestNGDynamicLogger listener
+2018-07-25 21:14:54,598 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.SupportTest::beforeSuite
+2018-07-25 21:14:54,602 INFO  com.myntra.utils.listeners.TestExecutionListener.onStart(): parallel thread count => 1
+2018-07-25 21:14:54,603 INFO  com.myntra.utils.listeners.TestExecutionListener.onStart(): **************** test-context 'Test Scenario2' started ****************
+2018-07-25 21:14:54,608 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::init
+2018-07-25 21:14:54,609 INFO  com.myntra.scenarios.SupportTest.beforeClass(): OnlineTest - beforeClass
+2018-07-25 21:14:54,611 INFO  com.myntra.core.central.SFCentral.registerContext(): Loading Test Data File at Path :: /Applications/MAMP/htdocs/REPO/testSuites/moolya-ui-automation/build/resources/test/data/stage/desktop/testdata.ini
+2018-07-25 21:14:54,643 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.SupportTest::beforeClass
+2018-07-25 21:14:54,781 INFO  com.myntra.ui.DriverFactory.getChromeDriver(): creating chrome driver with options => {browserName=chrome, goog:chromeOptions={args=[--disable-fre, --no-first-run, --no-default-browser-check, --enable-sandbox, --session-override, --start-maximized, --disable-save-password-bubble, --disable-extensions, chrome.switches, --test-type, --disable-infobars, --incognito], binary=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome, extensions=[], prefs={}}}
+2018-07-25 21:14:56,183 INFO  com.myntra.utils.test_utils.BaseTest.setUp(): creating webdriver org.openqa.selenium.support.events.EventFiringWebDriver@16144400 for class com.myntra.scenarios.OnlineTest # addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:14:56,186 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::setUp
+2018-07-25 21:15:00,175 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::openBaseUrl
+2018-07-25 21:15:00,181 INFO  com.myntra.scenarios.SupportTest.beforeMethod(): OnlineTest - beforeMethod
+2018-07-25 21:15:00,181 INFO  com.myntra.scenarios.SupportTest.beforeMethod(): Test Method Name Started :: addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:15:00,182 INFO  com.myntra.core.central.SFCentral.getTestData(): Get Test Data for test - addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:15:00,184 INFO  com.myntra.core.central.SessionContext.addContext(): Adding context for thread - 11
+2018-07-25 21:15:00,184 INFO  com.myntra.scenarios.SupportTest.beforeMethod(): Starting test execution - addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:15:00,184 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.SupportTest::beforeMethod
+2018-07-25 21:15:00,223 INFO  com.myntra.utils.listeners.TestExecutionListener.onTestStart(): **************** Test 'com.myntra.scenarios.OnlineTest # addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline' started ****************
+2018-07-25 21:15:00,224 INFO  com.myntra.scenarios.SupportTest.loginAndCleanup(): loginAndCleanup - Set up for test method [addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline] started.
+2018-07-25 21:15:00,226 INFO  com.myntra.scenarios.SupportTest.validateTestData(): Test: addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline :: Loaded 10 entries from data file
+2018-07-25 21:15:00,343 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Home - using DynamicLogger
+2018-07-25 21:15:00,494 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.User - using DynamicLogger
+2018-07-25 21:15:00,533 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopLoginPage - using DynamicLogger
+2018-07-25 21:15:02,538 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopLoginPage.navigateToLogin()
+2018-07-25 21:15:07,184 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
+2018-07-25 21:15:07,226 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopLoginPage.login()
+2018-07-25 21:15:07,467 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.isUserLoggedIn()
+2018-07-25 21:15:07,468 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.User.loginSuccessfully()
+2018-07-25 21:15:07,468 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Home.loginSuccessfully()
+2018-07-25 21:15:07,470 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Home - using DynamicLogger
+2018-07-25 21:15:07,471 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.BusinessFlow.home()
+2018-07-25 21:15:07,471 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
+2018-07-25 21:15:09,144 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopShoppingBagPage - using DynamicLogger
+2018-07-25 21:15:14,361 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //div[text()='Your Shopping Bag is empty']' after waiting for 5 seconds
+2018-07-25 21:15:14,362 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.isEmptyBagMsgPresent()
+2018-07-25 21:15:14,580 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.removeItemFromCart()
+2018-07-25 21:15:15,642 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.isEmptyBagMsgPresent()
+2018-07-25 21:15:15,643 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.clickRemoveLink()
+2018-07-25 21:15:15,645 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.ui.AbstractBasePage.getDriver()
+2018-07-25 21:15:16,441 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Page.goBack()
+2018-07-25 21:15:16,442 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
+2018-07-25 21:15:16,447 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.emptyBag()
+2018-07-25 21:15:19,615 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopAddressPage - using DynamicLogger
+2018-07-25 21:15:22,749 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
+2018-07-25 21:15:22,749 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
+2018-07-25 21:15:25,848 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
+2018-07-25 21:15:25,848 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
+2018-07-25 21:15:26,992 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
+2018-07-25 21:15:26,992 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.removeAllAddresses()
+2018-07-25 21:15:28,402 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.emptyAddress()
+2018-07-25 21:15:28,403 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.resetAddress()
+2018-07-25 21:15:28,411 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
+2018-07-25 21:15:29,626 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopWishListPage - using DynamicLogger
+2018-07-25 21:15:29,643 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopProductDescPage.navigateToWishlist()
+2018-07-25 21:15:29,644 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopWishListPage - using DynamicLogger
+2018-07-25 21:15:29,649 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.navigateToWishlist()
+2018-07-25 21:15:29,696 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.WishListPage.isWishlistEmpty()
+2018-07-25 21:15:29,696 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.WishListPage.removeAllProductsFromWishlist()
+2018-07-25 21:15:29,697 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.ui.AbstractBasePage.getDriver()
+2018-07-25 21:15:30,668 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Page.goBack()
+2018-07-25 21:15:30,669 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
+2018-07-25 21:15:30,677 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.WishListPage.emptyWishlist()
+2018-07-25 21:15:30,677 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.HomePage.resetWishlist()
+2018-07-25 21:15:30,677 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.reset()
+2018-07-25 21:15:30,678 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Home.cleanState()
+2018-07-25 21:15:30,678 INFO  com.myntra.scenarios.SupportTest.loginAndCleanup(): loginAndCleanup - Set up for test method [addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline] ended.
+2018-07-25 21:15:30,681 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Search - using DynamicLogger
+2018-07-25 21:15:30,687 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
+2018-07-25 21:15:32,772 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
+2018-07-25 21:15:32,778 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.searchProductUsingStyleID()
+2018-07-25 21:15:32,826 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ProductDescPage.isProductDisplayed()
+2018-07-25 21:15:32,835 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Product - using DynamicLogger
+2018-07-25 21:15:32,839 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Search.searchProductUsingStyleID()
+2018-07-25 21:15:32,839 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Home.searchProductUsingStyleID()
+2018-07-25 21:15:32,844 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
+2018-07-25 21:15:32,946 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ProductDescPage.saveProductToWishlist()
+2018-07-25 21:15:34,015 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ProductDescPage.isProductSavedToWishList()
+2018-07-25 21:15:34,016 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Product.saveProductToWishlist()
+2018-07-25 21:15:34,017 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
+2018-07-25 21:15:34,258 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopProductDescPage.selectSizeAndAddToBag()
+2018-07-25 21:15:36,575 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopShoppingBagPage - using DynamicLogger
+2018-07-25 21:15:36,581 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ProductDescPage.goToBag()
+2018-07-25 21:15:36,582 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopShoppingBagPage - using DynamicLogger
+2018-07-25 21:15:36,587 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopProductDescPage.addProductMoveToBag()
+2018-07-25 21:15:36,632 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.isProductPresentInBag()
+2018-07-25 21:15:36,642 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.ShoppingBag - using DynamicLogger
+2018-07-25 21:15:36,646 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Product.addProductFromPDPToShoppingBag()
+2018-07-25 21:15:36,651 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopShoppingBagPage - using DynamicLogger
+2018-07-25 21:15:41,172 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopShoppingBagPage.applyPersonalisedCoupon()
+2018-07-25 21:15:41,215 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.ShoppingBagPage.isCouponApplied()
+2018-07-25 21:15:41,317 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopAddressPage - using DynamicLogger
+2018-07-25 21:15:42,230 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopShoppingBagPage.placeOrder()
+2018-07-25 21:15:42,892 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.addressType()
+2018-07-25 21:15:43,641 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.addAddress()
+2018-07-25 21:15:44,793 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopAddressPage - using DynamicLogger
+2018-07-25 21:15:44,800 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.Desktop.DesktopAddressPage.removeAddress()
+2018-07-25 21:15:46,450 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.addressType()
+2018-07-25 21:15:47,163 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.addAddress()
+2018-07-25 21:15:48,309 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopPaymentPage - using DynamicLogger
+2018-07-25 21:15:48,331 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.AddressPage.addressContinue()
+2018-07-25 21:15:48,333 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Payment - using DynamicLogger
+2018-07-25 21:15:48,337 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.ShoppingBag.applyCouponAndPlaceOrderRemoveAddressAddNewAddress()
+2018-07-25 21:15:48,343 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopPaymentPage - using DynamicLogger
+2018-07-25 21:15:49,940 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.PaymentPage.isPaymentPageDisplayed()
+2018-07-25 21:15:49,989 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.PaymentPage.isPaymentOptionDisplayed(arg0 - NetBanking, )
+2018-07-25 21:15:49,991 INFO  com.myntra.core.business.BusinessFlow.shouldExecuteIfNotInProd(): Payment$$EnhancerByCGLIB$$65601031.payUsingNetBanking - APPLICABLE for Channel - DESKTOP_WEB in Environment - stage. Executing it
+2018-07-25 21:15:49,991 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.BusinessFlow.shouldExecuteIfNotInProd(arg0 - Payment$$EnhancerByCGLIB$$65601031, arg1 - payUsingNetBanking, )
+2018-07-25 21:15:54,698 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.pages.PaymentPage.payUsingNetBankingAvenuesTestAccount()
+2018-07-25 21:15:54,698 INFO  com.myntra.core.utils.DynamicEnhancer.create(): useDynamicLogger = true. Creating instance of class - com.myntra.core.business.PaymentGateway - using DynamicLogger
+2018-07-25 21:15:54,701 INFO  com.myntra.core.utils.DynamicLogger.intercept(): >> Finished - com.myntra.core.business.Payment.payUsingNetBanking()
+2018-07-25 21:15:54,702 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.OnlineTest::addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:15:54,731 INFO  com.myntra.utils.listeners.TestExecutionListener.onTestSuccess(): **************** Test 'com.myntra.scenarios.OnlineTest # addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline' succeeded in 0 minutes (54.0 seconds) ****************
+2018-07-25 21:15:54,733 INFO  com.myntra.scenarios.SupportTest.afterMethod(): OnlineTest - afterMethod
+2018-07-25 21:15:54,733 INFO  com.myntra.core.central.SessionContext.remove(): Removing context for thread - 11
+2018-07-25 21:15:54,733 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.SupportTest::afterMethod
+2018-07-25 21:15:54,820 INFO  com.myntra.utils.test_utils.BaseTest.closeDriver(): removing webdriver org.openqa.selenium.support.events.EventFiringWebDriver@16144400 for class com.myntra.scenarios.OnlineTest # addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline
+2018-07-25 21:15:54,830 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::closeDriver
+2018-07-25 21:15:54,835 INFO  com.myntra.scenarios.SupportTest.afterClass(): OnlineTest - afterClass
+2018-07-25 21:15:54,836 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.scenarios.SupportTest::afterClass
+2018-07-25 21:15:54,837 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::cleanUp
+2018-07-25 21:15:54,844 INFO  com.myntra.utils.test_utils.BaseTest.cleanUpAfterSuite(): rest client , config , gson cleaned up.
+2018-07-25 21:15:54,845 INFO  com.myntra.utils.test_utils.BaseTest.cleanUpAfterSuite(): DB connections are closed successfully.
+2018-07-25 21:15:54,845 INFO  com.myntra.core.listener.TestNGDynamicLogger.afterInvocation(): >> Finished - com.myntra.utils.test_utils.BaseTest::cleanUpAfterSuite
+2018-07-25 21:15:55,049 INFO  com.myntra.utils.listeners.ReportListener.openTestResult(): Test Report at: file:///Applications/MAMP/htdocs/REPO/testSuites/moolya-ui-automation/test-output/custom-report.html
+2018-07-25 21:15:55,056 INFO  com.myntra.utils.listeners.WebDriverListener.onExecutionFinish(): adding environment details to allure report

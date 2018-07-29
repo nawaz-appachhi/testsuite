@@ -1,0 +1,51 @@
+{
+  "txaOrderConfirmed": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "class=msg-success",
+    "DESKTOP": "xpath=//div[text()='Order Confirmed']"
+  },
+   "lnkViewOrder": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//a[text()='View Order']",
+    "DESKTOP": "locator=value"
+  },
+    "imgMyntraLogo": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//a[contains(@class,'mlogo')]",
+    "DESKTOP": "locator=value"
+  },
+    "txaOrderNumber": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=(//span[@class='orderInfo-value'])[2]",
+    "DESKTOP": "xpath=//div[@class='msg-num']/strong"
+  },
+    "txaOrderNumberInMyOrdersPage": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "class=order-orderNumber",
+    "DESKTOP": "xpath=//span[@class='order-orderNumber']"
+  },
+  "lnkOrder": {
+    "NATIVE_ANDROID": "xpath=//*[@content-desc='leftElement']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//span[@class='icon icon-menu']",
+    "DESKTOP": "xpath=//div[text()='Orders']"
+  },
+  "btnContinueShopping": {
+    "NATIVE_ANDROID": "class=order-no-value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "xpath=//a[text()='Continue Shopping ']"
+  },
+  "icoUser": {
+    "NATIVE_ANDROID": "xpath=//*[@content-desc='leftElement']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//span[@class='icon icon-menu']",
+    "DESKTOP": "xpath=//div[@class='desktop-userIconsContainer']"
+  }
+}
+
