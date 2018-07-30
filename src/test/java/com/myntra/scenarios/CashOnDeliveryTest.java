@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class CashOnDeliveryTest extends SupportTest {
 
-    @Test(groups = {"CashOnDelivery", "wip-desktop"},
+    @Test(groups = {"test1"},
           description = "TC_ID:xxx - Save the Product, Add Product from Wishlist and Apply Coupon",
           alwaysRun = true)
     public void addProductToWishlistApplyCouponPlaceOrder() {
@@ -59,11 +59,9 @@ public class CashOnDeliveryTest extends SupportTest {
                          .verifyOrderNumberFromMyOrders();
     }
 
-    @Test(
-    		groups = {"CashOnDelivery"},
+    @Test(groups = {"CashOnDelivery"},
           description = "TC_ID:1792 -Search, Save Product to Wishlist, Check for Best Offer, Pay using Mynt+COD",
-          alwaysRun = true
-          )
+          alwaysRun = true)
     public void searchSaveToWishlistCheckBestPriceRemoveandAddAddressAnPayUsingCOD() {
         loginAndCleanup().searchProductUsingStyleID()
                          .saveProductToWishlist()
@@ -74,7 +72,7 @@ public class CashOnDeliveryTest extends SupportTest {
                          .verifyOrderNumberFromMyOrders();
     }
 
-    @Test(groups = {"CashOnDelivery","wip-ios"},
+    @Test(groups = {"CashOnDelivery", "wip-ios"},
           description = "TC_ID:2453 - BUG - Search, Check for Delivery Option, Add product, Add More from Wishlist, Pay using Mynt+COD",
           alwaysRun = true)
     public void homeSearchMoveToBagAddMoreFromWishlistAddNewAddressOfficeMyntraCreditCOD() {

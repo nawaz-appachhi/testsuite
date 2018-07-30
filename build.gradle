@@ -111,6 +111,8 @@ test {
     systemProperties System.properties
 
     finalizedBy 'allureReport'
+
+    reports.junitXml.destination = "${System.getProperty('report_path')}"
 }
 
 

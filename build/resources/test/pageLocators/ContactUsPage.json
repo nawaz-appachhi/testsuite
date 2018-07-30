@@ -1,8 +1,0 @@
-{
-  "txaHelpCenter": {
-    "NATIVE_ANDROID": "locator=value",
-    "NATIVE_IOS": "locator=value",
-    "MOBILE_WEB": "locator=value",
-    "DESKTOP": "xpath=//div[text()='HELP CENTER']"
-  }
-}

@@ -1,1 +1,0 @@
-{"uuid":"3f0c5f29-1fc5-4adf-96ee-1159cff94af7","name":"com.myntra.scenarios.SupportTest.afterMethod","description":"","start":1532533554732,"stop":1532533554734,"children":["e00be24e-2d71-4acd-871b-36cf15be69df"],"afters":[{"name":"afterMethod","status":"passed","stage":"finished","description":"","start":1532533554733,"stop":1532533554734}]}

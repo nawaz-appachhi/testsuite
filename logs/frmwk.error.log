@@ -1,4 +1,3 @@
-2018-07-25 21:14:54,525 ERROR com.myntra.utils.db.DBUtilities.initializeDBUtils(): db-configuration.xml not found
-2018-07-25 21:15:14,361 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //div[text()='Your Shopping Bag is empty']' after waiting for 5 seconds
-2018-07-25 21:15:22,749 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
-2018-07-25 21:15:25,848 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
+2018-07-28 17:03:43,244 ERROR com.myntra.utils.db.DBUtilities.initializeDBUtils(): db-configuration.xml not found
+2018-07-28 17:04:01,364 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
+2018-07-28 17:04:04,461 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds

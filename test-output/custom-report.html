@@ -57,49 +57,120 @@ background: rgb(255,102,102) !important;
 
 <div data-role="page" id="pageone">
 <div data-role="header">
-    <h1>Test Summary Report - 2018/07/25 21:15:54</h1>
+    <h1>Test Summary Report - 2018/07/28 17:04:10</h1>
   </div><div data-role="main" class="ui-content"><ul data-role="listview" data-count-theme="c" data-inset="true"><table data-role="table"  class="ui-responsive">
 <thead><tr><th>Test</th><th># Methods<br/>Passed</th><th># skipped</th><th># failed</th><th>Browser</th><th>Start<br/>Time</th><th>End<br/>Time</th><th>Total<br/>Time(hh:mm:ss)</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
 </thead>
 <tbody>
 <tr><th colspan="10">Myntra Test Suite</th></tr>
-<tr><td><a href="#t1"><b>Test Scenario2</b></a></td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">null</td></td>
-<td class="numi">09:14:54</td></td>
-<td class="numi">09:15:54</td></td>
-<td class="numi">00:01:00</td><td class="numi">ManiTest </td><td class="numi">wip-desktop </td></tr>
+<tr><td><a href="#t1"><b>Test Scenario</b></a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">null</td></td>
+<td class="numi">05:03:43</td></td>
+<td class="numi">05:04:10</td></td>
+<td class="numi">00:00:27</td><td class="numi">.* </td><td class="numi">wip-desktop </td></tr>
 </tbody>
 </table>
-<div data-role="collapsibleset" data-mini="true"><li><div data-role="collapsible" class="success" data-content-theme="c">
-<h1>com.myntra.scenarios.OnlineTest #Passed:: 1 #Failed:: 0 #Skipped:: 0</h1>
-<ul><div data-role="collapsible" class="success" data-content-theme="c">
-<h1>addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline Description:: TC_ID:1622 - Select Size, Apply Coupon, BOGO, Remove Address, Pay using Manual GC+Online</h1>
-<p></p></div></ul></div><div data-role="collapsible" class="" data-content-theme="c">
-<h1>[Configuration Tests]  com.myntra.scenarios.OnlineTest #Passed:: 12 #Failed:: 0 #Skipped:: 0</h1>
+<div data-role="collapsibleset" data-mini="true"><li><div data-role="collapsible" class="error" data-content-theme="c">
+<h1>com.myntra.scenarios.CashOnDeliveryTest #Passed:: 0 #Failed:: 1 #Skipped:: 0</h1>
+<ul><div data-role="collapsible" class="error" data-content-theme="c">
+<h1>addProductToWishlistApplyCouponPlaceOrder Description:: TC_ID:xxx - Save the Product, Add Product from Wishlist and Apply Coupon</h1>
+<p>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;EN-MohammedI&apos;, ip: &apos;fe80:0:0:0:10c0:624a:ef41:f131%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565386 (45a059dc425e08..., userDataDir: /var/folders/qt/kvl2yhzd177...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fc49880ba2c3b81f3e38a5e3c6fbf147
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:289)
+	at com.myntra.utils.listeners.WebDriverListener.takeScreenshot(WebDriverListener.java:342)
+	at com.myntra.utils.listeners.WebDriverListener.takeScreenshot(WebDriverListener.java:310)
+	at com.myntra.utils.listeners.WebDriverListener.afterInvocation(WebDriverListener.java:405)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithContextStrategy.callMethod(InvokedMethodListenerInvoker.java:108)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithContextStrategy.callMethod(InvokedMethodListenerInvoker.java:104)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)
+	at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:557)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+<br/><br/></p></div></ul></div><div data-role="collapsible" class="" data-content-theme="c">
+<h1>[Configuration Tests]  com.myntra.scenarios.CashOnDeliveryTest #Passed:: 10 #Failed:: 0 #Skipped:: 0</h1>
 <ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>afterClass Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
-<h1>afterMethod Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a public void com.myntra.scenarios.OnlineTest.addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline() [TestResult name=addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline status=SUCCESS method=OnlineTest.addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline()[pri:0, instance:com.myntra.scenarios.OnlineTest@22070195] output={null}] <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeClass Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeMethod Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a public void com.myntra.scenarios.OnlineTest.addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d public void com.myntra.scenarios.CashOnDeliveryTest.addProductToWishlistApplyCouponPlaceOrder() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeSuite Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>cleanUp Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a [Test: &quot;Test Scenario2&quot; verbose:0[parameters:][metagroups:] [included: ManiTest ][excluded: wip-desktop ]  classes: packages:]  <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d [Test: &quot;Test Scenario&quot; verbose:0[parameters:][metagroups:] [included: .* ][excluded: wip-desktop ]  classes: packages:org.testng.xml.XmlPackage@58cb4098 ]  <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>cleanUpAfterSuite Description:: </h1>
 <p></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
-<h1>closeDriver Description:: </h1>
-<p>Parameters:<br/><br/>public void com.myntra.scenarios.OnlineTest.addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>init Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>initBeforeSuite Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@da5858a <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>openBaseUrl Description:: </h1>
 <p></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>setUp Description:: </h1>
-<p>Parameters:<br/><br/>public void com.myntra.scenarios.OnlineTest.addProductMoveToBagApplyCouponPlaceOrderRemoveAddressPayUsingOnline() <br/><br/></p></div></ul></div><center> TestNG Report </center>
+<p>Parameters:<br/><br/>public void com.myntra.scenarios.CashOnDeliveryTest.addProductToWishlistApplyCouponPlaceOrder() <br/><br/></p></div></ul></div><center> TestNG Report </center>
 </li></div></ul></div><ul class="legend">
     <li><span class="success"></span> All Passed</li>
     <li><span class="partial"></span> Some Passed</li>

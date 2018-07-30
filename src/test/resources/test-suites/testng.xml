@@ -16,87 +16,19 @@
     </listeners>
 
 
-<!--  <test name="Test Scenario" thread-count="1">
+    <test name="Test Scenario" thread-count="1">
+
+
         <packages>
             <package name="com.myntra.scenarios"/>
         </packages>
-  </test>
- -->
-
- 	<test name="Test Scenario1">
- 		<groups>
-	        <define name="functest">
-		      <include name="windows"/>
-		      <include name="linux"/>
-		    </define>
-		  
-		    <define name="all">
-		      <include name="functest"/>
-		      <include name="checkintest"/>
-		    </define>
-	  
-		    <run>
-		      <include name="all"/>
-		       <include name="functest"/>
-		    </run>
-        </groups>
-         
-      <classes>
-           <class name="com.myntra.scenarios.CCDCTest">
-             <methods>
-               <include name="addToBagSizeQuantityInCartVerifyFreeGiftViewDetailsPayUsingCreditCard" />
+        <classes>
+            <class name="com.myntra.scenarios.CashOnDeliveryTest"/>
+        </classes>
         
-             </methods>
-           </class>
-           <class name="com.myntra.scenarios.OnlineTest"></class>
-           <class name="com.myntra.scenarios.CasualUserTest"></class>
-       </classes>
         
-   </test>
-
-    <test name="Test Scenario2">
-            <groups>
-               
-             <define name="functestfsdf">
-		      <include name="windowfsdfss"/>
-		      <include name="linux"/>
-		    </define>
-		  
-		    <define name="all">
-		      <include name="functest"/>
-		      <include name="checkintest"/>
-		    </define>
-		     <run>
-                    <include name="ManiTest" />
-                </run>
-            </groups>
-
-        <packages>
-            <package name="com.myntra.scenarios"/>
-        </packages> 
-      <classes>
-           <class name="com.myntra.scenarios.CCDCTest">
-             <methods>
-               <include name="addToBagSizeQuantityInCartVerifyFreeGiftViewDetailsPayUsingCreditCard" />
-        
-             </methods>
-             <methods>
-               <include name="filterChangeSizeQuantityInCartAddFreeGiftApplyCouponViewDetailsPayUsingCreditCard" />
-             </methods>
-           </class>
-           <class name="com.myntra.scenarios.CashOnDeliveryTest">
-	         <methods>
-               <include name="filterChangeSizeQuantityInCartAddFreeGiftApplyCouponViewDetailsPayUsingCreditCard" />
-               <include name="addProductToWishListApplyCouponPlaceOrder" />
-             </methods>
-             <methods>
-               <include name="listPagetpPDPcheckforBestPriceAddToBagMoveToWishlistPlaceOrderAddAddressUsingCOD" />
-               <include name="searchSaveToWishlistCheckBestPriceRemoveandAddAddressAnPayUsingCOD" />
-             </methods>
-             </class>
-           <class name="com.myntra.scenarios.OnlineTest"></class>
-           <class name="com.myntra.scenarios.CasualUserTest"></class>
-       </classes>
-    </test> 
+    </test>
 
 </suite>
+
+
