@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners> -->
+	<test name="VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_160_RegisteredUser_Search_ConditionalDiscount_PayWithCOD" />
+		</classes>
+	</test> 
+  <test name="VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_67_RegisteredUser_CheckDelivery_BOGO_ChangeAddress_PayWithCC" />
+		</classes>
+	</test> 
+	<test name="VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCredit_DebitCard">
+		<parameter name="deviceName_" value="One Plus one" />
+		<parameter name="UDID_" value="531a4e2c" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="./apps/Android/apps/Stage/Myntra-Android-debug.apk" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.apps.SFQA_TestScript.VEGASF_170_RegisteredUser_SearchAutoSuggest_ShowSimilar_Discount_PayWithCredit_DebitCard" />
+		</classes>
+	</test>   
+</suite>

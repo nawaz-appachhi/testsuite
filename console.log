@@ -1,0 +1,20 @@
+Including tests in group - test
+Excluding tests in group - wip-desktop
+:clean
+Delete build / logs / out / test-output / allure-results directories, IF they exist
+Create logs directory
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar
+:assemble
+:compileTestJava
+:processTestResources
+:testClasses
+:test
+Set useDynamicLogger=true
+:test FAILED
+
+BUILD FAILED
+
+Total time: 1.599 secs

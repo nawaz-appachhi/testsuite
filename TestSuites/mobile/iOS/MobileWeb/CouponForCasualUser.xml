@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	 <listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	<test name="VEGASF_428_FB_User_chkDeliveryOpt_Coupon_BOGO">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="93B297F3-E50E-41A8-9026-03E3FCDD0346" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_428_FB_User_chkDeliveryOpt_Coupon_BOGO" />
+		</classes>
+	</test>
+	<test name="VEGASF_430_Google_User_PersonalizedCoupon">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="93B297F3-E50E-41A8-9026-03E3FCDD0346" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_430_Google_User_PersonalizedCoupon" />
+		</classes>
+	</test> 
+	 <test name="VEGASF_416_Google_User_AddQTY_PersonalizedCoupon">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="22ccf457af545a24aa79cb87002c277ff5116db4" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_416_Google_User_AddQTY_PersonalizedCoupon" />
+		</classes>
+	</test>
+	<test name="VEGASF_426_FB_User_Chk4BestPrice_PercentageDiscount">
+		<parameter name="browserName_" value="safari" />
+		<parameter name="deviceName_" value="iPhone8" />
+		<parameter name="UDID_" value="22ccf457af545a24aa79cb87002c277ff5116db4" />
+		<parameter name="platformVersion_" value="11.2.6" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.iOS.MobileWeb.SFQATestScript.VEGASF_426_FB_User_Chk4BestPrice_PercentageDiscount" />
+		</classes> 
+	</test>   
+</suite>

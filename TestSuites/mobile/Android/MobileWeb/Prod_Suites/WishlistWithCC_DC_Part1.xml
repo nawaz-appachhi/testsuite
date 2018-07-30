@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.automation.core.Common.TestNGCustomReportListener" />
+	</listeners>
+	<test name="VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_110_RegisteredUser_Category_Click4BestOffer_Wishlist_PayDC" />
+		</classes>
+	</test>    
+   <test name="VEGASF_202_RegisteredUser_Search_AddNewAddress_PAymentWithGiftCardAndNetBanking">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_202_RegisteredUser_Search_AddNewAddress_PAymentWithGiftCardAndNetBanking" />
+		</classes>
+	</test>
+	 <test name="VEGASF_211_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC">
+		<parameter name="browserName_" value="chrome" />
+		<parameter name="deviceName_" value="OnePlus one" />
+		<parameter name="UDID_" value="f317f2947d84" />
+		<parameter name="platformVersion_" value="6.0.1" />
+		<parameter name="URL_" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appUrl_" value="https://www.myntra.com/" />
+		<parameter name="screenshotPath_" value="" />
+		<classes>
+			<class name="com.automation.mobile.Android.MobileWeb.TestScript.VEGASF_211_RegisteredUser_SaveStyle_SelectSizeInWishlist_PayWithDC" />
+		</classes>
+	</test>  
+</suite>
