@@ -1,16 +1,19 @@
 package com.myntra.core.pages;
 
+import com.myntra.core.enums.ChannelUtils;
 import com.myntra.core.pages.Desktop.DesktopHomePage;
 import com.myntra.core.pages.MobileWeb.MobileWebHomePage;
 import com.myntra.core.pages.NativeAndroid.NativeAndroidHomePage;
 import com.myntra.core.pages.NativeIOS.NativeIOSHomePage;
 import com.myntra.core.utils.DynamicEnhancer;
 import com.myntra.core.utils.DynamicLogger;
-import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public abstract class HomePage extends Page {
 
@@ -48,10 +51,20 @@ public abstract class HomePage extends Page {
     public abstract ProductDescPage searchProductUsingStyleID();
 
     @Step
+    public abstract ProductDescPage searchProductUsingStyleID(String searchItem);
+
+    @Step
     public ProductListPage searchProductUsingName() {
-        String searchItem = getTestData().get("SearchItem");
+        String searchItem = (String) getTestData().getAdditionalProperties()
+                                                  .get("SearchItem");
         utils.click(getLocator("btnSearch"), true);
         utils.sendKeys(getLocator("txtSearchField"), searchItem + Keys.ENTER);
+        return ProductListPage.createInstance();
+    }
+
+    @Step
+    public ProductListPage searchProductUsingBanner() {
+        utils.click(getLocator("imgBanner"), true);
         return ProductListPage.createInstance();
     }
 
@@ -70,20 +83,6 @@ public abstract class HomePage extends Page {
     public HomePage reset() {
         return resetBag().resetAddress()
                          .resetWishlist();
-    }
-
-    @Override
-    protected void isLoaded() throws Error {
-        Assert.assertTrue(utils.isElementPresent(getLocator("mnuHamburger"), 30),
-                String.format("Page - %s - NOT Loaded", getClass().getSimpleName()));
-    }
-
-    @Step
-    protected HomePage logout() {
-        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
-        }.getClass()
-         .getEnclosingMethod()
-         .getName() + " - NOT YET IMPLEMENTED");
     }
 
     @Step
@@ -114,7 +113,7 @@ public abstract class HomePage extends Page {
     }
 
     @Step
-    private ShoppingBagPage navigateToBag() {
+    public ShoppingBagPage navigateToBag() {
         utils.click(getLocator("btnCart"), true);
         return ShoppingBagPage.createInstance();
     }
@@ -129,5 +128,67 @@ public abstract class HomePage extends Page {
     public ContactUsPage openContactUsPage() {
         utils.click(getLocator("lnkContactUs"));
         return ContactUsPage.createInstance();
+    }
+
+    @Step
+    public ProductListPage searchProductUsingHovering() {
+        boolean isCategorySelectedAvailable = false;
+        utils.moveToElement(getLocator("lnkMen"));
+        List<WebElement> categoryLinks = getDriver().findElements(getLocator("lstcategoryLink"));
+        for (WebElement categoryLink : categoryLinks) {
+            if (categoryLink.getText()
+                            .equalsIgnoreCase((String) getTestData().getAdditionalProperties()
+                                                                    .get("category"))) {
+                isCategorySelectedAvailable = true;
+                categoryLink.click();
+                break;
+            }
+        }
+        soft.assertTrue(isCategorySelectedAvailable, "category selected is not available");
+        return ProductListPage.createInstance();
+    }
+
+    @Step
+    public SavedCardsPage navigateToSavedCards() {
+        utils.click(getLocator("icoUser"));
+        utils.click(getLocator("lnkSavedCards"));
+        return SavedCardsPage.createInstance();
+    }
+
+    @Step
+    public UserProfilePage navigateToEditProfile() {
+        openMenu();
+        return HamburgerPage.createInstance()
+                            .goToEditProfile();
+    }
+
+    @Step
+    public UserProfilePage goToProfilePage() {
+        utils.click(HamburgerPage.createInstance()
+                                 .getLocator("lblEditProfile"), true);
+        return UserProfilePage.createInstance();
+    }
+
+    @Step
+    public HamburgerPage clickOnUserNameSection() {
+        openMenu();
+        utils.click(getLocator("icoProfile"), true);
+        return HamburgerPage.createInstance();
+    }
+
+    @Step
+    public HomePage navigateToHomePage() {
+        if (getChannelUtils() == ChannelUtils.NATIVE_ANDROID) {
+            utils.click(getLocator("lnkShopNow"), true);
+        }
+        return this;
+    }
+
+    @Step
+    public boolean isUserLogOutSuccessful() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
     }
 }

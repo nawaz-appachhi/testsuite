@@ -4,7 +4,7 @@ import com.myntra.core.pages.AddressPage;
 import com.myntra.core.pages.PaymentPage;
 import com.myntra.ui.Direction;
 import io.qameta.allure.Step;
-import org.apache.commons.lang3.NotImplementedException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class NativeIOSAddressPage extends AddressPage {
@@ -20,24 +20,35 @@ public class NativeIOSAddressPage extends AddressPage {
     @Step
     @Override
     public AddressPage addAddress() {
-        utils.sendKeys(getLocator("txtPincode"), getTestData().get("Pincode"));
-        utils.findElement(getLocator("lnkChoose")).click();
-        utils.sendKeys(getLocator("txtLocality"), getTestData().get("Locality"));
-        utils.findElement(getLocator("btnSaveLocality")).click();
-        utils.sendKeys(getLocator("txtName"), getTestData().get("Name"));
-        utils.sendKeys(getLocator("txtAddress"), getTestData().get("Address"));
-        utils.sendKeys(getLocator("txtMobileNumber"), getTestData().get("MobileNumber"));
-        addressType();
-        utils.findElement(getLocator("btnSaveAddress")).click();
+        nativeView();
+        utils.waitForElementToBeVisible(getLocator("addressHeader"));
+        webView();
+        utils.waitForElementToBeVisible(getLocator("txtPincode"));
+        utils.sendKeys(getLocator("txtPincode"), getAddressTestData().getPincode());
+        utils.findElement(getLocator("lnkChoose"))
+             .click();
+        utils.sendKeys(getLocator("txtLocality"), getAddressTestData().getLocality());
+        utils.findElement(getLocator("btnDoneKeypad"))
+             .click();
+        utils.swipeDown_m(1);
+        utils.sendKeys(getLocator("txtName"), getAddressTestData().getName());
+        utils.sendKeys(getLocator("txtAddress"), getAddressTestData().getAddress());
+        utils.sendKeys(getLocator("txtMobileNumber"), getUserTestData().getPhoneDetails()
+                                                                       .get(0)
+                                                                       .getPhone());
+        selectAddressType();
+        utils.findElement(getLocator("btnSaveAddress"))
+             .click();
         return this;
     }
 
     @Step
     @Override
-    protected void addressType() {
-        String rdoType = getTestData().get("rdoType");
-        if (rdoType.contains("rdoHome")) {
-            utils.findElement(getLocator(rdoType))
+    protected void selectAddressType() {
+        String rdoType = getAddressTestData().getAddressType()
+                                             .toLowerCase();
+        if (rdoType.contains("home")) {
+            utils.findElement(getLocator("rdoHome"))
                  .click();
         } else if (rdoType.contains("rdoOffice")) {
             utils.findElement(getLocator(rdoType))
@@ -49,7 +60,7 @@ public class NativeIOSAddressPage extends AddressPage {
     @Override
     public PaymentPage addressContinue() {
         utils.waitForElementToBeVisible(getLocator("btnContinue"));
-        utils.click(getLocator("btnContinue"),true);
+        utils.click(getLocator("btnContinue"), true);
         return PaymentPage.createInstance();
     }
 
@@ -57,6 +68,7 @@ public class NativeIOSAddressPage extends AddressPage {
     @Override
     protected boolean isEmptyAddressMsgPresent() {
         webView();
+        utils.waitForElementToBeVisible(getLocator("lblEmptyAddress"));
         return utils.isElementPresent(getLocator("lblEmptyAddress"), 3);
     }
 
@@ -67,8 +79,8 @@ public class NativeIOSAddressPage extends AddressPage {
             removeAllAddresses();
         }
         nativeView();
-        utils.findElement(getLocator("tlbBack"))
-             .click();
+        utils.waitForElementToBeVisible(getLocator("tlbBack"));
+        utils.click(getLocator("tlbBack"), true);
         return this;
     }
 
@@ -78,11 +90,12 @@ public class NativeIOSAddressPage extends AddressPage {
         utils.click(getLocator("btnEditChange"), true);
         if (utils.isElementPresent(getLocator("btnEdit"), 3)) {
             utils.click(getLocator("btnEdit"), true);
-            utils.findElement(getLocator("txtName"))
-                    .clear();
-            utils.sendKeys(getLocator("txtName"), getTestData().get("editedName"));
+            utils.findElement(getLocator("txtName"), 3)
+                 .clear();
+            utils.sendKeys(getLocator("txtName"), (String) getAddressTestData().getAdditionalProperties()
+                                                                               .get("editedName"));
         }
-        utils.click(getLocator("btnDoneKeypad"),true);
+        utils.swipeDown_m(2);
         utils.click(getLocator("btnSaveAddress"), true);
 
         return AddressPage.createInstance();
@@ -90,11 +103,13 @@ public class NativeIOSAddressPage extends AddressPage {
 
     @Step
     @Override
-    protected void removeAllAddresses() {
+    public AddressPage removeAllAddresses() {
         while (!isEmptyAddressMsgPresent()) {
+            utils.waitForElementToBeVisible(getLocator("btnRemove"));
             utils.click(getLocator("btnRemove"), true);
             utils.click(getLocator("btnDelete"), true);
         }
+        return this;
     }
 
     @Step
@@ -109,9 +124,22 @@ public class NativeIOSAddressPage extends AddressPage {
         utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnSaveAddress")));
         utils.scroll(Direction.DOWN, 1);
         return (utils.findElement(getLocator("txaEditedName"))
-                .getText()
-                .equalsIgnoreCase(getTestData().get("editedName")));
+                     .getText()
+                     .equalsIgnoreCase((String) getAddressTestData().getAdditionalProperties()
+                                                                    .get("editedName")));
     }
 
+    @Step
+    @Override
+    public boolean isProductDeliverable() {
+        return !utils.findElement(By.className("serviceability-error"))
+                     .isDisplayed();
+    }
 
+    @Step
+    @Override
+    public boolean isPriceDetailsDisplayed() {
+        utils.swipeDown_m(1);
+        return (utils.isElementPresent(getLocator("lnkHideDetails"), 2));
+    }
 }

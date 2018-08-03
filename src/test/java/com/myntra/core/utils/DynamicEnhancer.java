@@ -14,15 +14,14 @@ public class DynamicEnhancer extends Enhancer implements ILogger {
         Object newInstance = null;
 
         if (isDebug) {
-            LOG.info(String.format("useDynamicLogger = %s. Creating instance of class - %s - using DynamicLogger", String.valueOf(isDebug), type.getName()));
+            LOG.info(String.format("useDynamicLogger = %s. Creating instance of class - %s - using DynamicLogger", String.valueOf(isDebug),
+                    type.getName()));
             newInstance = Enhancer.create(type, callback);
         } else {
             LOG.info(String.format("useDynamicLogger = %s. Creating instance of class - %s - directly", String.valueOf(isDebug), type.getName()));
             try {
                 newInstance = type.newInstance();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
+            } catch (InstantiationException | IllegalAccessException e) {
                 e.printStackTrace();
             }
         }

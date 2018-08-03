@@ -14,8 +14,7 @@ public class Payment extends BusinessFlow {
     public PaymentGateway payUsingNetBanking() {
         PaymentPage paymentpage = PaymentPage.createInstance();
         Assert.assertTrue(paymentpage.isPaymentPageDisplayed(), "Payment page is not displayed");
-        Assert.assertTrue(paymentpage.isPaymentOptionDisplayed("NetBanking"),
-                "NetBanking Payment option is not displayed");
+        Assert.assertTrue(paymentpage.isPaymentOptionEnabled("NetBanking"), "NetBanking Payment option is not displayed");
         if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
         }.getClass()
          .getEnclosingMethod()
@@ -29,7 +28,7 @@ public class Payment extends BusinessFlow {
     public Order payUsingCOD() {
         PaymentPage payment = PaymentPage.createInstance();
         Assert.assertTrue(payment.isPaymentPageDisplayed(), "Payment page is not displayed");
-        Assert.assertTrue(payment.isPaymentOptionDisplayed("COD"), "COD Payment option is not displayed");
+        Assert.assertTrue(payment.isPaymentOptionEnabled("COD"), "COD Payment option is not displayed");
         if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
         }.getClass()
          .getEnclosingMethod()
@@ -43,14 +42,13 @@ public class Payment extends BusinessFlow {
     public Order payUsingPhonepe() {
         PaymentPage payment = PaymentPage.createInstance();
         Assert.assertTrue(payment.isPaymentPageDisplayed(), "Payment page is not displayed");
-        Assert.assertTrue(payment.isPaymentOptionDisplayed("Phonepe"), "Phonepe Payment option is not displayed");
+        Assert.assertTrue(payment.isPaymentOptionEnabled("Phonepe"), "Phonepe Payment option is not displayed");
         if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
         }.getClass()
          .getEnclosingMethod()
          .getName())) {
             payment.payUsingPhonePe();
-            Assert.assertTrue(payment.isPhonePePageDisplayed(),
-                    "User couldn't navigate to PhonePe page to complete the transaction");
+            Assert.assertTrue(payment.isPhonePePageDisplayed(), "User couldn't navigate to PhonePe page to complete the transaction");
         }
         return Order.getInstance();
     }
@@ -59,8 +57,7 @@ public class Payment extends BusinessFlow {
     public Order payUsingCreditDebit() {
         PaymentPage payment = PaymentPage.createInstance();
         Assert.assertTrue(payment.isPaymentPageDisplayed(), "Payment page is not displayed");
-        Assert.assertTrue(payment.isPaymentOptionDisplayed("creditcard"),
-                "CreditDebit Payment option is not displayed");
+        Assert.assertTrue(payment.isPaymentOptionEnabled("creditcard"), "CreditDebit Payment option is not displayed");
         if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
         }.getClass()
          .getEnclosingMethod()
@@ -118,5 +115,29 @@ public class Payment extends BusinessFlow {
                        .payUsingEMI();
         }
         return Order.getInstance();
+    }
+
+    @Step
+    public Payment payUsingMyntraPoint() {
+        PaymentPage payment = PaymentPage.createInstance();
+        Assert.assertTrue(payment.isPaymentPageDisplayed(), "Payment page is not displayed");
+        if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName())) {
+            payment.payUsingMyntraPoint();
+        }
+        return this;
+    }
+
+
+    @Step
+    public Payment verifyAllNecessaryPaymentOptionsAreEnabled() {
+        PaymentPage paymentPage = PaymentPage.createInstance();
+        Assert.assertTrue(paymentPage.isPaymentPageDisplayed(), "Payment page is not displayed");
+        soft.assertTrue(paymentPage.isPayNowButtonEnabledForNetbanking(), "Pay Now Button is not enabled for Netbanking Payment option");
+        soft.assertTrue(paymentPage.isPayNowButtonEnabledForCCDC(), "Pay Now Button is not enabled for CCDC Payment option");
+        soft.assertTrue(paymentPage.isPayNowButtonEnabledForCOD(), "Pay Now Button is not enabled for COD Payment option");
+        return this;
     }
 }

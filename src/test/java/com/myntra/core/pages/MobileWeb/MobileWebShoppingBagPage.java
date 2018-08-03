@@ -11,8 +11,8 @@ public class MobileWebShoppingBagPage extends ShoppingBagPage {
     public ShoppingBagPage applyPersonalisedCoupon() {
         utils.scrollDown_m(3);
         utils.click(getLocator("tabApplyCoupon"), true);
-        String PersonalisedCoupons = getTestData().get("PersonalisedCoupons");
-        utils.sendKeys(getLocator("txtCouponCode"), PersonalisedCoupons);
+        String personalisedCoupons = getCouponTestData().getCouponCode();
+        utils.sendKeys(getLocator("txtCouponCode"), personalisedCoupons);
         utils.click(getLocator("btnApply"), true);
         utils.wait((ExpectedConditions.invisibilityOfElementLocated(getLocator("btnApply"))));
         return this;
@@ -23,9 +23,12 @@ public class MobileWebShoppingBagPage extends ShoppingBagPage {
     protected ShoppingBagPage giftWrapThisProduct() {
         utils.scrollDown_m(3);
         utils.click(getLocator("btnGiftWrap"), true);
-        utils.sendKeys(getLocator("txtRecipient"), getTestData().get("RecipientName"));
-        utils.sendKeys(getLocator("txtMessage"), getTestData().get("GiftMessage"));
-        utils.sendKeys(getLocator("txtSender"), getTestData().get("SenderName"));
+        utils.sendKeys(getLocator("txtRecipient"), (String) getTestData().getAdditionalProperties()
+                                                                         .get("RecipientName"));
+        utils.sendKeys(getLocator("txtMessage"), (String) getTestData().getAdditionalProperties()
+                                                                       .get("GiftMessage"));
+        utils.sendKeys(getLocator("txtSender"), (String) getTestData().getAdditionalProperties()
+                                                                      .get("SenderName"));
         utils.click(getLocator("btnSaveGift"), true);
         utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnSaveGift")));
         return this;
@@ -37,6 +40,28 @@ public class MobileWebShoppingBagPage extends ShoppingBagPage {
         utils.click(getLocator("btnRemoveGiftWrap"));
         LOG.debug("GiftWrap removed");
         giftWrapThisProduct();
+        return this;
+    }
+
+
+    @Step
+    @Override
+    public boolean isProductPresentInBag() {
+        //TODO Myntra Team please remove this if condition once the bug is fixed; Jira ID:VEGASF_579
+        if (!super.isProductPresentInBag()) {
+            utils.refreshPage();
+        }
+        return super.isProductPresentInBag();
+    }
+
+    @Override
+    @Step
+    public ShoppingBagPage applyMyntCouponCode() {
+        utils.click(getLocator("btnMyntApplyCode"), true);
+        utils.sendKeys(getLocator("txtMyntDiscount"), (String) getCouponTestData().getAdditionalProperties()
+                                                                                  .get("MyntCoupon"));
+        utils.click(getLocator("btnMyntApply"), true);
+        utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnMyntApply")));
         return this;
     }
 }

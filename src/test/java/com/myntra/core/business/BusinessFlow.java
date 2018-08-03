@@ -14,8 +14,8 @@ import org.testng.asserts.SoftAssert;
 import static com.myntra.ui.BaseUIHelper.CONFIG_MANAGER;
 
 public abstract class BusinessFlow implements ILogger {
-    static Channel CHANNEL = Channel.value(CONFIG_MANAGER.getString(ConfigProperties.CHANNEL.getKey()));
-    static String ENVIRONMENT = CONFIG_MANAGER.getString(ConfigProperties.ENVIRONMENT.getKey());
+    private static Channel CHANNEL = Channel.value(CONFIG_MANAGER.getString(ConfigProperties.CHANNEL.getKey()));
+    private static String ENVIRONMENT = CONFIG_MANAGER.getString(ConfigProperties.ENVIRONMENT.getKey());
 
     public enum Of {
         HOME,
@@ -27,10 +27,11 @@ public abstract class BusinessFlow implements ILogger {
         PRODUCT,
         SEARCH,
         SHOPPING_BAG,
-        WISHLIST
+        WISHLIST,
+        MYMYNTRA
     }
 
-    String testName;
+    private String testName;
     SoftAssert soft;
 
     BusinessFlow() {
@@ -45,15 +46,15 @@ public abstract class BusinessFlow implements ILogger {
     }
 
     protected boolean shouldExecuteIfNotInProd(String simpleClassName, String methodName) {
-        boolean isProdEnvironment = ENVIRONMENT.equalsIgnoreCase("prod");
+        boolean isProdEnvironment = "prod".equalsIgnoreCase(ENVIRONMENT);
         if (isProdEnvironment) {
-            String message = String.format("%s.%s - Subsequent actions NOT APPLICABLE for Channel - %s in Environment - %s",
-                    simpleClassName, methodName, CHANNEL, ENVIRONMENT);
+            String message = String.format("%s.%s - Subsequent actions NOT APPLICABLE for Channel - %s in Environment - %s", simpleClassName,
+                    methodName, CHANNEL, ENVIRONMENT);
             LOG.warn(message);
             SupportTest.logStep(message);
         } else {
-            String message = String.format("%s.%s - APPLICABLE for Channel - %s in Environment - %s. Executing it",
-                    simpleClassName, methodName, CHANNEL, ENVIRONMENT);
+            String message = String.format("%s.%s - APPLICABLE for Channel - %s in Environment - %s. Executing it", simpleClassName, methodName,
+                    CHANNEL, ENVIRONMENT);
             LOG.info(message);
         }
         return !isProdEnvironment;
@@ -92,10 +93,12 @@ public abstract class BusinessFlow implements ILogger {
             case WISHLIST:
                 businessFlow = (BusinessFlow) DynamicEnhancer.create(WishList.class, new DynamicLogger());
                 break;
+            case MYMYNTRA:
+                businessFlow = (BusinessFlow) DynamicEnhancer.create(MyMyntra.class, new DynamicLogger());
+                break;
             default:
-                throw new InvalidArgumentException(String.format("Invalid Business Flow type specified - %s",
-                        classType.getDeclaringClass()
-                                 .getName()));
+                throw new InvalidArgumentException(String.format("Invalid Business Flow type specified - %s", classType.getDeclaringClass()
+                                                                                                                       .getName()));
         }
         return businessFlow;
     }

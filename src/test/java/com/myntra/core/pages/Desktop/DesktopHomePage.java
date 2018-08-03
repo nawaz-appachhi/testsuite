@@ -1,9 +1,6 @@
 package com.myntra.core.pages.Desktop;
 
-import com.myntra.core.pages.AddressPage;
-import com.myntra.core.pages.HomePage;
-import com.myntra.core.pages.ProductDescPage;
-import com.myntra.core.pages.WishListPage;
+import com.myntra.core.pages.*;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -12,7 +9,14 @@ public class DesktopHomePage extends HomePage {
     @Step
     @Override
     public ProductDescPage searchProductUsingStyleID() {
-        String searchItem = getTestData().get("SearchItem");
+        String searchItem = (String) getTestData().getAdditionalProperties()
+                                                  .get("SearchItem");
+        return searchProductUsingStyleID(searchItem);
+    }
+
+    @Step
+    @Override
+    public ProductDescPage searchProductUsingStyleID(String searchItem) {
         utils.sendKeys(getLocator("txtSearchField"), searchItem);
         utils.click(getLocator("btnSearch"));
         return ProductDescPage.createInstance();
@@ -21,9 +25,17 @@ public class DesktopHomePage extends HomePage {
     @Step
     @Override
     public boolean isUserLoggedIn() {
-        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("icoUser")),5);
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("icoUser")), 5);
         utils.click(getLocator("icoUser"));
-        return utils.getText(getLocator("icoProfile")).equalsIgnoreCase(getTestData().get("UserName"));
+        // TODO Myntra team please remove this condition once bug is fixed; JIRA ID:VEGASF-600
+        if (!utils.getText(getLocator("icoProfile"))
+                  .equalsIgnoreCase(getUserTestData().getEmail())) {
+            utils.refreshPage();
+            utils.isElementPresent(getLocator("icoUser"), 5);
+            utils.click(getLocator("icoUser"));
+        }
+        return utils.getText(getLocator("icoProfile"))
+                    .equalsIgnoreCase(getUserTestData().getEmail());
     }
 
     @Step
@@ -52,7 +64,15 @@ public class DesktopHomePage extends HomePage {
     }
 
     @Override
-    protected void isLoaded() throws Error {
-        LOG.debug(String.format("%s :: Nothing required to be done here", getClass().getSimpleName()));
+    public HamburgerPage openMenu() {
+        utils.click(getLocator("icoUser"));
+        return HamburgerPage.createInstance();
+    }
+
+    @Step
+    @Override
+    public boolean isUserLogOutSuccessful() {
+        utils.click(getLocator("icoUser"));
+        return utils.isElementPresent(getLocator("lnkLogIn"), 2);
     }
 }

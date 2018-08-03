@@ -7,7 +7,6 @@ import com.myntra.core.pages.NativeIOS.NativeIOSPaymentGatewayPage;
 import com.myntra.core.utils.DynamicEnhancer;
 import com.myntra.core.utils.DynamicLogger;
 import io.qameta.allure.Step;
-import net.sf.cglib.proxy.Enhancer;
 import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

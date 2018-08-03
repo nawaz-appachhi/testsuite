@@ -21,23 +21,19 @@ public abstract class ProductDescPage extends Page {
         ProductDescPage derivedProductDescPage;
         switch (CHANNEL) {
             case NATIVE_ANDROID:
-                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(NativeAndroidProductDescPage.class,
-                        new DynamicLogger());
+                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(NativeAndroidProductDescPage.class, new DynamicLogger());
                 break;
 
             case NATIVE_IOS:
-                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(NativeIOSProductDescPage.class,
-                        new DynamicLogger());
+                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(NativeIOSProductDescPage.class, new DynamicLogger());
                 break;
 
             case DESKTOP_WEB:
-                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(DesktopProductDescPage.class,
-                        new DynamicLogger());
+                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(DesktopProductDescPage.class, new DynamicLogger());
                 break;
 
             case MOBILE_WEB:
-                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(MobileWebProductDescPage.class,
-                        new DynamicLogger());
+                derivedProductDescPage = (ProductDescPage) DynamicEnhancer.create(MobileWebProductDescPage.class, new DynamicLogger());
                 break;
 
             default:
@@ -70,6 +66,7 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isProductSavedToWishList() {
+        utils.waitForElementToBeVisible(getLocator("btnSaved"));
         return (utils.isElementPresent(getLocator("btnSaved"), 5));
     }
 
@@ -83,7 +80,7 @@ public abstract class ProductDescPage extends Page {
         utils.scroll(Direction.DOWN, 3);
         utils.waitForElementToBeVisible(getLocator("btnEnterPinCode"));
         utils.click(getLocator("btnEnterPinCode"), true);
-        utils.sendKeys(getLocator("txtPinCode"), getTestData().get("Pincode"));
+        utils.sendKeys(getLocator("txtPinCode"), getAddressTestData().getPincode());
         utils.click(getLocator("btnCheckDeliveryOption"), true);
         if (utils.isElementPresent(getLocator("txaDeliveryconfirmation"), 2)) {
             utils.scroll(Direction.UP, 3);
@@ -95,6 +92,7 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isProductDisplayed() {
+        utils.waitForElementToBeVisible(getLocator("lblProductName"));
         return (utils.isElementPresent(getLocator("lblProductName"), 2));
     }
 
@@ -113,20 +111,18 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isTapForBestPriceSuccessful() {
-        return (utils.isElementPresent(getLocator("txaBestPriceDetails"), 2));
+        return (utils.isElementPresent(getLocator("txaBestPriceDetails"), 10) || utils.isElementPresent(getLocator("txtAlreadyInBestPrice"), 10));
     }
 
     @Step
     public ShoppingBagPage goToBag() {
-        utils.waitForElementToBeVisible(getLocator("btnGoToBag"));
-        utils.click(getLocator("btnGoToBag"));
+        utils.click(getLocator("btnGoToBag"), true);
         return ShoppingBagPage.createInstance();
     }
 
     @Step
     public boolean isProductNameAvailable() {
-        throw new NotImplementedException(this.getClass()
-                                              .getSimpleName() + "-" + new Object() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
         }.getClass()
          .getEnclosingMethod()
          .getName() + " - NOT YET IMPLEMENTED");
@@ -134,8 +130,7 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isProductBrandAvailable() {
-        throw new NotImplementedException(this.getClass()
-                                              .getSimpleName() + "-" + new Object() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
         }.getClass()
          .getEnclosingMethod()
          .getName() + " - NOT YET IMPLEMENTED");
@@ -143,23 +138,22 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isProductPriceAvailable() {
-       return utils.isElementPresent(getLocator("lblProductPrice"),5);
+        return utils.isElementPresent(getLocator("lblProductPrice"), 5);
     }
 
     @Step
     public boolean isStrikedPriceAvailable() {
-        return utils.isElementPresent(getLocator("lblStrikedPrice"),5);
+        return utils.isElementPresent(getLocator("lblStrikedPrice"), 5);
     }
 
     @Step
     public boolean isProductDiscountAvailable() {
-        return utils.isElementPresent(getLocator("lblProductDiscount"),5);
+        return utils.isElementPresent(getLocator("lblProductDiscount"), 5);
     }
 
     @Step
     public boolean isProductDetailsAvailable() {
-        throw new NotImplementedException(this.getClass()
-                                              .getSimpleName() + "-" + new Object() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
         }.getClass()
          .getEnclosingMethod()
          .getName() + " - NOT YET IMPLEMENTED");
@@ -167,8 +161,7 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public boolean isSimilarProductAvailable() {
-        throw new NotImplementedException(this.getClass()
-                                              .getSimpleName() + "-" + new Object() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
         }.getClass()
          .getEnclosingMethod()
          .getName() + " - NOT YET IMPLEMENTED");
@@ -176,7 +169,8 @@ public abstract class ProductDescPage extends Page {
 
     @Step
     public ProductDescPage viewSimilarProducts() {
-        utils.scrollTillElementVisible_m(getLocator("lnkMoreProducts"));
+        // TODO - SimilarProducts feature is not available on stage Env.
+        scrollTillElementVisible(getLocator("lnkMoreProducts"), Direction.DOWN);
         utils.click(getLocator("lnkMoreProducts"), true);
         goBack();
         return this;
@@ -200,26 +194,32 @@ public abstract class ProductDescPage extends Page {
     }
 
     @Step
-    public boolean allThumbnailImagesAvailableInPDP() {
+    public boolean areAllThumbnailImagesAvailableInPDP() {
         boolean imageAvailable = true;
         List<WebElement> smallThumbnails = getDriver().findElements(getLocator("imgSmallThumbnails"));
         for (WebElement smallThumbnail : smallThumbnails) {
-            smallThumbnail.click();
-            imageAvailable = imageAvailable && isProductImagePresentInPDP();
+            utils.click(smallThumbnail, true);
         }
         return imageAvailable;
     }
 
     @Step
     public HashMap<String, String> getProductDetails() {
-        HashMap<String, String> productDetails = new HashMap<String, String>();
+        HashMap<String, String> productDetails = new HashMap<>();
         productDetails.put("Name", utils.findElement(getLocator("lblProductName"))
                                         .getText());
         productDetails.put("Selling Price", utils.findElement(getLocator("lblSellingPrice"))
                                                  .getText());
         productDetails.put("ProductCodeActual", utils.findElement(getLocator("lblProductCode"))
                                                      .getText());
-        productDetails.put("ProductCodeExpected", getTestData().get("SearchItem"));
+        productDetails.put("ProductCodeExpected", (String) getTestData().getAdditionalProperties()
+                                                                        .get("SearchItem"));
+        if (utils.isElementPresent(getLocator("lblStrikedPrice"), 5)) {
+            productDetails.put("Stricked price", utils.findElement(getLocator("lblStrikedPrice"))
+                                                      .getText());
+            productDetails.put("Product Discount", utils.findElement(getLocator("lblProductDiscount"))
+                                                        .getText());
+        }
         testExecutionContext.addTestState("productDetails", productDetails);
         soft.assertTrue(isProductPriceAvailable(), "Product price is not present");
         soft.assertTrue(isStrikedPriceAvailable(), "Striked price is not present");

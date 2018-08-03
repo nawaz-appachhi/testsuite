@@ -1,0 +1,129 @@
+{
+  "lnkMoveToBag": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath= (//XCUIElementTypeOther[@name='MOVE TO BAG'])[1]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "icoRemoveProduct": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeScrollView[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "tlbBag": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//XCUIElementTypeNavigationBar[@name='Featured']/XCUIElementTypeButton[3]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "tlbBack": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtSelectSize": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "accessibility_id=SelectSize",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnSelectSize": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id= XL",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "chdSelectSize": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "directSelectSize": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnDone": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "accessibility_id=DONE",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblWishlistPlaceHolder": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnContinueShopping": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblWishlistPageTitle": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "accessibility_id=WISHLIST",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblProductName": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblSellingPrice": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblActualPrice": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblPercentageDiscount": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblEmptyWishlistMsg": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//XCUIElementTypeStaticText[@name='0 items']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txaRemoveWishlistItemMsg": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  " icoWishlist": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath =//XCUIElementTypeNavigationBar[@name='Featured']/XCUIElementTypeButton[3]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "fraProduct": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=(//XCUIElementTypeOther[@name='MOVE TO BAG'])[1]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnOKPermission": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//XCUIElementTypeButton[@name='OK']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  }
+}
+

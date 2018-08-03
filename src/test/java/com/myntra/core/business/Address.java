@@ -16,7 +16,7 @@ public class Address extends BusinessFlow {
         Assert.assertTrue(addressPage.isAddressPageDisplayed(), "Address page is not dispalyed");
         addressPage.removeAddress()
                    .addAddress();
-        Assert.assertTrue(addressPage.isAddressAddedSuccessfully(), "Address is not added successfully");
+        Assert.assertTrue(addressPage.isAddressAddedSuccessfullyAfterPlacingOrder(), "Address is not added successfully");
         addressPage.addressContinue();
         return Payment.getInstance();
     }
@@ -44,9 +44,25 @@ public class Address extends BusinessFlow {
     public Payment viewPriceDetailsAndProceedToPayment() {
         AddressPage addressPage = AddressPage.createInstance();
         addressPage.viewDetails();
-        Assert.assertTrue(addressPage.isPriceDetailsDisplayed(),
-                "Price Details are not displayed upon clicking 'View Details' link");
+        Assert.assertTrue(addressPage.isPriceDetailsDisplayed(), "Price Details are not displayed upon clicking 'View Details' link");
         addressPage.addressContinue();
         return Payment.getInstance();
+    }
+
+    @Step
+    public Payment addAddressAfterSignUp() {
+        AddressPage addressPage = AddressPage.createInstance()
+                                             .addAddress();
+        Assert.assertTrue(addressPage.isAddressAddedSuccessfullyAfterPlacingOrder(), "Address is not added successfully");
+        addressPage.addressContinue();
+        return new Payment();
+    }
+
+    @Step
+    public Address removeSavedAddressAndVerify() {
+        AddressPage addressPage = AddressPage.createInstance()
+                                             .removeAllAddresses();
+        Assert.assertTrue(addressPage.isAddressRemovedSuccessfully(), "Address is not Removed successfully");
+        return this;
     }
 }

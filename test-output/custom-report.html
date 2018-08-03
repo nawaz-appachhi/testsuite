@@ -57,31 +57,32 @@ background: rgb(255,102,102) !important;
 
 <div data-role="page" id="pageone">
 <div data-role="header">
-    <h1>Test Summary Report - 2018/07/28 17:04:10</h1>
+    <h1>Test Summary Report - 2018/08/02 16:04:13</h1>
   </div><div data-role="main" class="ui-content"><ul data-role="listview" data-count-theme="c" data-inset="true"><table data-role="table"  class="ui-responsive">
 <thead><tr><th>Test</th><th># Methods<br/>Passed</th><th># skipped</th><th># failed</th><th>Browser</th><th>Start<br/>Time</th><th>End<br/>Time</th><th>Total<br/>Time(hh:mm:ss)</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
 </thead>
 <tbody>
 <tr><th colspan="10">Myntra Test Suite</th></tr>
 <tr><td><a href="#t1"><b>Test Scenario</b></a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">null</td></td>
-<td class="numi">05:03:43</td></td>
-<td class="numi">05:04:10</td></td>
-<td class="numi">00:00:27</td><td class="numi">.* </td><td class="numi">wip-desktop </td></tr>
+<td class="numi">04:03:16</td></td>
+<td class="numi">04:04:13</td></td>
+<td class="numi">00:00:57</td><td class="numi"></td><td class="numi"></td></tr>
 </tbody>
 </table>
 <div data-role="collapsibleset" data-mini="true"><li><div data-role="collapsible" class="error" data-content-theme="c">
-<h1>com.myntra.scenarios.CashOnDeliveryTest #Passed:: 0 #Failed:: 1 #Skipped:: 0</h1>
+<h1>com.myntra.scenarios.CasualUserTest #Passed:: 0 #Failed:: 1 #Skipped:: 0</h1>
 <ul><div data-role="collapsible" class="error" data-content-theme="c">
-<h1>addProductToWishlistApplyCouponPlaceOrder Description:: TC_ID:xxx - Save the Product, Add Product from Wishlist and Apply Coupon</h1>
-<p>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=67.0.3396.99)
-  (Driver info: chromedriver=2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+<h1>addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress Description:: TC_ID:174 - Save product, Verify Product Price, Move to Bag, Add more from Wishlist, Apply Personalized Coupons, Remove Address</h1>
+<p>Test Messages<br/><br/><br/>********************************************* request *********************************************<br/>Request HTTPMethod:           POST                                              <br/>Request URI:                  http://coupon.stage.myntra.com/coupons/bulkOpsInclusionExclusion<br/>Headers:                      content-type = application/json                   <br/>                              user = stage114@myntra.com                        <br/>                              accept = application/json                         <br/>Multi-Parts:                  <none>                                            <br/>Body:                         <br/>{<br/>  "groups":"TestGrpShweta",<br/>  "styleIds":"330506,356284,1531,371389,300432,734940",<br/>  "inclusion":"true",<br/>  "update":"true"<br/>}<br/>***************************************************************************************************<br/><br/>******************************************** response *********************************************<br/>Status Line:                  200 OK                                            <br/>Response Time:                246 ms                                            <br/>Headers:                      Transfer-Encoding = [chunked]                     <br/>                              Server = [Apache-Coyote/1.1]                      <br/>                              Connection = [close]                              <br/>                              Vary = [Accept-Encoding]                          <br/>                              Date = [Thu, 02 Aug 2018 10:33:27 GMT]            <br/>                              Content-Type = [application/json]                 <br/>Body:                         <br/>{<br/>  "status": {<br/>    "statusCode": 15001,<br/>    "statusMessage": "Style Inclusion Exclusion Successful",<br/>    "statusType": "SUCCESS",<br/>    "totalCount": 0<br/>  }<br/>}<br/>***************************************************************************************************<br/><br/>********************************************* request *********************************************<br/>Request HTTPMethod:           POST                                              <br/>Request URI:                  http://idea.stage.myntra.com/idea/opt/signup/loadtestemail<br/>Headers:                      content-type = application/json                   <br/>                              accept = application/json                         <br/>Multi-Parts:                  <none>                                            <br/>Body:                         <br/>{<br/>  "appName":"myntra",<br/>  "accessKey":"password",<br/>  "email":"73818426@myntra.com",<br/>  "uidxPrefix": "automation",<br/>  "firstName":"73818426_first",<br/>  "lastName":"73818426_last",<br/>  "phoneNumber": "9000000000",<br/>  "gender": "MALE",<br/>  "dob": 678479400000,<br/>  "verified": true,<br/>  "new_": false,<br/>  "location": "BANGLORE",<br/>  "bio": "Testing"<br/><br/><br/>}<br/>***************************************************************************************************<br/><br/>******************************************** response *********************************************<br/>Status Line:                  200 OK                                            <br/>Response Time:                181 ms                                            <br/>Headers:                      Transfer-Encoding = [chunked]                     <br/>                              Server = [Apache-Coyote/1.1]                      <br/>                              Connection = [close]                              <br/>                              Vary = [Accept-Encoding]                          <br/>                              Date = [Thu, 02 Aug 2018 10:33:27 GMT]            <br/>                              Content-Type = [application/json]                 <br/>Body:                         <br/>{<br/>  "status": {<br/>    "statusCode": 3,<br/>    "statusMessage": "Success",<br/>    "statusType": "SUCCESS",<br/>    "totalCount": 1<br/>  },<br/>  "entry": {<br/>    "status": "ACTIVE",<br/>    "dob": 678479400000,<br/>    "verified": true,<br/>    "channel": "EMAIL",<br/>    "emailDetails": [<br/>      {<br/>        "email": "73818426@myntra.com",<br/>        "verfied": true,<br/>        "primary": true<br/>      }<br/>    ],<br/>    "phoneDetails": [<br/>      {<br/>        "phone": "9000000000",<br/>        "verfied": false,<br/>        "primary": true<br/>      }<br/>    ],<br/>    "id": 631247,<br/>    "firstName": "73818426_first",<br/>    "lastName": "73818426_last",<br/>    "gender": "MALE",<br/>    "registrationOn": 1533206007304,<br/>    "userType": "REGULAR",<br/>    "uidx": "automation-c5acbeb1.2941.438d.94d7.8b6d6124db23p5nFSm6wnT",<br/>    "new_": true,<br/>    "publicProfileId": "73818426_first.73818",<br/>    "tagsMap": {<br/>      "myntraVerified": false,<br/>      "invited": true<br/>    },<br/>    "location": "BANGLORE",<br/>    "bio": "Testing",<br/>    "migrated": true<br/>  },<br/>  "showCaptcha": false,<br/>  "tokenEntry": {<br/>    "at": "ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklqRWlmUS5leUpzYzJsa0lqb2laak01WlRCbFlqWXRaV0ZtWVMwME5XRTBMV0V3TWpndFlUVmtOMlEwTmpOa04yWTBMVEUxTXpNeU1EWXdNRGN6TmpjaUxDSndJam9pTWpJNU55SXNJbkJ3Y3lJNk5UQXdMQ0pqYVdSNElqb2liWGx1ZEhKaExUQXlaRGRrWldNMUxUaGhNREF0TkdNM05DMDVZMlkzTFRsa05qSmtZbVZoTldVMk1TSXNJbk4xWWw5MGVYQmxJam93TENKaGNIQk9ZVzFsSWpvaWJYbHVkSEpoSWl3aWMyTnZjR1VpT2lKQ1FWTkpReUJRVDFKVVFVd2lMQ0pwYzNNaU9pSkpSRVZCSWl3aWRHOXJaVzVmZEhsd1pTSTZJbUYwSWl3aVpYaHdJam94TlRNek1qQTJNekEzTENKemRHOXlaVWxrSWpvaU1qSTVOeUlzSW5WcFpIZ2lPaUpoZFhSdmJXRjBhVzl1TFdNMVlXTmlaV0l4TGpJNU5ERXVORE00WkM0NU5HUTNMamhpTm1RMk1USTBaR0l5TTNBMWJrWlRiVFozYmxRaWZRLlVuNXl3bXdkV1E4VEg5bnU4LVYybUlaRXh3V285dlI2UUZpVFQzNkUtclRJc0lYUEhfNXN1eEJmUFhsU1hQZmFqdkxpTVdPeUVyNWR0LUlwdTRGcGdKdnBfUEozXy1aVG9HRzEwOFlHano5NkhFTXVOYklaS3FPWnJLY1VxY2tWNmtNYV9uZ0JabndzbzF6bVhGNzFYSzRoZzZIYnctcUVuaXdSQjJrSVI5MA\u003d\u003d",<br/>    "rt": "ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklqRWlmUS5leUpoY0hCT1lXMWxJam9pYlhsdWRISmhJaXdpYVhOeklqb2lTVVJGUVNJc0luUnZhMlZ1WDNSNWNHVWlPaUp5ZENJc0luTjBiM0psU1dRaU9pSXlNamszSWl3aWJITnBaQ0k2SW1Zek9XVXdaV0kyTFdWaFptRXRORFZoTkMxaE1ESTRMV0UxWkRka05EWXpaRGRtTkMweE5UTXpNakEyTURBM016WTNJaXdpY0NJNklqSXlPVGNpTENKd2NITWlPalV3TUN3aWNuUjBJam93TENKamFXUjRJam9pYlhsdWRISmhMVEF5WkRka1pXTTFMVGhoTURBdE5HTTNOQzA1WTJZM0xUbGtOakprWW1WaE5XVTJNU0lzSW5OMVlsOTBlWEJsSWpvd0xDSnpZMjl3WlNJNklrSkJVMGxESUZCUFVsUkJUQ0lzSW1WNGNDSTZNVFV6TlRjNU9EQXdOeXdpZFdsa2VDSTZJbUYxZEc5dFlYUnBiMjR0WXpWaFkySmxZakV1TWprME1TNDBNemhrTGprMFpEY3VPR0kyWkRZeE1qUmtZakl6Y0RWdVJsTnRObmR1VkNKOS5nS1lVVjFqRFpWQXdQOXg5YzlYZGxwanEtZ1RITEw2Y2hOdklJLVJqUnhpZFh6YjFlNVBmYUhtSmtadGJWU2pwczhCSVBOMjFEckRoU1NjS0VmcUdJMzNSNzVwWElqeTVVTklCMHBfaGhXSmJ0eTBNbmxBMzlxRGxzbTdwa2pZZ1NSaHJjLXFZX1M4VDNqRXFYU1MxaWJjSmJpMTd1U19KZHpybGFvaE9tX1E\u003d",<br/>    "refreshTime": 1533207807372<br/>  }<br/>}<br/>***************************************************************************************************<br/>java.lang.AssertionError: The following asserts failed:
+	org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;sizeselect-sizeButton&quot;&gt;...&lt;/button&gt; is not clickable at point (67, 616). Other element would receive the click: &lt;div class=&quot;itemdetails-itemDetailsLabel&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;EN-MohammedI&apos;, ip: &apos;fe80:0:0:0:10c0:624a:ef41:f131%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_152&apos;
+System info: host: &apos;EN-MohammedI&apos;, ip: &apos;fe80:0:0:0:4b9:8d72:bc8:c6c0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_152&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565386 (45a059dc425e08..., userDataDir: /var/folders/qt/kvl2yhzd177...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
-Session ID: fc49880ba2c3b81f3e38a5e3c6fbf147
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544337 (8c0344a12e5521..., userDataDir: /var/folders/qt/kvl2yhzd177...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
+Session ID: 1f5ba375fecf22148bd24149f660339c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -94,16 +95,117 @@ Session ID: fc49880ba2c3b81f3e38a5e3c6fbf147
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:289)
-	at com.myntra.utils.listeners.WebDriverListener.takeScreenshot(WebDriverListener.java:342)
-	at com.myntra.utils.listeners.WebDriverListener.takeScreenshot(WebDriverListener.java:310)
-	at com.myntra.utils.listeners.WebDriverListener.afterInvocation(WebDriverListener.java:405)
-	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithContextStrategy.callMethod(InvokedMethodListenerInvoker.java:108)
-	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithContextStrategy.callMethod(InvokedMethodListenerInvoker.java:104)
-	at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)
-	at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:557)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:371)
+	at com.sun.proxy.$Proxy31.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:383)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage.selectASize_aroundBody2(DesktopWishListPage.java:27)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage$AjcClosure3.run(DesktopWishListPage.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage.selectASize(DesktopWishListPage.java:23)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage.moveProductToBag_aroundBody0(DesktopWishListPage.java:16)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage$AjcClosure1.run(DesktopWishListPage.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage.moveProductToBag(DesktopWishListPage.java:15)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage$$EnhancerByCGLIB$$537e8e7b.CGLIB$moveProductToBag$0(&lt;generated&gt;)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage$$EnhancerByCGLIB$$537e8e7b$$FastClassByCGLIB$$d6955d85.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at com.myntra.core.utils.DynamicLogger.intercept(DynamicLogger.java:24)
+	at com.myntra.core.pages.Desktop.DesktopWishListPage$$EnhancerByCGLIB$$537e8e7b.moveProductToBag(&lt;generated&gt;)
+	at com.myntra.core.pages.ShoppingBagPage.addMoreFromWishList_aroundBody24(ShoppingBagPage.java:163)
+	at com.myntra.core.pages.ShoppingBagPage$AjcClosure25.run(ShoppingBagPage.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at com.myntra.core.pages.ShoppingBagPage.addMoreFromWishList(ShoppingBagPage.java:160)
+	at com.myntra.core.pages.Desktop.DesktopShoppingBagPage$$EnhancerByCGLIB$$5a2ed72e.CGLIB$addMoreFromWishList$12(&lt;generated&gt;)
+	at com.myntra.core.pages.Desktop.DesktopShoppingBagPage$$EnhancerByCGLIB$$5a2ed72e$$FastClassByCGLIB$$f5521f6d.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at com.myntra.core.utils.DynamicLogger.intercept(DynamicLogger.java:24)
+	at com.myntra.core.pages.Desktop.DesktopShoppingBagPage$$EnhancerByCGLIB$$5a2ed72e.addMoreFromWishList(&lt;generated&gt;)
+	at com.myntra.core.business.ShoppingBag.addMoreFromWishlist_aroundBody14(ShoppingBag.java:89)
+	at com.myntra.core.business.ShoppingBag$AjcClosure15.run(ShoppingBag.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at com.myntra.core.business.ShoppingBag.addMoreFromWishlist(ShoppingBag.java:87)
+	at com.myntra.core.business.ShoppingBag$$EnhancerByCGLIB$$4053892f.CGLIB$addMoreFromWishlist$1(&lt;generated&gt;)
+	at com.myntra.core.business.ShoppingBag$$EnhancerByCGLIB$$4053892f$$FastClassByCGLIB$$5e4fd714.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at com.myntra.core.utils.DynamicLogger.intercept(DynamicLogger.java:24)
+	at com.myntra.core.business.ShoppingBag$$EnhancerByCGLIB$$4053892f.addMoreFromWishlist(&lt;generated&gt;)
+	at com.myntra.scenarios.CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress(CasualUserTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:205)
+	at com.myntra.scenarios.SupportTest.run(SupportTest.java:28)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:641)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+ expected [null] but found [org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;sizeselect-sizeButton&quot;&gt;...&lt;/button&gt; is not clickable at point (67, 616). Other element would receive the click: &lt;div class=&quot;itemdetails-itemDetailsLabel&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;EN-MohammedI&apos;, ip: &apos;fe80:0:0:0:4b9:8d72:bc8:c6c0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544337 (8c0344a12e5521..., userDataDir: /var/folders/qt/kvl2yhzd177...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
+Session ID: 1f5ba375fecf22148bd24149f660339c]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.myntra.scenarios.SupportTest.run(SupportTest.java:39)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:641)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -149,28 +251,32 @@ Session ID: fc49880ba2c3b81f3e38a5e3c6fbf147
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.lang.Thread.run(Thread.java:748)
 <br/><br/></p></div></ul></div><div data-role="collapsible" class="" data-content-theme="c">
-<h1>[Configuration Tests]  com.myntra.scenarios.CashOnDeliveryTest #Passed:: 10 #Failed:: 0 #Skipped:: 0</h1>
+<h1>[Configuration Tests]  com.myntra.scenarios.CasualUserTest #Passed:: 12 #Failed:: 0 #Skipped:: 0</h1>
 <ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>afterClass Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<h1>afterMethod Description:: </h1>
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 public void com.myntra.scenarios.CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress() [TestResult name=addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress status=FAILURE method=CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress()[pri:0, instance:com.myntra.scenarios.CasualUserTest@6eaf7b14] output=&lt;br/&gt;********************************************* request *********************************************&lt;br/&gt;Request HTTPMethod:           POST                                              &lt;br/&gt;Request URI:                  http://coupon.stage.myntra.com/coupons/bulkOpsInclusionExclusion&lt;br/&gt;Headers:                      content-type = application/json                   &lt;br/&gt;                              user = stage114@myntra.com                        &lt;br/&gt;                              accept = application/json                         &lt;br/&gt;Multi-Parts:                  &lt;none&gt;                                            &lt;br/&gt;Body:                         &lt;br/&gt;{&lt;br/&gt;  &quot;groups&quot;:&quot;TestGrpShweta&quot;,&lt;br/&gt;  &quot;styleIds&quot;:&quot;330506,356284,1531,371389,300432,734940&quot;,&lt;br/&gt;  &quot;inclusion&quot;:&quot;true&quot;,&lt;br/&gt;  &quot;update&quot;:&quot;true&quot;&lt;br/&gt;}&lt;br/&gt;***************************************************************************************************] <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeClass Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeMethod Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d public void com.myntra.scenarios.CashOnDeliveryTest.addProductToWishlistApplyCouponPlaceOrder() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 public void com.myntra.scenarios.CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>beforeSuite Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>cleanUp Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d [Test: &quot;Test Scenario&quot; verbose:0[parameters:][metagroups:] [included: .* ][excluded: wip-desktop ]  classes: packages:org.testng.xml.XmlPackage@58cb4098 ]  <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 [Test: &quot;Test Scenario&quot; verbose:0[parameters:][metagroups:] [included: ][excluded: ]  classes: packages:org.testng.xml.XmlPackage@41ec9102 ]  <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>cleanUpAfterSuite Description:: </h1>
 <p></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<h1>closeDriver Description:: </h1>
+<p>Parameters:<br/><br/>public void com.myntra.scenarios.CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress() <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>init Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>initBeforeSuite Description:: </h1>
-<p>Parameters:<br/><br/>org.testng.TestRunner@ece3c9d <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
+<p>Parameters:<br/><br/>org.testng.TestRunner@69c413e2 <br/><br/></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>openBaseUrl Description:: </h1>
 <p></p></div></ul><ul><div data-role="collapsible" class="success" data-content-theme="c">
 <h1>setUp Description:: </h1>
-<p>Parameters:<br/><br/>public void com.myntra.scenarios.CashOnDeliveryTest.addProductToWishlistApplyCouponPlaceOrder() <br/><br/></p></div></ul></div><center> TestNG Report </center>
+<p>Parameters:<br/><br/>public void com.myntra.scenarios.CasualUserTest.addToBagAddMoreFromWishlistApplyCouponAndRemoveAddress() <br/><br/></p></div></ul></div><center> TestNG Report </center>
 </li></div></ul></div><ul class="legend">
     <li><span class="success"></span> All Passed</li>
     <li><span class="partial"></span> Some Passed</li>

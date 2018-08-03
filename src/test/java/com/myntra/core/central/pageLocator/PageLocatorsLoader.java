@@ -41,8 +41,7 @@ public class PageLocatorsLoader implements ILogger {
         }
     }
 
-    private void parseEachLocator(String elementName,
-                                  Iterator<Entry<String, JsonElement>> elementValuesForChannelsIterator) {
+    private void parseEachLocator(String elementName, Iterator<Entry<String, JsonElement>> elementValuesForChannelsIterator) {
         IdentificationPlatform platform;
         Identifier identifier;
         while (elementValuesForChannelsIterator.hasNext()) {

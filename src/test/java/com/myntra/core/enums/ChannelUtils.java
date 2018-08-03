@@ -14,12 +14,7 @@ public enum ChannelUtils {
     ANDROID_WEB,
     DESKTOP;
 
-    private static Set<ChannelUtils> mobileNativeChannelUtils = new HashSet<>(
-            Arrays.asList(ChannelUtils.NATIVE_IOS, ChannelUtils.NATIVE_ANDROID));
-    //        private static Set<ChannelUtils> mobileWebChannelUtils = new HashSet<ChannelUtils>(
-//            Arrays.asList(new ChannelUtils[]{ChannelUtils.IOS_WEB, ChannelUtils.ANDROID_WEB}));
-//    private static Set<ChannelUtils> iosChannelUtils = new HashSet<>(
-//            Arrays.asList(new ChannelUtils[]{ChannelUtils.NATIVE_IOS, ChannelUtils.IOS_WEB}));
+    private static Set<ChannelUtils> mobileNativeChannelUtils = new HashSet<>(Arrays.asList(ChannelUtils.NATIVE_IOS, ChannelUtils.NATIVE_ANDROID));
     private static final Map<ChannelUtils, IdentificationPlatform> platformIdMap = new HashMap<>();
 
     static {
@@ -34,19 +29,6 @@ public enum ChannelUtils {
         return mobileNativeChannelUtils.contains(channelUtils);
     }
 
-//    public static boolean isMobileWebPlatform(ChannelUtils channelUtils) {
-//        return mobileWebChannelUtils.contains(channelUtils);
-//    }
-//
-//    public static boolean isWebPlatform(ChannelUtils channelUtils) {
-//        return mobileWebChannelUtils.contains(channelUtils) || desktopChannelUtils.contains(channelUtils);
-//    }
-//
-//    public static boolean isIosPlatform(ChannelUtils channelUtils) {
-//        return iosChannelUtils.contains(channelUtils);
-//    }
-
-    //
     public static IdentificationPlatform asIdentificationPlatform(ChannelUtils channelUtils) {
         return platformIdMap.get(channelUtils);
     }
@@ -69,8 +51,7 @@ public enum ChannelUtils {
             case MOBILE_WEB:
                 mappedChannelUtils = CONFIG_MANAGER.getString(ConfigProperties.UI_PHONE_OS.getKey())
                                                    .toLowerCase()
-                                                   .contains("android") ? ChannelUtils.ANDROID_WEB
-                                                                        : ChannelUtils.IOS_WEB;
+                                                   .contains("android") ? ChannelUtils.ANDROID_WEB : ChannelUtils.IOS_WEB;
                 break;
 
             default:

@@ -6,6 +6,7 @@ import com.myntra.core.pages.WishListPage;
 import com.myntra.ui.Direction;
 import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -46,12 +47,11 @@ public class MobileWebProductDescPage extends ProductDescPage {
     @Step
     @Override
     public ProductDescPage tapForBestPrice() {
-//        utils.scrollTillElementVisible(getLocator("lnkTapBestPrice"), true);
-        utils.scroll(Direction.DOWN, 20);
+        scrollTillElementVisible(getLocator("lnkTapBestPrice"));
         utils.wait(ExpectedConditions.elementToBeClickable(getLocator("lnkTapBestPrice")));
         utils.click(getLocator("lnkTapBestPrice"), true);
-        Assert.assertTrue(utils.isElementPresent(getLocator("btnAddToBag"), 30),
-                String.format("Page - %s - NOT Loaded", getClass().getSimpleName()));
+        scrollTillElementVisible(getLocator("btnAddToBag"));
+        Assert.assertTrue(utils.isElementPresent(getLocator("btnAddToBag"), 30), String.format("Page - %s - NOT Loaded", getClass().getSimpleName()));
         return this;
     }
 
@@ -71,7 +71,7 @@ public class MobileWebProductDescPage extends ProductDescPage {
             utils.click(getLocator("lnkChangePin"), true);
         }
         utils.click(getLocator("btnEnterPinCode"), true);
-        utils.sendKeys(getLocator("txtPinCode"), getTestData().get("Pincode"));
+        utils.sendKeys(getLocator("txtPinCode"), getAddressTestData().getPincode());
         utils.click(getLocator("btnCheckDeliveryOption"), true);
         /// TODO - Need to replace scroll method with Utils scroll method once the issue is fixed
         ((JavascriptExecutor) getDriver()).executeScript("scroll(0,-300)");//utils.scroll(Direction.UP,5) is not working
@@ -82,7 +82,13 @@ public class MobileWebProductDescPage extends ProductDescPage {
 
     @Step
     @Override
-    public boolean allThumbnailImagesAvailableInPDP() {
+    public boolean isProductImagePresentInPDP() {
+        return (utils.isElementPresent(getLocator("imgSmallThumbnails"), 5));
+    }
+
+    @Step
+    @Override
+    public boolean areAllThumbnailImagesAvailableInPDP() {
         List<WebElement> allImages = utils.findElements(getLocator("imgSmallThumbnails"));
         smallImgeVerification(allImages);
         zoomedImgeVerification(allImages);
@@ -99,12 +105,23 @@ public class MobileWebProductDescPage extends ProductDescPage {
 
     @Step
     private ProductDescPage zoomedImgeVerification(List<WebElement> allImages) {
-        utils.click(getLocator("imgLargeThumbnail"), true);
-        System.out.println("imgLargeThumbnail");
+        int imgCount = allImages.size();
+        utils.click(By.xpath(String.format("//*[@class='carousel-box-container']/div[%s]//img[1][contains(@class,'img-loaded')]", imgCount)), true);
         for (WebElement image : allImages) {
             utils.click(getLocator("imgNavigateArrowR"), true);
         }
         utils.click(getLocator("closeZoomImage"), true);
+        return this;
+    }
+
+    @Step
+    @Override
+    public ProductDescPage saveProductToWishlist() {
+        // TODO Myntra team please remove this condition once bug is fixed; Jira ID:
+        if (!utils.isElementPresent(getLocator("btnSave"), 5)) {
+            utils.refreshPage();
+        }
+        utils.click(getLocator("btnSave"), true);
         return this;
     }
 }

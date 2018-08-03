@@ -20,18 +20,70 @@ public class NativeAndroidPaymentPage extends PaymentPage {
     @Step
     @Override
     public PaymentPage payUsingCreditAndDebitCard() {
-        utils.click(getLocator("tabCreditCard"), true);
-        utils.waitForElementToBeVisible(getLocator("txtCreditCardNumber"));
-        utils.sendKeys(getLocator("txtCreditCardNumber"), getTestData().get("CreditCardNumber"));
-        utils.sendKeys(getLocator("txtNameOnCreditCard"), getTestData().get("NameOnCreditCard"));
-        utils.select(getLocator("ddlExpiryMonthField"), SelectBy.VALUE, String.format("%02d", ((Calendar.getInstance()
-                                                                                                        .get(Calendar.MONTH) +
-                1) % 12)));
-        utils.select(getLocator("ddlExpiryYearField"), SelectBy.VISIBLE_TEXT, String.format("%s",
-                (Calendar.getInstance()
-                         .get(Calendar.YEAR) + 2)));
-        utils.sendKeys(getLocator("txtCVV"), getTestData().get("CVV"));
+        fillCreditCardDetails();
         utils.click(getLocator("btnPayNowForCreditCardPayment"), true);
         return this;
+    }
+
+    @Step
+    private void fillCreditCardDetails() {
+        utils.click(getLocator("tabCreditCard"), true);
+        utils.waitForElementToBeVisible(getLocator("txtCreditCardNumber"));
+        utils.findElement(getLocator("txtCreditCardNumber"))
+             .sendKeys((String) getTestData().getAdditionalProperties()
+                                             .get("CreditCardNumber"));
+        utils.findElement(getLocator("txtNameOnCreditCard"))
+             .sendKeys((String) getTestData().getAdditionalProperties()
+                                             .get("NameOnCreditCard"));
+        utils.select(getLocator("ddlExpiryMonthField"), SelectBy.VALUE, String.format("%02d", ((Calendar.getInstance()
+                                                                                                        .get(Calendar.MONTH) + 1) % 12)));
+        utils.select(getLocator("ddlExpiryYearField"), SelectBy.VISIBLE_TEXT, String.format("%s", (Calendar.getInstance()
+                                                                                                           .get(Calendar.YEAR) + 2)));
+        utils.findElement(getLocator("txtCVV"))
+             .sendKeys((CharSequence) getTestData().getAdditionalProperties()
+                                                   .get("CVV"));
+    }
+
+    @Step
+    @Override
+    public OrderConfirmationPage payUsingPhonePe() {
+        scrollTillElementVisible(getLocator("tabPhonePe"));
+        utils.click(getLocator("tabPhonePe"), true);
+        return OrderConfirmationPage.createInstance();
+    }
+
+    @Step
+    @Override
+    public boolean isPayNowButtonEnabledForNetbanking() {
+        if (isNetbankingPaymentOptionEnabled()) {
+            utils.click(getLocator("tabNetBanking"));
+            utils.click(getLocator("icoAvenuesTest"), true);
+            return (utils.findElement(getLocator("btnNetbankingPayNow"))
+                         .isEnabled());
+        } else {
+            LOG.info("Netbanking payment option is not displayed");
+            return false;
+        }
+    }
+
+    @Step
+    @Override
+    public boolean isPayNowButtonEnabledForCCDC() {
+        changePaymentType();
+        if (isCCDCPaymentOptionEnabled()) {
+            fillCreditCardDetails();
+            return (utils.findElement(getLocator("btnPayNowForCreditCardPayment"))
+                         .isEnabled());
+        } else {
+            LOG.info("Credit/Debit card payment option is not displayed");
+            return false;
+        }
+    }
+
+    @Step
+    @Override
+    public boolean isPayNowButtonEnabledForCOD() {
+        changePaymentType();
+        return super.isPayNowButtonEnabledForCOD();
     }
 }

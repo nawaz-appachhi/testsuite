@@ -1,84 +1,161 @@
-2018-07-28 17:03:42,420 INFO  : Configurations are loaded from config.properties and default.properties, where config.properties taking preference
-2018-07-28 17:03:43,001 INFO  : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5495294: startup date [Sat Jul 28 17:03:42 IST 2018]; root of context hierarchy
-2018-07-28 17:03:43,095 INFO  : Loading XML bean definitions from URL [jar:file:/Users/300019236/.gradle/caches/modules-2/files-2.1/com.myntra.myntra-core-test-framework/myntra-core-automation-frmwk/2.1.1-SNAPSHOT/2332de94546e4a38009dad38e4a150f2c27ac346/myntra-core-automation-frmwk-2.1.1-SNAPSHOT.jar!/db-config.xml]
-2018-07-28 17:03:43,244 ERROR : db-configuration.xml not found
-2018-07-28 17:03:43,245 INFO  : running tests in parallel mode => none
-2018-07-28 17:03:43,249 INFO  : CashOnDeliveryTest - beforeSuite
-2018-07-28 17:03:43,316 INFO  : Adding TestNGDynamicLogger listener
-2018-07-28 17:03:43,317 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeSuite
-2018-07-28 17:03:43,317 INFO  : parallel thread count => 1
-2018-07-28 17:03:43,318 INFO  : **************** test-context 'Test Scenario' started ****************
-2018-07-28 17:03:43,330 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::init
-2018-07-28 17:03:43,330 INFO  : CashOnDeliveryTest - beforeClass
-2018-07-28 17:03:43,332 INFO  : Loading Test Data File at Path :: /Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/build/resources/test/data/stage/desktop/testdata.ini
-2018-07-28 17:03:43,364 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeClass
-2018-07-28 17:03:43,517 INFO  : creating chrome driver with options => {browserName=chrome, goog:chromeOptions={args=[--disable-fre, --no-first-run, --no-default-browser-check, --enable-sandbox, --session-override, --start-maximized, --disable-save-password-bubble, --disable-extensions, chrome.switches, --test-type, --disable-infobars, --incognito], binary=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome, extensions=[], prefs={}}}
-2018-07-28 17:03:45,223 INFO  : creating webdriver org.openqa.selenium.support.events.EventFiringWebDriver@2829367b for class com.myntra.scenarios.CashOnDeliveryTest # addProductToWishlistApplyCouponPlaceOrder
-2018-07-28 17:03:45,224 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::setUp
-2018-07-28 17:03:48,165 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::openBaseUrl
-2018-07-28 17:03:48,172 INFO  : CashOnDeliveryTest - beforeMethod
-2018-07-28 17:03:48,172 INFO  : Test Method Name Started :: addProductToWishlistApplyCouponPlaceOrder
-2018-07-28 17:03:48,172 INFO  : Get Test Data for test - addProductToWishlistApplyCouponPlaceOrder
-2018-07-28 17:03:48,174 INFO  : Adding context for thread - 11
-2018-07-28 17:03:48,174 INFO  : Starting test execution - addProductToWishlistApplyCouponPlaceOrder
-2018-07-28 17:03:48,175 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeMethod
-2018-07-28 17:03:48,176 INFO  : **************** Test 'com.myntra.scenarios.CashOnDeliveryTest # addProductToWishlistApplyCouponPlaceOrder' started ****************
-2018-07-28 17:03:48,216 INFO  : loginAndCleanup - Set up for test method [addProductToWishlistApplyCouponPlaceOrder] started.
-2018-07-28 17:03:48,220 INFO  : Test: addProductToWishlistApplyCouponPlaceOrder :: Loaded 10 entries from data file
-2018-07-28 17:03:48,346 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Home - using DynamicLogger
-2018-07-28 17:03:48,537 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.business.User - using DynamicLogger
-2018-07-28 17:03:48,578 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopLoginPage - using DynamicLogger
-2018-07-28 17:03:48,707 INFO  : directory 'screenshots' created successfully
-2018-07-28 17:03:50,370 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopLoginPage.navigateToLogin()
-2018-07-28 17:03:52,777 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
-2018-07-28 17:03:52,818 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopLoginPage.login()
-2018-07-28 17:03:53,065 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.isUserLoggedIn()
-2018-07-28 17:03:53,066 INFO  : >> Finished - com.myntra.core.business.User.loginSuccessfully()
-2018-07-28 17:03:53,066 INFO  : >> Finished - com.myntra.core.business.Home.loginSuccessfully()
-2018-07-28 17:03:53,068 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Home - using DynamicLogger
-2018-07-28 17:03:53,069 INFO  : >> Finished - com.myntra.core.business.BusinessFlow.home()
-2018-07-28 17:03:53,069 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
-2018-07-28 17:03:54,769 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopShoppingBagPage - using DynamicLogger
-2018-07-28 17:03:54,844 INFO  : >> Finished - com.myntra.core.pages.ShoppingBagPage.isEmptyBagMsgPresent()
-2018-07-28 17:03:54,845 INFO  : >> Finished - com.myntra.core.pages.ShoppingBagPage.clickRemoveLink()
-2018-07-28 17:03:54,848 INFO  : >> Finished - com.myntra.ui.AbstractBasePage.getDriver()
-2018-07-28 17:03:55,618 INFO  : >> Finished - com.myntra.core.pages.Page.goBack()
-2018-07-28 17:03:55,622 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
-2018-07-28 17:03:55,631 INFO  : >> Finished - com.myntra.core.pages.ShoppingBagPage.emptyBag()
-2018-07-28 17:03:58,241 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopAddressPage - using DynamicLogger
-2018-07-28 17:04:01,364 ERROR : unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
-2018-07-28 17:04:01,365 INFO  : >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
-2018-07-28 17:04:04,461 ERROR : unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
-2018-07-28 17:04:04,462 INFO  : >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
-2018-07-28 17:04:05,601 INFO  : >> Finished - com.myntra.core.pages.AddressPage.isEmptyAddressMsgPresent()
-2018-07-28 17:04:05,602 INFO  : >> Finished - com.myntra.core.pages.AddressPage.removeAllAddresses()
-2018-07-28 17:04:06,963 INFO  : >> Finished - com.myntra.core.pages.AddressPage.emptyAddress()
-2018-07-28 17:04:06,964 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.resetAddress()
-2018-07-28 17:04:06,972 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
-2018-07-28 17:04:07,920 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopWishListPage - using DynamicLogger
-2018-07-28 17:04:07,936 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopProductDescPage.navigateToWishlist()
-2018-07-28 17:04:07,937 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopWishListPage - using DynamicLogger
-2018-07-28 17:04:07,944 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.navigateToWishlist()
-2018-07-28 17:04:08,069 INFO  : >> Finished - com.myntra.core.pages.WishListPage.isWishlistEmpty()
-2018-07-28 17:04:08,069 INFO  : >> Finished - com.myntra.core.pages.WishListPage.removeAllProductsFromWishlist()
-2018-07-28 17:04:08,070 INFO  : >> Finished - com.myntra.ui.AbstractBasePage.getDriver()
-2018-07-28 17:04:09,029 INFO  : >> Finished - com.myntra.core.pages.Page.goBack()
-2018-07-28 17:04:09,030 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
-2018-07-28 17:04:09,037 INFO  : >> Finished - com.myntra.core.pages.WishListPage.emptyWishlist()
-2018-07-28 17:04:09,038 INFO  : >> Finished - com.myntra.core.pages.HomePage.resetWishlist()
-2018-07-28 17:04:09,038 INFO  : >> Finished - com.myntra.core.pages.Desktop.DesktopHomePage.reset()
-2018-07-28 17:04:09,038 INFO  : >> Finished - com.myntra.core.business.Home.cleanState()
-2018-07-28 17:04:09,038 INFO  : loginAndCleanup - Set up for test method [addProductToWishlistApplyCouponPlaceOrder] ended.
-2018-07-28 17:04:09,041 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.business.Search - using DynamicLogger
-2018-07-28 17:04:09,047 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopHomePage - using DynamicLogger
-2018-07-28 17:04:10,250 INFO  : useDynamicLogger = true. Creating instance of class - com.myntra.core.pages.Desktop.DesktopProductDescPage - using DynamicLogger
-2018-07-28 17:04:10,308 INFO  : >> Finished - com.myntra.scenarios.CashOnDeliveryTest::addProductToWishlistApplyCouponPlaceOrder
-2018-07-28 17:04:10,318 INFO  : **************** Test 'com.myntra.scenarios.CashOnDeliveryTest # addProductToWishlistApplyCouponPlaceOrder' failed in 0 minutes (26.0 seconds) ****************
-2018-07-28 17:04:10,356 INFO  : CashOnDeliveryTest - afterClass
-2018-07-28 17:04:10,357 INFO  : >> Finished - com.myntra.scenarios.SupportTest::afterClass
-2018-07-28 17:04:10,359 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::cleanUp
-2018-07-28 17:04:10,370 INFO  : rest client , config , gson cleaned up.
-2018-07-28 17:04:10,370 INFO  : DB connections are closed successfully.
-2018-07-28 17:04:10,371 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::cleanUpAfterSuite
-2018-07-28 17:04:10,626 INFO  : Test Report at: file:///Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/test-output/custom-report.html
-2018-07-28 17:04:10,626 INFO  : adding environment details to allure report
+2018-08-02 16:04:59,458 INFO  : Configurations are loaded from config.properties and default.properties, where config.properties taking preference
+2018-08-02 16:05:00,017 INFO  : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6e978f74: startup date [Thu Aug 02 16:05:00 IST 2018]; root of context hierarchy
+2018-08-02 16:05:00,128 INFO  : Loading XML bean definitions from URL [jar:file:/Users/300019236/.gradle/caches/modules-2/files-2.1/com.myntra.myntra-core-test-framework/myntra-core-automation-frmwk/2.2.0-SNAPSHOT/248d93a585d03d3dc521ca0d87bef4761b39cc13/myntra-core-automation-frmwk-2.2.0-SNAPSHOT.jar!/db-config.xml]
+2018-08-02 16:05:00,287 ERROR : db-configuration.xml not found
+2018-08-02 16:05:00,288 INFO  : running tests in parallel mode => none
+2018-08-02 16:05:00,292 INFO  : CasualUserTest - beforeSuite
+2018-08-02 16:05:00,372 INFO  : Adding TestNGDynamicLogger listener
+2018-08-02 16:05:00,372 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeSuite
+2018-08-02 16:05:00,377 INFO  : parallel thread count => 1
+2018-08-02 16:05:00,377 INFO  : **************** test-context 'Test Scenario' started ****************
+2018-08-02 16:05:00,386 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::init
+2018-08-02 16:05:00,387 INFO  : CasualUserTest - beforeClass
+2018-08-02 16:05:00,388 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeClass
+2018-08-02 16:05:00,539 INFO  : creating chrome driver with options => {browserName=chrome, goog:chromeOptions={args=[--disable-fre, --no-first-run, --no-default-browser-check, --enable-sandbox, --session-override, --start-maximized, --disable-save-password-bubble, --disable-extensions, chrome.switches, --test-type, --disable-infobars, --incognito], binary=/Applications/MAMP/htdocs/REPO/Playback/appachhiPlayback/engines/local/selenium/Desktop/assets/browsers/mac/chrome64.app/Contents/MacOS/chrome, extensions=[], prefs={}}}
+2018-08-02 16:05:02,041 INFO  : creating webdriver org.openqa.selenium.support.events.EventFiringWebDriver@cba2f97 for class com.myntra.scenarios.CasualUserTest # saveEmptyWishlistFreeGiftAndEditAddress
+2018-08-02 16:05:02,151 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::setUp
+2018-08-02 16:05:08,109 INFO  : >> Finished - com.myntra.utils.test_utils.BaseTest::openBaseUrl
+2018-08-02 16:05:08,110 INFO  : CasualUserTest - beforeMethod
+2018-08-02 16:05:08,110 INFO  : Started Test (saveEmptyWishlistFreeGiftAndEditAddress) execution
+2018-08-02 16:05:08,113 INFO  : Adding context for thread - 11
+2018-08-02 16:05:08,114 INFO  : Starting test execution - saveEmptyWishlistFreeGiftAndEditAddress
+2018-08-02 16:05:08,115 INFO  : >> Finished - com.myntra.scenarios.SupportTest::beforeMethod
+2018-08-02 16:05:08,153 INFO  : **************** Test 'com.myntra.scenarios.CasualUserTest # saveEmptyWishlistFreeGiftAndEditAddress' started ****************
+2018-08-02 16:05:08,155 INFO  : setupLoginAndReset - Set up for test method [saveEmptyWishlistFreeGiftAndEditAddress] started.
+2018-08-02 16:05:08,156 INFO  : Get Test Data for test - saveEmptyWishlistFreeGiftAndEditAddress
+2018-08-02 16:05:08,156 INFO  : Test data is not loaded. Loading it now.
+2018-08-02 16:05:08,158 INFO  : Loading Common Test Data File at Path :: /Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/build/resources/test/data/stage/commonTestData.ini
+2018-08-02 16:05:08,159 INFO  : Loading Test Data File at Path :: /Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/build/resources/test/data/stage/desktop/testdata.ini
+2018-08-02 16:05:08,194 INFO  : Loaded test data file - /Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/build/resources/test/data/stage/commonTestData.ini
+2018-08-02 16:05:08,196 INFO  : Loaded test data file - /Applications/MAMP/htdocs/REPO/eclipse_workspace/moolya-ui-automation/build/resources/test/data/stage/desktop/testdata.ini
+2018-08-02 16:05:08,196 INFO  : Test data - keys found in file - 
+{NameOnCreditCard=3, InvalidPersonalisedCoupons=0, AnotherPersonalisedCoupon=0, CVV=0, firstname=1, SenderName=0, Address=0, sortRequired=1, loyaltyPoint=4, Name=0, SearchItem=82, yourbio=1, RecipientName=0, CreditCardNumber=3, Locality=0, ProductCode=33, GiftMessage=0, lastname=1, MobileNumber=0, MyntCoupon=5, PersonalisedCoupons=33, editedName=0, rdoType=72, filterOne=3, category=0, Pincode=0}
+2018-08-02 16:05:08,196 INFO  : Loading data for test verifycartpagemergedwithnewlyaddeditems
+2018-08-02 16:05:08,204 INFO  : Loading data for test sizechartaddtobagchangesizeandquantitybogoaddnewaddresspayusingonline
+2018-08-02 16:05:08,205 INFO  : Loading data for test sizechartaddtobagmovetowishlistmovetobagaddnewaddresspayusingccdc
+2018-08-02 16:05:08,205 INFO  : Loading data for test editcardinsavedcardspage
+2018-08-02 16:05:08,206 INFO  : Loading data for test saveemptywishlistmovetobagplaceorderpercentagediscountviewdetailsaddaddresspayusingonline
+2018-08-02 16:05:08,206 INFO  : Loading data for test savetowishlistemptywishlistgiftwrapeditaddresspayusingonline
+2018-08-02 16:05:08,206 INFO  : Loading data for test saveemptywishlistaddproducttobaggiftwrapapplycouponpayusingnetbanking
+2018-08-02 16:05:08,207 INFO  : Loading data for test movetobagplaceorderstaggeredcomboeditaddresspayusingonline
+2018-08-02 16:05:08,207 INFO  : Loading data for test searchsavecontactusbuyonegetoneaddnewaddresspayusingnetbanking
+2018-08-02 16:05:08,207 INFO  : Loading data for test addcardinsavedcardspage
+2018-08-02 16:05:08,208 INFO  : Loading data for test addtobagsizequantityincartverifyfreegiftviewdetailspayusingcreditcard
+2018-08-02 16:05:08,208 INFO  : Loading data for test saveproductmovetobagplaceorderremoveaddress
+2018-08-02 16:05:08,208 INFO  : Loading data for test homesearchmovetobagaddmorefromwishlistaddnewaddressofficemyntracreditcod
+2018-08-02 16:05:08,209 INFO  : Loading data for test verifyregistereduserabletoremoveaddedaddress
+2018-08-02 16:05:08,209 INFO  : Loading data for test searchsavetowishlistcheckbestpriceapplycouponaddnewaddresseditaddressverifyfreegiftandpayusingnetbanking
+2018-08-02 16:05:08,209 INFO  : Loading data for test selectsizeaddtobagbogoviewdetailspayusingccdc
+2018-08-02 16:05:08,210 INFO  : Loading data for test savetowishlistaftersearchaddfreegiftapplycouponplaceorderusingnetbanking
+2018-08-02 16:05:08,210 INFO  : Loading data for test savemovetobagapplypersonalizedcouponeditaddresspayusingonline
+2018-08-02 16:05:08,210 INFO  : Loading data for test verifydiscountpricesaveaddtobagfromwishlistplaceorderapplycouponviewdetailspayusingonline
+2018-08-02 16:05:08,211 INFO  : Loading data for test clickforbestpriceaddtobagmovetowishlistfreegiftaddaddressandnetbanking
+2018-08-02 16:05:08,211 INFO  : Loading data for test sizechartaddtobagmovetowishlistmovetobagfromwishlistbogoviewdetailspayusingcod
+2018-08-02 16:05:08,211 INFO  : Loading data for test selectbestpriceaddproducttocartplaceorderapplycouponremoveaddressaddaddresspayusingnetbanking
+2018-08-02 16:05:08,212 INFO  : Loading data for test similarproductsclickforbestpricegiftwrapviewdetailspayusingnetbanking
+2018-08-02 16:05:08,212 INFO  : Loading data for test addtobagviewsizechartcontactusbogoviewdetailspayusingonline
+2018-08-02 16:05:08,212 INFO  : Loading data for test saveviewsizechartaddtobagremoveproductpercentagediscounteditaddresspayusingonlineandgiftcard
+2018-08-02 16:05:08,213 INFO  : Loading data for test saveaddtobagmovetobagfromwishlistplaceorderpercentagediscountaddnewaddresshomepayusingccdc
+2018-08-02 16:05:08,213 INFO  : Loading data for test saveemptywishlistfreegiftandeditaddress
+2018-08-02 16:05:08,213 INFO  : Loading data for test verifyregistereduserabletoeditprofileandchangepassword
+2018-08-02 16:05:08,214 INFO  : Loading data for test searchsavetowishlistapplycouponaddnewaddressanpayusingnetbanking
+2018-08-02 16:05:08,214 INFO  : Loading data for test homesearchsavemovetobagconditionaldiscountviewdetailsccdc
+2018-08-02 16:05:08,215 INFO  : Loading data for test commontestdata
+2018-08-02 16:05:08,215 INFO  : Loading data for test savecheckdeliveryoptionaddtobagremoveitemfrombagadditemfromwishlistbogoaddaddressofficepayusingonline
+2018-08-02 16:05:08,215 INFO  : Loading data for test verifyregistereduserabletoaddnotapplicablecoupon
+2018-08-02 16:05:08,216 INFO  : Loading data for test searchproductcheckdeliveryoptionmovetobagapplycouponaddnewaddress
+2018-08-02 16:05:08,216 INFO  : Loading data for test saveclickforbestpriceshowsimilarproductsaddtobagaddmorefromwishlistremoveaddressaddaddresspayusingcodandmyntracredit
+2018-08-02 16:05:08,216 INFO  : Loading data for test saveviewsimilarproductscontactusaddtobagfromwishlistbogoviewdetailspayusingemi
+2018-08-02 16:05:08,217 INFO  : Loading data for test verifycancellationineditprofile
+2018-08-02 16:05:08,217 INFO  : Loading data for test saveviewsimilarproductsaddtobagfromwishlistapplycouponclickforbestpriceaddnewaddresshomepayusingnetbanking
+2018-08-02 16:05:08,217 INFO  : Loading data for test addtobagplaceorderbogoviewdetailsaddnewaddresspayusingmyntracredit
+2018-08-02 16:05:08,218 INFO  : Loading data for test saveproductemptywishlistaddproducttobagchangesizeandquantityandremoveaddress
+2018-08-02 16:05:08,218 INFO  : Loading data for test verifyemptybagaftercheckout
+2018-08-02 16:05:08,218 INFO  : Loading data for test clickforbestpriceviewsimilarproductsaddtobaggiftwrapaddnewaddressofficepayusingnetbanking
+2018-08-02 16:05:08,218 INFO  : Loading data for test verifyproductdetailsinpdpsizechartapplycouponviewpricedetailspayusingnetbanking
+2018-08-02 16:05:08,219 INFO  : Loading data for test searchsaveproductselectsizechartapplycouponverifyfreegiftaddandeditaddresspayusingnetbanking
+2018-08-02 16:05:08,219 INFO  : Loading data for test verifypersonalizedcouponforunauthorizeduser
+2018-08-02 16:05:08,219 INFO  : Loading data for test savegotobagmovetowishlistmovetobagfromwishlistapplycouponeditaddresspayusinggiftcard
+2018-08-02 16:05:08,220 INFO  : Loading data for test placeorderasguestuserthenregisterpayusingccdc
+2018-08-02 16:05:08,220 INFO  : Loading data for test saveemptywishlistmovetobagplaceorderremoveaddressaddaddressandcod
+2018-08-02 16:05:08,220 INFO  : Loading data for test addproducttocartandaddaddress
+2018-08-02 16:05:08,221 INFO  : Loading data for test similarproductsaddtobagplaceorderfreegiftaddnewaddressofficepayusingnetbanking
+2018-08-02 16:05:08,221 INFO  : Loading data for test verifydiscountavailableinplpandpdpandbagissame
+2018-08-02 16:05:08,222 INFO  : Loading data for test searchfreegiftproductcheckbestpriceplaceordereditaddress
+2018-08-02 16:05:08,222 INFO  : Loading data for test homepagesearchclickforbestpriceselectsizefromwishlistplaceorderremoveaddress
+2018-08-02 16:05:08,222 INFO  : Loading data for test saveclickedforbestpriceviewsizechartremoveproductaddfromwishlistapplycouponpercentagediscountaddaddresshomepayusingnetbanking
+2018-08-02 16:05:08,223 INFO  : Loading data for test saveclickforbestpricesizechartaddtobagaddaddresspayusingonline
+2018-08-02 16:05:08,223 INFO  : Loading data for test saveclickforbestpriceaddtobagfromwishlistplaceorderpercentagediscounteditaddresspayusingonline
+2018-08-02 16:05:08,223 INFO  : Loading data for test imageverificationsavetapforbestpriceemptycartadditemsfromwishlistviewpricedetailspayusingcod
+2018-08-02 16:05:08,224 INFO  : Loading data for test addtobaggiftwrapbogoplaceorderaddnewaddressviewdetailspayusingnetbanking
+2018-08-02 16:05:08,224 INFO  : Loading data for test verifyuserabletoapplymultiplecouponsforsingleproduct
+2018-08-02 16:05:08,224 INFO  : Loading data for test addtobagaddmorefromwishlistapplycouponandremoveaddress
+2018-08-02 16:05:08,225 INFO  : Loading data for test verifypaymentmodeselection
+2018-08-02 16:05:08,225 INFO  : Loading data for test signupaddprofiledetailsfromusernamesectionandverify
+2018-08-02 16:05:08,225 INFO  : Loading data for test addproductmovetobagapplycouponplaceorderremoveaddresspayusingonline
+2018-08-02 16:05:08,226 INFO  : Loading data for test searchaddproducttocartplaceorderconditionaldiscountaddnewaddresshomepayusingnetbanking
+2018-08-02 16:05:08,226 INFO  : Loading data for test saveproducttowishlistcheckbestpriceapplycouponviewdetailsplaceorderaddnewaddressandpayusingnetbanking
+2018-08-02 16:05:08,226 INFO  : Loading data for test addtobagapplycouponplaceorderandaddnewaddress
+2018-08-02 16:05:08,227 INFO  : Loading data for test searchsavetowishlistcheckbestpriceremoveandaddaddressanpayusingcod
+2018-08-02 16:05:08,227 INFO  : Loading data for test placeorderusingccdccheckorderstatuscancleorder
+2018-08-02 16:05:08,227 INFO  : Loading data for test selectsizefromwishlistchangesizeandaddquantityapplycouponplaceorderandaddnewaddresseditaddresspayusingnetbanking
+2018-08-02 16:05:08,227 INFO  : Loading data for test addproducttobaggiftwrapaddnewaddresshomepayusingnetbanking
+2018-08-02 16:05:08,228 INFO  : Loading data for test verifyproductdetailsinwishlistpagearesameasinpdp
+2018-08-02 16:05:08,228 INFO  : Loading data for test verifyimagesaveaddtobagaddmorefromwishlistfreegiftaddaddresspayusingnetbanking
+2018-08-02 16:05:08,228 INFO  : Loading data for test removecardinsavedcardspage
+2018-08-02 16:05:08,229 INFO  : Loading data for test imageverificationsaveaddtobagaddmorefromwishlistviewdetailscod
+2018-08-02 16:05:08,229 INFO  : Loading data for test signupplaceorderusingccdcverifyorderconfirmation
+2018-08-02 16:05:08,229 INFO  : Loading data for test addtobagplaceorderchangesizeandquantityfrombagfreegiftaddnewaddressofficepayusingmyntracredit
+2018-08-02 16:05:08,230 INFO  : Loading data for test similarproductssaveaddtobagfromwishlistclickforbestpricechangesizeandquantityaddaddresspayusingccdc
+2018-08-02 16:05:08,230 INFO  : Loading data for test savemovetobagbogoapplycouponeditaddresspayusinggiftcard
+2018-08-02 16:05:08,230 INFO  : Loading data for test checkdeliveryoptionaddproducttocartplaceorderapplycouponaddnewaddressofficepayusingcreditdebitcard
+2018-08-02 16:05:08,231 INFO  : Loading data for test verifyregistereduserabletoenternotapplicablecoupontext
+2018-08-02 16:05:08,231 INFO  : Loading data for test checkdeliveryaddtobagstaggeredcomboeditaddresspayusingonline
+2018-08-02 16:05:08,231 INFO  : Loading data for test showsimilarproductsaddtobaggiftwrapapplycouponeditaddresspayusingsavedcard
+2018-08-02 16:05:08,231 INFO  : Loading data for test viewsizechartclickforbestpriceapplycouponviewpricedetailspayusingnetbanking
+2018-08-02 16:05:08,232 INFO  : Loading data for test verifyregistereduserabletoaddnewaddress
+2018-08-02 16:05:08,232 INFO  : Loading data for test saveaddtobagemptywishlistpercentsgediscountremoveaddressaddaddresspayusingnetbanking
+2018-08-02 16:05:08,232 INFO  : Loading data for test verifyregistereduserabletoaddinvalidcoupon
+2018-08-02 16:05:08,254 INFO  : DataCreator constructor
+2018-08-02 16:05:08,254 INFO  : Instantiating TestDataHelper
+2018-08-02 16:05:08,263 INFO  : Adding StyleIDs loaded from Test Data file to Coupon group - [330506, 356284, 1531, 371389, 300432, 734940]
+2018-08-02 16:05:08,898 INFO  : 
+********************************************* request *********************************************
+Request HTTPMethod:           POST                                              
+Request URI:                  http://coupon.stage.myntra.com/coupons/bulkOpsInclusionExclusion
+Headers:                      content-type = application/json                   
+                              user = stage114@myntra.com                        
+                              accept = application/json                         
+Multi-Parts:                  <none>                                            
+Body:                         
+{
+  "groups":"TestGrpShweta",
+  "styleIds":"330506,356284,1531,371389,300432,734940",
+  "inclusion":"true",
+  "update":"true"
+}
+***************************************************************************************************
+2018-08-02 16:05:08,910 INFO  : 
+******************************************** response *********************************************
+Status Line:                  200 OK                                            
+Response Time:                257 ms                                            
+Headers:                      Transfer-Encoding = [chunked]                     
+                              Server = [Apache-Coyote/1.1]                      
+                              Connection = [close]                              
+                              Vary = [Accept-Encoding]                          
+                              Date = [Thu, 02 Aug 2018 10:35:08 GMT]            
+                              Content-Type = [application/json]                 
+Body:                         
+{
+  "status": {
+    "statusCode": 15001,
+    "statusMessage": "Style Inclusion Exclusion Successful",
+    "statusType": "SUCCESS",
+    "totalCount": 0
+  }
+}
+***************************************************************************************************
+2018-08-02 16:05:09,000 INFO  : Added StyleIDs loaded from Test Data file to Coupon group - 200::Style Inclusion Exclusion Successful
+2018-08-02 16:05:09,001 INFO  : DataCreator constructor
+2018-08-02 16:05:09,001 INFO  : Instantiating TestDataHelper
+2018-08-02 16:05:09,002 INFO  : Test: saveEmptyWishlistFreeGiftAndEditAddress - Create user with username - 1695646215 and password - password

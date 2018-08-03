@@ -1,0 +1,128 @@
+{
+  "txaFirstName": {
+    "NATIVE_ANDROID": "xpath=//android.widget.TextView[@text='FULL NAME']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//input[@name='firstname']",
+    "DESKTOP": "name=firstname"
+  },
+  "txaLastName": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//input[@name='lastname']",
+    "DESKTOP": "name=lastname"
+  },
+  "drpDobDate": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=dayCode",
+    "DESKTOP": "name=dayCode"
+  },
+  "drpDobMonth": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath= //*[@name='monthCode']",
+    "DESKTOP": "xpath = //*[@name='monthCode']"
+  },
+  "drpDobYear": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=yearCode",
+    "DESKTOP": "name=yearCode"
+  },
+  "txaMobileNumber": {
+    "NATIVE_ANDROID": "xpath=//android.widget.TextView[@text='MOBILE NUMBER']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//input[@type='tel']",
+    "DESKTOP": "xpath=//input[@type='tel']"
+  },
+  "txaYourBio": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//textarea[@name='bio']",
+    "DESKTOP": "name=bio"
+  },
+  "txaLocation": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//input[@name='location']",
+    "DESKTOP": "xpath=//input[@name='location']"
+  },
+  "rdoGenderFemale": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=gender",
+    "DESKTOP": "name=gender"
+  },
+  "btnSave": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//button[text()='SAVE']",
+    "DESKTOP": "id=save"
+  },
+  "lnkChangePassword": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "class=change-password-text",
+    "DESKTOP": "class=change-password-text"
+  },
+  "txaCurrentPassword": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=current_pwd",
+    "DESKTOP": "name=current_pwd"
+  },
+  "txaNewPassword": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "id=rp-password",
+    "DESKTOP": "name=password"
+  },
+  "txaConfirmPassword": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=confirm_pwd",
+    "DESKTOP": "name=confirm_pwd"
+  },
+  "btnChangePassword": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "id=change-submit",
+    "DESKTOP": "id=change-submit"
+  },
+  "btnEdit": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//*[contains(@class,'edit2')]",
+    "DESKTOP": "xpath=//*[contains(@class,'edit2')]"
+  },
+  "btnCancel": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//*[@class='cancel']",
+    "DESKTOP": "xpath=//*[@class='cancel']"
+  },
+  "msgPasswordchange": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "xpath=//div[@class='password-info']",
+    "DESKTOP": "xpath=//div[@class='password-info']"
+  },
+  "btnGender": {
+    "NATIVE_ANDROID": "xpath=//android.view.ViewGroup[@content-desc='GENDER']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=gender",
+    "DESKTOP": "name=gender"
+  },
+  "selectGenderMale": {
+    "NATIVE_ANDROID": "xpath=//android.widget.TextView[@text='Male']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=gender",
+    "DESKTOP": "name=gender"
+  },
+  "selectGenderFemale": {
+    "NATIVE_ANDROID": "xpath=//android.widget.TextView[@text='Female']",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "name=gender",
+    "DESKTOP": "name=gender"
+  }
+}

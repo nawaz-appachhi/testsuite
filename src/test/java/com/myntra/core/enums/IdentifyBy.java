@@ -9,12 +9,11 @@ public enum IdentifyBy {
     PARTIALLINKTEXT,
     CSS,
     TAGNAME,
+    LABEL,
     XPATH,
 
     // iOS
     ACCESSIBILITY_ID,
 
-    //TEMP - TODO - > remove
     LOCATOR
-
 }

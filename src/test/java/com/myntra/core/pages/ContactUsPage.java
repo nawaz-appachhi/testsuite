@@ -16,23 +16,19 @@ public class ContactUsPage extends Page {
         ContactUsPage derivedContactUsPage;
         switch (CHANNEL) {
             case NATIVE_ANDROID:
-                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(NativeAndroidContactUsPage.class,
-                        new DynamicLogger());
+                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(NativeAndroidContactUsPage.class, new DynamicLogger());
                 break;
 
             case NATIVE_IOS:
-                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(NativeIOSContactUsPage.class,
-                        new DynamicLogger());
+                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(NativeIOSContactUsPage.class, new DynamicLogger());
                 break;
 
             case DESKTOP_WEB:
-                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(DesktopContactUsPage.class,
-                        new DynamicLogger());
+                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(DesktopContactUsPage.class, new DynamicLogger());
                 break;
 
             case MOBILE_WEB:
-                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(MobileWebContactUsPage.class,
-                        new DynamicLogger());
+                derivedContactUsPage = (ContactUsPage) DynamicEnhancer.create(MobileWebContactUsPage.class, new DynamicLogger());
                 break;
 
             default:
@@ -48,7 +44,7 @@ public class ContactUsPage extends Page {
 
     @Override
     protected void isLoaded() throws Error {
-        Assert.assertTrue(utils.isElementPresent(getLocator("txaHelpCenter"), 3), "Contact Us page is not loaded");
+        Assert.assertTrue(utils.isElementPresent(getLocator("txaHelpCenter"), 10), "Contact Us page is not loaded");
     }
 
     @Step

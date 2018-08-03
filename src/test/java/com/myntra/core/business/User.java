@@ -19,4 +19,15 @@ public class User extends BusinessFlow {
         Assert.assertTrue(isUserLoggedIn, "User should have been logged-in");
         return this;
     }
+
+    @Step
+    public Address signUpSuccessfully() {
+        boolean isAddressPageDisplayed = LoginPage.createInstance()
+                                                  .signUpAfterPlacingOrder()
+                                                  .isAddressPageDisplayed();
+        Assert.assertTrue(isAddressPageDisplayed, "Address page is not dispalyed");
+        return new Address();
+    }
+
+
 }

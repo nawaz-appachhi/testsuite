@@ -27,4 +27,22 @@ public class Search extends BusinessFlow {
         Assert.assertTrue(isProductListDisplayed, "Product NOT found with provided search criteria");
         return Product.getInstance();
     }
+
+    @Step
+    public Product searchProductUsingHovering() {
+        boolean isProductListDisplayed = HomePage.createInstance()
+                                                 .searchProductUsingHovering()
+                                                 .isProductListDisplayed();
+        Assert.assertTrue(isProductListDisplayed, "Product NOT found with provided search criteria");
+        return Product.getInstance();
+    }
+
+    @Step
+    public Product searchUsingBanner() {
+        boolean isProductListDisplayed = HomePage.createInstance()
+                                                 .searchProductUsingBanner()
+                                                 .isProductListDisplayed();
+        Assert.assertTrue(isProductListDisplayed, "Product NOT found with provided search criteria");
+        return Product.getInstance();
+    }
 }

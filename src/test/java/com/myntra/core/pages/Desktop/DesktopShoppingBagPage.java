@@ -2,19 +2,12 @@ package com.myntra.core.pages.Desktop;
 
 import com.myntra.core.pages.AddressPage;
 import com.myntra.core.pages.ShoppingBagPage;
-import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.HashMap;
 
 public class DesktopShoppingBagPage extends ShoppingBagPage {
-
-    @Override
-    protected void isLoaded() throws Error {
-        utils.waitForElementToBeVisible(getLocator("spnLoader"));
-        Assert.assertTrue(utils.isElementPresent(getLocator("spnLoader"), 15), "DesktopShoppingBagPage NOT loaded");
-    }
 
     @Step
     @Override
@@ -29,10 +22,20 @@ public class DesktopShoppingBagPage extends ShoppingBagPage {
     public ShoppingBagPage applyPersonalisedCoupon() {
         utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")));
         utils.click(getLocator("tabApplyCoupon"));
-        String PersonalisedCoupons = getTestData().get("PersonalisedCoupons");
-        utils.sendKeys(getLocator("txtCouponCode"), PersonalisedCoupons);
+        String personalisedCoupons = getCouponTestData().getCouponCode();
+        utils.sendKeys(getLocator("txtCouponCode"), personalisedCoupons);
         utils.click(getLocator("btnApply"));
         utils.wait((ExpectedConditions.invisibilityOfElementLocated(getLocator("btnApply"))));
         return this;
+    }
+
+    @Step
+    @Override
+    public boolean isProductPresentInBag() {
+        //TODO Myntra Team please remove this if condition once the bug is fixed; Jira ID:VEGASF_579
+        if (!super.isProductPresentInBag()) {
+            utils.refreshPage();
+        }
+        return super.isProductPresentInBag();
     }
 }

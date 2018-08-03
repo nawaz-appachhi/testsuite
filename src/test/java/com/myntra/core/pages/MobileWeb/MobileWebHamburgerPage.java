@@ -20,6 +20,7 @@ public class MobileWebHamburgerPage extends HamburgerPage {
     @Step
     @Override
     public OrderConfirmationPage goToMyOrdersPage() {
+        utils.waitForElementToBeVisible(getLocator("mnuMyOrders"));
         utils.click(getLocator("mnuMyOrders"), true);
         return OrderConfirmationPage.createInstance();
     }

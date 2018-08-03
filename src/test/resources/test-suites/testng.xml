@@ -17,18 +17,9 @@
 
 
     <test name="Test Scenario" thread-count="1">
-
-
         <packages>
             <package name="com.myntra.scenarios"/>
         </packages>
-        <classes>
-            <class name="com.myntra.scenarios.CashOnDeliveryTest"/>
-        </classes>
-        
-        
     </test>
 
 </suite>
-
-

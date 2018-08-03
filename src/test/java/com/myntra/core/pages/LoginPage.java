@@ -46,4 +46,20 @@ public abstract class LoginPage extends Page {
 
     @Step
     public abstract LoginPage navigateToLogin();
+
+    @Step
+    public abstract boolean isLoginOptionDisplayed();
+
+    @Step
+    public abstract AddressPage signUpAfterPlacingOrder();
+
+    public abstract HomePage signUp();
+
+    @Step
+    public HomePage logout() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
 }

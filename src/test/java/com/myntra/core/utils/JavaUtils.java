@@ -3,6 +3,7 @@ package com.myntra.core.utils;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class JavaUtils {
 
@@ -24,5 +25,9 @@ public class JavaUtils {
                                                        .getStackTrace();
         StackTraceElement stackTraceElement = stackTraceElements[2];
         return stackTraceElement.getMethodName();
+    }
+
+    public static String generateUserNameForTest(String testName) {
+        return String.valueOf(Math.abs(Integer.parseInt(String.valueOf((testName + new Date().getTime()).hashCode()))));
     }
 }

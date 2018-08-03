@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DesktopProductDescPage extends ProductDescPage {
 
-    HashMap<String, String> productDetails= new  HashMap<>();
+    HashMap<String, String> productDetails = new HashMap<>();
 
     @Step
     @Override
@@ -74,7 +74,7 @@ public class DesktopProductDescPage extends ProductDescPage {
     public boolean isProductDiscountAvailable() {
         boolean productDiscountAvailable = false;
         if (utils.isElementPresent(getLocator("lblProductDiscount"), 3)) {
-            productDetails.put("product Discount", utils.findElement(getLocator("lblProductDiscount"))
+            productDetails.put("Product Discount", utils.findElement(getLocator("lblProductDiscount"))
                                                         .getText());
             productDiscountAvailable = true;
         }
@@ -87,12 +87,13 @@ public class DesktopProductDescPage extends ProductDescPage {
         productDetails = super.getProductDetails();
         String actualProductCode = productDetails.get("ProductCodeActual");
         productDetails.put("ProductCodeActual", actualProductCode.split(" ")[2]);
-        productDetails.put("Selling Price",productDetails.get("Selling Price").split(" ")[1]);
+        productDetails.put("Selling Price", productDetails.get("Selling Price")
+                                                          .split(" ")[1]);
         testExecutionContext.addTestState("productDetails", productDetails);
         productDetails.get("productDetails");
-        soft.assertTrue( isProductPriceAvailable(),"Product price is not present");
-        soft.assertTrue( isStrikedPriceAvailable(),"Striked price is not present");
-        soft.assertTrue( isProductDiscountAvailable(),"Product discount is not present");
+        soft.assertTrue(isProductPriceAvailable(), "Product price is not present");
+        soft.assertTrue(isStrikedPriceAvailable(), "Striked price is not present");
+        soft.assertTrue(isProductDiscountAvailable(), "Product discount is not present");
         return productDetails;
     }
 
@@ -100,8 +101,7 @@ public class DesktopProductDescPage extends ProductDescPage {
     @Override
     public ProductDescPage viewSimilarProducts() {
         utils.scroll(Direction.DOWN, 3);
-        soft.assertTrue(utils.isElementPresent(getLocator("lnkMoreProducts"), 2),
-                "View similar products is not available ");
+        soft.assertTrue(utils.isElementPresent(getLocator("lnkMoreProducts"), 2), "View similar products is not available ");
         utils.scroll(Direction.UP, 3);
         return this;
     }

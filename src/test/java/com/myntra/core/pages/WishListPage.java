@@ -1,11 +1,14 @@
 package com.myntra.core.pages;
 
+import com.myntra.core.business.WishList;
+import com.myntra.core.enums.ChannelUtils;
 import com.myntra.core.pages.Desktop.DesktopWishListPage;
 import com.myntra.core.pages.MobileWeb.MobileWebWishListPage;
 import com.myntra.core.pages.NativeAndroid.NativeAndroidWishListPage;
 import com.myntra.core.pages.NativeIOS.NativeIOSWishListPage;
 import com.myntra.core.utils.DynamicEnhancer;
 import com.myntra.core.utils.DynamicLogger;
+import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -71,16 +74,78 @@ public abstract class WishListPage extends Page {
 
     @Step
     protected WishListPage removeAllProductsFromWishlist() {
-        while (!isWishlistEmpty()) {
-//            utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("txaRemoveWishlistItemMsg")));
+        int productCount = 0;
+        int maxProductCount = 10;
+        while (!isWishlistEmpty() && (productCount < maxProductCount)) {
             utils.click(getLocator("icoRemoveProduct"), true);
+            productCount++;
         }
+        Assert.assertTrue((productCount < maxProductCount),
+                String.format("Wishlist page is not functional/More number of products found - Made %d attempts to empty wishlist", maxProductCount));
         return this;
+    }
+
+    @Step
+    protected void handleOkPermission() {
+        if (ChannelUtils.isMobileNativePlatform(getChannelUtils())) {
+            if (utils.isElementPresent(getLocator("btnOKPermission"), 3)) {
+                utils.click(getLocator("btnOKPermission"));
+            }
+        }
     }
 
     @Step
     protected boolean isWishlistEmpty() {
         return utils.isElementPresent(getLocator("lblEmptyWishlistMsg"), 2);
     }
+
+    @Step
+    public WishList getDetailsInWishlist() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isProductPriceAvailable() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isStrikedPriceAvailable() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isProductDiscountAvailable() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isProductDetailsOfWishlistWithPDPSame() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isProductDetailsOfWishlistWithPLPSame() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
 
 }

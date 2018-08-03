@@ -4,7 +4,9 @@ import com.myntra.core.business.Home;
 import com.myntra.core.central.SFCentral;
 import com.myntra.core.central.SessionContext;
 import com.myntra.core.central.TestExecutionContext;
-import com.myntra.utils.test_utils.Assert;
+import com.myntra.testdata.models.pojo.response.MyntData;
+import com.myntra.utils.config.ConfigManager;
+import com.myntra.utils.config.ConfigProperties;
 import com.myntra.utils.test_utils.BaseTest;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.exception.ExceptionUtils;
@@ -13,10 +15,9 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.lang.reflect.Method;
-import java.util.Map;
 
 public class SupportTest extends BaseTest implements IHookable {
-    String testName = null;
+    private String testName = null;
 
     private static final String SOFT_ASSERT = "softAssert";
 
@@ -38,11 +39,6 @@ public class SupportTest extends BaseTest implements IHookable {
         softAssert.assertAll();
     }
 
-    @Step("{0}")
-    public static void logStep(final String message){
-        //intentionally empty - this will create a step in the Allure report based on the message
-    }
-
     public static SoftAssert getSoftAssert() {
         return getSoftAssert(Reporter.getCurrentTestResult());
     }
@@ -55,27 +51,29 @@ public class SupportTest extends BaseTest implements IHookable {
         throw new IllegalStateException("Could not find a soft assertion object");
     }
 
+    @Step("{0}")
+    public static void logStep(final String message) {
+        //intentionally empty - this will create a step in the Allure report based on the message
+    }
+
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite(ITestContext context) throws Exception {
-        LOG.info(String.format("%s - beforeSuite", this.getClass().getSimpleName()));
+        LOG.info(String.format("%s - beforeSuite", getClass().getSimpleName()));
         SFCentral.INSTANCE.init();
         SessionContext.addDynamicLoggerListener((TestRunner) context);
     }
 
     @BeforeClass(alwaysRun = true)
-    public void beforeClass(ITestContext context) throws Exception {
-        LOG.info(String.format("%s - beforeClass", this.getClass().getSimpleName()));
-        SFCentral.INSTANCE.registerContext(context);
+    public void beforeClass(ITestContext context) {
+        LOG.info(String.format("%s - beforeClass", getClass().getSimpleName()));
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod(ITestContext context, Method method) {
-        LOG.info(String.format("%s - beforeMethod", this.getClass().getSimpleName()));
+        LOG.info(String.format("%s - beforeMethod", getClass().getSimpleName()));
         testName = method.getName();
-        LOG.info(String.format("Test Method Name Started :: %s", testName));
-        Map<String, String> testData = SFCentral.INSTANCE.getTestData(context, testName);
-        TestExecutionContext testExecutionContext = new TestExecutionContext(getDriver(), getDeviceId(), testName,
-                testData, new SoftAssert());
+        LOG.info(String.format("Started Test (%s) execution", testName));
+        TestExecutionContext testExecutionContext = new TestExecutionContext(getDriver(), getDeviceId(), testName, new SoftAssert());
 
         SessionContext.addContext(Thread.currentThread()
                                         .getId(), testExecutionContext);
@@ -85,34 +83,46 @@ public class SupportTest extends BaseTest implements IHookable {
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestContext context, Method method, ITestResult result) {
-        LOG.info(String.format("%s - afterMethod", this.getClass().getSimpleName()));
+        LOG.info(String.format("%s - afterMethod", getClass().getSimpleName()));
+        testName = method.getName();
+        LOG.info(String.format("Finished Test (%s) execution :: Is execution successful? : %s", testName, result.isSuccess()));
         SessionContext.remove(Thread.currentThread()
                                     .getId());
     }
 
     @AfterClass(alwaysRun = true)
     public void afterClass(ITestContext suite) {
-        LOG.info(String.format("%s - afterClass", this.getClass().getSimpleName()));
+        LOG.info(String.format("%s - afterClass", getClass().getSimpleName()));
     }
 
-    Home loginAndCleanup() {
-        LOG.info(String.format("loginAndCleanup - Set up for test method [%s] started.", testName));
+    @Step
+    Home setupLoginAndReset() {
+        LOG.info(String.format("setupLoginAndReset - Set up for test method [%s] started.", testName));
         TestExecutionContext testExecutionContext = SessionContext.getTestExecutionContext(Thread.currentThread()
                                                                                                  .getId());
-        testName = testExecutionContext.getTestName();
-        validateTestData(testName, testExecutionContext.getTestData());
+        MyntData testData = SFCentral.INSTANCE.getTestData(testName);
+        testExecutionContext.setTestData(testData);
+
         Home home = Home.getInstance()
                         .loginSuccessfully()
-                        .home()
-                        .cleanState();
-        LOG.info(String.format("loginAndCleanup - Set up for test method [%s] ended.", testName));
+                        .home();
+
+        home = cleanStateIfEnvironmentIsNotProd(home);
+
+        LOG.info(String.format("setupLoginAndReset - Set up for test method [%s] ended.", testName));
         return home;
     }
 
-    private void validateTestData(String testName, Map<String, String> testData) {
-        String message = String.format("No Test Data provided for test name - %s", testName);
-        Assert.assertNotNull(testData, message);
-        Assert.assertTrue(testData.size() > 0, message);
-        LOG.info(String.format("Test: %s :: Loaded %d entries from data file", testName, testData.size()));
+    @Step
+    private Home cleanStateIfEnvironmentIsNotProd(Home home) {
+        ConfigManager CONFIG_MANAGER = ConfigManager.getInstance();
+        String environment = CONFIG_MANAGER.getString(ConfigProperties.ENVIRONMENT.getKey());
+        if ("prod".equalsIgnoreCase(environment)) {
+            LOG.info(String.format("Running tests in 'prod' environment. Clean user state from UI before proceeding", environment));
+            home.cleanState();
+        } else {
+            LOG.info(String.format("Running tests in %s environment. No need for user state cleanup", environment));
+        }
+        return home;
     }
 }

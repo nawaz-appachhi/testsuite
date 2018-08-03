@@ -6,12 +6,32 @@ import com.myntra.core.pages.ShoppingBagPage;
 import com.myntra.core.pages.WishListPage;
 import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import java.util.HashMap;
 import java.util.List;
 
 public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
+
+    @Step
+    @Override
+    protected void isLoaded() {
+        boolean isElementDisplayed = false;
+        webView();
+        if (utils.isElementPresent(By.className("retry-service-failure"), 3)) {
+            isElementDisplayed = utils.findElement(By.className("retry-service-failure"))
+                                      .isDisplayed();
+        }
+        Assert.assertTrue(!isElementDisplayed, "Failed to load shopping bag page");
+    }
+
+    @Step
+    @Override
+    protected void load() {
+        utils.click(By.className("retry-service-failure"), true);
+    }
 
     @Step
     @Override
@@ -27,12 +47,13 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
     @Override
     public ShoppingBagPage applyPersonalisedCoupon() {
         webView();
+        utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("lblGiftWrapSuccess")), 10);
         scrollTillElementVisible(getLocator("tabApplyCoupon"));
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")), 5);
         utils.click(getLocator("tabApplyCoupon"), true);
-        String PersonalisedCoupons = getTestData().get("personalisedCoupons");
-        utils.sendKeys(getLocator("txtCouponCode"), PersonalisedCoupons);
-        utils.click(getLocator("btnApply"), true);
-        utils.wait((ExpectedConditions.invisibilityOfElementLocated(getLocator("btnApply"))));
+        String personalisedCoupons = getCouponTestData().getCouponCode();
+        utils.sendKeys(getLocator("txtCouponCode"), personalisedCoupons);
+        utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("txtCouponAppliedSuccessfully")), 5);
         return this;
     }
 
@@ -55,38 +76,11 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
 
     @Step
     @Override
-    public boolean isCouponApplied() {
-        //TODO implemention to be for stage environment
-        //utils.isElementPresent(getLocator("lblCouponApplied"), 10)
-        return true;
-    }
-
-    @Step
-    @Override
     public ShoppingBagPage addMoreFromWishList() {
+        nativeView();
         utils.click(getLocator("tlbWishlist"), true);
-        utils.waitForElementToBeVisible(getLocator("btnMoveToBag"));
-        utils.click(getLocator("btnMoveToBag"), true);
-        //utils.click(getLocator("btnSelectSize"), true);
-        ShoppingBagPage.createInstance()
-                       .selectSizePopUp();
-        goBack();
-        return this;
-    }
-
-    @Step
-    @Override
-    public ShoppingBagPage selectSizePopUp() {
-        List<WebElement> Sizes = utils.findElements(getLocator("btnSelectSize"));
-        for (WebElement e : Sizes) {
-            List<WebElement> sizecount = e.findElements(getLocator("chdSelectSize"));
-            System.out.println("the size of the singlesize is" + sizecount.size());
-            if (sizecount.size() == 0) {
-                System.out.println("clicked successfully");
-                e.click();
-                break;
-            }
-        }
+        WishListPage.createInstance()
+                    .moveProductToBag();
         return this;
     }
 
@@ -99,7 +93,7 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
         boolean isSizeAvailable = false;
         for (WebElement eachSizeOption : sizeOptions) {
             String checkSize = eachSizeOption.getAttribute("class");
-            if (checkSize.equals("btn size-btn-group size-btn  ")) {
+            if ("btn size-btn-group size-btn  ".equals(checkSize)) {
                 eachSizeOption.click();
                 isSizeAvailable = true;
                 break;
@@ -112,15 +106,13 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
     @Step
     @Override
     public ShoppingBagPage changeProductQuantityInCart() {
-        utils.click(getLocator("btnQuantity"));
-        List<WebElement> selectSize = utils.findElements(getLocator("lstSelectQty"));
-        for (WebElement quantityAvailable : selectSize) {
-            String checkQuantity = quantityAvailable.getAttribute("class");
-            if (checkQuantity.equals("sel-qty qty-btn-group  ")) {
-                quantityAvailable.click();
-                break;
-                //TODO implemention for Assertion and quantity available condition need to be handle
-            }
+        utils.isElementPresent(getLocator("txtCouponCode"), 4);
+        if (!isFreeGiftMsgPresent()) {
+            utils.click(getLocator("btnQuantity"), true);
+            utils.click(getLocator("lstSelectQty"), true);
+            utils.isElementPresent(getLocator("txtCouponCode"), 4);
+        } else {
+            LOG.debug("Cannot change the quantity as product is Free gift ");
         }
         return this;
     }
@@ -128,8 +120,8 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
     @Step
     @Override
     public WishListPage moveProductToWishlist() {
-        //  utils.wait(ExpectedConditions.elementToBeClickable(getLocator("btnMoveToWishList")));
         webView();
+        scrollTillElementVisible(getLocator("btnMoveToWishList"));
         utils.click(getLocator("btnMoveToWishList"), true);
         nativeView();
         utils.click(getLocator("lnkWishlist"), true);
@@ -146,6 +138,7 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
     @Step
     @Override
     public ShoppingBagPage removeItemFromCart() {
+        webView();
         scrollTillElementVisible(getLocator("btnRemove"));
         super.removeItemFromCart();
         return this;
@@ -156,5 +149,66 @@ public class NativeAndroidShoppingBagPage extends ShoppingBagPage {
     public HashMap<String, String> getProductDetails() {
         webView();
         return super.getProductDetails();
+    }
+
+    @Step
+    @Override
+    public boolean isProductDiscountInShoppingBagEqualToPDP() {
+        //TODO need to implement on product discount
+        return true;
+    }
+
+    @Step
+    @Override
+    protected ShoppingBagPage giftWrapThisProduct() {
+        scrollTillElementVisible(getLocator("btnGiftWrap"));
+        utils.click(getLocator("btnGiftWrap"), true);
+        utils.sendKeys(getLocator("txtRecipient"), (String) getTestData().getAdditionalProperties()
+                                                                         .get("RecipientName"));
+        utils.sendKeys(getLocator("txtMessage"), (String) getTestData().getAdditionalProperties()
+                                                                       .get("GiftMessage"));
+        utils.sendKeys(getLocator("txtSender"), (String) getTestData().getAdditionalProperties()
+                                                                      .get("SenderName"));
+        utils.click(getLocator("btnSaveGift"), true);
+        utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnSaveGift")));
+        return this;
+    }
+
+    @Step
+    @Override
+    public ShoppingBagPage addGiftWrap() {
+        webView();
+        return super.addGiftWrap();
+    }
+
+    @Step
+    @Override
+    public WishListPage navigateToWishlist() {
+        nativeView();
+        return super.navigateToWishlist();
+    }
+
+    @Step
+    @Override
+    public ShoppingBagPage applyMyntCouponCode() {
+        webView();
+        scrollTillElementVisible(getLocator("txaMyntAvailable"));
+        return super.applyMyntCouponCode();
+    }
+
+    @Step
+    @Override
+    public boolean isErrorMessageDisplayedForInvalidCoupon() {
+        webView();
+        scrollTillElementVisible(getLocator("tabApplyCoupon"));
+        return super.isErrorMessageDisplayedForInvalidCoupon();
+    }
+
+    @Step
+    @Override
+    public boolean isNotApplicableCouponCodeSelected() {
+        webView();
+        scrollTillElementVisible(getLocator("tabApplyCoupon"));
+        return super.isNotApplicableCouponCodeSelected();
     }
 }

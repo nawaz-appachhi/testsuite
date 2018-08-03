@@ -5,6 +5,7 @@ import com.myntra.core.pages.ProductListPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import java.util.List;
 
 public class DesktopProductListPage extends ProductListPage {
@@ -12,7 +13,8 @@ public class DesktopProductListPage extends ProductListPage {
     @Step
     @Override
     public ProductDescPage selectFirstProductFromListPage() {
-        utils.click(getLocator("lstAllProducts"), true);
+        utils.moveToElement(getLocator("lstAllProducts"));
+        utils.click(getLocator("lstAllProducts"));
         return ProductDescPage.createInstance();
     }
 
@@ -28,23 +30,23 @@ public class DesktopProductListPage extends ProductListPage {
                 break;
             }
         }
-        if (!isDiscountavailable) {
-            soft.assertTrue(isDiscountavailable, "Discount filter is not available");
-        }
+        soft.assertTrue(isDiscountavailable, "Discount filter is not available");
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("lnkClearAll")));
         return this;
     }
 
     @Step
     @Override
     public ProductListPage filterUsingGender() {
-        String genderType = getTestData().get("Gender");
+        String genderType = (String) getTestData().getAdditionalProperties()
+                                                  .get("Gender");
         String locatorName = "lnkFilterBy" + genderType;
         boolean isGenderFilterAvailable = utils.isElementPresent(getLocator(locatorName), 2);
+        soft.assertTrue(isGenderFilterAvailable, genderType + " filter option is not displayed");
         if (isGenderFilterAvailable) {
             utils.click(getLocator(locatorName));
-        } else {
-            soft.assertTrue(isGenderFilterAvailable, genderType + " filter option is not displayed");
         }
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("lnkClearAll")));
         return this;
     }
 
@@ -60,9 +62,8 @@ public class DesktopProductListPage extends ProductListPage {
                 break;
             }
         }
-        if (!isCategoriesFilterAvailable) {
-            soft.assertTrue(isCategoriesFilterAvailable, "Categories filter is not available");
-        }
+        soft.assertTrue(isCategoriesFilterAvailable, "Categories filter is not available");
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("lnkClearAll")));
         return this;
     }
 
@@ -71,7 +72,7 @@ public class DesktopProductListPage extends ProductListPage {
     public boolean isProductListDisplayed() {
         utils.wait(ExpectedConditions.elementToBeClickable(getLocator("allProductList")));
         List<WebElement> saveButtons = getDriver().findElements(getLocator("allProductList"));
-        return (saveButtons.size() > 0);
+        return (!saveButtons.isEmpty());
     }
 
 }

@@ -1,0 +1,242 @@
+{
+  "lblAddressPlaceHolder": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnRemove": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//*[text()=' REMOVE ' or text()='Remove']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnDelete": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//div[text()='Delete']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnEdit": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//button[contains(text(),'Edit')]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnAddNewAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "accessibility_id=+ ADD NEW ADDRESS",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtName": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//input[@id='name' and @type='text']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtMobileNumber": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id=mobile",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtPincode": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id=pincode",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtState": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lnkChoose": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=.//*[text()='Choose']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtLocality": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//input[@id='locality']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnSaveLocality": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//input[@id='name']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txtAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id=address",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "rdoHome": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id=home",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "rdoOffice": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "id=ofc",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "rdoSaturday": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "rdoSunday": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnSaveAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//button[@class='green-button submit clickable']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "tlbBack": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//XCUIElementTypeNavigationBar[@name='MYNWebView']/XCUIElementTypeButton",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnEditAddressConfirm": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "accessibility_id=CONFIRM",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnContinue": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//button[contains(text(),'continue')]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnEditChange": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//span[contains(text(),'Edit/Change')]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lnkViewDetails": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//span[contains(text(),'View ')]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblBagTotal": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblBagDiscount": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblBagTax": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblOrderTotal": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblDelivery": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblTotalPayable": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "tlbHeader": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnEditChangeEdit": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblEmptyAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//div[@class='noAddress-heading']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txaAddNewAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//div[text()=' + Add New Address ']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "txaEditedName": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "class=cust-name",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lnkDeliveryTitle": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//div[text()='Delivery']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lnkHideDetails": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=//span[contains(text(),'Hide ')]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnDoneKeypad": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=.//*[text()='Begur']",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "btnAddInSavedAddress": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "lblAddressTypeSelected": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "locator=value",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  },
+  "addressHeader": {
+    "NATIVE_ANDROID": "locator=value",
+    "NATIVE_IOS": "xpath=(//XCUIElementTypeStaticText[@name='Address'])[1]",
+    "MOBILE_WEB": "locator=value",
+    "DESKTOP": "locator=value"
+  }
+}

@@ -1,3 +1,1 @@
-2018-07-28 17:03:43,244 ERROR com.myntra.utils.db.DBUtilities.initializeDBUtils(): db-configuration.xml not found
-2018-07-28 17:04:01,364 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
-2018-07-28 17:04:04,461 ERROR com.myntra.ui.WebDriverUtils.isElementPresent_aroundBody76(): unable to locate the element with locator 'By.xpath: //p[text()='Your Address Book is Blank']' after waiting for 3 seconds
+2018-08-02 16:05:00,287 ERROR com.myntra.utils.db.DBUtilities.initializeDBUtils(): db-configuration.xml not found

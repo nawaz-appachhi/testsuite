@@ -8,8 +8,10 @@ import com.myntra.core.pages.NativeIOS.NativeIOSAddressPage;
 import com.myntra.core.utils.DynamicEnhancer;
 import com.myntra.core.utils.DynamicLogger;
 import com.myntra.ui.Direction;
+import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.NotImplementedException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -54,7 +56,7 @@ public abstract class AddressPage extends Page {
 
     @Step
     public AddressPage removeAddress() {
-        utils.click(getLocator("btnEditChange"), true);
+        utils.click(getLocator("btnEditChangeAfterPlacingOrder"), true);
         utils.click(getLocator("btnRemove"), true);
         return this;
     }
@@ -62,6 +64,7 @@ public abstract class AddressPage extends Page {
     @Step
     public AddressPage emptyAddress() {
         if (isEmptyAddressMsgPresent()) {
+            utils.waitForElementToBeVisible(getLocator("tlbBack"));
             utils.click(getLocator("tlbBack"), true);
         } else {
             removeAllAddresses();
@@ -74,20 +77,23 @@ public abstract class AddressPage extends Page {
     public AddressPage addAddress() {
         utils.waitForElementToBeVisible(getLocator("txtPincode"));
         utils.click(getLocator("txtPincode"), true);
-        utils.sendKeys(getLocator("txtPincode"), getTestData().get("Pincode"));
-        utils.sendKeys(getLocator("txtName"), getTestData().get("Name"));
-        utils.sendKeys(getLocator("txtAddress"), getTestData().get("Address"));
+        utils.sendKeys(getLocator("txtPincode"), getAddressTestData().getPincode());
+        utils.sendKeys(getLocator("txtName"), getAddressTestData().getName());
+        utils.sendKeys(getLocator("txtAddress"), getAddressTestData().getAddress());
         utils.scroll(Direction.DOWN);
-        addressType();
+        selectAddressType();
         if (getChannelUtils() == ChannelUtils.DESKTOP) {
             utils.waitForElementToBeVisible(getLocator("txtLocality"));
-            utils.click(getLocator("txtLocality"));
-            utils.sendKeys(getLocator("txtLocality"), getTestData().get("Locality"));
+            utils.click(getLocator("txtLocality"), true);
+            utils.sendKeys(getLocator("txtLocality"), getAddressTestData().getLocality());
         } else {
             utils.click(getLocator("lnkChoose"), true);
-            utils.sendKeys(getLocator("txtLocality"), getTestData().get("Locality") + Keys.ENTER);
+            utils.sendKeys(getLocator("txtLocality"), getAddressTestData().getLocality() + Keys.ENTER);
         }
-        utils.sendKeys(getLocator("txtMobileNumber"), getTestData().get("MobileNumber"));
+        utils.sendKeys(getLocator("txtMobileNumber"), getUserTestData().getPhoneDetails()
+                                                                       .get(0)
+                                                                       .getPhone());
+        utils.waitForElementToBeVisible(getLocator("btnSaveAddress"));
         utils.click(getLocator("btnSaveAddress"), true);
         return this;
     }
@@ -103,7 +109,13 @@ public abstract class AddressPage extends Page {
         utils.scroll(Direction.DOWN, 1);
         return (utils.findElement(getLocator("txaEditedName"))
                      .getText()
-                     .equalsIgnoreCase(getTestData().get("editedName")));
+                     .equalsIgnoreCase((String) getAddressTestData().getAdditionalProperties()
+                                                                    .get("editedName")));
+    }
+
+    @Step
+    public boolean isAddressAddedSuccessfullyAfterPlacingOrder() {
+        return (utils.isElementPresent(getLocator("btnEditChangeAfterPlacingOrder"), 5));
     }
 
     @Step
@@ -112,23 +124,25 @@ public abstract class AddressPage extends Page {
     }
 
     @Step
-    protected void addressType() {
-        String rdoType = getTestData().get("rdoType");
-        if (rdoType.contains("rdoHome")) {
-            utils.click(getLocator(rdoType), true);
-        } else if (rdoType.contains("rdoOffice")) {
-            utils.click(getLocator(rdoType), true);
+    protected void selectAddressType() {
+        String rdoType = getAddressTestData().getAddressType()
+                                             .toLowerCase();
+        if (rdoType.contains("home")) {
+            utils.click(getLocator("rdoHome"), true);
+        } else if (rdoType.contains("office")) {
+            utils.click(getLocator("rdoOffice"), true);
         }
     }
 
     @Step
     public AddressPage editAddress() {
-        utils.click(getLocator("btnEditChange"), true);
+        utils.click(getLocator("btnEditChangeAfterPlacingOrder"), true);
         if (utils.isElementPresent(getLocator("btnEdit"), 3)) {
             utils.click(getLocator("btnEdit"), true);
             utils.findElement(getLocator("txtName"))
                  .clear();
-            utils.sendKeys(getLocator("txtName"), getTestData().get("editedName"));
+            utils.sendKeys(getLocator("txtName"), (String) getAddressTestData().getAdditionalProperties()
+                                                                               .get("editedName"));
         }
         utils.click(getLocator("btnSaveAddress"), true);
         return AddressPage.createInstance();
@@ -140,10 +154,16 @@ public abstract class AddressPage extends Page {
     }
 
     @Step
-    protected void removeAllAddresses() {
-        while (!isEmptyAddressMsgPresent()) {
+    public AddressPage removeAllAddresses() {
+        int addressCount = 0;
+        int maxAddressCount = 10;
+        while (!isEmptyAddressMsgPresent() && (addressCount < maxAddressCount)) {
             utils.click(getLocator("btnRemove"), true);
+            addressCount++;
         }
+        Assert.assertTrue((addressCount < maxAddressCount),
+                String.format("Address page is not functional/More number of addresses found - Made %d attempts to empty address", maxAddressCount));
+        return this;
     }
 
     @Step
@@ -162,6 +182,22 @@ public abstract class AddressPage extends Page {
     @Step
     public boolean isPriceDetailsDisplayed() {
         return (utils.isElementPresent(getLocator("lnkHideDetails"), 2));
+    }
+
+    @Step
+    public AddressPage clickOnAddButton() {
+        utils.click(getLocator("btnAddInSavedAddress"), true);
+        return this;
+    }
+
+    @Step
+    public boolean isProductDeliverable() {
+        boolean isProductNotDeliverableMessage = utils.isElementPresent(By.className("serviceability-error"), 4);
+        if (isProductNotDeliverableMessage) {
+            return !utils.findElement(By.className("serviceability-error"))
+                         .isDisplayed();
+        }
+        return true;
     }
 
 }

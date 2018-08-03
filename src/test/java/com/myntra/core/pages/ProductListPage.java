@@ -12,30 +12,28 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class ProductListPage extends Page {
     public static ProductListPage createInstance() {
         ProductListPage derivedProductListPage;
         switch (CHANNEL) {
             case NATIVE_ANDROID:
-                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(NativeAndroidProductListPage.class,
-                        new DynamicLogger());
+                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(NativeAndroidProductListPage.class, new DynamicLogger());
                 break;
 
             case NATIVE_IOS:
-                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(NativeIOSProductListPage.class,
-                        new DynamicLogger());
+                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(NativeIOSProductListPage.class, new DynamicLogger());
                 break;
 
             case DESKTOP_WEB:
-                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(DesktopProductListPage.class,
-                        new DynamicLogger());
+                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(DesktopProductListPage.class, new DynamicLogger());
                 break;
 
             case MOBILE_WEB:
-                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(MobileWebProductListPage.class,
-                        new DynamicLogger());
+                derivedProductListPage = (ProductListPage) DynamicEnhancer.create(MobileWebProductListPage.class, new DynamicLogger());
                 break;
 
             default:
@@ -78,7 +76,7 @@ public abstract class ProductListPage extends Page {
     }
 
     @Step
-    public ProductListPage navigateToWishlist() {
+    public WishListPage navigateToWishlist() {
         throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
         }.getClass()
          .getEnclosingMethod()
@@ -91,16 +89,15 @@ public abstract class ProductListPage extends Page {
         List<WebElement> sortOptions = getDriver().findElements(getLocator("lstSort"));
         boolean sort = false;
         for (WebElement sortOption : sortOptions) {
-            String sortRequired = getTestData().get("sortRequired");
+            String sortRequired = (String) getTestData().getAdditionalProperties()
+                                                        .get("sortRequired");
             if ((sortOption.getText()).equals(sortRequired)) {
                 sortOption.click();
                 sort = true;
                 break;
             }
         }
-        if (!sort) {
-            Assert.assertTrue(sort, "Sort Required is not available");
-        }
+        Assert.assertTrue(sort, "Sort Required is not available");
         return this;
     }
 
@@ -108,13 +105,13 @@ public abstract class ProductListPage extends Page {
     public boolean isProductListDisplayed() {
         utils.wait(ExpectedConditions.elementToBeClickable(getLocator("allProductList")));
         List<WebElement> saveButtons = getDriver().findElements(getLocator("allProductList"));
-        return (saveButtons.size() > 0);
+        return (!saveButtons.isEmpty());
     }
 
     @Step
     public ProductListPage applyFilter(String filterType) {
-        switch (getTestData().get(filterType)
-                             .toLowerCase()) {
+        switch (((String) getTestData().getAdditionalProperties()
+                                       .get(filterType)).toLowerCase()) {
             case "discount":
                 return filterUsingDiscount();
             case "categories":
@@ -129,6 +126,7 @@ public abstract class ProductListPage extends Page {
     @Step
     public ProductListPage saveToWishlistFromListPage() {
         utils.moveToElement(getLocator("lstAllProducts"));
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("btnSave")));
         utils.click(getLocator("btnSave"));
         return this;
     }
@@ -136,19 +134,144 @@ public abstract class ProductListPage extends Page {
     @Step
     public boolean isProductSaved() {
         utils.moveToElement(getLocator("lstAllProducts"));
-        return (utils.isElementPresent(getLocator("btnSaved"), 2));
+        return (utils.isElementPresent(getLocator("btnSaved"), 10));
     }
 
     @Step
     public ProductListPage addToBagFromListPage() {
         utils.moveToElement(getLocator("lstAllProducts"));
-        utils.click(getLocator("btnAddToBag"),true);
-        utils.click(getLocator("btnSizes"),true);
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("btnAddToBag")));
+        utils.click(getLocator("btnAddToBag"), true);
+        utils.click(getLocator("btnSizes"), true);
         return this;
     }
 
     @Step
     public boolean isProductAddedToBag() {
-        return(utils.isElementPresent(getLocator("txaAddToBagConfirmationMessage"),1));
+        return (utils.isElementPresent(getLocator("txaAddToBagConfirmationMessage"), 1));
+    }
+
+    @Step
+    public Map<String, String> getProductDetails() {
+        HashMap<String, String> productDetails = new HashMap<>();
+        WebElement firstProduct = utils.findElement(getLocator("lstAllProducts"));
+        if (firstProduct.findElement(getLocator("txaDiscount"))
+                        .getText()
+                        .contains("OFF)")) {
+            productDetails.put("Selling Price", firstProduct.findElement(getLocator("txaSellingPriceIfStrikedPriceAvailable"))
+                                                            .getText()
+                                                            .split(" ")[1]);
+            productDetails.put("Striked Price", utils.findElement(getLocator("txaStrikedPrice"))
+                                                     .getText());
+
+        } else {
+            productDetails.put("Selling Price", firstProduct.findElement(getLocator("txaSellingPrice"))
+                                                            .getText()
+                                                            .split(" ")[1]);
+        }
+        if (firstProduct.findElement(getLocator("txaDiscount"))
+                        .getText()
+                        .contains("OFF")) {
+            productDetails.put("Product Discount", utils.findElement(getLocator("txaDiscount"))
+                                                        .getText());
+        }
+        testExecutionContext.addTestState("productDetailsInPLP", productDetails);
+        return productDetails;
+    }
+
+    @Step
+    public ProductListPage navigateToPromotion() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isPromotionAvailableInPLP() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductListPage selectFreeGiftUnderPromotions() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductListPage selectConditionalDiscountUnderPromotions() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductListPage selectStaggeredComboUnderPromotions() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductListPage selectBOGOUnderPromotions() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectProductAloneNotApplicableForFreeGift() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectProductNotApplicableForBOGO() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectProductNotApplicableForConditionalDiscount() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectProductsToCompleteConditionalDiscount() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectProductsNotApplicableForConditionalDiscount() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ProductDescPage selectOneProductInConditionalDiscountProducts() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
     }
 }

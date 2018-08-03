@@ -35,9 +35,8 @@ public class SessionContext implements ILogger {
             LOG.info(String.format("%s listener already added", TestNGDynamicLogger.class.getSimpleName()));
         } else {
             LOG.info(String.format("Adding %s listener", TestNGDynamicLogger.class.getSimpleName()));
-            TestRunner runner = context;
-            runner.getSuite()
-                  .addListener(new TestNGDynamicLogger());
+            context.getSuite()
+                   .addListener(new TestNGDynamicLogger());
             isTestNGDynamicLoggerListenerAdded = true;
         }
     }

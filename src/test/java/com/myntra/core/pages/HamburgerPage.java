@@ -1,6 +1,7 @@
 package com.myntra.core.pages;
 
 import com.myntra.core.pages.Desktop.DesktopHamburgerPage;
+import com.myntra.core.pages.Desktop.DesktopHomePage;
 import com.myntra.core.pages.MobileWeb.MobileWebHamburgerPage;
 import com.myntra.core.pages.NativeAndroid.NativeAndroidHamburgerPage;
 import com.myntra.core.pages.NativeIOS.NativeIOSHamburgerPage;
@@ -43,10 +44,9 @@ public abstract class HamburgerPage extends Page {
 
     @Step
     public AddressPage goToAddress() {
-        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
-        }.getClass()
-         .getEnclosingMethod()
-         .getName() + " - NOT YET IMPLEMENTED");
+        utils.click(DesktopHomePage.createInstance()
+                                   .getLocator("lnkSavedAddress"), true);
+        return AddressPage.createInstance();
     }
 
     @Step
@@ -55,5 +55,19 @@ public abstract class HamburgerPage extends Page {
         }.getClass()
          .getEnclosingMethod()
          .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public SavedCardsPage navigateToSavedCards() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public UserProfilePage goToEditProfile() {
+        utils.click(getLocator("lblEditProfile"), true);
+        return UserProfilePage.createInstance();
     }
 }

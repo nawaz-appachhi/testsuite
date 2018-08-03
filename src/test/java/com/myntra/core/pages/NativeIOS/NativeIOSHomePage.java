@@ -22,21 +22,30 @@ public class NativeIOSHomePage extends HomePage {
     @Step
     @Override
     public ProductDescPage searchProductUsingStyleID() {
-        String searchItem = getTestData().get("SearchItem");
-        utils.click(getLocator("icoHome"));
+        String searchItem = (String) getTestData().getAdditionalProperties()
+                                                  .get("SearchItem");
+        return searchProductUsingStyleID(searchItem);
+    }
+
+    @Step
+    @Override
+    public ProductDescPage searchProductUsingStyleID(String searchItem) {
         utils.click(getLocator("btnSearch"));
         utils.sendKeys(getLocator("txtSearchField"), searchItem);
-//      To  verify keys.enter in other devices
-//      utils.sendKeys(getLocator("txtSearchField"), Keys.ENTER.name());
         return ProductDescPage.createInstance();
     }
 
     @Step
     @Override
-    protected HomePage logout() {
-        utils.click(getLocator("icoProfile"));
-        utils.click(getLocator("btnLogOut"));
-        return this;
+    public ProductListPage searchProductUsingName() {
+        //TODO, FOR NOW IMPLENTED AS PER PDP FLOW INSTEAD OF PLP,
+        //TODO, ONCE LOCATORS FOR PLP IS AVAILABLE MYNTRA TEAM NEED TO MODIFY THIS METHOD
+        // TODO, IMPLEMENT IT AS PER THE PLP FLOW (SEARCH USING GOLDEN SET DATA,INSTEAD OF STYLEID);
+        String searchItem = (String) getTestData().getAdditionalProperties()
+                                                  .get("SearchItem");
+        utils.click(getLocator("btnSearch"));
+        utils.sendKeys(getLocator("txtSearchField"), searchItem);
+        return ProductListPage.createInstance();
     }
 
     @Step

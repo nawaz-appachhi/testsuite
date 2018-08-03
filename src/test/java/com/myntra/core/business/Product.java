@@ -6,7 +6,7 @@ import com.myntra.core.pages.WishListPage;
 import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 
-import java.util.HashMap;
+import java.util.AbstractMap;
 
 public class Product extends BusinessFlow {
 
@@ -27,8 +27,7 @@ public class Product extends BusinessFlow {
     public Product checkDeliveryAvailability() {
         boolean isDeliveryAvailableInPinCode = ProductDescPage.createInstance()
                                                               .isDeliveryAvailableInPinCode();
-        Assert.assertTrue(isDeliveryAvailableInPinCode,
-                "Delivery is NOT avilable for the selected product in the provided PinCode");
+        Assert.assertTrue(isDeliveryAvailableInPinCode, "Delivery is NOT avilable for the selected product in the provided PinCode");
         return this;
     }
 
@@ -55,8 +54,7 @@ public class Product extends BusinessFlow {
     public ShoppingBag selectBestPriceAddProductToBagAndGoToBag() {
         ProductDescPage productDescriptionPage = ProductDescPage.createInstance()
                                                                 .tapForBestPrice();
-        Assert.assertTrue(productDescriptionPage.isTapForBestPriceSuccessful(),
-                "Best price description is not displayed");
+        Assert.assertTrue(productDescriptionPage.isTapForBestPriceSuccessful(), "Best price description is not displayed");
         boolean isProductPresentInBag = productDescriptionPage.addProductMoveToBag()
                                                               .isProductPresentInBag();
         Assert.assertTrue(isProductPresentInBag, "Product NOT added in Bag");
@@ -77,10 +75,7 @@ public class Product extends BusinessFlow {
     public Product filterSearchResult() {
         ProductListPage productListPage = ProductListPage.createInstance();
         Assert.assertTrue(productListPage.isProductListDisplayed(), "Failed to display the product list");
-        ProductDescPage productDescriptionPage = productListPage.applyFilter("filterOne")
-                                                                .selectFirstProductFromListPage();
-        Assert.assertTrue(productDescriptionPage.isProductNameAvailable(),
-                "Failed to navigate to Product Description Page");
+        productListPage.applyFilter("filterOne");
         //TODO - 'filterOne' needs to be added in testdata.ini
         return this;
     }
@@ -88,8 +83,7 @@ public class Product extends BusinessFlow {
     @Step
     public Product navigateThroughImagesOfProduct() {
         Assert.assertTrue(ProductDescPage.createInstance()
-                                         .allThumbnailImagesAvailableInPDP(),
-                "Thumbnail Images are not available in PDP");
+                                         .areAllThumbnailImagesAvailableInPDP(), "Thumbnail Images are not available in PDP");
         return this;
     }
 
@@ -102,15 +96,18 @@ public class Product extends BusinessFlow {
 
     @Step
     public Product verifyProductDetailsInPDP() {
-        /// TODO - need to implement it in a better way
-        HashMap productDetails = ProductDescPage.createInstance()
-                                                .getProductDetails();
-        boolean isProductNameAvailable = productDetails.get("Name") != null;
-        boolean isSellingPriceAvailable = productDetails.get("Selling Price") != null;
-        boolean isProductCodeCorrect = ((String) productDetails.get("ProductCodeActual")).equals(
-                (String) productDetails.get("ProductCodeExpected"));
-        Assert.assertTrue((isProductNameAvailable && isSellingPriceAvailable && isProductCodeCorrect),
-                String.format("Product Details are not available in PDP \n%s", productDetails.toString()));
+        if (shouldExecuteIfNotInProd(getClass().getSimpleName(), new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName())) {
+
+            AbstractMap productDetails = ProductDescPage.createInstance()
+                                                        .getProductDetails();
+            boolean isProductNameAvailable = productDetails.get("Name") != null;
+            boolean isSellingPriceAvailable = productDetails.get("Selling Price") != null;
+            Assert.assertTrue((isProductNameAvailable && isSellingPriceAvailable),
+                    String.format("Product Details are not available in PDP \n%s", productDetails.toString()));
+        }
         return this;
     }
 
@@ -129,10 +126,8 @@ public class Product extends BusinessFlow {
     public Product viewSizeChartAndTapForBestPrice() {
         ProductDescPage productDescriptionPage = ProductDescPage.createInstance()
                                                                 .viewSizeChart();
-        Assert.assertTrue(productDescriptionPage.isSizeChartLinkAvailable(), "Size chart link is not available");
         productDescriptionPage.tapForBestPrice();
-        Assert.assertTrue(productDescriptionPage.isTapForBestPriceSuccessful(),
-                "Best price description is not displayed");
+        Assert.assertTrue(productDescriptionPage.isTapForBestPriceSuccessful(), "Best price description is not displayed");
         return this;
     }
 
@@ -148,9 +143,81 @@ public class Product extends BusinessFlow {
     @Step
     public Product addProductToBagFromListPage() {
         boolean isProductAddedToBagFromListPage = ProductListPage.createInstance()
-                                                            .addToBagFromListPage()
-                                                            .isProductAddedToBag();
+                                                                 .addToBagFromListPage()
+                                                                 .isProductAddedToBag();
         Assert.assertTrue(isProductAddedToBagFromListPage, "Product is NOT added to Bag");
+        return this;
+    }
+
+    @Step
+    public Product selectFirstProductAndGoToPDP() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        productListPage.getProductDetails();
+        productListPage.selectFirstProductFromListPage();
+        return this;
+    }
+
+    @Step
+    public Product sortSearchResult() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isProductListDisplayed(), "Failed to display the product list");
+        productListPage.sortSearchResult();
+        return this;
+    }
+
+    @Step
+    public Product selectFreeGiftProductThroughPromotions() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isPromotionAvailableInPLP(), "Promotions are available in PLP");
+        productListPage.navigateToPromotion()
+                       .selectFreeGiftUnderPromotions()
+                       .selectFirstProductFromListPage();
+        return this;
+    }
+
+    @Step
+    public WishList goToWishlistPageFromPLP() {//TODO-need to come up with the better naming convention
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isProductSaved(), "Product is not saved to wishlist");
+        productListPage.navigateToWishlist();
+        return WishList.getInstance();
+    }
+
+    @Step
+    public WishList goToWishlistPageFromPDP() {//TODO-need to come up with the better naming convention
+        ProductDescPage productDescPage = ProductDescPage.createInstance();
+        Assert.assertTrue(productDescPage.isProductSavedToWishList(), "Product is not saved to wishlist");
+        productDescPage.navigateToWishlist();
+        return WishList.getInstance();
+    }
+
+    @Step
+    public Product selectFreeGiftProductNotApplicableAloneThroughPromotions() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isPromotionAvailableInPLP(), "Promotions are available in PLP");
+        productListPage.navigateToPromotion()
+                       .selectFreeGiftUnderPromotions()
+                       .selectProductAloneNotApplicableForFreeGift();
+        return this;
+    }
+
+    @Step
+    public Product selectAndCompleteConditionalDiscountProductsThroughPromotions() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isPromotionAvailableInPLP(), "Promotions are available in PLP");
+        productListPage.navigateToPromotion()
+                       .selectConditionalDiscountUnderPromotions()
+                       .selectProductsToCompleteConditionalDiscount();
+        return this;
+    }
+
+    @Step
+    public Product selectOneProductInConditionalDiscountProductsThroughPromotions() {
+        ProductListPage productListPage = ProductListPage.createInstance();
+        Assert.assertTrue(productListPage.isPromotionAvailableInPLP(), "Promotions are available in PLP");
+        productListPage.navigateToPromotion()
+                       .selectConditionalDiscountUnderPromotions()
+                       .selectOneProductInConditionalDiscountProducts();
         return this;
     }
 }

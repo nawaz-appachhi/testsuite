@@ -7,12 +7,14 @@ import com.myntra.core.pages.NativeAndroid.NativeAndroidShoppingBagPage;
 import com.myntra.core.pages.NativeIOS.NativeIOSShoppingBagPage;
 import com.myntra.core.utils.DynamicEnhancer;
 import com.myntra.core.utils.DynamicLogger;
+import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class ShoppingBagPage extends Page {
 
@@ -87,12 +89,18 @@ public abstract class ShoppingBagPage extends Page {
 
     @Step
     protected ShoppingBagPage clickRemoveLink() {
-        while (!isEmptyBagMsgPresent()) {
+        int productCount = 0;
+        int maxProductCount = 10;
+        while (!isEmptyBagMsgPresent() && (productCount < maxProductCount)) {
             WebElement removeItem = utils.findElement(getLocator("btnRemove"));
             if (null != removeItem) {
                 removeItemFromCart();
             }
+            productCount++;
         }
+        Assert.assertTrue((productCount < maxProductCount), String.format(
+                "Shopping bag page is not functional/More number of products found - Made %d attempts to empty bag",
+                maxProductCount));
         return this;
     }
 
@@ -128,9 +136,12 @@ public abstract class ShoppingBagPage extends Page {
     @Step
     protected ShoppingBagPage giftWrapThisProduct() {
         utils.click(getLocator("btnGiftWrap"));
-        utils.sendKeys(getLocator("txtRecipient"), getTestData().get("RecipientName"));
-        utils.sendKeys(getLocator("txtMessage"), getTestData().get("GiftMessage"));
-        utils.sendKeys(getLocator("txtSender"), getTestData().get("SenderName"));
+        utils.sendKeys(getLocator("txtRecipient"), (String) getTestData().getAdditionalProperties()
+                                                                         .get("RecipientName"));
+        utils.sendKeys(getLocator("txtMessage"), (String) getTestData().getAdditionalProperties()
+                                                                       .get("GiftMessage"));
+        utils.sendKeys(getLocator("txtSender"), (String) getTestData().getAdditionalProperties()
+                                                                      .get("SenderName"));
         utils.click(getLocator("btnSaveGift"));
         utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnSaveGift")));
         return this;
@@ -176,11 +187,30 @@ public abstract class ShoppingBagPage extends Page {
     }
 
     @Step
-    public boolean isProductApplicableForBOGO() {
-        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
-        }.getClass()
-         .getEnclosingMethod()
-         .getName() + " - NOT YET IMPLEMENTED");
+    public boolean isBOGOApplied() {
+        boolean isBOGOAppliedCorrectly = false;
+        String sellingPriceBeforeBOGOApplied = utils.findElement(getLocator("lblSellingPrice"))
+                                                    .getText();
+        if (isBOGOAvailable()) {
+            changeProductQuantityInCart();
+            if (sellingPriceBeforeBOGOApplied.equals(utils.findElement(getLocator("lblSellingPrice"))
+                                                          .getText())) {
+                isBOGOAppliedCorrectly = true;
+            } else {
+                LOG.info("selling Price Before BOGO Applied is" + sellingPriceBeforeBOGOApplied +
+                        "not same as selling price after BOGO applied " +
+                        utils.findElement(getLocator("lblSellingPrice"))
+                             .getText());
+            }
+        } else {
+            LOG.info("BOGO (Buy One Get One) is not available for this product");
+        }
+        return isBOGOAppliedCorrectly;
+    }
+
+    @Step
+    private boolean isBOGOAvailable() {
+        return utils.isElementPresent(getLocator("btnAddItem"), 3);
     }
 
     @Step
@@ -250,38 +280,37 @@ public abstract class ShoppingBagPage extends Page {
     }
 
     @Step
-    public ShoppingBagPage selectSizePopUp() {
-        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
-        }.getClass()
-         .getEnclosingMethod()
-         .getName() + " - NOT YET IMPLEMENTED");
-    }
-
-    @Step
     public WishListPage moveProductToWishlist() {
+        //TODO refresh issue need to be removed once Jenkins issue is fixed for web channel
+        if (!utils.isElementPresent(getLocator("btnMoveToWishList"), 5)) {
+            utils.refreshPage();
+        }
+        utils.wait(ExpectedConditions.visibilityOfElementLocated(getLocator("btnMoveToWishList")), 10);
         utils.wait(ExpectedConditions.elementToBeClickable(getLocator("btnMoveToWishList")));
+        utils.waitForElementToBeVisible(getLocator("btnMoveToWishList"));
         utils.click(getLocator("btnMoveToWishList"), true);
         utils.click(getLocator("lnkWishlist"), true);
         return WishListPage.createInstance();
     }
 
     @Step
-    public WishListPage addItemsFromWishlist() {
+    public WishListPage navigateToWishlist() {
         utils.click(getLocator("lnkWishlist"), true);
         return WishListPage.createInstance();
     }
 
     @Step
     public HashMap<String, String> getProductDetails() {
-        HashMap<String, String> productDetails = new HashMap<String, String>();
+        HashMap<String, String> productDetails = new HashMap<>();
         if (!isFreeGiftMsgPresent()) {
             productDetails.put("Selling Price", utils.findElement(getLocator("lblSellingPrice"))
                                                      .getText()
                                                      .split(" ")[1]);
-            if (utils.isElementPresent(getLocator("lblStrickedPrice"), 2)) {
+            if (utils.isElementPresent(getLocator("lblStrickedPrice"), 2) &&
+                    utils.isElementPresent(getLocator("lblProductDiscount"), 2)) {
                 productDetails.put("Stricked Price", utils.findElement(getLocator("lblStrickedPrice"))
                                                           .getText());
-                productDetails.put("product Discount", utils.findElement(getLocator("lblProductDiscount"))
+                productDetails.put("Product Discount", utils.findElement(getLocator("lblProductDiscount"))
                                                             .getText());
             }
         } else {
@@ -289,32 +318,257 @@ public abstract class ShoppingBagPage extends Page {
                                                      .get(1)
                                                      .getText()
                                                      .split(" ")[1]);
-            if (utils.isElementPresent(getLocator("lblStrickedPrice"), 2)) {
-                productDetails.put("Stricked Price", utils.findElements(getLocator("lblStrickedPrice"))
-                                                          .get(1)
-                                                          .getText());
-                productDetails.put("product Discount", utils.findElements(getLocator("lblProductDiscount"))
-                                                            .get(1)
-                                                            .getText());
-            }
         }
         return productDetails;
     }
 
     @Step
-    public boolean isProductPriceInShoppingBagEqualToPDP() {
+    public boolean isProductDiscountInShoppingBagEqualToPDP() {
+        Map<String, String> productDetails = (HashMap<String, String>) testExecutionContext.getTestState(
+                "productDetails");
+        boolean isDiscountAvailable = true;
+        if (!(getProductDetails().get("Product Discount") == null)) {
+            isDiscountAvailable = productDetails.get("Product Discount")
+                                                .equals(getProductDetails().get("Product Discount"));
+        } else {
+            LOG.info("Discount is not available");
+        }
+        return isDiscountAvailable;
+    }
+
+    @Step
+    public boolean isProductPriceInShoppingBagEqualToPDPAndPLP() {
         HashMap<String, String> productDetails = (HashMap<String, String>) testExecutionContext.getTestState(
                 "productDetails");
+
+        HashMap<String, String> productDetailsfetchedFromPLP = (HashMap<String, String>) testExecutionContext.getTestState(
+                "productDetailsInPLP");
+        String productPriceInPLP = productDetailsfetchedFromPLP.get("Selling Price");
+        boolean isProductPriceInBagEqualToPLP = productDetails.get("Selling Price")
+                                                              .equals(productPriceInPLP);
+        boolean isProductPriceInBagEqualToPDP = productPriceInPLP.equals(getProductDetails().get("Selling Price")
+                                                                                            .replace(",", ""));
+        if (!isProductPriceInBagEqualToPLP) {
+            LOG.info("product price in plp " + productDetailsfetchedFromPLP.get("Selling Price") +
+                    "is not matching with product price in pdp" + productDetails.get("Selling Price"));
+        }
+        return isProductPriceInBagEqualToPLP && isProductPriceInBagEqualToPDP;
+    }
+
+    @Step
+    public boolean isProductDiscountInShoppingBagEqualToPDPAndPLP() {
+        Map<String, String> productDetails = (HashMap<String, String>) testExecutionContext.getTestState(
+                "productDetails");
+        HashMap<String, String> productDetailsfetchedFromPLP = (HashMap<String, String>) testExecutionContext.getTestState(
+                "productDetailsInPLP");
+        boolean isProductDiscountSameInPLPAndPDPAndBag = true;
+        String productDiscountInPLP = productDetailsfetchedFromPLP.get("Product Discount");
+        if (productDiscountInPLP == null) {
+            isProductDiscountSameInPLPAndPDPAndBag = productDetails.get("Product Discount") == null &&
+                    (getProductDetails().get("Product Discount")) == null;
+            return isProductDiscountSameInPLPAndPDPAndBag;
+        } else {
+            boolean isProductDiscountSameInPDPAndBag = isProductDiscountInShoppingBagEqualToPDP();
+            boolean isProductDiscountSameInPLPAndBag = productDiscountInPLP.equals(
+                    getProductDetails().get("Product Discount"));
+            return (isProductDiscountSameInPDPAndBag == isProductDiscountSameInPLPAndBag);
+        }
+    }
+
+    @Step
+    public boolean isProductPriceInShoppingBagEqualToPDP() {
+        Map<String, String> productDetails = (HashMap<String, String>) testExecutionContext.getTestState(
+                "productDetails");
+
         return productDetails.get("Selling Price")
                              .equals(getProductDetails().get("Selling Price")
                                                         .replace(",", ""));
     }
 
     @Step
-    public boolean isProductDiscountInShoppingBagEqualToPDP() {
-        HashMap<String, String> productDetails = (HashMap<String, String>) testExecutionContext.getTestState(
-                "productDetails");
-        return productDetails.get("product Discount")
-                             .equals(getProductDetails().get("product Discount"));
+    public boolean isMyntCouponCodeAvailable() {
+        return utils.isElementPresent(getLocator("txaMyntAvailable"), 5);
+    }
+
+    @Step
+    public ShoppingBagPage applyMyntCouponCode() {
+        if (isMyntCouponCodeAvailable()) {
+            utils.click(getLocator("btnMyntApplyCode"));
+            utils.sendKeys(getLocator("txtMyntDiscount"), (String) getCouponTestData().getAdditionalProperties()
+                                                                                      .get("MyntCoupon"));
+            utils.click(getLocator("btnMyntApply"));
+            utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("btnMyntApply")));
+        }
+        return this;
+    }
+
+    @Step
+    public boolean isStaggeredComboApplied() {
+        //TODO-Need information on type of assertion to be done
+        return true;
+    }
+
+    @Step
+    public boolean isErrorMessageDisplayedForInvalidCoupon() {
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")));
+        utils.click(getLocator("tabApplyCoupon"), true);
+        String invalidPersonalisedCoupon = (String) getCouponTestData().getAdditionalProperties()
+                                                                       .get("InvalidPersonalisedCoupons");
+        utils.sendKeys(getLocator("txtCouponCode"), invalidPersonalisedCoupon);
+        utils.click(getLocator("btnApply"), true);
+        return (utils.isElementPresent(getLocator("txaErrorMessageForInvalidCoupon"), 5));
+    }
+
+    @Step
+    public boolean isNotApplicableCouponCodeSelected() {
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")));
+        utils.click(getLocator("tabApplyCoupon"), true);
+        if (utils.isElementPresent(getLocator("txaCouponsNotApplicableHeader"), 2)) {
+            utils.click(getLocator("lstCouponsNotApplicable"), true);
+        } else {
+            LOG.info("Not applicable coupons are not available");
+        }
+        return (utils.isElementPresent(getLocator("lstCouponNotApplicableAndDisabled"), 2));
+    }
+
+    @Step
+    public ShoppingBagPage enterDisabledCouponCode() {
+        if (isNotApplicableCouponCodeSelected()) {
+            String couponCode = utils.getText(getLocator("lstCouponsNotApplicable"));
+            utils.sendKeys(getLocator("txtCouponCode"), couponCode);
+            utils.click(getLocator("btnApply"), true);
+        }
+        return this;
+    }
+
+    @Step
+    public boolean isInvalidCouponMessageCorrect() {
+        String couponCode = utils.getText(getLocator("lstCouponsNotApplicable"));
+        String actualInvalidCouponMessage = utils.getText(getLocator("txaErrorMessageForInvalidCoupon"));
+        String expectedInvalidCouponMessage = String.format(
+                "Sorry, Your cart has no applicable products for this coupon - %s", couponCode);
+        return actualInvalidCouponMessage.equals(expectedInvalidCouponMessage);
+    }
+
+    @Step
+    public Integer totalNumberOfItemsInBag() {
+        int productCount = 0;
+        if (!isEmptyBagMsgPresent()) {
+            productCount = utils.findElements(getLocator("btnRemove"))
+                                .size();
+        } else {
+            LOG.info("Bag is Empty");
+        }
+        return productCount;
+    }
+
+    @Step
+    public Integer totalNumberOfItemsInBagForGuestUser() {
+        int productCount = 0;
+        if (!isEmptyBagMsgPresent()) {
+            productCount = utils.findElements(getLocator("btnRemove"))
+                                .size();
+        } else {
+            LOG.info("Bag is Empty");
+        }
+        return productCount;
+    }
+
+    @Step
+    public HomePage navigateToHomePageFromBag() {
+        utils.click(getLocator("imgBagPageLogo"));
+        return HomePage.createInstance();
+    }
+
+    @Step
+    public boolean isProductCountInBagCorrect() {
+        int productCountInBag = totalNumberOfItemsInBag();
+        int productCountAfterMerging = totalNumberOfItemsInBagForGuestUser();
+        return (productCountInBag < productCountAfterMerging);
+    }
+
+    @Step
+    public boolean isFreeGiftApplicableAfterAddingOneMoreProduct() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isOneMoreProductTobeAddedTOCompleteFreeGiftOffer() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public boolean isConditionalDiscountApplied() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ShoppingBagPage completeConditionalDiscountOfProducts() {
+        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
+        }.getClass()
+         .getEnclosingMethod()
+         .getName() + " - NOT YET IMPLEMENTED");
+    }
+
+    @Step
+    public ShoppingBagPage verifyUnauthorizedPersonalizedCoupon() {
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")));
+        utils.click(getLocator("tabApplyCoupon"), true);
+        String couponCode = (String) getCouponTestData().getAdditionalProperties()
+                                                        .get("AnotherPersonalisedCoupon");
+        utils.sendKeys(getLocator("txtCouponCode"), couponCode);
+        utils.click(getLocator("btnApply"), true);
+        return this;
+    }
+
+    @Step
+    public ShoppingBagPage enterCouponCode() {
+        utils.wait(ExpectedConditions.elementToBeClickable(getLocator("tabApplyCoupon")));
+        utils.click(getLocator("tabApplyCoupon"));
+        utils.click(getLocator("txtCouponCode"));
+        String personalisedCoupons = getCouponTestData().getCouponCode();
+        utils.sendKeys(getLocator("txtCouponCode"), personalisedCoupons);
+        return this;
+    }
+
+    @Step
+    public boolean isUnauthorizedCouponMessageCorrect() {
+        String ActualUnauthorizedCouponMessage = utils.getText(getLocator("txaErrorMessageForInvalidCoupon"));
+        String expectedUnauthorizedCouponMessage = "Sorry, this coupon is not valid for this user account.";
+        boolean isMessageForUnauthorizedCouponCorrect = ActualUnauthorizedCouponMessage.equals(
+                expectedUnauthorizedCouponMessage);
+        return isMessageForUnauthorizedCouponCorrect;
+    }
+
+    @Step
+    public ShoppingBagPage chooseValidCoupon() {
+        if (utils.isElementPresent(getLocator("txaChooseValidCouponHeader"), 2)) {
+            utils.click(getLocator("lstValidCoupons"));
+        } else {
+            LOG.info("Valid Coupon list is not displayed");
+        }
+        return this;
+    }
+
+    @Step
+    public boolean isMultipleCouponsSelected() {
+        enterCouponCode();
+        chooseValidCoupon();
+        if (utils.findElement(getLocator("txtCouponCode"))
+                 .getText()
+                 .equalsIgnoreCase("")) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

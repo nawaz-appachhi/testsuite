@@ -1,10 +1,8 @@
 package com.myntra.core.pages.MobileWeb;
 
-import com.myntra.core.pages.ContactUsPage;
-import com.myntra.core.pages.HomePage;
-import com.myntra.core.pages.ProductDescPage;
+import com.myntra.core.pages.*;
+import com.myntra.utils.test_utils.Assert;
 import io.qameta.allure.Step;
-import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -27,7 +25,14 @@ public class MobileWebHomePage extends HomePage {
     @Step
     @Override
     public ProductDescPage searchProductUsingStyleID() {
-        String searchItem = getTestData().get("SearchItem");
+        String searchItem = (String) getTestData().getAdditionalProperties()
+                                                  .get("SearchItem");
+        return searchProductUsingStyleID(searchItem);
+    }
+
+    @Step
+    @Override
+    public ProductDescPage searchProductUsingStyleID(String searchItem) {
         utils.click(getLocator("btnSearch"), true);
         utils.sendKeys(getLocator("txtSearchField"), searchItem + Keys.ENTER);
         utils.wait(ExpectedConditions.invisibilityOfElementLocated(getLocator("txtSearchField")));
@@ -37,9 +42,34 @@ public class MobileWebHomePage extends HomePage {
     @Step
     @Override
     public ContactUsPage openContactUsPage() {
-        throw new NotImplementedException(getClass().getSimpleName() + "-" + new Object() {
-        }.getClass()
-         .getEnclosingMethod()
-         .getName() + " - NOT YET IMPLEMENTED");
+        utils.click(getLocator("mnuHamburger"), true);
+        scrollTillElementVisible(getLocator("lnkContactUs"));
+        utils.waitForElementToBeVisible(getLocator("lnkContactUs"));
+        utils.click(getLocator("lnkContactUs"), true);
+        return ContactUsPage.createInstance();
+    }
+
+    @Step
+    @Override
+    protected void isLoaded() throws Error {
+        Assert.assertTrue(utils.isElementPresent(getLocator("mnuHamburger"), 30),
+                String.format("Page - %s - NOT Loaded", getClass().getSimpleName()));
+    }
+
+    @Override
+    @Step
+    public SavedCardsPage navigateToSavedCards() {
+        utils.click(getLocator("mnuAccount"), true);
+        utils.click(getLocator("lnkSavedCards"), true);
+        return SavedCardsPage.createInstance();
+    }
+
+    @Override
+    @Step
+    public UserProfilePage goToProfilePage() {
+        openMenu();
+        utils.click(getLocator("mnuAccount"), true);
+        utils.click(getLocator("icoProfile"), true);
+        return UserProfilePage.createInstance();
     }
 }

@@ -17,12 +17,12 @@ repositories {
     jcenter()
     maven { url "http://garepos.myntra.com:8080/nexus/content/repositories/myntra-snapshots" }
     maven { url "http://garepos.myntra.com:8080/nexus/content/repositories/myntra-releases" }
-
 }
 
 dependencies {
     compile 'org.slf4j:slf4j-nop:1.7.25'
     compile "com.myntra.myntra-core-test-framework:myntra-core-automation-frmwk:${framework_version}"
+    compile "com.stub.testhelper:myntra-testdata-helper:2.0.5-SNAPSHOT"
     compile "org.ini4j:ini4j:0.5.1"
     compile "com.fasterxml.jackson.core:jackson-core:2.9.6"
     compile "cglib:cglib:3.2.7"
@@ -60,15 +60,17 @@ task openAllureReport(type: Exec) {
 }
 
 clean.doFirst {
-    System.out.println "Delete build / logs / out / test-output / allure-results directories, IF they exist"
-    delete "${rootDir}/build"
-    delete "${rootDir}/logs"
-    delete "${rootDir}/out"
-    delete "${rootDir}/test-output"
-    delete "${rootDir}/allure-results"
-    if( ! (System.getProperty('appachhi.enabled') != null &&  'true'.equals(System.getProperty('appachhi.enabled').toLowerCase())) ) {
-        exec {
-            commandLine 'sh', './cleanStaleAppium.sh'
+    if( System.getProperty('appachhi.enabled') == null || "false".equals(System.getProperty('appachhi.enabled').trim().toLowerCase())) {
+        System.out.println "Delete build / logs / out / test-output / allure-results directories, IF they exist"
+        delete "${rootDir}/build"
+        delete "${rootDir}/logs"
+        delete "${rootDir}/out"
+        delete "${rootDir}/test-output"
+        delete "${rootDir}/allure-results"
+        if( ! (System.getProperty('appachhi.enabled') != null &&  'true'.equals(System.getProperty('appachhi.enabled').toLowerCase())) ) {
+            exec {
+                commandLine 'sh', './cleanStaleAppium.sh'
+            }
         }
     }
 }
@@ -87,11 +89,12 @@ test {
     useTestNG {
         suites "${System.getProperty('suiteXmlFile', 'src/test/resources/test-suites/testng.xml')}"
 
-        System.out.println "Including tests in group - ${System.getProperty('groups', '.*')}"
-        includeGroups "${System.getProperty('groups', '.*')}"
+        // System.out.println "Including tests in group - ${System.getProperty('groups', '.*')}"
+        // includeGroups "${System.getProperty('groups', '.*')}"
 
-        System.out.println "Excluding tests in group - wip-${System.getProperty('channel', 'desktop')}"
-        excludeGroups "wip-${System.getProperty('channel', 'desktop')}"
+        // System.out.println "Excluding tests in group - wip-${System.getProperty('channel', 'desktop')}"
+        // def channel = "${System.getProperty('channel', 'desktop')}"
+        // excludeGroups "wip-${channel}", "na-${channel}"
 
         outputDirectory = file("test-output")
     }
@@ -111,8 +114,6 @@ test {
     systemProperties System.properties
 
     finalizedBy 'allureReport'
-
-    reports.junitXml.destination = "${System.getProperty('report_path')}"
 }
 
 

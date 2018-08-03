@@ -73,15 +73,16 @@ public abstract class PaymentPage extends Page {
     @Step
     public PaymentPage payUsingCreditAndDebitCard() {
         utils.click(getLocator("tabCreditCard"), true);
-        utils.sendKeys(getLocator("txtCreditCardNumber"), getTestData().get("CreditCardNumber"));
-        utils.sendKeys(getLocator("txtNameOnCreditCard"), getTestData().get("NameOnCreditCard"));
+        utils.sendKeys(getLocator("txtCreditCardNumber"), (String) getTestData().getAdditionalProperties()
+                                                                                .get("CreditCardNumber"));
+        utils.sendKeys(getLocator("txtNameOnCreditCard"), (String) getTestData().getAdditionalProperties()
+                                                                                .get("NameOnCreditCard"));
         utils.select(getLocator("ddlExpiryMonthField"), SelectBy.VALUE, String.format("%02d", ((Calendar.getInstance()
-                                                                                                        .get(Calendar.MONTH) +
-                1) % 12)));
-        utils.select(getLocator("ddlExpiryYearField"), SelectBy.VISIBLE_TEXT, String.format("%s",
-                (Calendar.getInstance()
-                         .get(Calendar.YEAR) + 2)));
-        utils.sendKeys(getLocator("txtCVV"), getTestData().get("CVV"));
+                                                                                                        .get(Calendar.MONTH) + 1) % 12)));
+        utils.select(getLocator("ddlExpiryYearField"), SelectBy.VISIBLE_TEXT, String.format("%s", (Calendar.getInstance()
+                                                                                                           .get(Calendar.YEAR) + 2)));
+        utils.sendKeys(getLocator("txtCVV"), (String) getTestData().getAdditionalProperties()
+                                                                   .get("CVV"));
         utils.click(getLocator("btnPayNowForCreditCardPayment"), true);
         return this;
     }
@@ -108,7 +109,7 @@ public abstract class PaymentPage extends Page {
 
     @Step
     public OrderConfirmationPage payUsingPhonePe() {
-        utils.click(getLocator("txtPhonePeHeader"), true);
+        utils.click(getLocator("tabPhonePe"), true);
         return OrderConfirmationPage.createInstance();
     }
 
@@ -156,23 +157,103 @@ public abstract class PaymentPage extends Page {
     }
 
     @Step
-    public boolean isPaymentOptionDisplayed(String locatorName) {
+    public boolean isPaymentOptionEnabled(String locatorName) {
+        boolean isPaymentOptionDisplayed = false;
         switch (locatorName.toLowerCase()) {
             case "cod":
-                return utils.isElementPresent(getLocator("tabCOD"), 5);
+                isPaymentOptionDisplayed = isCODPaymentOptionEnabled();
+                break;
             case "phonepe":
-                return utils.isElementPresent(getLocator("txtPhonePeHeader"), 5);
+                isPaymentOptionDisplayed = isPhonePePaymentOptionDisplayed();
+                break;
             case "creditcard":
-                return utils.isElementPresent(getLocator("tabCreditCard"), 5);
+                isPaymentOptionDisplayed = isCCDCPaymentOptionEnabled();
+                break;
             case "netbanking":
-                return utils.isElementPresent(getLocator("tabNetBanking"), 5);
+                isPaymentOptionDisplayed = isNetbankingPaymentOptionEnabled();
+                break;
             default:
                 throw new NotImplementedException("Invalid payment option");
         }
+        return isPaymentOptionDisplayed;
+    }
+
+    @Step
+    public PaymentPage payUsingMyntraPoint() {
+        utils.waitForElementToBeVisible(getLocator("chkMyntraPoint"));
+        utils.click(getLocator("chkMyntraPoint"), true);
+        return this;
     }
 
     @Step
     public boolean isPhonePePageDisplayed() {
-        return (utils.isElementPresent(getLocator("txtPayByPhonePe"), 3));
+        return (utils.isElementPresent(getLocator("txtPayByPhonePe"), 10));
+    }
+
+    @Step
+    private boolean isCODPaymentOptionEnabled() {
+        return utils.isElementPresent(getLocator("tabCOD"), 10);
+    }
+
+    @Step
+    protected boolean isNetbankingPaymentOptionEnabled() {
+        return utils.isElementPresent(getLocator("tabNetBanking"), 10);
+    }
+
+    @Step
+    protected boolean isCCDCPaymentOptionEnabled() {
+        return utils.isElementPresent(getLocator("tabCreditCard"), 10);
+    }
+
+    @Step
+    private boolean isPhonePePaymentOptionDisplayed() {
+        return utils.isElementPresent(getLocator("tabPhonePe"), 5);
+    }
+
+    @Step
+    public boolean isPayNowButtonEnabledForCOD() {
+        if (isCODPaymentOptionEnabled()) {
+            utils.click(getLocator("tabCOD"));
+            return (utils.findElement(getLocator("btnPayOnDelivery"))
+                         .isEnabled());
+        } else {
+            LOG.info("COD payment option is not Enabled");
+            return false;
+        }
+
+    }
+
+    @Step
+    public boolean isPayNowButtonEnabledForNetbanking() {
+        if (isNetbankingPaymentOptionEnabled()) {
+            utils.click(getLocator("tabNetBanking"));
+            return (utils.findElement(getLocator("btnNetbankingPayNow"))
+                         .isEnabled());
+        } else {
+            LOG.info("Netbanking payment option is not displayed");
+            return false;
+        }
+    }
+
+    @Step
+    public boolean isPayNowButtonEnabledForCCDC() {
+        if (isCCDCPaymentOptionEnabled()) {
+            utils.click(getLocator("tabCreditCard"));
+            return (utils.findElement(getLocator("btnPayNowForCreditCardPayment"))
+                         .isEnabled());
+        } else {
+            LOG.info("Credit/Debit card payment option is not displayed");
+            return false;
+        }
+    }
+
+    @Step
+    protected void changePaymentType() {
+        if (utils.findElement(getLocator("lnkChangePayment"))
+                 .isDisplayed()) {
+            utils.click(getLocator("lnkChangePayment"));
+        } else {
+            LOG.info("change Payment Type is not displayed");
+        }
     }
 }
